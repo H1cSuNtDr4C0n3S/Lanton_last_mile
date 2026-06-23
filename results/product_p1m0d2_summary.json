@@ -1,0 +1,31 @@
+{
+ "radius": 1,
+ "mem": 0,
+ "box": 2,
+ "mode": "full",
+ "states": 15,
+ "edges": 26,
+ "edge_types": {
+  "forced": 4,
+  "assumeW": 11,
+  "assumeB": 11,
+  "Bstar": 0
+ },
+ "entropy_full": 0.8113704627516493,
+ "entropy_noPay": 0.0,
+ "recurrent_sccs_noPay": 1,
+ "recurrent_sizes": [
+  5
+ ],
+ "all_rotors": true,
+ "cycle_words": [
+  "LRRRR"
+ ],
+ "verdicts": {
+  "LRRRR": "B-T (rot=3)"
+ },
+ "rotor_max_powers": {
+  "LRRRR": 3
+ },
+ "seconds": 0.0063266754150390625
+}

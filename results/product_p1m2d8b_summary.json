@@ -1,0 +1,23 @@
+{
+ "radius": 1,
+ "mem": 2,
+ "box": 8,
+ "mode": "black-only",
+ "states": 15371,
+ "edges": 22901,
+ "edge_types": {
+  "forced": 6492,
+  "assumeW": 7530,
+  "assumeB": 7530,
+  "Bstar": 1349
+ },
+ "entropy_full": 0.781599894975004,
+ "entropy_noPay": -Infinity,
+ "recurrent_sccs_noPay": 0,
+ "recurrent_sizes": [],
+ "all_rotors": true,
+ "cycle_words": [],
+ "verdicts": {},
+ "rotor_max_powers": {},
+ "seconds": 0.16699552536010742
+}

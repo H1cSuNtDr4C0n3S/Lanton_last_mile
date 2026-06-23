@@ -1,0 +1,39 @@
+{
+ "radius": 3,
+ "states": 45971,
+ "edges": 59508,
+ "edge_types": {
+  "forced": 32434,
+  "assumeW": 13537,
+  "assumeB": 13537
+ },
+ "entropy_full": 0.7440718891022432,
+ "entropy_noassumeB": 0.0,
+ "entropy_iters": {
+  "full": 152,
+  "noB": 50
+ },
+ "recurrent_sccs_noB": 1,
+ "recurrent_sizes": [
+  15
+ ],
+ "all_rotors": true,
+ "cycle_words": [
+  "LLLLRLRRRRLRRRR"
+ ],
+ "verdicts": {
+  "LLLLRLRRRRLRRRR": "B-T (rot=3 non mult. 4 => limitato)"
+ },
+ "rotor_max_powers": {
+  "LLLLRLRRRRLRRRR": 4
+ },
+ "builder": "C (window_build.c)",
+ "seconds": 0.06099891662597656,
+ "min_assumeB_rate_norotor_exact": {
+  "p": 1,
+  "q": 64,
+  "value": 0.015625,
+  "witness_word": "RRRRLLLLRLRRRRLRRRRLLLLRLLRRRRLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRL",
+  "certificate": "ciclo esplicito (upper) + fixpoint Bellman-Ford intero su DAG noB (lower), min_assumeB.c"
+ }
+}

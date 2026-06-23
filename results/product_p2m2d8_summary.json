@@ -1,0 +1,54 @@
+{
+ "radius": 2,
+ "mem": 2,
+ "box": 8,
+ "states": 14973,
+ "edges": 20006,
+ "edge_types": {
+  "forced": 9210,
+  "assumeW": 5033,
+  "assumeB": 5033,
+  "Bstar": 730
+ },
+ "entropy_full": 0.7477108614757898,
+ "entropy_noPay": 0.0,
+ "recurrent_sccs_noPay": 1,
+ "recurrent_sizes": [
+  15
+ ],
+ "all_rotors": true,
+ "cycle_words": [
+  "LLLLRLRRRRLRRRR"
+ ],
+ "verdicts": {
+  "LLLLRLRRRRLRRRR": "B-T (rot=3)"
+ },
+ "rotor_max_powers": {
+  "LLLLRLRRRRLRRRR": 4
+ },
+ "seconds": 0.03537487983703613,
+ "delta": {
+  "p": 2,
+  "q": 70,
+  "value": 0.02857142857142857,
+  "verified": true,
+  "witness_word": "LRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRR",
+  "witness_conflict": {
+   "step": 54,
+   "periodo": 0,
+   "offset": 54,
+   "cella": [
+    -1,
+    1
+   ],
+   "lettura_prec": 2,
+   "distanza": 52,
+   "stesso_periodo": true
+  },
+  "witness_rot": 16,
+  "witness_drift": [
+   -3,
+   -1
+  ]
+ }
+}

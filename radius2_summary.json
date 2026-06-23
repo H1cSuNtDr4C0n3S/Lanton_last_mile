@@ -1,0 +1,45 @@
+{
+ "radius": 2,
+ "states": 403,
+ "edges": 554,
+ "edge_types": {
+  "forced": 252,
+  "assumeW": 151,
+  "assumeB": 151
+ },
+ "entropy_full": 0.759447957814213,
+ "entropy_noassumeB": -1.6017132519074588e-16,
+ "entropy_iters": {
+  "full": 139,
+  "noB": 50
+ },
+ "recurrent_sccs_noB": 8,
+ "recurrent_sizes": [
+  6,
+  12,
+  12,
+  12,
+  12,
+  12,
+  12,
+  15
+ ],
+ "all_rotors": true,
+ "cycle_words": [
+  "LLRRRR",
+  "LLRRRRLLRRRR",
+  "LLLLRLRRRRLRRRR"
+ ],
+ "verdicts": {
+  "LLRRRR": "B-T (rot=2 non mult. 4 => limitato)",
+  "LLRRRRLLRRRR": "B-T (drift nullo => limitato)",
+  "LLLLRLRRRRLRRRR": "B-T (rot=3 non mult. 4 => limitato)"
+ },
+ "rotor_max_powers": {
+  "LLRRRR": 2,
+  "LLRRRRLLRRRR": 1,
+  "LLLLRLRRRRLRRRR": 4
+ },
+ "builder": "C (window_build.c)",
+ "seconds": 0.016669511795043945
+}

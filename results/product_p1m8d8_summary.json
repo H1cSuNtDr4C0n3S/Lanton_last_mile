@@ -1,0 +1,35 @@
+{
+ "radius": 1,
+ "mem": 8,
+ "box": 8,
+ "states": 829334,
+ "edges": 1074500,
+ "edge_types": {
+  "forced": 425314,
+  "assumeW": 245166,
+  "assumeB": 245166,
+  "Bstar": 158854
+ },
+ "entropy_full": 0.7400065140681769,
+ "entropy_noPay": -Infinity,
+ "recurrent_sccs_noPay": 0,
+ "recurrent_sizes": [],
+ "all_rotors": true,
+ "cycle_words": [],
+ "verdicts": {},
+ "rotor_max_powers": {},
+ "seconds": 16.570756196975708,
+ "delta": {
+  "p": 1,
+  "q": 8,
+  "value": 0.125,
+  "verified": true,
+  "witness_word": "RLRRRRLR",
+  "witness_conflict": null,
+  "witness_rot": 4,
+  "witness_drift": [
+   0,
+   2
+  ]
+ }
+}
