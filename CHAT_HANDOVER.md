@@ -1,7 +1,8 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §67 (potential segment scanner / falsificazione Φ monotoni) → A: prossima sessione (§68) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67;
-catena precedente: docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
+**Da: sessione §68 (endpoint-monotone no-go audit) → A: prossima sessione (§69) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68;
+catena precedente: docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
+docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
 docs/CHECKLIST_VECTOR_MODEL_ADDENDUM.md §64,
 docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63,
 docs/CHECKLIST_MIXING_ADDENDUM.md §62, docs/LOCK_CHECKLIST_ADDENDUM.md §61,
@@ -18,9 +19,10 @@ fresh-bite e' l'innesco locale. §61 ha mostrato che sui gate-lock lunghi il ver
 esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. §63 ha salvato
 vettore e geometria. §64 ha misurato il modello/compressione vettoriale. §65 ha separato
 diagnosi non-locale e teorema mancante. §66 ha mostrato che il profilo 22-porte lock-condizionato
-seleziona sempre la fase reale. **Novita' §67:** Pauli ha subordinato la scelta dei candidati
-e lo scanner segmentale falsifica i potenziali endpoint-monotoni semplici; il crux resta globale,
-non un decremento locale di `Φ_depth`/`Φ_mass`:
+seleziona sempre la fase reale. §67 ha falsificato i potenziali endpoint-monotoni semplici.
+**Novita' §68:** Pauli ha ristretto il no-go alla forma lecita: no-go empirico/testimoniale sui
+proxy finiti testati, non teorema dinamico; la mini-audit conferma peggioramenti stretti, non
+solo pareggi:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -112,10 +114,23 @@ non un decremento locale di `Φ_depth`/`Φ_mass`:
 38. Lettura §67: i `Φ` naturali basati su prima morte e massa pesata dei mismatch non sono
     potenziali monotoni del campo di detriti. Deep-black e' driver/evento, non decremento di un
     potenziale endpoint-monotono finito.
-39. Prossimo §68: formalizzare un no-go per questa classe di `Φ`, poi tornare al lemma T3'
-    con peso sulla realizzabilita'. Non riprovare `Φ_depth`/`Φ_mass` cambiando solo pesi.
+39. §68 formalizza il no-go per questa classe di `Φ`, poi rimanda al lemma T3' con peso sulla
+    realizzabilita'. Non riprovare `Φ_depth`/`Φ_mass` cambiando solo pesi.
+40. Critic pass Pauli §68: dire "no-go empirico/testimoniale sul campione raggiunto", non
+    "nessun potenziale finito funziona". Il test uccide solo proxy scalari endpoint-monotoni.
+41. §68 implementa `alpha1/endpoint_monotone_audit.py`: nessuna nuova simulazione; legge i CSV
+    §67, produce `endpoint_monotone_audit_summary.json` e `endpoint_monotone_audit_witnesses.csv`.
+42. Gate `L=1600`, segmenti eleggibili **762**: `Φ_actual_depth` non-decrementi **400** e
+    peggioramenti stretti **350**; `Φ_actual_mass_104` **373/371**; `Φ_actual_mass_208` **380/378**.
+43. Grid `L=1600`, segmenti eleggibili **6275**: `Φ_best22_depth` **3591/2736** non-decrementi/
+    peggioramenti stretti; `Φ_best22_mass_104` **3150/3149**; `Φ_best22_mass_208` **3145/3144**.
+44. Nel quartile alto gate per deep-black (`>2609` eventi), `Φ_actual_mass_104` peggiora
+    strettamente in **102/190** segmenti: il no-go non e' artefatto di segmenti poveri o pareggi.
+45. Prossimo §69: schema T3'/realizzabilita'. Costruire coppie discriminanti con stesso dato
+    locale intorno alla porta e verdetto T3' diverso per cella lontana; poi chiedere se sono
+    raggiungibili da campi di detriti finiti.
 
-## B. Risultati delle ultime sessioni (§57-§67)
+## B. Risultati delle ultime sessioni (§57-§68)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -321,7 +336,31 @@ resta un evento causale/ambientale, ma non induce un decremento endpoint-monoton
 o massa pesata dei difetti. Se un `Φ(detrito)` esiste, deve avere memoria/credito, un ordine
 ben fondato non catturato da endpoint consecutivi, o una formulazione globale diversa.
 
-## C. Roadmap (priorita' prossima sessione §68)
+### B.14 Endpoint-monotone no-go audit (ENDPOINT-MONOTONE-NOGO §68)
+`alpha1/endpoint_monotone_audit.py` legge gli output §67 senza nuova simulazione e materializza
+il no-go lecito: sui proxy scalari finiti testati, esistono segmenti raggiunti con deep-black,
+nessun ingresso endpoint e `Φ(next) >= Φ(prev)`. Output:
+`endpoint_monotone_audit_summary.json`, `endpoint_monotone_audit_witnesses.csv`.
+
+Correzione Pauli integrata: questo e' un no-go empirico/testimoniale sul campione raggiunto,
+non un teorema contro ogni potenziale globale. Uccide i proxy endpoint-monotoni e ogni
+riparametrizzazione order-preserving di quei singoli scalari.
+
+Risultato gate `L=1600`, **762** segmenti eleggibili:
+- `Φ_actual_depth`: **400/762** non-decrementi, **350/762** peggioramenti stretti;
+- `Φ_actual_mass_104`: **373/762** non-decrementi, **371/762** peggioramenti stretti;
+- `Φ_actual_mass_208`: **380/762** non-decrementi, **378/762** peggioramenti stretti.
+
+Risultato grid `L=1600`, **6275** segmenti eleggibili:
+- `Φ_best22_depth`: **3591/6275** non-decrementi, **2736/6275** peggioramenti stretti;
+- `Φ_best22_mass_104`: **3150/6275** non-decrementi, **3149/6275** peggioramenti stretti;
+- `Φ_best22_mass_208`: **3145/6275** non-decrementi, **3144/6275** peggioramenti stretti.
+
+Sanity: nel quartile gate piu' alto per deep-black (`>2609` eventi), `Φ_actual_mass_104`
+peggiora strettamente in **102/190** segmenti. Il no-go non dipende da segmenti piccoli o da
+pareggi. Prossimo oggetto: T3'/realizzabilita', non un nuovo `λ`.
+
+## C. Roadmap (priorita' prossima sessione §69)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -331,7 +370,7 @@ ben fondato non catturato da endpoint consecutivi, o una formulazione globale di
 4. **FATTO §65: non-localita' campionaria della checklist.** T3' e' il verdetto esatto e legge
    celle lontane lungo il canale; questo falsifica il troncamento corto, ma non e' ancora un
    teorema dinamico.
-5. **PENDENTE §68-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
+5. **PENDENTE §69-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
    sintattica segue quasi dall'infinita cavalcata futura della highway. Il peso vero e' la
    realizzabilita' delle coppie discriminanti da semi finiti/campi raggiungibili.
 6. **FATTO §66: `door-defect profile` sui lock.** La fase reale e' best unica 810/810; le
@@ -339,28 +378,31 @@ ben fondato non catturato da endpoint consecutivi, o una formulazione globale di
    per essere l'invariante globale.
 7. **FATTO §67: candidati `Φ_depth`/`Φ_mass` e scanner segmentale.** I candidati naturali
    endpoint-monotoni sono falsificati: gate `L=1600` viola ~49-52%, grid ~50-57%.
-8. **PRIORITA' §68-b: no-go locale per `Φ` endpoint-monotoni finiti.** Scrivere il lemma/nota:
-   prima morte, massa pesata, best22 e deficit finiti non forniscono decremento monotono sotto
-   deep-black. Non riaprire la stessa famiglia cambiando solo `λ` o il troncamento.
-9. **PRIORITA' §68-c: se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo:
-   memoria/credito tra segmenti, codominio discreto/ben fondato con certificato, oppure potenziale
-   globale del campo di detriti non leggibile da endpoint consecutivi.
-10. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+8. **FATTO §68: no-go locale per `Φ` endpoint-monotoni finiti.** Prima morte, massa pesata,
+   best22 e deficit finiti non forniscono decremento endpoint netto sotto deep-black. Non riaprire
+   la stessa famiglia cambiando solo `λ` o troncamento.
+9. **PRIORITA' §69-b: schema T3'/realizzabilita'.** Costruire coppie discriminanti: stesso dato
+   locale intorno alla porta fino a raggio `R`, verdetto T3' diverso per una cella lontana.
+   Separare non-localita' sintattica da realizzabilita' dinamica.
+10. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: memoria/credito
+   tra segmenti, codominio discreto/ben fondato con certificato, oppure potenziale globale del
+   campo di detriti non leggibile da endpoint consecutivi.
+11. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-11. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+12. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-12. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+13. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-13. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+14. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-14. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+15. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
-   porta, compressione vettoriale, profilo 22-porte lock-condizionato e scanner §67 misurati.
-   Il crux resta prima del lock: serve no-go dei `Φ` endpoint-monotoni e poi T3'/realizzabilita'.
+   porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67 e no-go §68
+   misurati. Il crux resta prima del lock: serve T3'/realizzabilita'.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -386,11 +428,12 @@ ben fondato non catturato da endpoint consecutivi, o una formulazione globale di
   §65 e' un addendum strategico: `docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md`.
   Sonda §66: `C:\Python\Python310\python.exe alpha1\door_defect_profile.py`.
   Sonda §67: `C:\Python\Python310\python.exe alpha1\potential_segment_scanner.py`.
+  Audit §68: `C:\Python\Python310\python.exe alpha1\endpoint_monotone_audit.py`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§68**, stesso stile.
+- Verbale prossima sessione: **§69**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

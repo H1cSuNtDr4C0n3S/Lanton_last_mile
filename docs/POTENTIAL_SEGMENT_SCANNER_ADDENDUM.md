@@ -96,9 +96,9 @@ migliora il potenziale della porta reale.
 Esempi top:
 - orbita 2, gate `25 -> 26`, `t=225308..287361`: deep-black **15099**, `ΔΦ_depth=0`.
 - orbita 0, gate `20 -> 21`, `t=216215..273208`: deep-black **14244**,
-  `ΔΦ_depth=+0.0124`, `ΔΦ_mass_104=+4.2421`.
+  `ΔΦ_depth=+0.0124`, `ΔΦ_mass_104=+6.1825`.
 - orbita 12, gate `15 -> 16`, `t=115979..173215`: deep-black **13469**,
-  `ΔΦ_depth=+0.0793`, `ΔΦ_mass_104=+3.4198`.
+  `ΔΦ_depth=+0.0793`, `ΔΦ_mass_104=+3.4276`.
 
 Questi sono controesempi diretti alla speranza "deep-black event => porta reale piu' vicina".
 
