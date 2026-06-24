@@ -1,0 +1,480 @@
+{
+  "all_bad_bucket_counts": {
+    "00_44_early": 91,
+    "100_103_tail": 217,
+    "104_207_period2": 1407,
+    "208_plus": 12,
+    "45_77_mid_gate": 2797,
+    "78_97_late_body": 867,
+    "98_99_deep_gate": 415
+  },
+  "all_bad_kind_counts": {
+    "frontier_black_collision": 3532,
+    "missing_black": 2274
+  },
+  "attempts": 810,
+  "attempts_with_mismatch": 786,
+  "basis_universe_counts": {
+    "bad_kind": 2,
+    "component": 542,
+    "offset": 163,
+    "offset_bucket": 7,
+    "phase": 17,
+    "phase_offset": 542,
+    "phase_offset_kind": 542
+  },
+  "bucket_ablation": [
+    {
+      "failures_missed": 0,
+      "failures_still_covered": 786,
+      "missed_attempt_examples": [],
+      "removed_bucket": "00_44_early"
+    },
+    {
+      "failures_missed": 13,
+      "failures_still_covered": 773,
+      "missed_attempt_examples": [
+        "0:33",
+        "2:16",
+        "3:0",
+        "5:23",
+        "8:2",
+        "9:24",
+        "9:30",
+        "10:22",
+        "16:19",
+        "17:9"
+      ],
+      "removed_bucket": "100_103_tail"
+    },
+    {
+      "failures_missed": 6,
+      "failures_still_covered": 780,
+      "missed_attempt_examples": [
+        "0:14",
+        "1:12",
+        "1:17",
+        "2:19",
+        "7:4",
+        "16:21"
+      ],
+      "removed_bucket": "104_207_period2"
+    },
+    {
+      "failures_missed": 12,
+      "failures_still_covered": 774,
+      "missed_attempt_examples": [
+        "1:25",
+        "3:21",
+        "4:4",
+        "5:17",
+        "6:12",
+        "9:7",
+        "10:30",
+        "10:44",
+        "13:13",
+        "16:13"
+      ],
+      "removed_bucket": "208_plus"
+    },
+    {
+      "failures_missed": 130,
+      "failures_still_covered": 656,
+      "missed_attempt_examples": [
+        "0:0",
+        "0:20",
+        "0:29",
+        "0:30",
+        "0:31",
+        "1:6",
+        "1:9",
+        "1:14",
+        "1:20",
+        "2:0"
+      ],
+      "removed_bucket": "45_77_mid_gate"
+    },
+    {
+      "failures_missed": 13,
+      "failures_still_covered": 773,
+      "missed_attempt_examples": [
+        "1:2",
+        "1:24",
+        "2:9",
+        "6:11",
+        "6:29",
+        "8:22",
+        "10:13",
+        "11:0",
+        "13:7",
+        "13:11"
+      ],
+      "removed_bucket": "78_97_late_body"
+    },
+    {
+      "failures_missed": 37,
+      "failures_still_covered": 749,
+      "missed_attempt_examples": [
+        "0:13",
+        "0:27",
+        "3:19",
+        "3:20",
+        "3:33",
+        "4:0",
+        "4:7",
+        "5:7",
+        "5:15",
+        "5:16"
+      ],
+      "removed_bucket": "98_99_deep_gate"
+    }
+  ],
+  "cover_summaries": [
+    {
+      "basis": "bad_kind",
+      "components_selected": 2,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    },
+    {
+      "basis": "offset_bucket",
+      "components_selected": 6,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    },
+    {
+      "basis": "offset",
+      "components_selected": 37,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    },
+    {
+      "basis": "phase",
+      "components_selected": 17,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    },
+    {
+      "basis": "phase_offset",
+      "components_selected": 66,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    },
+    {
+      "basis": "phase_offset_kind",
+      "components_selected": 66,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    },
+    {
+      "basis": "component",
+      "components_selected": 66,
+      "diagonal_preserved": true,
+      "failure_coverage_rate": 1.0,
+      "failures_covered": 786,
+      "failures_total": 786,
+      "false_ko_ok": 0,
+      "false_ok_failures": 0
+    }
+  ],
+  "failures": 786,
+  "first_bad_bucket_counts": {
+    "00_44_early": 77,
+    "100_103_tail": 14,
+    "104_207_period2": 6,
+    "208_plus": 12,
+    "45_77_mid_gate": 598,
+    "78_97_late_body": 29,
+    "98_99_deep_gate": 50
+  },
+  "first_bad_kind_counts": {
+    "frontier_black_collision": 419,
+    "missing_black": 367
+  },
+  "full_vector_diagonal": {
+    "failures_without_mismatch": 0,
+    "ok_with_mismatch": 0,
+    "preserved": true
+  },
+  "mismatch_cells": 5806,
+  "mismatch_count_per_failed_attempt": {
+    "max": 29,
+    "mean": 7.3867684478371505,
+    "median": 6.0,
+    "min": 1,
+    "q25": 3.0,
+    "q75": 10.0
+  },
+  "ok": 24,
+  "source_attempts": "C:\\Lanton_last_mile\\alpha1\\checklist_vector_geometry_attempts.csv",
+  "source_cells": "C:\\Lanton_last_mile\\alpha1\\checklist_vector_geometry_cells.csv",
+  "top_all_bad_offsets": [
+    {
+      "mismatch_cells": 300,
+      "offset": 77
+    },
+    {
+      "mismatch_cells": 290,
+      "offset": 99
+    },
+    {
+      "mismatch_cells": 222,
+      "offset": 71
+    },
+    {
+      "mismatch_cells": 196,
+      "offset": 76
+    },
+    {
+      "mismatch_cells": 179,
+      "offset": 45
+    },
+    {
+      "mismatch_cells": 165,
+      "offset": 80
+    },
+    {
+      "mismatch_cells": 157,
+      "offset": 61
+    },
+    {
+      "mismatch_cells": 134,
+      "offset": 46
+    },
+    {
+      "mismatch_cells": 132,
+      "offset": 50
+    },
+    {
+      "mismatch_cells": 125,
+      "offset": 98
+    },
+    {
+      "mismatch_cells": 124,
+      "offset": 70
+    },
+    {
+      "mismatch_cells": 120,
+      "offset": 47
+    },
+    {
+      "mismatch_cells": 115,
+      "offset": 89
+    },
+    {
+      "mismatch_cells": 115,
+      "offset": 81
+    },
+    {
+      "mismatch_cells": 108,
+      "offset": 62
+    },
+    {
+      "mismatch_cells": 107,
+      "offset": 75
+    },
+    {
+      "mismatch_cells": 104,
+      "offset": 78
+    },
+    {
+      "mismatch_cells": 104,
+      "offset": 72
+    },
+    {
+      "mismatch_cells": 94,
+      "offset": 60
+    },
+    {
+      "mismatch_cells": 91,
+      "offset": 73
+    }
+  ],
+  "top_first_bad_offsets": [
+    {
+      "attempts": 137,
+      "offset": 45
+    },
+    {
+      "attempts": 78,
+      "offset": 46
+    },
+    {
+      "attempts": 58,
+      "offset": 71
+    },
+    {
+      "attempts": 56,
+      "offset": 77
+    },
+    {
+      "attempts": 45,
+      "offset": 47
+    },
+    {
+      "attempts": 32,
+      "offset": 76
+    },
+    {
+      "attempts": 26,
+      "offset": 99
+    },
+    {
+      "attempts": 26,
+      "offset": 44
+    },
+    {
+      "attempts": 24,
+      "offset": 98
+    },
+    {
+      "attempts": 22,
+      "offset": 43
+    },
+    {
+      "attempts": 21,
+      "offset": 70
+    },
+    {
+      "attempts": 21,
+      "offset": 40
+    },
+    {
+      "attempts": 20,
+      "offset": 61
+    },
+    {
+      "attempts": 17,
+      "offset": 74
+    },
+    {
+      "attempts": 14,
+      "offset": 68
+    },
+    {
+      "attempts": 13,
+      "offset": 49
+    },
+    {
+      "attempts": 13,
+      "offset": 67
+    },
+    {
+      "attempts": 10,
+      "offset": 72
+    },
+    {
+      "attempts": 10,
+      "offset": 52
+    },
+    {
+      "attempts": 9,
+      "offset": 73
+    }
+  ],
+  "two_period_vector": {
+    "failure_coverage_rate": 0.9847328244274809,
+    "failures_covered": 774,
+    "failures_missed": 12,
+    "failures_total": 786,
+    "first_bad_after_two_period_examples": [
+      {
+        "attempt_id": "3:21",
+        "bad_kind": "frontier_black_collision",
+        "offset": 268,
+        "phase": 99
+      },
+      {
+        "attempt_id": "16:13",
+        "bad_kind": "frontier_black_collision",
+        "offset": 273,
+        "phase": 100
+      },
+      {
+        "attempt_id": "13:13",
+        "bad_kind": "frontier_black_collision",
+        "offset": 279,
+        "phase": 0
+      },
+      {
+        "attempt_id": "1:25",
+        "bad_kind": "frontier_black_collision",
+        "offset": 298,
+        "phase": 103
+      },
+      {
+        "attempt_id": "6:12",
+        "bad_kind": "frontier_black_collision",
+        "offset": 373,
+        "phase": 0
+      },
+      {
+        "attempt_id": "10:30",
+        "bad_kind": "frontier_black_collision",
+        "offset": 488,
+        "phase": 103
+      },
+      {
+        "attempt_id": "19:7",
+        "bad_kind": "frontier_black_collision",
+        "offset": 488,
+        "phase": 0
+      },
+      {
+        "attempt_id": "9:7",
+        "bad_kind": "frontier_black_collision",
+        "offset": 492,
+        "phase": 99
+      },
+      {
+        "attempt_id": "4:4",
+        "bad_kind": "frontier_black_collision",
+        "offset": 685,
+        "phase": 0
+      },
+      {
+        "attempt_id": "10:44",
+        "bad_kind": "frontier_black_collision",
+        "offset": 799,
+        "phase": 0
+      },
+      {
+        "attempt_id": "5:17",
+        "bad_kind": "frontier_black_collision",
+        "offset": 1533,
+        "phase": 99
+      },
+      {
+        "attempt_id": "21:26",
+        "bad_kind": "frontier_black_collision",
+        "offset": 1591,
+        "phase": 24
+      }
+    ],
+    "first_bad_after_two_periods": 12
+  }
+}

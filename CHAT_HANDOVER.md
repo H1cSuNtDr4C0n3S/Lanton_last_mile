@@ -1,7 +1,8 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §63 (vettore checklist + geometria porta) → A: prossima sessione (§64) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63;
-catena precedente: docs/CHECKLIST_MIXING_ADDENDUM.md §62, docs/LOCK_CHECKLIST_ADDENDUM.md §61,
+**Da: sessione §64 (modello vettoriale checklist) → A: prossima sessione (§65) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/CHECKLIST_VECTOR_MODEL_ADDENDUM.md §64;
+catena precedente: docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63,
+docs/CHECKLIST_MIXING_ADDENDUM.md §62, docs/LOCK_CHECKLIST_ADDENDUM.md §61,
 docs/DEBT_LOCK_2D_ADDENDUM.md §60, docs/DEBT_LOCK_ADDENDUM.md §59,
 docs/DELTA4_BETA_ADDENDUM.md §58, docs/ALPHA1_FABRY_ADDENDUM.md §57.**
 
@@ -12,8 +13,8 @@ Teorema della Finestra: r=4 chiuso (27,3M stati, rotori tutti B-T), tariffe δ�
 (§56). §57 ha declassato il pavimento del morso fresco; §58 ha mostrato che la non-localita'
 `r=4` non erode. §59 ha falsificato il ponte diretto `deep_black -> lock`. §60 ha mostrato che
 fresh-bite e' l'innesco locale. §61 ha mostrato che sui gate-lock lunghi il verdetto e'
-esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. **Novita' §63:**
-anche la porta si sposta e il vettore checklist e' ora salvato:
+esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. §63 ha salvato
+vettore e geometria. **Novita' §64:** il modello vettoriale/compressione e' ora misurato:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -45,10 +46,18 @@ anche la porta si sposta e il vettore checklist e' ora salvato:
     la prima cella decide, ma il tentativo fallito spesso non e' quasi OK.
 13. Geometria: stessa origine porta consecutiva **0/786**, L1 mediana origine **43**; stessa
     cella critica **1/762**. Il ricampionamento e' della porta, non solo dello sportello.
-14. **Ridirezione aggiornata:** il prossimo fronte e' il **modello vettoriale della checklist**:
-    quali componenti del vettore spiegano `OK` e quali comprimono T3'.
+14. §64: il full-vector mantiene la diagonale: **786/786** fallimenti hanno mismatch, **24/24**
+    OK no; il sotto-vettore a due periodi copre **774/786**, restano **12** collisioni di
+    frontiera oltre offset 208.
+15. La prima cella cattiva e' dominata da offset **45-77** (**598/786** prime morti);
+    `98-99` resta necessario (**50** prime morti, e rimuoverlo perde **37** KO).
+16. Mismatch totali: bucket `45-77` = **2797** celle, `104-207` = **1407**, `98-99` = **415**.
+17. Compressione greedy: **37 offset esatti** o **66 componenti phase-conditioned** (su 542)
+    mantengono la diagonale nel campione lungo.
+18. **Ridirezione aggiornata:** il prossimo fronte e' baseline + stabilita' della compressione:
+    replicare §61-§64 su molte orbite non condizionate e intersecare i sotto-vettori stabili.
 
-## B. Risultati delle ultime sessioni (§57-§63)
+## B. Risultati delle ultime sessioni (§57-§64)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -164,14 +173,35 @@ Risultato:
 Lettura: non cambia solo la cella sbagliata, cambia la porta. Una protezione eterna deve
 coordinare vettori su origini mobili, non solo preservare un bit locale.
 
-## C. Roadmap (priorita' prossima sessione §64)
+### B.10 Modello vettoriale + compressione (CHECKLIST-VECTOR-MODEL §64)
+`alpha1/checklist_vector_model.py` lavora solo sui CSV di §63, senza nuova simulazione. Misura
+copertura dei mismatch per tipo, bucket, offset, fase, phase-offset e componente, poi fa una
+compressione greedy tipo set-cover.
+
+Risultato:
+- full vector: diagonale perfetta (**786/786** KO coperti, **0/24** OK con mismatch);
+- due periodi: **774/786** KO coperti, **12** KO mancati, tutti `frontier_black_collision`
+  oltre offset 208 (offset 268 ... 1591);
+- prime cattive per bucket: `45-77` = **598**, `98-99` = **50**, `00-44` = 77,
+  `78-97` = 29, `100-103` = 14, `104-207` = 6, `208+` = 12;
+- mismatch totali: `45-77` = **2797**, `104-207` = **1407**, `78-97` = 867,
+  `98-99` = 415;
+- set-cover: 37 offset esatti o 66 componenti phase-conditioned mantengono la diagonale
+  sul campione lungo; `phase-offset` identifica gia' la cella relativa richiesta.
+
+Lettura: la checklist si comprime ma non collassa a una singola dogana. Il blocco 45-77 e'
+dominante, 98-99 resta necessario, e la coda frontier oltre due periodi impedisce di tagliare
+rigidamente a 208 se si vuole la diagonale esatta.
+
+## C. Roadmap (priorita' prossima sessione §65)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
-2. **Modello vettoriale.** Stimare quali componenti del vettore spiegano `OK`: conteggi
-   missing/frontier, offset 45-77 vs 98-99, fase-condizionato, prime dogane.
-3. **Compressione del vettore.** Identificare un sotto-vettore minimo che mantiene la diagonale
-   nel campione lungo.
-4. **Campione baseline piu' ampio.** Ripetere §61-§63 su molte orbite non condizionate a onset alto.
+2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
+   non totalmente sufficienti.
+3. **FATTO §64 (prima passata): compressione del vettore.** 37 offset / 66 componenti mantengono
+   la diagonale nel campione lungo; da non trattare ancora come universale.
+4. **PRIORITA' §65: campione baseline piu' ampio.** Ripetere §61-§64 su molte orbite non
+   condizionate a onset alto, poi misurare stabilita' dei 66 componenti.
 5. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
 6. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
@@ -179,8 +209,8 @@ coordinare vettori su origini mobili, non solo preservare un bit locale.
 7. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
-1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale e geometria
-   porta misurati; resta modello/compressione del vettore e scala baseline (vedi C.2-C.4).
+1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
+   porta e compressione vettoriale misurati; resta scala baseline/stabilita' (vedi C.4).
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -202,11 +232,12 @@ coordinare vettori su origini mobili, non solo preservare un bit locale.
   Sonda §61: `C:\Python\Python310\python.exe alpha1\lock_checklist_probe.py`.
   Sonda §62: `C:\Python\Python310\python.exe alpha1\checklist_mixing.py`.
   Sonda §63: `C:\Python\Python310\python.exe alpha1\checklist_vector_geometry.py`.
+  Sonda §64: `C:\Python\Python310\python.exe alpha1\checklist_vector_model.py`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§64**, stesso stile.
+- Verbale prossima sessione: **§65**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.
