@@ -1,7 +1,7 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §68 + addendum strategico Φ_compat → A: prossima sessione (§69) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68;
-catena precedente: docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
+**Da: sessione §69 (compatibility potential endpoint audit) → A: prossima sessione (§70) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPATIBILITY_POTENTIAL_ADDENDUM.md §69;
+catena precedente: docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68, docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
 docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
 docs/CHECKLIST_VECTOR_MODEL_ADDENDUM.md §64,
 docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63,
@@ -20,9 +20,9 @@ esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. §63 h
 vettore e geometria. §64 ha misurato il modello/compressione vettoriale. §65 ha separato
 diagnosi non-locale e teorema mancante. §66 ha mostrato che il profilo 22-porte lock-condizionato
 seleziona sempre la fase reale. §67 ha falsificato i potenziali endpoint-monotoni semplici.
-**Novita' §68:** Pauli ha ristretto il no-go alla forma lecita: no-go empirico/testimoniale sui
-proxy finiti testati, non teorema dinamico; la mini-audit conferma peggioramenti stretti. Addendum:
-la prossima variabile non e' massa del detrito, ma compatibilita' con le 22 porte:
+§68 ha ristretto il no-go alla forma lecita. **Novita' §69:** `Φ_compat^L` e' stato formulato
+come compatibilita' prefissa con la migliore delle 22 porte; la versione endpoint coincide con
+`best22_depth` ed e' gia' falsificata, quindi resta solo event-wise/amortizzato o co-raggiungibile:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -146,8 +146,20 @@ la prossima variabile non e' massa del detrito, ma compatibilita' con le 22 port
 50. Gap aperto §69: `R(n)` e' censito a 40, mentre celle decisive osservate arrivano a offset
     1591 (anche se `L∞` relativo osservato arriva a 36). Il lemma dinamico deve portare questo
     caveat di scala.
+51. §69 implementa `alpha1/compat_endpoint_audit.py`: nessuna simulazione; legge `best_h` dagli
+    anchor §67 e produce `compat_endpoint_audit_summary.json` / `compat_endpoint_audit_witnesses.csv`.
+52. `Φ_compat^L` endpoint: `h_g^L=first_bad_offset`, `h_best^L=max_g h_g^L`, `Φ=0` se clear
+    fino a `L`, altrimenti `exp(-h_best^L/104)`. Equivalenza critica: e' `Φ_best22_depth`.
+53. Gate `L=1600`: **762** segmenti deep/no-entry; `h_best` non migliora in **400/762**,
+    peggiora strettamente in **350/762**.
+54. Grid `L=1600`: **6275** segmenti deep/no-entry; `h_best` non migliora in **3591/6275**,
+    peggiora strettamente in **2736/6275**.
+55. Testimoni gate forti: orbita 2 `25->26`, deep **15099**, `h_best 45->45`; orbita 0
+    `20->21`, deep **14244**, `47->45`; orbita 12 `15->16`, deep **13469**, `77->61`.
+56. Prossimo §70: non un altro endpoint scanner. Due strade lecite: micro-script pre/post evento
+    deep-black per `h_best`, oppure schema T3'/co-raggiungibilita' formale.
 
-## B. Risultati delle ultime sessioni (§57-§68)
+## B. Risultati delle ultime sessioni (§57-§69)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -387,7 +399,37 @@ una formulazione event-wise/amortizzata o di co-raggiungibilita' di `Φ_compat`.
 
 Prossimo oggetto: `Φ_compat` + T3'/realizzabilita', non un nuovo `λ`.
 
-## C. Roadmap (priorita' prossima sessione §69)
+### B.15 Compatibility potential endpoint audit (COMPATIBILITY-POTENTIAL §69)
+`alpha1/compat_endpoint_audit.py` formalizza la versione endpoint di `Φ_compat^L` usando i CSV
+gia' prodotti da §67. Nessuna nuova simulazione. Output: `compat_endpoint_audit_summary.json`,
+`compat_endpoint_audit_witnesses.csv`.
+
+Definizione:
+- `h_g^L` = primo offset cattivo della porta `g` fino a orizzonte `L`;
+- `h_best^L=max_g h_g^L`;
+- `Φ_compat^L=0` se `h_best^L=L+1`, altrimenti `exp(-h_best^L/104)`.
+
+Equivalenza critica: letto sugli endpoint, `Φ_compat^L` e' `Φ_best22_depth`. Non e' un nuovo
+potenziale; §69 lo rende esplicito e lo chiude.
+
+Risultati `L=1600`:
+- gate: **762** segmenti deep/no-entry, `h_best` non migliora in **400/762**, peggiora strettamente
+  in **350/762**;
+- grid: **6275** segmenti deep/no-entry, `h_best` non migliora in **3591/6275**, peggiora
+  strettamente in **2736/6275**;
+- quartile gate alto per deep-black (`>2609`): **106/190** non-miglioramenti, **91/190**
+  peggioramenti stretti.
+
+Testimoni gate:
+- orbita 2, gate `25 -> 26`, deep **15099**, `h_best 45 -> 45`;
+- orbita 0, gate `20 -> 21`, deep **14244**, `h_best 47 -> 45`;
+- orbita 12, gate `15 -> 16`, deep **13469**, `h_best 77 -> 61`.
+
+Conclusione: compatibilita' endpoint morta come potenziale monotono netto. Resta aperta solo
+una versione event-wise/amortizzata, oppure una prova via T3'/co-raggiungibilita' senza scalare
+endpoint.
+
+## C. Roadmap (priorita' prossima sessione §70)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -397,7 +439,7 @@ Prossimo oggetto: `Φ_compat` + T3'/realizzabilita', non un nuovo `λ`.
 4. **FATTO §65: non-localita' campionaria della checklist.** T3' e' il verdetto esatto e legge
    celle lontane lungo il canale; questo falsifica il troncamento corto, ma non e' ancora un
    teorema dinamico.
-5. **PENDENTE §69-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
+5. **PENDENTE §70-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
    sintattica segue quasi dall'infinita cavalcata futura della highway. Il peso vero e' la
    realizzabilita' delle coppie discriminanti da semi finiti/campi raggiungibili.
 6. **FATTO §66: `door-defect profile` sui lock.** La fase reale e' best unica 810/810; le
@@ -408,32 +450,36 @@ Prossimo oggetto: `Φ_compat` + T3'/realizzabilita', non un nuovo `λ`.
 8. **FATTO §68: no-go locale per `Φ` endpoint-monotoni finiti.** Prima morte, massa pesata,
    best22 e deficit finiti non forniscono decremento endpoint netto sotto deep-black. Non riaprire
    la stessa famiglia cambiando solo `λ` o troncamento.
-9. **PRIORITA' §69-b: formulare `Φ_compat^L`.** Non massa del detrito: distanza-prefix dalla
-   compatibilita' con una delle 22 porte. `h_g^L=first_bad_offset`, `h_best^L=max_g h_g^L`.
-   Non definirlo come somma di mismatch, perche' sarebbe `best22_mass`.
-10. **PRIORITA' §69-c: schema T3'/realizzabilita' come test di `Φ_compat`.** Costruire coppie
+9. **FATTO §69: formulare e chiudere `Φ_compat^L` endpoint.** Non massa del detrito:
+   distanza-prefix dalla compatibilita' con una delle 22 porte. Endpoint = `best22_depth`, quindi
+   falsificato come monotonia netta.
+10. **PRIORITA' §70-b: se si continua su `Φ_compat`, test pre/post evento.** Misurare `h_best`
+   immediatamente prima/dopo eventi deep-black su campione limitato. Questo e' il primo test
+   empirico non-endpoint.
+11. **PRIORITA' §70-c: schema T3'/realizzabilita' come test di `Φ_compat`.** Costruire coppie
    discriminanti co-raggiungibili: stesso dato locale intorno alla porta fino a raggio `R`,
    verdetto T3' diverso per una cella lontana, entrambe prodotte da storie finite della formica.
    Separare non-localita' sintattica da realizzabilita' dinamica.
-11. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
+12. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
    event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
    certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
-12. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+13. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-13. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+14. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-14. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+15. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-15. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+16. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-16. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+17. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
-   porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67 e no-go §68
-   misurati. Il crux resta prima del lock: `Φ_compat` + T3'/co-raggiungibilita'.
+   porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67, no-go §68
+   e `Φ_compat` endpoint §69 misurati. Il crux resta prima del lock: pre/post evento deep o
+   T3'/co-raggiungibilita'.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -460,11 +506,12 @@ Prossimo oggetto: `Φ_compat` + T3'/realizzabilita', non un nuovo `λ`.
   Sonda §66: `C:\Python\Python310\python.exe alpha1\door_defect_profile.py`.
   Sonda §67: `C:\Python\Python310\python.exe alpha1\potential_segment_scanner.py`.
   Audit §68: `C:\Python\Python310\python.exe alpha1\endpoint_monotone_audit.py`.
+  Audit §69: `C:\Python\Python310\python.exe alpha1\compat_endpoint_audit.py`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§69**, stesso stile.
+- Verbale prossima sessione: **§70**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

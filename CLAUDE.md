@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§69**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§70**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -54,14 +54,14 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), LOCK-CHECKLIST (§61),
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
-  **ENDPOINT-MONOTONE-NOGO (§68)**.
+  ENDPOINT-MONOTONE-NOGO (§68), **COMPATIBILITY-POTENTIAL (§69)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
   hazard/mixing checklist (§62), vettore/geometria checklist (§63), modello/compressione
   vettoriale checklist (§64), ridirezione non-locale/globale con correzione Pauli (§65),
   profilo 22-porte lock-condizionato (§66), scanner dei potenziali segmentali (§67),
-  e audit/no-go endpoint-monotono (§68).**
+  audit/no-go endpoint-monotono (§68), e `Φ_compat` endpoint (§69).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -105,6 +105,10 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   stretti. Addendum strategico §68: massa/area/mismatch non sono coordinate orientate; i flip
   locali depositano e ripuliscono, quindi i conteggi oscillano. §69 = `Φ_compat^L` + schema
   T3'/co-raggiungibilita', non nuovo `λ`.
+  `compat_endpoint_audit.py` registra §69: endpoint `Φ_compat^L` coincide con `best22_depth` e
+  quindi non e' nuovo. Gate `L=1600`: `h_best` non migliora in **400/762** e peggiora strettamente
+  in **350/762**; grid: **3591/6275** e **2736/6275**. §70: o pre/post deep-black event per
+  `h_best`, oppure schema T3'/co-raggiungibilita'.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -182,9 +186,12 @@ Addendum §68: non scrivere che la reversibilita' conserva massa; scrivere che m
 sono conteggi non orientati, perche' i flip locali depositano e ripuliscono. Prossimo fronte (§69):
 `Φ_compat^L`, dove `h_g^L` e' il primo offset cattivo della porta `g`, `h_best^L=max_g h_g^L`,
 e `Φ_compat^L=0` se `h_best^L=L+1`, altrimenti `exp(-h_best^L/104)`. Se `Φ_compat` diventa somma di mismatch, ricade in
-`best22_mass`; se resta solo endpoint `h_best`, e' gia' ferita da `Φ_best22_depth`. Quindi §69 deve
-testare forma event-wise/amortizzata e co-raggiungibilita': due storie finite della formica,
+`best22_mass`; se resta solo endpoint `h_best`, e' gia' ferita da `Φ_best22_depth`. Questo ha
+impostato §69: separare endpoint da forma event-wise/amortizzata e co-raggiungibilita' con due storie finite della formica,
 localmente indistinguibili alla porta, discordi nella cella lontana. Caveat scala: `R(n)` arriva
-a 40, celle decisive osservate a offset 1591.
+a 40, celle decisive osservate a offset 1591. **AGGIORNAMENTO §69:** la versione endpoint e'
+chiusa: `compat_endpoint_audit.py` mostra che `h_best` non migliora in **400/762** gate e
+**3591/6275** grid, con peggioramenti stretti **350/762** e **2736/6275**. Prossimo fronte (§70):
+pre/post evento deep-black oppure T3'/co-raggiungibilita', non gate-to-gate endpoint.
 Roadmap completa:
 CHAT_HANDOVER §C.
