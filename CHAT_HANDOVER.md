@@ -1,6 +1,6 @@
-# CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §71 (scanner coppie co-raggiungibili T3') → A: prossima sessione (§72) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§71;
+# CHAT_HANDOVER — Stato del programma Langton al 2026-06-25
+**Da: sessione §72 (profilo discriminante T3' vs profondita') → A: prossima sessione (§73) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§72;
 catena precedente: docs/COMPATIBILITY_POTENTIAL_ADDENDUM.md §69,
 docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68, docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
 docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
@@ -27,7 +27,12 @@ prefissa con la migliore delle 22 porte e ha chiuso la versione endpoint (`best2
 stesso patch locale `17x17`, stesso bit/fase T3', ma verdetto diverso per una cella relativa
 `(15,13)` a offset 494, fuori da `B_8`. Questo prova non-vacuita' dinamica dello schema,
 non un potenziale uniforme. A `R=16` zero collisioni esatte e' soprattutto baseline di
-sparsita' del campione; prossima pista = replay mirato e closure/quoziente locale.
+sparsita' del campione.
+**Novita' §72:** il profilo dei 786 fallimenti T3' reali mostra che il discriminante cresce solo
+nel frame grezzo: raw `max L∞` sale fino a **36**, ma nel frame co-moving W0 (sottratto
+`floor(offset/104) * drift_phase`) collassa a **max L∞=9**. Quindi niente `door_debt_graph.py`
+in coordinate grezze; il debt graph torna legittimo come test di Link 2 se usa classi intrinseche
+co-moving. Link 1 resta il crux separato.
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -520,7 +525,39 @@ le due configurazioni sono prefissi replayable della stessa orbita. E' una lettu
 non prova una famiglia per ogni `R`, non muove α1, non sostiene da solo un potenziale uniforme,
 e non sostituisce un argomento di closure/raggiungibilita' globale.
 
-## C. Roadmap (priorita' prossima sessione §72)
+### B.18 Profilo `L∞` discriminante T3' vs profondita' lock (§72)
+
+`alpha1/door_discriminant_linf_profile.py` profila il CSV §66 prima di costruire un grafo
+dei debiti. Filtro: `kind=pre_onset_lock`, `is_actual_phase=1`, `clear=0`, `horizon=1600`.
+
+Comando:
+`C:\Python\Python310\python.exe alpha1\door_discriminant_linf_profile.py --horizon 1600 --out-prefix alpha1\door_discriminant_linf_profile`.
+
+Risultato: **786** fallimenti T3' reali, **786** lock fisici unici, `depth == first_bad_offset`
+in **786/786**. Tipi errore: **419** `frontier_black_collision`, **367** `missing_black`.
+Massimi grezzi: `depth=1591`, raw `L∞=36`.
+
+Rimisura co-moving W0:
+- `40-77`: **675** casi, mediana `L∞=5`, max **9**;
+- `78-103`: **93** casi, mediana `L∞=3`, max **7**;
+- `104-207`: **6** casi, mediana `L∞=6`, max **7**;
+- `208-511`: **8** casi, mediana `L∞=7.5`, max **8**;
+- `512-1023`: **2** casi, mediana `L∞=7.5`, max **8**;
+- `1024+`: **2** casi, mediana `L∞=7`, max **8**.
+
+Casi estremi:
+- orbita 21, attempt `21:26`, fase 24, depth **1591**, raw rel `(-36,-31)`,
+  co-moving `(-6,-1)`, co-moving `L∞=6`;
+- orbita 5, attempt `5:17`, fase 99, depth **1533**, raw rel `(-33,36)`,
+  co-moving `(-5,8)`, co-moving `L∞=8`.
+
+Lettura: la versione grezza del lemma della dogana ricorrente era nel frame sbagliato. Sottratto
+il drift fase-dipendente della highway, il supporto resta piccolo: `comoving L∞<=9`, **131**
+classi osservate `(phase, comoving_rel_x, comoving_rel_y, required_black, bad_kind)`. Quindi
+`door_debt_graph.py` e' riaperto come test di Link 2 nel frame intrinseco, ma Link 1
+("orbita eterna non-highway => lock W0-like profondi infinite volte") resta il crux.
+
+## C. Roadmap (priorita' prossima sessione §73)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -549,30 +586,34 @@ e non sostituisce un argomento di closure/raggiungibilita' globale.
 11. **FATTO §71: scanner di coppie co-raggiungibili.** Witness empirico dinamico a `R=8`
    trovato. Interpretazione conservativa: solo non-vacuita' dello schema; `R=16` zero-collisioni
    e' sparsita' combinatoria, non confine strutturale.
-12. **PRIORITA' §72: replay mirato + closure locale.** Validare il witness `R=8` con uno
-   script mirato che ristampi patch e letture fino a offset 494; poi scegliere tra equivalenza
-   approssimata/quoziente, densita' di anchor mirata, o closure/SAT locale per `R>=16`.
-13. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
+12. **FATTO §72: profilo `L∞` raw + co-moving.** Sui 786 fallimenti reali, il raggio grezzo
+   cresce fino a `L∞=36`, ma sottraendo il drift W0 fase-dipendente collassa a `L∞<=9`.
+13. **PRIORITA' §73: Link 1 + debt graph co-moving.** Prima opzione teorica: formulare un
+   lemma soft su perche' un'orbita eterna non-highway debba produrre lock W0-like profondi
+   infinite volte. Prima opzione computazionale: costruire `door_debt_graph.py` nel frame
+   intrinseco W0 come test di Link 2. Solo dopo ha senso un sistema XOR/SAT globale GF(2).
+14. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
    event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
    certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
-14. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+15. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-15. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+16. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-16. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+17. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-17. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+18. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-18. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+19. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
    porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67, no-go §68,
-   `Φ_compat` endpoint §69, pre/post event §70 e witness co-raggiungibile `R=8` §71 misurati.
-   Il crux resta prima del lock: famiglia/closure co-raggiungibile robusta in raggio, equivalenza
-   quoziente, oppure potenziale con credito/amortizzazione.
+   `Φ_compat` endpoint §69, pre/post event §70, witness co-raggiungibile `R=8` §71 e profilo
+   `L∞` discriminante §72 misurati. Il crux resta prima del lock: Link 1 per orbite eterne,
+   famiglia/closure co-raggiungibile robusta in raggio, debt graph co-moving come Link 2,
+   oppure potenziale con credito/amortizzazione.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -602,11 +643,12 @@ e non sostituisce un argomento di closure/raggiungibilita' globale.
   Audit §69: `C:\Python\Python310\python.exe alpha1\compat_endpoint_audit.py`.
   Audit §70: `C:\Python\Python310\python.exe alpha1\compat_event_audit.py --limit-orbits 0 --max-events-per-orbit 25 --min-event-t 1040 --max-seconds 300 --horizons 1600 --out-prefix alpha1\compat_event_audit`.
   Scanner §71: `C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 --radii 8 --horizons 208,512,1600 --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r8`.
+  Profilo §72: `C:\Python\Python310\python.exe alpha1\door_discriminant_linf_profile.py --horizon 1600 --out-prefix alpha1\door_discriminant_linf_profile`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§72**, stesso stile.
+- Verbale prossima sessione: **§73**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

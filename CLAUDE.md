@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§72**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§73**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -55,7 +55,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§71)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§72)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -63,7 +63,8 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   vettoriale checklist (§64), ridirezione non-locale/globale con correzione Pauli (§65),
   profilo 22-porte lock-condizionato (§66), scanner dei potenziali segmentali (§67),
   audit/no-go endpoint-monotono (§68), `Φ_compat` endpoint (§69), `Φ_compat` event-wise
-  + schema T3'/co-raggiungibilita' (§70), e scanner di coppie co-raggiungibili T3' (§71).**
+  + schema T3'/co-raggiungibilita' (§70), scanner di coppie co-raggiungibili T3' (§71),
+  e profilo `L∞` discriminante-vs-profondita' (§72).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -117,6 +118,13 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   `R=8` (orbita 5, fase 98, offset 494, rel `(15,13)`, `L∞=15`). Lettura conservativa:
   e' non-vacuita' dinamica dello schema, non sostegno diretto a un potenziale uniforme.
   A `R=16`, zero collisioni sulla griglia stride 520 e' soprattutto sparsita' combinatoria.
+  `door_discriminant_linf_profile.py` registra §72: sui **786** fallimenti T3' reali
+  (`horizon=1600`), `depth == first_bad_offset` in 786/786. Nel frame grezzo il discriminante
+  cresce fino a `L∞=36`, ma nel frame co-moving W0, sottraendo
+  `floor(offset/104) * drift_phase`, collassa a `L∞<=9` (131 classi osservate).
+  Conclusione operativa: non costruire `door_debt_graph.py` su classi grezze
+  `(phase, rel_x, rel_y, required_color)`; costruirlo nel frame intrinseco W0 come test di
+  Link 2. Link 1 resta separato e non risolto.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -206,7 +214,11 @@ ingenua: su **600** eventi, `h_best` non migliora in **357/600** e peggiora in *
 co-raggiungibile a `R=8` (stesso patch locale, fase 98, discriminante rel `(15,13)` a offset
 494). Questo chiude solo la lettura "esistenza/non-vacuita'"; non muove α1 e non supporta da
 solo un potenziale. `R=16` zero-collisioni e' baseline di sparsita', non confine strutturale.
-Prossimo fronte (§72): replay mirato del witness, equivalenza quoziente/approssimata e
-closure/SAT locale per raggi maggiori.
+**AGGIORNAMENTO §72:** `alpha1/door_discriminant_linf_profile.py` misura i 786 fallimenti T3'
+reali: nessuna duplicazione fisica, `depth=first_bad_offset` sempre. La crescita grezza
+`L∞=36` era drift del tubo W0: nel frame co-moving fase-dipendente il supporto collassa a
+`L∞<=9`, con 131 classi osservate. Prossimo fronte (§73): Link 1
+("orbita eterna non-highway => lock W0-like profondi infinite volte") e/o `door_debt_graph.py`
+nel frame intrinseco W0; solo dopo ha senso un XOR/SAT globale GF(2).
 Roadmap completa:
 CHAT_HANDOVER §C.

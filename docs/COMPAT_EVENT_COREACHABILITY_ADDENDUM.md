@@ -349,3 +349,164 @@ locale generativa/SAT che costruisca estensioni esterne diverse di uno stesso da
 - `alpha1/t3_coreachability_pair_scanner_grid520_r16_buckets.csv`
 - `alpha1/t3_coreachability_pair_scanner_grid520_r16_orbits.csv`
 - `alpha1/t3_coreachability_pair_scanner_grid520_r16_witnesses.csv`
+
+# §72. Profilo `L∞` del discriminante T3' vs profondita' lock
+
+## 72.1 Motivazione
+
+Prima di costruire un grafo dei debiti (`door_debt_graph.py`) bisogna verificare il presupposto
+del "lemma della dogana ricorrente": servono **finitamente** molte classi di debito. La prima
+misura grezza sembrava far crescere il discriminante T3' con la profondita' del lock. Il controllo
+corretto e' pero' nel frame co-moving della highway: se la crescita grezza e' solo drift del tubo
+W0, il pigeonhole sulle dogane intrinseche puo' ancora partire.
+
+Correzione concettuale registrata:
+- "caos eterno non-highway impossibile" e' ancora α1 riscritto; la novita' eventuale deve stare
+  nel meccanismo, non nella forma per assurdo;
+- il Link 1, "orbita eterna non-highway => lock W0-like profondi infinite volte", e' il crux,
+  non la parte facile;
+- la contraddizione paritaria non puo' basarsi sulla stessa cella assoluta, perche' §63 ha gia'
+  mostrato quasi nessun riuso della cella critica assoluta. Se esiste, vive in dipendenze
+  lineari globali GF(2) tra conteggi di visita, non nel flip per-cella isolato.
+
+## 72.2 Script
+
+Nuova sonda:
+
+```
+C:\Python\Python310\python.exe alpha1\door_discriminant_linf_profile.py `
+  --horizon 1600 `
+  --out-prefix alpha1\door_discriminant_linf_profile
+```
+
+Input: `alpha1/door_defect_profile_rows.csv` da §66.
+
+Filtro:
+- `kind=pre_onset_lock`;
+- `is_actual_phase=1`;
+- `clear=0`;
+- `horizon=1600`.
+
+Output:
+- `alpha1/door_discriminant_linf_profile_rows.csv`;
+- `alpha1/door_discriminant_linf_profile_unique_rows.csv`;
+- `alpha1/door_discriminant_linf_profile_bins.csv`;
+- `alpha1/door_discriminant_linf_profile_depths.csv`;
+- `alpha1/door_discriminant_linf_profile_summary.json`.
+
+La sonda esporta due frame:
+- `raw`: coordinate relative originali `rel_x,rel_y`;
+- `comoving`: coordinate intrinseche W0, ottenute sottraendo `floor(offset/104) * drift_phase`,
+  dove `drift_phase` e' calcolato esattamente dalla rotazione W0 della fase valutata.
+
+## 72.3 Risultati
+
+Il campione selezionato contiene **786** fallimenti T3' reali. La deduplica per lock fisico non
+rimuove nulla: **786/786** righe uniche. Inoltre `depth == first_bad_offset` per **786/786**,
+quindi la profondita' del lock coincide con l'offset del primo discriminante T3' sul campione.
+
+Conteggi globali nel frame grezzo:
+- `frontier_black_collision`: **419**;
+- `missing_black`: **367**;
+- `max depth`: **1591**;
+- `max L∞`: **36**;
+- correlazione lineare `depth` vs `L∞`: Pearson **0.727**.
+
+Non leggere Pearson come monotonia liscia: il grosso del campione e' a bassa profondita' e lo
+Spearman globale e' **-0.098**. Il dato importante per il lemma delle classi finite e' l'envelope
+di coda, non un fit monotono su tutti i 786 punti.
+
+| depth bin | count | median depth | max depth | median `L∞` | q75 `L∞` | max `L∞` | missing | frontier |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 40-77 | 675 | 48 | 77 | 5.0 | 6.0 | 9 | 282 | 393 |
+| 78-103 | 93 | 98 | 103 | 3.0 | 4.0 | 7 | 85 | 8 |
+| 104-207 | 6 | 162.0 | 169 | 8.0 | 8.75 | 9 | 0 | 6 |
+| 208-511 | 8 | 335.5 | 492 | 12.5 | 16.0 | 16 | 0 | 8 |
+| 512-1023 | 2 | 742.0 | 799 | 20.5 | 21.25 | 22 | 0 | 2 |
+| 1024+ | 2 | 1562.0 | 1591 | 36.0 | 36.0 | 36 | 0 | 2 |
+
+Casi di coda:
+
+| orbit | attempt | phase | depth | rel | `L1` | `L∞` | kind |
+|---:|---|---:|---:|---|---:|---:|---|
+| 21 | `21:26` | 24 | 1591 | `(-36,-31)` | 67 | 36 | `frontier_black_collision` |
+| 5 | `5:17` | 99 | 1533 | `(-33,36)` | 69 | 36 | `frontier_black_collision` |
+| 10 | `10:44` | 0 | 799 | `(-22,-15)` | 37 | 22 | `frontier_black_collision` |
+| 4 | `4:4` | 0 | 685 | `(-19,-14)` | 33 | 19 | `frontier_black_collision` |
+| 9 | `9:7` | 99 | 492 | `(-12,16)` | 28 | 16 | `frontier_black_collision` |
+
+## 72.4 Lettura grezza
+
+La strategia delle classi di debito **non respira in coordinate grezze**. Il raggio relativo del
+primo discriminante non resta in un insieme piccolo e fisso: nella coda cresce da `L∞<=9` sotto
+due periodi, a `16` intorno a 500 passi, a `22` intorno a 800, fino a `36` sopra 1500.
+
+Questa lettura era troppo forte: confondeva non-localita' intrinseca con drift della highway.
+La pendenza grezza `L∞/depth` e' dello stesso ordine di `2/104`, cioe' il drift del tubo W0.
+
+## 72.5 Reframe co-moving W0
+
+Rimisura nello stesso campione, ma nel frame intrinseco:
+
+```
+period_index = first_bad_offset // 104
+offset_mod_period = first_bad_offset % 104
+comoving_rel = rel - period_index * drift_phase
+```
+
+Il `drift_phase` e' fase-dipendente nel frame locale della porta. Esempi: fase 0 `(-2,-2)`,
+fase 99 `(-2,+2)`, fase 103 `(+2,-2)`.
+
+Risultato globale:
+- `raw max L∞`: **36**;
+- `comoving max L∞`: **9**;
+- Pearson `depth` vs raw `L∞`: **0.727**;
+- Pearson `depth` vs co-moving `L∞`: **0.100**;
+- Spearman `depth` vs co-moving `L∞`: **-0.115**;
+- classi osservate `(phase, comoving_rel_x, comoving_rel_y, required_black, bad_kind)`: **131**.
+
+| depth bin | count | raw max `L∞` | co-moving median `L∞` | co-moving q75 `L∞` | co-moving max `L∞` |
+|---|---:|---:|---:|---:|---:|
+| 40-77 | 675 | 9 | 5.0 | 6.0 | 9 |
+| 78-103 | 93 | 7 | 3.0 | 4.0 | 7 |
+| 104-207 | 6 | 9 | 6.0 | 6.75 | 7 |
+| 208-511 | 8 | 16 | 7.5 | 8.0 | 8 |
+| 512-1023 | 2 | 22 | 7.5 | 7.75 | 8 |
+| 1024+ | 2 | 36 | 7.0 | 7.5 | 8 |
+
+Casi di coda dopo reframe:
+
+| orbit | attempt | phase | depth | raw rel | raw `L∞` | drift phase | co-moving rel | co-moving `L∞` |
+|---:|---|---:|---:|---|---:|---|---|---:|
+| 21 | `21:26` | 24 | 1591 | `(-36,-31)` | 36 | `(-2,-2)` | `(-6,-1)` | 6 |
+| 5 | `5:17` | 99 | 1533 | `(-33,36)` | 36 | `(-2,+2)` | `(-5,8)` | 8 |
+| 10 | `10:44` | 0 | 799 | `(-22,-15)` | 22 | `(-2,-2)` | `(-8,-1)` | 8 |
+| 4 | `4:4` | 0 | 685 | `(-19,-14)` | 19 | `(-2,-2)` | `(-7,-2)` | 7 |
+| 9 | `9:7` | 99 | 492 | `(-12,16)` | 16 | `(-2,+2)` | `(-4,8)` | 8 |
+
+## 72.6 Lettura corretta
+
+Se si vuole salvare la direzione paritaria, il vincolo giusto deve cambiare forma:
+- **frame co-moving W0**, non coordinate relative grezze;
+- vincoli globali GF(2) sulla mappa "parola di svolte -> parita' di visita", non flip
+  indipendenti per singola cella;
+- oppure prima un argomento soft su Link 1: perche' un'orbita eterna non-highway debba
+  produrre lock W0-like profondi infinite volte.
+
+La misura co-moving riapre il Lemma della dogana ricorrente: sul campione lungo le classi esatte
+nel frame intrinseco sono finite e piccole (`L∞<=9`). Questo non prova boundedness eterna e non
+tocca Link 1. Pero' corregge la conclusione pratica: il `door_debt_graph.py` e' legittimo se,
+e solo se, usa classi co-moving `(phase, offset_mod_period, comoving_rel_x, comoving_rel_y,
+required_color/bad_kind)` e non celle relative grezze.
+
+## 72.7 Roadmap aggiornata
+
+Non costruire `door_debt_graph.py` in coordinate grezze. Costruirlo nel frame co-moving e tenerlo
+separato da Link 1.
+
+Prossimo progresso reale:
+1. formulare Link 1 come lemma autonomo, anche debole o condizionato;
+2. costruire il debt graph co-moving come test di Link 2, con classi finite osservate e senza
+   riscalamenti tarabili;
+3. solo dopo, costruire un sistema XOR/SAT sulle dipendenze globali GF(2), non su celle assolute
+   riusate.
