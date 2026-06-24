@@ -1,7 +1,9 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §64 (modello vettoriale checklist) → A: prossima sessione (§65) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/CHECKLIST_VECTOR_MODEL_ADDENDUM.md §64;
-catena precedente: docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63,
+**Da: sessione §66 (door-defect profile lock-condizionato) → A: prossima sessione (§67) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66;
+catena precedente: docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
+docs/CHECKLIST_VECTOR_MODEL_ADDENDUM.md §64,
+docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63,
 docs/CHECKLIST_MIXING_ADDENDUM.md §62, docs/LOCK_CHECKLIST_ADDENDUM.md §61,
 docs/DEBT_LOCK_2D_ADDENDUM.md §60, docs/DEBT_LOCK_ADDENDUM.md §59,
 docs/DELTA4_BETA_ADDENDUM.md §58, docs/ALPHA1_FABRY_ADDENDUM.md §57.**
@@ -14,7 +16,10 @@ Teorema della Finestra: r=4 chiuso (27,3M stati, rotori tutti B-T), tariffe δ�
 `r=4` non erode. §59 ha falsificato il ponte diretto `deep_black -> lock`. §60 ha mostrato che
 fresh-bite e' l'innesco locale. §61 ha mostrato che sui gate-lock lunghi il verdetto e'
 esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. §63 ha salvato
-vettore e geometria. **Novita' §64:** il modello vettoriale/compressione e' ora misurato:
+vettore e geometria. §64 ha misurato il modello/compressione vettoriale. §65 ha separato
+diagnosi non-locale e teorema mancante. **Novita' §66:** il profilo 22-porte lock-condizionato
+e' misurato e mostra che la fase reale e' sempre la migliore; quindi il crux globale sta prima
+della selezione del lock:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -54,10 +59,37 @@ vettore e geometria. **Novita' §64:** il modello vettoriale/compressione e' ora
 16. Mismatch totali: bucket `45-77` = **2797** celle, `104-207` = **1407**, `98-99` = **415**.
 17. Compressione greedy: **37 offset esatti** o **66 componenti phase-conditioned** (su 542)
     mantengono la diagonale nel campione lungo.
-18. **Ridirezione aggiornata:** il prossimo fronte e' baseline + stabilita' della compressione:
-    replicare §61-§64 su molte orbite non condizionate e intersecare i sotto-vettori stabili.
+18. §65 verifica la nota strategica: le prime morti sono dominate da offset **45-99**
+    (**677/786**, non tutte); i **12** KO oltre due periodi sono tutti collisioni di frontiera
+    a offset **268...1591**.
+19. Le 12 celle tardive stanno a distanza relativa **L1 16...69** e **L∞ 10...36**:
+    comprimere il numero di componenti non rende locale la checklist.
+20. Dicotomia aggiornata: il locale/finito e' sigillato (Finestra, γ piccolo, T1/T2/α2/T3',
+    §61, §64); il crux non-locale e' se il campo di detriti di un'orbita eterna puo' restare
+    ostile a tutte le 22 porte mobili.
+21. La baseline non condizionata resta utile come stress-test, ma **non** e' piu' la priorita'
+    concettuale: nessun campione finito decide α1 (trappola controfattuale eterno).
+22. **Correzione Pauli:** §65 e' diagnosi strategica/campionaria, non teorema. Per dire che T3'
+    non e' determinata da un raggio finito serve il lemma: per ogni R esistono due campi uguali
+    in B_R della porta ma con verdetto T3' diverso per una lettura esogena fuori B_R.
+23. **Ridirezione concreta §66-a:** formalizzare quel lemma. Se usa campi sintetici, chiamarlo
+    non-localita' sintattica; la versione dinamica richiede campi di detriti raggiungibili o una
+    loro chiusura naturale.
+24. **Ridirezione concreta §66-b:** costruire il `door-defect profile`: per ogni tentativo porta
+    e per tutte le 22 fasi, misurare prima cattiva `h_g`, tipo, offset, distanza, `H=max_g h_g`
+    agli orizzonti 208/512/1600, con leave-one-orbit-out e baseline anti-overfitting.
+25. §66 implementa `alpha1/door_defect_profile.py`: **810** tentativi, **53.460** righe
+    fase-orizzonte, orizzonti **208/512/1600**, runtime **69 s**, cross-check con §63:
+    `compare_mismatches=0`.
+26. Risultato §66: la fase reale e' **best unica in 810/810** per tutti gli orizzonti; a
+    `L=1600` i **786** fallimenti hanno difetto entro orizzonte e i **24** ingressi sono clear.
+27. Le fasi alternative compatibili col primo bit sono **11** per tentativo, ma muoiono tutte
+    entro **5** letture esogene; le fasi incompatibili muoiono a `h=0`.
+28. Interpretazione §66: il profilo 22-porte sui lock e' un controllo forte ma lock-condizionato,
+    quasi tautologico. Prossimo fronte §67: lemma di non-localita' T3' + scanner non condizionato
+    delle 22 porte sul campo di detriti.
 
-## B. Risultati delle ultime sessioni (§57-§64)
+## B. Risultati delle ultime sessioni (§57-§66)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -193,24 +225,86 @@ Lettura: la checklist si comprime ma non collassa a una singola dogana. Il blocc
 dominante, 98-99 resta necessario, e la coda frontier oltre due periodi impedisce di tagliare
 rigidamente a 208 se si vuole la diagonale esatta.
 
-## C. Roadmap (priorita' prossima sessione §65)
+### B.11 Non-localita' della checklist + ridirezione globale (CHECKLIST-NONLOCAL §65)
+`docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md` registra la lettura strategica dei dati §61/§64.
+La nota e' confermata con una correzione quantitativa: le prime morti non stanno tutte a 45-99,
+ma quel blocco domina (**677/786**); i **12** KO mancati da due periodi sono frontiera lontana.
+Il sottoagente Pauli aggiunge la correzione logica: questa e' evidenza di non-localita'
+campionaria e fallimento del troncamento corto, non ancora un teorema di non-localita' dinamica.
+
+Risultato:
+- 45-99 = **677/786** prime cattive;
+- due periodi = **774/786** KO coperti;
+- 12 KO tardivi: offset **268, 273, 279, 298, 373, 488, 488, 492, 685, 799, 1533, 1591**;
+- distanze relative dei 12 tardivi: L1 **16...69**, L∞ **10...36**;
+- lettura: T3' decide esattamente, ma il dominio della decisione non e' catturato da un
+  troncamento corto.
+
+Conseguenza: il fallimento del pavimento del morso (§57), il ponte deep->lock falso (§59),
+gli ostacoli del prodotto (§56.4) e la compressione non-localizzante (§64) sono manifestazioni
+dello stesso punto: il matching d'ingresso e' globale. La domanda residua ha la forma:
+un'orbita eterna puo' mantenere il campo di detriti ostile a tutte e 22 le porte mobili?
+Prossimo passo operativo: lemma di non-localita' T3' + profilo globale dei difetti di porta.
+
+### B.12 Door-defect profile lock-condizionato (DOOR-DEFECT-PROFILE §66)
+`alpha1/door_defect_profile.py` valuta, per ogni tentativo porta deduplicato §63, tutte le 22
+fasi/gate e misura `h_g(L)` per `L=208,512,1600`. Output: `door_defect_profile_rows.csv`,
+`door_defect_profile_attempts.csv`, `door_defect_profile_orbits.csv`,
+`door_defect_profile_summary.json`. Run completa: **24/24** orbite, **810** tentativi,
+**53.460** righe fase-orizzonte, runtime **69 s**.
+
+Controlli:
+- self-test prima della run: `window_automaton.py --selftest` verde, `product_automaton.py --selftest`
+  verde, `alpha1_engine.exe dump` vuota -> **9977**, `(7,-7)` -> **106258**;
+- confronto con §63 sulla fase reale a `L=1600`: **0** mismatch.
+
+Risultato:
+- fase reale best unica: **810/810** a tutti gli orizzonti;
+- `L=1600`: **786/786** fallimenti hanno difetto entro orizzonte, **24/24** ingressi clear;
+- fasi compatibili alternative: **8100** righe per orizzonte, clear **0**, `h` mediana **2**,
+  `h` massimo **5**;
+- fasi incompatibili al primo bit: tutte `h=0`;
+- coda oltre due periodi ritrovata: **12** fallimenti a offset 268...1591, tutti
+  `frontier_black_collision`.
+
+Lettura: il profilo 22-porte sui lock non e' ancora l'invariante globale. Condizionando su un
+lock W0-like, la fase reale e' selezionata dal lock stesso; le altre fasi muoiono localmente.
+Il crux globale sta prima: in un campo non condizionato, esiste qualche porta con `H_L` alto?
+
+## C. Roadmap (priorita' prossima sessione §67)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
    non totalmente sufficienti.
 3. **FATTO §64 (prima passata): compressione del vettore.** 37 offset / 66 componenti mantengono
-   la diagonale nel campione lungo; da non trattare ancora come universale.
-4. **PRIORITA' §65: campione baseline piu' ampio.** Ripetere §61-§64 su molte orbite non
-   condizionate a onset alto, poi misurare stabilita' dei 66 componenti.
-5. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+   la diagonale nel campione lungo, ma non localizzano geometricamente la checklist.
+4. **FATTO §65: non-localita' campionaria della checklist.** T3' e' il verdetto esatto e legge
+   celle lontane lungo il canale; questo falsifica il troncamento corto, ma non e' ancora un
+   teorema dinamico.
+5. **PENDENTE §67-a: lemma di non-localita' T3'.** Per ogni R, costruire due campi uguali in
+   B_R della porta ma con verdetto T3' diverso per una lettura esogena fuori B_R. Distinguere
+   esplicitamente versione sintattica e versione su campi raggiungibili.
+6. **FATTO §66: `door-defect profile` sui lock.** La fase reale e' best unica 810/810; le
+   fasi compatibili alternative muoiono entro 5 letture. Utile controllo, ma troppo condizionato
+   per essere l'invariante globale.
+7. **PRIORITA' §67-b: scanner non condizionato delle 22 porte.** Campionare ancore non selezionate
+   da lock profondi e misurare `H_L=max_g h_g(L)` sul campo di detriti. Stratificare per tempo,
+   orbita, morso fresco, deep-black e profondita' W0-like `D(t)`.
+8. **Invariante globale del campo di detriti (dopo §67).** Cercare potenziale globale,
+   argomento ergodico/di misura, o principio di mixing sulle porte mobili. La domanda precisa:
+   puo' un'orbita eterna mantenere tutte le checklist sbagliate per sempre?
+9. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+   della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
+10. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-6. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+11. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-7. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+12. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
-   porta e compressione vettoriale misurati; resta scala baseline/stabilita' (vedi C.4).
+   porta, compressione vettoriale e profilo 22-porte lock-condizionato misurati; §66 mostra che
+   il crux e' prima del lock, quindi serve scanner non condizionato.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -233,11 +327,13 @@ rigidamente a 208 se si vuole la diagonale esatta.
   Sonda §62: `C:\Python\Python310\python.exe alpha1\checklist_mixing.py`.
   Sonda §63: `C:\Python\Python310\python.exe alpha1\checklist_vector_geometry.py`.
   Sonda §64: `C:\Python\Python310\python.exe alpha1\checklist_vector_model.py`.
+  §65 e' un addendum strategico: `docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md`.
+  Sonda §66: `C:\Python\Python310\python.exe alpha1\door_defect_profile.py`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§65**, stesso stile.
+- Verbale prossima sessione: **§67**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

@@ -1,0 +1,294 @@
+{
+  "source": "C:\\Lanton_last_mile\\alpha1\\dumps_all.txt",
+  "orbits_requested": 24,
+  "orbits_completed": 24,
+  "horizons": [
+    208,
+    512,
+    1600
+  ],
+  "gate_phases": [
+    0,
+    16,
+    21,
+    24,
+    25,
+    26,
+    30,
+    31,
+    72,
+    83,
+    90,
+    91,
+    92,
+    93,
+    94,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103
+  ],
+  "attempts": 810,
+  "attempt_horizon_rows": 2430,
+  "profile_rows": 53460,
+  "horizon_summary": [
+    {
+      "horizon": 208,
+      "attempts": 810,
+      "entries": 24,
+      "failures": 786,
+      "any_clear": 36,
+      "any_clear_rate": 0.044444444444444446,
+      "actual_is_best": 810,
+      "actual_is_best_rate": 1.0,
+      "clear_phase_count_total": 36,
+      "best_h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 209,
+        "mean": 68.35061728395061
+      },
+      "actual_h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 209,
+        "mean": 68.35061728395061
+      }
+    },
+    {
+      "horizon": 512,
+      "attempts": 810,
+      "entries": 24,
+      "failures": 786,
+      "any_clear": 28,
+      "any_clear_rate": 0.0345679012345679,
+      "actual_is_best": 810,
+      "actual_is_best_rate": 1.0,
+      "clear_phase_count_total": 28,
+      "best_h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 513,
+        "mean": 80.44814814814815
+      },
+      "actual_h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 513,
+        "mean": 80.44814814814815
+      }
+    },
+    {
+      "horizon": 1600,
+      "attempts": 810,
+      "entries": 24,
+      "failures": 786,
+      "any_clear": 24,
+      "any_clear_rate": 0.02962962962962963,
+      "actual_is_best": 810,
+      "actual_is_best_rate": 1.0,
+      "clear_phase_count_total": 24,
+      "best_h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 1601,
+        "mean": 115.84074074074074
+      },
+      "actual_h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 1601,
+        "mean": 115.84074074074074
+      }
+    }
+  ],
+  "profile_summary": [
+    {
+      "horizon": 208,
+      "bucket": "actual_phase",
+      "rows": 810,
+      "clear": 36,
+      "clear_rate": 0.044444444444444446,
+      "h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 209,
+        "mean": 68.35061728395061
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 407,
+        "missing_black": 367
+      }
+    },
+    {
+      "horizon": 208,
+      "bucket": "compatible_off_phase_baseline",
+      "rows": 8100,
+      "clear": 0,
+      "clear_rate": 0.0,
+      "h": {
+        "min": 1,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 3.0,
+        "max": 5,
+        "mean": 2.208148148148148
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 4189,
+        "missing_black": 3911
+      }
+    },
+    {
+      "horizon": 208,
+      "bucket": "incompatible_off_phase_baseline",
+      "rows": 8910,
+      "clear": 0,
+      "clear_rate": 0.0,
+      "h": {
+        "min": 0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 5775,
+        "missing_black": 3135
+      }
+    },
+    {
+      "horizon": 512,
+      "bucket": "actual_phase",
+      "rows": 810,
+      "clear": 28,
+      "clear_rate": 0.0345679012345679,
+      "h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 513,
+        "mean": 80.44814814814815
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 415,
+        "missing_black": 367
+      }
+    },
+    {
+      "horizon": 512,
+      "bucket": "compatible_off_phase_baseline",
+      "rows": 8100,
+      "clear": 0,
+      "clear_rate": 0.0,
+      "h": {
+        "min": 1,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 3.0,
+        "max": 5,
+        "mean": 2.208148148148148
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 4189,
+        "missing_black": 3911
+      }
+    },
+    {
+      "horizon": 512,
+      "bucket": "incompatible_off_phase_baseline",
+      "rows": 8910,
+      "clear": 0,
+      "clear_rate": 0.0,
+      "h": {
+        "min": 0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 5775,
+        "missing_black": 3135
+      }
+    },
+    {
+      "horizon": 1600,
+      "bucket": "actual_phase",
+      "rows": 810,
+      "clear": 24,
+      "clear_rate": 0.02962962962962963,
+      "h": {
+        "min": 40,
+        "q25": 45.0,
+        "median": 61.0,
+        "q75": 76.0,
+        "max": 1601,
+        "mean": 115.84074074074074
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 419,
+        "missing_black": 367
+      }
+    },
+    {
+      "horizon": 1600,
+      "bucket": "compatible_off_phase_baseline",
+      "rows": 8100,
+      "clear": 0,
+      "clear_rate": 0.0,
+      "h": {
+        "min": 1,
+        "q25": 1.0,
+        "median": 2.0,
+        "q75": 3.0,
+        "max": 5,
+        "mean": 2.208148148148148
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 4189,
+        "missing_black": 3911
+      }
+    },
+    {
+      "horizon": 1600,
+      "bucket": "incompatible_off_phase_baseline",
+      "rows": 8910,
+      "clear": 0,
+      "clear_rate": 0.0,
+      "h": {
+        "min": 0,
+        "q25": 0.0,
+        "median": 0.0,
+        "q75": 0.0,
+        "max": 0,
+        "mean": 0.0
+      },
+      "bad_kind_counts": {
+        "frontier_black_collision": 5775,
+        "missing_black": 3135
+      }
+    }
+  ],
+  "elapsed_seconds": 68.64430990000074
+}
