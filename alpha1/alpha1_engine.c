@@ -22,14 +22,16 @@ static uint64_t *hkey; static uint8_t *hval, *hused;   /* bit0 color, bit1 visit
 static const int DX[4]={0,1,0,-1};
 static const int DY[4]={-1,0,1,0};
 static int8_t *turns; static uint8_t *fw;
+static uint32_t *touched; static long ntouched;
 
 static inline uint64_t mkkey(int32_t x,int32_t y){
     return (((uint64_t)(uint32_t)(x+(1<<30)))<<32)|(uint32_t)(y+(1<<30)); }
 static inline uint8_t* slot(int32_t x,int32_t y){
     uint64_t key=mkkey(x,y); uint32_t h=(uint32_t)(key*2654435761u)&HMASK;
     while(hused[h]){ if(hkey[h]==key) return &hval[h]; h=(h+1)&HMASK; }
-    hused[h]=1; hkey[h]=key; hval[h]=0; return &hval[h]; }
+    hused[h]=1; hkey[h]=key; hval[h]=0; if(touched) touched[ntouched++]=h; return &hval[h]; }
 static inline uint64_t xs(uint64_t*s){ uint64_t x=*s; x^=x<<13; x^=x>>7; x^=x<<17; return *s=x; }
+static inline void reset_grid(){ for(long i=0;i<ntouched;i++) hused[touched[i]]=0; ntouched=0; }
 
 /* onset = minimal t with turns[t:n) exactly 104-periodic; verify rot%4==0 & nonzero drift */
 static long onset_verified(long n){
@@ -77,19 +79,20 @@ static void build_seed(uint64_t*st,int smin,int smax,int*side_out,double*dens_ou
 int main(int argc,char**argv){
     hkey=malloc((size_t)HSIZE*8); hval=malloc(HSIZE); hused=malloc(HSIZE);
     if(!hkey||!hval||!hused){fprintf(stderr,"alloc fail\n");return 2;}
+    memset(hused,0,HSIZE);
 
     if(argc>=8 && !strcmp(argv[1],"search")){
         int shard=atoi(argv[2]), nsh=atoi(argv[3]); long nseed=atol(argv[4]);
         long MAX=atol(argv[5]); int smin=atoi(argv[6]), smax=atoi(argv[7]);
-        turns=malloc(MAX); fw=NULL;
+        turns=malloc(MAX); fw=NULL; touched=malloc((size_t)MAX*4); ntouched=0;
         uint64_t st=0x9e3779b97f4a7c15ULL ^ ((uint64_t)(shard+1)*0xD1B54A32D192ED03ULL);
-        long found=0;
+        long minprint=(argc>=9)?atol(argv[8]):0; long found=0;
         for(long k=0;k<nseed;k++){
             uint64_t seedstate=st; int side; double dens;
-            memset(hused,0,HSIZE);
+            reset_grid();
             build_seed(&st,smin,smax,&side,&dens);
             long o; simulate(MAX,1,&o);
-            if(o>0){ printf("%ld %d %.3f %llu\n",o,side,dens,(unsigned long long)seedstate); found++; }
+            if(o>0){ found++; if(o>=minprint) printf("%ld %d %.3f %llu\n",o,side,dens,(unsigned long long)seedstate); }
             if((k%2000)==0){ fflush(stdout);
                 fprintf(stderr,"[shard %d] %ld/%ld seeds, %ld converged\n",shard,k,nseed,found); }
         }
@@ -99,7 +102,7 @@ int main(int argc,char**argv){
     if(argc>=6 && !strcmp(argv[1],"reseed")){
         long MAX=atol(argv[2]); uint64_t st=strtoull(argv[3],0,10);
         int smin=atoi(argv[4]), smax=atoi(argv[5]);
-        turns=malloc(MAX); fw=malloc(MAX); memset(hused,0,HSIZE);
+        turns=malloc(MAX); fw=malloc(MAX); touched=malloc((size_t)MAX*4); ntouched=0;
         int side; double dens; build_seed(&st,smin,smax,&side,&dens);
         long o; long n=simulate(MAX,0,&o); if(o<0)o=n;
         long nb=0; for(long t=0;t<o;t++) if(fw[t])nb++;
@@ -107,7 +110,7 @@ int main(int argc,char**argv){
         return 0;
     }
     if(argc>=3 && !strcmp(argv[1],"dump")){
-        long MAX=atol(argv[2]); turns=malloc(MAX); fw=malloc(MAX); memset(hused,0,HSIZE);
+        long MAX=atol(argv[2]); turns=malloc(MAX); fw=malloc(MAX); touched=malloc((size_t)MAX*4); ntouched=0;
         char line[128]; int x,y;
         while(fgets(line,sizeof line,stdin)) if(sscanf(line,"%d %d",&x,&y)==2) *slot(x,y)|=1;
         long o; long n=simulate(MAX,0,&o); if(o<0)o=n;

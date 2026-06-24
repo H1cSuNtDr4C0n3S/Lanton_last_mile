@@ -1,86 +1,161 @@
-# CHAT_HANDOVER — Stato del programma Langton al 2026-06-13
-**Da: sessione §56 (automa-prodotto temporale A(r;m,D)) → A: prossima sessione in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/PRODOTTO_ADDENDUM.md §56 (questa sessione);
-catena precedente: docs/RADIUS_ADDENDUM.md §45–55; handover 06-11 archiviato in docs/CHAT_HANDOVER_2026-06-11.md.**
+# CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
+**Da: sessione §61 (lock -> checklist T3') → A: prossima sessione (§62) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/LOCK_CHECKLIST_ADDENDUM.md §61;
+catena precedente: docs/DEBT_LOCK_2D_ADDENDUM.md §60, docs/DEBT_LOCK_ADDENDUM.md §59,
+docs/DELTA4_BETA_ADDENDUM.md §58, docs/ALPHA1_FABRY_ADDENDUM.md §57.**
 
 ## A. Stato del programma in dieci righe
 La congettura resta ridotta a **α1 ∧ β ∧ γ**; il "locale" è sigillato (T1, T2, α2, T3′ + dogane).
-Stato del Teorema della Finestra (RADIUS): r=4 chiuso (27,3M stati, rotori tutti B-T), tariffe
-certificate δ₁=3/5, δ₂=1/7, δ₃=1/64, δ₄^auto=2/313; il minimo del sovra-automa è un **fantasma**
-(potenza realizzabile 0); 252 fantasmi tagliati, barriera empirica a 0.0455 ma **non** un lower
-bound certificato (serve il Lemma A). Novità §56:
-1. **Automa-prodotto A(r;m,D)** (finestra × memoria di celle uscite) **costruito, validato
-   byte-per-byte (Python≡C), e dimostrato SOUND**: ogni orbita reale si solleva a costo invariante.
-2. Come **verificatore** funziona: uccide **tutti i 252 fantasmi** del catalogo r=4 con memoria
-   modesta (politica **ibrida nere-prima**, m=24, D=8 → 0 superstiti).
-3. Come **certificatore di δ^alt** NON è ancora pronto: due ostacoli (vedi B.3) — il min cycle
-   mean grezzo del prodotto scende **sotto** δ^auto perché spezza i rotori B-T.
-4. Prima conferma diretta, dentro il prodotto, della tricotomia **δ^auto < δ^alt < δ^real**
-   (r=1: minimo 1/8 alternanza-consistente ma gamma-REJECT per "fresca-L").
+Teorema della Finestra: r=4 chiuso (27,3M stati, rotori tutti B-T), tariffe δ₁=3/5, δ₂=1/7,
+δ₃=1/64, δ₄^auto=2/313; automa-prodotto A(r;m,D) costruito, sound, verificatore dei 252 fantasmi
+(§56). §57 ha declassato il pavimento del morso fresco; §58 ha mostrato che la non-localita'
+`r=4` non erode. §59 ha falsificato il ponte diretto `deep_black -> lock`. §60 ha mostrato che
+fresh-bite e' l'innesco locale. **Novita' §61:** sui gate-lock lunghi il verdetto e' esattamente
+la checklist T3':
+1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
+   su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
+   pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
+   puro, non pre-lock (kill-shot tail/core=1.13). NON è l'invariante giusto.
+2. Il tasso di letture nere fuori-finestra `r=4` **non erode** sulle stesse orbite: mediana
+   **0.2334/passo**, tail/core mediano **1.06**; minimi mobili ancora **9x, 16x, 27.4x**
+   sopra `delta4_auto=2/313` per L=313/1040/10400.
+3. I lock simbolici W0-like persistono, ma **non** sono predetti positivamente da deep-black:
+   `D>=40` cala con i quantili deep (delta top-bottom -0.2641...-0.1406), mentre cresce coi
+   quantili fresh-bite (+0.1460...+0.3256).
+4. Nel 2D, a deep quasi fissato l'effetto bite resta positivo (`D>=40` mediana +0.1373);
+   a bite quasi fissato l'effetto deep resta negativo (`D>=40` mediana -0.0350).
+5. `D>=40` e' comunque presente in tutte le 24 orbite (113-167 run/orbita), `maxD` min/med/max =
+   78/167/1591; `D>=80` e' piu' raro ma presente in mediana 4 run/orbita.
+6. **Caveat fondamentale:** ogni orbita converge ⇒ l'orbita eterna non-highway è controfattuale ⇒
+   **evidenza forte, NON prova**. La simulazione NON può decidere α1; va dimostrata su orbite eterne.
+7. `lock_checklist_probe.py` valuta T3' sui lock left-maximal per-allineamento: **891/891**
+   gate-lock pre-onset muoiono alla prima lettura esogena cattiva; **24/24** onset veri
+   passano il controllo positivo.
+8. **Ridirezione aggiornata:** il ponte locale `lock -> checklist -> verdetto` e' sano. Il
+   prossimo fronte e' la **hazard/mixing della checklist**: capire se gli stati-checklist ai lock
+   possono restare eternamente sbagliati.
 
-## B. Risultati di questa sessione (2026-06-13, §56)
+## B. Risultati delle ultime sessioni (§57-§61)
 
-### B.1 Infrastruttura (PRODOTTO §56.1–56.2)
-`code/product_automaton.py` (prototipo+analisi+selftest+delta) e `code/product_build.c` (BFS C,
-3 politiche memoria: full/black-only/ibrida, modo 0/1/2). Stato = finestra canonica {U,W,B,B*} ×
-M (≤m celle uscite, box ‖·‖∞≤D, eviction deterministica). B* = nera nota solo da memoria: lettura
-forzata che **paga** come assumiB. **Soundness provata e testata** (self-test 4/4 verde: m=0≡base
-byte-identico; orbita reale mai bloccata a costo invariante; frame canonico≡assoluto; 252/252
-fantasmi bloccati). Builder C ≡ Python byte-per-byte in tutte e 3 le politiche. **C ~3000× più
-veloce**: A(2;4,5) 17,3M stati in 12,7 s.
+### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
+Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
+riproducibili dal solo rngstate 64-bit), `reseed`, `dump`. morso = fresca-bianca. Validato:
+vuota→**9977**, (7,−7)→**106258**, highway **22/104**; Berlekamp–Massey highway→L≈102, rumore→n/2.
+**Fix di efficienza decisivo:** reset solo celle toccate invece di azzerare la hash 16 MB/seme →
+da 1.8k a **31.7k semi/s** su 14 shard (collo = banda di memoria, non thread; CLAUDE.md §1-g/§4).
 
-### B.2 Verificatore del catalogo (PRODOTTO §56.3) — SUCCESSO
-Copertura 252 fantasmi r=4: ibrida nere-prima **m=24,D=8 → 0 superstiti** (full nearest serve
-m=32; black-only non arriva a 0 a D=8). I fantasmi mentono a corto raggio: memoria modesta + nere
-prioritarie li copre tutti. Conferma quantitativa della firma RADIUS §55.2.
+### B.2 I due test (ALPHA1 §57.2)
+- **Carlson/Berlekamp–Massey:** ogni transiente caotico ha complessità lineare **n/2** ⇒ F(z)=Σz^{τₙ}
+  ha frontiera naturale sul cerchio unitario (highway razionale). Dicotomia confermata ma = la
+  convergenza riscritta, non α1.
+- **gap/Fabry:** stalli e densità sui transienti lunghi (il bersaglio vero).
 
-### B.3 Certificatore di δ^alt (PRODOTTO §56.4–56.5) — DUE OSTACOLI
-Testimoni (doppio certificato ciclo+fixpoint intero, `code/check_witnesses.py`):
-- A(1;2,8): δ=**1/8**, NO-B-T, **alternanza-OK**, gamma-REJECT (fresca-L) — δ^alt<δ^real confermato.
-- A(2;2,8): δ=**2/70**, NO-B-T, **FANTASMA d=52** (m=2 insufficiente); A(2;4,8): 2/71, B-T, fant. d=64.
+### B.3 Run Ryzen + test within-orbit (ALPHA1 §57.3–57.4) — il risultato
+Run: 8.44 h, 14 shard, **9.8·10⁸ semi**, **88.521 orbite** onset≥100k, **BEST onset 313.358**
+(≈3× sandbox; ricerca casuale plateau ~log: niente 10⁶ senza semi strutturati). Test within-orbit
+(NON distorto, su 24 orbite 252k–313k, `dumps_all.txt`): max-stall **90–104 periodi** (~lineare in T,
+core ~T^1.09), sale ancora nell'ultimo 30% in **16/24**, densità ~0.05, **L=1040 floor=0 su tutte**,
+**L=10400 floor mediana 0.006 con uno zero** (orbita 268891). **Kill-shot pre-lock:** caos puro vs
+pre-lock → tail/core **1.13**, e il core L=10400 floor tocca 0 ⇒ gli stalli grossi vivono nel caos.
 
-Il minimo del prodotto è **sotto** δ^auto (0.125<0.6; 0.029<0.143). Cause:
-- **Ostacolo A (trappola nuova):** il prodotto **spezza i rotori B-T** del base (r=1: p5 sparisce;
-  r=2: restano solo p15) e li riespone come cicli paganti-poco. Sono B-T ⇒ cavalcabili finitamente
-  ⇒ non contano nel liminf. **Va rimosso ogni ciclo B-T PRIMA del min-cycle-mean** (oggi si tolgono
-  solo i rotori-prodotto). Istanza al prodotto della trappola (e) CLAUDE.md §1.
-- **Ostacolo B:** i fantasmi NO-B-T profondi (conflitto a d=52) richiedono m≥16, ma la **memoria
-  spaziale (m,D) esplode**: r=1 m=16 e r=2 m=8 superano 40M stati; black-only peggio. Sufficiente
-  ⇒ non computabile come automa completo.
+### B.4 Sonda delta4 -> beta (DELTA4-BETA §58) — il risultato nuovo
+`alpha1/delta4_long_orbits.py` rigenera le 24 orbite da `rngstate`, valida i morsi contro
+`dumps_all.txt`, misura `r=4` deep-black e lock simbolici. Runtime completo: 72.6 s.
 
-## C. Roadmap (priorità prossima sessione)
-1. **Rimozione dei cicli B-T nel prodotto** (ostacolo A): estendere `gen_rotor_edges.py`/
-   `min_assumeB.c` al prodotto eliminando ogni ciclo con rot≢0 mod4 o drift=0. Verificare a r=1,2
-   che il min-cycle-mean RISALGA sopra δ^auto: solo allora è un candidato δ^alt sano.
-2. **Memoria temporale compatta** (ostacolo B): codificare l'ultimo colore visto solo per le celle
-   toccate negli ultimi k passi, indicizzate per *tempo* d'uscita non per posizione (intuizione di
-   Michael, RADIUS §55.4). Misurare la crescita stati vs (m,D); k(ε) limitato al crescere di ε?
-3. **Prodotto r=4 con memoria minima + ibrida** (l'ibrida copre il catalogo a m=24), δ^alt parziale;
-   stimare gli stati col cap prima di lanciare.
-4. Solo dopo 1–3: confronto coi minimi reali su sliding window (RADIUS §55.3).
-5. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+| quantita' | min | mediana | max |
+|---|---:|---:|---:|
+| tasso nero fuori-finestra `r=4` | 0.2277 | **0.2334** | 0.2378 |
+| tasso morso fresco | 0.0466 | **0.0537** | 0.0627 |
+| tail/core nero fuori-finestra | 1.031 | **1.058** | 1.093 |
+| tail/core morso fresco | 0.439 | **0.614** | 0.795 |
+
+Minimi mobili deep-black: L=313 -> 0.0575 (**9.0x** `delta4_auto`), L=1040 -> 0.1019
+(**16.0x**), L=10400 -> 0.1750 (**27.4x**). I minimi del morso fresco sono zero a L=313 e
+1040 su tutte le orbite, e zero globale anche a L=10400.
+
+### B.5 Debito profondo -> lock (DEBT-LOCK §59) — falsificazione utile
+`alpha1/debt_lock_hazard.py` usa predictor causale `[t-Lpred,t)` e lock futuro `[t,t+H)`,
+con `Lpred={313,1040,3120}`, `H={312,1040}`, `D={40,80}`. Runtime completo: 164.3 s.
+
+Per bin crescenti di `deep_black`, l'hazard futuro cala in tutti i casi:
+- `D>=40`: delta top-bottom da **-0.2641** a **-0.1406**, ratio 0.28-0.48.
+- `D>=80`: delta top-bottom da **-0.0236** a **-0.0107**, ratio 0.13-0.42.
+
+Il controllo `fresh_bite` predice invece positivamente:
+- `D>=40`: delta +0.1460 ... +0.3256.
+- `D>=80`: delta +0.0117 ... +0.0271.
+
+Esempio `Lpred=1040`, `H=1040`, `D>=40`: deep rate 0.1852->0.2742, bite rate
+0.1255->0.0075, hazard 0.4867->0.2226. Interpretazione: il debito profondo e' substrato
+di memoria, non grilletto; il lock richiede anche attivita' fresca.
+
+### B.6 Modello 2D deep/bite -> lock (DEBT-LOCK 2D §60)
+`alpha1/debt_lock_2d.py` binnerizza gli anchor per entrambe le coordinate. Runtime: 146.7 s.
+
+Effetto medio pesato entro strisce:
+- `D>=40`: deep effect entro bite mediano **-0.0350**; bite effect entro deep mediano **+0.1373**.
+- `D>=80`: deep effect entro bite mediano **-0.0022**; bite effect entro deep mediano **+0.0121**.
+
+Caso centrale `Lpred=1040`, `H=1040`: best cell `(deep=0,bite=4)` con hazard `0.5063`
+per `D>=40`; worst `(deep=4,bite=0)` con hazard `0.1601`. Quindi la cella produttiva e'
+deep basso / bite alto: il debito profondo e' substrato, non scintilla.
+
+### B.7 Lock -> checklist T3' (LOCK-CHECKLIST §61)
+`alpha1/lock_checklist_probe.py` ricostruisce E(k) direttamente da `W0`, estrae lock
+per-allineamento left-maximal, separa porte/fasi mute con la tabella α2, e legge la checklist
+read-only nello stato al tempo del lock. Runtime completo: 68.1 s.
+
+Risultato:
+- lock pre-onset valutati: **3303**;
+- gate-lock pre-onset: **891**;
+- gate-lock con morte esattamente alla prima lettura esogena cattiva: **891/891**;
+- onset veri come controlli positivi: **24/24**.
+
+Per soglia: `D>=40` = 3191 lock, 786 gate; `D>=80` = 112 lock, 105 gate. Sui gate-lock i
+fallimenti sono bilanciati: `missing_black` 447, `frontier_black_collision` 444. Top offset:
+45, 46, 71, 77, 99, 98. Lettura: il lock bussa, la checklist decide; il problema residuo e'
+la non-cospirazione della checklist, non un altro proxy di `D(t)`.
+
+## C. Roadmap (priorita' prossima sessione §62)
+1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
+   liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
+2. **Checklist hazard.** Modellare `P(checklist OK | lock)` per fase porta, offset di morte,
+   deep/bite pre-lock, tempo assoluto e indice del lock.
+3. **Mixing della checklist.** Transizioni fra lock consecutivi: stato congiunto delle celle
+   critiche, parita' `t mod 8/16`, posizione porta, riuso della cella assoluta critica.
+4. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+   sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
+5. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+   (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
+6. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
-1. Lemma A (alternanza taglia i fantasmi) e Lemma B (memoria antica non eternamente economica) —
-   RADIUS §55.4: il prodotto È la via di certificazione del Lemma A, una volta tolto l'ostacolo A.
-2. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
-3. Ponte morsi→dogane (§42.4) con tasso 2/313 a escursione ≥4; α universale (§42.3); Lean γ (§33.2.2).
-4. L_∞ NUMERABILE (§28.2): non riaprire percorsi entropici/spettrali per α1.
+1. Checklist beta sui lock delle orbite lunghe: ora il ponte locale e' confermato; resta
+   quantificare hazard e mixing (vedi C.2-C.3).
+2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
+   RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
+3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
+4. L_∞ NUMERABILE (§28.2) e **scala del diavolo falsificata** (sessione devil's-staircase): NON
+   riaprire percorsi entropici/spettrali/quasi-periodici per α1 — il regime irrazionale è vuoto.
 
 ## E. Igiene operativa
-- **Self-test PRIMA di tutto:** `python code\window_automaton.py --selftest`,
-  `python code\analyze_radius.py --selftest`, `python code\product_automaton.py --selftest`. MAI rossi.
-- **Macchina:** Ryzen 5800X, **16 GB RAM (limite vero)**; Python numpy/scipy SOLO
+- **Self-test PRIMA di tutto:** `window_automaton.py --selftest`, `product_automaton.py --selftest`,
+  e `alpha1\alpha1_engine.exe` (vuota→9977; (7,−7)→106258; highway 22/104). MAI rossi.
+- **Macchina:** Ryzen 5800X, **16 GB RAM (limite vero)**, 8C/16T; Python numpy/scipy SOLO
   `C:\Python\Python310\python.exe`; gcc = `C:\Strawberry\c\bin\gcc.exe`; stdout cp1252 ⇒
   `sys.stdout.reconfigure(encoding="utf-8")`.
-- **Builder C (sempre, per istanze non minuscole):** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]`
-  (modo 0=full,1=black-only,2=ibrida); `window_build.exe`, `min_assumeB.exe`, `gamma_enum.exe check`.
-  **MAI il BFS Python del prodotto oltre poche migliaia di stati** (esplode + swap: incidente §56.6).
+- **alpha1 (sessioni §57-§59):** `alpha1_engine.exe search <shard> <nsh> <nseed> <cap> <smin> <smax> [minOnset]`
+  (early-stop, reset-touched); `reseed <cap> <rngstate> <smin> <smax>` per ridumpare un'orbita dal
+  rngstate; `dump <cap>` con seme su stdin. Monitor: `powershell -File alpha1\status.ps1`.
+  Sonda §58: `C:\Python\Python310\python.exe alpha1\delta4_long_orbits.py`.
+  Sonda §59: `C:\Python\Python310\python.exe alpha1\debt_lock_hazard.py`.
+  Sonda §60: `C:\Python\Python310\python.exe alpha1\debt_lock_2d.py`.
+  Sonda §61: `C:\Python\Python310\python.exe alpha1\lock_checklist_probe.py`.
+- **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
+  2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
-- Binari riusabili: `build/` (r1–r4 base ~2 GB; p* del prodotto), `build_pyval/` (validazione hash).
-  Catalogo fantasmi `results/delta4_alt_catalog.jsonl`; testimoni `build/*_delta_cycle*.txt`.
-- Trappole cumulative: CLAUDE.md §1 + RADIUS §50/§54.4/§55.2 + **PRODOTTO §56.6** (rotori spezzati;
-  black-only esplode; BFS Python del prodotto; Monitor tail -f).
-- Verbale prossima sessione: **§57**, stesso stile.
-- Tempi tipici: build r4 20 s; analisi r4 70 s; A(2;4,5) prodotto 12,7 s; self-test prodotto <30 s.
+- Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
+  **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
+- Verbale prossima sessione: **§62**, stesso stile.
+- Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

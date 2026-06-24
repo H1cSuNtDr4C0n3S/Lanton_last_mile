@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§56**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§62**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -26,20 +26,49 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       enunciati "ogni cammino infinito fa X", MAI "esiste un cammino che fa Y";
   (d) parole cicliche: confronti solo a meno di rotazione (funzione `canon`);
   (e) min cycle mean assumiB sul grafo pieno è banalmente 0: ha senso solo senza archi-rotore;
-  (f) processi lunghi: chunking con budget temporale interno e checkpoint su disco.
+  (f) processi lunghi: chunking con budget temporale interno e checkpoint su disco;
+  (g) **reset-hash per-seme = collo di banda di memoria** (ALPHA1 §57.7-a): in una ricerca
+      parallela su molti semi, azzerare l'INTERA tabella hash a ogni seme satura la banda di
+      memoria (non i thread) e fa crollare il throughput ~8×. Resettare SOLO le celle toccate
+      (lista `touched`, reset O(celle) non O(tabella)). Vale per ogni sweep multi-seme;
+  (h) **survivorship temporale** (ALPHA1 §57.7-b): selezionare orbite per onset alto = selezionare
+      per starvation (densità bassa/stalli lunghi quasi per definizione). I tassi/pavimenti si
+      leggono SOLO within-orbit, mai confrontando semi di T diverso. È la (a) nel tempo;
+  (i) **controfattuale eterno** (ALPHA1 §57.6): ogni orbita simulata converge ⇒ NESSUNA soglia
+      misurata sul finito prova un enunciato su orbite eterne (α1, pavimenti del tasso, ...).
+      La simulazione può falsificare un meccanismo locale, non decidere α1.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
 - Heading: 0=su, 1=destra, 2=giù, 3=sinistra. Lettura→svolta→flip→mossa.
 - W0 = parola della highway, periodo 104 (58 R, P(R)=0.558, rot=12), drift diagonale (±2,±2).
   File: `data/W0.npy` (0/1), `data/w0.txt` (L/R). Onset griglia vuota: N0=9977.
+- morso = lettura **fresca-bianca** (`fresh & color==0`); definizione canonica in `morso_census.py`.
 - Parola realizzabile = compatibile con QUALCHE configurazione finita: fresche libere,
   rivisite forzate dall'alternanza. R(n) censiti fino a 40 (`data/gamma_enum.pkl`).
 
 ## 3. Mappa del progetto
 - `CHAT_HANDOVER.md` — stato completo del programma e roadmap.
 - `docs/` — catena degli addenda: HANDOVER, HANDOVER2, ANATOMY, ALPHA (§1–28),
-  GAMMA (§29–35), MORSO (§36–44), RADIUS (§45–55), PRODOTTO (§56). La numerazione § è globale e continua.
+  GAMMA (§29–35), MORSO (§36–44), RADIUS (§45–55), PRODOTTO (§56), ALPHA1_FABRY (§57),
+  DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), **LOCK-CHECKLIST (§61)**.
+  La numerazione § è globale e continua.
+- `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
+  hazard debito->lock (§59), modello 2D deep/bite (§60), e lock->checklist T3' (§61).**
+  `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
+  **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
+  riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
+  `alpha1_within.py` (test within-orbit: max-stall, pavimento a finestra), `status.ps1` (monitor),
+  `ALPHA1_RUN.md` (run), `onsets_shard*.txt` (88.521 hit≥100k), `dumps_all.txt` (24 orbite lunghe).
+  `delta4_long_orbits.py` rigenera le 24 orbite da `rngstate` e misura `r=4` deep-black,
+  minimi mobili e lock W0-like; risultato §58: il debito profondo tiene mentre il morso fresco
+  affonda.
+  `debt_lock_hazard.py` usa predictor causale `[t-L,t)` e lock futuro `[t,t+H)`; risultato §59:
+  il ponte diretto deep-black -> lock e' anti-correlato, mentre fresh-bite predice positivamente.
+  `debt_lock_2d.py` mostra che l'effetto fresh-bite resta positivo a deep quasi fissato, mentre
+  deep resta negativo/debole a bite quasi fissato.
+  `lock_checklist_probe.py` ricostruisce E(k) da `W0` e valuta T3' sui gate-lock: risultato §61,
+  891/891 morti esatte alla prima lettura esogena cattiva e 24/24 onset veri OK.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -56,34 +85,43 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   calcolati (valori di riferimento per i cross-check).
 
 ## 4. Parallelizzazione (Ryzen 7 5800X, 8C/16T) — default se claude.md esterno non dice altro
-- CPU-bound puro (C, sweep gamma_enum): 14–15 processi `part` con `start /low`, shard per
-  prefissi di scelte libere; i conteggi dei shard DEVONO sommare esattamente ai totali noti.
+- CPU-bound puro (C, sweep gamma_enum / alpha1 search): 14 processi shard con `start /low` o
+  priorità BelowNormal (lasciare 2 thread liberi); shard disgiunti (per prefissi di scelte libere,
+  o per offset RNG con semi riproducibili). I conteggi dei shard DEVONO sommare ai totali noti.
+- **Collo di bottiglia = memoria, non thread** (lezione ALPHA1 §57.1): se ogni iterazione tocca/
+  azzera una struttura grossa, 14 processi saturano la banda. Resettare solo lo stato sporcato
+  (es. celle toccate) prima di scalare i thread. Misurato: 1.8k→31.7k semi/s solo con questo fix.
 - Python memory-bound (BFS automa, dict grossi): 6–8 processi max (la RAM e la cache L3
   contano più dei thread); preferire un singolo processo ottimizzato + numpy vettoriale
   quando possibile. Niente hyperthreading per BFS con dict > 1 GB.
-- Run > 10 min: SEMPRE checkpoint su disco (pickle dello stato BFS ogni ~5 min) e log
-  append-only con timestamp, così la run è riprendibile e monitorabile.
+- Run > 10 min: SEMPRE log append-only con timestamp + (per i BFS) checkpoint su disco, così la
+  run è riprendibile e monitorabile. Per le search a semi riproducibili basta loggare il rngstate.
 - Ogni port C/numba di codice Python validato va rivalidato con i self-test PRIMA dell'uso.
 
-## 5. Task operativo immediato (in ordine, fermarsi al primo fallimento)
-1. `python code\window_automaton.py --selftest` — DEVE passare
-   (r=1: 15 stati, h=0.8114, 1 rotore; r=2: 403 stati, h=0.7594, 3 rotori).
-2. `python code\window_automaton.py --radius 3` — cross-check con `results/radius3_summary.json`
-   (45971 stati, h=0.7441, 1 rotore p=15). Poi `--radius 3 --karp` → δ₃ (stima: minuti–ore;
-   se lento, vettorializzare meglio o portare il Bellman–Ford in C).
-3. `--radius 4`: crescita stati 15 → 403 → 45971 (×27, ×114) ⇒ atteso ~10⁶–10⁷.
-   Se il BFS Python supera ~30 min stimati: port in C/numba di `build()` mantenendo ESATTAMENTE
-   la semantica (mappe mapR/mapL, flip del centro PRIMA della trasformazione, celle uscite =
-   ignote) e rivalidare con --selftest. Riportare: stati, entropie, rotori+verdetti, potenze
-   massime realizzabili, δ₄ se fattibile.
-4. Parole cicliche marcate "DA VERIFICARE" → `gamma_enum check`.
-5. Solo se r=4 < ~2·10⁷ stati: tentare r=5 con cap stati e abort esplicito.
-6. Scrivere `docs/RADIUS_ADDENDUM.md` (§45+) coi risultati, nello stile degli addenda.
+## 5. Self-test (PRIMA di tutto, fermarsi al primo rosso)
+1. `python code\window_automaton.py --selftest` (r=1: 15 stati, h=0.8114, 1 rotore; r=2: 403, 3 rotori).
+2. `python code\product_automaton.py --selftest` (4/4 verde: m=0≡base; orbita reale costo invariante;
+   frame canonico≡assoluto; 252/252 fantasmi bloccati).
+3. `alpha1\alpha1_engine.exe`: vuota→onset 9977; (7,−7)→106258; highway densità morso 22/104.
+4. Cross-check r=3/r=4 coi `results/radius*_summary.json` prima di ogni nuova analisi a finestra.
 
 ## 6. Obiettivo strategico (perché questo task)
 Teorema della Finestra (MORSO §40–40.1): ogni orbita eterna legge infinitamente spesso celle
 nere fuori dalla finestra di memoria (2r+1)×(2r+1), con tasso ≥ δ_r (δ₁=3/5, δ₂=1/7), salvo
 cavalcate finite (≤4 periodi) di rotori espliciti tutti uccisi da B–T/γ. La domanda a cui
 r=4,5 rispondono: la stretta sui rotori resta monotona e B–T/γ-uccidibile a ogni raggio?
-Se sì, il limite è un enunciato di non-località pura — il ponte verso α1 (le rivisite nere
-profonde sono dove vive il formalismo dogane/checklist). Roadmap completa: CHAT_HANDOVER §C.
+**AGGIORNAMENTO ALPHA1 §57:** la formulazione di α1 come *pavimento del tasso di morso fresco*
+("modo DC del morso", #24) è stata **misurata ed erode** (densità→0, stalli ~lineari in T fino a
+3·10⁵, anche nel caos puro). NON è l'invariante giusto. L'handle sano è il tasso di **non-località
+δ_r** (lettura nera fuori-finestra), che NON è legato alla densità globale di morso ed è già un
+teorema per r≤4. **AGGIORNAMENTO §58:** sulle 24 orbite lunghe il tasso nero fuori-finestra r=4
+ha mediana 0.2334/passo e tail/core mediano 1.06; i minimi mobili sono ancora 9x/16x/27.4x
+`delta4_auto` per L=313/1040/10400, mentre il morso fresco ha finestre a zero. **AGGIORNAMENTO
+§59:** il ponte diretto debito profondo -> lock e' falso nel predittore locale: hazard `D>=40`
+cala coi quantili deep-black e cresce coi quantili fresh-bite. **AGGIORNAMENTO §60:** la griglia
+2D conferma che bite e' l'innesco: effetto `D>=40` mediano +0.1373 entro strisce deep, mentre
+deep resta -0.0350 entro strisce bite. **AGGIORNAMENTO §61:** il ponte locale lock -> checklist
+e' confermato: 891/891 gate-lock pre-onset muoiono esattamente alla prima lettura esogena cattiva
+e 24/24 onset veri passano il controllo positivo. Prossimo fronte: hazard/mixing della checklist.
+Roadmap completa:
+CHAT_HANDOVER §C.

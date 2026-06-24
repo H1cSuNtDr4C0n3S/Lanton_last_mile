@@ -1,0 +1,166 @@
+{
+  "rows": 3327,
+  "pre_onset_locks": 3303,
+  "entry_controls": 24,
+  "pre_onset_by_threshold": {
+    "40": 3191,
+    "80": 112
+  },
+  "gate_pre_onset_by_threshold": {
+    "40": 786,
+    "80": 105
+  },
+  "gate_exact_deaths": 891,
+  "gate_deaths_total": 891,
+  "gate_exact_fraction": 1.0,
+  "entry_ok": 24,
+  "entry_controls_total": 24,
+  "entry_ok_fraction": 1.0,
+  "verdicts": {
+    "entry_ok": 24,
+    "gate_exact_death": 891,
+    "mute_early_death": 2393,
+    "mute_threshold_death": 19
+  },
+  "bad_kind": {
+    "frontier_black_collision": 538,
+    "missing_black": 2765
+  },
+  "mute_verdicts": {
+    "mute_early_death": 2393,
+    "mute_threshold_death": 19
+  },
+  "top_gate_phases": [
+    [
+      0,
+      356
+    ],
+    [
+      103,
+      138
+    ],
+    [
+      30,
+      86
+    ],
+    [
+      24,
+      76
+    ],
+    [
+      102,
+      55
+    ],
+    [
+      31,
+      45
+    ],
+    [
+      100,
+      32
+    ],
+    [
+      99,
+      32
+    ],
+    [
+      25,
+      25
+    ],
+    [
+      16,
+      8
+    ],
+    [
+      92,
+      8
+    ],
+    [
+      98,
+      7
+    ]
+  ],
+  "top_gate_bad_offsets": [
+    [
+      45,
+      137
+    ],
+    [
+      46,
+      78
+    ],
+    [
+      71,
+      58
+    ],
+    [
+      77,
+      56
+    ],
+    [
+      99,
+      52
+    ],
+    [
+      98,
+      48
+    ],
+    [
+      47,
+      45
+    ],
+    [
+      76,
+      32
+    ],
+    [
+      44,
+      26
+    ],
+    [
+      43,
+      22
+    ],
+    [
+      70,
+      21
+    ],
+    [
+      40,
+      21
+    ]
+  ],
+  "source": "C:\\Lanton_last_mile\\alpha1\\dumps_all.txt",
+  "orbits_requested": 24,
+  "orbits_completed": 24,
+  "thresholds": [
+    40,
+    80
+  ],
+  "gate_phases": [
+    0,
+    16,
+    21,
+    24,
+    25,
+    26,
+    30,
+    31,
+    72,
+    83,
+    90,
+    91,
+    92,
+    93,
+    94,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103
+  ],
+  "entry_horizon": 1248,
+  "elapsed_seconds": 68.12881769999512
+}
