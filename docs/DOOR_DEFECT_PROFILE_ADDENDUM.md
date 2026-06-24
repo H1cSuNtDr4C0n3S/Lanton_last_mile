@@ -7,6 +7,8 @@ tentativo porta, leggere tutte le 22 fasi/gate e misurare la profondita' del pri
 `h_g(L)`. Il risultato chiarisce un punto importante: sul campione gia' condizionato da lock
 W0-like, la fase reale e' sempre la migliore; quindi il profilo lock-condizionato non e'
 ancora l'invariante globale cercato.
+Nota strategica aggiunta prima di §67: il vero contenuto di §66 e' un'asimmetria. Identificare
+la porta e' locale; decidere se la porta vera entra e' globale.
 
 ## 66. Riepilogo in una frase
 `door_defect_profile.py` conferma e rafforza §63/§64: sui **810** tentativi porta la fase reale
@@ -14,6 +16,24 @@ e' la **migliore unica in 810/810** casi, mentre le fasi alternative compatibili
 muoiono entro **5** letture esogene. Questo e' un buon controllo di coerenza, ma declassa il
 profilo "22 porte sul lock" a oggetto lock-condizionato: il prossimo passo deve essere uno
 scanner non condizionato del campo di detriti.
+
+## 66.0-a Asimmetria locale/globale
+§66 va nominato per quello che e':
+
+```
+identificare quale porta si sta provando = locale;
+decidere se quella porta entra = globale.
+```
+
+Le fasi alternative compatibili col primo bit muoiono entro **5** letture esogene. La fase reale
+e' best unica in **810/810** casi. Quindi la meta' "quale porta?" e' localmente sigillata dal lock.
+
+La meta' "la porta entra?" resta invece non-locale: la fase reale puo' morire a offset **1591**
+e distanza L∞ **36**. L'invariante globale, se esiste, non vive nell'identificazione della porta;
+vive nel successo d'ingresso della porta gia' identificata.
+
+Questa e' la ragione per cui il profilo lock-condizionato non e' una delusione: chiude la meta'
+locale dell'asimmetria e lascia esposta l'unica meta' ancora utile.
 
 ## 66.1 Strumento
 Nuovo file:
@@ -109,18 +129,96 @@ fase del lock; il crux globale sta prima della selezione del lock".
 ## 66.5 Prossimo passo (§67)
 La priorita' cambia forma:
 
-1. **Lemma di non-localita' T3'**: ancora da scrivere. Per ogni R, costruire due campi uguali
-   in `B_R` della porta ma con verdetto diverso per una lettura esogena fuori `B_R`. Se il
-   lemma usa campi sintetici, chiamarlo non-localita' sintattica; la versione dinamica richiede
-   campi raggiungibili o una loro chiusura naturale.
-2. **Scanner non condizionato delle 22 porte**: campionare ancore non selezionate da lock profondi
+1. **Lemma di non-localita' T3'**: non sovra-investire. La non-localita' sintattica e' quasi
+   a priori: la checklist legge la cavalcata futura infinita della highway, quindi per ogni
+   raggio R si puo' spostare la cella discriminante oltre `B_R`. Il peso vero non e'
+   l'esistenza combinatoria della coppia di colorazioni, ma la **realizzabilita'**: le coppie
+   discriminanti devono appartenere a campi raggiungibili da semi finiti, o a una chiusura
+   naturale di tali campi. `L∞=36` e' solo il floor empirico che mostra che il lemma non e'
+   vacuo nel campione.
+2. **Candidato Φ globale**: formulare prima dello scanner un funzionale del detrito
+   `Φ(detrito)` con quattro condizioni:
+   - `Φ` limitato dal basso;
+   - ogni rivisita nera profonda lo decrementa con massa non sommabile: decremento uniforme
+     `ε>0`, oppure valori discreti/ordine ben fondato;
+   - `Φ=0` se e solo se qualche porta entra;
+   - `Φ` non e' prossimita' al lock, perche' §59 ha falsificato proprio quel proxy.
+3. **Scanner non condizionato delle 22 porte**: campionare ancore non selezionate da lock profondi
    e misurare `H_L=max_g h_g(L)` sul campo di detriti. Stratificare almeno per tempo/orbita,
-   morso fresco, deep-black e profondita' W0-like `D(t)`. Questo e' il baseline che manca.
+   morso fresco, deep-black e profondita' W0-like `D(t)`. Ma lo scanner non deve restare una
+   caratterizzazione aperta: deve falsificare o sostenere la proprieta' floor-decrement di `Φ`.
 
-Solo dopo questi due passi ha senso tornare al "potenziale globale": il profilo lock-condizionato
-ha mostrato dove non cercarlo.
+Solo dopo questi passi ha senso tornare al "potenziale globale": il profilo lock-condizionato
+ha mostrato dove non cercarlo, e il candidato `Φ` dice invece cosa lo scanner deve provare a
+uccidere.
 
-## 66.6 File prodotti
+## 66.6 Cambio di categoria: da tasso a raggiungibilita'
+La domanda globale
+
+```
+puo' il detrito restare ostile a tutte e 22 le porte per sempre?
+```
+
+non e' un tasso: e' un enunciato qualitativo di raggiungibilita'/evitamento. Questo e' il
+cambio di categoria che riapre strumenti che la versione-tasso di α1 aveva reso ciechi:
+combinatorics on words, coloring-avoidance e anche strumenti topologici di tipo indice, se
+formulati su un problema si/no di raggiungibilita' invece che su un valore medio.
+
+Il caveat resta duro: uno scanner su orbite finite eredita la trappola del controfattuale eterno.
+Non puo' provare α1. Serve per falsificare candidati `Φ` o per produrre l'oggetto empirico che
+un invariante globale dovra' spiegare.
+
+## 66.7 Candidato di prova: potenziale Φ
+Il candidato operativo per §67 e':
+
+```
+Φ(campo di detriti)
+```
+
+con:
+- **(a) lower bound:** `Φ` e' limitato inferiormente;
+- **(b) decremento forzato:** ogni lettura nera profonda fuori-finestra decrementa `Φ` in modo
+  non sommabile: o con `ε` uniforme, o in un codominio discreto/ben fondato;
+- **(c) assorbimento:** `Φ=0` equivale all'esistenza di una porta che entra;
+- **(d) non-lock-proxy:** `Φ` non misura "vicinanza al lock", perche' §59 mostra che deep-black
+  e lock sono anti-correlati nel predittore locale.
+
+Se un tale `Φ` esiste, la logica sarebbe:
+
+```
+Teorema della Finestra + floor §58  =>  eventi deep-black ricorrenti
+decremento uniforme/discreto        =>  massa di decremento non sommabile
+Φ lower bounded                    =>  impossibile evitare il livello 0 per sempre
+Φ=0                                =>  ingresso
+β/Dogana                           =>  ingresso assorbente
+```
+
+Nel lato provato, il Teorema della Finestra forza ricorrenza di letture nere fuori finestra.
+Il floor §58 e' evidenza empirica robusta sul campione lungo, non un assioma dimostrativo da
+usare senza prova. Per una dimostrazione, il floor deve essere sostituito da una stima certificata
+o da un ordine discreto che renda impossibile una discesa infinita.
+
+Il crux onesto e' l'urto fra (b) e (d): esiste un funzionale del detrito decrementato dalle
+rivisite nere profonde, ma diverso dalla prossimita' al lock? La scelta ovvia e' morta in §59.
+Trovare un `Φ` cosi', o dimostrare che non esiste in una classe naturale, e' il bersaglio ben
+posto di §67.
+
+### 66.7-a Prima falsificazione empirica di Φ
+§67 non deve cercare subito un `Φ` astratto. Deve proporre 2-3 candidati rozzi e provare a
+ucciderli su segmenti tra gate-attempt consecutivi:
+
+```
+deep-black forced events > 0,
+nessun ingresso nel segmento,
+ma Φ(next) >= Φ(prev).
+```
+
+Questo e' il test killer minimale. Una versione piu' forte cerca ricorrenze empiriche del
+profilo globale: due stati con profilo porta/vettore T3' simile o migliore, molte rivisite nere
+profonde in mezzo e nessun ingresso. Se il deficit verso ingresso non scende monotonicamente,
+quel candidato `Φ` e' morto.
+
+## 66.8 File prodotti
 - `alpha1/door_defect_profile.py`
 - `alpha1/door_defect_profile_rows.csv`
 - `alpha1/door_defect_profile_attempts.csv`

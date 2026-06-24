@@ -88,6 +88,18 @@ della selezione del lock:
 28. Interpretazione §66: il profilo 22-porte sui lock e' un controllo forte ma lock-condizionato,
     quasi tautologico. Prossimo fronte §67: lemma di non-localita' T3' + scanner non condizionato
     delle 22 porte sul campo di detriti.
+29. Upgrade strategico prima di §67: §66 mostra un'asimmetria. Identificare la porta e' locale
+    (off-phase compatibili muoiono entro 5); decidere se la porta vera entra e' globale
+    (coda fino a offset 1591/L∞36).
+30. La riformulazione globale e' qualitativa/di raggiungibilita', non un tasso: puo' riaprire
+    strumenti combinatori/topologici ciechi alla versione-rate di α1.
+31. Candidato §67: cercare `Φ(detrito)` lower bounded, con decremento non sommabile a ogni
+    rivisita nera profonda (ε uniforme oppure codominio discreto/ben fondato), `Φ=0` iff una
+    porta entra, e non riducibile a prossimita' al lock (§59).
+32. Caveat Pauli: il floor §58 e' evidenza empirica, non assioma dimostrativo; per provare serve
+    una stima certificata o un ordine discreto. Lo scanner deve falsificare `Φ`, non provare α1.
+33. Prima falsificazione pulita: segmenti tra gate-attempt consecutivi con eventi deep-black,
+    nessun ingresso, ma `Φ(next) >= Φ(prev)`.
 
 ## B. Risultati delle ultime sessioni (§57-§66)
 
@@ -270,6 +282,8 @@ Risultato:
 Lettura: il profilo 22-porte sui lock non e' ancora l'invariante globale. Condizionando su un
 lock W0-like, la fase reale e' selezionata dal lock stesso; le altre fasi muoiono localmente.
 Il crux globale sta prima: in un campo non condizionato, esiste qualche porta con `H_L` alto?
+La forma piu' precisa e': identificare la porta e' locale; decidere il successo della porta
+vera e' globale. L'invariante cercato vive nella seconda meta'.
 
 ## C. Roadmap (priorita' prossima sessione §67)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
@@ -281,30 +295,35 @@ Il crux globale sta prima: in un campo non condizionato, esiste qualche porta co
 4. **FATTO §65: non-localita' campionaria della checklist.** T3' e' il verdetto esatto e legge
    celle lontane lungo il canale; questo falsifica il troncamento corto, ma non e' ancora un
    teorema dinamico.
-5. **PENDENTE §67-a: lemma di non-localita' T3'.** Per ogni R, costruire due campi uguali in
-   B_R della porta ma con verdetto T3' diverso per una lettura esogena fuori B_R. Distinguere
-   esplicitamente versione sintattica e versione su campi raggiungibili.
+5. **PENDENTE §67-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
+   sintattica segue quasi dall'infinita cavalcata futura della highway. Il peso vero e' la
+   realizzabilita' delle coppie discriminanti da semi finiti/campi raggiungibili.
 6. **FATTO §66: `door-defect profile` sui lock.** La fase reale e' best unica 810/810; le
    fasi compatibili alternative muoiono entro 5 letture. Utile controllo, ma troppo condizionato
    per essere l'invariante globale.
-7. **PRIORITA' §67-b: scanner non condizionato delle 22 porte.** Campionare ancore non selezionate
-   da lock profondi e misurare `H_L=max_g h_g(L)` sul campo di detriti. Stratificare per tempo,
-   orbita, morso fresco, deep-black e profondita' W0-like `D(t)`.
-8. **Invariante globale del campo di detriti (dopo §67).** Cercare potenziale globale,
-   argomento ergodico/di misura, o principio di mixing sulle porte mobili. La domanda precisa:
-   puo' un'orbita eterna mantenere tutte le checklist sbagliate per sempre?
-9. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+7. **PRIORITA' §67-b: formulare 2-3 candidati `Φ(detrito)`.** Condizioni: lower bounded;
+   decremento non sommabile a ogni rivisita nera profonda (ε uniforme oppure codominio discreto/
+   ben fondato); `Φ=0` iff qualche porta entra; non prossimita' al lock (proxy falsificato in §59).
+8. **PRIORITA' §67-c: scanner non condizionato come falsificatore di Φ.** Campionare ancore non
+   selezionate da lock profondi e misurare `H_L=max_g h_g(L)` sul campo di detriti, stratificando
+   per tempo/orbita/morso/deep-black/`D(t)`. Primo test killer: tra gate-attempt consecutivi,
+   se ci sono eventi deep-black e nessun ingresso ma `Φ(next) >= Φ(prev)`, quel `Φ` e' morto.
+9. **Invariante globale del campo di detriti (dopo §67).** La domanda precisa: puo' un'orbita
+   eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
+   raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
+   su questo livello.
+10. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-10. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+11. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-11. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+12. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-12. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+13. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
    porta, compressione vettoriale e profilo 22-porte lock-condizionato misurati; §66 mostra che
-   il crux e' prima del lock, quindi serve scanner non condizionato.
+   il crux e' prima del lock, quindi serve scanner non condizionato agganciato a un candidato `Φ`.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?

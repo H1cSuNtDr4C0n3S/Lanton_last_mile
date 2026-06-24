@@ -88,8 +88,10 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   il troncamento corto fallisce; 12 KO oltre due periodi arrivano a offset 1591 e L∞ 36.
   Correzione Pauli: §65 e' diagnosi strategica/campionaria, non teorema dinamico.
   `door_defect_profile.py` registra §66: su 810 tentativi la fase reale e' best unica 810/810,
-  fasi compatibili alternative muoiono entro 5 letture; prossimo fronte = lemma T3' + scanner
-  non condizionato delle 22 porte.
+  fasi compatibili alternative muoiono entro 5 letture. Upgrade strategico: identificare la
+  porta e' locale, decidere se la porta vera entra e' globale; prossimo fronte = lemma T3',
+  candidati `Φ(detrito)` con decremento non sommabile, e scanner non condizionato usato come
+  falsificatore di `Φ`.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -155,7 +157,11 @@ il troncamento corto fallisce e le celle decisive possono essere lontane. Correz
 questo non e' ancora un teorema di non-localita' dinamica. **AGGIORNAMENTO §66:** il
 `door-defect profile` sui lock e' fatto: fase reale best unica 810/810, off-phase compatibili
 muoiono entro 5 letture, coda 268...1591 ritrovata. Quindi il profilo lock-condizionato non e'
-l'invariante globale; prossimo fronte (§67): lemma di non-localita' T3' + scanner non
-condizionato delle 22 porte sul campo di detriti.
+l'invariante globale; §66 nomina l'asimmetria corretta: identificare la porta e' locale, decidere
+il successo della porta vera e' globale. Prossimo fronte (§67): lemma T3' con peso sulla
+realizzabilita', 2-3 candidati `Φ(detrito)` lower bounded con decremento non sommabile da
+deep-black (ε uniforme o codominio discreto/ben fondato), `Φ=0` iff ingresso e non-proximity-to-lock,
+poi scanner non condizionato come falsificatore per segmenti tra gate-attempt, non come prova da
+campione finito.
 Roadmap completa:
 CHAT_HANDOVER §C.
