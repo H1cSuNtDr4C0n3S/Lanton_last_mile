@@ -1,0 +1,4 @@
+radius,horizon,buckets,colliding_buckets,h_divergent_buckets,witnesses_recorded,internal_conflicts_rejected
+16,208,147334,0,0,0,0
+16,512,147334,0,0,0,0
+16,1600,147334,0,0,0,0

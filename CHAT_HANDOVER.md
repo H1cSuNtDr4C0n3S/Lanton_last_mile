@@ -1,6 +1,6 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §70 (compat event audit + T3'/co-raggiungibilita') → A: prossima sessione (§71) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70;
+**Da: sessione §71 (scanner coppie co-raggiungibili T3') → A: prossima sessione (§72) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§71;
 catena precedente: docs/COMPATIBILITY_POTENTIAL_ADDENDUM.md §69,
 docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68, docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
 docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
@@ -23,9 +23,11 @@ diagnosi non-locale e teorema mancante. §66 ha mostrato che il profilo 22-porte
 seleziona sempre la fase reale. §67 ha falsificato i potenziali endpoint-monotoni semplici.
 §68 ha ristretto il no-go alla forma lecita. §69 ha formulato `Φ_compat^L` come compatibilita'
 prefissa con la migliore delle 22 porte e ha chiuso la versione endpoint (`best22_depth`).
-**Novita' §70:** il test pre/post su singoli eventi deep-black falsifica anche la monotonia
-immediata ingenua (`h_best` non migliora in 357/600, peggiora in 259/600); la pista viva e'
-ora co-raggiungibilita' T3' o potenziale con credito/amortizzazione:
+**Novita' §71:** lo scanner di coppie co-raggiungibili trova un witness dinamico a `R=8`:
+stesso patch locale `17x17`, stesso bit/fase T3', ma verdetto diverso per una cella relativa
+`(15,13)` a offset 494, fuori da `B_8`. Questo prova non-vacuita' dinamica dello schema,
+non un potenziale uniforme. A `R=16` zero collisioni esatte e' soprattutto baseline di
+sparsita' del campione; prossima pista = replay mirato e closure/quoziente locale.
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -171,11 +173,19 @@ ora co-raggiungibilita' T3' o potenziale con credito/amortizzazione:
 60. Lettura §70: la monotonia immediata "ogni rivisita nera profonda avvicina una porta" e'
     falsa; restano solo credito/amortizzazione, ordine parziale/vettoriale, oppure prova senza
     potenziale scalare.
-61. Prossimo §71: implementare `alpha1/t3_coreachability_pair_scanner.py` per cercare coppie
-    discriminanti co-raggiungibili: stesso patch locale normalizzato, stessa fase/bit, diverso
-    `h_g` per cella discriminante fuori raggio.
+61. §71 implementa `alpha1/t3_coreachability_pair_scanner.py`: bucket esatto per patch locale
+    normalizzato, bit osservato e fase T3' compatibile.
+62. Witness dinamico §71: orbita 5, anchor grid `t=60320` e `t=60840`, `R=8`, fase 98,
+    discriminante a offset **494**, cella rel **(15,13)** (`L∞=15>8`), `h_g^512=513 vs 494`,
+    `h_g^1600=1014 vs 494`.
+63. Correzione di lettura §71: `494 vs 513/1014` non rompe simmetria; la relazione richiede
+    stesso dato locale e verdetto T3' diverso, non stesso futuro fuori finestra.
+64. Controllo di sparsita' §71: sui gate/entry nessun bucket `h`-divergente; con griglia stride
+    520 a `R=16` **0** collisioni esatte. Questo non e' un confine dinamico, solo il baseline
+    atteso per patch `33x33`; implica solo che lo stesso anchor-set non puo' dare witness a
+    `R=24/32/40`.
 
-## B. Risultati delle ultime sessioni (§57-§70)
+## B. Risultati delle ultime sessioni (§57-§71)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -471,12 +481,46 @@ raggiungibili. La coppia utile e' `(H0,H1,g,n)`: due storie finite replayable, s
 normalizzata e stesso dato locale su `B_R`, stessa fase/bit compatibile, letture precedenti non
 distinguibili, e prima cella discriminante `e_n` fuori da `B_R`.
 
-Prossimo passo §71: `alpha1/t3_coreachability_pair_scanner.py`, bucket per
-`(R, observed_turn_bit, eval_phase, patch_hash)` con `R={8,16,24,32,40}` e
-`L={208,512,1600}`, output witness CSV replayable. Esito negativo = nessuna coppia esatta nel
-campione, non falsificazione del lemma.
+§71 ha implementato lo scanner e ha trovato un witness dinamico a `R=8`; vedi B.17.
 
-## C. Roadmap (priorita' prossima sessione §71)
+### B.17 T3' co-raggiungibilita' pair scanner (§71)
+`alpha1/t3_coreachability_pair_scanner.py` rigenera le 24 orbite, costruisce anchor gate/entry
+e opzionalmente grid, normalizza il patch locale `D|B_R`, poi cerca bucket con stesso
+`(R, L, observed_turn_bit, eval_phase, patch)` ma `h_g^L` diverso. Un witness viene accettato
+solo se la prima cella discriminante e' fuori da `B_R`.
+
+Run baseline gate/entry:
+`C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py --limit-orbits 0 --max-seconds 300 --out-prefix alpha1\t3_coreachability_pair_scanner`.
+Risultato: **810** anchor, **133650** eval, **133485** bucket, collisioni solo a `R=8`
+(**22** per ogni `L`), ma **0** bucket `h`-divergenti.
+
+Run positiva:
+`C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 --radii 8 --horizons 208,512,1600 --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r8`.
+Risultato: **13394** anchor, **442002** eval, **441771** bucket, **44** bucket collidenti per
+ogni `L`, **1** bucket `h`-divergente a `L=512` e `L=1600`.
+
+Witness §71:
+- orbita **5**, `rngstate=16489936061346709332`;
+- anchor grid `5:grid:116` a `t=60320`, origine `(58,-26)`, heading `2`;
+- anchor grid `5:grid:117` a `t=60840`, origine `(48,-36)`, heading `2`;
+- stesso patch `R=8` (`17x17`), hash `1e838dafb7a51b780addaa3772ef0181`;
+- fase valutata **98**, bit osservato **0**;
+- discriminante T3' a offset **494**, cella relativa **(15,13)**, `L1=28`, `L∞=15`;
+- requisito: bianca (`required_black=0`); caso cattivo: `frontier_black_collision`;
+- `h_g^512`: **513 vs 494**; `h_g^1600`: **1014 vs 494**.
+
+Controllo di sparsita' `R=16`:
+`C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 --radii 16 --horizons 208,512,1600 --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r16`.
+Risultato: **13394** anchor, **442002** eval, **442002** bucket, **0** collisioni esatte.
+Lettura: zero collisioni a `R=16` non ha peso strutturale forte; lo spazio dei patch `33x33`
+e' enorme rispetto al campione. Dice solo che sugli stessi anchor non serve provare `R=24/32/40`.
+
+Lettura: §71 trasforma la non-localita' da sintattica a dinamica osservata per `R=8`, perche'
+le due configurazioni sono prefissi replayable della stessa orbita. E' una lettura di esistenza:
+non prova una famiglia per ogni `R`, non muove α1, non sostiene da solo un potenziale uniforme,
+e non sostituisce un argomento di closure/raggiungibilita' globale.
+
+## C. Roadmap (priorita' prossima sessione §72)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -502,30 +546,33 @@ campione, non falsificazione del lemma.
    falsificato come monotonia netta.
 10. **FATTO §70-b: test pre/post evento `Φ_compat`.** `h_best` non migliora in **357/600**
    eventi deep-black e peggiora in **259/600**: la monotonia immediata ingenua e' chiusa.
-11. **PRIORITA' §71: scanner di coppie co-raggiungibili.** Implementare
-   `alpha1/t3_coreachability_pair_scanner.py`: stesso dato locale intorno alla porta fino a
-   raggio `R`, verdetto T3' diverso per una cella lontana, entrambe le storie finite replayable.
-   Separare witness empirico, famiglia parametrica, e closure/SAT locale.
-12. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
+11. **FATTO §71: scanner di coppie co-raggiungibili.** Witness empirico dinamico a `R=8`
+   trovato. Interpretazione conservativa: solo non-vacuita' dello schema; `R=16` zero-collisioni
+   e' sparsita' combinatoria, non confine strutturale.
+12. **PRIORITA' §72: replay mirato + closure locale.** Validare il witness `R=8` con uno
+   script mirato che ristampi patch e letture fino a offset 494; poi scegliere tra equivalenza
+   approssimata/quoziente, densita' di anchor mirata, o closure/SAT locale per `R>=16`.
+13. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
    event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
    certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
-13. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+14. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-14. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+15. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-15. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+16. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-16. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+17. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-17. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+18. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
    porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67, no-go §68,
-   `Φ_compat` endpoint §69 e pre/post event §70 misurati. Il crux resta prima del lock:
-   co-raggiungibilita' T3' su detriti raggiungibili, o potenziale con credito/amortizzazione.
+   `Φ_compat` endpoint §69, pre/post event §70 e witness co-raggiungibile `R=8` §71 misurati.
+   Il crux resta prima del lock: famiglia/closure co-raggiungibile robusta in raggio, equivalenza
+   quoziente, oppure potenziale con credito/amortizzazione.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -554,11 +601,12 @@ campione, non falsificazione del lemma.
   Audit §68: `C:\Python\Python310\python.exe alpha1\endpoint_monotone_audit.py`.
   Audit §69: `C:\Python\Python310\python.exe alpha1\compat_endpoint_audit.py`.
   Audit §70: `C:\Python\Python310\python.exe alpha1\compat_event_audit.py --limit-orbits 0 --max-events-per-orbit 25 --min-event-t 1040 --max-seconds 300 --horizons 1600 --out-prefix alpha1\compat_event_audit`.
+  Scanner §71: `C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 --radii 8 --horizons 208,512,1600 --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r8`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§71**, stesso stile.
+- Verbale prossima sessione: **§72**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

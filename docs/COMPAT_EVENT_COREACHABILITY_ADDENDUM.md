@@ -152,3 +152,200 @@ quanto il witness co-raggiungibile e' raro e se serve passare a closure/SAT loca
 - `alpha1/compat_event_audit_summary.csv`
 - `alpha1/compat_event_audit_witnesses.csv`
 - `alpha1/compat_event_audit_events.csv`
+
+---
+
+# §71. Scanner di coppie co-raggiungibili T3'
+
+## 71. Riepilogo in una frase
+Il witness dinamico cercato esiste gia' nel campione raggiunto a raggio locale **R=8**:
+due storie finite replayable della stessa orbita hanno lo stesso patch normalizzato `17x17`,
+stesso bit osservato e stessa fase T3' compatibile, ma divergono a offset **494** su una cella
+relativa **(15,13)** fuori da `B_8`. Questa e' lettura **di esistenza/non-vacuita'** dello
+schema co-raggiungibile, non un argomento di potenziale uniforme; a `R=16`, sulla stessa griglia
+densa, l'assenza di collisioni esatte e' attesa per sparsita' del campione nello spazio dei
+patch `33x33`.
+
+## 71.1 Strumento
+Nuovo script:
+
+```
+C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py `
+  --limit-orbits 0 `
+  --max-seconds 300 `
+  --include-grid `
+  --grid-stride 520 `
+  --radii 8 `
+  --horizons 208,512,1600 `
+  --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r8
+```
+
+Definizione operativa:
+- anchor raggiungibili = gate/entry deduplicati come §63 piu' eventuali anchor griglia da replay;
+- patch locale = bitset completo di `D|B_R` nel frame normalizzato della porta/anchor;
+- bucket = `(R, horizon, observed_turn_bit, eval_phase, patch_bytes)`;
+- `eval_phase` default = ogni fase gate compatibile col primo bit osservato;
+- `h_g^L = L+1` se nessun difetto entro `L`, altrimenti primo offset cattivo;
+- witness accettato solo se due record nello stesso bucket hanno `h_g` diverso e la prima
+  lettura discriminante del record precoce ha `L∞ > R`.
+
+La verifica replay e' interna: stesso `patch_bytes`, stesso `observed_turn_bit`, stessa fase,
+`late.h > n`, e `disc_linf > R`.
+
+## 71.2 Run e risultati
+
+### Gate/entry baseline, raggio piano §71
+Comando:
+
+```
+C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py `
+  --limit-orbits 0 `
+  --max-seconds 300 `
+  --out-prefix alpha1\t3_coreachability_pair_scanner
+```
+
+Risultato:
+- **24/24** orbite;
+- **810** anchor gate/entry;
+- **133650** valutazioni;
+- **133485** bucket;
+- collisioni esatte solo a `R=8`: **22** bucket collidenti per ogni `L`;
+- bucket `h`-divergenti: **0**.
+
+Lettura: sui soli gate/entry il campione e' troppo sparso; nessuna coppia discriminante esatta.
+
+### Griglia stride 1040, sanity a R=4
+Comando:
+
+```
+C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py `
+  --limit-orbits 0 --max-seconds 300 --include-grid `
+  --radii 4 --horizons 208,512,1600 `
+  --out-prefix alpha1\t3_coreachability_pair_scanner_grid_r4
+```
+
+Risultato:
+- **7109** anchor, **234597** valutazioni;
+- **253** bucket collidenti per ogni `L`;
+- **5** bucket `h`-divergenti per ogni `L`;
+- **15** witness registrati dopo deduplica a un witness per bucket/orizzonte.
+
+Lettura: il metodo trova coppie dinamiche quando il raggio locale e' piccolo. Questo e' sanity
+check, non il target §71 principale.
+
+### Griglia stride 520, primo raggio target R=8
+Comando finale positivo:
+
+```
+C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py `
+  --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 `
+  --radii 8 --horizons 208,512,1600 `
+  --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r8
+```
+
+Risultato:
+- **24/24** orbite;
+- **13394** anchor;
+- **442002** valutazioni;
+- **441771** bucket;
+- **44** bucket collidenti per ogni `L`;
+- bucket `h`-divergenti: `L=208`: **0**, `L=512`: **1**, `L=1600`: **1**;
+- witness registrati: **2** (stesso bucket, due orizzonti).
+
+Witness:
+
+| campo | valore |
+|---|---:|
+| `R` | **8** |
+| `eval_phase` | **98** |
+| `observed_turn_bit` | **0** |
+| patch | `1e838dafb7a51b780addaa3772ef0181` |
+| anchor tardi | orbita **5**, grid **117**, `t=60840`, origine `(48,-36)`, heading `2` |
+| anchor presto | orbita **5**, grid **116**, `t=60320`, origine `(58,-26)`, heading `2` |
+| discriminante | offset **494**, rel **(15,13)**, `L1=28`, `L∞=15` |
+| requisito T3' | bianca (`required_black=0`) |
+| caso cattivo | `frontier_black_collision` (`actual_black=1`) |
+| `h_g^512` | **494 vs 513** |
+| `h_g^1600` | **494 vs 1014** |
+
+Questa e' una coppia co-raggiungibile empirica: le due storie finite sono due prefissi della
+stessa orbita, replayabili da `rngstate=16489936061346709332`; sono localmente indistinguibili
+su `B_8`, ma T3' legge una cella fuori raggio che cambia il verdetto.
+
+L'asimmetria `494 vs 513/1014` e' attesa: la relazione di co-raggiungibilita' richiede stesso
+dato locale e diverso verdetto T3', non simmetria del futuro fuori finestra. A `L=512`, `513`
+e' solo il sentinel `L+1` ("nessun difetto entro l'orizzonte") per il secondo anchor.
+
+### Griglia stride 520, R=16: controllo di sparsita'
+Comando:
+
+```
+C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py `
+  --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 `
+  --radii 16 --horizons 208,512,1600 `
+  --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r16
+```
+
+Risultato:
+- **13394** anchor;
+- **442002** valutazioni;
+- **442002** bucket;
+- collisioni esatte: **0**.
+
+Lettura: sulla stessa griglia, non c'e' nessuna coppia con patch `33x33` identico. Questo **non**
+ha peso dinamico forte: lo spazio dei patch a `R=16` e' enorme rispetto a 442002 valutazioni, quindi
+zero collisioni e' il baseline combinatorio naturale. L'unica conclusione lecita e' operativa:
+non serve rilanciare `R=24,32,40` sugli stessi anchor, perche' una collisione a raggio piu' grande
+implicherebbe gia' collisione a `R=16`.
+
+## 71.3 Interpretazione
+Claim lecito:
+- esiste almeno un witness dinamico co-raggiungibile a `R=8` nel campione lungo;
+- la non-localita' non e' solo sintattica: le due configurazioni sono detriti raggiunti da
+  storie finite della formica;
+- il discriminante non e' vicino: `L∞=15 > 8`, offset temporale `494`.
+
+Claim non lecito:
+- non prova che T3' sia non-locale su ogni raggio;
+- non prova α1;
+- non esclude potenziali con credito/amortizzazione;
+- non dice che la griglia stride 520 sia esaustiva.
+- non legge l'assenza di collisioni a `R=16` come confine strutturale: e' principalmente
+  effetto della collisione esatta in uno spazio di patch enorme.
+
+Punto tecnico importante: l'equivalenza per patch completo e' radius-fragile per costruzione.
+Piu' bit locali si richiedono, meno collisioni esatte sopravvivono. Se si vuole usare
+co-raggiungibilita' per sostenere un potenziale/amortizzazione, l'equivalenza giusta probabilmente
+non e' la collisione esatta grezza ma una nozione approssimata/quoziente, oppure una closure
+locale generativa/SAT che costruisca estensioni esterne diverse di uno stesso dato locale.
+
+## 71.4 Prossimi passi
+1. Validare il witness `R=8` con un piccolo replay mirato che ristampi patch, bit e letture T3'
+   fino a offset 494.
+2. Esplicitare il bivio: lettura "esistenza" (gia' soddisfatta a `R=8`) vs lettura "potenziale"
+   (non supportata dal witness radius-fragile).
+3. Cercare famiglie aumentando la densita' degli anchor intorno ai bucket promettenti, non
+   uniformemente su tutta l'orbita.
+4. Formulare una closure/SAT locale: stesso dato locale raggiungibile a raggio `R`, estensioni
+   esterne diverse, vincoli di alternanza/replay finito.
+5. Separare in modo netto tre livelli nel testo finale: witness empirico `R=8`, schema per
+   famiglia parametrica, e implicazioni eventuali per α1.
+
+## 71.5 File prodotti
+- `alpha1/t3_coreachability_pair_scanner.py`
+- `alpha1/t3_coreachability_pair_scanner_summary.json`
+- `alpha1/t3_coreachability_pair_scanner_buckets.csv`
+- `alpha1/t3_coreachability_pair_scanner_orbits.csv`
+- `alpha1/t3_coreachability_pair_scanner_witnesses.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid_r4_summary.json`
+- `alpha1/t3_coreachability_pair_scanner_grid_r4_buckets.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid_r4_orbits.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid_r4_witnesses.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r8_summary.json`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r8_buckets.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r8_orbits.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r8_witnesses.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r16_summary.json`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r16_buckets.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r16_orbits.csv`
+- `alpha1/t3_coreachability_pair_scanner_grid520_r16_witnesses.csv`

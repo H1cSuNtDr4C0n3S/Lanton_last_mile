@@ -1,0 +1,406 @@
+{
+  "source": "C:\\Lanton_last_mile\\alpha1\\dumps_all.txt",
+  "orbits_requested": 24,
+  "orbits_completed": 24,
+  "radii": [
+    8,
+    16,
+    24,
+    32,
+    40
+  ],
+  "horizons": [
+    208,
+    512,
+    1600
+  ],
+  "phase_mode": "compatible",
+  "include_grid": false,
+  "grid_stride": 1040,
+  "include_gate_times_in_grid": false,
+  "anchors": 810,
+  "evals": 133650,
+  "buckets": 133485,
+  "witnesses_recorded": 0,
+  "witness_limit": 200,
+  "elapsed_seconds": 72.3692757999961,
+  "orbit_summary": [
+    {
+      "idx": 0,
+      "shard": 0,
+      "onset": 313358,
+      "rngstate": 4700473787566636120,
+      "gate_anchors": 35,
+      "anchors": 35,
+      "evals": 5775,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 1,
+      "shard": 1,
+      "onset": 307906,
+      "rngstate": 4692330403214779697,
+      "gate_anchors": 29,
+      "anchors": 29,
+      "evals": 4785,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 2,
+      "shard": 2,
+      "onset": 302092,
+      "rngstate": 694356338346996168,
+      "gate_anchors": 30,
+      "anchors": 30,
+      "evals": 4950,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 3,
+      "shard": 3,
+      "onset": 291397,
+      "rngstate": 12567324566037349410,
+      "gate_anchors": 41,
+      "anchors": 41,
+      "evals": 6765,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 4,
+      "shard": 4,
+      "onset": 286748,
+      "rngstate": 7781527330408340496,
+      "gate_anchors": 36,
+      "anchors": 36,
+      "evals": 5940,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 5,
+      "shard": 5,
+      "onset": 285796,
+      "rngstate": 16489936061346709332,
+      "gate_anchors": 48,
+      "anchors": 48,
+      "evals": 7920,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 6,
+      "shard": 6,
+      "onset": 276143,
+      "rngstate": 5512003509614796496,
+      "gate_anchors": 37,
+      "anchors": 37,
+      "evals": 6105,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 7,
+      "shard": 7,
+      "onset": 272174,
+      "rngstate": 3981815637707193797,
+      "gate_anchors": 34,
+      "anchors": 34,
+      "evals": 5610,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 8,
+      "shard": 8,
+      "onset": 271114,
+      "rngstate": 3955567068357606463,
+      "gate_anchors": 29,
+      "anchors": 29,
+      "evals": 4785,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 9,
+      "shard": 9,
+      "onset": 270625,
+      "rngstate": 16992346564080444118,
+      "gate_anchors": 33,
+      "anchors": 33,
+      "evals": 5445,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 10,
+      "shard": 10,
+      "onset": 270401,
+      "rngstate": 9220737208495014129,
+      "gate_anchors": 51,
+      "anchors": 51,
+      "evals": 8415,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 11,
+      "shard": 11,
+      "onset": 268891,
+      "rngstate": 15693941383896591225,
+      "gate_anchors": 25,
+      "anchors": 25,
+      "evals": 4125,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 12,
+      "shard": 12,
+      "onset": 267843,
+      "rngstate": 18287853548615453633,
+      "gate_anchors": 28,
+      "anchors": 28,
+      "evals": 4620,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 13,
+      "shard": 13,
+      "onset": 267828,
+      "rngstate": 2592558225885312534,
+      "gate_anchors": 32,
+      "anchors": 32,
+      "evals": 5280,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 14,
+      "shard": 14,
+      "onset": 266260,
+      "rngstate": 6676073668202534420,
+      "gate_anchors": 32,
+      "anchors": 32,
+      "evals": 5280,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 15,
+      "shard": 15,
+      "onset": 265407,
+      "rngstate": 1785944205930647325,
+      "gate_anchors": 33,
+      "anchors": 33,
+      "evals": 5445,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 16,
+      "shard": 16,
+      "onset": 265277,
+      "rngstate": 2581380668079156450,
+      "gate_anchors": 28,
+      "anchors": 28,
+      "evals": 4620,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 17,
+      "shard": 17,
+      "onset": 260282,
+      "rngstate": 421234894265933870,
+      "gate_anchors": 28,
+      "anchors": 28,
+      "evals": 4620,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 18,
+      "shard": 18,
+      "onset": 257885,
+      "rngstate": 2535352621422342788,
+      "gate_anchors": 33,
+      "anchors": 33,
+      "evals": 5445,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 19,
+      "shard": 19,
+      "onset": 255436,
+      "rngstate": 9980582288230158201,
+      "gate_anchors": 28,
+      "anchors": 28,
+      "evals": 4620,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 20,
+      "shard": 20,
+      "onset": 255171,
+      "rngstate": 7363838155587417590,
+      "gate_anchors": 39,
+      "anchors": 39,
+      "evals": 6435,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 21,
+      "shard": 21,
+      "onset": 255129,
+      "rngstate": 3024456195432903186,
+      "gate_anchors": 40,
+      "anchors": 40,
+      "evals": 6600,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 22,
+      "shard": 22,
+      "onset": 252072,
+      "rngstate": 15996951898054259342,
+      "gate_anchors": 30,
+      "anchors": 30,
+      "evals": 4950,
+      "witnesses_so_far": 0
+    },
+    {
+      "idx": 23,
+      "shard": 23,
+      "onset": 251853,
+      "rngstate": 13807782660207995538,
+      "gate_anchors": 31,
+      "anchors": 31,
+      "evals": 5115,
+      "witnesses_so_far": 0
+    }
+  ],
+  "bucket_summary": [
+    {
+      "radius": 8,
+      "horizon": 208,
+      "buckets": 8855,
+      "colliding_buckets": 22,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 8,
+      "horizon": 512,
+      "buckets": 8855,
+      "colliding_buckets": 22,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 8,
+      "horizon": 1600,
+      "buckets": 8855,
+      "colliding_buckets": 22,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 16,
+      "horizon": 208,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 16,
+      "horizon": 512,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 16,
+      "horizon": 1600,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 24,
+      "horizon": 208,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 24,
+      "horizon": 512,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 24,
+      "horizon": 1600,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 32,
+      "horizon": 208,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 32,
+      "horizon": 512,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 32,
+      "horizon": 1600,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 40,
+      "horizon": 208,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 40,
+      "horizon": 512,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    },
+    {
+      "radius": 40,
+      "horizon": 1600,
+      "buckets": 8910,
+      "colliding_buckets": 0,
+      "h_divergent_buckets": 0,
+      "witnesses_recorded": 0,
+      "internal_conflicts_rejected": 0
+    }
+  ]
+}

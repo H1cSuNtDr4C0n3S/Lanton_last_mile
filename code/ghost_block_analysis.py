@@ -29,6 +29,15 @@ from altmin_driver import first_conflict  # noqa: E402
 DX = [0, 1, 0, -1]; DY = [1, 0, -1, 0]
 W, B = 1, 2
 
+# Stable base-window delta witnesses. Keep these in source rather than
+# build/r*_delta_cycle.txt because build/ is ignored and clean-clone tests use
+# them only as fixed words, not as generated certification artifacts.
+BASE_DELTA_WITNESSES = {
+    1: (3, 5, "LRLLL"),
+    2: (1, 7, "RRRRLRL"),
+    3: (1, 64, "RRRRLLLLRLRRRRLRRRRLLLLRLLRRRRLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRL"),
+}
+
 
 def canon_rel(wx, wy, h):
     """posizione relativa nel frame canonico (heading=su): CCW applicata h volte.
@@ -98,10 +107,7 @@ def main():
     r = a.radius
 
     print("== testimoni dei minimi r1/r2/r3: sono fantasmi? ==")
-    for rr in (1, 2, 3):
-        fn = os.path.join(ROOT, "build", f"r{rr}_delta_cycle.txt")
-        toks = open(fn).read().split()
-        p, q, w = int(toks[1]), int(toks[3]), toks[5]
+    for rr, (p, q, w) in BASE_DELTA_WITNESSES.items():
         conf = first_conflict(w)
         rot, dr = drift_and_rot(w)
         bt = "B-T" if (rot % 4 != 0 or dr == (0, 0)) else "NO-B-T"

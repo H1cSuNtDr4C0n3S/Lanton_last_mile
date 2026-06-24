@@ -441,10 +441,8 @@ def selftest():
 
     # 3) identita' incrociata col simulatore in coordinate assolute (ghost_block_analysis):
     #    stesso step di blocco sui testimoni-fantasma r1/r2/r3, per piu' (m,D)
-    from ghost_block_analysis import product_blocks_word
-    for rr in (1, 2, 3):
-        toks = open(os.path.join(BUILD, f"r{rr}_delta_cycle.txt")).read().split()
-        wd = toks[5]
+    from ghost_block_analysis import BASE_DELTA_WITNESSES, product_blocks_word
+    for rr, (_p, _q, wd) in BASE_DELTA_WITNESSES.items():
         for (m, D) in ((2, 4), (8, 8), (16, 8)):
             t_abs = product_blocks_word(wd, rr, m, D, "near", 50 * len(wd))
             t_can = walk_word(wd, rr, m, D, 50 * len(wd))[0]

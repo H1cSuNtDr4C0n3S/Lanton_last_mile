@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§71**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§72**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -55,15 +55,15 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§71)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
   hazard/mixing checklist (§62), vettore/geometria checklist (§63), modello/compressione
   vettoriale checklist (§64), ridirezione non-locale/globale con correzione Pauli (§65),
   profilo 22-porte lock-condizionato (§66), scanner dei potenziali segmentali (§67),
-  audit/no-go endpoint-monotono (§68), `Φ_compat` endpoint (§69), e `Φ_compat` event-wise
-  + schema T3'/co-raggiungibilita' (§70).**
+  audit/no-go endpoint-monotono (§68), `Φ_compat` endpoint (§69), `Φ_compat` event-wise
+  + schema T3'/co-raggiungibilita' (§70), e scanner di coppie co-raggiungibili T3' (§71).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -112,8 +112,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   in **350/762**; grid: **3591/6275** e **2736/6275**.
   `compat_event_audit.py` registra §70: su **600** eventi deep-black (24 orbite, 25/orbita,
   `L=1600`, `--min-event-t 1040`), `h_best` non migliora in **357/600** e peggiora in
-  **259/600**; la monotonia immediata ingenua di `Φ_compat` e' falsificata. §71 =
-  `t3_coreachability_pair_scanner.py`.
+  **259/600**; la monotonia immediata ingenua di `Φ_compat` e' falsificata.
+  `t3_coreachability_pair_scanner.py` registra §71: witness dinamico co-raggiungibile a
+  `R=8` (orbita 5, fase 98, offset 494, rel `(15,13)`, `L∞=15`). Lettura conservativa:
+  e' non-vacuita' dinamica dello schema, non sostegno diretto a un potenziale uniforme.
+  A `R=16`, zero collisioni sulla griglia stride 520 e' soprattutto sparsita' combinatoria.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -146,7 +149,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
 ## 5. Self-test (PRIMA di tutto, fermarsi al primo rosso)
 1. `python code\window_automaton.py --selftest` (r=1: 15 stati, h=0.8114, 1 rotore; r=2: 403, 3 rotori).
 2. `python code\product_automaton.py --selftest` (4/4 verde: m=0≡base; orbita reale costo invariante;
-   frame canonico≡assoluto; 252/252 fantasmi bloccati).
+   frame canonico≡assoluto; 252/252 fantasmi bloccati; non richiede `build/r*_delta_cycle.txt`).
 3. `alpha1\alpha1_engine.exe`: vuota→onset 9977; (7,−7)→106258; highway densità morso 22/104.
 4. Cross-check r=3/r=4 coi `results/radius*_summary.json` prima di ogni nuova analisi a finestra.
 
@@ -199,7 +202,11 @@ chiusa: `compat_endpoint_audit.py` mostra che `h_best` non migliora in **400/762
 **3591/6275** grid, con peggioramenti stretti **350/762** e **2736/6275**.
 **AGGIORNAMENTO §70:** il pre/post evento deep-black falsifica anche la monotonia immediata
 ingenua: su **600** eventi, `h_best` non migliora in **357/600** e peggiora in **259/600**.
-Lo schema T3'/co-raggiungibilita' e' formalizzato; prossimo fronte (§71):
-`alpha1/t3_coreachability_pair_scanner.py`.
+**AGGIORNAMENTO §71:** `alpha1/t3_coreachability_pair_scanner.py` trova un witness dinamico
+co-raggiungibile a `R=8` (stesso patch locale, fase 98, discriminante rel `(15,13)` a offset
+494). Questo chiude solo la lettura "esistenza/non-vacuita'"; non muove α1 e non supporta da
+solo un potenziale. `R=16` zero-collisioni e' baseline di sparsita', non confine strutturale.
+Prossimo fronte (§72): replay mirato del witness, equivalenza quoziente/approssimata e
+closure/SAT locale per raggi maggiori.
 Roadmap completa:
 CHAT_HANDOVER §C.
