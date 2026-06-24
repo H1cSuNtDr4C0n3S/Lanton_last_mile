@@ -144,21 +144,63 @@ Questo non dice:
 
 Dice solo che il leverage "deep-black floor -> scalare endpoint finito che scende" e' sbagliato.
 
-## 68.8 Prossimo passo vero
+## 68.8 Lettura strutturale: massa vs compatibilita'
+La lettura strutturale di §68 e' piu' importante del conteggio delle violazioni: i proxy di
+massa/difetto non falliscono per un accidente numerico, ma perche' non sono grandezze orientate.
+La formica, tramite flip locali, deposita e ripulisce; quindi massa nera, area annerita, numero
+di mismatch e deficit sommati possono oscillare. La reversibilita' della mappa completa non va
+confusa con una conservazione della massa nera, ma spiega perche' un conteggio proiettato sul
+detrito e' una cattiva coordinata Lyapunov.
+
+Conclusione: un eventuale potenziale globale del detrito non deve misurare **quanto** detrito o
+quanti difetti ci sono. Deve misurare **quanto il campo e' compatibile con un ingresso**.
+
+Definizione provvisoria per §69:
+
+```
+h_g^L = primo offset <= L in cui la porta g disaccorda con T3'
+        (L+1 se nessun disaccordo e' visto fino a L)
+h_best^L = max_g h_g^L
+Phi_compat^L = 0 se h_best^L = L+1, altrimenti exp(-h_best^L / 104)
+```
+
+Qui `Φ_compat^L=0` va inteso solo come compatibilita' fino all'orizzonte `L`, non come ingresso
+reale. Se invece `Φ_compat` viene definita come somma/minimo dei mismatch, ricade nella famiglia
+`best22_mass` gia' falsificata da §68.
+
+Avvertenza: anche la versione endpoint di `h_best^L` e' gia' ferita da §67/§68
+(`Φ_best22_depth`). Il punto di §69 non e' ripetere lo scanner endpoint, ma chiedere se esiste
+una formulazione event-wise, amortizzata o di raggiungibilita' in cui le rivisite nere profonde
+fanno avanzare la compatibilita' migliore.
+
+## 68.9 Prossimo passo vero
 Non aprire un nuovo scanner lungo e non riprovare `λ` diversi.
 
-Il prossimo oggetto e' T3'/realizzabilita':
+Il prossimo oggetto e' `Φ_compat` + T3'/realizzabilita':
 
-1. costruire lo schema di coppie discriminanti: stessi dati locali intorno alla porta fino a
+1. formulare `Φ_compat^L` come distanza-prefix dalla compatibilita' con una delle 22 porte;
+2. usare lo schema di coppie discriminanti come falsificatore/sostanziatore di `Φ_compat`:
+   stessi dati locali intorno alla porta fino a
    raggio `R`, verdetto T3' diverso per una cella lontana;
-2. separare due livelli: non-localita' sintattica della checklist vs realizzabilita' dinamica
+3. separare due livelli: non-localita' sintattica della checklist vs realizzabilita' dinamica
    da campi di detriti prodotti da orbite finite;
-3. cercare testimoni raggiunti o una chiusura naturale dei campi raggiungibili.
+4. cercare testimoni **co-raggiungibili** o una chiusura naturale dei campi raggiungibili.
+
+La non-localita' sintattica da sola e' banale: due campi sintetici uguali localmente e diversi
+in una cella lontana possono sempre cambiare T3'. Il contenuto dinamico richiede due storie finite
+della formica, entrambe raggiungibili, localmente indistinguibili alla porta, ma discordi nella
+cella discriminante lontana. Qui c'e' un gap di scala aperto: i certificati locali `R(n)` arrivano
+a 40, mentre le celle decisive osservate arrivano a offset 1591, anche se la distanza spaziale
+relativa osservata resta molto piu' piccola (`L∞` fino a 36).
 
 Se si vuole ancora un `Φ`, la forma deve cambiare: memoria/credito, ordine parziale/discreto
 ben fondato, o invariante globale del campo di detriti. Non uno scalare endpoint-based.
 
-## 68.9 File prodotti
+Due esiti restano aperti e sono entrambi utili: trovare una `Φ_compat` della forma giusta, oppure
+dimostrare un secondo teorema di ostruzione, cioe' che α1 non e' attaccabile tramite discesa di
+potenziale del detrito. Il secondo sarebbe il gemello, nello spazio-detrito, della timing-blindness.
+
+## 68.10 File prodotti
 - `alpha1/endpoint_monotone_audit.py`
 - `alpha1/endpoint_monotone_audit_summary.json`
 - `alpha1/endpoint_monotone_audit_witnesses.csv`

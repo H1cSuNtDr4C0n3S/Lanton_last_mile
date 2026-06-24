@@ -1,5 +1,5 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §68 (endpoint-monotone no-go audit) → A: prossima sessione (§69) in C:\Lanton_last_mile.**
+**Da: sessione §68 + addendum strategico Φ_compat → A: prossima sessione (§69) in C:\Lanton_last_mile.**
 **Leggere insieme a CLAUDE.md. Dettagli completi: docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68;
 catena precedente: docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
 docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
@@ -21,8 +21,8 @@ vettore e geometria. §64 ha misurato il modello/compressione vettoriale. §65 h
 diagnosi non-locale e teorema mancante. §66 ha mostrato che il profilo 22-porte lock-condizionato
 seleziona sempre la fase reale. §67 ha falsificato i potenziali endpoint-monotoni semplici.
 **Novita' §68:** Pauli ha ristretto il no-go alla forma lecita: no-go empirico/testimoniale sui
-proxy finiti testati, non teorema dinamico; la mini-audit conferma peggioramenti stretti, non
-solo pareggi:
+proxy finiti testati, non teorema dinamico; la mini-audit conferma peggioramenti stretti. Addendum:
+la prossima variabile non e' massa del detrito, ma compatibilita' con le 22 porte:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -129,6 +129,23 @@ solo pareggi:
 45. Prossimo §69: schema T3'/realizzabilita'. Costruire coppie discriminanti con stesso dato
     locale intorno alla porta e verdetto T3' diverso per cella lontana; poi chiedere se sono
     raggiungibili da campi di detriti finiti.
+46. Lettura strutturale post-§68: massa, area annerita, mismatch totali e deficit sommati non
+    sono coordinate orientate. I flip locali depositano e ripuliscono, quindi i conteggi oscillano;
+    non scrivere che la reversibilita' conserva massa, ma che rende i conteggi cattive coordinate
+    Lyapunov.
+47. Candidato §69: `Φ_compat^L`, non `Φ_mass`. Per ogni porta `g`, `h_g^L` = primo offset cattivo
+    entro `L` (`L+1` se clear); `h_best^L=max_g h_g^L`; `Φ_compat^L=0` se `h_best^L=L+1`,
+    altrimenti `exp(-h_best^L/104)`.
+    Misura quanto avanti arriva la migliore porta, non quanti mismatch ci sono.
+48. Caveat: la versione endpoint di `h_best` e' gia' ferita da §67/§68 (`Φ_best22_depth`).
+    Quindi §69 deve cercare formulazione event-wise/amortizzata o di raggiungibilita', non
+    ripetere lo scanner endpoint.
+49. Le coppie discriminanti devono essere **co-raggiungibili**: due storie finite della formica,
+    localmente indistinguibili alla porta, ma discordi nella cella lontana. Campi sintetici liberi
+    provano solo non-localita' sintattica.
+50. Gap aperto §69: `R(n)` e' censito a 40, mentre celle decisive osservate arrivano a offset
+    1591 (anche se `L∞` relativo osservato arriva a 36). Il lemma dinamico deve portare questo
+    caveat di scala.
 
 ## B. Risultati delle ultime sessioni (§57-§68)
 
@@ -358,7 +375,17 @@ Risultato grid `L=1600`, **6275** segmenti eleggibili:
 
 Sanity: nel quartile gate piu' alto per deep-black (`>2609` eventi), `Φ_actual_mass_104`
 peggiora strettamente in **102/190** segmenti. Il no-go non dipende da segmenti piccoli o da
-pareggi. Prossimo oggetto: T3'/realizzabilita', non un nuovo `λ`.
+pareggi.
+
+Lettura strutturale: massa/area/mismatch non sono grandezze orientate. La formica deposita e
+ripulisce tramite flip locali; quindi i conteggi oscillano e non sono buone coordinate Lyapunov.
+La prossima coordinata sensata e' compatibilita', non quantita': per ogni porta `g`, misurare
+`h_g^L`, il primo offset cattivo fino a orizzonte `L`, poi `h_best^L=max_g h_g^L`. Attenzione:
+se si usa una somma/minimo di mismatch si ricade in `best22_mass`; se si usa endpoint
+`h_best^L`, la famiglia e' gia' ferita da `Φ_best22_depth`. §69 deve quindi chiedere se esiste
+una formulazione event-wise/amortizzata o di co-raggiungibilita' di `Φ_compat`.
+
+Prossimo oggetto: `Φ_compat` + T3'/realizzabilita', non un nuovo `λ`.
 
 ## C. Roadmap (priorita' prossima sessione §69)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
@@ -381,28 +408,32 @@ pareggi. Prossimo oggetto: T3'/realizzabilita', non un nuovo `λ`.
 8. **FATTO §68: no-go locale per `Φ` endpoint-monotoni finiti.** Prima morte, massa pesata,
    best22 e deficit finiti non forniscono decremento endpoint netto sotto deep-black. Non riaprire
    la stessa famiglia cambiando solo `λ` o troncamento.
-9. **PRIORITA' §69-b: schema T3'/realizzabilita'.** Costruire coppie discriminanti: stesso dato
-   locale intorno alla porta fino a raggio `R`, verdetto T3' diverso per una cella lontana.
+9. **PRIORITA' §69-b: formulare `Φ_compat^L`.** Non massa del detrito: distanza-prefix dalla
+   compatibilita' con una delle 22 porte. `h_g^L=first_bad_offset`, `h_best^L=max_g h_g^L`.
+   Non definirlo come somma di mismatch, perche' sarebbe `best22_mass`.
+10. **PRIORITA' §69-c: schema T3'/realizzabilita' come test di `Φ_compat`.** Costruire coppie
+   discriminanti co-raggiungibili: stesso dato locale intorno alla porta fino a raggio `R`,
+   verdetto T3' diverso per una cella lontana, entrambe prodotte da storie finite della formica.
    Separare non-localita' sintattica da realizzabilita' dinamica.
-10. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: memoria/credito
-   tra segmenti, codominio discreto/ben fondato con certificato, oppure potenziale globale del
-   campo di detriti non leggibile da endpoint consecutivi.
-11. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+11. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
+   event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
+   certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
+12. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-12. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+13. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-13. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+14. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-14. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+15. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-15. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+16. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
    porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67 e no-go §68
-   misurati. Il crux resta prima del lock: serve T3'/realizzabilita'.
+   misurati. Il crux resta prima del lock: `Φ_compat` + T3'/co-raggiungibilita'.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?

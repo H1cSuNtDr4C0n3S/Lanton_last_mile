@@ -102,7 +102,9 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   Gate `L=1600`: `Φ_depth` **400/762** non-decrementi e **350/762** peggioramenti stretti;
   `Φ_mass_104` **373/762** e **371/762**; `Φ_mass_208` **380/762** e **378/762**.
   Grid `L=1600`: `best22_mass_104` **3150/6275** non-decrementi e **3149/6275** peggioramenti
-  stretti. §69 = schema T3'/realizzabilita', non nuovo `λ`.
+  stretti. Addendum strategico §68: massa/area/mismatch non sono coordinate orientate; i flip
+  locali depositano e ripuliscono, quindi i conteggi oscillano. §69 = `Φ_compat^L` + schema
+  T3'/co-raggiungibilita', non nuovo `λ`.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -176,7 +178,13 @@ di un potenziale finito basato su prima morte o massa pesata dei mismatch. **AGG
 Pauli restringe il linguaggio: no-go empirico/testimoniale sui proxy scalari finiti testati, non
 teorema dinamico. L'audit da CSV conferma peggioramenti stretti, non solo pareggi: gate `L=1600`
 `Φ_mass_104` peggiora strettamente in **371/762** segmenti; grid `best22_mass_104` in **3149/6275**.
-Prossimo fronte (§69): schema T3'/realizzabilita'. Un eventuale nuovo `Φ` deve avere memoria/credito,
-ordine ben fondato certificato, o natura globale.
+Addendum §68: non scrivere che la reversibilita' conserva massa; scrivere che massa/area/mismatch
+sono conteggi non orientati, perche' i flip locali depositano e ripuliscono. Prossimo fronte (§69):
+`Φ_compat^L`, dove `h_g^L` e' il primo offset cattivo della porta `g`, `h_best^L=max_g h_g^L`,
+e `Φ_compat^L=0` se `h_best^L=L+1`, altrimenti `exp(-h_best^L/104)`. Se `Φ_compat` diventa somma di mismatch, ricade in
+`best22_mass`; se resta solo endpoint `h_best`, e' gia' ferita da `Φ_best22_depth`. Quindi §69 deve
+testare forma event-wise/amortizzata e co-raggiungibilita': due storie finite della formica,
+localmente indistinguibili alla porta, discordi nella cella lontana. Caveat scala: `R(n)` arriva
+a 40, celle decisive osservate a offset 1591.
 Roadmap completa:
 CHAT_HANDOVER §C.
