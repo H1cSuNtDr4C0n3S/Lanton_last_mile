@@ -1,7 +1,7 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §66 (door-defect profile lock-condizionato) → A: prossima sessione (§67) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66;
-catena precedente: docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
+**Da: sessione §67 (potential segment scanner / falsificazione Φ monotoni) → A: prossima sessione (§68) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67;
+catena precedente: docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
 docs/CHECKLIST_VECTOR_MODEL_ADDENDUM.md §64,
 docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63,
 docs/CHECKLIST_MIXING_ADDENDUM.md §62, docs/LOCK_CHECKLIST_ADDENDUM.md §61,
@@ -17,9 +17,10 @@ Teorema della Finestra: r=4 chiuso (27,3M stati, rotori tutti B-T), tariffe δ�
 fresh-bite e' l'innesco locale. §61 ha mostrato che sui gate-lock lunghi il verdetto e'
 esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. §63 ha salvato
 vettore e geometria. §64 ha misurato il modello/compressione vettoriale. §65 ha separato
-diagnosi non-locale e teorema mancante. **Novita' §66:** il profilo 22-porte lock-condizionato
-e' misurato e mostra che la fase reale e' sempre la migliore; quindi il crux globale sta prima
-della selezione del lock:
+diagnosi non-locale e teorema mancante. §66 ha mostrato che il profilo 22-porte lock-condizionato
+seleziona sempre la fase reale. **Novita' §67:** Pauli ha subordinato la scelta dei candidati
+e lo scanner segmentale falsifica i potenziali endpoint-monotoni semplici; il crux resta globale,
+non un decremento locale di `Φ_depth`/`Φ_mass`:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -86,22 +87,35 @@ della selezione del lock:
 27. Le fasi alternative compatibili col primo bit sono **11** per tentativo, ma muoiono tutte
     entro **5** letture esogene; le fasi incompatibili muoiono a `h=0`.
 28. Interpretazione §66: il profilo 22-porte sui lock e' un controllo forte ma lock-condizionato,
-    quasi tautologico. Prossimo fronte §67: lemma di non-localita' T3' + scanner non condizionato
+    quasi tautologico. Ha aperto §67: lemma di non-localita' T3' + scanner non condizionato
     delle 22 porte sul campo di detriti.
 29. Upgrade strategico prima di §67: §66 mostra un'asimmetria. Identificare la porta e' locale
     (off-phase compatibili muoiono entro 5); decidere se la porta vera entra e' globale
     (coda fino a offset 1591/L∞36).
 30. La riformulazione globale e' qualitativa/di raggiungibilita', non un tasso: puo' riaprire
     strumenti combinatori/topologici ciechi alla versione-rate di α1.
-31. Candidato §67: cercare `Φ(detrito)` lower bounded, con decremento non sommabile a ogni
+31. Candidato §67, ora testato: cercare `Φ(detrito)` lower bounded, con decremento non sommabile a ogni
     rivisita nera profonda (ε uniforme oppure codominio discreto/ben fondato), `Φ=0` iff una
     porta entra, e non riducibile a prossimita' al lock (§59).
 32. Caveat Pauli: il floor §58 e' evidenza empirica, non assioma dimostrativo; per provare serve
     una stima certificata o un ordine discreto. Lo scanner deve falsificare `Φ`, non provare α1.
 33. Prima falsificazione pulita: segmenti tra gate-attempt consecutivi con eventi deep-black,
     nessun ingresso, ma `Φ(next) >= Φ(prev)`.
+34. §67 implementa `alpha1/potential_segment_scanner.py`: ancore `gate` + `grid`, 24/24 orbite,
+    **21.327** righe ancora, **21.183** segmenti, stride grid **1040**, runtime **~125 s**.
+35. Gate, `L=1600`, segmenti deep/no-entry eleggibili **762**: `Φ_depth` viola **400/762**,
+    `Φ_mass_104` **373/762**, `Φ_mass_208` **380/762**.
+36. Grid, `L=1600`, segmenti eleggibili **6275**: `Φ_best22_depth` viola **3591/6275**,
+    `Φ_best22_mass_104` **3150/6275**, `Φ_best22_mass_208` **3145/6275**.
+37. Controlli §67: grid ha solo **2** clear finiti a `L=208/512` e **0** a `L=1600`; su gate
+    `L=1600`, `best22_depth` coincide con la fase reale in **810/810**.
+38. Lettura §67: i `Φ` naturali basati su prima morte e massa pesata dei mismatch non sono
+    potenziali monotoni del campo di detriti. Deep-black e' driver/evento, non decremento di un
+    potenziale endpoint-monotono finito.
+39. Prossimo §68: formalizzare un no-go per questa classe di `Φ`, poi tornare al lemma T3'
+    con peso sulla realizzabilita'. Non riprovare `Φ_depth`/`Φ_mass` cambiando solo pesi.
 
-## B. Risultati delle ultime sessioni (§57-§66)
+## B. Risultati delle ultime sessioni (§57-§67)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -285,7 +299,29 @@ Il crux globale sta prima: in un campo non condizionato, esiste qualche porta co
 La forma piu' precisa e': identificare la porta e' locale; decidere il successo della porta
 vera e' globale. L'invariante cercato vive nella seconda meta'.
 
-## C. Roadmap (priorita' prossima sessione §67)
+### B.13 Potential segment scanner (POTENTIAL-SEGMENT-SCANNER §67)
+`alpha1/potential_segment_scanner.py` testa, su ancore `gate` e `grid`, i candidati scelti con
+Pauli: `Φ_depth=exp(-h/104)` e `Φ_mass(λ)=Σ_mismatch exp(-offset/λ)` per `λ=104,208`, piu'
+le versioni `best22` sulle 22 porte. Output: `potential_segment_scanner_anchors.csv`,
+`potential_segment_scanner_segments.csv`, `potential_segment_scanner_summary.json`. Run completa:
+**24/24** orbite, **21.327** ancore, **21.183** segmenti, stride grid **1040**, runtime **~125 s**.
+
+Test killer: segmento con eventi deep-black, nessun ingresso finale, ma `Φ(next) >= Φ(prev)`.
+Risultato:
+- gate `L=1600`: **762** segmenti deep/no-entry eleggibili; violazioni `Φ_actual_depth`
+  **400/762**, `Φ_actual_mass_104` **373/762**, `Φ_actual_mass_208` **380/762**;
+- grid `L=1600`: **6275** segmenti eleggibili; violazioni `Φ_best22_depth` **3591/6275**,
+  `Φ_best22_mass_104` **3150/6275**, `Φ_best22_mass_208` **3145/6275**;
+- su gate `L=1600`, `best22_depth` coincide con la fase reale in **810/810**; le masse differiscono
+  poco (`mass104` 6/810, `mass208` 61/810), quindi il controllo best22 non salva la monotonia;
+- grid ha **2** clear finiti a `L=208/512`, ma **0** a `L=1600`: erano artefatti di orizzonte.
+
+Lettura: la famiglia naturale dei potenziali endpoint-monotoni finiti e' falsificata. Deep-black
+resta un evento causale/ambientale, ma non induce un decremento endpoint-monotono di prima morte
+o massa pesata dei difetti. Se un `Φ(detrito)` esiste, deve avere memoria/credito, un ordine
+ben fondato non catturato da endpoint consecutivi, o una formulazione globale diversa.
+
+## C. Roadmap (priorita' prossima sessione §68)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -295,35 +331,36 @@ vera e' globale. L'invariante cercato vive nella seconda meta'.
 4. **FATTO §65: non-localita' campionaria della checklist.** T3' e' il verdetto esatto e legge
    celle lontane lungo il canale; questo falsifica il troncamento corto, ma non e' ancora un
    teorema dinamico.
-5. **PENDENTE §67-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
+5. **PENDENTE §68-a: lemma di non-localita' T3'.** Non sovra-investire: la non-localita'
    sintattica segue quasi dall'infinita cavalcata futura della highway. Il peso vero e' la
    realizzabilita' delle coppie discriminanti da semi finiti/campi raggiungibili.
 6. **FATTO §66: `door-defect profile` sui lock.** La fase reale e' best unica 810/810; le
    fasi compatibili alternative muoiono entro 5 letture. Utile controllo, ma troppo condizionato
    per essere l'invariante globale.
-7. **PRIORITA' §67-b: formulare 2-3 candidati `Φ(detrito)`.** Condizioni: lower bounded;
-   decremento non sommabile a ogni rivisita nera profonda (ε uniforme oppure codominio discreto/
-   ben fondato); `Φ=0` iff qualche porta entra; non prossimita' al lock (proxy falsificato in §59).
-8. **PRIORITA' §67-c: scanner non condizionato come falsificatore di Φ.** Campionare ancore non
-   selezionate da lock profondi e misurare `H_L=max_g h_g(L)` sul campo di detriti, stratificando
-   per tempo/orbita/morso/deep-black/`D(t)`. Primo test killer: tra gate-attempt consecutivi,
-   se ci sono eventi deep-black e nessun ingresso ma `Φ(next) >= Φ(prev)`, quel `Φ` e' morto.
-9. **Invariante globale del campo di detriti (dopo §67).** La domanda precisa: puo' un'orbita
+7. **FATTO §67: candidati `Φ_depth`/`Φ_mass` e scanner segmentale.** I candidati naturali
+   endpoint-monotoni sono falsificati: gate `L=1600` viola ~49-52%, grid ~50-57%.
+8. **PRIORITA' §68-b: no-go locale per `Φ` endpoint-monotoni finiti.** Scrivere il lemma/nota:
+   prima morte, massa pesata, best22 e deficit finiti non forniscono decremento monotono sotto
+   deep-black. Non riaprire la stessa famiglia cambiando solo `λ` o il troncamento.
+9. **PRIORITA' §68-c: se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo:
+   memoria/credito tra segmenti, codominio discreto/ben fondato con certificato, oppure potenziale
+   globale del campo di detriti non leggibile da endpoint consecutivi.
+10. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-10. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+11. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-11. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+12. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-12. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+13. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-13. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+14. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
-   porta, compressione vettoriale e profilo 22-porte lock-condizionato misurati; §66 mostra che
-   il crux e' prima del lock, quindi serve scanner non condizionato agganciato a un candidato `Φ`.
+   porta, compressione vettoriale, profilo 22-porte lock-condizionato e scanner §67 misurati.
+   Il crux resta prima del lock: serve no-go dei `Φ` endpoint-monotoni e poi T3'/realizzabilita'.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -348,11 +385,12 @@ vera e' globale. L'invariante cercato vive nella seconda meta'.
   Sonda §64: `C:\Python\Python310\python.exe alpha1\checklist_vector_model.py`.
   §65 e' un addendum strategico: `docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md`.
   Sonda §66: `C:\Python\Python310\python.exe alpha1\door_defect_profile.py`.
+  Sonda §67: `C:\Python\Python310\python.exe alpha1\potential_segment_scanner.py`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§67**, stesso stile.
+- Verbale prossima sessione: **§68**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

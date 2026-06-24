@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§67**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§68**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -53,13 +53,13 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   GAMMA (§29–35), MORSO (§36–44), RADIUS (§45–55), PRODOTTO (§56), ALPHA1_FABRY (§57),
   DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), LOCK-CHECKLIST (§61),
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
-  CHECKLIST-NONLOCAL (§65), **DOOR-DEFECT-PROFILE (§66)**.
+  CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), **POTENTIAL-SEGMENT-SCANNER (§67)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
   hazard/mixing checklist (§62), vettore/geometria checklist (§63), modello/compressione
   vettoriale checklist (§64), ridirezione non-locale/globale con correzione Pauli (§65),
-  e profilo 22-porte lock-condizionato (§66).**
+  profilo 22-porte lock-condizionato (§66), e scanner dei potenziali segmentali (§67).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -89,9 +89,13 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   Correzione Pauli: §65 e' diagnosi strategica/campionaria, non teorema dinamico.
   `door_defect_profile.py` registra §66: su 810 tentativi la fase reale e' best unica 810/810,
   fasi compatibili alternative muoiono entro 5 letture. Upgrade strategico: identificare la
-  porta e' locale, decidere se la porta vera entra e' globale; prossimo fronte = lemma T3',
-  candidati `Φ(detrito)` con decremento non sommabile, e scanner non condizionato usato come
-  falsificatore di `Φ`.
+  porta e' locale, decidere se la porta vera entra e' globale.
+  `potential_segment_scanner.py` registra §67: Pauli ha selezionato `Φ_depth` e `Φ_mass(λ)`;
+  la run completa fa 24/24 orbite, 21.327 ancore, 21.183 segmenti. Gate `L=1600`: violazioni
+  **400/762** per `Φ_depth`, **373/762** per `Φ_mass_104`, **380/762** per `Φ_mass_208`.
+  Grid `L=1600`: `best22_depth` **3591/6275**, `best22_mass_104` **3150/6275**,
+  `best22_mass_208` **3145/6275**. Conclusione: non riprovare potenziali endpoint-monotoni
+  finiti cambiando solo pesi; §68 = no-go + T3'/realizzabilita'.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -158,10 +162,11 @@ questo non e' ancora un teorema di non-localita' dinamica. **AGGIORNAMENTO §66:
 `door-defect profile` sui lock e' fatto: fase reale best unica 810/810, off-phase compatibili
 muoiono entro 5 letture, coda 268...1591 ritrovata. Quindi il profilo lock-condizionato non e'
 l'invariante globale; §66 nomina l'asimmetria corretta: identificare la porta e' locale, decidere
-il successo della porta vera e' globale. Prossimo fronte (§67): lemma T3' con peso sulla
-realizzabilita', 2-3 candidati `Φ(detrito)` lower bounded con decremento non sommabile da
-deep-black (ε uniforme o codominio discreto/ben fondato), `Φ=0` iff ingresso e non-proximity-to-lock,
-poi scanner non condizionato come falsificatore per segmenti tra gate-attempt, non come prova da
-campione finito.
+il successo della porta vera e' globale. **AGGIORNAMENTO §67:** lo scanner segmentale ha falsificato
+i candidati naturali `Φ_depth`/`Φ_mass`: su segmenti deep/no-entry, `Φ(next) >= Φ(prev)` avviene
+in circa meta' dei casi sia su gate sia su grid. Quindi deep-black non e' decremento endpoint-monotono
+di un potenziale finito basato su prima morte o massa pesata dei mismatch. Prossimo fronte (§68):
+formalizzare il no-go per questa classe, poi tornare al lemma T3' con peso sulla realizzabilita'.
+Un eventuale nuovo `Φ` deve avere memoria/credito, ordine ben fondato certificato, o natura globale.
 Roadmap completa:
 CHAT_HANDOVER §C.
