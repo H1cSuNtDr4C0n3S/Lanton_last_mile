@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§70**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§71**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -54,14 +54,16 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), LOCK-CHECKLIST (§61),
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
-  ENDPOINT-MONOTONE-NOGO (§68), **COMPATIBILITY-POTENTIAL (§69)**.
+  ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
   hazard/mixing checklist (§62), vettore/geometria checklist (§63), modello/compressione
   vettoriale checklist (§64), ridirezione non-locale/globale con correzione Pauli (§65),
   profilo 22-porte lock-condizionato (§66), scanner dei potenziali segmentali (§67),
-  audit/no-go endpoint-monotono (§68), e `Φ_compat` endpoint (§69).**
+  audit/no-go endpoint-monotono (§68), `Φ_compat` endpoint (§69), e `Φ_compat` event-wise
+  + schema T3'/co-raggiungibilita' (§70).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -107,8 +109,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   T3'/co-raggiungibilita', non nuovo `λ`.
   `compat_endpoint_audit.py` registra §69: endpoint `Φ_compat^L` coincide con `best22_depth` e
   quindi non e' nuovo. Gate `L=1600`: `h_best` non migliora in **400/762** e peggiora strettamente
-  in **350/762**; grid: **3591/6275** e **2736/6275**. §70: o pre/post deep-black event per
-  `h_best`, oppure schema T3'/co-raggiungibilita'.
+  in **350/762**; grid: **3591/6275** e **2736/6275**.
+  `compat_event_audit.py` registra §70: su **600** eventi deep-black (24 orbite, 25/orbita,
+  `L=1600`, `--min-event-t 1040`), `h_best` non migliora in **357/600** e peggiora in
+  **259/600**; la monotonia immediata ingenua di `Φ_compat` e' falsificata. §71 =
+  `t3_coreachability_pair_scanner.py`.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -191,7 +196,10 @@ impostato §69: separare endpoint da forma event-wise/amortizzata e co-raggiungi
 localmente indistinguibili alla porta, discordi nella cella lontana. Caveat scala: `R(n)` arriva
 a 40, celle decisive osservate a offset 1591. **AGGIORNAMENTO §69:** la versione endpoint e'
 chiusa: `compat_endpoint_audit.py` mostra che `h_best` non migliora in **400/762** gate e
-**3591/6275** grid, con peggioramenti stretti **350/762** e **2736/6275**. Prossimo fronte (§70):
-pre/post evento deep-black oppure T3'/co-raggiungibilita', non gate-to-gate endpoint.
+**3591/6275** grid, con peggioramenti stretti **350/762** e **2736/6275**.
+**AGGIORNAMENTO §70:** il pre/post evento deep-black falsifica anche la monotonia immediata
+ingenua: su **600** eventi, `h_best` non migliora in **357/600** e peggiora in **259/600**.
+Lo schema T3'/co-raggiungibilita' e' formalizzato; prossimo fronte (§71):
+`alpha1/t3_coreachability_pair_scanner.py`.
 Roadmap completa:
 CHAT_HANDOVER §C.
