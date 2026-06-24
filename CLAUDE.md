@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§62**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§63**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -51,10 +51,12 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
 - `CHAT_HANDOVER.md` — stato completo del programma e roadmap.
 - `docs/` — catena degli addenda: HANDOVER, HANDOVER2, ANATOMY, ALPHA (§1–28),
   GAMMA (§29–35), MORSO (§36–44), RADIUS (§45–55), PRODOTTO (§56), ALPHA1_FABRY (§57),
-  DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), **LOCK-CHECKLIST (§61)**.
+  DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), LOCK-CHECKLIST (§61),
+  **CHECKLIST-MIXING (§62)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
-  hazard debito->lock (§59), modello 2D deep/bite (§60), e lock->checklist T3' (§61).**
+  hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
+  e hazard/mixing checklist (§62).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -69,6 +71,9 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   deep resta negativo/debole a bite quasi fissato.
   `lock_checklist_probe.py` ricostruisce E(k) da `W0` e valuta T3' sui gate-lock: risultato §61,
   891/891 morti esatte alla prima lettura esogena cattiva e 24/24 onset veri OK.
+  `checklist_mixing.py` deduplica i gate-attempt e misura hazard/mixing: risultato §62,
+  810 tentativi porta unici, hazard OK 0.0296, riuso cella critica 1/762 consecutivo e
+  1/12.945 intra-orbita.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -122,6 +127,9 @@ cala coi quantili deep-black e cresce coi quantili fresh-bite. **AGGIORNAMENTO �
 2D conferma che bite e' l'innesco: effetto `D>=40` mediano +0.1373 entro strisce deep, mentre
 deep resta -0.0350 entro strisce bite. **AGGIORNAMENTO §61:** il ponte locale lock -> checklist
 e' confermato: 891/891 gate-lock pre-onset muoiono esattamente alla prima lettura esogena cattiva
-e 24/24 onset veri passano il controllo positivo. Prossimo fronte: hazard/mixing della checklist.
+e 24/24 onset veri passano il controllo positivo. **AGGIORNAMENTO §62:** la checklist viene
+quasi ricampionata localmente: 810 tentativi porta unici, 24 OK, 786 KO, riuso della cella
+critica 1/762 consecutivo e tipo di errore quasi senza memoria. Prossimo fronte: vettore
+checklist completo + geometria della porta.
 Roadmap completa:
 CHAT_HANDOVER §C.

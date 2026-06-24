@@ -1,0 +1,482 @@
+{
+  "unique_gate_attempts": 810,
+  "failed_gate_attempts": 786,
+  "ok_entries": 24,
+  "ok_rate": 0.02962962962962963,
+  "orbits": 24,
+  "failure_streaks_before_entry": {
+    "min": 24,
+    "q25": 28.0,
+    "median": 31.5,
+    "q75": 35.75,
+    "max": 50,
+    "mean": 32.75,
+    "population_variance": 38.9375,
+    "values": [
+      34,
+      28,
+      29,
+      40,
+      35,
+      47,
+      36,
+      33,
+      28,
+      32,
+      50,
+      24,
+      27,
+      31,
+      31,
+      32,
+      27,
+      27,
+      32,
+      27,
+      38,
+      39,
+      29,
+      30
+    ]
+  },
+  "threshold_counts": {
+    "0": 24,
+    "40": 681,
+    "80": 105
+  },
+  "bad_kind_counts": {
+    "frontier_black_collision": 419,
+    "missing_black": 367
+  },
+  "top_bad_offsets": [
+    [
+      45,
+      137
+    ],
+    [
+      46,
+      78
+    ],
+    [
+      71,
+      58
+    ],
+    [
+      77,
+      56
+    ],
+    [
+      47,
+      45
+    ],
+    [
+      76,
+      32
+    ],
+    [
+      99,
+      26
+    ],
+    [
+      44,
+      26
+    ],
+    [
+      98,
+      24
+    ],
+    [
+      43,
+      22
+    ],
+    [
+      70,
+      21
+    ],
+    [
+      40,
+      21
+    ],
+    [
+      61,
+      20
+    ],
+    [
+      74,
+      17
+    ],
+    [
+      68,
+      14
+    ],
+    [
+      49,
+      13
+    ]
+  ],
+  "top_phases": [
+    {
+      "phase": 0,
+      "attempts": 314,
+      "ok": 10,
+      "ok_rate": 0.03184713375796178
+    },
+    {
+      "phase": 103,
+      "attempts": 128,
+      "ok": 3,
+      "ok_rate": 0.0234375
+    },
+    {
+      "phase": 30,
+      "attempts": 83,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 24,
+      "attempts": 75,
+      "ok": 2,
+      "ok_rate": 0.02666666666666667
+    },
+    {
+      "phase": 102,
+      "attempts": 49,
+      "ok": 2,
+      "ok_rate": 0.04081632653061224
+    },
+    {
+      "phase": 31,
+      "attempts": 45,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 25,
+      "attempts": 27,
+      "ok": 2,
+      "ok_rate": 0.07407407407407407
+    },
+    {
+      "phase": 100,
+      "attempts": 26,
+      "ok": 2,
+      "ok_rate": 0.07692307692307693
+    },
+    {
+      "phase": 99,
+      "attempts": 22,
+      "ok": 1,
+      "ok_rate": 0.045454545454545456
+    },
+    {
+      "phase": 16,
+      "attempts": 8,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 101,
+      "attempts": 6,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 98,
+      "attempts": 6,
+      "ok": 1,
+      "ok_rate": 0.16666666666666666
+    },
+    {
+      "phase": 97,
+      "attempts": 5,
+      "ok": 1,
+      "ok_rate": 0.2
+    },
+    {
+      "phase": 90,
+      "attempts": 5,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 26,
+      "attempts": 4,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 92,
+      "attempts": 4,
+      "ok": 0,
+      "ok_rate": 0.0
+    }
+  ],
+  "transitions": {
+    "total": 786,
+    "to_ok": 24,
+    "fail_to_fail": 762,
+    "kind_transition_counts": {
+      "frontier_black_collision->OK": 10,
+      "frontier_black_collision->frontier_black_collision": 219,
+      "frontier_black_collision->missing_black": 190,
+      "missing_black->OK": 14,
+      "missing_black->frontier_black_collision": 192,
+      "missing_black->missing_black": 161
+    },
+    "next_by_prev_kind": {
+      "frontier_black_collision": {
+        "n": 419,
+        "next_ok": 10,
+        "next_ok_rate": 0.02386634844868735,
+        "next_missing_rate": 0.45346062052505964,
+        "next_frontier_rate": 0.522673031026253
+      },
+      "missing_black": {
+        "n": 367,
+        "next_ok": 14,
+        "next_ok_rate": 0.03814713896457766,
+        "next_missing_rate": 0.43869209809264303,
+        "next_frontier_rate": 0.5231607629427792
+      }
+    }
+  },
+  "critical_cell_reuse": {
+    "consecutive_failed_pairs": 762,
+    "same_consecutive": 1,
+    "same_consecutive_rate": 0.0013123359580052493,
+    "within_orbit_failed_pairs": 12945,
+    "same_within_orbit": 1,
+    "same_within_orbit_rate": 7.72499034376207e-05,
+    "l1": {
+      "min": 0,
+      "q25": 18.0,
+      "median": 42.0,
+      "q75": 83.0,
+      "max": 215,
+      "mean": 54.5
+    }
+  },
+  "parity": {
+    "2": [
+      {
+        "modulus": 2,
+        "residue": 0,
+        "attempts": 402,
+        "ok": 12,
+        "ok_rate": 0.029850746268656716
+      },
+      {
+        "modulus": 2,
+        "residue": 1,
+        "attempts": 408,
+        "ok": 12,
+        "ok_rate": 0.029411764705882353
+      }
+    ],
+    "4": [
+      {
+        "modulus": 4,
+        "residue": 0,
+        "attempts": 206,
+        "ok": 7,
+        "ok_rate": 0.03398058252427184
+      },
+      {
+        "modulus": 4,
+        "residue": 1,
+        "attempts": 209,
+        "ok": 7,
+        "ok_rate": 0.03349282296650718
+      },
+      {
+        "modulus": 4,
+        "residue": 2,
+        "attempts": 196,
+        "ok": 5,
+        "ok_rate": 0.025510204081632654
+      },
+      {
+        "modulus": 4,
+        "residue": 3,
+        "attempts": 199,
+        "ok": 5,
+        "ok_rate": 0.02512562814070352
+      }
+    ],
+    "8": [
+      {
+        "modulus": 8,
+        "residue": 0,
+        "attempts": 89,
+        "ok": 1,
+        "ok_rate": 0.011235955056179775
+      },
+      {
+        "modulus": 8,
+        "residue": 1,
+        "attempts": 106,
+        "ok": 3,
+        "ok_rate": 0.02830188679245283
+      },
+      {
+        "modulus": 8,
+        "residue": 2,
+        "attempts": 94,
+        "ok": 3,
+        "ok_rate": 0.031914893617021274
+      },
+      {
+        "modulus": 8,
+        "residue": 3,
+        "attempts": 86,
+        "ok": 3,
+        "ok_rate": 0.03488372093023256
+      },
+      {
+        "modulus": 8,
+        "residue": 4,
+        "attempts": 117,
+        "ok": 6,
+        "ok_rate": 0.05128205128205128
+      },
+      {
+        "modulus": 8,
+        "residue": 5,
+        "attempts": 103,
+        "ok": 4,
+        "ok_rate": 0.038834951456310676
+      },
+      {
+        "modulus": 8,
+        "residue": 6,
+        "attempts": 102,
+        "ok": 2,
+        "ok_rate": 0.0196078431372549
+      },
+      {
+        "modulus": 8,
+        "residue": 7,
+        "attempts": 113,
+        "ok": 2,
+        "ok_rate": 0.017699115044247787
+      }
+    ],
+    "16": [
+      {
+        "modulus": 16,
+        "residue": 0,
+        "attempts": 38,
+        "ok": 0,
+        "ok_rate": 0.0
+      },
+      {
+        "modulus": 16,
+        "residue": 1,
+        "attempts": 54,
+        "ok": 2,
+        "ok_rate": 0.037037037037037035
+      },
+      {
+        "modulus": 16,
+        "residue": 2,
+        "attempts": 46,
+        "ok": 1,
+        "ok_rate": 0.021739130434782608
+      },
+      {
+        "modulus": 16,
+        "residue": 3,
+        "attempts": 34,
+        "ok": 2,
+        "ok_rate": 0.058823529411764705
+      },
+      {
+        "modulus": 16,
+        "residue": 4,
+        "attempts": 62,
+        "ok": 3,
+        "ok_rate": 0.04838709677419355
+      },
+      {
+        "modulus": 16,
+        "residue": 5,
+        "attempts": 48,
+        "ok": 1,
+        "ok_rate": 0.020833333333333332
+      },
+      {
+        "modulus": 16,
+        "residue": 6,
+        "attempts": 49,
+        "ok": 0,
+        "ok_rate": 0.0
+      },
+      {
+        "modulus": 16,
+        "residue": 7,
+        "attempts": 52,
+        "ok": 0,
+        "ok_rate": 0.0
+      },
+      {
+        "modulus": 16,
+        "residue": 8,
+        "attempts": 51,
+        "ok": 1,
+        "ok_rate": 0.0196078431372549
+      },
+      {
+        "modulus": 16,
+        "residue": 9,
+        "attempts": 52,
+        "ok": 1,
+        "ok_rate": 0.019230769230769232
+      },
+      {
+        "modulus": 16,
+        "residue": 10,
+        "attempts": 48,
+        "ok": 2,
+        "ok_rate": 0.041666666666666664
+      },
+      {
+        "modulus": 16,
+        "residue": 11,
+        "attempts": 52,
+        "ok": 1,
+        "ok_rate": 0.019230769230769232
+      },
+      {
+        "modulus": 16,
+        "residue": 12,
+        "attempts": 55,
+        "ok": 3,
+        "ok_rate": 0.05454545454545454
+      },
+      {
+        "modulus": 16,
+        "residue": 13,
+        "attempts": 55,
+        "ok": 3,
+        "ok_rate": 0.05454545454545454
+      },
+      {
+        "modulus": 16,
+        "residue": 14,
+        "attempts": 53,
+        "ok": 2,
+        "ok_rate": 0.03773584905660377
+      },
+      {
+        "modulus": 16,
+        "residue": 15,
+        "attempts": 61,
+        "ok": 2,
+        "ok_rate": 0.03278688524590164
+      }
+    ]
+  },
+  "source": "C:\\Lanton_last_mile\\alpha1\\lock_checklist_probe_rows.csv",
+  "dedupe_key": "(idx,start,phase,kind), keep highest threshold"
+}
