@@ -1,8 +1,8 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-24
-**Da: sessione §62 (hazard/mixing checklist) → A: prossima sessione (§63) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/CHECKLIST_MIXING_ADDENDUM.md §62;
-catena precedente: docs/LOCK_CHECKLIST_ADDENDUM.md §61, docs/DEBT_LOCK_2D_ADDENDUM.md §60,
-docs/DEBT_LOCK_ADDENDUM.md §59,
+**Da: sessione §63 (vettore checklist + geometria porta) → A: prossima sessione (§64) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/CHECKLIST_VECTOR_GEOMETRY_ADDENDUM.md §63;
+catena precedente: docs/CHECKLIST_MIXING_ADDENDUM.md §62, docs/LOCK_CHECKLIST_ADDENDUM.md §61,
+docs/DEBT_LOCK_2D_ADDENDUM.md §60, docs/DEBT_LOCK_ADDENDUM.md §59,
 docs/DELTA4_BETA_ADDENDUM.md §58, docs/ALPHA1_FABRY_ADDENDUM.md §57.**
 
 ## A. Stato del programma in dieci righe
@@ -12,7 +12,8 @@ Teorema della Finestra: r=4 chiuso (27,3M stati, rotori tutti B-T), tariffe δ�
 (§56). §57 ha declassato il pavimento del morso fresco; §58 ha mostrato che la non-localita'
 `r=4` non erode. §59 ha falsificato il ponte diretto `deep_black -> lock`. §60 ha mostrato che
 fresh-bite e' l'innesco locale. §61 ha mostrato che sui gate-lock lunghi il verdetto e'
-esattamente la checklist T3'. **Novita' §62:** la checklist viene ricampionata localmente:
+esattamente la checklist T3'. §62 ha misurato il ricampionamento locale. **Novita' §63:**
+anche la porta si sposta e il vettore checklist e' ora salvato:
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -38,11 +39,16 @@ esattamente la checklist T3'. **Novita' §62:** la checklist viene ricampionata 
    coppie intra-orbita; L1 mediana tra celle critiche consecutive = **42**.
 10. Il tipo di errore e' quasi senza memoria:
    `P(next frontier | prev frontier)=0.5227` vs `P(next frontier | prev missing)=0.5232`.
-11. **Ridirezione aggiornata:** il ponte locale `lock -> checklist -> verdetto` e' sano e il
-   ricampionamento locale non mostra protezioni banali. Il prossimo fronte e' salvare il
-   **vettore checklist completo** e la geometria della porta.
+11. §63 salva **57.177** letture esogene su **810** tentativi porta; in **786/786** fallimenti
+    la prima cella cattiva resta la morte esatta.
+12. Nel vettore a due periodi i fallimenti hanno mismatch mediano **6** (q25 3, q75 10, max 29):
+    la prima cella decide, ma il tentativo fallito spesso non e' quasi OK.
+13. Geometria: stessa origine porta consecutiva **0/786**, L1 mediana origine **43**; stessa
+    cella critica **1/762**. Il ricampionamento e' della porta, non solo dello sportello.
+14. **Ridirezione aggiornata:** il prossimo fronte e' il **modello vettoriale della checklist**:
+    quali componenti del vettore spiegano `OK` e quali comprimono T3'.
 
-## B. Risultati delle ultime sessioni (§57-§62)
+## B. Risultati delle ultime sessioni (§57-§63)
 
 ### B.1 Strumento alpha1_engine.c (ALPHA1 §57.1) — validato e veloce
 Simulatore C self-contained (convenzione = libant.c). Modi `search` (early-stop all'onset, semi
@@ -141,14 +147,31 @@ Lettura: una cospirazione eterna non puo' essere locale-banale. Non basta tenere
 una cella, un tipo di dogana o una classe di parita'; dovrebbe essere un vincolo globale sul
 campo di detriti che anticipa una sequenza di porte mobili.
 
-## C. Roadmap (priorita' prossima sessione §63)
+### B.9 Vettore checklist + geometria porta (CHECKLIST-VECTOR §63)
+`alpha1/checklist_vector_geometry.py` rigenera le 24 orbite, deduplica i gate-attempt come §62,
+salva origine/heading della porta e ogni lettura esogena fino ad almeno due periodi
+(`vector_horizon=208`) e comunque fino alla morte. Runtime completo: 68.6 s.
+
+Risultato:
+- tentativi porta unici: **810**; entry OK: **24**; fallimenti: **786**;
+- letture esogene salvate: **57.177**; mismatch salvati: **5.806**;
+- prima cella cattiva non coincidente con la morte: **0**;
+- mismatch per fallimento nel vettore a due periodi: min 1, q25 3, mediana **6**, q75 10, max 29;
+- stessa origine porta consecutiva: **0/786**; L1 origine mediana **43** (q25 17, q75 84.25);
+- stessa cella critica: **1/762**; L1 critica mediana **42**;
+- heading delta: `0:218`, `1:215`, `2:149`, `3:204`.
+
+Lettura: non cambia solo la cella sbagliata, cambia la porta. Una protezione eterna deve
+coordinare vettori su origini mobili, non solo preservare un bit locale.
+
+## C. Roadmap (priorita' prossima sessione §64)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
-2. **Checklist vector.** Estendere il valutatore §61 per salvare il vettore completo delle celle
-   esogene principali, non solo la prima cattiva.
-3. **Geometria porta.** Salvare origine/heading dei lock e misurare distanza fra porte, non solo
-   fra celle critiche.
-4. **Campione baseline piu' ampio.** Ripetere §61-§62 su molte orbite non condizionate a onset alto.
+2. **Modello vettoriale.** Stimare quali componenti del vettore spiegano `OK`: conteggi
+   missing/frontier, offset 45-77 vs 98-99, fase-condizionato, prime dogane.
+3. **Compressione del vettore.** Identificare un sotto-vettore minimo che mantiene la diagonale
+   nel campione lungo.
+4. **Campione baseline piu' ampio.** Ripetere §61-§63 su molte orbite non condizionate a onset alto.
 5. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
 6. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
@@ -156,8 +179,8 @@ campo di detriti che anticipa una sequenza di porte mobili.
 7. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
-1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato e mixing locale misurato;
-   resta il vettore completo/scala baseline (vedi C.2-C.4).
+1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale e geometria
+   porta misurati; resta modello/compressione del vettore e scala baseline (vedi C.2-C.4).
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -178,11 +201,12 @@ campo di detriti che anticipa una sequenza di porte mobili.
   Sonda §60: `C:\Python\Python310\python.exe alpha1\debt_lock_2d.py`.
   Sonda §61: `C:\Python\Python310\python.exe alpha1\lock_checklist_probe.py`.
   Sonda §62: `C:\Python\Python310\python.exe alpha1\checklist_mixing.py`.
+  Sonda §63: `C:\Python\Python310\python.exe alpha1\checklist_vector_geometry.py`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§63**, stesso stile.
+- Verbale prossima sessione: **§64**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

@@ -1,0 +1,149 @@
+{
+  "attempts": 810,
+  "entries": 24,
+  "failures": 786,
+  "cells": 57177,
+  "first_bad_not_at_death": 0,
+  "bad_kind_counts": {
+    "frontier_black_collision": 419,
+    "missing_black": 367
+  },
+  "mismatch_count_after_vector_horizon": {
+    "min": 1,
+    "q25": 3.0,
+    "median": 6.0,
+    "q75": 10.0,
+    "max": 29,
+    "mean": 7.3867684478371505
+  },
+  "origin_l1": {
+    "min": 1,
+    "q25": 17.0,
+    "median": 43.0,
+    "q75": 84.25,
+    "max": 222,
+    "mean": 54.846055979643765
+  },
+  "critical_l1": {
+    "min": 0,
+    "q25": 18.0,
+    "median": 42.0,
+    "q75": 83.0,
+    "max": 215,
+    "mean": 54.5
+  },
+  "same_origin_consecutive": 0,
+  "same_origin_rate": 0.0,
+  "same_critical_consecutive": 1,
+  "same_critical_rate": 0.0013123359580052493,
+  "heading_delta_counts": {
+    "0": 218,
+    "1": 215,
+    "2": 149,
+    "3": 204
+  },
+  "top_phases": [
+    {
+      "phase": 0,
+      "attempts": 314,
+      "ok": 10,
+      "ok_rate": 0.03184713375796178
+    },
+    {
+      "phase": 103,
+      "attempts": 128,
+      "ok": 3,
+      "ok_rate": 0.0234375
+    },
+    {
+      "phase": 30,
+      "attempts": 83,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 24,
+      "attempts": 75,
+      "ok": 2,
+      "ok_rate": 0.02666666666666667
+    },
+    {
+      "phase": 102,
+      "attempts": 49,
+      "ok": 2,
+      "ok_rate": 0.04081632653061224
+    },
+    {
+      "phase": 31,
+      "attempts": 45,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 25,
+      "attempts": 27,
+      "ok": 2,
+      "ok_rate": 0.07407407407407407
+    },
+    {
+      "phase": 100,
+      "attempts": 26,
+      "ok": 2,
+      "ok_rate": 0.07692307692307693
+    },
+    {
+      "phase": 99,
+      "attempts": 22,
+      "ok": 1,
+      "ok_rate": 0.045454545454545456
+    },
+    {
+      "phase": 16,
+      "attempts": 8,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 101,
+      "attempts": 6,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 98,
+      "attempts": 6,
+      "ok": 1,
+      "ok_rate": 0.16666666666666666
+    },
+    {
+      "phase": 97,
+      "attempts": 5,
+      "ok": 1,
+      "ok_rate": 0.2
+    },
+    {
+      "phase": 90,
+      "attempts": 5,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 26,
+      "attempts": 4,
+      "ok": 0,
+      "ok_rate": 0.0
+    },
+    {
+      "phase": 92,
+      "attempts": 4,
+      "ok": 0,
+      "ok_rate": 0.0
+    }
+  ],
+  "source": "C:\\Lanton_last_mile\\alpha1\\dumps_all.txt",
+  "orbits_requested": 24,
+  "orbits_completed": 24,
+  "vector_horizon": 208,
+  "entry_horizon": 1248,
+  "elapsed_seconds": 68.37268839999979
+}

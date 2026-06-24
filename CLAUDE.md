@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§63**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§64**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -52,11 +52,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
 - `docs/` — catena degli addenda: HANDOVER, HANDOVER2, ANATOMY, ALPHA (§1–28),
   GAMMA (§29–35), MORSO (§36–44), RADIUS (§45–55), PRODOTTO (§56), ALPHA1_FABRY (§57),
   DELTA4-BETA (§58), DEBT-LOCK (§59), DEBT-LOCK 2D (§60), LOCK-CHECKLIST (§61),
-  **CHECKLIST-MIXING (§62)**.
+  CHECKLIST-MIXING (§62), **CHECKLIST-VECTOR (§63)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
-  e hazard/mixing checklist (§62).**
+  hazard/mixing checklist (§62), e vettore/geometria checklist (§63).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -74,6 +74,9 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   `checklist_mixing.py` deduplica i gate-attempt e misura hazard/mixing: risultato §62,
   810 tentativi porta unici, hazard OK 0.0296, riuso cella critica 1/762 consecutivo e
   1/12.945 intra-orbita.
+  `checklist_vector_geometry.py` salva origine/heading porta e vettore esogeno: risultato §63,
+  57.177 letture esogene, 5.806 mismatch, prima cattiva=morte in 786/786 fallimenti,
+  origine porta consecutiva riusata 0/786.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -130,6 +133,8 @@ e' confermato: 891/891 gate-lock pre-onset muoiono esattamente alla prima lettur
 e 24/24 onset veri passano il controllo positivo. **AGGIORNAMENTO §62:** la checklist viene
 quasi ricampionata localmente: 810 tentativi porta unici, 24 OK, 786 KO, riuso della cella
 critica 1/762 consecutivo e tipo di errore quasi senza memoria. Prossimo fronte: vettore
-checklist completo + geometria della porta.
+checklist completo + geometria della porta. **AGGIORNAMENTO §63:** il vettore e la geometria
+sono salvati: 57.177 letture esogene, mismatch mediano 6 nei fallimenti, stessa origine porta
+consecutiva 0/786, L1 origine mediana 43. Prossimo fronte: modello/compressione del vettore.
 Roadmap completa:
 CHAT_HANDOVER §C.
