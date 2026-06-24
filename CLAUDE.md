@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§73**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§74**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -55,7 +55,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§72)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§73)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -64,7 +64,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   profilo 22-porte lock-condizionato (§66), scanner dei potenziali segmentali (§67),
   audit/no-go endpoint-monotono (§68), `Φ_compat` endpoint (§69), `Φ_compat` event-wise
   + schema T3'/co-raggiungibilita' (§70), scanner di coppie co-raggiungibili T3' (§71),
-  e profilo `L∞` discriminante-vs-profondita' (§72).**
+  profilo `L∞` discriminante-vs-profondita' (§72), e pass-rate classi co-moving T3' (§73).**
   `alpha1_engine.c` (+ .exe): simulatore C self-contained, modi `search`/`reseed`/`dump`,
   **early-stop all'onset + reset-solo-celle-toccate** (31.7k semi/s su 14 shard), semi
   riproducibili dal solo stato RNG a 64 bit. Validato: vuota→9977, (7,−7)→106258, highway 22/104.
@@ -125,6 +125,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   Conclusione operativa: non costruire `door_debt_graph.py` su classi grezze
   `(phase, rel_x, rel_y, required_color)`; costruirlo nel frame intrinseco W0 come test di
   Link 2. Link 1 resta separato e non risolto.
+  `door_comoving_class_passrate.py` registra §73: sulle 131 classi co-moving di prima morte,
+  rigioca **810** tentativi e **101387** letture target; **91657** pass, **9730** fail,
+  pass-rate **0.9040**. **130/131** classi hanno almeno un pass e sono miste pass/fail;
+  l'unica zero-pass ha supporto 4. La top class `(0,-5,-2,0)` fa **4224 pass / 486 fail**.
+  Link 3 non e' falsificato; il motore deve essere GF(2) globale, non riuso assoluto cella.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -217,8 +222,12 @@ solo un potenziale. `R=16` zero-collisioni e' baseline di sparsita', non confine
 **AGGIORNAMENTO §72:** `alpha1/door_discriminant_linf_profile.py` misura i 786 fallimenti T3'
 reali: nessuna duplicazione fisica, `depth=first_bad_offset` sempre. La crescita grezza
 `L∞=36` era drift del tubo W0: nel frame co-moving fase-dipendente il supporto collassa a
-`L∞<=9`, con 131 classi osservate. Prossimo fronte (§73): Link 1
-("orbita eterna non-highway => lock W0-like profondi infinite volte") e/o `door_debt_graph.py`
-nel frame intrinseco W0; solo dopo ha senso un XOR/SAT globale GF(2).
+`L∞<=9`, con 131 classi osservate.
+**AGGIORNAMENTO §73:** `alpha1/door_comoving_class_passrate.py` misura i pass-rate delle stesse
+classi: 810 tentativi, 101387 letture target, pass-rate 0.9040; 130/131 classi hanno almeno un
+pass e sono miste pass/fail. La top class `(0,-5,-2,0)` fa 4224 pass / 486 fail. Prossimo
+fronte (§74): `door_debt_graph.py` co-moving pass/fail e Link 1
+("orbita eterna non-highway => lock W0-like profondi infinite volte"); solo dopo ha senso un
+XOR/SAT globale GF(2).
 Roadmap completa:
 CHAT_HANDOVER §C.

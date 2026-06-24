@@ -510,3 +510,113 @@ Prossimo progresso reale:
    riscalamenti tarabili;
 3. solo dopo, costruire un sistema XOR/SAT sulle dipendenze globali GF(2), non su celle assolute
    riusate.
+
+# §73. Pass-rate delle classi co-moving T3'
+
+## 73.1 Motivazione
+
+§72 ha mostrato finitezza e ricorrenza delle classi co-moving di prima morte. Ma il CSV §72 e'
+condizionato sui soli fallimenti: non puo' dire se una classe ricorrente e' una dogana
+intrinsecamente sempre sabotata, oppure se la stessa classe a volte passa e a volte fallisce.
+
+Il gate per Link 3 e':
+
+> per le classi co-moving ricorrenti, la parita' al momento della lettura e' forzata o resta
+> variabile?
+
+Se le classi top fossero zero-pass, il motore paritario sarebbe morto o dovrebbe cercare altre
+porte. Se invece le stesse classi passano spesso, Link 3 ha un bersaglio reale.
+
+## 73.2 Script
+
+Nuova sonda:
+
+```
+C:\Python\Python310\python.exe alpha1\door_comoving_class_passrate.py `
+  --horizon 1600 `
+  --out-prefix alpha1\door_comoving_class_passrate
+```
+
+Input:
+- `alpha1/door_discriminant_linf_profile_rows.csv` per le 131 classi di prima morte §72;
+- `alpha1/dumps_all.txt` per rigiocare le 24 orbite e recuperare il campo al lock.
+
+Metodo:
+- considera solo la fase reale del lock;
+- prende le classi `(phase, comoving_rel_x, comoving_rel_y, required_black)` osservate come
+  prima morte in §72;
+- rigioca tutti gli **810** tentativi porta (786 pre-onset falliti + 24 entry);
+- per ogni lettura T3' entro `L=1600` che cade in una classe target, registra `pass/fail`,
+  cella assoluta, offset, periodo e se l'evento e' la prima morte.
+
+## 73.3 Risultati
+
+Run completa:
+- orbite completate: **24/24**;
+- tentativi porta: **810**;
+- classi target: **131**;
+- righe evento lette: **101387**;
+- pass: **91657**;
+- fail: **9730**;
+- pass-rate evento: **0.9040**;
+- prime morti ritrovate: **786/786**.
+
+Classi:
+- classi con almeno un evento: **131/131**;
+- classi con almeno un pass: **130/131**;
+- classi miste pass/fail: **130/131**;
+- classi zero-pass: **1/131**;
+- classi zero-pass con supporto `first_bad_count >= 10`: **0**.
+
+La sola zero-pass e' debole:
+
+| rank | phase | co-moving rel | required | first bad | read events | pass | fail |
+|---:|---:|---|---:|---:|---:|---:|---:|
+| 46 | 92 | `(1,2)` | 1 | 4 | 4 | 0 | 4 |
+
+Top classi:
+
+| rank | class | first bad | reads | pass | fail | pass-rate | first-bad abs cells |
+|---:|---|---:|---:|---:|---:|---:|---:|
+| 1 | `(0,-5,-2,0)` | 78 | 4710 | 4224 | 486 | 0.8968 | 78 |
+| 2 | `(103,3,-5,0)` | 49 | 1920 | 1751 | 169 | 0.9120 | 49 |
+| 3 | `(0,-5,0,1)` | 39 | 314 | 150 | 164 | 0.4777 | 39 |
+| 4 | `(103,3,-4,1)` | 35 | 128 | 88 | 40 | 0.6875 | 35 |
+| 5 | `(0,-8,-1,0)` | 30 | 4710 | 4182 | 528 | 0.8879 | 30 |
+| 6 | `(30,0,-3,1)` | 28 | 83 | 20 | 63 | 0.2410 | 28 |
+
+Per le classi con almeno 10 prime morti, il pass-rate medio e' **0.7169**, minimo **0.2410**,
+massimo **0.9742**. Quindi le classi dominanti non sono sabotaggi deterministici: passano
+spesso, inclusa la top class.
+
+## 73.4 Lettura
+
+La premessa di Link 3 resta viva. Le classi co-moving ricorrono, ma non sono rigidamente bloccate
+al colore cattivo. La classe top, che in §72 appariva come 78 prime morti su 78 celle assolute
+diverse, qui produce **4224 pass** e **486 fail** su **4710** letture target. La stessa equazione
+traslata a volte e' soddisfatta e a volte no.
+
+Questo non accende ancora il motore paritario: le celle assolute restano quasi sempre diverse e
+la collisione per flip della stessa cella non arriva da sola. Pero' chiude il falso negativo piu'
+pericoloso: non siamo davanti a dogane co-moving permanentemente sbagliate. Se esiste una
+contraddizione, deve vivere nelle dipendenze GF(2) globali fra queste letture variabili.
+
+## 73.5 Roadmap aggiornata
+
+Prossimi passi leciti:
+1. costruire `door_debt_graph.py` nel frame co-moving, ma farlo come grafo di pass/fail e non
+   come grafo delle sole prime morti;
+2. includere nei nodi almeno `(phase, offset_mod_period, comoving_rel_x, comoving_rel_y,
+   required_black)` e nei bordi la relazione temporale/assoluta fra letture;
+3. cercare vincoli GF(2) globali sul vettore di parita' di visita, non riuso della stessa cella
+   assoluta;
+4. tenere separato Link 1: anche un Link 2+3 forte prova solo "lock profondi => pressione verso
+   ingresso", non "orbita eterna => lock profondi".
+
+## 73.6 File prodotti
+
+- `alpha1/door_comoving_class_passrate.py`
+- `alpha1/door_comoving_class_passrate_events.csv`
+- `alpha1/door_comoving_class_passrate_classes.csv`
+- `alpha1/door_comoving_class_passrate_orbits.csv`
+- `alpha1/door_comoving_class_passrate_summary.json`
