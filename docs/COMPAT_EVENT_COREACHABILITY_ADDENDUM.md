@@ -620,3 +620,107 @@ Prossimi passi leciti:
 - `alpha1/door_comoving_class_passrate_classes.csv`
 - `alpha1/door_comoving_class_passrate_orbits.csv`
 - `alpha1/door_comoving_class_passrate_summary.json`
+
+# §74. Gate GF(2): rango delle parita' di dogana
+
+## 74.1 Motivazione
+
+§73 ha chiuso il falso negativo "dogane co-moving sempre sbagliate": le classi passano spesso.
+Ma le marginali pass/fail non bastano. Con fail per-lettura ~10%, una checklist lunga puo'
+fallire quasi sempre senza alcuna contraddizione. La domanda vera diventa:
+
+> esistono dipendenze lineari GF(2) fra le parita' delle celle di dogana, oppure le parita'
+> sono libere abbastanza da sabotare sempre?
+
+Se il rango e' pieno, il sistema e' compatibile con sabotaggio libero. Se c'e' deficit, quello
+e' il seme da cui puo' nascere un vincolo globale.
+
+## 74.2 Script
+
+Nuova sonda:
+
+```
+C:\Python\Python310\python.exe alpha1\door_gf2_rank_gate.py `
+  --out-prefix alpha1\door_gf2_rank_gate
+```
+
+Input:
+- `alpha1/door_comoving_class_passrate_events.csv`;
+- `alpha1/door_comoving_class_passrate_orbits.csv`.
+
+Righe della matrice: tentativi porta `pre_onset_lock`.
+
+Colonne: letture target esatte
+`(offset, period_index, comoving_rel_x, comoving_rel_y, required_black)`.
+
+Valori:
+- `actual_black` per la matrice di parita';
+- `fail = actual_black XOR required_black` come matrice di sabotaggio.
+
+Lo script misura rango lineare e rango affine su GF(2), per fasi top e finestre di profondita'.
+Registra anche la quota `C0=0` usando il seed iniziale ricostruito da `rngstate`.
+
+## 74.3 Risultati
+
+Run:
+- batch valutati: **105**;
+- batch con dipendenza di colonne concreta (`attempts >= columns` e `rank < columns`): **21**.
+
+Caso principale, fase 0, tutti i pre-onset, `offset<=1600`:
+
+| phase | depth | attempts | columns | rank actual | affine rank | nullity | C0=0 | constants | duplicate patterns |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 0 | all | 304 | 187 | 138 | 138 | 49 | 0.9963 | 0 | 0 |
+
+Questo e' il primo segnale non marginale: ci sono **49** relazioni lineari osservate fra le
+187 letture target, con abbastanza righe per testare il rango di colonna. Non e' spiegato da
+colonne costanti o duplicate.
+
+Batch profondi/vicini, fase 0:
+
+| phase | depth | max offset | attempts | columns | rank actual | rank fail | nullity | C0=0 | note |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---|
+| 0 | 78-103 | 103 | 44 | 19 | 4 | 3 | 15 | 1.0000 | prefisso quasi forzato |
+| 0 | 80+ | 103 | 52 | 19 | 4 | 3 | 15 | 1.0000 | prefisso quasi forzato |
+| 0 | 80+ | 1600 | 52 | 187 | 24 | 24 | 163 | 0.9978 | sample-limited ma row-rank compresso |
+
+Controlli:
+- fase 0 `40-77`, `offset<=103`: **252** attempts, **19** columns, rank **19**: nessun deficit
+  nel prefisso corto dei lock meno profondi;
+- fase 103 all, `offset<=1600`: **125** attempts, **113** columns, rank **59**, nullity **54**;
+- fase 30 all, `offset<=1600`: **83** attempts, **82** columns, rank **25**, nullity **57**.
+
+La quota `C0=0` e' alta dove serve: fase 0 all ha **0.9963**, fase 0 depth `80+` prefisso
+ha **1.0000**. Quindi `actual_black` e' quasi sempre direttamente parita' di visita `N_t(z)`.
+
+## 74.4 Lettura
+
+Il gate non uccide la pista UNSAT. Anzi, trova deficit GF(2) concreto:
+- fase 0 all: nullita' 49 senza colonne banali;
+- fasi 103 e 30 mostrano deficit analoghi;
+- i batch profondi fase 0 hanno prefisso fortemente compresso.
+
+Pero' questo non e' ancora una contraddizione. Una dipendenza lineare sulle parita' osservate
+non dice ancora che la configurazione "almeno una dogana sbagliata per ogni lock" sia impossibile.
+Dice solo che il sistema non e' pienamente libero: il `door_debt_graph.py` non sarebbe SAT per
+banalita' di indipendenza.
+
+Il prossimo passo deve estrarre le relazioni del nullspace e testarle contro i vettori di fail:
+non basta sapere che `rank < columns`; serve sapere se le relazioni tagliano davvero le
+assegnazioni che sabotano tutte le porte.
+
+## 74.5 Roadmap aggiornata
+
+Prossimo gate:
+1. estrarre una base del nullspace per fase 0 (`304 x 187`, nullita' 49);
+2. interpretare le relazioni in coordinate W0: quali offset/classi legano?
+3. formulare `door_debt_graph.py` come sistema GF(2) sui vettori pass/fail, non come grafo
+   puramente combinatorio;
+4. continuare a tenere Link 1 fuori dal conto: anche un vincolo GF(2) perfetto chiude solo
+   "lock profondi ricorrenti => pressione verso ingresso".
+
+## 74.6 File prodotti
+
+- `alpha1/door_gf2_rank_gate.py`
+- `alpha1/door_gf2_rank_gate_batches.csv`
+- `alpha1/door_gf2_rank_gate_summary.json`

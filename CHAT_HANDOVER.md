@@ -1,6 +1,6 @@
 # CHAT_HANDOVER — Stato del programma Langton al 2026-06-25
-**Da: sessione §73 (pass-rate classi co-moving T3') → A: prossima sessione (§74) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§73;
+**Da: sessione §74 (gate rango GF(2) dogane T3') → A: prossima sessione (§75) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§74;
 catena precedente: docs/COMPATIBILITY_POTENTIAL_ADDENDUM.md §69,
 docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68, docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
 docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
@@ -39,6 +39,11 @@ pass-rate **0.9040**. **130/131** classi hanno almeno un pass e sono miste pass/
 zero-pass ha supporto debole (4 prime morti, 4 letture). La top class `(0,-5,-2,0)` non e'
 un sabotaggio permanente: **4224 pass / 486 fail**. Link 3 resta vivo, ma va cercato come
 vincolo GF(2) globale, non come riuso della stessa cella assoluta.
+**Novita' §74:** gate rango GF(2) su matrici dogana. Fase 0, pre-onset, `offset<=1600`:
+**304** tentativi, **187** colonne, rango **138**, nullita' **49**, `C0=0` **0.9963**,
+nessuna colonna costante/duplicata. Fase 0 depth `80+`, prefisso `offset<=103`: **52**
+tentativi, **19** colonne, rango **4**, nullita' **15**. Quindi la pista UNSAT non e' morta:
+esistono dipendenze lineari reali, ma vanno estratte e testate contro i vettori di sabotaggio.
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -590,7 +595,7 @@ motore non puo' essere "stessa cella assoluta flippata due volte": il riuso asso
 assente. La prossima macchina deve essere un grafo co-moving pass/fail e poi un vincolo GF(2)
 globale sulle parita' di visita.
 
-## C. Roadmap (priorita' prossima sessione §74)
+## C. Roadmap (priorita' prossima sessione §75)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -623,32 +628,34 @@ globale sulle parita' di visita.
    cresce fino a `L∞=36`, ma sottraendo il drift W0 fase-dipendente collassa a `L∞<=9`.
 13. **FATTO §73: pass-rate classi co-moving.** Le classi top non sono sabotaggi deterministici:
    130/131 classi passano almeno una volta e sono miste pass/fail; la top class fa 4224/4710 pass.
-14. **PRIORITA' §74: debt graph co-moving pass/fail + Link 1.** Computazionale: costruire
-   `door_debt_graph.py` nel frame intrinseco W0 usando tutte le letture pass/fail, non solo
-   prime morti. Teorica: formulare Link 1, cioe' perche' un'orbita eterna non-highway debba
-   produrre lock W0-like profondi infinite volte. Solo dopo ha senso un sistema XOR/SAT globale GF(2).
-15. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
+14. **FATTO §74: gate rango GF(2).** Fase 0 all ha rango 138/187 (nullita' 49) con
+   abbastanza righe e senza colonne banali; fase 0 depth `80+`, prefisso `<=103`, ha rango
+   4/19. Il sistema non e' pienamente libero.
+15. **PRIORITA' §75: nullspace + debt graph GF(2).** Estrarre una base del nullspace della
+   matrice fase 0 (`304 x 187`), interpretare relazioni in coordinate W0, e testare se tagliano
+   davvero i vettori di sabotaggio. Teorica: Link 1 resta il crux separato.
+16. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
    event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
    certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
-16. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+17. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-17. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+18. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-18. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+19. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-19. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+20. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-20. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+21. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
    porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67, no-go §68,
    `Φ_compat` endpoint §69, pre/post event §70, witness co-raggiungibile `R=8` §71, profilo
-   `L∞` discriminante §72 e pass-rate classi co-moving §73 misurati. Il crux resta prima del
-   lock: Link 1 per orbite eterne, famiglia/closure co-raggiungibile robusta in raggio,
-   debt graph co-moving pass/fail come Link 2/3, oppure potenziale con credito/amortizzazione.
+   `L∞` discriminante §72, pass-rate classi co-moving §73 e gate rango GF(2) §74 misurati.
+   Il crux resta prima del lock: Link 1 per orbite eterne, famiglia/closure co-raggiungibile
+   robusta in raggio, nullspace/debt graph GF(2) come Link 2/3, oppure potenziale con credito.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -680,11 +687,12 @@ globale sulle parita' di visita.
   Scanner §71: `C:\Python\Python310\python.exe alpha1\t3_coreachability_pair_scanner.py --limit-orbits 0 --max-seconds 300 --include-grid --grid-stride 520 --radii 8 --horizons 208,512,1600 --out-prefix alpha1\t3_coreachability_pair_scanner_grid520_r8`.
   Profilo §72: `C:\Python\Python310\python.exe alpha1\door_discriminant_linf_profile.py --horizon 1600 --out-prefix alpha1\door_discriminant_linf_profile`.
   Pass-rate §73: `C:\Python\Python310\python.exe alpha1\door_comoving_class_passrate.py --horizon 1600 --out-prefix alpha1\door_comoving_class_passrate`.
+  Rango §74: `C:\Python\Python310\python.exe alpha1\door_gf2_rank_gate.py --out-prefix alpha1\door_gf2_rank_gate`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§74**, stesso stile.
+- Verbale prossima sessione: **§75**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.
