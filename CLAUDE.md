@@ -123,9 +123,9 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   (`horizon=1600`), `depth == first_bad_offset` in 786/786. Nel frame grezzo il discriminante
   cresce fino a `L∞=36`, ma nel frame co-moving W0, sottraendo
   `floor(offset/104) * drift_phase`, collassa a `L∞<=9` (131 classi osservate).
-  Conclusione operativa: non costruire `door_debt_graph.py` su classi grezze
-  `(phase, rel_x, rel_y, required_color)`; costruirlo nel frame intrinseco W0 come test di
-  Link 2. Link 1 resta separato e non risolto.
+  Conclusione operativa a §72: non costruire `door_debt_graph.py` su classi grezze
+  `(phase, rel_x, rel_y, required_color)`; se mai, solo nel frame intrinseco W0. §74 ha poi
+  potato il debt graph come prossimo passo automatico. Link 1 resta separato e non risolto.
   `door_comoving_class_passrate.py` registra §73: sulle 131 classi co-moving di prima morte,
   rigioca **810** tentativi e **101387** letture target; **91657** pass, **9730** fail,
   pass-rate **0.9040**. **130/131** classi hanno almeno un pass e sono miste pass/fail;
@@ -134,8 +134,9 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   `door_gf2_rank_gate.py` registra §74: sulle matrici GF(2) delle letture target, fase 0
   pre-onset `offset<=1600` ha **304** tentativi, **187** colonne, rango **138** (nullita'
   **49**) con `C0=0` **0.9963** e senza colonne costanti/duplicate. Fase 0 depth `80+`,
-  prefisso `offset<=103`, ha rango **4/19**. Quindi il sistema non e' pienamente libero;
-  prossimo passo = estrarre nullspace e testarlo contro i vettori di sabotaggio.
+  prefisso `offset<=103`, ha rango **4/19**. Lettura corretta: il deficit shallow e' reale ma
+  troppo debole per forzare ingresso; i deficit profondi sono sample-limited o quasi-W0/circolari.
+  §74 pota la via GF(2) shallow; prossimo passo = Link 1 non-simulativo o consolidamento.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -234,8 +235,8 @@ classi: 810 tentativi, 101387 letture target, pass-rate 0.9040; 130/131 classi h
 pass e sono miste pass/fail. La top class `(0,-5,-2,0)` fa 4224 pass / 486 fail.
 **AGGIORNAMENTO §74:** `alpha1/door_gf2_rank_gate.py` misura il rango GF(2): fase 0 all
 pre-onset `offset<=1600` ha rango 138/187 (nullita' 49), C0=0 0.9963, senza colonne banali;
-fase 0 depth `80+`, prefisso `<=103`, ha rango 4/19. Prossimo fronte (§75): estrarre e
-interpretare il nullspace, poi `door_debt_graph.py` GF(2) co-moving; Link 1 resta separato
-("orbita eterna non-highway => lock W0-like profondi infinite volte").
+fase 0 depth `80+`, prefisso `<=103`, ha rango 4/19. Interpretazione aggiornata: dipendenze
+shallow reali ma troppo deboli per UNSAT, deficit profondi sample-limited o circolari. Prossimo
+fronte (§75): Link 1 non-simulativo oppure consolidamento; non `door_debt_graph.py` automatico.
 Roadmap completa:
 CHAT_HANDOVER §C.

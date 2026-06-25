@@ -493,21 +493,22 @@ Se si vuole salvare la direzione paritaria, il vincolo giusto deve cambiare form
 - oppure prima un argomento soft su Link 1: perche' un'orbita eterna non-highway debba
   produrre lock W0-like profondi infinite volte.
 
-La misura co-moving riapre il Lemma della dogana ricorrente: sul campione lungo le classi esatte
-nel frame intrinseco sono finite e piccole (`L∞<=9`). Questo non prova boundedness eterna e non
-tocca Link 1. Pero' corregge la conclusione pratica: il `door_debt_graph.py` e' legittimo se,
-e solo se, usa classi co-moving `(phase, offset_mod_period, comoving_rel_x, comoving_rel_y,
-required_color/bad_kind)` e non celle relative grezze.
+La misura co-moving riapre, a §72, il Lemma della dogana ricorrente: sul campione lungo le classi
+esatte nel frame intrinseco sono finite e piccole (`L∞<=9`). Questo non prova boundedness eterna e
+non tocca Link 1. La conclusione pratica locale era che un eventuale `door_debt_graph.py` avrebbe
+dovuto usare classi co-moving `(phase, offset_mod_period, comoving_rel_x, comoving_rel_y,
+required_color/bad_kind)` e non celle relative grezze. **Nota post-§74:** il gate GF(2) shallow
+ha poi potato questa strada come prossimo passo automatico.
 
 ## 72.7 Roadmap aggiornata
 
-Non costruire `door_debt_graph.py` in coordinate grezze. Costruirlo nel frame co-moving e tenerlo
-separato da Link 1.
+Non costruire `door_debt_graph.py` in coordinate grezze. A §72 restava lecito costruirlo nel frame
+co-moving e tenerlo separato da Link 1; dopo §74 questo e' solo contesto storico, non priorita'.
 
 Prossimo progresso reale:
 1. formulare Link 1 come lemma autonomo, anche debole o condizionato;
-2. costruire il debt graph co-moving come test di Link 2, con classi finite osservate e senza
-   riscalamenti tarabili;
+2. `[SUPERATO DA §74]` costruire il debt graph co-moving come test di Link 2, con classi finite
+   osservate e senza riscalamenti tarabili;
 3. solo dopo, costruire un sistema XOR/SAT sulle dipendenze globali GF(2), non su celle assolute
    riusate.
 
@@ -603,7 +604,7 @@ contraddizione, deve vivere nelle dipendenze GF(2) globali fra queste letture va
 
 ## 73.5 Roadmap aggiornata
 
-Prossimi passi leciti:
+Prossimi passi leciti a §73 (poi potati da §74 come automatismo):
 1. costruire `door_debt_graph.py` nel frame co-moving, ma farlo come grafo di pass/fail e non
    come grafo delle sole prime morti;
 2. includere nei nodi almeno `(phase, offset_mod_period, comoving_rel_x, comoving_rel_y,
@@ -612,6 +613,10 @@ Prossimi passi leciti:
    assoluta;
 4. tenere separato Link 1: anche un Link 2+3 forte prova solo "lock profondi => pressione verso
    ingresso", non "orbita eterna => lock profondi".
+
+**Nota post-§74:** il gate di rango ha trovato dipendenze shallow reali ma troppo deboli, e deficit
+profondi sample-limited/circolari. Quindi questa roadmap resta come motivazione del test §74, non
+come invito a costruire subito il debt graph.
 
 ## 73.6 File prodotti
 
@@ -693,31 +698,44 @@ Controlli:
 La quota `C0=0` e' alta dove serve: fase 0 all ha **0.9963**, fase 0 depth `80+` prefisso
 ha **1.0000**. Quindi `actual_black` e' quasi sempre direttamente parita' di visita `N_t(z)`.
 
-## 74.4 Lettura
+## 74.4 Lettura corretta
 
-Il gate non uccide la pista UNSAT. Anzi, trova deficit GF(2) concreto:
-- fase 0 all: nullita' 49 senza colonne banali;
-- fasi 103 e 30 mostrano deficit analoghi;
-- i batch profondi fase 0 hanno prefisso fortemente compresso.
+Il deficit di rango della fase 0 all e' statisticamente reale: una matrice casuale `304 x 187`
+avrebbe rango di colonna pieno quasi certamente, mentre qui il rango e' **138**. Quindi esistono
+relazioni XOR osservate fra le parita' di dogana, e non sono spiegate da colonne costanti o
+duplicate.
 
-Pero' questo non e' ancora una contraddizione. Una dipendenza lineare sulle parita' osservate
-non dice ancora che la configurazione "almeno una dogana sbagliata per ogni lock" sia impossibile.
-Dice solo che il sistema non e' pienamente libero: il `door_debt_graph.py` non sarebbe SAT per
-banalita' di indipendenza.
+Questo pero' non e' evidenza positiva verso UNSAT. Tre cautele sono decisive:
 
-Il prossimo passo deve estrarre le relazioni del nullspace e testarle contro i vettori di fail:
-non basta sapere che `rank < columns`; serve sapere se le relazioni tagliano davvero le
-assegnazioni che sabotano tutte le porte.
+1. `rank_fail` e `affine_rank_fail` non portano informazione autonoma. `required_black` e' parte
+   della chiave di colonna, quindi `fail = actual XOR required` e' solo una traslazione fissa per
+   colonna. L'uguaglianza dei ranghi affini e' forzata dalla costruzione.
+2. La nullita' **49** lascia ancora un sottospazio osservato di dimensione **138** sulle **187**
+   colonne. In questo regime il sabotaggio "almeno una dogana sbagliata" rimane enormemente
+   fattibile; il deficit non forza l'ingresso.
+3. I deficit profondi sono artefatti di due tipi: `80+`, `offset<=1600`, e' sample-limited
+   (`52` righe contro `187` colonne); `78-103`, `offset<=103`, e' un prefisso quasi-W0 con molte
+   colonne costanti/duplicate. Questo misura che il lock e' gia' quasi highway, non un meccanismo
+   indipendente che impedisce il sabotaggio.
+
+La lettura utile e' quindi un no-go per la via GF(2) shallow: nel regime osservabile le dipendenze
+lineari esistono, ma sono troppo deboli per tagliare i vettori di sabotaggio. Se una contraddizione
+GF(2) esiste, appartiene a un regime profondo/quasi-W0 che queste simulazioni finite non campionano
+senza circolarita'.
 
 ## 74.5 Roadmap aggiornata
 
-Prossimo gate:
-1. estrarre una base del nullspace per fase 0 (`304 x 187`, nullita' 49);
-2. interpretare le relazioni in coordinate W0: quali offset/classi legano?
-3. formulare `door_debt_graph.py` come sistema GF(2) sui vettori pass/fail, non come grafo
-   puramente combinatorio;
-4. continuare a tenere Link 1 fuori dal conto: anche un vincolo GF(2) perfetto chiude solo
-   "lock profondi ricorrenti => pressione verso ingresso".
+Non costruire `door_debt_graph.py` come semplice raffinamento meccanico di §74: con i dati attuali
+sarebbe un sistema con troppa liberta' residua nel regime shallow e con deficit circolari nel regime
+profondo.
+
+Prossimi passi sensati:
+1. attaccare Link 1 come lemma autonomo: perche' un'orbita eterna non-highway dovrebbe generare
+   lock W0-like profondi infinite volte?
+2. oppure consolidare i risultati gia' dimostrati/strumentali (`gamma`, `beta`, locale, automi,
+   no-go §70-§74) senza vendere §74 come progresso su alpha1;
+3. riaprire la pista GF(2) solo se emerge una ragione strutturale, non campionaria, per cui una
+   specifica famiglia di relazioni debba tagliare tutti i sabotaggi.
 
 ## 74.6 File prodotti
 

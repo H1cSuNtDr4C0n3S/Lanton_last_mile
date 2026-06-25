@@ -42,8 +42,10 @@ vincolo GF(2) globale, non come riuso della stessa cella assoluta.
 **Novita' §74:** gate rango GF(2) su matrici dogana. Fase 0, pre-onset, `offset<=1600`:
 **304** tentativi, **187** colonne, rango **138**, nullita' **49**, `C0=0` **0.9963**,
 nessuna colonna costante/duplicata. Fase 0 depth `80+`, prefisso `offset<=103`: **52**
-tentativi, **19** colonne, rango **4**, nullita' **15**. Quindi la pista UNSAT non e' morta:
-esistono dipendenze lineari reali, ma vanno estratte e testate contro i vettori di sabotaggio.
+tentativi, **19** colonne, rango **4**, nullita' **15**. Lettura corretta: il deficit shallow
+e' reale ma troppo debole per forzare ingresso (`~2^138` liberta' residua); i deficit profondi
+sono sample-limited o quasi-W0/circolari. §74 e' un no-go per la via GF(2) shallow, non evidenza
+positiva verso UNSAT.
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -564,9 +566,10 @@ Casi estremi:
 
 Lettura: la versione grezza del lemma della dogana ricorrente era nel frame sbagliato. Sottratto
 il drift fase-dipendente della highway, il supporto resta piccolo: `comoving L∞<=9`, **131**
-classi osservate `(phase, comoving_rel_x, comoving_rel_y, required_black, bad_kind)`. Quindi
-`door_debt_graph.py` e' riaperto come test di Link 2 nel frame intrinseco, ma Link 1
-("orbita eterna non-highway => lock W0-like profondi infinite volte") resta il crux.
+classi osservate `(phase, comoving_rel_x, comoving_rel_y, required_black, bad_kind)`. A §72
+`door_debt_graph.py` era riaperto come test di Link 2 nel frame intrinseco; §74 lo ha poi potato
+come prossimo passo automatico. Link 1 ("orbita eterna non-highway => lock W0-like profondi
+infinite volte") resta il crux.
 
 ### B.19 Pass-rate delle classi co-moving T3' (§73)
 
@@ -628,12 +631,13 @@ globale sulle parita' di visita.
    cresce fino a `L∞=36`, ma sottraendo il drift W0 fase-dipendente collassa a `L∞<=9`.
 13. **FATTO §73: pass-rate classi co-moving.** Le classi top non sono sabotaggi deterministici:
    130/131 classi passano almeno una volta e sono miste pass/fail; la top class fa 4224/4710 pass.
-14. **FATTO §74: gate rango GF(2).** Fase 0 all ha rango 138/187 (nullita' 49) con
-   abbastanza righe e senza colonne banali; fase 0 depth `80+`, prefisso `<=103`, ha rango
-   4/19. Il sistema non e' pienamente libero.
-15. **PRIORITA' §75: nullspace + debt graph GF(2).** Estrarre una base del nullspace della
-   matrice fase 0 (`304 x 187`), interpretare relazioni in coordinate W0, e testare se tagliano
-   davvero i vettori di sabotaggio. Teorica: Link 1 resta il crux separato.
+14. **FATTO §74: no-go GF(2) shallow.** Fase 0 all ha rango 138/187 (nullita' 49) con
+   abbastanza righe e senza colonne banali: dipendenze reali, ma liberta' residua enorme e nessuna
+   pressione UNSAT. I batch profondi sono sample-limited oppure quasi-W0/circolari.
+15. **PRIORITA' §75: Link 1 o consolidamento.** Non procedere a `door_debt_graph.py` come
+   raffinamento automatico di §74. Prossimo progresso reale: argomento non-simulativo per
+   "orbita eterna non-highway => lock profondi infiniti", oppure consolidare i risultati gia'
+   dimostrati e i no-go §70-§74.
 16. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
    event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
    certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
@@ -654,8 +658,9 @@ globale sulle parita' di visita.
    porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67, no-go §68,
    `Φ_compat` endpoint §69, pre/post event §70, witness co-raggiungibile `R=8` §71, profilo
    `L∞` discriminante §72, pass-rate classi co-moving §73 e gate rango GF(2) §74 misurati.
-   Il crux resta prima del lock: Link 1 per orbite eterne, famiglia/closure co-raggiungibile
-   robusta in raggio, nullspace/debt graph GF(2) come Link 2/3, oppure potenziale con credito.
+   Il crux resta prima del lock: Link 1 per orbite eterne. La pista nullspace/debt graph GF(2)
+   shallow e' stata potata da §74; riaprirla solo con un vincolo strutturale nuovo, non con altro
+   campionamento dello stesso tipo.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
