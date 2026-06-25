@@ -1,6 +1,7 @@
-# CHAT_HANDOVER — Stato del programma Langton al 2026-06-25
-**Da: sessione §74 (gate rango GF(2) dogane T3') → A: prossima sessione (§75) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§74;
+# CHAT_HANDOVER — Stato del programma Langton al 2026-06-26
+**Da: sessione §75 (GA/no-entry gate-zero FAIL) → A: prossima sessione (§76) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/GA_GATE_ZERO_ADDENDUM.md §75;
+docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§74;
 catena precedente: docs/COMPATIBILITY_POTENTIAL_ADDENDUM.md §69,
 docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68, docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
 docs/DOOR_DEFECT_PROFILE_ADDENDUM.md §66, docs/CHECKLIST_NONLOCAL_STRATEGY_ADDENDUM.md §65,
@@ -46,6 +47,14 @@ tentativi, **19** colonne, rango **4**, nullita' **15**. Lettura corretta: il de
 e' reale ma troppo debole per forzare ingresso (`~2^138` liberta' residua); i deficit profondi
 sono sample-limited o quasi-W0/circolari. §74 e' un no-go per la via GF(2) shallow, non evidenza
 positiva verso UNSAT.
+**Novita' §75:** stress-test GA/no-entry gate-zero. Il prototipo `A0(r,K,D0)` non determina T3':
+due anchor replayabili della stessa orbita (`rngstate=16489936061346709332`, fase 98, `t=60320`
+e `t=60840`) collassano nello stesso stato astratto per `r=2,3,4,8`, `K=80`, `D0=80`, ma hanno
+prefisso T3' diverso (`h_512=513` vs `494`; `h_1600=1014` vs `494`). A `r=9` il patch locale si
+distingue. Il witness sintattico conferma la cecita' con stesso `A0(8,80,80)` e discriminante
+fuori patch a offset 138, rel `(3,9)`. Nessuna SCC e' stata classificata: dopo questo FAIL
+sarebbe certificazione cieca. Prossimo fronte: `A1` con T3' funzione dello stato/proof object,
+oppure propagazione esplicita di `unknown`.
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -598,7 +607,47 @@ motore non puo' essere "stessa cella assoluta flippata due volte": il riuso asso
 assente. La prossima macchina deve essere un grafo co-moving pass/fail e poi un vincolo GF(2)
 globale sulle parita' di visita.
 
-## C. Roadmap (priorita' prossima sessione §75)
+### B.20 GA/no-entry gate-zero stress-test (§75)
+
+`GA_stress_agent/ga_gate_zero_audit.py` controlla il prerequisito minimo del piano GA/no-entry:
+prima di classificare SCC, il verdetto/prefisso T3' deve essere funzione dello stato astratto.
+
+Stato testato:
+
+```text
+A0-state = (P_r, b0, g, min(d_g,K), min(d_g,D0), [d_g >= D0])
+```
+
+`P_r` e' il patch locale normalizzato nel frame porta/anchor; `b0` il bit osservato; `g` la fase
+T3' valutata; `d_g` il prefisso futuro che coincide con `W0` in fase `g`. E' una
+sovra-approssimazione sound: dimentica il detrito fuori patch.
+
+Comando:
+`C:\Python\Python310\python.exe GA_stress_agent\ga_gate_zero_audit.py --radii 2,3,4,8,9 --synthetic-radius 8 --K 80 --D0 80 --horizons 512,1600 --out GA_stress_agent\gate_zero_summary.json`.
+
+Risultato dinamico:
+- orbita **5**, `rngstate=16489936061346709332`, fase **98**;
+- anchor A `t=60320`, origine `(58,-26)`, heading `2`;
+- anchor B `t=60840`, origine `(48,-36)`, heading `2`;
+- per `r=2,3,4,8`: stesso stato astratto (`patch_hash r=8 = 1e838dafb7a51b780addaa3772ef0181`,
+  bit osservato 0, `tail_prefix_cap_K=80`, `lock_depth_cap_D0=80`, `deep_lock_flag=1`);
+- verdetto prefix diverso: A `first_bad=1014`, `h_512=513`, `h_1600=1014`; B `first_bad=494`,
+  `h_512=494`, `h_1600=494`;
+- a `r=9` il patch distingue i due anchor.
+
+Risultato sintattico:
+- fase **98**, discriminante T3' a offset **138**, rel `(3,9)`, `L∞=9`, `required_black=0`;
+- due campi finiti hanno lo stesso `A0(8,80,80)`;
+- campo pass: `h_1600=1601`, clear; campo fail: `h_1600=138`.
+
+Limite logico: il witness dinamico prova non-determinacy del prefisso T3' finito, non una
+divergenza binaria infinita entry-vs-no-entry. A `L=1600` entrambi falliscono, ma a offset
+diverso. Il witness sintattico non e' co-raggiungibilita'.
+
+Conclusione §75: non classificare SCC su `A0`. Il certificato mancante e' rendere T3' funzione
+dello stato, o trattare fuori-patch come `unknown` senza promuoverlo a no-entry.
+
+## C. Roadmap (priorita' prossima sessione §76)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -634,33 +683,35 @@ globale sulle parita' di visita.
 14. **FATTO §74: no-go GF(2) shallow.** Fase 0 all ha rango 138/187 (nullita' 49) con
    abbastanza righe e senza colonne banali: dipendenze reali, ma liberta' residua enorme e nessuna
    pressione UNSAT. I batch profondi sono sample-limited oppure quasi-W0/circolari.
-15. **PRIORITA' §75: Link 1 o consolidamento.** Non procedere a `door_debt_graph.py` come
-   raffinamento automatico di §74. Prossimo progresso reale: argomento non-simulativo per
-   "orbita eterna non-highway => lock profondi infiniti", oppure consolidare i risultati gia'
-   dimostrati e i no-go §70-§74.
-16. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
+15. **FATTO §75: gate-zero GA/no-entry FAIL.** `A0(r,K,D0)` non determina T3' per `r<=8`,
+   `K=80`, `D0=80`; nessuna SCC va classificata su questa astrazione.
+16. **PRIORITA' §76: definire A1 o propagare unknown.** Non aumentare `r` a caso. Rendere T3'
+   funzione dello stato tramite celle/proof object, oppure mantenere gli stati fuori-patch come
+   `unknown` e certificare solo cio' che non dipende da loro.
+17. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
    event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
    certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
-17. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
+18. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
    eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
    raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
    su questo livello.
-18. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
+19. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
    della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-19. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
+20. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
    sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-20. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
+21. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-21. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+22. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
    porta, compressione vettoriale, profilo 22-porte lock-condizionato, scanner §67, no-go §68,
    `Φ_compat` endpoint §69, pre/post event §70, witness co-raggiungibile `R=8` §71, profilo
-   `L∞` discriminante §72, pass-rate classi co-moving §73 e gate rango GF(2) §74 misurati.
-   Il crux resta prima del lock: Link 1 per orbite eterne. La pista nullspace/debt graph GF(2)
-   shallow e' stata potata da §74; riaprirla solo con un vincolo strutturale nuovo, non con altro
-   campionamento dello stesso tipo.
+   `L∞` discriminante §72, pass-rate classi co-moving §73, gate rango GF(2) §74 e gate-zero
+   GA/no-entry §75 misurati. Il crux resta prima/dentro il lock: una macchina no-entry deve
+   vedere T3' o marcare `unknown`. La pista nullspace/debt graph GF(2) shallow e' stata potata
+   da §74; riaprirla solo con un vincolo strutturale nuovo, non con altro campionamento dello
+   stesso tipo.
 2. Lemma A (alternanza taglia i fantasmi) / Lemma B (memoria antica non eternamente economica) —
    RADIUS §55.4: il prodotto È la via del Lemma A, una volta tolto l'ostacolo A (PRODOTTO §56).
 3. Congettura B–T-autosufficienza (RADIUS §51.5): ogni parola di rotore ha rot≢0 mod4 o drift=0?
@@ -693,11 +744,12 @@ globale sulle parita' di visita.
   Profilo §72: `C:\Python\Python310\python.exe alpha1\door_discriminant_linf_profile.py --horizon 1600 --out-prefix alpha1\door_discriminant_linf_profile`.
   Pass-rate §73: `C:\Python\Python310\python.exe alpha1\door_comoving_class_passrate.py --horizon 1600 --out-prefix alpha1\door_comoving_class_passrate`.
   Rango §74: `C:\Python\Python310\python.exe alpha1\door_gf2_rank_gate.py --out-prefix alpha1\door_gf2_rank_gate`.
+  Gate-zero §75: `C:\Python\Python310\python.exe GA_stress_agent\ga_gate_zero_audit.py --radii 2,3,4,8,9 --synthetic-radius 8 --K 80 --D0 80 --horizons 512,1600 --out GA_stress_agent\gate_zero_summary.json`.
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§75**, stesso stile.
+- Verbale prossima sessione: **§76**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

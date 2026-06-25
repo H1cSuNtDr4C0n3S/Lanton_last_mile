@@ -1,0 +1,284 @@
+{
+  "audit": "gate-zero T3 determinacy",
+  "state_model": {
+    "name": "A0(r,K,D0)",
+    "components": [
+      "normalized local debris patch B_r",
+      "observed turn bit at the anchor",
+      "evaluated gate phase g",
+      "W0 prefix length capped at K",
+      "deep-lock depth capped at D0"
+    ],
+    "soundness_note": "This is an over-approximate finite abstraction.  A concrete ant history maps to a state, but outside-patch debris is forgotten."
+  },
+  "parameters": {
+    "radii": [
+      2,
+      3,
+      4,
+      8,
+      9
+    ],
+    "synthetic_radius": 8,
+    "K": 80,
+    "D0": 80,
+    "phase": 98,
+    "horizons": [
+      512,
+      1600
+    ]
+  },
+  "dynamic_prefix": {
+    "kind": "dynamic_prefix",
+    "claim_scope": "reachable histories; proves non-determinacy of finite T3 prefix h_g^L for collapsed states, not binary infinite entry/non-entry",
+    "orbit_index": 5,
+    "rngstate": 16489936061346709332,
+    "phase": 98,
+    "K": 80,
+    "D0": 80,
+    "anchors": [
+      {
+        "label": "A",
+        "time": 60320,
+        "origin": [
+          58,
+          -26
+        ],
+        "heading": 2,
+        "observed_turn_bit": 0,
+        "phase_match_depth": 1014,
+        "t3": {
+          "first_bad_offset": 1014,
+          "first_bad_rel": [
+            25,
+            23
+          ],
+          "first_bad_linf": 25,
+          "required_black": 0,
+          "actual_black": 1,
+          "bad_kind": "frontier_black_collision",
+          "h_512": 513,
+          "clear_512": 1,
+          "h_1600": 1014,
+          "clear_1600": 0
+        }
+      },
+      {
+        "label": "B",
+        "time": 60840,
+        "origin": [
+          48,
+          -36
+        ],
+        "heading": 2,
+        "observed_turn_bit": 0,
+        "phase_match_depth": 494,
+        "t3": {
+          "first_bad_offset": 494,
+          "first_bad_rel": [
+            15,
+            13
+          ],
+          "first_bad_linf": 15,
+          "required_black": 0,
+          "actual_black": 1,
+          "bad_kind": "frontier_black_collision",
+          "h_512": 494,
+          "clear_512": 0,
+          "h_1600": 494,
+          "clear_1600": 0
+        }
+      }
+    ],
+    "state_comparison_by_radius": [
+      {
+        "radius": 2,
+        "same_abstract_state": 1,
+        "state_a": {
+          "radius": 2,
+          "patch_hash": "785ce569e201730670f23594066916b4",
+          "patch_bytes": 4,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        },
+        "state_b": {
+          "radius": 2,
+          "patch_hash": "785ce569e201730670f23594066916b4",
+          "patch_bytes": 4,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        }
+      },
+      {
+        "radius": 3,
+        "same_abstract_state": 1,
+        "state_a": {
+          "radius": 3,
+          "patch_hash": "913b25fbf08be362ccde49eb4da1d232",
+          "patch_bytes": 7,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        },
+        "state_b": {
+          "radius": 3,
+          "patch_hash": "913b25fbf08be362ccde49eb4da1d232",
+          "patch_bytes": 7,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        }
+      },
+      {
+        "radius": 4,
+        "same_abstract_state": 1,
+        "state_a": {
+          "radius": 4,
+          "patch_hash": "d9463a59e0c947023c99fdf418f9413b",
+          "patch_bytes": 11,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        },
+        "state_b": {
+          "radius": 4,
+          "patch_hash": "d9463a59e0c947023c99fdf418f9413b",
+          "patch_bytes": 11,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        }
+      },
+      {
+        "radius": 8,
+        "same_abstract_state": 1,
+        "state_a": {
+          "radius": 8,
+          "patch_hash": "1e838dafb7a51b780addaa3772ef0181",
+          "patch_bytes": 37,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        },
+        "state_b": {
+          "radius": 8,
+          "patch_hash": "1e838dafb7a51b780addaa3772ef0181",
+          "patch_bytes": 37,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        }
+      },
+      {
+        "radius": 9,
+        "same_abstract_state": 0,
+        "state_a": {
+          "radius": 9,
+          "patch_hash": "9ee28921d45834ae57e5a7f77d77f41d",
+          "patch_bytes": 46,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        },
+        "state_b": {
+          "radius": 9,
+          "patch_hash": "64db6429d42a88babad99dbcdb360406",
+          "patch_bytes": 46,
+          "observed_turn_bit": 0,
+          "eval_phase": 98,
+          "tail_prefix_cap_K": 80,
+          "lock_depth_cap_D0": 80,
+          "deep_lock_flag": 1
+        }
+      }
+    ]
+  },
+  "syntactic_prefix": {
+    "kind": "syntactic_prefix",
+    "claim_scope": "finite debris fields; proves the abstraction is blind unless it stores the relevant T3 cells; not a co-reachability claim",
+    "radius": 8,
+    "phase": 98,
+    "K": 80,
+    "D0": 80,
+    "horizon": 1600,
+    "discriminator": {
+      "offset": 138,
+      "rel": [
+        3,
+        9
+      ],
+      "linf": 9,
+      "required_black": 0
+    },
+    "same_abstract_state": 1,
+    "state_pass": {
+      "radius": 8,
+      "patch_hash": "e25d40bdc2bc36b2fa1f906f91ca662a",
+      "patch_bytes": 37,
+      "observed_turn_bit": 0,
+      "eval_phase": 98,
+      "tail_prefix_cap_K": 80,
+      "lock_depth_cap_D0": 80,
+      "deep_lock_flag": 1
+    },
+    "state_fail": {
+      "radius": 8,
+      "patch_hash": "e25d40bdc2bc36b2fa1f906f91ca662a",
+      "patch_bytes": 37,
+      "observed_turn_bit": 0,
+      "eval_phase": 98,
+      "tail_prefix_cap_K": 80,
+      "lock_depth_cap_D0": 80,
+      "deep_lock_flag": 1
+    },
+    "pass_field_black_cells": 17,
+    "fail_field_black_cells": 18,
+    "t3_pass": {
+      "first_bad_offset": null,
+      "first_bad_rel": null,
+      "first_bad_linf": null,
+      "required_black": null,
+      "actual_black": null,
+      "bad_kind": "",
+      "h_512": 513,
+      "clear_512": 1,
+      "h_1600": 1601,
+      "clear_1600": 1
+    },
+    "t3_fail": {
+      "first_bad_offset": 138,
+      "first_bad_rel": [
+        3,
+        9
+      ],
+      "first_bad_linf": 9,
+      "required_black": 0,
+      "actual_black": 1,
+      "bad_kind": "frontier_black_collision",
+      "h_512": 138,
+      "clear_512": 0,
+      "h_1600": 138,
+      "clear_1600": 0
+    }
+  }
+}

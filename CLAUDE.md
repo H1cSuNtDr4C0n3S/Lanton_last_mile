@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§75**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§76**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -55,7 +55,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -137,6 +137,13 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   prefisso `offset<=103`, ha rango **4/19**. Lettura corretta: il deficit shallow e' reale ma
   troppo debole per forzare ingresso; i deficit profondi sono sample-limited o quasi-W0/circolari.
   §74 pota la via GF(2) shallow; prossimo passo = Link 1 non-simulativo o consolidamento.
+- `GA_stress_agent/` — stress-test §75 del piano GA/no-entry. `ga_gate_zero_audit.py` mostra
+  che il prototipo `A0(r,K,D0)` NON determina T3': due anchor replayabili della stessa orbita
+  collassano nello stesso stato astratto per `r<=8`, `K=80`, `D0=80`, fase 98, ma hanno
+  prefisso T3' diverso (`h_512=513` vs `494`; `h_1600=1014` vs `494`). A `r=9` il patch si
+  distingue. Lo stress-test sintattico separa anche due campi con stesso `A0(8,80,80)` e
+  discriminante T3' a offset 138, rel `(3,9)`. Lettura: non classificare SCC no-entry finche'
+  T3' non e' funzione dello stato, oppure gli stati `unknown` restano tali.
 - `code/window_automaton.py` — automa a finestra raggio r (lo strumento principale ora).
 - `code/product_automaton.py` (+ `product_build.c`/.exe) — automa-prodotto A(r;m,D): finestra ×
   memoria di celle uscite (alternanza dentro gli stati). Builder C, 3 politiche; `--selftest`
@@ -236,7 +243,13 @@ pass e sono miste pass/fail. La top class `(0,-5,-2,0)` fa 4224 pass / 486 fail.
 **AGGIORNAMENTO §74:** `alpha1/door_gf2_rank_gate.py` misura il rango GF(2): fase 0 all
 pre-onset `offset<=1600` ha rango 138/187 (nullita' 49), C0=0 0.9963, senza colonne banali;
 fase 0 depth `80+`, prefisso `<=103`, ha rango 4/19. Interpretazione aggiornata: dipendenze
-shallow reali ma troppo deboli per UNSAT, deficit profondi sample-limited o circolari. Prossimo
-fronte (§75): Link 1 non-simulativo oppure consolidamento; non `door_debt_graph.py` automatico.
+shallow reali ma troppo deboli per UNSAT, deficit profondi sample-limited o circolari. Questo
+impostava il fronte §75: Link 1 non-simulativo/consolidamento, non `door_debt_graph.py`
+automatico.
+**AGGIORNAMENTO §75:** stress-test GA/no-entry gate-zero: `A0(r,K,D0)` e' sound come
+sovra-approssimazione, ma cieco rispetto a T3'. Con `r<=8`, `K=80`, `D0=80`, fase 98, due
+storie replayabili della stessa orbita collassano nello stesso stato astratto e hanno prefisso
+T3' diverso (`h_512=513` vs `494`). Stop corretto: niente classificazione SCC su `A0`; prossimo
+fronte (§76) = definire `A1` con T3' deterministico/proof object, oppure propagare `unknown`.
 Roadmap completa:
 CHAT_HANDOVER §C.
