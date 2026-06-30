@@ -1,0 +1,781 @@
+{
+  "audit": "gate-one co-moving kernel for T3' determinacy (s78)",
+  "structural": {
+    "max_offset": 20000,
+    "gate_phases": 22,
+    "max_rho_over_gate_phases": 9,
+    "all_stabilized": 1,
+    "per_phase": [
+      {
+        "phase": 0,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 40,
+        "rho_comoving_linf": 8,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 40,
+            "rho": 8
+          },
+          {
+            "upto": 5200,
+            "size": 40,
+            "rho": 8
+          },
+          {
+            "upto": 10400,
+            "size": 40,
+            "rho": 8
+          },
+          {
+            "upto": 20000,
+            "size": 40,
+            "rho": 8
+          }
+        ]
+      },
+      {
+        "phase": 16,
+        "drift": [
+          2,
+          2
+        ],
+        "footprint_cells": 42,
+        "rho_comoving_linf": 8,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 42,
+            "rho": 8
+          },
+          {
+            "upto": 5200,
+            "size": 42,
+            "rho": 8
+          },
+          {
+            "upto": 10400,
+            "size": 42,
+            "rho": 8
+          },
+          {
+            "upto": 20000,
+            "size": 42,
+            "rho": 8
+          }
+        ]
+      },
+      {
+        "phase": 21,
+        "drift": [
+          2,
+          -2
+        ],
+        "footprint_cells": 41,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 41,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 41,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 41,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 41,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 24,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 40,
+        "rho_comoving_linf": 8,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 40,
+            "rho": 8
+          },
+          {
+            "upto": 5200,
+            "size": 40,
+            "rho": 8
+          },
+          {
+            "upto": 10400,
+            "size": 40,
+            "rho": 8
+          },
+          {
+            "upto": 20000,
+            "size": 40,
+            "rho": 8
+          }
+        ]
+      },
+      {
+        "phase": 25,
+        "drift": [
+          2,
+          -2
+        ],
+        "footprint_cells": 39,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 39,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 39,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 39,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 39,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 26,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 38,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 38,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 38,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 38,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 38,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 30,
+        "drift": [
+          2,
+          2
+        ],
+        "footprint_cells": 40,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 40,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 40,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 40,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 40,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 31,
+        "drift": [
+          2,
+          -2
+        ],
+        "footprint_cells": 39,
+        "rho_comoving_linf": 6,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 39,
+            "rho": 6
+          },
+          {
+            "upto": 5200,
+            "size": 39,
+            "rho": 6
+          },
+          {
+            "upto": 10400,
+            "size": 39,
+            "rho": 6
+          },
+          {
+            "upto": 20000,
+            "size": 39,
+            "rho": 6
+          }
+        ]
+      },
+      {
+        "phase": 72,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 50,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 50,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 50,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 50,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 50,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 83,
+        "drift": [
+          2,
+          -2
+        ],
+        "footprint_cells": 52,
+        "rho_comoving_linf": 6,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 52,
+            "rho": 6
+          },
+          {
+            "upto": 5200,
+            "size": 52,
+            "rho": 6
+          },
+          {
+            "upto": 10400,
+            "size": 52,
+            "rho": 6
+          },
+          {
+            "upto": 20000,
+            "size": 52,
+            "rho": 6
+          }
+        ]
+      },
+      {
+        "phase": 90,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 52,
+        "rho_comoving_linf": 6,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 52,
+            "rho": 6
+          },
+          {
+            "upto": 5200,
+            "size": 52,
+            "rho": 6
+          },
+          {
+            "upto": 10400,
+            "size": 52,
+            "rho": 6
+          },
+          {
+            "upto": 20000,
+            "size": 52,
+            "rho": 6
+          }
+        ]
+      },
+      {
+        "phase": 91,
+        "drift": [
+          -2,
+          2
+        ],
+        "footprint_cells": 51,
+        "rho_comoving_linf": 5,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 51,
+            "rho": 5
+          },
+          {
+            "upto": 5200,
+            "size": 51,
+            "rho": 5
+          },
+          {
+            "upto": 10400,
+            "size": 51,
+            "rho": 5
+          },
+          {
+            "upto": 20000,
+            "size": 51,
+            "rho": 5
+          }
+        ]
+      },
+      {
+        "phase": 92,
+        "drift": [
+          2,
+          2
+        ],
+        "footprint_cells": 50,
+        "rho_comoving_linf": 6,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 50,
+            "rho": 6
+          },
+          {
+            "upto": 5200,
+            "size": 50,
+            "rho": 6
+          },
+          {
+            "upto": 10400,
+            "size": 50,
+            "rho": 6
+          },
+          {
+            "upto": 20000,
+            "size": 50,
+            "rho": 6
+          }
+        ]
+      },
+      {
+        "phase": 93,
+        "drift": [
+          -2,
+          2
+        ],
+        "footprint_cells": 49,
+        "rho_comoving_linf": 6,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 49,
+            "rho": 6
+          },
+          {
+            "upto": 5200,
+            "size": 49,
+            "rho": 6
+          },
+          {
+            "upto": 10400,
+            "size": 49,
+            "rho": 6
+          },
+          {
+            "upto": 20000,
+            "size": 49,
+            "rho": 6
+          }
+        ]
+      },
+      {
+        "phase": 94,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 48,
+        "rho_comoving_linf": 5,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 48,
+            "rho": 5
+          },
+          {
+            "upto": 5200,
+            "size": 48,
+            "rho": 5
+          },
+          {
+            "upto": 10400,
+            "size": 48,
+            "rho": 5
+          },
+          {
+            "upto": 20000,
+            "size": 48,
+            "rho": 5
+          }
+        ]
+      },
+      {
+        "phase": 97,
+        "drift": [
+          -2,
+          2
+        ],
+        "footprint_cells": 45,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 45,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 45,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 45,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 45,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 98,
+        "drift": [
+          2,
+          2
+        ],
+        "footprint_cells": 44,
+        "rho_comoving_linf": 7,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 44,
+            "rho": 7
+          },
+          {
+            "upto": 5200,
+            "size": 44,
+            "rho": 7
+          },
+          {
+            "upto": 10400,
+            "size": 44,
+            "rho": 7
+          },
+          {
+            "upto": 20000,
+            "size": 44,
+            "rho": 7
+          }
+        ]
+      },
+      {
+        "phase": 99,
+        "drift": [
+          -2,
+          2
+        ],
+        "footprint_cells": 44,
+        "rho_comoving_linf": 8,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 44,
+            "rho": 8
+          },
+          {
+            "upto": 5200,
+            "size": 44,
+            "rho": 8
+          },
+          {
+            "upto": 10400,
+            "size": 44,
+            "rho": 8
+          },
+          {
+            "upto": 20000,
+            "size": 44,
+            "rho": 8
+          }
+        ]
+      },
+      {
+        "phase": 100,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 44,
+        "rho_comoving_linf": 8,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 44,
+            "rho": 8
+          },
+          {
+            "upto": 5200,
+            "size": 44,
+            "rho": 8
+          },
+          {
+            "upto": 10400,
+            "size": 44,
+            "rho": 8
+          },
+          {
+            "upto": 20000,
+            "size": 44,
+            "rho": 8
+          }
+        ]
+      },
+      {
+        "phase": 101,
+        "drift": [
+          -2,
+          2
+        ],
+        "footprint_cells": 43,
+        "rho_comoving_linf": 9,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 43,
+            "rho": 9
+          },
+          {
+            "upto": 5200,
+            "size": 43,
+            "rho": 9
+          },
+          {
+            "upto": 10400,
+            "size": 43,
+            "rho": 9
+          },
+          {
+            "upto": 20000,
+            "size": 43,
+            "rho": 9
+          }
+        ]
+      },
+      {
+        "phase": 102,
+        "drift": [
+          -2,
+          -2
+        ],
+        "footprint_cells": 42,
+        "rho_comoving_linf": 9,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 42,
+            "rho": 9
+          },
+          {
+            "upto": 5200,
+            "size": 42,
+            "rho": 9
+          },
+          {
+            "upto": 10400,
+            "size": 42,
+            "rho": 9
+          },
+          {
+            "upto": 20000,
+            "size": 42,
+            "rho": 9
+          }
+        ]
+      },
+      {
+        "phase": 103,
+        "drift": [
+          2,
+          -2
+        ],
+        "footprint_cells": 41,
+        "rho_comoving_linf": 8,
+        "stabilized": 1,
+        "horizon_sizes": [
+          {
+            "upto": 1040,
+            "size": 41,
+            "rho": 8
+          },
+          {
+            "upto": 5200,
+            "size": 41,
+            "rho": 8
+          },
+          {
+            "upto": 10400,
+            "size": 41,
+            "rho": 8
+          },
+          {
+            "upto": 20000,
+            "size": 41,
+            "rho": 8
+          }
+        ]
+      }
+    ]
+  },
+  "sufficiency_on_gate_zero_witness": {
+    "orbit_index": 5,
+    "rngstate": 16489936061346709332,
+    "phase": 98,
+    "footprint_cells": 44,
+    "rho_comoving_linf": 7,
+    "periods_scanned": 12,
+    "anchor_A": {
+      "label": "A",
+      "time": 60320,
+      "origin": [
+        58,
+        -26
+      ],
+      "heading": 2,
+      "first_bad_offset": 1014,
+      "first_bad_rel": [
+        25,
+        23
+      ],
+      "first_bad_comoving": [
+        7,
+        5
+      ],
+      "bad_kind": "frontier_black_collision"
+    },
+    "anchor_B": {
+      "label": "B",
+      "time": 60840,
+      "origin": [
+        48,
+        -36
+      ],
+      "heading": 2,
+      "first_bad_offset": 494,
+      "first_bad_rel": [
+        15,
+        13
+      ],
+      "first_bad_comoving": [
+        7,
+        5
+      ],
+      "bad_kind": "frontier_black_collision"
+    },
+    "anchors_first_bad_same_comoving_cell": 1,
+    "comoving_footprint_separates_anchors": 1,
+    "num_separating_cells": 12,
+    "decisive_comoving_cell_detail": {
+      "cell": [
+        7,
+        5
+      ],
+      "required_black": 0,
+      "A_black_periods": [
+        9,
+        12
+      ],
+      "B_black_periods": [
+        4,
+        7
+      ]
+    },
+    "reproduces_gate_zero": 1
+  },
+  "residual_note": "Footprint is spatially bounded (fixed finite set, rho<=9 structural) but each co-moving cell is a per-period drift stripe. T3' on a reachable field terminates when debris runs out; the period P at which it terminates is the decisive depth. Bounding P uniformly over reachable histories is the residual crux (Link 1). Fallback: mark states beyond a certified P as `unknown` and certify SCCs invariant to them."
+}

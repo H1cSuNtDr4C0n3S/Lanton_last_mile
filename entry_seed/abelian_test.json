@@ -1,0 +1,48 @@
+{
+ "stall": {
+  "t0": 4680,
+  "len": 303,
+  "entry_cell": [
+   20,
+   6
+  ],
+  "real_heading": 0,
+  "patch_visited": 705
+ },
+ "escape_by_heading": {
+  "0": {
+   "steps": 303,
+   "exit": [
+    2,
+    9
+   ]
+  },
+  "1": {
+   "steps": 1109,
+   "exit": [
+    20,
+    -7
+   ]
+  },
+  "2": {
+   "steps": 1,
+   "exit": [
+    21,
+    6
+   ]
+  },
+  "3": {
+   "steps": 1135,
+   "exit": [
+    17,
+    12
+   ]
+  }
+ },
+ "abelian": false,
+ "heading_spread": "303/1109/1/1135 -> config rotori NON determina dinamica (~3 ordini)",
+ "L_vs_area_exponent": 0.785,
+ "L_vs_area_R2": 0.955,
+ "rotor_router_bound_exponent": 1.5,
+ "verdict": "non-abeliano netto; geometria favorevole (esponente<<1.5) ma manca teorema non-abeliano"
+}

@@ -1,0 +1,377 @@
+{
+  "audit": "decisive co-moving depth P sweep (s78.7)",
+  "horizon": 10400,
+  "horizon_periods": 100,
+  "n_orbits": 24,
+  "n_gate_attempts": 786,
+  "n_failing_attempts": 786,
+  "P_distribution": {
+    "min": 0,
+    "median": 0,
+    "p95": 0,
+    "max": 15
+  },
+  "censoring_check": {
+    "old_ceiling_period": 15,
+    "n_fail_beyond_period_15": 0,
+    "frac_beyond_15": 0.0,
+    "n_fail_near_new_horizon": 0,
+    "note": "n_fail_beyond_period_15 > 0 means the \u00a772/\u00a766 horizon-1600 cap WAS censoring P."
+  },
+  "within_orbit_kill_shot": {
+    "n_orbits_assessed": 24,
+    "n_orbits_tail_sets_new_max": 2,
+    "frac_tail_sets_new_max": 0.0833,
+    "note": "fraction of orbits where the last 30% of attempts pushes a new running-max P (still rising = bad for a uniform cap)."
+  },
+  "cross_orbit": {
+    "onset_range": [
+      251853,
+      313358
+    ],
+    "max_P_per_orbit_range": [
+      0,
+      15
+    ],
+    "corr_maxP_vs_onset": 0.057,
+    "caveat": "orbits selected for high onset (narrow T band) -> survivorship; treat cross-orbit as weak."
+  },
+  "per_orbit": [
+    {
+      "idx": 0,
+      "onset": 313358,
+      "n_gate_attempts": 34,
+      "n_fail": 34,
+      "max_P": 1,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 34,
+        "head_max_P": 1,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 1,
+      "onset": 307906,
+      "n_gate_attempts": 28,
+      "n_fail": 28,
+      "max_P": 2,
+      "p95_P": 1,
+      "kick": {
+        "n_fail": 28,
+        "head_max_P": 1,
+        "tail_max_P": 2,
+        "tail_sets_new_max": 1
+      }
+    },
+    {
+      "idx": 2,
+      "onset": 302092,
+      "n_gate_attempts": 29,
+      "n_fail": 29,
+      "max_P": 1,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 29,
+        "head_max_P": 1,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 3,
+      "onset": 291397,
+      "n_gate_attempts": 40,
+      "n_fail": 40,
+      "max_P": 2,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 40,
+        "head_max_P": 2,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 4,
+      "onset": 286748,
+      "n_gate_attempts": 35,
+      "n_fail": 35,
+      "max_P": 6,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 35,
+        "head_max_P": 6,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 5,
+      "onset": 285796,
+      "n_gate_attempts": 47,
+      "n_fail": 47,
+      "max_P": 14,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 47,
+        "head_max_P": 14,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 6,
+      "onset": 276143,
+      "n_gate_attempts": 36,
+      "n_fail": 36,
+      "max_P": 3,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 36,
+        "head_max_P": 3,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 7,
+      "onset": 272174,
+      "n_gate_attempts": 33,
+      "n_fail": 33,
+      "max_P": 1,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 33,
+        "head_max_P": 1,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 8,
+      "onset": 271114,
+      "n_gate_attempts": 28,
+      "n_fail": 28,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 28,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 9,
+      "onset": 270625,
+      "n_gate_attempts": 32,
+      "n_fail": 32,
+      "max_P": 4,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 32,
+        "head_max_P": 4,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 10,
+      "onset": 270401,
+      "n_gate_attempts": 50,
+      "n_fail": 50,
+      "max_P": 7,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 50,
+        "head_max_P": 4,
+        "tail_max_P": 7,
+        "tail_sets_new_max": 1
+      }
+    },
+    {
+      "idx": 11,
+      "onset": 268891,
+      "n_gate_attempts": 24,
+      "n_fail": 24,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 24,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 12,
+      "onset": 267843,
+      "n_gate_attempts": 27,
+      "n_fail": 27,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 27,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 13,
+      "onset": 267828,
+      "n_gate_attempts": 31,
+      "n_fail": 31,
+      "max_P": 2,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 31,
+        "head_max_P": 2,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 14,
+      "onset": 266260,
+      "n_gate_attempts": 31,
+      "n_fail": 31,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 31,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 15,
+      "onset": 265407,
+      "n_gate_attempts": 32,
+      "n_fail": 32,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 32,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 16,
+      "onset": 265277,
+      "n_gate_attempts": 27,
+      "n_fail": 27,
+      "max_P": 2,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 27,
+        "head_max_P": 2,
+        "tail_max_P": 1,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 17,
+      "onset": 260282,
+      "n_gate_attempts": 27,
+      "n_fail": 27,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 27,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 18,
+      "onset": 257885,
+      "n_gate_attempts": 32,
+      "n_fail": 32,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 32,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 19,
+      "onset": 255436,
+      "n_gate_attempts": 27,
+      "n_fail": 27,
+      "max_P": 4,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 27,
+        "head_max_P": 4,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 20,
+      "onset": 255171,
+      "n_gate_attempts": 38,
+      "n_fail": 38,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 38,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 21,
+      "onset": 255129,
+      "n_gate_attempts": 39,
+      "n_fail": 39,
+      "max_P": 15,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 39,
+        "head_max_P": 15,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 22,
+      "onset": 252072,
+      "n_gate_attempts": 29,
+      "n_fail": 29,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 29,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    },
+    {
+      "idx": 23,
+      "onset": 251853,
+      "n_gate_attempts": 30,
+      "n_fail": 30,
+      "max_P": 0,
+      "p95_P": 0,
+      "kick": {
+        "n_fail": 30,
+        "head_max_P": 0,
+        "tail_max_P": 0,
+        "tail_sets_new_max": 0
+      }
+    }
+  ]
+}

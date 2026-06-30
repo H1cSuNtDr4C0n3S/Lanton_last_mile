@@ -1,0 +1,201 @@
+{
+  "audit": "A1 budget certificate (s78.10)",
+  "horizon": 10400,
+  "n_failing_attempts": 786,
+  "validity": {
+    "comoving_first_bad_in_footprint": 786,
+    "all_in_footprint": 1,
+    "state_derived_equals_truth_mismatches": [],
+    "construction_sound": 1,
+    "note": "every first-bad cell is co-moving-inside the fixed footprint, and the budget-P state re-derives exactly the ground-truth verdict -> A1 stores the deciding read."
+  },
+  "coverage_curve": [
+    {
+      "budget_P": 0,
+      "determined": 768,
+      "unknown": 18,
+      "frac_determined": 0.9771
+    },
+    {
+      "budget_P": 1,
+      "determined": 774,
+      "unknown": 12,
+      "frac_determined": 0.9847
+    },
+    {
+      "budget_P": 2,
+      "determined": 778,
+      "unknown": 8,
+      "frac_determined": 0.9898
+    },
+    {
+      "budget_P": 3,
+      "determined": 779,
+      "unknown": 7,
+      "frac_determined": 0.9911
+    },
+    {
+      "budget_P": 4,
+      "determined": 782,
+      "unknown": 4,
+      "frac_determined": 0.9949
+    },
+    {
+      "budget_P": 5,
+      "determined": 782,
+      "unknown": 4,
+      "frac_determined": 0.9949
+    },
+    {
+      "budget_P": 6,
+      "determined": 783,
+      "unknown": 3,
+      "frac_determined": 0.9962
+    },
+    {
+      "budget_P": 7,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 8,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 9,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 10,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 11,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 12,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 13,
+      "determined": 784,
+      "unknown": 2,
+      "frac_determined": 0.9975
+    },
+    {
+      "budget_P": 14,
+      "determined": 785,
+      "unknown": 1,
+      "frac_determined": 0.9987
+    },
+    {
+      "budget_P": 15,
+      "determined": 786,
+      "unknown": 0,
+      "frac_determined": 1.0
+    },
+    {
+      "budget_P": 16,
+      "determined": 786,
+      "unknown": 0,
+      "frac_determined": 1.0
+    },
+    {
+      "budget_P": 17,
+      "determined": 786,
+      "unknown": 0,
+      "frac_determined": 1.0
+    },
+    {
+      "budget_P": 18,
+      "determined": 786,
+      "unknown": 0,
+      "frac_determined": 1.0
+    },
+    {
+      "budget_P": 19,
+      "determined": 786,
+      "unknown": 0,
+      "frac_determined": 1.0
+    },
+    {
+      "budget_P": 20,
+      "determined": 786,
+      "unknown": 0,
+      "frac_determined": 1.0
+    }
+  ],
+  "min_budget_unknown_free": 15,
+  "decisive_period_histogram": {
+    "0": 768,
+    "1": 6,
+    "2": 4,
+    "3": 1,
+    "4": 3,
+    "6": 1,
+    "7": 1,
+    "14": 1,
+    "15": 1
+  },
+  "position_only_insufficient": {
+    "n_position_classes": 131,
+    "n_ambiguous_classes_multi_period": 9,
+    "note": "position-only co-moving classes that span >1 decisive period are NOT resolved by position alone (cf. \u00a773 pass-rate 0.904); the A1 stripe CONTENTS resolve them by construction (different period => different stored read => different state).",
+    "examples": {
+      "phase0_cm-8,-1": [
+        0,
+        2,
+        7
+      ],
+      "phase0_cm-6,-4": [
+        0,
+        1
+      ],
+      "phase100_cm-7,-4": [
+        0,
+        1,
+        2
+      ],
+      "phase0_cm-7,-2": [
+        0,
+        1,
+        3,
+        6
+      ],
+      "phase0_cm-5,-3": [
+        0,
+        1
+      ],
+      "phase99_cm-6,6": [
+        1,
+        2
+      ],
+      "phase103_cm2,-8": [
+        0,
+        4
+      ],
+      "phase99_cm-4,8": [
+        0,
+        4
+      ]
+    }
+  },
+  "state_space_bound": {
+    "max_footprint_cells_over_gate_phases": 52,
+    "bound_per_phase_bit_at_budget_P": "2^(|S_g|*(P+1)) (gross over-count; reachable states far fewer)",
+    "example_P15_maxS": "2^(52*16) over-count; the REACHABLE A1 states are exactly the 786 sampled fails plus their orbit context."
+  },
+  "verdict": "Gate-zero precondition discharged: on A1 the no-entry verdict is a function of a FINITE co-moving state, unknown-free at budget P>=15 over all reachable failing attempts. Remaining for the eternal certification: the beyond-budget `unknown` set (empty on the sample, unprovable-empty eternally = Link 1). The product-automaton SCC classification at radius 9 is the next separate construction."
+}

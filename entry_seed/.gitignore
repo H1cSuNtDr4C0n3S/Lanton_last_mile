@@ -1,0 +1,6 @@
+# build artifacts (rebuild locale)
+brute
+*.so
+*.exe
+*.o
+__pycache__/

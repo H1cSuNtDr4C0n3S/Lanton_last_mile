@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§76**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§81**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -37,6 +37,22 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   (i) **controfattuale eterno** (ALPHA1 §57.6): ogni orbita simulata converge ⇒ NESSUNA soglia
       misurata sul finito prova un enunciato su orbite eterne (α1, pavimenti del tasso, ...).
       La simulazione può falsificare un meccanismo locale, non decidere α1.
+  (j) **bordo-scarta nell'onset detection** (ENTRY-SEED §76.6): bocciare la rilevazione dell'onset
+      quando la formica tocca il bordo della griglia scarta un ingresso GIA' avvenuto — la highway
+      drifta all'infinito e spinge la formica fuori dal box ~22k passi dopo l'aggancio. Sintomo
+      letale: 0% di ingressi per semi piccoli (falso). Antidoto: rilevare l'onset sui turni
+      raccolti fino al bordo; il bordo limita la coda, non invalida l'aggancio.
+  (k–m) vedi CHAT_HANDOVER §77/§78 (srotolare-germe, late-entry, spaziale-limitato != stato).
+  (n) **deficit di consumo = pavimento-del-morso travestito** (CONSUMPTION-LEDGER §79): ogni
+      lemma "consumo deep-black > rigenerazione da supporto finito" e' FALSO — le creazioni di
+      nero (letture bianche, alimentate dalla frontiera B-T) sono >= distruzioni; il pool di nero
+      CRESCE. Non riaprire bilancio/squilibrio di tasso del consumo (= pavimento-del-morso §57).
+      La leva, se esiste, e' la coda lunga dei ritorni lontani (age >> periodo), non il bilancio.
+  (o) **nessun classificatore finito-stato a raggio fisso sugli eventi deep-black** (DEEP-MOTIF
+      §80): l'alfabeto dei motivi locali co-moving al detrito NON satura (r=3 ~99,4% unici;
+      scoperta ultimo/primo 1,14; unione/somma tra orbite 0,979; intersezione 19/1,5M). Non
+      riaprire checklist/footprint-finito/classe-co-moving SUL LATO-ALPHA: finito-stato funziona
+      solo sul lato-beta (porta, §78). Il lato-alpha e' irriducibilmente dinamico.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -55,7 +71,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -158,6 +174,20 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   `gcc -O3 -shared -fPIC -o libant.so libant.c`).
 - `data/` — parole di test, pkl certificati; `results/` — summary e cicli raggio 1–3 già
   calcolati (valori di riferimento per i cross-check).
+- `entry_seed/` — **mappatura della bocca (§76): mappa inversa + germi minimi + frontiere Q1/Q2.**
+  `reverse.py` (mappa diretta/inversa sparsa, self-test round-trip 12000 passi -> griglia vuota),
+  `clib.py` (loader autosufficiente di `code/libant.c`), `germ.py` (germe minimo per fase via
+  troncamento raggio + greedy; out `germs_22.json`, min globale 13 celle fasi 0/103, onset 0),
+  `brute.c` (ricerca forward semi minimi, reset-touched, fix bordo-scarta §76.6-j),
+  `make_summary.py` (+ `seed_frontier.json`: Q1 b=1->onset 310 ... b=5->62, b=13->0; Q2 b=2->dist 0),
+  `figura.py` (+ `frontiera_semi.png`).
+  **§77 (rotor-stall):** `stall_geometry.py` (+ `stall_geometry.json`, `stall_footprint.png`) —
+  geometria degli stalli del morso su `(7,-7)`: area-filling, molteplicita' ~1.57, bbox~len^0.767;
+  la formica e' un rotor-router walk (cella = rotore a 2 stati), ma NON abeliano (uscita dipende
+  dall'heading). `abelian_test.py` (escape 303/1109/1/1135 per heading) + `escape_scaling.py`
+  (prova di viabilita': esponente di fuga deriva oltre 1.5, bite-stall limitato ~303 = quantita'
+  diversa da #30 ⇒ strada non-abeliana NON priorita'). Livello morso, non α1. Dettaglio:
+  `docs/ROTOR_STALL_ADDENDUM.md`.
 
 ## 4. Parallelizzazione (Ryzen 7 5800X, 8C/16T) — default se claude.md esterno non dice altro
 - CPU-bound puro (C, sweep gamma_enum / alpha1 search): 14 processi shard con `start /low` o
@@ -179,6 +209,8 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
    frame canonico≡assoluto; 252/252 fantasmi bloccati; non richiede `build/r*_delta_cycle.txt`).
 3. `alpha1\alpha1_engine.exe`: vuota→onset 9977; (7,−7)→106258; highway densità morso 22/104.
 4. Cross-check r=3/r=4 coi `results/radius*_summary.json` prima di ogni nuova analisi a finestra.
+5. (se si tocca la bocca/§76) `python entry_seed/reverse.py`: forward Python == motore C 12000 passi,
+   round-trip esatto -> griglia vuota + (0,0,0). Verifica reversibilita' e convenzioni della dinamica.
 
 ## 6. Obiettivo strategico (perché questo task)
 Teorema della Finestra (MORSO §40–40.1): ogni orbita eterna legge infinitamente spesso celle
@@ -251,5 +283,23 @@ sovra-approssimazione, ma cieco rispetto a T3'. Con `r<=8`, `K=80`, `D0=80`, fas
 storie replayabili della stessa orbita collassano nello stesso stato astratto e hanno prefisso
 T3' diverso (`h_512=513` vs `494`). Stop corretto: niente classificazione SCC su `A0`; prossimo
 fronte (§76) = definire `A1` con T3' deterministico/proof object, oppure propagare `unknown`.
+**AGGIORNAMENTO §78:** kernel co-moving della porta `A1`: il verdetto no-entry e' funzione di uno
+stato finito co-moving (footprint 44 celle, raggio strutturale rho<=9) + budget temporale `P=15`;
+unknown-free a `P>=15` su 2014 attempt, oltre = `unknown` (vuoto sul campione, NON
+dimostrabile-vuoto = Link 1). `delta_r` (morsi) e `A1` (porta) sono due certificati beta
+COMPLEMENTARI, non un singolo automa-finestra a raggio 9.
+**AGGIORNAMENTO §79:** ledger di consumo (SCOUT; simulatore indipendente validato su onset 9977 +
+W0 + alternanza 0/106000). Sul transiente (7,-7) la forma ingenua del lemma di consumo e' FALSA:
+creazioni di nero (~0.556/passo) > distruzioni (~0.443/passo), pool che cresce, inflow di frontiera
+(B-T) ~4:1 sul consumo deep, rigenerazione dominantemente locale (eta' mediana 8). Stessa morte del
+pavimento-del-morso (§57). L'ostruzione vive nella coda lunga (age>1040, max 4068) = §77 rotore
+non-abeliano. Deficit-di-consumo chiuso (trappola n); oggetto vero = grafo causale di rigenerazione
+ristretto alla coda lunga. Dettaglio: docs/CONSUMPTION_LEDGER_ADDENDUM.md.
+**AGGIORNAMENTO §80:** positive gate (§79.6) eseguito sul Ryzen (24 orbite reali, 16 core, 22s): MORTO.
+L'alfabeto dei motivi locali co-moving agli eventi deep-black non satura (r=3 ~99,4% eventi unici;
+scoperta nuovi-motivi ultimo20%/primo20%=1,14; pooled unione/somma=0,979; intersezione 19/1,5M). Il
+lato-alpha (detrito) NON e' finito-stato — opposto al lato-beta/porta (§78, footprint 44 / P<=15). Tre
+falsificazioni in fila (deep->W0 §59, deficit §79, alfabeto finito §80): il crux di Link1 e'
+irriducibilmente dinamico (coerente §28.2). Trappola (o). Dettaglio: docs/DEEP_MOTIF_SATURATION_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

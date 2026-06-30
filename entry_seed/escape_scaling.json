@@ -1,0 +1,51 @@
+{
+ "bound_abelian_exponent": 1.5,
+ "cross_orbit": {
+  "(7, -7)": {
+   "onset": 106258,
+   "n": 2951,
+   "gamma_global": 0.785,
+   "stall_max": 303
+  },
+  "(0, -14)": {
+   "onset": 21598,
+   "n": 509,
+   "gamma_global": 0.952,
+   "stall_max": 303
+  },
+  "(10, -10)": {
+   "onset": 8661,
+   "n": 146,
+   "gamma_global": 1.121,
+   "stall_max": 303
+  },
+  "(11, 8)": {
+   "onset": 8808,
+   "n": 150,
+   "gamma_global": 1.122,
+   "stall_max": 303
+  }
+ },
+ "curvature": {
+  "quad_coeff": 0.209,
+  "local_exponent": {
+   "15": 0.81,
+   "30": 1.1,
+   "60": 1.39,
+   "120": 1.68
+  },
+  "interpretation": "quad_coeff>0 => esponente CRESCE con la scala, attraversa 1.5 ~area 100"
+ },
+ "sparsity": {
+  "[10,20)": 74,
+  "[20,40)": 952,
+  "[40,80)": 12,
+  "[80,160)": 10,
+  "[160,1000000000)": 0
+ },
+ "empty_grid_equiv": {
+  "onset": 9977,
+  "stall_max": 303
+ },
+ "verdict": "esponente non scala-stabile (deriva su, attraversa 1.5); coda grande troppo rara a T~1e5 => premessa non de-riscabile a buon mercato; bite-stall limitato ~303 (quantita' diversa da #30). Tira CONTRO la strada non-abeliana come bet immediato."
+}

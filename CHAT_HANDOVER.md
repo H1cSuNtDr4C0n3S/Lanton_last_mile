@@ -1,6 +1,119 @@
-# CHAT_HANDOVER — Stato del programma Langton al 2026-06-26
-**Da: sessione §75 (GA/no-entry gate-zero FAIL) → A: prossima sessione (§76) in C:\Lanton_last_mile.**
-**Leggere insieme a CLAUDE.md. Dettagli completi: docs/GA_GATE_ZERO_ADDENDUM.md §75;
+# === AGGIORNAMENTO §80 (2026-06-29) — leggere PRIMA ===
+
+Stato: §80 (DEEP-MOTIF-SATURATION) **ESEGUITO sul Ryzen** (24 orbite reali, 16 core, 22s). Addendum:
+`docs/DEEP_MOTIF_SATURATION_ADDENDUM.md`. Strumento: `alpha1/deep_motif_saturation.py` (su disco),
+output `alpha1/deep_motif_saturation_summary.json`. Dinamica + def deep-black riusate da `delta4_long_orbits.py`.
+
+Domanda (positive gate §79.6): l'alfabeto dei motivi locali co-moving agli eventi deep-black satura
+(finito) o cresce col territorio? Risposta: **cresce — nessun manico finito-stato.**
+- ~99,4% degli eventi deep-black e' localmente unico (r=3: 73.959 motivi / 74.416 eventi, orbita 0);
+  r=4/r=5 ancora piu' vicino a 1.
+- scoperta nuovi-motivi ultimo20%/primo20% = 1,14 (mediana orbite): NON satura.
+- pooled r=3: unione/somma = 0,979, intersezione 19 su 1,5M ⇒ alfabeti tra orbite quasi DISGIUNTI.
+
+Lettura: il **lato-beta** (porta/lock) e' finito-stato (§78: footprint 44, raggio<=9, P<=15, 786/786);
+il **lato-alpha** (detrito) NON lo e'. Tre falsificazioni in fila — deep->W0 (§59), deficit di consumo
+(§79), alfabeto finito (§80) — il detrito resiste a ogni manico finito-stato. Coerente §28.2: la prova
+deve attraversare la dinamica, niente scorciatoia statica.
+
+**Trappola (o)**: nessun classificatore finito-stato a raggio fisso sugli eventi deep-black. Niente
+checklist/footprint-finito sul lato-alpha (solo lato-beta).
+
+**Caveat**: il motivo include detrito morto (alta entropia) ⇒ unicita' per-evento in parte attesa; il
+pezzo robusto e' la disgiunzione tra orbite (non spiegata dall'entropia, e §78 satura pur includendo
+detrito). Follow-up: motivo potato alla parte causalmente attiva (atteso negativo).
+
+**Prossimi passi:** (1) motivo potato solo per chiudere il caveat; (2) preso atto che il lato-alpha non
+e' finito-stato, la macchina-beta (§78) non si estende al detrito: Link1 richiede un argomento dinamico
+genuino. Il crux resta intatto; §80 ne fissa la natura.
+
+--- (handover §79 sotto) ---
+
+# === AGGIORNAMENTO §79 (2026-06-29) — leggere PRIMA ===
+
+Stato: §79 (CONSUMPTION-LEDGER) **SCOUT eseguito**. Addendum: `docs/CONSUMPTION_LEDGER_ADDENDUM.md`.
+Strumento: `alpha1/consumption_ledger_probe.py` (simulatore **indipendente**, NON `alpha1_engine.c`;
+validato sulla dinamica: onset vuota = **9977** esatto, W0 periodo 104 / 58 R / drift (-2,-2),
+**0 violazioni di alternanza / 106000** su (7,-7)). "deep" = **proxy d'eta'** (age>104, age>1040),
+NON `delta_r` outside-window. SCOUT, non certificato: ri-eseguire con `alpha1_engine.c` + `delta_r` vera.
+
+Catena di ragionamento (post-§78): il Teorema della Finestra e' un fatto del **lato-alpha** (consumo del
+detrito), NON del lato-beta (lock); usarlo per "deep-black -> W0" e' il **ponte sbagliato** (§59 anti-correla
+deep-black e lock). Il reframe corretto e' alpha1/consumo. §79 lo mette sotto stress e ne uccide la sotto-forma.
+
+Risultati netti (transiente (7,-7), 106000 passi):
+- **Riciclo interno reale**: 61.7% dei black-read e' recycle-fed (vc>=3), 38.3% morso-fed (vc=1).
+- **Nessun deficit**: creazioni di nero (letture bianche) 58984 > distruzioni (letture nere) 47016 =>
+  pool di nero **cresce** (+11968); inflow di frontiera (morsi, B-T) 21981 vs consumo deep104 5614 =>
+  **~4:1**. La forma "consumo > rigenerazione da supporto finito" e' FALSA: stessa morte del
+  pavimento-del-morso (§57) — supporto non finito (B-T) + rigenerazione interna.
+- **Rigenerazione dominantemente locale**: eta' write-black->read-black mediana **8**, p90 108 (1 periodo),
+  p99 476, max **4068**. Deep (age>1040) solo **261** eventi (0.6%), 69% recycle-fed = coda sottile.
+- **Ostruzione = coda lunga** (age >> periodo), coincide con lo stallo rotore non-abeliano di §77
+  (cross-check: §77 eta'-detrito max 3756 su stessa orbita; qui 4068).
+
+**Trappola nuova (n)**: deficit di consumo = pavimento-del-morso travestito. Non riaprire bilancio/
+squilibrio di tasso del consumo (le creazioni B-T-alimentate >= distruzioni). La leva e' la coda lunga.
+
+**Prossimi passi:**
+1. **Gate negativo (kill-gate)**: deep-black-anchored decisive-depth sweep (stile §78.7). §59 e' pre-run
+   negativo => aspettativa: `P` esplode/non stabilizza => chiudere deep->W0. Solo come gate.
+2. **Gate positivo (oggetto vero)**: grafo causale read-black->write-black->read-black **ristretto ai
+   ~261 eventi age>1040** (NON l'orbita intera): cercare un alfabeto finito di motivi di rigenerazione a
+   lungo raggio. Strutturale (sopravvive §68), vicino a `delta_r`. Candidato non-scalare.
+3. Ri-eseguire 79.2 con `alpha1_engine.c` + `delta_r` outside-window vera, ensemble 24 orbite (within-orbit).
+
+Link 1 resta il crux; §79 NON lo muove — riformula alpha1 come "l'economia auto-sostenuta dei deep-black
+non puo' durare in eterno", uccide la sotto-forma a deficit, e isola il bersaglio sulla **coda lunga**.
+
+--- (handover §78 sotto) ---
+
+# === AGGIORNAMENTO §78 (2026-06-27) — leggere PRIMA ===
+
+Stato: §78 (gate-one, kernel co-moving della porta `A1`) **ESEGUITO end-to-end**. Documento completo:
+`docs/GATE_ONE_COMOVING_ADDENDUM.md` §78.1–78.12. Script (tutto Python, replay validato; motore
+`alpha1/alpha1_engine.c` ricompilabile, validato vuoto→9977, (7,-7)→106258) in `GA_stress_agent/`:
+`gate_one_comoving_audit.py`, `decisive_depth_sweep.py`, `a1_budget_certificate.py`,
+`new_seed_depth_sweep.py` (+ summary JSON + `new_high_onset_seeds.csv`, 312 semi).
+
+Risultati netti:
+- **Strutturale (§78.3)**: impronta co-moving delle letture esogene di `E(k)` = insieme **finito fisso**
+  (44 celle fase 98), `max ρ=9` sulle 22 fasi = il `≤9` empirico §72 ⇒ raggio co-moving **strutturale**.
+  Spiega §75: A0 falliva perché in frame-ancora l'impronta deriva col tubo W0.
+- **Sufficienza (§78.4)**: i 2 anchor §75 che rompevano A0 cadono sulla stessa dogana co-moving (7,5);
+  l'impronta li **separa** (12/44) ⇒ `A1` deterministico dove A0 era cieco.
+- **Profondità P (§78.9)** = `first_bad//104`: concentrata a 0 (97.7%), **max 15**, nessuna censura,
+  **nessuna crescita con T**, nessuna salita within-orbit (2/24).
+- **Certificato budget (§78.10)**: verdetto no-entry **ri-derivabile dallo stato finito co-moving SOLO**
+  (786/786), **unknown-free a P=15**; posizione-sola insufficiente (9/131 classi multi-periodo).
+  **Gate-zero scaricato.**
+- **Stress coda (§78.11)**: 70 semi nuovi onset 105k–180k, 1228 attempt indip., **P max 14, 0 oltre 15**;
+  combinato **2014 attempt mai >15**, nessun trend con T.
+
+`A1` = finestra co-moving `ρ≤9` (strutturale) + budget `P=15` + `unknown` oltre (vuoto sul campione).
+Residuo invalicabile = **controfattuale eterno** (dati sub-onset) + coda non-0 ⇒ bound uniforme non
+dimostrato ma molto solido.
+
+**Correzione di framing (§78.12, IMPORTANTE)**: §78 (porta/`A1`) e δ_r (morsi) sono **due certificati β
+complementari**, NON un automa-finestra a raggio 9 (infattibile, 3^361, oggetto sbagliato). Stato δ_r
+(in `code/`): finestra r3 = 45971 stati (1 SCC rotore B-T), r4 = 27.3M stati (66913 SCC rotori),
+prodotto `A(r;m,D)` `δ^alt` verificato **>0** (r1m8d8=0.125, r2m4d8≈0.028). L'impronta porta (44 celle)
+eccede la memoria esplicita del prodotto (m≈4–8) ⇒ non si fondono.
+
+**Prossimi passi (2 linee indipendenti + il ponte):**
+1. **δ_r (morsi)**: spingere `code/product_automaton.py` a `(m,D)` maggiori e finestra r3. Self-test
+   `window_automaton.py --selftest` e `product_automaton.py --selftest` OBBLIGATORI prima (mai rossi).
+2. **§78 (porta)**: certificato budget chiuso; resta solo l'inviluppo eterno della coda (controfattuale).
+3. **Link 1** ("orbita eterna non-highway ⇒ lock W0 ∞ volte") come **lemma autonomo** che salda
+   `δ^alt` (morsi) + `A1` (porta).
+
+--- (handover precedente sotto) ---
+
+# CHAT_HANDOVER — Stato del programma Langton al 2026-06-27
+**Da: sessione §77 (ROTOR-STALL: geometria stalli morso = rotor-router walk, ramo laterale) → A: prossima sessione (§78) in C:\Lanton_last_mile.**
+**Leggere insieme a CLAUDE.md. Dettagli completi: docs/ROTOR_STALL_ADDENDUM.md §77;
+docs/ENTRY_SEED_FRONTIER_ADDENDUM.md §76;
+docs/GA_GATE_ZERO_ADDENDUM.md §75;
 docs/COMPAT_EVENT_COREACHABILITY_ADDENDUM.md §70-§74;
 catena precedente: docs/COMPATIBILITY_POTENTIAL_ADDENDUM.md §69,
 docs/ENDPOINT_MONOTONE_NOGO_ADDENDUM.md §68, docs/POTENTIAL_SEGMENT_SCANNER_ADDENDUM.md §67,
@@ -55,6 +168,34 @@ distingue. Il witness sintattico conferma la cecita' con stesso `A0(8,80,80)` e 
 fuori patch a offset 138, rel `(3,9)`. Nessuna SCC e' stata classificata: dopo questo FAIL
 sarebbe certificazione cieca. Prossimo fronte: `A1` con T3' funzione dello stato/proof object,
 oppure propagazione esplicita di `unknown`.
+**Novita' §76 (ramo laterale, mappatura della bocca — NON tocca il crux):** mappa inversa resa
+operativa e verificata (round-trip esatto: da t=12000 si recupera griglia vuota + (0,0,0); turni
+invertiti == forward rovesciato). Su questa base, doppia frontiera del seme minimo d'ingresso.
+Germe minimo per fase (22 porte): supporti **13-19 celle**, tutti onset 0, verificati 80 periodi;
+**min globale 13 celle** (fasi 0 e 103). **Q1** (ingresso piu' rapido): l'intuizione "veloce =>
+complesso" e' **falsificata** — 1 cella `(0,-2)` entra in **310** passi (vs 9977 vuota), 2 celle
+in **162**, 3 in **142**, 4 in **71**, 5 in **62**, fino al germe a **0**; ginocchio a b~4-5.
+**Q2** (aggancio piu' vicino al punto di partenza): 1 cella non scende sotto **distanza 3**, ma
+**2 celle** `{(0,-1),(1,-1)}` si agganciano a **distanza 0** (onset 276) — per Q2 batte il germe
+perche' ignora il tempo. Limite: per reversibilita' tutto vive nel bacino; raffina l'enunciato di
+Link 1 (germe critico = oggetto concreto ~13 celle, non vago) ma non lo dimostra. Trappola nuova
+(j): l'onset va letto sui turni raccolti anche se la highway poi spinge la formica fuori dal box
+(bocciare al bordo da' un falso 0% d'ingressi). Roadmap A1/unknown INVARIATA, slittata a §77.
+**Novita' §77 (ramo laterale, tessitura del caos — NON tocca il crux):** geometria degli stalli del
+morso (run di non-scoperta `b=0`) sull'orbita-record `(7,-7)`. Risultato: NON corridoi (bbox~len^0.767),
+NON rotori puntiformi (molteplicita' solo ~1.57 passi/cella) ma macchie **area-filling** su detrito
+invecchiato (celle lette vecchie ~migliaia di passi). Identificazione strutturale: **la formica e' un
+rotor-router walk** — ogni cella e' un rotore a 2 stati (colore toggle ⇒ svolta R,L,R,L per visita).
+Questo apre i teoremi di range/fuga rotor-router (Holroyd-Propp, Levine-Peres) come lever per un
+pavimento del morso per via teorica, MA con ostruzione: la formica e' un rotore **NON abeliano**
+(uscita = heading±1, dipende dall'arrivo), quindi i bound abeliani non si trasferiscono diretti.
+Conferma una chiusura: il patch cresce con T ⇒ nessun raggio d'automa fisso limita gli stalli.
+Limite: e' il livello MORSO (declassato #24/#30), non l'α1 della riduzione (`δ_r` fuori-finestra,
+§58, che non erode); potrebbe pero' provare `N(t)` sublineare e cosi' confermare rigorosamente che
+il tasso di morso ->0 e' strutturale. Test §77.6 + prova §77.7 ESEGUITI: rotore non-abeliano netto,
+e la viabilita' tira CONTRO (esponente di fuga deriva oltre 1.5; bite-stall LIMITATO ~303 = quantita'
+diversa dallo stallo crescente di #30; bite rate 0.20 sano, non erode come avevo importato). Strada
+non-abeliana NON priorita' immediata: tornare al crux δ_r/Link 1 (§78).
 1. La formulazione di α1 come **pavimento del tasso di morso fresco** ("modo DC", #24) **erode**:
    su orbite fino a 3·10⁵, stalli ~lineari in T (90–104 periodi vs 8 a T≲25k), densità→~0.05,
    pavimento a finestra L=10400 sceso a mediana 0.006 con uno **zero esatto** — e tutto nel caos
@@ -647,7 +788,72 @@ diverso. Il witness sintattico non e' co-raggiungibilita'.
 Conclusione §75: non classificare SCC su `A0`. Il certificato mancante e' rendere T3' funzione
 dello stato, o trattare fuori-patch come `unknown` senza promuoverlo a no-entry.
 
-## C. Roadmap (priorita' prossima sessione §76)
+### B.21 Entry-seed frontier — mappatura della bocca (§76)
+Ramo laterale (NON tocca il crux). Dettaglio completo: `docs/ENTRY_SEED_FRONTIER_ADDENDUM.md`.
+
+Mappa inversa deterministica resa operativa (`entry_seed/reverse.py`): dato (x,y,h), il colore
+attuale di `p_prev=(x,y)-dir(h)` decide la svolta forward (nero=R, bianco=L) e ripristina la cella.
+Una sola preimmagine. Self-test: forward Python == motore C 12000 passi; round-trip esatto ->
+griglia vuota + (0,0,0); turni invertiti == forward[::-1]; supporto a t=12000 = 952.
+
+Germe minimo per fase (22 porte Phi_ent, `entry_seed/germ.py` -> `germs_22.json`): snapshot
+autostrada profonda, troncamento raggio Chebyshev + minimizzazione greedy. Supporti 13-19 celle,
+**tutti onset 0**, verificati 80 periodi; **min globale 13 celle (fasi 0/103)**. Coerente col
+testimone ANATOMY §12 (fase 72: qui 19 celle/onset 0 vs 20/onset 1).
+
+Q1 (`entry_seed/brute.c` -> `seed_frontier.json`, ri-certificato col motore C): frontiera
+supporto -> onset minimo = b0:9977, b1:**310** `(0,-2)`, b2:**162**, b3:**142**, b4:**71**,
+b5:**62**, b13:**0**. Intuizione "veloce => seme complesso" **falsificata**: il costo del supporto
+piccolo e' centinaia di passi, non migliaia. Ginocchio a b~4-5.
+
+Q2 (stessa macchina, metrica |lock-start|): b1 dist minima **3**; b2 dist **0** `{(0,-1),(1,-1)}`
+onset 276; b3-b5 dist 0. Q2 batte il germe (13 celle) perche' ignora il tempo.
+
+Trappole nuove: (j) onset va letto sui turni raccolti anche se la highway spinge fuori dal box
+(bocciare al bordo = falso 0% ingressi); (k) late-entry vs uscita-box vanno distinti nel "%
+entrati"; (l) srotolare un germe all'indietro fa CRESCERE il supporto (13->237 a k=2000), i semi
+piccoli sono orbite forward diverse.
+
+Limite logico: per reversibilita' tutto vive nel bacino, l'orbita eterna non-highway e' in una
+classe disgiunta non toccata. §76 raffina l'enunciato di Link 1 (germe critico concreto), non lo
+dimostra. Domanda aperta netta: esiste un pavimento f(b) dell'onset per supporto b?
+
+### B.22 Rotor-stall geometry — la formica come rotor-router (§77)
+Ramo laterale (NON tocca il crux). Dettaglio: `docs/ROTOR_STALL_ADDENDUM.md`.
+
+Correzione di rotta: "stalli del morso limitati" e' declassato — B-T da' stalli FINITI gratis,
+uniformemente-limitati e' falsificato (#30). Domanda utile = stalli LOCALI o NON-LOCALI?
+
+Geometria stalli su `(7,-7)` caos (onset 106258, `entry_seed/stall_geometry.py`):
+- bbox ~ len^**0.767** (R2 0.924): non corridoio 1D (1.0), non puntiforme;
+- molteplicita' **1.571** passi/cella distinta (q90 1.625): bassa, quasi costante;
+- celle lette vecchie (stallo max len 303, bbox 20, eta' max 3756): ritorno su detrito antico;
+- footprint = blob connesso area-filling (`stall_footprint.png`).
+
+Identificazione: **la formica e' un rotor-router walk** (cella = rotore a 2 stati, colore toggle ⇒
+svolta R,L,R,L per visita). Lever candidato: teoremi di range/fuga rotor-router (Holroyd-Propp,
+Levine-Peres) per `N(t) >= C·t^{2/3}` per via teorica. OSTRUZIONE: rotore NON abeliano (uscita =
+heading±1), bound abeliani non trasferibili diretti.
+
+Conferma chiusura: patch cresce con T ⇒ nessun raggio d'automa fisso limita gli stalli (il toolkit
+a finestra non basta da solo). Livello morso (declassato), non α1 della riduzione (`δ_r`, §58).
+Valore: potrebbe provare `N(t)` sublineare ⇒ tasso di morso ->0 strutturale, non solo empirico.
+
+Test §77.6 ESEGUITO (`entry_seed/abelian_test.py`): 4 heading sullo stesso patch congelato ⇒ escape
+**303/1109/1/1135** passi (3 ordini di grandezza). La formica e' rotor-router **NON abeliano** in
+modo netto: i bound di fuga abeliani non si agganciano. Ma geometria favorevole (L~area^0.785 <<
+bound 1.5): manca il TEOREMA non-abeliano, non la struttura. Via aperta solo se la letteratura
+copre il range di rotor-walk non abeliani heading-relativi.
+
+Prova di viabilita' §77.7 ESEGUITA (`entry_seed/escape_scaling.py`): TIRA CONTRO la strada.
+(1) esponente di fuga NON scala-stabile: curvatura positiva, esp. locale 0.81->1.10->1.39->1.68 da
+area 15 a 120, attraversa il bound 1.5 ~area 100 (la formica indugia di PIU' per patch alle scale
+grandi). (2) non de-riscabile: sopra area 40 solo ~22 stalli, coda rara a T~1e5. (3) CORREZIONE: il
+bite-stall e' LIMITATO ~303 su tutte le orbite (non cresce 1e4->1e5) ⇒ quantita' DIVERSA dallo
+stallo crescente di #30 (~1e4, probabile buchi nero-fuori-finestra); il bite rate su (7,-7) e' 0.20
+sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata; tornare a δ_r/§78.
+
+## C. Roadmap (priorita' prossima sessione §78)
 1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
    liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
 2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
@@ -685,7 +891,9 @@ dello stato, o trattare fuori-patch come `unknown` senza promuoverlo a no-entry.
    pressione UNSAT. I batch profondi sono sample-limited oppure quasi-W0/circolari.
 15. **FATTO §75: gate-zero GA/no-entry FAIL.** `A0(r,K,D0)` non determina T3' per `r<=8`,
    `K=80`, `D0=80`; nessuna SCC va classificata su questa astrazione.
-16. **PRIORITA' §76: definire A1 o propagare unknown.** Non aumentare `r` a caso. Rendere T3'
+16. **PRIORITA' §78: definire A1 o propagare unknown** (la PRIORITA' §76 originaria, ancora non
+   affrontata: le sessioni §76-§77 sono state rami laterali di mappatura, vedi B.21/B.22).
+   Non aumentare `r` a caso. Rendere T3'
    funzione dello stato tramite celle/proof object, oppure mantenere gli stati fuori-patch come
    `unknown` e certificare solo cio' che non dipende da loro.
 17. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
@@ -702,6 +910,16 @@ dello stato, o trattare fuori-patch come `unknown` senza promuoverlo a no-entry.
 21. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
    (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
 22. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
+23. **FATTO §76 (ramo laterale): mappatura della bocca.** Mappa inversa verificata (round-trip
+   esatto), germi minimi per le 22 porte (min 13 celle, fasi 0/103, onset 0), frontiere Q1
+   (b1->310 ... b13->0; "veloce=>complesso" falsificato) e Q2 (2 celle -> dist 0). Raffina
+   l'enunciato di Link 1 (germe critico concreto), non lo dimostra: tutto interno al bacino.
+   Domanda aperta ereditata: pavimento f(b) dell'onset per supporto b? Dettaglio: B.21 + §76.
+24. **FATTO §77 (ramo laterale): geometria stalli morso = rotor-router.** Stalli area-filling
+   (bbox~len^0.767), molteplicita' ~1.57, su detrito vecchio; la formica e' un rotor-router walk
+   (cella = rotore 2 stati), NON abeliano (uscita heading-dipendente). Uccide "automa raggio fisso
+   limita stalli". Livello morso (declassato), non α1. Possibile via: `N(t)>=C·t^{2/3}` da range
+   rotor-router. TEST ESEGUITO: non-abeliano netto (escape 303/1109/1/1135). PROVA DI VIABILITA' §77.7: tira CONTRO (esponente di fuga deriva su, attraversa 1.5; bite-stall LIMITATO ~303, quantita' diversa da #30; bite rate 0.20 sano non erode). Decisione: non priorita' immediata, tornare a δ_r/§78. Dettaglio: B.22 + §77.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
@@ -745,11 +963,17 @@ dello stato, o trattare fuori-patch come `unknown` senza promuoverlo a no-entry.
   Pass-rate §73: `C:\Python\Python310\python.exe alpha1\door_comoving_class_passrate.py --horizon 1600 --out-prefix alpha1\door_comoving_class_passrate`.
   Rango §74: `C:\Python\Python310\python.exe alpha1\door_gf2_rank_gate.py --out-prefix alpha1\door_gf2_rank_gate`.
   Gate-zero §75: `C:\Python\Python310\python.exe GA_stress_agent\ga_gate_zero_audit.py --radii 2,3,4,8,9 --synthetic-radius 8 --K 80 --D0 80 --horizons 512,1600 --out GA_stress_agent\gate_zero_summary.json`.
+  Bocca §76 (ramo laterale): `python entry_seed\reverse.py` (self-test round-trip);
+  `python entry_seed\germ.py` (-> `germs_22.json`); `gcc -O3 -o entry_seed\brute entry_seed\brute.c`
+  poi `entry_seed\brute R b MAXSTEPS minp` (da root repo); `python entry_seed\make_summary.py`
+  (-> `seed_frontier.json`); `python entry_seed\figura.py` (-> `frontiera_semi.png`).
+  Rotor-stall §77 (ramo laterale): `python entry_seed\stall_geometry.py`
+  (-> `stall_geometry.json`, `stall_footprint.png`).
 - **Builder C prodotto:** `product_build.exe <r> <m> <D> <outdir> [cap] [modo]` (0=full,1=black-only,
   2=ibrida); MAI il BFS Python del prodotto oltre poche migliaia di stati (esplode + swap, §56.6).
 - **Niente Monitor con `tail -f`** (restano orfani "in esecuzione per ore"): seguire i run con Read
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§76**, stesso stile.
+- Verbale prossima sessione: **§78**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

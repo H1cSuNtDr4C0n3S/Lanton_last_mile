@@ -1,0 +1,19 @@
+{
+ "orbit": "(7,-7)",
+ "onset": 106258,
+ "Z_slope_chaos": 0.7953,
+ "bite_rate_chaos": 0.2047,
+ "n_stalls": 9824,
+ "len_max": 303,
+ "len_median": 7,
+ "bbox_vs_len_exponent": 0.767,
+ "bbox_vs_len_R2": 0.924,
+ "multiplicity_median": 1.571,
+ "multiplicity_q90": 1.625,
+ "longest_stall": {
+  "len": 303,
+  "bbox": 20,
+  "ncells": 149,
+  "age_max": 3756
+ }
+}
