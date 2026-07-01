@@ -1,0 +1,75 @@
+{
+ "results": [
+  {
+   "radius": 1,
+   "states": 15,
+   "edges": 26,
+   "assumeB_edges": 11,
+   "depth_hist": {
+    "0": 1,
+    "14": 10
+   },
+   "max_prefix": 14,
+   "survivors_2per": 10,
+   "survivors_3per": 10,
+   "verdict_2per": false,
+   "verdict_3per": false
+  },
+  {
+   "radius": 2,
+   "states": 403,
+   "edges": 554,
+   "assumeB_edges": 151,
+   "depth_hist": {
+    "0": 40,
+    "2": 1,
+    "5": 34,
+    "10": 72,
+    "14": 4
+   },
+   "max_prefix": 14,
+   "survivors_2per": 76,
+   "survivors_3per": 4,
+   "verdict_2per": false,
+   "verdict_3per": false
+  },
+  {
+   "radius": 3,
+   "states": 45971,
+   "edges": 59508,
+   "assumeB_edges": 13537,
+   "depth_hist": {
+    "0": 4089,
+    "1": 238,
+    "2": 373,
+    "5": 2870,
+    "6": 100,
+    "7": 14,
+    "10": 5849,
+    "14": 4
+   },
+   "max_prefix": 14,
+   "survivors_2per": 5853,
+   "survivors_3per": 4,
+   "verdict_2per": false,
+   "verdict_3per": false
+  }
+ ],
+ "tail_tn": [
+  1,
+  1,
+  1,
+  1,
+  0,
+  1,
+  1,
+  1,
+  1,
+  0,
+  1,
+  1,
+  1,
+  1
+ ],
+ "statement": "nessuna lettura nera fuori dalla memoria di finestra di raggio r inizia (LRRRR)^k, per i k con verdetto CERTIFICATO"
+}

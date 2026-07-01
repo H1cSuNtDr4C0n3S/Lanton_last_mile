@@ -1,3 +1,46 @@
+# === AGGIORNAMENTO §85 (2026-07-02) — leggere PRIMA ===
+
+Stato: §85 (LRRRR-HALO) **ESEGUITO** in tre tempi (container Claude 1 core; §85a 153 s su 24 orbite,
+tripwire catena 0 violazioni + gate §84 OK; §85b automa r=1,2,3; §85c teorema con assert).
+Addendum: `docs/LRRRR_HALO_ADDENDUM.md`. Strumenti: `alpha1/lrrrr_depth_profile.py`,
+`alpha1/lrrrr_avoidance_certificate.py`, `alpha1/lrrrr_halo_witness.py` (+ summary JSON e log).
+
+Esito (roadmap §84.5.1 — tentare il teorema-finestra):
+- **§85a**: evitamento gia' massimale a **r=1** — 0 match su **2.323.679** deep_1; i 5.716 match
+  reali (0,18% delle letture nere) sono TUTTI in-finestra (spirali sulla scia fresca).
+- **§85b**: automa INCONCLUSIVO a r=1,2,3 con **4 sopravvissuti stabili** r2→r3 (13.533/13.537
+  archi uccisi a r3; morte di massa a profondita' 10 = L del 3o periodo). Ispezione: L dei periodi
+  2-3 FORZATE (cavalcata auto-alimentata), assunzioni residue solo assW.
+- **§85c**: i sopravvissuti sono REALI — **testimone: nero isolato nel bianco** cavalca (LRRRR)^3
+  (poi LLLLR, muore al 4o periodo, coerente B-T). Il teorema-finestra universale e' **FALSO**.
+  Ma cade bene: **TEOREMA HALO (⟺ esatto)** — lettura nera inizia (LRRRR)^3 ⟺ le 9 celle
+  HALO={(-2,0),(-2,1),(-1,-1),(-1,0),(-1,1),(-1,2),(0,-1),(0,1),(0,2)} (frame heading, r<=2) tutte
+  bianche (necessita' 9/9, sufficienza per costruzione + 1000 ambienti).
+- **Entailment**: motivo vuoto ⇒ halo bianco ⇒ cavalcata ⇒⇐ evitamento §84 IMPLICA lo 0% motivi
+  vuoti di §81 (misurato indipendentemente). Riduzione finale: l'evitamento equivale
+  all'**invariante ambientale** "nel caos maturo un deep-black non e' mai isolato a scala 2 lungo
+  il cammino imminente" (0/2,3M; empirico, trappola i).
+
+**Trappola nuova (t)**: assW e' gratis — sopravvissuti automa con sole assunzioni-bianco sono
+campanelli di realizzabilita' (il bianco si realizza col nulla): ispezionare e tentare il testimone
+diretto PRIMA di scalare il raggio.
+
+**Prossimi passi (§86):**
+1. Il bersaglio nuovo: perche' il caos maturo non presenta MAI l'halo bianco ai deep-black?
+   Misurare la distribuzione dei neri-nell'halo ai deep-event (minimo empirico? se >=2 l'enunciato
+   vero e' piu' forte); bilancio occupazione halo tra ultima scrittura e rilettura; legame Lemma
+   del morso / frontiera B-T. E' il primo enunciato del lato-alpha con forma finita (9 celle, r=2)
+   e bersaglio dinamico preciso — il tipo di domanda che §28.2 prescriveva.
+2. Stessa riduzione-halo per p15 (i rides puro-coda di §84).
+3. Kill-gate §79.1 resta in coda.
+4. (Certificazione) ri-run Ryzen §85a/b/c.
+
+Link 1 resta il crux; §85 non lo muove — ma per la prima volta il lato-alpha ha un enunciato
+esatto (⟺ halo), un testimone, un'entailment tra misure indipendenti, e una domanda dinamica a
+diametro finito.
+
+--- (handover §84 sotto) ---
+
 # === AGGIORNAMENTO §84 (2026-07-02) — leggere PRIMA ===
 
 Stato: §84 (ROTOR-LANGUAGE) **ESEGUITO** (24 orbite reali, container Claude 1 core 132 s; gate

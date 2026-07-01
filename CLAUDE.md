@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§85**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§86**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -78,6 +78,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       svolta E' il primo asse che segmenta la miscela nucleo/coda (delimita (q), che resta
       valida per eta'/vc), ma su classi minuscole: fatto strutturale, non leva quantitativa.
       Metodo obbligatorio per confronti simili: >=3 periodi pieni + baseline nulla condizionata.
+  (t) **assW e' gratis** (LRRRR-HALO §85): nei certificati via automa finestra, sopravvissuti i
+      cui archi di assunzione sono solo assW (bianco = default dello spazio vuoto) sono un
+      campanello di REALIZZABILITA', non indizio di fantasma. Ispezionare i sopravvissuti e
+      tentare il testimone diretto prima di scalare il raggio (qui: nero isolato ⇒ (LRRRR)^3,
+      teorema-finestra falso ma ridotto al TEOREMA HALO ⟺ esatto: 9 celle bianche, r<=2).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
