@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§84**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§85**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -71,6 +71,13 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       orbite, ma sovrapposizione col nucleo 2/1.572 e massa deep-black pre-onset su L_hw 0,05%.
       A (r=3, H=104) caos profondo e transito sono linguisticamente disgiunti: NON costruire
       ponti alpha->beta su sovrapposizioni di vocabolario locale.
+  (s) **il nucleo non ha antenati periodici noti — e (q) ha confini** (ROTOR-LANGUAGE §84):
+      highway 0,05% (§83), rotori 4,5% degli eventi-nucleo con l'unica classe in eccesso (p15,
+      x1,9) a massa-nucleo 0% esatto su 24/24 orbite; LRRRR evitato totalmente (0 su ~1,5M vs
+      ~0,18% di caso); rotori r>=2 assenti dal caos anche alla baseline. La periodicita' di
+      svolta E' il primo asse che segmenta la miscela nucleo/coda (delimita (q), che resta
+      valida per eta'/vc), ma su classi minuscole: fatto strutturale, non leva quantitativa.
+      Metodo obbligatorio per confronti simili: >=3 periodi pieni + baseline nulla condizionata.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.

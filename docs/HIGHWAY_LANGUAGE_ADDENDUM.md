@@ -19,6 +19,8 @@ dimenticato ⇒ (quasi certamente) niente eventi deep-black post-onset. L'analog
 > mediana identica a §81 a precisione macchina; (3) L_hw SATURA (taglia a 10 periodi == a 20).
 > Strumento: `alpha1/highway_language_probe.py`; output `alpha1/highway_language_summary.json`.
 > Ri-run Ryzen: `python alpha1\highway_language_probe.py --workers 16`.
+> **CERTIFICATO Ryzen 2026-07-02**: ri-run 16 core, 11,2 s, tre gate VERDI,
+> output integralmente identico al run container.
 
 ## 83. Riepilogo in una frase
 **Ipotesi falsificata, nettamente**: L_hw ha esattamente **46 parole** (= le 46 letture nere di W0,

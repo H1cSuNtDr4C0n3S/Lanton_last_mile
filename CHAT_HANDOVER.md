@@ -1,8 +1,49 @@
+# === AGGIORNAMENTO §84 (2026-07-02) — leggere PRIMA ===
+
+Stato: §84 (ROTOR-LANGUAGE) **ESEGUITO** (24 orbite reali, container Claude 1 core 132 s; gate
+VERDI: nev esatti vs §80, nucleo/massa identici a §81 a precisione macchina; ri-run Ryzen:
+`python alpha1\rotor_language_profile.py --workers 16`). Addendum:
+`docs/ROTOR_LANGUAGE_ADDENDUM.md`. Strumento: `alpha1/rotor_language_profile.py`, output
+`alpha1/rotor_language_summary.json`. Metodo: parole PRIMITIVE del censimento
+(LRRRR p5, LLRRRR p6, LLRRLLRRRR p10, LLLLRLRRRRLRRRR p15, P74) su **3 periodi pieni** (2 sono
+statisticamente banali), match a rotazione (trappola d), controllo q<=15, **baseline nulla
+empirica condizionata a lettura nera** (eccesso misurato, non presunto).
+
+Domanda (roadmap §83.5.1): il nucleo e' il linguaggio delle cavalcate di rotore?
+**FALSIFICATA — terza famiglia periodica consecutiva:**
+- solo **4,5%** degli eventi-nucleo siede su una qualunque cavalcata;
+- **LRRRR evitato TOTALMENTE**: 0 eventi su ~1,5M vs ~0,18% di caso (~110/orbita attesi);
+- rotori r>=2 (LLRRRR, LLRRLLRRRR, P74) **assenti dal caos anche alla baseline**;
+- unica classe in eccesso: **p15 ×1,9** ma con **massa-nucleo 0,00% [0,00–0,00]** su 24/24 orbite
+  — prima sottopopolazione che rompe l'omogeneita' (q): i p15-rides sono puro-coda;
+- periodica generica q<=15: deficit ×0,8, massa-nucleo 47,1% (sopra il 35,63%).
+
+Lettura: il vocabolario universale corrisponde a parole di svolta NON periodiche — nessun antenato
+periodico noto. La trappola (q) va delimitata: vale per eta'/vc, NON per la periodicita' di svolta
+(che segmenta, ma su classi minuscole: fatto strutturale, non leva quantitativa).
+
+**Trappola nuova (s)**: il nucleo non ha antenati periodici noti, e (q) ha confini — non cercare
+parentele con famiglie quasi-periodiche esplicite; la periodicita' di svolta segmenta ma su classi
+0,02–3,5%.
+
+**Prossimi passi (§85):**
+1. **Candidato teorema**: verificare via automa prodotto (trappola-c compliant: enunciato "ogni
+   cammino") che nessuna lettura nera fuori-finestra inizia LRRRR^3 — se certificato, primo
+   teorema esatto del lato-alpha nato dal vocabolario. Analogo per l'assenza dei rotori r>=2.
+2. Ispezione diretta dei p15-rides puro-coda (~12 eventi/orbita).
+3. Kill-gate §79.1 in coda.
+4. (Certificazione) ri-run Ryzen §84.
+
+Link 1 resta il crux; §84 non lo muove — chiude la via "antenati rotore", delimita (q), e consegna
+un candidato-teorema esatto (evitamento LRRRR) al lato-beta della cassetta degli attrezzi.
+
+--- (handover §83 sotto) ---
+
 # === AGGIORNAMENTO §83 (2026-07-02) — leggere PRIMA ===
 
 Stato: §83 (HIGHWAY-LANGUAGE) **ESEGUITO** (24 orbite reali, container Claude 1 core 125 s; tre gate
 VERDI: nev esatti vs §80, nucleo/massa identici a §81 a precisione macchina, L_hw saturo a 10 periodi;
-ri-run Ryzen: `python alpha1\highway_language_probe.py --workers 16`). Addendum:
+**CERTIFICATO Ryzen 2026-07-02**, 11,2 s, output bit-identico). Addendum:
 `docs/HIGHWAY_LANGUAGE_ADDENDUM.md`. Strumento: `alpha1/highway_language_probe.py`, output
 `alpha1/highway_language_summary.json`. Design: la highway non ha eventi deep-black post-onset ⇒
 analogo equo = L_hw, il linguaggio potato delle letture nere sulla highway pura (pipeline p104 r=3
