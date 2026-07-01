@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§81**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§83**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -49,10 +49,23 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       CRESCE. Non riaprire bilancio/squilibrio di tasso del consumo (= pavimento-del-morso §57).
       La leva, se esiste, e' la coda lunga dei ritorni lontani (age >> periodo), non il bilancio.
   (o) **nessun classificatore finito-stato a raggio fisso sugli eventi deep-black** (DEEP-MOTIF
-      §80): l'alfabeto dei motivi locali co-moving al detrito NON satura (r=3 ~99,4% unici;
-      scoperta ultimo/primo 1,14; unione/somma tra orbite 0,979; intersezione 19/1,5M). Non
-      riaprire checklist/footprint-finito/classe-co-moving SUL LATO-ALPHA: finito-stato funziona
+      §80, ESTESA §81): l'alfabeto dei motivi locali co-moving al detrito NON satura (r=3 ~99,4%
+      unici; scoperta ultimo/primo 1,14; unione/somma tra orbite 0,979; intersezione 19/1,5M).
+      §81: vale ANCHE potando il motivo alla parte causalmente attiva (celle visitate nei prossimi
+      104/208 passi): scoperta 0,811, ~57% unici, unione cresce. Non riaprire checklist/
+      footprint-finito/classe-co-moving SUL LATO-ALPHA, pieno o potato: finito-stato funziona
       solo sul lato-beta (porta, §78). Il lato-alpha e' irriducibilmente dinamico.
+  (p) **il nucleo universale non e' un manico** (DEEP-MOTIF-PRUNED §81): esiste un vocabolario di
+      1.572 motivi attivi condiviso da tutte le 24 orbite con massa eventi stazionaria ~35,6%
+      (quintili piatti, ortogonale all'eta'), ma la coda aperiodica porta ~64% della massa ed e'
+      la parte illimitata. Non costruire argomenti finito-stato sul nucleo sperando che la coda
+      sia trascurabile: il nucleo e' un vincolo/impronta da rispettare, non una riduzione.
+  (q) **il taglio nucleo/coda non segmenta la dinamica** (CORE-TAIL-PROFILE §82): la massa sul
+      vocabolario universale e' invariante nel tempo (§81), per eta' e per alimentazione (§82:
+      bucket eta' piatti 35–36% fino ad age>104000; morso-fed 36,9% vs recycle 35,4%). NON
+      cercare la parte genuinamente aperiodica come sottopopolazione separabile di eventi (per
+      eta', vc, o membership al vocabolario): la miscela e' omogenea, l'aperiodicita' abita la
+      stessa popolazione che parla il dialetto universale.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.

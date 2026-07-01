@@ -1,3 +1,81 @@
+# === AGGIORNAMENTO §82 (2026-07-02) — leggere PRIMA ===
+
+Stato: §82 (CORE-TAIL-PROFILE) **ESEGUITO** (24 orbite reali, container Claude 1 core 103 s;
+doppio gate VERDE: nev esatti vs §80 24/24, nucleo ricostruito = 1.572 motivi con massa identica a
+§81 a precisione macchina). Addendum: `docs/CORE_TAIL_PROFILE_ADDENDUM.md`. Strumenti:
+`alpha1/core_tail_profile.py` (streaming binario anti-OOM), output
+`alpha1/core_tail_profile_summary.json` + `alpha1/core24_motifs.json` (i 1.572 motivi in chiaro,
+ordinati per massa). Definizione vc (morso-fed/recycle-fed) riusata verbatim da §79.
+
+Domande (roadmap §81.5.1–2) — entrambe le ipotesi FALSIFICATE:
+- **A. La coda lunga NON vive fuori dal vocabolario**: massa-nucleo per bucket eta'
+  36,2 / 35,2 / 35,6 / 35,7 / 35,2 % (≤104 / ≤1040 / ≤10400 / ≤104000 / oltre) — PIATTA fino
+  ad age>104000. La parte aperiodica non e' separabile per eta'.
+- **B. Il nucleo e' trasversale all'alimentazione**: morso-fed 36,9% vs recycle 35,4%
+  (indistinguibili). Contesto: recycle-fed = **89,9%** degli eventi su orbite convergenti
+  (vs 61,7% sul transiente §79).
+- **C.** Unica non-uniformita': giovani (≤104) morso-fed a 42,9%, decadimento monotono verso 35%.
+
+L'invariante 35,6% di §81 e' quindi **omogeneo**: costante tra orbite, nel tempo, per eta' e per
+alimentazione — sapore ergodico/di misura, non meccanismo locale isolabile. Il nucleo in chiaro:
+541.797 eventi pooled (35,89%), massa interna concentrata (top-100 = 41,3% del nucleo), taglie
+med 6 max 12; i motivi di testa sono **catene lineari/diagonali di 3 celle sul cammino imminente**
+(firma segmento quasi-periodico, §81.5.3).
+
+**Trappola nuova (q)**: il taglio nucleo/coda non segmenta la dinamica — NON cercare la parte
+genuinamente aperiodica come sottopopolazione separabile (per eta', vc, o membership); la miscela
+e' omogenea, l'aperiodicita' abita la stessa popolazione che parla il dialetto universale.
+
+**Prossimi passi (§83):**
+1. **Interpretabilita' del nucleo**: confrontare i 1.572 motivi con le parole locali W0/highway —
+   il vocabolario universale e' il linguaggio quasi-periodico "di transito"? Se si', il 35,6%
+   diventa il primo ponte quantitativo FINITO detrito→porta (lato-alpha→lato-beta).
+2. Kill-gate §79.1 (deep-black-anchored decisive-depth sweep) resta in coda come gate negativo.
+3. (Certificazione) ri-run Ryzen `--workers 16` di §81+§82.
+
+Link 1 resta il crux; §82 non lo muove — chiude la via "segmentare per eta'/sorgente" e promuove
+l'omogeneita' dell'invariante 35,6% a fatto strutturale del lato-alpha.
+
+--- (handover §81 sotto) ---
+
+# === AGGIORNAMENTO §81 (2026-07-02) — leggere PRIMA ===
+
+Stato: §81 (DEEP-MOTIF-PRUNED, chiusura caveat §80.3) **ESEGUITO** (24 orbite reali, container Claude
+1 core 381 s; full-mode riproduce ESATTAMENTE i numeri Ryzen §80 su 24/24 orbite + self-test §5 tutti
+verdi; ri-run Ryzen raccomandata solo per omogeneita', 1 comando `--workers 16`). Addendum:
+`docs/DEEP_MOTIF_PRUNED_ADDENDUM.md`. Strumento: `alpha1/deep_motif_pruned.py`, output
+`alpha1/deep_motif_pruned_summary.json`. Motivo potato = sole celle nere entro r visitate nei
+successivi H passi (H=104, 208); dinamica/eventi/C4 identici a §80.
+
+Verdetto primario: **caveat CHIUSO nella direzione attesa.** Anche potato, l'alfabeto NON satura
+(scoperta ultimo20%/primo20% mediana **0,811**; ~57% eventi unici; unione cresce con le orbite).
+Motivi non vacui (taglia med 7, 0% vuoti). Trappola (o) ESTESA al motivo attivo: nessun classificatore
+finito-stato sul lato-alpha, nemmeno causalmente potato.
+
+Scoperta secondaria (non pianificata): **il vocabolario universale.** La quasi-disgiunzione §80
+(union/sum 0,979, inters. 19) era in parte artefatto entropico del detrito morto: potando,
+union/sum -> **0,650** e intersezione 24-orbite -> **1.572** motivi (~83×), che portano il
+**35,63%** della massa eventi (banda [34,40–36,33] su 24 orbite, quintili within-orbit PIATTI
+35,3–36,0 ⇒ stazionario, non survivorship-h), **ortogonale all'eta'** (media nucleo 14.014 vs
+fuori 14.045). H=208 diluisce (27,2%) ⇒ l'universalita' vive sull'interazione a 1 periodo.
+Decomposizione: detrito attivo = vocabolario finito a massa Θ(1) + coda aperiodica (~64%, illimitata).
+
+**Trappola nuova (p)**: il nucleo universale NON e' un manico — la coda porta 2/3 della massa ed e'
+la parte illimitata. Il nucleo e' un vincolo/impronta che ogni argomento dinamico deve rispettare,
+non una riduzione finito-stato.
+
+**Prossimi passi (§82):**
+1. Cross §79: membership nucleo/coda vs recycle-fed/morso-fed (vc del ledger).
+2. Coda lunga: eta' age>1040 e age>10·104 — la coda lunga vive fuori dal nucleo? (isolerebbe la parte
+   genuinamente aperiodica dove deve vivere l'argomento dinamico di Link 1).
+3. Interpretabilita': dump dei 1.572 motivi (geometrie, prossimita' W0-like).
+4. Resta aperto in parallelo il kill-gate §79.1 (deep-black-anchored decisive-depth sweep).
+
+Link 1 resta il crux; §81 non lo muove — chiude l'ultima via statica e consegna il primo invariante
+quantitativo del lato-alpha (massa stazionaria sul vocabolario universale).
+
+--- (handover §80 sotto) ---
+
 # === AGGIORNAMENTO §80 (2026-06-29) — leggere PRIMA ===
 
 Stato: §80 (DEEP-MOTIF-SATURATION) **ESEGUITO sul Ryzen** (24 orbite reali, 16 core, 22s). Addendum:
