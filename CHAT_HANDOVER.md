@@ -1,8 +1,46 @@
+# === AGGIORNAMENTO §83 (2026-07-02) — leggere PRIMA ===
+
+Stato: §83 (HIGHWAY-LANGUAGE) **ESEGUITO** (24 orbite reali, container Claude 1 core 125 s; tre gate
+VERDI: nev esatti vs §80, nucleo/massa identici a §81 a precisione macchina, L_hw saturo a 10 periodi;
+ri-run Ryzen: `python alpha1\highway_language_probe.py --workers 16`). Addendum:
+`docs/HIGHWAY_LANGUAGE_ADDENDUM.md`. Strumento: `alpha1/highway_language_probe.py`, output
+`alpha1/highway_language_summary.json`. Design: la highway non ha eventi deep-black post-onset ⇒
+analogo equo = L_hw, il linguaggio potato delle letture nere sulla highway pura (pipeline p104 r=3
+identica, raccolta 20 periodi dopo assestamento 2·104, tcap pre-onset = onset per il gate 2).
+
+Domanda (roadmap §82.5.1): il nucleo-24 e' il linguaggio quasi-periodico di transito?
+**FALSIFICATA, nettamente:**
+- L_hw = **46 parole esatte** (= le 46 letture nere di W0), saturo, **identico su 24/24 orbite**
+  (quoziente C4 perfetto): oggetto esatto, non stima.
+- Sovrapposizione: **2/1.572** motivi (0,1% del nucleo); **0/20** motivi di testa in L_hw.
+- Massa del traffico deep-black pre-onset su L_hw: **0,05%** [0,01–0,42].
+A (r=3, H=104) il linguaggio del caos profondo e quello del transito sono **disgiunti**. Il ponte
+quantitativo α→β via vocabolario condiviso e' morto; il vocabolario universale e' un invariante
+genuinamente caotico. Affilatura linguistica di §59 (deep-black anti-correla col lock). Le catene
+di testa del nucleo NON sono parole W0.
+
+**Trappola nuova (r)**: il nucleo non e' linguaggio di transito — non costruire ponti α→β su
+sovrapposizioni di vocabolario locale.
+
+**Prossimi passi (§84):**
+1. **Rotori**: confrontare il nucleo col linguaggio delle cavalcate di rotore (parole cicliche B-T
+   di `radius1/2/3_cycles.txt`: LLRRRR p6, LLRRRRLLRRRR p12, LLLLRLRRRRLRRRR p15, ...): stessa
+   pipeline L_hw su orbite sintetiche di rotore o proiezione sui pattern di svolta. Ultima famiglia
+   quasi-periodica esplicita: se disgiunta anche questa, il nucleo e' un oggetto nuovo senza
+   antenati periodici noti.
+2. Kill-gate §79.1 (deep-black-anchored decisive-depth sweep) come gate negativo.
+3. (Certificazione) ri-run Ryzen di §83.
+
+Link 1 resta il crux; §83 non lo muove — chiude la via "ponte-vocabolario" e consegna la
+disgiunzione linguistica caos/highway come fatto strutturale.
+
+--- (handover §82 sotto) ---
+
 # === AGGIORNAMENTO §82 (2026-07-02) — leggere PRIMA ===
 
 Stato: §82 (CORE-TAIL-PROFILE) **ESEGUITO** (24 orbite reali, container Claude 1 core 103 s;
 doppio gate VERDE: nev esatti vs §80 24/24, nucleo ricostruito = 1.572 motivi con massa identica a
-§81 a precisione macchina). Addendum: `docs/CORE_TAIL_PROFILE_ADDENDUM.md`. Strumenti:
+§81 a precisione macchina; **CERTIFICATO Ryzen 2026-07-02**, 12,1 s, output bit-identico). Addendum: `docs/CORE_TAIL_PROFILE_ADDENDUM.md`. Strumenti:
 `alpha1/core_tail_profile.py` (streaming binario anti-OOM), output
 `alpha1/core_tail_profile_summary.json` + `alpha1/core24_motifs.json` (i 1.572 motivi in chiaro,
 ordinati per massa). Definizione vc (morso-fed/recycle-fed) riusata verbatim da §79.
@@ -42,7 +80,7 @@ l'omogeneita' dell'invariante 35,6% a fatto strutturale del lato-alpha.
 
 Stato: §81 (DEEP-MOTIF-PRUNED, chiusura caveat §80.3) **ESEGUITO** (24 orbite reali, container Claude
 1 core 381 s; full-mode riproduce ESATTAMENTE i numeri Ryzen §80 su 24/24 orbite + self-test §5 tutti
-verdi; ri-run Ryzen raccomandata solo per omogeneita', 1 comando `--workers 16`). Addendum:
+verdi; **CERTIFICATO Ryzen 2026-07-02**, 37,0 s, output bit-identico). Addendum:
 `docs/DEEP_MOTIF_PRUNED_ADDENDUM.md`. Strumento: `alpha1/deep_motif_pruned.py`, output
 `alpha1/deep_motif_pruned_summary.json`. Motivo potato = sole celle nere entro r visitate nei
 successivi H passi (H=104, 208); dinamica/eventi/C4 identici a §80.

@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§83**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§84**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -66,6 +66,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       cercare la parte genuinamente aperiodica come sottopopolazione separabile di eventi (per
       eta', vc, o membership al vocabolario): la miscela e' omogenea, l'aperiodicita' abita la
       stessa popolazione che parla il dialetto universale.
+  (r) **il nucleo non e' linguaggio di transito** (HIGHWAY-LANGUAGE §83): L_hw (linguaggio potato
+      delle letture nere sulla highway pura) = 46 parole esatte, sature, identiche su 24/24
+      orbite, ma sovrapposizione col nucleo 2/1.572 e massa deep-black pre-onset su L_hw 0,05%.
+      A (r=3, H=104) caos profondo e transito sono linguisticamente disgiunti: NON costruire
+      ponti alpha->beta su sovrapposizioni di vocabolario locale.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.

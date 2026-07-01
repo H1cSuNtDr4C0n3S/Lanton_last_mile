@@ -15,6 +15,8 @@ fuori dal vocabolario, e il nucleo coincide con la meccanica del riciclo.
 > alla precisione macchina, pipeline deterministica). Strumento: `alpha1/core_tail_profile.py`
 > (streaming su file eventi binari per contenere la memoria); output
 > `alpha1/core_tail_profile_summary.json` + `alpha1/core24_motifs.json`.
+> **CERTIFICATO Ryzen 2026-07-02**: ri-run 16 core, 12,1 s, doppio gate VERDE,
+> output integralmente identico al run container.
 
 ## 82. Riepilogo in una frase
 **Entrambe le ipotesi sono falsificate**: la massa sul nucleo e' **35–36% a ogni eta'** (36,2 / 35,2 /

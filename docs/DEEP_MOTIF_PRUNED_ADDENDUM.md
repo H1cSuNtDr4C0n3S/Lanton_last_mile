@@ -16,6 +16,8 @@ che la formica visita/legge nei successivi H passi (H=104 e 208, cioe' 1 e 2 per
 > violazioni delle inclusioni pruned104 ⊆ pruned208 ⊆ full. Ri-esecuzione su Ryzen (1 comando,
 > `--workers 16`, ~1 min) raccomandata solo per omogeneita' della catena di certificazione.
 > Strumento: `alpha1/deep_motif_pruned.py`; output `alpha1/deep_motif_pruned_summary.json`.
+> **CERTIFICATO Ryzen 2026-07-02**: ri-run 16 core, 37,0 s, output integralmente
+> identico al run container (validazione 24/24, 0 violazioni, tutti i pooled e le masse).
 
 ## 81. Riepilogo in una frase
 Il caveat e' **chiuso nella direzione attesa** — anche potato alla parte causalmente attiva l'alfabeto
