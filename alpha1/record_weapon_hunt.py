@@ -47,6 +47,77 @@ def eval_word(word, cap=2_000_000):
     deep1 = sorted(c for c in spoiler if c[1] >= 1)
     return len(deep1), onset, len(spoiler), deep1
 
+def viable(word, k):
+    """Esiste una catena di prepend validi di profondita' k sopra word? (early-exit DFS)"""
+    if k <= 0:
+        return True
+    for bit in (0, 1):
+        if eval_word((bit,) + word) is not None and viable((bit,) + word, k - 1):
+            return True
+    return False
+
+def _viab_task(t):
+    word, k = t
+    return viable(word, k)
+
+def dfs_mode(args):
+    """DFS esaustiva sui PREPEND da una parola data: mappa il muro attorno a un campione.
+    Pota sound: irrealizzabile / non record-compatibile / burden1 > cap. Riporta il minimo
+    raggiunto, l'eventuale arma, e il profilo del muro (a che profondita' muoiono i rami)."""
+    t0 = time.time()
+    w0 = tuple(1 if ch == "R" else 0 for ch in args.dfs_start.strip().upper())
+    r0 = eval_word(w0)
+    assert r0 is not None, "parola di partenza non valida (irrealizzabile o non record-compat.)"
+    print(f"DFS da K={len(w0)} burden1={r0[0]} celle={r0[3]} | cap={args.dfs_cap} "
+          f"extra={args.dfs_extra}", flush=True)
+    best = (r0[0], w0, r0[1], r0[3])
+    stack = [w0]
+    nodes = 0
+    depth_deaths = {}
+    weapon = None
+    while stack and nodes < args.dfs_nodes and weapon is None:
+        w = stack.pop()
+        if len(w) - len(w0) >= args.dfs_extra:
+            continue
+        for bit in (0, 1):
+            w2 = (bit,) + w
+            nodes += 1
+            r = eval_word(w2)
+            if r is None or r[0] > args.dfs_cap:
+                d = len(w2) - len(w0)
+                depth_deaths[d] = depth_deaths.get(d, 0) + 1
+                continue
+            if r[0] < best[0]:
+                best = (r[0], w2, r[1], r[3])
+                print(f"  nuovo best: burden1={r[0]} K={len(w2)} celle={r[3]} "
+                      f"({nodes} nodi, {time.time()-t0:.0f}s)", flush=True)
+                if r[0] == 0:
+                    r2 = eval_word(w2)
+                    assert r2 is not None and r2[0] == 0, "ri-verifica arma fallita"
+                    weapon = {"burden1": 0, "K": len(w2),
+                              "word": "".join("R" if b else "L" for b in w2),
+                              "onset": r[1]}
+                    print(f"!!! PAROLA-ARMA TROVATA a K={len(w2)}: {weapon['word']} "
+                          f"(onset {r[1]})", flush=True)
+                    break
+            stack.append(w2)
+        if nodes % 50000 < 2:
+            print(f"  ... {nodes} nodi, stack {len(stack)}, best {best[0]}, "
+                  f"{time.time()-t0:.0f}s", flush=True)
+    out = {"mode": "dfs", "start": args.dfs_start, "cap": args.dfs_cap,
+           "extra": args.dfs_extra, "nodes": nodes,
+           "best": {"burden1": best[0], "K": len(best[1]),
+                    "word": "".join("R" if b else "L" for b in best[1]),
+                    "onset": best[2], "cells": [list(c) for c in best[3]]},
+           "weapon": weapon, "wall_deaths_by_depth": depth_deaths,
+           "elapsed_s": round(time.time() - t0, 1)}
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "record_weapon_dfs_summary.json")
+    with open(path, "w") as f:
+        json.dump(out, f, indent=1)
+    print(f"DFS: {nodes} nodi, best burden1={best[0]} a K={len(best[1])}; "
+          f"scritto {path} in {out['elapsed_s']} s", flush=True)
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--beam", type=int, default=300)
@@ -54,7 +125,25 @@ def main():
     ap.add_argument("--budget-s", type=int, default=1200)
     ap.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 1) - 1),
                     help="processi paralleli per la valutazione dei candidati (default: core-1)")
+    ap.add_argument("--per-class", type=int, default=250,
+                    help="beam stratificato: max candidati per firma (burden1, celle-residuo); "
+                         "0 = disattivo (comportamento v1)")
+    ap.add_argument("--dfs-start", type=str, default=None,
+                    help="modalita' DFS: parola LR di partenza (es. dal summary); esplora "
+                         "esaustivamente i PREPEND fino a --dfs-extra livelli")
+    ap.add_argument("--dfs-extra", type=int, default=24)
+    ap.add_argument("--dfs-cap", type=int, default=3,
+                    help="pota DFS: scarta rami con burden1 > cap")
+    ap.add_argument("--dfs-nodes", type=int, default=2_000_000)
+    ap.add_argument("--viable-k", type=int, default=6,
+                    help="ammetti in frontiera solo parole con una catena di prepend validi "
+                         "di profondita' >= k (0 = disattivo). Senza questo filtro il minimo "
+                         "puo' essere VACUO: parole senza passato non occorrono mai ai record "
+                         "di un'orbita eterna.")
     args = ap.parse_args()
+    if args.dfs_start:
+        dfs_mode(args)
+        return
     t0 = time.time()
 
     # semina: tutte le record-compatibili a K=10
@@ -75,6 +164,8 @@ def main():
                        "onset": seeds[0][2]}}
     frontier = seeds[:args.beam]
     weapon = None
+    best_ever = {"burden1": seeds[0][0], "K": K0,
+                 "word": "".join("R" if b else "L" for b in seeds[0][1])}
     K = K0
     while K < args.kmax and weapon is None and time.time() - t0 < args.budget_s:
         K += 1
@@ -85,11 +176,25 @@ def main():
             print(f"K={K}: frontiera vuota (pota totale), stop", flush=True)
             break
         nxt.sort(key=lambda x: x[0])
+        if args.viable_k > 0:
+            # vitalita' in parallelo sul prefisso ordinato (i soli che possono entrare)
+            cap_check = min(len(nxt), args.beam * 2)
+            tasks = [(w, args.viable_k) for (_, w, _, _) in nxt[:cap_check]]
+            flags = (pool.map(_viab_task, tasks, chunksize=4)
+                     if pool else [_viab_task(t) for t in tasks])
+            nxt = [row for row, f in zip(nxt[:cap_check], flags) if f]
+            if not nxt:
+                print(f"K={K}: nessun candidato VIVO (viable_k={args.viable_k}), stop",
+                      flush=True)
+                break
         b1, bw, bo, bcells = nxt[0]
         best_per_K[K] = {"burden1": b1,
                          "word": "".join("R" if b else "L" for b in bw),
                          "onset": bo,
                          "cells": [list(c) for c in bcells] if b1 <= 12 else None}
+        if b1 < best_ever["burden1"]:
+            best_ever = {"burden1": b1, "K": K,
+                         "word": best_per_K[K]["word"], "cells": best_per_K[K]["cells"]}
         print(f"K={K}: candidati {len(nxt)}, burden1 min {b1} "
               f"({best_per_K[K]['word']}, onset {bo})"
               + (f" celle {best_per_K[K]['cells']}" if b1 <= 6 else ""), flush=True)
@@ -100,13 +205,31 @@ def main():
             weapon = best_per_K[K]
             print(f"!!! PAROLA-ARMA TROVATA a K={K}: {weapon['word']} "
                   f"(onset {weapon['onset']})", flush=True)
-        frontier = [(b, w, o) for (b, w, o, _) in nxt[:args.beam]]
+        if args.per_class > 0:
+            # beam stratificato: al massimo per_class candidati per firma
+            # (burden1, residuo) — preserva linee con residui diversi ed evita che una
+            # singola famiglia periodica saturi il beam (ciclo limite osservato su Ryzen).
+            counts = {}
+            sel = []
+            for (b, w, o, cells) in nxt:
+                sig = (b, tuple(map(tuple, cells[:12])))
+                k = counts.get(sig, 0)
+                if k < args.per_class:
+                    counts[sig] = k + 1
+                    sel.append((b, w, o))
+                    if len(sel) >= args.beam:
+                        break
+            frontier = sel
+        else:
+            frontier = [(b, w, o) for (b, w, o, _) in nxt[:args.beam]]
 
     if pool:
         pool.close(); pool.join()
     out = {"beam": args.beam, "kmax": args.kmax, "workers": args.workers,
-           "best_per_K": best_per_K, "weapon": weapon,
+           "per_class": args.per_class, "viable_k": args.viable_k,
+           "best_per_K": best_per_K, "best_ever": best_ever, "weapon": weapon,
            "elapsed_s": round(time.time() - t0, 1)}
+    print("BEST-EVER:", best_ever)
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                         "record_weapon_summary.json")
     with open(path, "w") as f:

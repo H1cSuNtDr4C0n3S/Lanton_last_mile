@@ -193,10 +193,33 @@ Residui a 2 celle: {(-2,1),(0,2)} a K=58 e {(-2,1),(1,1)} a K=60 (campione K=60:
 LRLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL, onset 156). La cella **(-2,1)**
 e' la costante di ogni campione dal K=26 in poi: l'ultima sentinella. Gli onset dei germi
 SCENDONO con K (172 -> 168 -> 156): piu' passato dichiarato, ingresso piu' rapido. Il RESIDUO
-DEI CINQUE va quindi riletto come tappa, non ostruzione; il bersaglio e' burden1 = 0 (l'arma),
-plausibilmente raggiungibile spingendo K e beam. Resta l'onesta' di fondo: anche trovata l'arma,
-Link 1 non cade finche' non si mostra che un'orbita eterna non puo' evitare le parole-arma ai
-record per sempre (o che una famiglia di armi copre tutte le parole possibili ai record).
+DEI CINQUE va quindi riletto come tappa, non ostruzione.
+
+**AGGIORNAMENTO 2 (run Ryzen beam 8000 kmax 160 + analisi di vacuita' — la scoperta vera).**
+Il run largo NON riproduce il 2 stabilmente: i rami a fardello 2 vivono a K=60-70 (tre famiglie,
+residui {(-2,1),(1,1)} e {(-2,1),(0,2)}), poi a K=71 TUTTE le loro estensioni muoiono e il beam
+collassa in un CICLO LIMITE periodico a fardello 4 (blocchi `LLRLLLLR` pompati; candidati che
+ciclano con periodo 8). Diagnosi al microscopio (DFS esaustiva sui prepend):
+
+- i campioni a fardello 2 (K=58/60/66/70) hanno 0-1 prepend validi e si ESTINGUONO all'indietro
+  entro profondita' 3: NESSUN passato record-compatibile lungo li puo' produrre. Il loro
+  enunciato ai record e' **VACUO** per orbite eterne.
+- perfino il campione P(0) del ciclo (K=124, fardello 4) ha UNA sola estensione per 6 livelli e
+  si estingue a profondita' 7; il ciclo del beam era una STAFFETTA di 8 lignaggi fratelli
+  sfasati, ognuno mortale. La famiglia interna P(n) = inserzione di `LLRLLLLR`^n (fardello 4 e
+  residuo {(-2,1),(0,2),(1,1),(2,1)} INVARIANTI fino a K=444) e' reale ma i suoi membri non
+  sono suffissi l'uno dell'altro: non certifica un passato illimitato.
+
+**Lezione strutturale (il probabile teorema sotto):** coprire le celle di spoiler col footprint
+COSTRINGE il passato — i germi a fardello basso si vietano da soli la storia. Esiste un
+trade-off fardello <-> profondita'-del-passato D(w) (= max catena di prepend validi; l'albero e'
+finitamente ramificato, quindi D(w)=infinito <=> illimitato, Konig). Ogni suffisso di record di
+un'orbita eterna ha D = infinito (il suo passato reale E' l'estensione). Criterio dell'arma
+CORRETTO: burden1(w) = 0 **e** D(w) illimitato. Il cacciatore v3 introduce il filtro di
+vitalita' `--viable-k` (ammessi solo candidati con catena di prepend >= k) e il beam
+stratificato per firma di residuo `--per-class` (anti-staffetta). Congettura da decidere a §88:
+per ogni w record-compatibile con D(w) illimitato vale burden1(w) >= 1? (Se si', questa via
+verso Link 1 chiude onestamente; se no, l'arma esiste.)
 
 ## 87.7 Link 1 riformulato (stato esatto del crux)
 
@@ -221,22 +244,31 @@ senza che "lock W0-like" fosse un oggetto. Ora:
 Link 1 NON cade in questa sessione. Ma per la prima volta ha un enunciato con i denti, due
 attacchi nominati e un piano di misura che li decide.
 
-## 87.8 Trappola nuova
+## 87.8 Trappole nuove
 
 - **(v) lo spoiler puo' essere la propria scia invecchiata.** Non dedurre dallo Spoiler Vecchio
   che il caos "muoia di solitudine": una cella dipinta K+1 passi fa e' gia' "vecchia" a scala K,
   e il caos si sposta ~0 in 14 passi (rotore §77). Nessun K finito chiude per camping. La leva
   non e' l'esistenza dello spoiler ma la sua GEOMETRIA ai record (burden1) e il costo di
   pre-seminare il futuro contro B-T. Non riaprire argomenti "il caos resta senza neri vicini".
+- **(w) fardello basso ≠ parola viva: il germe puo' vietarsi il passato.** Un enunciato
+  "ai record con suffisso w serve uno spoiler in N celle" e' VACUO per orbite eterne se w non
+  ammette estensioni all'indietro record-compatibili di profondita' arbitraria (D(w) finito).
+  I minimi di fardello trovati per beam senza filtro di vitalita' (2 a K=58-70; P(0) a
+  fardello 4) sono tutti vacui: estinzione all'indietro entro profondita' 3-7. Prima di
+  enunciare qualsiasi teorema-parola ai record, certificare la vitalita' (catena di prepend
+  lunga, idealmente un ciclo di prepend). Il minimo che conta e' sul sottoinsieme VIVO.
 
 ## 87.9 Roadmap §88
 
-1. **Il Residuo dei Cinque:** (a) e' un pavimento vero? Ricerca esaustiva/beam largo sul Ryzen
-   (K oltre 40, beam >> 300, o enumerazione completa record-compatibile a K=20-24); (b) se
-   regge, attaccare il pigeonhole con la dinamica fra record consecutivi: la riga y_rel = 1 del
-   record corrente era la riga-record al momento del record precedente in quella colonna — cosa
-   puo' esserci di NERO e VECCHIO in {(-4,1),(-3,1),(-2,1),(1,1),(2,1)} dato come la formica ha
-   attraversato quella riga?
+1. **Trade-off fardello <-> passato (il nuovo crux di questa via):** decidere la congettura
+   "D(w) illimitato => burden1(w) >= 1". Strumenti: cacciatore v3 (`--viable-k`, `--per-class`)
+   sul Ryzen per il minimo VIVO empirico; automa dei prepend (stato = bordo iniziale della
+   camminata virtuale) per cercare cicli di prepend certificati a fardello basso, o per un
+   argomento di impossibilita'. Se il minimo vivo resta >= 1 e si capisce PERCHE', il pigeonhole
+   si sposta sulle celle del residuo vivo minimo (oggi: il Quattro {(-2,1),(0,2),(1,1),(2,1)},
+   vitalita' della famiglia ancora da certificare) e sulla dinamica fra record consecutivi
+   (la riga y_rel=1 del record corrente era la riga-record del passaggio precedente).
 2. **Dinamica dei record:** quali parole record-compatibili OCCORRONO davvero ai record delle 24
    orbite (e con che frequenza)? Se le parole a basso burden1 sono inevitabili ai record, il
    pigeonhole diventa l'attacco.

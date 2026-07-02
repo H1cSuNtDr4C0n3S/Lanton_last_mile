@@ -96,6 +96,11 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       sposta ~0 in 14 passi (rotore §77) — nessun K finito chiude per camping. Non riaprire
       argomenti "il caos resta senza neri vicini". La leva e' la geometria ai pose-record
       (burden1, Residuo dei Cinque) e il costo di pre-seminare il futuro contro B-T.
+  (w) **fardello basso ≠ parola viva** (CONE-LOCK §87e-2): un teorema-parola ai record e' VACUO
+      se la parola non ha estensioni all'indietro record-compatibili di profondita' arbitraria.
+      I minimi senza filtro di vitalita' (2 a K=58-70, 4 a P(0)) sono tutti vacui (estinzione
+      entro prof. 3-7). Certificare SEMPRE la vitalita' (catena/ciclo di prepend) prima di
+      enunciare; il minimo che conta e' sul sottoinsieme vivo.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -355,8 +360,12 @@ RECORD (B-T): a un record y-min davanti+riga-0 bianchi gratis, footprint in {y>=
 record-compatibile 18/16/14/10 a K=12/14/16/18; caccia beam 300 (K<=40): plateau a 5 celle da
 K=32 — POI FALSIFICATO come artefatto di beam dal run Ryzen certificato (beam 5000, kmax 60,
 parallelo): discesa 5 -> 4 (K=35) -> 3 (K=40) -> **2 (K=58/60)**, ancora in discesa al cap;
-residui {(-2,1),(0,2)} e {(-2,1),(1,1)}, con (-2,1) costante da K=26 (l'ultima sentinella);
-onset dei germi in discesa con K (172->156). Bersaglio: burden1=0 (arma).
+residui {(-2,1),(0,2)} e {(-2,1),(1,1)}, con (-2,1) costante da K=26 (l'ultima sentinella).
+POI (beam 8000, kmax 160): il 2 muore a K=71, il beam collassa in una STAFFETTA periodica a
+fardello 4; DFS sui prepend: TUTTI i campioni a fardello 2 e perfino P(0) del ciclo si
+estinguono all'indietro (prof. 3-7) => enunciati VACUI per orbite eterne (trappola w). Lezione:
+coprire spoiler costringe il passato; criterio arma corretto = burden1=0 E D(w) illimitato;
+cacciatore v3 con --viable-k e --per-class. Congettura §88: D illimitato => burden1 >= 1?
 Link 1 riformulato esatto, NON caduto; trappola (v). Prossimo §88: caccia all'arma (kmax/beam
 maggiori: burden1=0?); se trovata, forzatura ai record (l'arma da sola NON fa cadere Link 1);
 parole reali ai record; record doppi/angoli. Certificazione Ryzen §86-§87e COMPLETATA (bit-identica).
