@@ -1,0 +1,360 @@
+{
+ "LRRRR^3 (p5 x3, halo \u00a785)": {
+  "word": "LRRRRLRRRRLRRRR",
+  "realizzabile": true,
+  "lock_size": 10,
+  "neri": 1,
+  "bianchi": 9,
+  "raggio": 2,
+  "neri_extra_centro": 0,
+  "lock": [
+   [
+    -2,
+    0,
+    0
+   ],
+   [
+    -2,
+    1,
+    0
+   ],
+   [
+    -1,
+    -1,
+    0
+   ],
+   [
+    -1,
+    0,
+    0
+   ],
+   [
+    -1,
+    1,
+    0
+   ],
+   [
+    -1,
+    2,
+    0
+   ],
+   [
+    0,
+    -1,
+    0
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    1,
+    0
+   ],
+   [
+    0,
+    2,
+    0
+   ]
+  ],
+  "verifica": "necessita' tutte + sufficienza 1000 junk OK"
+ },
+ "LLRRRR^3 (p6 rotore r2)": {
+  "word": "LLRRRRLLRRRRLLRRRR",
+  "realizzabile": false,
+  "lock_parziale": [
+   [
+    -2,
+    0,
+    0
+   ],
+   [
+    -2,
+    1,
+    0
+   ],
+   [
+    -1,
+    0,
+    1
+   ],
+   [
+    -1,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    1,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    0
+   ]
+  ]
+ },
+ "LLRRLLRRRR^3 (p10)": {
+  "word": "LLRRLLRRRRLLRRLLRRRRLLRRLLRRRR",
+  "realizzabile": false,
+  "lock_parziale": [
+   [
+    -4,
+    0,
+    0
+   ],
+   [
+    -4,
+    1,
+    0
+   ],
+   [
+    -3,
+    0,
+    1
+   ],
+   [
+    -3,
+    1,
+    0
+   ],
+   [
+    -2,
+    0,
+    1
+   ],
+   [
+    -2,
+    1,
+    0
+   ],
+   [
+    -1,
+    0,
+    1
+   ],
+   [
+    -1,
+    1,
+    0
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    1,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    0
+   ]
+  ]
+ },
+ "p15^3 (LLLLRLRRRRLRRRR, puro-coda \u00a784)": {
+  "word": "LLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRR",
+  "realizzabile": true,
+  "lock_size": 21,
+  "neri": 5,
+  "bianchi": 16,
+  "raggio": 3,
+  "neri_extra_centro": 4,
+  "lock": [
+   [
+    -3,
+    -1,
+    0
+   ],
+   [
+    -3,
+    0,
+    0
+   ],
+   [
+    -2,
+    -2,
+    0
+   ],
+   [
+    -2,
+    -1,
+    0
+   ],
+   [
+    -2,
+    0,
+    0
+   ],
+   [
+    -2,
+    1,
+    0
+   ],
+   [
+    -1,
+    -3,
+    0
+   ],
+   [
+    -1,
+    -2,
+    0
+   ],
+   [
+    -1,
+    -1,
+    0
+   ],
+   [
+    -1,
+    0,
+    1
+   ],
+   [
+    -1,
+    1,
+    1
+   ],
+   [
+    0,
+    -3,
+    0
+   ],
+   [
+    0,
+    -2,
+    0
+   ],
+   [
+    0,
+    -1,
+    0
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    1,
+    -2,
+    0
+   ],
+   [
+    1,
+    -1,
+    0
+   ],
+   [
+    1,
+    0,
+    1
+   ],
+   [
+    2,
+    -1,
+    0
+   ],
+   [
+    2,
+    0,
+    0
+   ]
+  ],
+  "verifica": "necessita' tutte + sufficienza 1000 junk OK"
+ },
+ "p15^1": {
+  "word": "LLLLRLRRRRLRRRR",
+  "realizzabile": true,
+  "lock_size": 11,
+  "neri": 5,
+  "bianchi": 6,
+  "raggio": 2,
+  "neri_extra_centro": 4,
+  "lock": [
+   [
+    -1,
+    0,
+    1
+   ],
+   [
+    -1,
+    1,
+    1
+   ],
+   [
+    0,
+    -2,
+    0
+   ],
+   [
+    0,
+    -1,
+    0
+   ],
+   [
+    0,
+    0,
+    1
+   ],
+   [
+    0,
+    1,
+    1
+   ],
+   [
+    1,
+    -2,
+    0
+   ],
+   [
+    1,
+    -1,
+    0
+   ],
+   [
+    1,
+    0,
+    1
+   ],
+   [
+    2,
+    -1,
+    0
+   ],
+   [
+    2,
+    0,
+    0
+   ]
+  ],
+  "verifica": "necessita' tutte + sufficienza 1000 junk OK"
+ }
+}

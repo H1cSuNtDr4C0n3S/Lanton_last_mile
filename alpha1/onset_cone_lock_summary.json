@@ -1,0 +1,241 @@
+{
+ "convention": "alpha1_engine.c / libant.c; onset coda 104-periodica >=2080, estensione indietro, rot%4==0, drift!=0",
+ "lemma": "Replay-Lock: V_T coi colori iniziali e' il lock esatto (<=>) della corsa",
+ "cases": [
+  {
+   "name": "vuota",
+   "onset": 9977,
+   "ref_onset": 9977,
+   "gate_onset": true,
+   "lock_cells_total": 1816,
+   "lock_blacks": 0,
+   "lock_whites": 1816,
+   "seed_unread": [],
+   "blob_cells": 1376,
+   "blob_radius_cheb": 29,
+   "rent_per_period": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+   ],
+   "rent_p0": 0,
+   "rent_stable_size": 22,
+   "drift_per_period": [
+    -2,
+    2
+   ],
+   "trail_cells_in_blob": [
+    true,
+    true,
+    true
+   ],
+   "elapsed_s": 0.02
+  },
+  {
+   "name": "b1_(0,-2)",
+   "onset": 310,
+   "ref_onset": 310,
+   "gate_onset": true,
+   "lock_cells_total": 544,
+   "lock_blacks": 1,
+   "lock_whites": 543,
+   "seed_unread": [],
+   "blob_cells": 104,
+   "blob_radius_cheb": 9,
+   "rent_per_period": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+   ],
+   "rent_p0": 0,
+   "rent_stable_size": 22,
+   "drift_per_period": [
+    -2,
+    -2
+   ],
+   "trail_cells_in_blob": [
+    true,
+    true,
+    true
+   ],
+   "elapsed_s": 0.03
+  },
+  {
+   "name": "b2",
+   "onset": 162,
+   "ref_onset": 162,
+   "gate_onset": true,
+   "lock_cells_total": 497,
+   "lock_blacks": 2,
+   "lock_whites": 495,
+   "seed_unread": [],
+   "blob_cells": 57,
+   "blob_radius_cheb": 5,
+   "rent_per_period": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+   ],
+   "rent_p0": 0,
+   "rent_stable_size": 22,
+   "drift_per_period": [
+    -2,
+    -2
+   ],
+   "trail_cells_in_blob": [
+    true,
+    true,
+    true
+   ],
+   "elapsed_s": 0.03
+  },
+  {
+   "name": "b3",
+   "onset": 142,
+   "ref_onset": 142,
+   "gate_onset": true,
+   "lock_cells_total": 490,
+   "lock_blacks": 3,
+   "lock_whites": 487,
+   "seed_unread": [],
+   "blob_cells": 50,
+   "blob_radius_cheb": 5,
+   "rent_per_period": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+   ],
+   "rent_p0": 0,
+   "rent_stable_size": 22,
+   "drift_per_period": [
+    2,
+    2
+   ],
+   "trail_cells_in_blob": [
+    true,
+    true,
+    true
+   ],
+   "elapsed_s": 0.03
+  },
+  {
+   "name": "(7,-7)",
+   "onset": 106258,
+   "ref_onset": 106258,
+   "gate_onset": true,
+   "lock_cells_total": 8704,
+   "lock_blacks": 1,
+   "lock_whites": 8703,
+   "seed_unread": [],
+   "blob_cells": 8264,
+   "blob_radius_cheb": 72,
+   "rent_per_period": [
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22,
+    22
+   ],
+   "rent_p0": 0,
+   "rent_stable_size": 22,
+   "drift_per_period": [
+    2,
+    2
+   ],
+   "trail_cells_in_blob": [
+    true,
+    true,
+    true
+   ],
+   "elapsed_s": 0.1
+  }
+ ],
+ "selftests": {
+  "replay_b1": "OK",
+  "replay_vuota": "OK"
+ },
+ "elapsed_s": 2.5
+}

@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§86**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§88**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -83,6 +83,19 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       campanello di REALIZZABILITA', non indizio di fantasma. Ispezionare i sopravvissuti e
       tentare il testimone diretto prima di scalare il raggio (qui: nero isolato ⇒ (LRRRR)^3,
       teorema-finestra falso ma ridotto al TEOREMA HALO ⟺ esatto: 9 celle bianche, r<=2).
+  (u) **la scia d'arrivo e' gratis** (TRAIL-HALO §86): le posizioni t−1,t−2,t−3 di una lettura
+      deep giacciono nell'halo posteriore e i loro colori sono funzione delle ultime 3 svolte.
+      Prima di cercare un meccanismo "ambientale/termodinamico" per un enunciato di vicinato ai
+      deep-event, RICOSTRUIRE ALL'INDIETRO la scia: la classe stessa (deep = fuori-finestra) puo'
+      forzare l'enunciato per definizione (qui: Teorema della Scia ⟹ evitamento (LRRRR)^3 ai
+      deep e' teorema per ogni orbita, incluse le eterne). Corollario pratico: ogni statistica
+      di vicinato ai deep va prima scontata del contributo di scia.
+  (v) **lo spoiler puo' essere la propria scia invecchiata** (CONE-LOCK §87): lo Spoiler Vecchio
+      (eterna => nero d'eta'>=K entro raggio ~15-68 in ogni istante, K<=14) NON implica che il caos
+      "muoia di solitudine": una cella dipinta K+1 passi fa e' gia' vecchia a scala K e il caos si
+      sposta ~0 in 14 passi (rotore §77) — nessun K finito chiude per camping. Non riaprire
+      argomenti "il caos resta senza neri vicini". La leva e' la geometria ai pose-record
+      (burden1, Residuo dei Cinque) e il costo di pre-seminare il futuro contro B-T.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -326,6 +339,27 @@ pavimento-del-morso (§57). L'ostruzione vive nella coda lunga (age>1040, max 40
 non-abeliano. Deficit-di-consumo chiuso (trappola n); oggetto vero = grafo causale di rigenerazione
 ristretto alla coda lunga. Dettaglio: docs/CONSUMPTION_LEDGER_ADDENDUM.md.
 **AGGIORNAMENTO §80:** positive gate (§79.6) eseguito sul Ryzen (24 orbite reali, 16 core, 22s): MORTO.
+**AGGIORNAMENTO §87:** calcolo dei lock esteso alle corse reali (`docs/CONE_LOCK_ADDENDUM.md`).
+Lemma Replay-Lock (V_T coi colori iniziali = lock esatto <=> di ogni corsa finita, self-test 1000
+junk + 200 flip); Lemma del Cono (gate onset 5/5: vuota 9977 blob 1376 r29, b1 310 blob 104 r9;
+affitto periodico ESATTO 22 celle/periodo da p0=0, lock eterno finitamente descritto; le 3 celle
+di scia stanno in ogni blob); Lemma Finestra-K (colori del footprint degli ultimi K passi =
+funzione della parola, verificato su reale); CENSIMENTO germi finestra-K: ZERO buchi a K=6..14
+(50/154/448/1300/3680 germi, tutti onset) => TEOREMA DELLO SPOILER VECCHIO (eterna => nero
+d'eta'>=K entro raggio med 15 max 68, ogni istante, ogni K<=14); streak L/R cappate a 4.
+FORENSE onset 24/24 == header Ryzen: germe reale = 13-17 neri (mediana 13 = minimo §76) r<=7,
+interfaccia 1-2 periodi, fresh 100% da p2, f_bordo med 0.68, outward 23/24. KILL-GATE §79.1
+SCARICATO: raggio decisivo (prime-letture, word-minimale) cresce 18/38/93.5/118 con Delta=2/10/100/
+1000 periodi senza stabilizzare => niente programma a footprint limitato per deep->W0. Via dei
+RECORD (B-T): a un record y-min davanti+riga-0 bianchi gratis, footprint in {y>=1}; burden1 min
+record-compatibile 18/16/14/10 a K=12/14/16/18; caccia beam 300 (K<=40): plateau a 5 celle da
+K=32 — POI FALSIFICATO come artefatto di beam dal run Ryzen certificato (beam 5000, kmax 60,
+parallelo): discesa 5 -> 4 (K=35) -> 3 (K=40) -> **2 (K=58/60)**, ancora in discesa al cap;
+residui {(-2,1),(0,2)} e {(-2,1),(1,1)}, con (-2,1) costante da K=26 (l'ultima sentinella);
+onset dei germi in discesa con K (172->156). Bersaglio: burden1=0 (arma).
+Link 1 riformulato esatto, NON caduto; trappola (v). Prossimo §88: caccia all'arma (kmax/beam
+maggiori: burden1=0?); se trovata, forzatura ai record (l'arma da sola NON fa cadere Link 1);
+parole reali ai record; record doppi/angoli. Certificazione Ryzen §86-§87e COMPLETATA (bit-identica).
 L'alfabeto dei motivi locali co-moving agli eventi deep-black non satura (r=3 ~99,4% eventi unici;
 scoperta nuovi-motivi ultimo20%/primo20%=1,14; pooled unione/somma=0,979; intersezione 19/1,5M). Il
 lato-alpha (detrito) NON e' finito-stato — opposto al lato-beta/porta (§78, footprint 44 / P<=15). Tre

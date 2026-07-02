@@ -1,3 +1,85 @@
+# ============ §87 — LEGGERE PRIMA (sessione Cono Bianco / Spoiler Vecchio / Link 1) ============
+
+**Cosa e' successo a §87 (in una riga):** il calcolo dei lock §86b esteso alle corse reali:
+Lemma del Replay-Lock, Lemma del Cono, Lemma della Finestra-K, TEOREMA DELLO SPOILER VECCHIO
+(K<=14: orbita eterna => nero d'eta'>=K entro raggio ~15-68 in OGNI istante), forense onset
+24/24 (germe reale = germe minimo 13, interfaccia 1 periodo, nasce al bordo), kill-gate §79.1
+SCARICATO (raggio decisivo cresce 18->118 con Delta, nessun footprint limitato), via dei record
+(burden1 min 10 a K=18) e caccia all'arma fermata al PLATEAU DEL RESIDUO DEI CINQUE:
+{(-4,1),(-3,1),(-2,1),(1,1),(2,1)} da K=32 a 40 (beam, non pavimento dimostrato).
+Link 1 NON e' caduto ma ha per la prima volta un enunciato dinamico esatto e due attacchi nominati.
+
+**Dettagli completi:** `docs/CONE_LOCK_ADDENDUM.md` (§87.1-87.11). Trappola nuova (v): lo
+spoiler puo' essere la propria scia invecchiata — non dedurre morte-per-solitudine, nessun K
+finito chiude per camping; la leva e' la geometria ai record + pre-semina vs B-T.
+
+**File nuovi (tutti in alpha1/):** onset_cone_lock.py(+json), kwindow_spoiler_census.py(+json,
++log), onset_forensics.py(+json,+log), spoiler_quadrant_profile.py(+json,+log),
+record_weapon_hunt.py(+json,+log).
+
+**Gate della sessione (tutti verdi):** onset 9977/310/162/142/106258 (5/5); Replay-Lock 1000
+junk + 200 flip; lemma Finestra-K 150 sonde reali 0 mismatch; censimento K=6..14 ZERO buchi
+(50+154+448+1300+3680 germi, tutti onset); forense 24/24 == header dumps; tripwire replay e
+sotto-corse 0 divergenze; gate onset del profilo vs censimento 1300+3680 OK; ri-verifica
+indipendente del campione burden1=5.
+
+**Prossimo (§88, in ordine):** 1) Residuo dei Cinque: pavimento vero? (Ryzen: beam largo /
+enumerazione completa K=20-24) poi pigeonhole con la dinamica fra record consecutivi;
+2) quali parole occorrono DAVVERO ai record delle 24 orbite; 3) record doppi/angoli (5 parole
+K=14 con quadrante dietro-dx libero); 4) in coda: certificazione Ryzen §85-§87; lock delle 46
+parole L_hw (NB: motivi r=3, non parole di svolta — chiarire l'oggetto).
+
+**Nota operativa:** tutto sviluppato e validato sul container (1 core); la certificazione
+canonica Ryzen resta in coda. Convenzioni motore invariate (alpha1_engine.c; onset coda >=2080,
+estensione indietro, rot%4==0, drift!=0). Il drift per periodo va calcolato dall'heading REALE
+all'onset (bug corretto in sessione).
+
+# ================================================================================================
+
+# === AGGIORNAMENTO §86 (2026-07-02) — leggere PRIMA ===
+
+Stato: §86 (TRAIL-HALO) **ESEGUITO** (container Claude 1 core; §86a 59 s su 24 orbite, self-test
+4-heading + ⟺ randomizzato + snapshot VERDI, gate §85a esatti 24/24; §86b lock di prima-lettura,
+gate §85c VERDE). Addendum: `docs/TRAIL_HALO_ADDENDUM.md`. Strumenti:
+`alpha1/halo_occupancy_profile.py`, `alpha1/word_lock.py` (+ summary JSON e log).
+
+Esito (roadmap §85.7.1–2 — perche' il caos non presenta mai l'halo bianco ai deep?):
+- **TEOREMA DELLA SCIA (esatto)**: a ogni deep_1, almeno una delle tre celle di scia
+  {(0,1),(−1,1),(−1,0)} (frame heading-su) e' nera con eta' ≤3. Dimostrazione per induzione
+  all'indietro: se le svolte t−1,t−2,t−3 sono tutte L, allora pos(t−4)=centro e il centro non
+  esce mai dalla finestra viva r=1 ⟹ la lettura non e' deep. Verifica per-evento (tripwire T2):
+  **0 violazioni su 2.323.679 deep_1**, 24/24 orbite.
+- **Corollari-teorema**: (1) nessun deep-black inizia (LRRRR)^3 in NESSUNA orbita, incluse le
+  eterne — l'evitamento §84/§85a e' teorema, trappola (i) cade per questo enunciato; (2) lo 0%
+  motivi potati vuoti ai deep (§81) e' teorema via entailment §85.3; (3) firma del passato di
+  ogni cavalcata: halo bianco ⟹ svolte R,L,L,L e centro auto-dipinto 4 passi prima (T3: 0 su
+  5.716 cavalcate; T4: 0) — ogni cavalcata e' in-finestra, mai fresca/deep.
+- **§86a**: k_r min **1** (teorema STRETTO, niente enunciato "≥2"); media 4,563; k=1 solo sulle
+  3 celle di scia; s=0 nel 24,37% (nessun argomento statico bastava — serviva la scia); seme
+  0,15% (rifornimento ≈ tutta frontiera B-T); celle di scia arricchite (57,7%/56,9% vs ~48%);
+  k_r piatto sui bucket d'eta' (coerente trappola q).
+- **§86b (word-lock)**: LLRRRR e p10 **IRREALIZZABILI in ogni ambiente** (0/6 e 0/10 rotazioni,
+  contraddizione alla rilettura) — l'assenza dei rotori r≥2 dal caos e' teorema; p15 15/15
+  realizzabile, lock canonico = centro + **esattamente le 3 celle di scia** + (1,0) neri:
+  la dicotomia §84 (LRRRR evitato / p15 in eccesso x1,9) sono due facce dello stesso teorema —
+  LRRRR esige solitudine che la scia nega, p15 esige compagnia dove la scia la deposita.
+
+Onesta' §86.4–86.5: **Link 1 NON si muove** (i teoremi sono locali, non un invariante dinamico
+globale); restano empirici l'eccesso x1,9 e la massa-nucleo 0% dei p15-rides, e k_r~4,6.
+Bug-story §86.6 (offset vs celle assolute, catturato dal tripwire ⟺): antidoto permanente —
+self-test con formica in posizione casuale, mai solo all'origine.
+
+**Trappola nuova (u)**: la scia d'arrivo e' gratis — prima di cercare meccanismi ambientali per
+enunciati di vicinato ai deep, ricostruire all'indietro la scia (la classe deep = fuori-finestra
+puo' forzare l'enunciato per definizione); scontare la scia da ogni statistica di vicinato.
+
+**Prossimi passi (§87):**
+1. **Kill-gate §79.1** (deep-black-anchored decisive-depth sweep) — in coda da tre sezioni,
+   ora e' il momento: il lato-alpha ha esaurito le domande locali a diametro finito.
+2. **Lock del linguaggio W0**: lock delle 46 parole esatte di L_hw (§83) con `word_lock.py` —
+   confronto lock-caos vs lock-highway tra oggetti esatti (non ponte-vocabolario, trappola r).
+3. (Certificazione Ryzen, quando disponibile) ri-run §85a/b/c e §86a/b — nessun flag necessario.
+
 # === AGGIORNAMENTO §85 (2026-07-02) — leggere PRIMA ===
 
 Stato: §85 (LRRRR-HALO) **ESEGUITO** in tre tempi (container Claude 1 core; §85a 153 s su 24 orbite,
