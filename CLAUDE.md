@@ -404,6 +404,10 @@ Dettaglio: docs/WEAPON_VITALITY_ADDENDUM.md.
 (24 orbite): burden1 reale min 12 / med ~317 a K=101, mai <=6, zero w101, zero burden-0;
 TRIPWIRE del teorema 1620/1620 (>=1 colpevole nera a ogni record lontano dall'onset);
 3 record a UNA sola colpevole. Anello di occorrenza riformulato sul conteggio delle
-colpevoli (§89b: dinamica fra record consecutivi). docs/RECORD_WORD_CENSUS_ADDENDUM.md.
+colpevoli. **§89b:** G = passeggiata quasi bilanciata (med 96), detrito quasi statico
+(96% nere al record dopo, ~48% ancora colpevoli), eta' med ~18P (60%>=10P, 3722 di seme;
+soglia >=K forzata per costruzione), cheb med 15/max 75 (=raggi §87). Autopsie G=1 3/3:
+colpevole = PROPRIA SCIA a eta' K+1..K+13, cheb 3-6 (trappola v al bordo del pigeonhole).
+§89c: vincolo di autoconsistenza parola/scia, enumerabile. docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

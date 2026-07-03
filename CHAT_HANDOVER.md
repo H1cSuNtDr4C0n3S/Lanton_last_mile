@@ -1,4 +1,14 @@
-# ============ §89a (in corso) — le parole reali ai record ============
+# ============ §89a-b (in corso) — le parole reali ai record e la dinamica delle colpevoli ============
+
+**§89b (record_guilty_dynamics.py):** G = colpevoli per record: passeggiata quasi bilanciata
+(med 96, P giu' 0.43 / su 0.47), detrito quasi statico (96% ancora nere al record dopo, ma
+solo ~48% ancora colpevoli: si sposta il residuo, non il detrito), eta' med ~18 periodi
+(60% >= 10P; 3722 istanze di SEME mai ridipinte; soglia >=K forzata per costruzione, non
+scoperta), cheb med 15 max 75 (== raggi Spoiler Vecchio §87). **AUTOPSIE G=1 (3/3):
+colpevole unica di eta' K+1..K+13 a cheb 3-6 = la PROPRIA SCIA appena fuori finestra
+(trappola v misurata al bordo del pigeonhole).** §89c: l'evento "G=1 con colpevole di
+scia" e' un vincolo di autoconsistenza della parola (Scia §86 + Finestra-K §87) —
+enumerabile. Dettagli: docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 
 Censimento eseguito (`alpha1/record_word_census.py`, addendum `docs/RECORD_WORD_CENSUS_ADDENDUM.md`):
 1639 record y-min pre-onset sulle 24 orbite. Parole reali LONTANE dal minimo vivo
