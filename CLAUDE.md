@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§89**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§91**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -417,5 +417,16 @@ passati validi a prof. 40 => eta'((1,1)) > 141 a ogni record-w101 di qualsiasi o
 Dicotomia §90: evita-per-sempre (=> nero solo da seme, B-T esce dal seme => w101 VIETATA
 ai record tardivi) vs visita (=> verdetto della parola estesa, ricorsione); decidere con
 l'automa dei prepend. docs/RECORD_WORD_CENSUS_ADDENDUM.md.
+**AGGIORNAMENTO §90 (dicotomia decisa / ARMA / Muro dietro l'Uno):** il corno (b) e'
+reale (visita a prof. 57; sweep esaustivo a 46 = zero => eta'((1,1)) > 147). Coprente
+che lascia (1,1) BIANCA = **PAROLA-ARMA (burden1=0, K=158)**, 30/30 nel campione, ma
+muro all'indietro esatto [1x12,0] (D=12 uniforme a prof. 77/105/129); NERA => D<=4,
+burden 69..1976. Congettura raffinata: burden1=0 => D<=12. TEOREMA-BERSAGLIO §90d
+(Muro dietro l'Uno): U1 (bianca=>arma) + U2 (coprente=>D limitato) universali =>
+w101 prima parola VIETATA ai record a storia lunga (coerente con §89a: 0/1639).
+Trappola (z): raggiungibilita' astratta non trasferisce (automa a scatola validato V1
+ma non conclusivo; realizzazione concreta guidata > allargare scatole). Prossimo §91:
+U1, U2, poi famiglia inevitabile (parole a scia minima).
+docs/WEAPON_DICHOTOMY_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

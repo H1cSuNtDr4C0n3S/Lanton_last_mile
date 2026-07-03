@@ -1,3 +1,22 @@
+# ============ §90 — DICOTOMIA DECISA: L'ARMA ESISTE (vacua), MURO DIETRO L'UNO ============
+
+**Cosa e' successo a §90 (in una riga):** il corno (b) della dicotomia e' REALE (passato
+che visita (1,1) a prof. 57, trovato con caccia guidata dopo che lo sweep esaustivo a 46
+dava zero: eta' > 147); chi lascia (1,1) BIANCA e' una **PAROLA-ARMA (burden1=0,
+K=158, ingresso incondizionato — 30/30 nel campione)** ma ha muro all'indietro ESATTO
+`[1x12, 0]` (D=12, identico a prof. 77/105/129); chi la lascia NERA muore entro D<=4 con
+fardelli 69..1976. Congettura §88 RAFFORZATA in forma quantitativa: burden1=0 => D<=12.
+**TEOREMA-BERSAGLIO "MURO DIETRO L'UNO"** (§90d): se U1 (bianca=>arma) e U2 (coprente=>
+D limitato) valgono universalmente, w101 e' la prima parola VIETATA ai record delle
+orbite a storia lunga (coerente: §89a, 0 w101 su 1639 record reali). L'automa a scatola
+(§90a) e' costruito e validato ma non conclusivo: raggiungibilita' astratta non
+trasferisce (trappola z). **Prossimo §91: U1, U2 (lemma alla HALO sulla copertura /
+automa di bordo), poi vietanza -> famiglia inevitabile (parole a scia minima §89b).**
+Dettagli: docs/WEAPON_DICHOTOMY_ADDENDUM.md. File: prepend_box_automaton.py,
+record_target_hunt.py, record_cover_census.py (+json/log), sweep a 46.
+
+# ================================================================================================
+
 # ============ §89a-d (in corso) — parole reali ai record, colpevoli, Blocco Antico ============
 
 **§89d (record_ancient_block_tree.py):** Blocco Antico ESAUSTIVO sull'albero intero dei

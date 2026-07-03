@@ -1,0 +1,675 @@
+{
+ "campione": 60,
+ "nodi_esplorati": 11190,
+ "bianche": 30,
+ "nere": 30,
+ "viab_hist": {
+  "0": 30,
+  "4": 13,
+  "12": 17
+ },
+ "vive_al_target": 17,
+ "rows": [
+  {
+   "depth": 57,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLLLRLRRLLLLRRLLLLRRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 350,
+    "onset": 7976,
+    "residuo": 350
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLLLRLRRLLLLRRLLLLRRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 61,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLRRRRLLRLRRLLLLRRLLLLRRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 61,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 173,
+    "onset": 1589,
+    "residuo": 173
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLRRRRLLRLRRLLLLRRLLLLRRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 61,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLLLRLRRLLLLRRLLLLRRLRLLLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 61,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 226,
+    "onset": 2190,
+    "residuo": 226
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLLLRLRRLLLLRRLLLLRRLRLLLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 65,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLRRRRLLRLRRLLLLRRLLLLRRLRLLLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 65,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 380,
+    "onset": 5319,
+    "residuo": 380
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLRRRRLLRLRRLLLLRRLLLLRRLRLLLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 105,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLLLRLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 105,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 150,
+    "onset": 1651,
+    "residuo": 150
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLLLRLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 109,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRRRLLRLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 109,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 512,
+    "onset": 7593,
+    "residuo": 512
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRRRLLRLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 113,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRLLLLRRLLRLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 113,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 69,
+    "onset": 844,
+    "residuo": 69
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRLLLLRRLLRLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 121,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLLRRLRRRRLLLLRLLLLRLRRLLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 121,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 492,
+    "onset": 5966,
+    "residuo": 492
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLLRRLRRRRLLLLRLLLLRLRRLLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 125,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLLLLRLLLLRLRRLLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 125,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 213,
+    "onset": 2746,
+    "residuo": 213
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLLLLRLLLLRLRRLLRRLRRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 109,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLLLRLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 109,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 129,
+    "onset": 660,
+    "residuo": 129
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLLLRLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 113,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRRRLLRLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 113,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 131,
+    "onset": 900,
+    "residuo": 131
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRRRLLRLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 117,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRLLLLRRLLRLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 117,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 104,
+    "onset": 952,
+    "residuo": 104
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRLLRRLLLLRRLLRLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 49,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLRLLLLRLRLLRLLRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 49,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 596,
+    "onset": 10363,
+    "residuo": 596
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLRLLLLRLRLLRLLRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 53,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLRLLRRRRLLRLRLLRLLRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 53,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 526,
+    "onset": 8110,
+    "residuo": 526
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLRLLRRRRLLRLRLLRLLRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 77,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 77,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 78,
+    "onset": 1146,
+    "residuo": 78
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 81,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRLLLLRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 81,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 70,
+    "onset": 1130,
+    "residuo": 70
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRLLLLRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 85,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRLLRRRRLLRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 85,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 68,
+    "onset": 1122,
+    "residuo": 68
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRLLRRRRLLRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 89,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRLLRRLLLLRRLLRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 89,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 67,
+    "onset": 1122,
+    "residuo": 67
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLRLRLRRLLRRLLLLRRLLRRLRLLRRLLRRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 49,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRRLRLRRRRLRLRRRRLLLLRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 49,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 199,
+    "onset": 1070,
+    "residuo": 199
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRRLRLRRRRLRLRRRRLLLLRLLRLLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 65,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLLLRLRRLLLLRRLLLLRRLRLLRRRRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 65,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 94,
+    "onset": 5963,
+    "residuo": 94
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLLLRLRRLLLLRRLLLLRRLRLLRRRRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 69,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLRRRRLLRLRRLLLLRRLLLLRRLRLLRRRRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 69,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 1330,
+    "onset": 16335,
+    "residuo": 1330
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLRRRRLLRLRRLLLLRRLLLLRRLRLLRRRRLLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLLLRLRRRRLLLLRLLLLRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 97,
+    "onset": 1091,
+    "residuo": 97
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLLLRLRRRRLLLLRLLLLRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 61,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLRRRRLLRLRRRRLLLLRLLLLRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 61,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 177,
+    "onset": 5047,
+    "residuo": 177
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLRRRRLLRLRRRRLLLLRLLLLRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 125,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLLRRLRRRRLLLLRLLLLRLRRLLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 125,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 166,
+    "onset": 821,
+    "residuo": 166
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLLRRLRRRRLLLLRLLLLRLRRLLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 129,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLLLLRLLLLRLRRLLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 129,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 141,
+    "onset": 1245,
+    "residuo": 141
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLLLLRLLLLRLRRLLRRLRLLLLRLRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLRRRRLLLLRLLLLRLRRLRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 579,
+    "onset": 10992,
+    "residuo": 579
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLRRRRLLLLRLLLLRLRRLRLRRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 105,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRLRLLLLRLRRLRRLRLLLLRRRRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 105,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 246,
+    "onset": 3079,
+    "residuo": 246
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRLRLLLLRLRRLRRLRLLLLRRRRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 109,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRLRLLRRRRLLRLRRLRRLRLLLLRRRRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 109,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 462,
+    "onset": 4826,
+    "residuo": 462
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRLRLLRRRRLLRLRRLRRLRLLLLRRRRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 113,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 12,
+   "word_ext": "LLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRLRLLRRLLLLRRLLRLRRLRRLRLLLLRRRRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 113,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 69,
+    "onset": 860,
+    "residuo": 69
+   },
+   "D_sopra": 0,
+   "word_ext": "RLRRLLRRLLRRRRLLRRLLRRLRLLLLRRRRLRRLLRLLRRLLLLRRLLRRRRLLRRLRRRRLRLRLLRRLLLLRRLLRLRRLRRLRLLLLRRRRLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "W",
+   "eval": {
+    "burden1": 0,
+    "onset": 160,
+    "residuo": []
+   },
+   "D_sopra": 0,
+   "word_ext": "LRLRLRLLRLLLLRLRRRRLLLLRLRRLRRLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  },
+  {
+   "depth": 57,
+   "colore_11": "B",
+   "eval": {
+    "burden1": 1976,
+    "onset": 25423,
+    "residuo": 1976
+   },
+   "D_sopra": 4,
+   "word_ext": "RRLRLRLLRLLLLRLRRRRLLLLRLRRLRRLRLRRRRLLLLRLRRLRRRRLLLLRLL"
+  }
+ ],
+ "elapsed_s": 1.9
+}
