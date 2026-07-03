@@ -1,4 +1,14 @@
-# ============ §89a-b (in corso) — le parole reali ai record e la dinamica delle colpevoli ============
+# ============ §89a-c (in corso) — parole reali ai record, colpevoli, Blocco Antico ============
+
+**§89c (record_trail_forensics.py):** modello di autoconsistenza della scia VALIDATO 3/3
+sui G=1 reali (colpevole dipinta al passo 0 dell'estensione K+j, svolta R, mai rivisitata,
+scia pulita sul resto del residuo; fix di frame: ruotare con k=(-h0)%4). **TEOREMA DEL
+BLOCCO ANTICO:** (1,1) fuori dal footprint di sigma^m·tau·w101 per OGNI m (diretto 0..46 +
+induzione onset-lock) => ai record della famiglia certificata l'eta' della colpevole
+supera 405+8m: la scia recente non puo' salvare il pigeonhole lungo la famiglia. Buco
+nominato per §89d/§90: le parole vive a fardello basso FUORI famiglia (estendere il
+Blocco Antico all'albero vivo del corridoio §88, o esaurire per enumerazione il vincolo
+di autoconsistenza ai G=1). Dettagli: docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 
 **§89b (record_guilty_dynamics.py):** G = colpevoli per record: passeggiata quasi bilanciata
 (med 96, P giu' 0.43 / su 0.47), detrito quasi statico (96% ancora nere al record dopo, ma

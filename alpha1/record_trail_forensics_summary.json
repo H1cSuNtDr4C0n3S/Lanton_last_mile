@@ -1,0 +1,59 @@
+{
+ "part1_forensics": [
+  {
+   "orbit": 0,
+   "t": 55962,
+   "eta": 102,
+   "j": 1,
+   "cella": [
+    -3,
+    3
+   ],
+   "burden": 13,
+   "residuo_altri": 12,
+   "word_determinati_bianchi": 0,
+   "assunzioni_passato_profondo": 12,
+   "footprint_esteso": 47
+  },
+  {
+   "orbit": 18,
+   "t": 2552,
+   "eta": 114,
+   "j": 13,
+   "cella": [
+    -1,
+    5
+   ],
+   "burden": 13,
+   "residuo_altri": 12,
+   "word_determinati_bianchi": 1,
+   "assunzioni_passato_profondo": 11,
+   "footprint_esteso": 53
+  },
+  {
+   "orbit": 19,
+   "t": 115004,
+   "eta": 104,
+   "j": 3,
+   "cella": [
+    0,
+    6
+   ],
+   "burden": 31,
+   "residuo_altri": 30,
+   "word_determinati_bianchi": 0,
+   "assunzioni_passato_profondo": 30,
+   "footprint_esteso": 52
+  }
+ ],
+ "part2_blocco_antico": {
+  "m_diretto": [
+   0,
+   46
+  ],
+  "suffix_len_base": 405,
+  "eta_minima": "405+8m",
+  "v0_contains_11": true
+ },
+ "elapsed_s": 0.5
+}

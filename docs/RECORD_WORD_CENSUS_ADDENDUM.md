@@ -95,3 +95,55 @@ e' soddisfacibile all'infinito o si esaurisce (stile checklist §61-66, ma sul l
 
 Inventario: `alpha1/record_guilty_dynamics.py`, `record_guilty_dynamics_summary.json`,
 `record_guilty_dynamics.log`.
+
+## 89c. La scia al bordo del pigeonhole: forense + Teorema del Blocco Antico
+
+**Riepilogo in una frase:** il modello di autoconsistenza della scia e' validato 3/3 sui
+G=1 reali (la colpevole e' dipinta ESATTAMENTE al passo 0 della parola estesa di
+lunghezza K+j, svolta R, mai rivisitata, e la stessa scia non sporca il resto del
+residuo), mentre sulla famiglia certificata vale il **TEOREMA DEL BLOCCO ANTICO**: la
+colpevole (1,1) e' fuori dal footprint di sigma^m·tau·w101 per OGNI m, quindi ai record
+della famiglia la scia recente non puo' MAI salvare il pigeonhole — l'eta' del blocco
+richiesto supera 405+8m e diverge con la profondita' del match.
+
+Strumento: `alpha1/record_trail_forensics.py` (+`_summary.json`, `.log`).
+
+**Parte 1 — forense (3/3 verde, con un fix di frame istruttivo).** Per ciascun evento
+G=1 di §89b, con a = eta' e j = a-K: la parola estesa w' = svolte(t-a..t-1) e'
+realizzabile, footprint in {y>=1}; la colpevole e' visitata SOLO al passo 0 (l'eta' e'
+l'ultima visita), con svolta R (dipinge nero), e il germe di w' e' nero su di lei
+(colore word-determinato, Finestra-(K+j)):
+
+| orb | t | j | cella | burden | residuo-altri in footprint(w') (bianchi, ok) | assunzioni profonde |
+|-----|---|---|-------|--------|----------------------------------------------|---------------------|
+| 0 | 55962 | 1 | (-3,3) | 13 | 0/12 | 12 |
+| 18 | 2552 | 13 | (-1,5) | 13 | 1/12 | 11 |
+| 19 | 115004 | 3 | (0,6) | 31 | 0/30 | 30 |
+
+Nota di frame (per il §5 di chiunque riusi il codice): l'heading di FINE del cammino
+virtuale della parola estesa NON e' 0 in generale (dipende dall'heading reale all'inizio
+dell'estensione); le posizioni relative vanno ruotate con k=(-h0)%4 come fa
+`to_anchor_frame`, altrimenti il check di visita fallisce su 2 eventi su 3.
+
+**Parte 2 — TEOREMA DEL BLOCCO ANTICO (famiglia certificata §88).** residuo = {(1,1)}
+implica (1,1) fuori dal footprint; verificato direttamente per m = 0..46 e per OGNI m
+via l'induzione onset-lock ((1,1) appartiene a V0, i blocchi nuovi sono disgiunti da V0
+per sempre). Enunciato: **se le ultime 405+8m svolte di un'orbita sono
+sigma^m·tau·w101, l'orbita non ha visitato (1,1) in quell'arco; per un'eterna
+non-highway la colpevole (1,1) deve quindi avere eta' > 405+8m.** Al crescere del match
+la pre-semina richiesta diverge: lungo la famiglia certificata il meccanismo che salva
+le orbite reali ai G=1 (scia di eta' ~K, §89b) e' STRUTTURALMENTE indisponibile.
+
+**Stato del pigeonhole dopo §89:** due prong misurati/dimostrati e un buco nominato.
+(a) Alle orbite reali il bordo G=1 e' salvato dalla scia minima (eta' K+1..K+13) — ma le
+parole reali hanno fardello alto e non appartengono a famiglie vive certificate.
+(b) Sulla famiglia viva certificata la scia non puo' salvare — ma nessuna orbita reale
+la presenta (0/1639). Il buco: le parole a fardello basso VIVE che le orbite eterne
+potrebbero presentare ai record senza appartenere alla famiglia. §89d/§90: o si dimostra
+che il vincolo di autoconsistenza (a) si esaurisce (enumerazione delle coppie
+parola/cella-di-scia con G=1 possibile), o si estende il Blocco Antico dall'unica
+famiglia certificata all'intero albero vivo a fardello basso (il corridoio esponenziale
+del §88 Test C).
+
+Inventario: `alpha1/record_trail_forensics.py`, `record_trail_forensics_summary.json`,
+`record_trail_forensics.log`.

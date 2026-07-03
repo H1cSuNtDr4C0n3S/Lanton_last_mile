@@ -408,6 +408,11 @@ colpevoli. **§89b:** G = passeggiata quasi bilanciata (med 96), detrito quasi s
 (96% nere al record dopo, ~48% ancora colpevoli), eta' med ~18P (60%>=10P, 3722 di seme;
 soglia >=K forzata per costruzione), cheb med 15/max 75 (=raggi §87). Autopsie G=1 3/3:
 colpevole = PROPRIA SCIA a eta' K+1..K+13, cheb 3-6 (trappola v al bordo del pigeonhole).
-§89c: vincolo di autoconsistenza parola/scia, enumerabile. docs/RECORD_WORD_CENSUS_ADDENDUM.md.
+**§89c:** forense 3/3 (colpevole = passo 0 dell'estensione K+j, svolta R, mai rivisitata;
+frame: ruotare con k=(-h0)%4) + **TEOREMA DEL BLOCCO ANTICO**: (1,1) fuori dal footprint
+di sigma^m·tau·w101 per OGNI m => eta' colpevole > 405+8m ai record della famiglia: la
+scia recente non salva il pigeonhole lungo la famiglia certificata. Buco §89d/§90: parole
+vive fuori-famiglia (estendere Blocco Antico all'albero vivo, o esaurire l'autoconsistenza
+G=1 per enumerazione). docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.
