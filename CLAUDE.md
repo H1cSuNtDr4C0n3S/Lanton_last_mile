@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§91**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§92**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -420,13 +420,24 @@ l'automa dei prepend. docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 **AGGIORNAMENTO §90 (dicotomia decisa / ARMA / Muro dietro l'Uno):** il corno (b) e'
 reale (visita a prof. 57; sweep esaustivo a 46 = zero => eta'((1,1)) > 147). Coprente
 che lascia (1,1) BIANCA = **PAROLA-ARMA (burden1=0, K=158)**, 30/30 nel campione, ma
-muro all'indietro esatto [1x12,0] (D=12 uniforme a prof. 77/105/129); NERA => D<=4,
-burden 69..1976. Congettura raffinata: burden1=0 => D<=12. TEOREMA-BERSAGLIO §90d
-(Muro dietro l'Uno): U1 (bianca=>arma) + U2 (coprente=>D limitato) universali =>
-w101 prima parola VIETATA ai record a storia lunga (coerente con §89a: 0/1639).
+morta all'indietro: K=158 ha D=0, le profonde muro esatto [1x12,0] (D=12 uniforme a
+prof. 77/105/129); NERA => D<=4, burden 67..1976. Congettura raffinata: burden1=0 =>
+D<=12. TEOREMA-BERSAGLIO §90d (Muro dietro l'Uno, enunciato corretto a §91): orbite
+ETERNE, record y-min STRETTI fuori da un intorno finito del seme (coerente §89a: 0/1639).
 Trappola (z): raggiungibilita' astratta non trasferisce (automa a scatola validato V1
-ma non conclusivo; realizzazione concreta guidata > allargare scatole). Prossimo §91:
-U1, U2, poi famiglia inevitabile (parole a scia minima).
+ma non conclusivo; realizzazione concreta guidata > allargare scatole).
 docs/WEAPON_DICHOTOMY_ADDENDUM.md.
+**AGGIORNAMENTO §91 (U1 dimostrato, lacuna = U2-NERO):** U1 = TEOREMA DEL RIGIOCO
+BIANCO (coprente-bianca => arma, burden1=0 onset 160), dimostrazione via Replay-Lock +
+residuo certificato, RIPARATA dal pannello di scettici (buco d'orizzonte: la rilevazione
+legge fino a T=2600 => usare V-DAGA, 576 celle; check G1b: V-DAGA INT {y>=1} SUB
+F U {(1,1)}, zero extra — lezione: l'orizzonte giusto e' quello della RILEVAZIONE, non
+dell'evento). Attacco: 1859 armi fresche, 0 controesempi. Ramo bianco chiuso per le
+eterne senza bound di vitalita'; resta U2-NERO (coprente-nera => D<=4; tasca 15 celle
+su 2 righe). Enunciato del Muro corretto: vietanza per ETERNE ai record y-min STRETTI
+fuori da un intorno finito del seme ("storia lunga" NON basta; le convergenti possono
+presentare = ingresso forzato). Prossimo §92: certificato U2-NERO alla-HALO
+(esatta-in-striscia, uscita=sopravvivenza), poi famiglia inevitabile (scia minima §89b).
+docs/WALL_BEHIND_ONE_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

@@ -3,8 +3,8 @@
 **Riepilogo in una frase:** la dicotomia §89d e' stata DECISA sul campo: i passati di
 w101 che visitano (1,1) esistono (dal prof. 49, mai entro 46: esaustivo), quelli che la
 lasciano bianca sono PAROLE-ARMA (burden1 = 0, ingresso incondizionato — 30/30 nel
-campione) ma muoiono all'indietro con un muro esatto e uniforme [1x12, 0], quelli che la
-lasciano nera muoiono entro 4; ne emerge il TEOREMA-BERSAGLIO "MURO DIETRO L'UNO"
+campione) ma muoiono all'indietro (le corte subito, D = 0; le profonde con un muro
+esatto e uniforme [1x12, 0]), quelli che la lasciano nera muoiono entro 4; ne emerge il TEOREMA-BERSAGLIO "MURO DIETRO L'UNO"
 (vietanza di w101 ai record di orbite a storia lunga), gia' coerente con ogni misura
 (§89a: zero w101 su 1639 record reali), ridotto a DUE enunciati universali finiti
 ancora aperti (§91).
@@ -52,8 +52,9 @@ campione NON esaustivo, dichiarato):
 
 - **bianche 30/30 = armi** (burden1 = 0, onset 160): lasciare (1,1) bianca fa rigiocare
   la corsa identica e svuota il residuo — nel campione la coincidenza e' perfetta;
-- **nere 30/30 = fardelli enormi** (burden1 69..1976): leggere nero su (1,1) fa
-  divergere la corsa del germe subito e il conto esplode;
+- **nere 30/30 = fardelli enormi** (burden1 67..1976; correzione del pannello §91,
+  l'estremo inferiore era stato scritto 69): leggere nero su (1,1) fa divergere la
+  corsa del germe subito e il conto esplode;
 - vitalita' all'indietro: nere D <= 4; bianche D = 0 (le corte) oppure **D = 12 ESATTO**
   (le profonde): muro esaustivo `[1,1,1,1,1,1,1,1,1,1,1,1,0]` — dodici prepend FORZATI
   (catena unica), poi estinzione totale — IDENTICO per le armi a prof. 77, 105 e 129.
@@ -74,14 +75,20 @@ record-compatibile (automatico ai record stretti). Allora:
    Viva §88) viene dal SEME INIZIALE; i record B-T marciano fuori da ogni seme finito
    => ai record tardivi questo corno muore;
 2. se il passato visita (1,1) e la lascia BIANCA: la parola estesa e' un'ARMA =>
-   ingresso incondizionato => vietato alle eterne; e comunque il passato non si estende
-   oltre D <= 12 all'indietro => nessuna orbita con storia > prof.+12 puo' trovarsi qui;
-3. se la lascia NERA: il passato muore all'indietro entro D <= 4 => idem.
+   ingresso incondizionato => vietato alle eterne (per U1, §91a: incondizionato);
+3. se la lascia NERA: per U2-NERO il passato non si estende oltre D <= 4 sopra la
+   coprente => la visita a (1,1) avviene nei primi <= 4 passi di VITA dell'orbita =>
+   la cella (1,1) del record giace in un intorno finito dell'origine (Cheb ~<= 5):
+   impossibile ai record lontani.
 
-**Se (2) e (3) valgono UNIVERSALMENTE (oggi: campione 60/60 + 3 muri esaustivi), nessuna
-orbita con storia sufficientemente lunga puo' presentare w101 a un record y-min: la
-prima parola VIETATA ai record.** Coerenza esterna gia' in atti: §89a, zero occorrenze
-di w101 su 1639 record reali.
+**Enunciato corretto (riscritto dopo il pannello §91 — la versione "storia lunga" era
+difettosa): per un'orbita ETERNA non-highway, a ogni record y-min STRETTO con posa
+fuori da un intorno finito dell'origine/seme, presentare w101 come suffisso e'
+impossibile; B-T da' infiniti record fuori da ogni intorno finito.** Le orbite
+convergenti possono presentarla (ingresso forzato, non violazione); "storia lunga" da
+sola non basta (una visita precoce a (1,1) resta possibile vicino al seme). Coerenza
+esterna gia' in atti: §89a, zero occorrenze di w101 su 1639 record reali. Lacuna
+residua: U2-NERO universale (vedi §91).
 
 Le due lacune per §91 (entrambe finite-flavored, su un insieme infinito ma strutturato):
 - **U1 (bianche = armi):** ogni coprente che lascia (1,1) bianca ha burden1 = 0.

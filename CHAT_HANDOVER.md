@@ -1,14 +1,37 @@
+# ============ §91 — U1 DIMOSTRATO (Rigioco Bianco), lacuna ridotta a U2-NERO ============
+
+**Cosa e' successo a §91 (in una riga):** U1 e' un TEOREMA — Teorema del Rigioco Bianco:
+ogni coprente record-compatibile che lascia (1,1) bianca e' una parola-arma (burden1=0,
+onset 160) — dimostrazione in 6 passi via Replay-Lock + residuo certificato, RIPARATA
+dopo che il pannello di scettici ha trovato un buco d'orizzonte reale (la rilevazione
+legge fino a T=2600: servono le 576 celle di V-DAGA, non le 81 di V; riparazione = check
+G1b, zero celle extra a y>=1). Verifica G1-G4: 60/60 censimento + **1859 armi fresche,
+zero controesempi**. Corollario: il ramo bianco del Muro e' chiuso per le eterne SENZA
+bound di vitalita'. U2 ridotto a **U2-NERO** (coprente-nera => D<=4; tasca misurata:
+15 celle su due righe y={1,2}, bbox nero [0,2]x[0,1] rel (1,1)) con certificato finito
+alla-HALO progettato (§92: esatta-in-striscia, uscita=sopravvivenza). Enunciato del Muro
+CORRETTO (pannello): vietanza per orbite ETERNE ai record y-min STRETTI fuori da un
+intorno finito del seme — "storia lunga" non basta, l'ipotesi giusta e' spaziale; le
+convergenti possono presentare w101 (ingresso forzato). Fix fattuali: nere 67..1976;
+l'arma K=158 ha D=0 (il muro [1x12,0] e' delle armi profonde 77..129).
+**Prossimo (§92):** certificato U2-NERO sulla tasca; poi famiglia inevitabile (parole a
+scia minima §89b). Dettagli: docs/WALL_BEHIND_ONE_ADDENDUM.md.
+File: alpha1/u1_replay_theorem.py, alpha1/u2_cover_rail_map.py (+json +log).
+
+# ================================================================================================
+
 # ============ §90 — DICOTOMIA DECISA: L'ARMA ESISTE (vacua), MURO DIETRO L'UNO ============
 
 **Cosa e' successo a §90 (in una riga):** il corno (b) della dicotomia e' REALE (passato
 che visita (1,1) a prof. 57, trovato con caccia guidata dopo che lo sweep esaustivo a 46
 dava zero: eta' > 147); chi lascia (1,1) BIANCA e' una **PAROLA-ARMA (burden1=0,
-K=158, ingresso incondizionato — 30/30 nel campione)** ma ha muro all'indietro ESATTO
-`[1x12, 0]` (D=12, identico a prof. 77/105/129); chi la lascia NERA muore entro D<=4 con
-fardelli 69..1976. Congettura §88 RAFFORZATA in forma quantitativa: burden1=0 => D<=12.
-**TEOREMA-BERSAGLIO "MURO DIETRO L'UNO"** (§90d): se U1 (bianca=>arma) e U2 (coprente=>
-D limitato) valgono universalmente, w101 e' la prima parola VIETATA ai record delle
-orbite a storia lunga (coerente: §89a, 0 w101 su 1639 record reali). L'automa a scatola
+K=158, ingresso incondizionato — 30/30 nel campione)** ma muore all'indietro: la prima
+(K=158) ha D=0, le profonde hanno muro ESATTO `[1x12, 0]` (D=12, identico a prof.
+77/105/129); chi la lascia NERA muore entro D<=4 con fardelli 67..1976. Congettura §88 RAFFORZATA in forma quantitativa: burden1=0 => D<=12.
+**TEOREMA-BERSAGLIO "MURO DIETRO L'UNO"** (§90d, enunciato CORRETTO dal pannello §91):
+per un'orbita ETERNA, a ogni record y-min STRETTO con posa fuori da un intorno finito
+dell'origine/seme, presentare w101 e' impossibile — modulo U2-NERO (U1 e' DIMOSTRATO,
+vedi blocco §91). Coerente: §89a, 0 w101 su 1639 record reali. L'automa a scatola
 (§90a) e' costruito e validato ma non conclusivo: raggiungibilita' astratta non
 trasferisce (trappola z). **Prossimo §91: U1, U2 (lemma alla HALO sulla copertura /
 automa di bordo), poi vietanza -> famiglia inevitabile (parole a scia minima §89b).**
