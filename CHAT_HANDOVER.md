@@ -1,4 +1,14 @@
-# ============ §89a-c (in corso) — parole reali ai record, colpevoli, Blocco Antico ============
+# ============ §89a-d (in corso) — parole reali ai record, colpevoli, Blocco Antico ============
+
+**§89d (record_ancient_block_tree.py):** Blocco Antico ESAUSTIVO sull'albero intero dei
+passati di w101 (realizzabilita' + record-compat, onset NON richiesto: sopra-insieme del
+muro; conteggi identici => il filtro-onset non pota mai). 285.122 nodi, 91.027 passati
+validi a prof. 40, **ZERO visite a (1,1)** => TEOREMA: a ogni record y-min con suffisso
+w101 (qualsiasi orbita), eta'((1,1)) > 141. DICOTOMIA per §90: (a) il passato evita (1,1)
+per sempre => nero da seme iniziale, e B-T marcia fuori da ogni seme => w101 VIETATA ai
+record tardivi delle eterne; (b) il passato visita (1,1) => verdetto word-determinato
+dalla parola estesa (ricorsione). §90 = decidere (b) a ogni profondita' con l'automa dei
+prepend (stato = bordo della camminata virtuale). Dettagli: docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 
 **§89c (record_trail_forensics.py):** modello di autoconsistenza della scia VALIDATO 3/3
 sui G=1 reali (colpevole dipinta al passo 0 dell'estensione K+j, svolta R, mai rivisitata,

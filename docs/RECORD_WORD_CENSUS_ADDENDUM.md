@@ -147,3 +147,35 @@ del §88 Test C).
 
 Inventario: `alpha1/record_trail_forensics.py`, `record_trail_forensics_summary.json`,
 `record_trail_forensics.log`.
+
+## 89d. Il Blocco Antico sull'albero INTERO dei passati (esaustivo, prof. 40)
+
+**Riepilogo in una frase:** NESSUN passato realizzabile e record-compatibile di w101
+(albero esaustivo dei prepend, onset NON richiesto: 285.122 nodi, 91.027 passati validi
+a prof. 40) visita la cella (1,1) entro 40 passi ⇒ **TEOREMA: a ogni record y-min di
+QUALSIASI orbita con suffisso w101, l'eta' di (1,1) supera 141** — il Blocco Antico
+passa dalla famiglia certificata a TUTTI i passati possibili, a profondita' finita.
+
+Strumento: `alpha1/record_ancient_block_tree.py` (+`_summary.json`, `.log`; 21 s).
+Il punto di metodo: un passato reale non deve avere germe con onset — la validita' di
+un passato e' solo realizzabilita' + footprint in {y>=1}. L'albero cosi' definito e' un
+SOPRAINSIEME del muro §88 Test B; i conteggi risultano IDENTICI (2,1x16,2,3,5,8,...,
+crescita ~x1.65): il filtro-onset non ha mai potato nulla, coerente con §87b zero buchi.
+La posizione aggiunta dal prepend a prof. j e' la posa reale a t-101-j; w101 stesso
+evita (1,1) (residuo => fuori footprint). Zero visite su tutti i livelli 1..40.
+
+**La dicotomia per §90 (discesa ben fondata).** A ogni record con suffisso w101, il
+passato reale a profondita' arbitraria o (a) EVITA (1,1) per sempre — allora il nero su
+(1,1) risale al seme iniziale, e i record B-T marciano fuori da ogni seme finito: ai
+record tardivi presentare w101 forza l'ingresso, cioe' **w101 diventa parola VIETATA ai
+record tardivi delle eterne** — o (b) VISITA (1,1) a profondita' j — allora il colore di
+(1,1) e' word-determinato dalla parola estesa (Finestra-(101+j)) e il verdetto d'ingresso
+passa alla parola piu' lunga (ricorsione su un oggetto piu' informato). Il §89d dimostra
+che il corno (b) NON si attiva nei primi 40 livelli. §90: decidere (b) a OGNI profondita'
+con l'automa dei prepend (stato = bordo della camminata virtuale, roadmap §88.1) — se
+(b) non si attiva mai, il corno (a) e' l'unico e il pigeonhole sull'Uno si chiude per i
+record-w101; restera' l'occorrenza (nessuna orbita reale presenta w101, §89a: il teorema
+sarebbe di vietanza, non di cattura).
+
+Inventario: `alpha1/record_ancient_block_tree.py`, `record_ancient_block_tree_summary.json`,
+`record_ancient_block_tree.log`.

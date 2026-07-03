@@ -411,8 +411,11 @@ colpevole = PROPRIA SCIA a eta' K+1..K+13, cheb 3-6 (trappola v al bordo del pig
 **§89c:** forense 3/3 (colpevole = passo 0 dell'estensione K+j, svolta R, mai rivisitata;
 frame: ruotare con k=(-h0)%4) + **TEOREMA DEL BLOCCO ANTICO**: (1,1) fuori dal footprint
 di sigma^m·tau·w101 per OGNI m => eta' colpevole > 405+8m ai record della famiglia: la
-scia recente non salva il pigeonhole lungo la famiglia certificata. Buco §89d/§90: parole
-vive fuori-famiglia (estendere Blocco Antico all'albero vivo, o esaurire l'autoconsistenza
-G=1 per enumerazione). docs/RECORD_WORD_CENSUS_ADDENDUM.md.
+scia recente non salva il pigeonhole lungo la famiglia certificata. **§89d:** Blocco Antico esaustivo sull'ALBERO INTERO dei passati di w101 (onset non
+richiesto; conteggi == muro: il filtro-onset non pota mai): zero visite a (1,1) su 91.027
+passati validi a prof. 40 => eta'((1,1)) > 141 a ogni record-w101 di qualsiasi orbita.
+Dicotomia §90: evita-per-sempre (=> nero solo da seme, B-T esce dal seme => w101 VIETATA
+ai record tardivi) vs visita (=> verdetto della parola estesa, ricorsione); decidere con
+l'automa dei prepend. docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.
