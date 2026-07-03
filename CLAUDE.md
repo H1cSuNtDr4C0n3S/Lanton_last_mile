@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§88**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§89**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -101,6 +101,15 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       I minimi senza filtro di vitalita' (2 a K=58-70, 4 a P(0)) sono tutti vacui (estinzione
       entro prof. 3-7). Certificare SEMPRE la vitalita' (catena/ciclo di prepend) prima di
       enunciare; il minimo che conta e' sul sottoinsieme vivo.
+  (x) **il fondo del testimone DFS non e' il regime** (WEAPON-VITALITY §88): le lettere piu'
+      profonde di un testimone early-exit sono le meno vincolate; uno scan di periodicita'
+      eventuale che pretende il periodo fino all'ultima lettera boccia cicli REALI (§88: periodo
+      8 con ~40 periodi osservati, invisibile a transiente 480). Antidoto: finestra periodica
+      interna massima, poi ri-certificare σ,τ da zero (il testimone e' solo un suggeritore).
+  (y) **collo di bottiglia ≠ forzatura eterna** (WEAPON-VITALITY §88): il muro dei prepend puo'
+      essere a binario unico per un tratto finito (prof. 2..17 dietro w101) e riaprirsi
+      esponenzialmente (×1.65). Dichiarare sempre fino a che profondita' l'unicita' e'
+      esaustiva; non dedurre forzatura globale del passato.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -119,7 +128,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -374,5 +383,22 @@ scoperta nuovi-motivi ultimo20%/primo20%=1,14; pooled unione/somma=0,979; inters
 lato-alpha (detrito) NON e' finito-stato — opposto al lato-beta/porta (§78, footprint 44 / P<=15). Tre
 falsificazioni in fila (deep->W0 §59, deficit §79, alfabeto finito §80): il crux di Link1 e'
 irriducibilmente dinamico (coerente §28.2). Trappola (o). Dettaglio: docs/DEEP_MOTIF_SATURATION_ADDENDUM.md.
+**AGGIORNAMENTO §88 (Parola Viva / Residuo dell'Uno):** la caccia v3 CON vitalita' (beam 4000,
+kmax 120, viable-k 8, per-class 200, Ryzen 19 min) scende a **burden1=1 a K=101..120, residuo
+{(1,1)}**, weapon null; il collasso a staffetta-4 di §87e-bis era inquinamento da minimi vacui.
+Il passato di w101: binario UNICO (esaustivo prof. 2..17, poi riapertura ×1.65, trappola y),
+burden1=1 e residuo (1,1) COSTANTI fino a prof. 624; regime periodico interno periodo 8
+(finestra [3,320) = 39.6 periodi) e ciclo di prepend **σ=LLRLLRLL certificato geometricamente**
+(heading ritorno 0 ⇒ blocchi traslati, conflitti solo gap<=g_max=12, Δ_anchor=(-2,0) ⇒
+record-compat eterna; M_cert=14) ⇒ **D(w101)=∞**, falsificazione 3/3 verde (diretta m=15..40,
+catena K=565, traslazione footprint); clausola-onset CHIUSA via Replay-Lock+disgiunzione
+(run(m)=run(40) ∀m≥40: onset 160, burden1=1, residuo (1,1) = TEOREMA senza parti empiriche). **TEOREMA DELLA PAROLA VIVA:** eterna non-highway ⇒ a
+ogni record y-min con suffisso w101 la cella (1,1) e' nera — primo teorema-parola NON vacuo;
+pigeonhole sul **RESIDUO DELL'UNO**. Corridoio burden<=1: albero esponenziale (486.676 rami
+vivi a prof. 60 in 1.5M nodi, non esaustivo), arma MAI vista. Congettura pavimento-vivo:
+D=∞ ⇒ burden1>=1 (il livello 1 e' ora OCCUPATO da una parola viva). Trappole (x),(y). Prossimo §89: parole vive ai record
+reali delle 24 orbite; pigeonhole sull'Uno (riga y_rel=1 = riga-record precedente, scia §86);
+arma = parola viva a burden1=0 (kmax>120, automa dei prepend per l'impossibilita').
+Dettaglio: docs/WEAPON_VITALITY_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

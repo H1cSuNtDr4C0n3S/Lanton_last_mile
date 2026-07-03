@@ -1,3 +1,46 @@
+# ============ §88 — LEGGERE PRIMA (sessione Parola Viva / Residuo dell'Uno) ============
+
+**Cosa e' successo a §88 (in una riga):** la caccia v3 con filtro di vitalita' (beam 4000,
+kmax 120, viable-k 8, per-class 200, Ryzen 19 min) scende a **burden1 = 1 a K=101..120,
+residuo la sola cella (1,1)**; il passato di w101 e' un binario unico (esaustivo prof.
+2..17, poi riapertura ×1.65) che si stabilizza su un ciclo di prepend **σ = LLRLLRLL** con
+CERTIFICATO GEOMETRICO (heading di ritorno 0, Δ_anchor=(-2,0), g_max=12, M_cert=14) ⇒
+**D(w101) = ∞**, falsificato senza rossi fino a m=40/K=565; clausola-onset CHIUSA via
+Replay-Lock (V0 81 celle x∈[-8,4], blocchi nuovi da x=95 passo +2, disgiunti per sempre:
+run(m)=run(40) ∀m≥40 — nessun residuo empirico). **TEOREMA DELLA PAROLA VIVA:**
+eterna non-highway ⇒ a OGNI record y-min con suffisso w101 la cella (1,1) e' nera —
+primo teorema-parola NON vacuo; il pigeonhole passa dal Residuo dei Cinque al
+**RESIDUO DELL'UNO**. L'arma (burden1=0) resta non trovata: weapon null fino a K=120 nel
+beam, e MAI in 1.5M nodi di corridoio burden<=1 (486.676 rami vivi a prof. 60, morti quasi
+zero fino a prof. 52: il livello fardello-1 e' un albero esponenziale, non una linea).
+
+**Dettagli completi:** `docs/WEAPON_VITALITY_ADDENDUM.md` (§88.1-88.9). Trappole nuove:
+(x) il fondo del testimone DFS non e' il regime (lo scan di periodicita' eventuale
+ingenuo boccia cicli reali; estrarre σ,τ dalla finestra interna massima e ri-certificare);
+(y) collo di bottiglia ≠ forzatura eterna (unicita' esaustiva solo 2..17).
+
+**File nuovi (tutti in alpha1/):** record_weapon_words_fig.py(+png),
+record_weapon_vitality.py(+json,+log), record_weapon_rail.py(+json,+log),
+record_weapon_cycle.py(+json,+log), record_weapon_cycle_verify.py(+json,+log),
+record_weapon_onset_lock.py(+json,+log).
+
+**Gate della sessione (tutti verdi):** riproduzione in-process w101/w120/catena 102..120
+bit-identica al summary; controllo negativo K=60 di §87e-2 (burden 2, onset 156, D=2:
+vacuo confermato); falsificazione certificato 3/3 (diretta m=15..40, catena K=565,
+traslazione footprint 5 coppie); sigillo onset-lock (blocchi disgiunti da V0 + run diretta
+m=41..46 identica); verifica avversaria multi-agente 46 claim / 43 ok (3 minori corretti,
+scettico senza buchi sulla logica, frontiera empirica estesa a m=200 prima della chiusura);
+figura con baseline nulla condizionata streak<=4.
+
+**Prossimo (§89, in ordine):** 1) dinamica dei record: w101/famiglia σ^m·τ·w101 (o altre
+parole vive a fardello basso) OCCORRONO ai record delle 24 orbite? 2) pigeonhole
+sull'Uno: cosa vieta (1,1) sempre-nera ai record-w101 di un'eterna (riga y_rel=1 = riga
+record del passaggio precedente, §86 scia a distanza 1); 3) arma: kmax>120 e rami del
+muro riaperto, con criterio parola-VIVA-a-burden-0; congettura pavimento vivo >= 1
+(automa dei prepend per l'impossibilita'); 4) record doppi/angoli (invariato).
+
+# ================================================================================================
+
 # ============ §87 — LEGGERE PRIMA (sessione Cono Bianco / Spoiler Vecchio / Link 1) ============
 
 **Cosa e' successo a §87 (in una riga):** il calcolo dei lock §86b esteso alle corse reali:

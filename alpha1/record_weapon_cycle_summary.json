@@ -1,0 +1,88 @@
+{
+ "pmax": 60,
+ "periodo": 8,
+ "finestra": [
+  3,
+  320
+ ],
+ "span": 317,
+ "blocco": "LLRLLLLR",
+ "tentativi": [
+  {
+   "sigma": "LLRLLRLL",
+   "p": 8,
+   "q": 1,
+   "delta_walk": [
+    0,
+    2
+   ],
+   "diam_all": 23,
+   "g_max": 12,
+   "m_cert": 14,
+   "delta_anchor": [
+    -2,
+    0
+   ],
+   "burden_per_periodo": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "onset_empirico": "onset verificato per ogni passo fino a m=14",
+   "esito": "CERTIFICATO: D = infinito (realizzabilita'+record-compat per ogni m)",
+   "certificato": true,
+   "j": 0,
+   "tau_len": 304
+  }
+ ],
+ "certificato": {
+  "sigma": "LLRLLRLL",
+  "p": 8,
+  "q": 1,
+  "delta_walk": [
+   0,
+   2
+  ],
+  "diam_all": 23,
+  "g_max": 12,
+  "m_cert": 14,
+  "delta_anchor": [
+   -2,
+   0
+  ],
+  "burden_per_periodo": [
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1
+  ],
+  "onset_empirico": "onset verificato per ogni passo fino a m=14",
+  "esito": "CERTIFICATO: D = infinito (realizzabilita'+record-compat per ogni m)",
+  "certificato": true,
+  "j": 0,
+  "tau_len": 304
+ },
+ "eval_calls": 113,
+ "elapsed_s": 0.2
+}

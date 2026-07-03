@@ -1,0 +1,26 @@
+{
+ "m0": 40,
+ "onset": 160,
+ "V_size": 81,
+ "residuo": [
+  [
+   1,
+   1
+  ]
+ ],
+ "delta_B": [
+  2,
+  0
+ ],
+ "k_pass": 0,
+ "disjoint_checked": 1,
+ "direct_m": [
+  41,
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "elapsed_s": 0.0
+}

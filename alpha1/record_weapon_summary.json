@@ -1,9 +1,9 @@
 {
- "beam": 100,
- "kmax": 13,
- "workers": 4,
- "per_class": 250,
- "viable_k": 4,
+ "beam": 4000,
+ "kmax": 120,
+ "workers": 15,
+ "per_class": 200,
+ "viable_k": 8,
  "best_per_K": {
   "10": {
    "burden1": 19,
@@ -27,14 +27,2201 @@
    "word": "LLRLLLLRLRLLR",
    "onset": 196,
    "cells": null
+  },
+  "14": {
+   "burden1": 16,
+   "word": "RLRRLRLLLLRLRL",
+   "onset": 172,
+   "cells": null
+  },
+  "15": {
+   "burden1": 15,
+   "word": "LRLRRLRLLLLRLRL",
+   "onset": 172,
+   "cells": null
+  },
+  "16": {
+   "burden1": 14,
+   "word": "LLRLRRLRLLLLRLRL",
+   "onset": 172,
+   "cells": null
+  },
+  "17": {
+   "burden1": 11,
+   "word": "RLLRLRRLRLLLLRLRL",
+   "onset": 172,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "18": {
+   "burden1": 10,
+   "word": "LRLLRLRRLRLLLLRLRL",
+   "onset": 172,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "19": {
+   "burden1": 9,
+   "word": "RRRLLRLRRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "20": {
+   "burden1": 9,
+   "word": "RRRRLLRLRRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "21": {
+   "burden1": 9,
+   "word": "LRRRRLLRLRRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "22": {
+   "burden1": 9,
+   "word": "LLRRRRLLRLRRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "23": {
+   "burden1": 9,
+   "word": "RLLRRRRLLRLRRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "24": {
+   "burden1": 8,
+   "word": "LLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 172,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ]
+   ]
+  },
+  "25": {
+   "burden1": 7,
+   "word": "RRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     5,
+     1
+    ]
+   ]
+  },
+  "26": {
+   "burden1": 6,
+   "word": "RRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "27": {
+   "burden1": 6,
+   "word": "RRRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "28": {
+   "burden1": 6,
+   "word": "LRRRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "29": {
+   "burden1": 6,
+   "word": "LLRRRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "30": {
+   "burden1": 6,
+   "word": "LLLRRRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "31": {
+   "burden1": 6,
+   "word": "LLLLRRRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "32": {
+   "burden1": 6,
+   "word": "RLLLLRRRRLRLLLLRLLRLRRLRLLLLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "33": {
+   "burden1": 5,
+   "word": "RRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     5,
+     1
+    ]
+   ]
+  },
+  "34": {
+   "burden1": 4,
+   "word": "RRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "35": {
+   "burden1": 4,
+   "word": "RRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "36": {
+   "burden1": 4,
+   "word": "LRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "37": {
+   "burden1": 4,
+   "word": "LLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "38": {
+   "burden1": 4,
+   "word": "LLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "39": {
+   "burden1": 4,
+   "word": "LLLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "40": {
+   "burden1": 4,
+   "word": "RLLLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "41": {
+   "burden1": 4,
+   "word": "LRLLLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "42": {
+   "burden1": 4,
+   "word": "LLRLLLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "43": {
+   "burden1": 4,
+   "word": "RLLRLLLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "44": {
+   "burden1": 4,
+   "word": "LRLLRLLLLRRRRLRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 168,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "45": {
+   "burden1": 3,
+   "word": "LLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "46": {
+   "burden1": 3,
+   "word": "LLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "47": {
+   "burden1": 3,
+   "word": "RLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "48": {
+   "burden1": 3,
+   "word": "RRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "49": {
+   "burden1": 3,
+   "word": "LRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "50": {
+   "burden1": 3,
+   "word": "LLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "51": {
+   "burden1": 3,
+   "word": "LLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "52": {
+   "burden1": 3,
+   "word": "LLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "53": {
+   "burden1": 3,
+   "word": "RLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "54": {
+   "burden1": 3,
+   "word": "RRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "55": {
+   "burden1": 3,
+   "word": "LRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "56": {
+   "burden1": 3,
+   "word": "RLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "57": {
+   "burden1": 3,
+   "word": "LRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "58": {
+   "burden1": 3,
+   "word": "LLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "59": {
+   "burden1": 3,
+   "word": "RLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 156,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "60": {
+   "burden1": 3,
+   "word": "RLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "61": {
+   "burden1": 3,
+   "word": "LRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "62": {
+   "burden1": 3,
+   "word": "LLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "63": {
+   "burden1": 3,
+   "word": "RLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "64": {
+   "burden1": 3,
+   "word": "RRLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "65": {
+   "burden1": 3,
+   "word": "LRRLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "66": {
+   "burden1": 3,
+   "word": "LLRRLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "67": {
+   "burden1": 3,
+   "word": "RLLRRLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 204,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "68": {
+   "burden1": 3,
+   "word": "RRLLRLLLLRLRLRRRRLRLLRLLRLRRRRLLLLRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 224,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "69": {
+   "burden1": 3,
+   "word": "LRRLLRLLLLRLRLRRRRLRLLRLLRLRRRRLLLLRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 224,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "70": {
+   "burden1": 3,
+   "word": "LLRRLLRLLLLRLRLRRRRLRLLRLLRLRRRRLLLLRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 224,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "71": {
+   "burden1": 3,
+   "word": "RLLRRLLRLLLLRLRLRRRRLRLLRLLRLRRRRLLLLRLLLLRLLRRLLRLRRLRLRLLRLLRLLRLRLRL",
+   "onset": 224,
+   "cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "72": {
+   "burden1": 3,
+   "word": "LRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "73": {
+   "burden1": 3,
+   "word": "RLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "74": {
+   "burden1": 3,
+   "word": "LRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "75": {
+   "burden1": 3,
+   "word": "LLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "76": {
+   "burden1": 3,
+   "word": "LLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "77": {
+   "burden1": 3,
+   "word": "LLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "78": {
+   "burden1": 3,
+   "word": "RLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "79": {
+   "burden1": 3,
+   "word": "RRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "80": {
+   "burden1": 3,
+   "word": "RRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "81": {
+   "burden1": 3,
+   "word": "RRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "82": {
+   "burden1": 3,
+   "word": "LRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "83": {
+   "burden1": 3,
+   "word": "RLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "84": {
+   "burden1": 3,
+   "word": "LRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "85": {
+   "burden1": 3,
+   "word": "LLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "86": {
+   "burden1": 3,
+   "word": "LLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "87": {
+   "burden1": 3,
+   "word": "LLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "88": {
+   "burden1": 3,
+   "word": "RLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "89": {
+   "burden1": 3,
+   "word": "LRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "90": {
+   "burden1": 3,
+   "word": "LLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "91": {
+   "burden1": 3,
+   "word": "LLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "92": {
+   "burden1": 3,
+   "word": "LLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "93": {
+   "burden1": 3,
+   "word": "RLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "94": {
+   "burden1": 3,
+   "word": "RRLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "95": {
+   "burden1": 3,
+   "word": "RRRLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "96": {
+   "burden1": 3,
+   "word": "RRRRLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "97": {
+   "burden1": 3,
+   "word": "LRRRRLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "98": {
+   "burden1": 3,
+   "word": "RLRRRRLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "99": {
+   "burden1": 3,
+   "word": "RRLRRRRLLLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ]
+   ]
+  },
+  "100": {
+   "burden1": 2,
+   "word": "LRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ]
+   ]
+  },
+  "101": {
+   "burden1": 1,
+   "word": "LLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "102": {
+   "burden1": 1,
+   "word": "LLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "103": {
+   "burden1": 1,
+   "word": "LLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "104": {
+   "burden1": 1,
+   "word": "RLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "105": {
+   "burden1": 1,
+   "word": "LRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "106": {
+   "burden1": 1,
+   "word": "LLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "107": {
+   "burden1": 1,
+   "word": "LLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "108": {
+   "burden1": 1,
+   "word": "LLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "109": {
+   "burden1": 1,
+   "word": "RLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "110": {
+   "burden1": 1,
+   "word": "RRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "111": {
+   "burden1": 1,
+   "word": "RRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "112": {
+   "burden1": 1,
+   "word": "RRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "113": {
+   "burden1": 1,
+   "word": "LRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "114": {
+   "burden1": 1,
+   "word": "RLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "115": {
+   "burden1": 1,
+   "word": "RRLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "116": {
+   "burden1": 1,
+   "word": "LRRLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "117": {
+   "burden1": 1,
+   "word": "RLRRLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "118": {
+   "burden1": 1,
+   "word": "LRLRRLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "119": {
+   "burden1": 1,
+   "word": "LLRLRRLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
+  },
+  "120": {
+   "burden1": 1,
+   "word": "LLLRLRRLRRRRLLLLRLLLLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+   "onset": 160,
+   "cells": [
+    [
+     1,
+     1
+    ]
+   ]
   }
  },
  "best_ever": {
-  "burden1": 18,
-  "K": 12,
-  "word": "LRLLLLRLRLLR",
-  "cells": null
+  "burden1": 1,
+  "K": 101,
+  "word": "LLRLRRLRLRRLLRLLLLRLRRRRLLLLRLRLLLLRLLRLLRRLLRLLRLRLRLLRLRLRLRRRRLLLLRLLLLRLRRLRRLRRRRLRRLRLRLLLLRLRL",
+  "cells": [
+   [
+    1,
+    1
+   ]
+  ]
  },
  "weapon": null,
- "elapsed_s": 2.0
+ "elapsed_s": 1165.3
 }
