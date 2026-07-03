@@ -400,5 +400,10 @@ D=∞ ⇒ burden1>=1 (il livello 1 e' ora OCCUPATO da una parola viva). Trappole
 reali delle 24 orbite; pigeonhole sull'Uno (riga y_rel=1 = riga-record precedente, scia §86);
 arma = parola viva a burden1=0 (kmax>120, automa dei prepend per l'impossibilita').
 Dettaglio: docs/WEAPON_VITALITY_ADDENDUM.md.
+**AGGIORNAMENTO §89a (censimento parole reali ai record):** 1639 record y-min pre-onset
+(24 orbite): burden1 reale min 12 / med ~317 a K=101, mai <=6, zero w101, zero burden-0;
+TRIPWIRE del teorema 1620/1620 (>=1 colpevole nera a ogni record lontano dall'onset);
+3 record a UNA sola colpevole. Anello di occorrenza riformulato sul conteggio delle
+colpevoli (§89b: dinamica fra record consecutivi). docs/RECORD_WORD_CENSUS_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

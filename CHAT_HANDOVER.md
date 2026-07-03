@@ -1,3 +1,17 @@
+# ============ §89a (in corso) — le parole reali ai record ============
+
+Censimento eseguito (`alpha1/record_word_census.py`, addendum `docs/RECORD_WORD_CENSUS_ADDENDUM.md`):
+1639 record y-min pre-onset sulle 24 orbite. Parole reali LONTANE dal minimo vivo
+(b101 min 12, med ~317; mai <=6; zero match w101; zero burden-0). **TRIPWIRE TEOREMA
+1620/1620:** ogni record lontano dall'onset ha >= 1 cella-residuo NERA nei colori reali
+— il meccanismo Cono+Finestra-K+Replay tiene in natura. 3 record a UNA colpevole
+(2 a burden 13, 1 a 31): l'evento-pigeonhole esiste. Anello di occorrenza riformulato:
+non "parole vive ai record" ma DINAMICA del conteggio delle colpevoli (§89b: quanto
+spesso scende a 1, sorte della colpevole superstite fra record consecutivi, eta' vs
+pre-semina). Caveat survivorship (trappola h): orbite selezionate per onset alto.
+
+# ================================================================================================
+
 # ============ §88 — LEGGERE PRIMA (sessione Parola Viva / Residuo dell'Uno) ============
 
 **Cosa e' successo a §88 (in una riga):** la caccia v3 con filtro di vitalita' (beam 4000,
