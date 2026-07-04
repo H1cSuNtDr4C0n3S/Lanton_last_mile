@@ -1,0 +1,108 @@
+{
+ "gates": {
+  "M0": {
+   "onset_vuota_entrambi": 9977,
+   "semi_coniugati": 25
+  },
+  "M1": {
+   "divergenza_P_sola": true,
+   "passi": 300
+  },
+  "M2": {
+   "parole": 10,
+   "esca_bitswap_flip_totale": 10,
+   "rows": [
+    {
+     "tag": "caccia:nere400[0]",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 0
+    },
+    {
+     "tag": "caccia:nere400[2]",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 0
+    },
+    {
+     "tag": "caccia:nere400[1]",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 0
+    },
+    {
+     "tag": "caccia:nere400[5]",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 0
+    },
+    {
+     "tag": "macchina[0]:any",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 0
+    },
+    {
+     "tag": "macchina[1]:far",
+     "posa_M": [
+      0,
+      3
+     ],
+     "pend2_n": 1
+    },
+    {
+     "tag": "macchina[2]:any",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 0
+    },
+    {
+     "tag": "macchina[3]:far",
+     "posa_M": [
+      0,
+      3
+     ],
+     "pend2_n": 1
+    },
+    {
+     "tag": "macchina[4]:any",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 1
+    },
+    {
+     "tag": "macchina[5]:any",
+     "posa_M": [
+      1,
+      2
+     ],
+     "pend2_n": 1
+    }
+   ]
+  },
+  "M3": {
+   "nodi_verificati": 6
+  },
+  "M4": {
+   "firme_exit": 15,
+   "coniugazione": true,
+   "esca_M_chiusura_ingenua_fallisce": true,
+   "diff_simmetrica_ingenua": 12
+  }
+ },
+ "elapsed_s": 0.2
+}

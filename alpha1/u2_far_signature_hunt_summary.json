@@ -1,0 +1,255 @@
+{
+ "args": {
+  "workers": 12,
+  "restarts": 4,
+  "budget": 150000,
+  "seed": 96,
+  "smoke": false
+ },
+ "targets": [
+  "((-2, 1), 1)",
+  "((-2, 2), 0)",
+  "((-2, 2), 1)",
+  "((-1, 2), 0)",
+  "((0, 2), 0)",
+  "((1, 2), 0)",
+  "((2, 2), 0)",
+  "((2, 2), 3)",
+  "((-1, 2), 3)"
+ ],
+ "rows": [
+  {
+   "firma": "((-2, 1), 1)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((-2, 2), 0)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((-2, 2), 1)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((-1, 2), 0)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((0, 2), 0)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((1, 2), 0)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((2, 2), 0)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((2, 2), 3)",
+   "tag": "residua",
+   "hits": 0,
+   "passi": 82800000,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 0,
+    "PD": 0
+   },
+   "dettaglio_hits": []
+  },
+  {
+   "firma": "((-1, 2), 3)",
+   "tag": "CONTROLLO",
+   "hits": 20,
+   "passi": 70951578,
+   "hits_per_policy": {
+    "PA": 0,
+    "PB": 0,
+    "PC": 20,
+    "PD": 0
+   },
+   "dettaglio_hits": [
+    {
+     "nome": "PC:cex:caccia:nere400[0]:kb10",
+     "policy": "PC",
+     "len": 1371
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[0]:kb40",
+     "policy": "PC",
+     "len": 1371
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[0]:kb160",
+     "policy": "PC",
+     "len": 1371
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[2]:kb10",
+     "policy": "PC",
+     "len": 827
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[2]:kb40",
+     "policy": "PC",
+     "len": 827
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[1]:kb10",
+     "policy": "PC",
+     "len": 831
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[1]:kb40",
+     "policy": "PC",
+     "len": 831
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[5]:kb10",
+     "policy": "PC",
+     "len": 667
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[5]:kb40",
+     "policy": "PC",
+     "len": 667
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[5]:kb160",
+     "policy": "PC",
+     "len": 1259
+    },
+    {
+     "nome": "PC:cex:macchina[0]:any:kb10",
+     "policy": "PC",
+     "len": 1103
+    },
+    {
+     "nome": "PC:cex:macchina[0]:any:kb40",
+     "policy": "PC",
+     "len": 1103
+    },
+    {
+     "nome": "PC:cex:macchina[1]:far:kb10",
+     "policy": "PC",
+     "len": 1103
+    },
+    {
+     "nome": "PC:cex:macchina[1]:far:kb40",
+     "policy": "PC",
+     "len": 1103
+    },
+    {
+     "nome": "PC:cex:macchina[2]:any:kb10",
+     "policy": "PC",
+     "len": 959
+    },
+    {
+     "nome": "PC:cex:macchina[2]:any:kb40",
+     "policy": "PC",
+     "len": 959
+    },
+    {
+     "nome": "PC:cex:caccia:nere400[1]:kb160",
+     "policy": "PC",
+     "len": 831
+    },
+    {
+     "nome": "PC:cex:macchina[3]:far:kb10",
+     "policy": "PC",
+     "len": 959
+    },
+    {
+     "nome": "PC:cex:macchina[3]:far:kb40",
+     "policy": "PC",
+     "len": 959
+    },
+    {
+     "nome": "PC:cex:macchina[3]:far:kb160",
+     "policy": "PC",
+     "len": 915
+    }
+   ]
+  }
+ ],
+ "census_globale": {
+  "((-1, 2), 3)": 603
+ },
+ "census_per_policy": {
+  "((-1, 2), 3)|PC": 603
+ },
+ "controllo_hits_per_policy": {
+  "PA": 0,
+  "PB": 0,
+  "PC": 20,
+  "PD": 0
+ },
+ "v2_witness": null,
+ "verdetto": "8-FIRME-MAI-REALIZZATE (negativo empirico etichettato per-politica, trappola hh: potere positivo dimostrato da ['PC']; censimento globale = solo ((-1,2),3))",
+ "elapsed_s": 226.0
+}

@@ -1,3 +1,46 @@
+# ============ §96 — U2-LONTANO 4: firme-exit, COLLO DELLA PULIZIA, tripwire CP ============
+
+**Cosa e' successo a §96 (in una riga):** due vincoli deduttivi nuovi + il collo
+della pulizia + l'intuizione chirale di Michael messa a frutto. (1) **ORACOLO
+v2** (`u2_far_clean_oracle_v2.py`, gate W1/O0/E1/E2): C1 "muro delle nove"
+(w101 visita 9/10 celle di palla, tutte tranne (1,1) ⇒ a ogni nodo pulito
+req=1 su quelle 9 ⇒ nel tratto pulito sono morte), C3 (c_par = c*+D[(h*+1)&3]
+visitata), C4 (c_par deve avere y≥1 ⇒ ((2,1),3) senza genitore) ⇒ **7/15
+firme-exit §95d uccise deduttivamente** (32/40 non-exit = 27 confinate + 5
+C4-irrealizzabili), inclusa la promozione a fatto DEDUTTIVO del confinamento
+della firma reale ((−1,2),3); restano **8 firme residue** tutte a exit-diretta.
+(2) **Lemma dell'exit-step** (da nodo di pulizia residuo l'uscita e' sempre
+realizzabile) ⇒ **v2 ⟺ nessuna delle 8 firme e' realizzabile come nodo di
+pulizia** — il fronte e' 8 oggetti finiti (cella, heading). (3) **CACCE
+PER-FIRMA** (`u2_far_signature_hunt.py`, 1242 job, 733M passi, 4 politiche
+PA/PB/PC/PD, controllo positivo S0 obbligatorio): 8 residue **0 hit**;
+**603 pulizie censite, TUTTE ((−1,2), h=3) e TUTTE da PC** (mutazione
+testimoni) — PA/PB/PD zero pulizie: pulire da zero e' rarissimo, negativo
+etichettato PC-only (trappola hh dichiarata). **COLLO DELLA PULIZIA**
+(candidato-teorema §97): la palla si pulisce da UNA porta sola ((−1,2), h=3,
+da c_par=(−1,1)); se teorema ⇒ v2 TEOREMA (la firma e' confinata da C1) ⇒
+Muro chiuso senza pavimento. **Lemma della Catena di Chiusura** (riscritto
+dal pannello: run-R in palla ≤3 con pending che si ACCUMULANO, 4° passo = L
+su c* — la versione "ingresso dal bordo" era un buco; conferma di terra
+pattern RRRRL 8/8). (4) **INTUIZIONE CHIRALE (Michael)**: identita' R−L=ΔB
+deduttiva e verificata (200 config, 0 viol.; W0: 58−46=12=rot ESATTO —
+winding = carica nera; heading≡ΔB mod 4; gia' implicita a §79, disponibile
+come assioma Z/4 per PP0) + **TRIPWIRE SPECCHIO** (`mirror_tripwire.py`,
+M0–M4 verdi: coniugazione CP esatta su forward/exact_state/clean_subtree/
+oracolo con interpreti a chiralita' parametrizzata) che ha GIA' beccato in-run
+due confusioni P-vs-CP (bit-swap nudo = colori invertiti 256/256; insieme
+exit non M-chiuso perche' l'oracolo e' chirale) — trappola nuova (kk).
+Pannello §96 3/3 in sessione: A/B/C/F reggono (indipendente 37/37, esche
+4/4), E riscritto, B1–B4 chiuse. **Prossimo §97: TEOREMA DEL COLLO** —
+(a) enumerazione esaustiva degli approcci di chiusura (catena ≤3 R + aperture
+L, oggetti finiti) per uccidere le 8 firme; (b) DAG delle chiusure
+whack-a-mole (perche' (−1,2) e' sempre l'ultima?). Ereditati: fuggenti nuove
+vs nere-D≥400, retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/U2_SIGNATURE_ADDENDUM.md. File: alpha1/u2_far_clean_oracle_v2.py,
+u2_far_signature_hunt.py, mirror_tripwire.py (+json/log).
+
+# ================================================================================================
+
 # ============ §95 — U2-LONTANO 3: il TRATTO PULITO (riduzione di v2, dicotomia, oracolo) ============
 
 **Cosa e' successo a §95 (in una riga):** la via §94c.2 ("pend₂=0 ⇒ albero dei

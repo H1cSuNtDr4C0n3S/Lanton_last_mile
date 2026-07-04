@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§96**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§97**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -180,6 +180,15 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       controesempi. L'oggetto giusto e' il sottoalbero potato al vincolo
       violabile (pend2=0), dove la pota da' struttura gratis (in palla solo
       all-R ⇒ morte ≤3 per Bianchi che Curvano). Parente di (aa).
+  (kk) **scambiare i dati senza scambiare la semantica non e' la simmetria**
+      (TRIPWIRE-CP §96): l'immagine speculare di un'orbita ha bit scambiati E
+      regola scambiata; interpretare i bit scambiati con la regola standard
+      da' il mondo a COLORI INVERTITI (req tutte flippate, misurato 256/256).
+      Ogni test di simmetria deve coniugare l'INTERPRETE, non solo l'input;
+      un insieme derivato da un oggetto chirale (oracolo all-R) non e'
+      M-chiuso e non deve esserlo (coniugarlo con l'oracolo specchio).
+      Antidoto permanente: alpha1/mirror_tripwire.py (gate M0-M4) su ogni
+      nuovo certificato. Parente di (d) e dei bug di frame §86.6/§89c.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -198,7 +207,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -608,5 +617,30 @@ raggiungibilita': pend-storia del genitore, scia §86, geometria del passo di
 pulizia; o cacce per-firma); ereditati: fuggenti nuove vs nere-D>=400,
 retro-nota §91c.3, stress-2 bianche, h1=1.
 docs/U2_CLEAN_STRETCH_ADDENDUM.md.
+**AGGIORNAMENTO §96 (FIRME-EXIT, COLLO DELLA PULIZIA, TRIPWIRE CP):**
+oracolo v2 (`u2_far_clean_oracle_v2.py`) con vincoli deduttivi: C1 "muro
+delle nove" (w101 visita 9/10 celle di palla, manca solo (1,1) => a ogni nodo
+pulito req=1 sulle 9), C3 (c_par visitata), C4 (c_par con y>=1 => ((2,1),3)
+senza genitore) => 7/15 firme-exit uccise, restano 8 (tutte exit-diretta);
+Lemma dell'exit-step => **v2 <=> nessuna delle 8 firme (cella, heading) e'
+realizzabile come nodo di pulizia** — fronte finito. Cacce per-firma
+(`u2_far_signature_hunt.py`, 1242 job, 733M passi, PA/PB/PC/PD, controllo
+positivo S0): 8 residue 0 hit; **603 pulizie censite TUTTE ((-1,2), h=3) e
+TUTTE da PC** (PA/PB/PD zero: pulire da zero e' rarissimo; negativo
+etichettato PC-only). **COLLO DELLA PULIZIA** (candidato-teorema §97): la
+palla si pulisce da UNA porta sola; se teorema => v2 TEOREMA => Muro chiuso.
+Lemma della Catena di Chiusura (run-R in palla <=3, pending che si
+ACCUMULANO all'indietro, 4o passo = L su c*; pattern RRRRL 8/8 di terra).
+Intuizione chirale (Michael): identita' R−L=ΔB deduttiva (W0: 58−46=12=rot,
+winding=carica nera; heading≡ΔB mod 4; gia' implicita a §79; assioma Z/4
+disponibile per PP0) + tripwire specchio (`mirror_tripwire.py`, M0-M4:
+coniugazione CP esatta con interpreti a chiralita' parametrizzata) che ha
+beccato in-run due confusioni P-vs-CP = trappola (kk). Pannello §96 3/3:
+A/B/C/F reggono (indipendente 37/37, esche 4/4), E riscritto, B1-B4 chiuse.
+Prossimo §97: TEOREMA DEL COLLO — enumerazione esaustiva degli approcci di
+chiusura (catena <=3 R + aperture L) per uccidere le 8 firme; DAG delle
+chiusure whack-a-mole. Ereditati: fuggenti nuove vs nere-D>=400, retro-nota
+§91c.3, stress-2 bianche, h1=1.
+docs/U2_SIGNATURE_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.
