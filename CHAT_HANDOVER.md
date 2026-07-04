@@ -1,3 +1,41 @@
+# ============ §95 — U2-LONTANO 3: il TRATTO PULITO (riduzione di v2, dicotomia, oracolo) ============
+
+**Cosa e' successo a §95 (in una riga):** la via §94c.2 ("pend₂=0 ⇒ albero dei
+prepend finito") e' stata FALSIFICATA in apertura (nere400[0]/[2]: sottoalbero
+INTERO vivo oltre depth 400 — l'invariante era sbagliato, trappola nuova jj) ma
+sostituita da una riduzione piu' forte. (1) **LEMMA DEL PASSO DI PULIZIA**
+(deduttivo, dal ledger §93): pend₂ decrementa solo con R sulla cella pending
+chiusa, in palla-2, e la posa dopo il passo E' quella cella; **TEOREMA DEL
+TRATTO PULITO**: ogni nodo pulito n (pend₂=0) sotto radice sporca appartiene al
+sottoalbero-a-pend₂≡0 del suo ultimo nodo di pulizia m*≤n, posa(m*) in palla;
+**radicamento a w101**: pend₂(w101)=6 ⇒ vale per OGNI passato che presenta w101,
+senza case-split sulle coprenti. COROLLARIO: Ledger Sporco v2 ⟺ nessun tratto
+pulito esce dalla palla — i 1.376 clean-far §93f raggiungibili SOLO via tratto
+pulito. (2) **DICOTOMIA** (deduttiva, ripara un non-sequitur trovato dal
+pannello): in palla il tratto pulito e' forzato all-R ⇒ muore ≤3 passi (Bianchi
+che Curvano); o confinato o il primo passo fuori E' il testimone clean-far
+(prof ≤4) — l'enumeratore tronca a foglia-testimone, mai rosso generico
+(trappola nuova ii). (3) **CERTIFICATI ESAUSTIVI**: 31 stati di pulizia reali
+(8 controesempi §94 + 23 dalle cacce G3 multi-politica, 17 mai visti, P1 su
+census + P4 mutazioni, 86,3M passi) — sottoalbero pulito VUOTO 31/31, firma
+UNICA ((−1,2), heading sx), bloccata da req((0,2))=1 = la firma whack-a-mole di
+colonna 0 vista dall'altra parte; 0 falsificatori diretti. (4) **ORACOLO
+PIGRO** (`u2_far_clean_oracle.py`, sovra-approssimazione di TUTTI i nodi di
+pulizia): 25/40 firme (posa,heading) confinate deduttivamente, **15 firme-exit
+astratte** (pose di bordo, heading esterno) = fronte ESATTO: v2 teorema ⟺ le 15
+irraggiungibili; nessuna mai realizzata. Pannello scettici 3/3 IN SESSIONE
+(lezione §93/§94): bit-identico 10/10, esche 6/6, riparati non-sequitur +
+assert-order + m*≤n + quantificatori dichiarati (v2 resta congettura empirica
+sui nodi non raggiunti). Convenzione bit fissata a verbale: bit 1 = R = lettura
+BIANCA, bit 0 = L = lettura NERA. **Prossimo §96:** uccidere/realizzare le 15
+firme-exit (vincoli di raggiungibilita': pend-storia del genitore, scia §86,
+geometria del passo di pulizia; o cacce per-firma); ereditati: fuggenti nuove
+vs nere-D≥400, retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/U2_CLEAN_STRETCH_ADDENDUM.md. File: alpha1/u2_far_clean_stretch.py,
+u2_far_clean_oracle.py (+json/log).
+
+# ================================================================================================
+
 # ============ §94 — U2-LONTANO 2: censimento famiglia, pannello, PAVIMENTO FALSIFICATO ============
 
 **Cosa e' successo a §94 (in una riga):** tre risultati + una falsificazione maggiore.

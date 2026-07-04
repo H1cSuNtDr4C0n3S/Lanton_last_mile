@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§95**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§96**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -166,6 +166,20 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       660k nodi. Per un negativo servono politiche indipendenti multiple, e ogni
       floor "misurato" va etichettato con la politica che lo ha prodotto.
       Istanza quantificata di (bb).
+  (ii) **enunciare la dicotomia, non la finitezza — e mai un rosso che maschera
+      il testimone** (TRATTO-PULITO §95): un sottoalbero potato puo' essere
+      infinito fuori dal dominio della pota; l'enunciato sano e' "confinato
+      OPPURE il primo sconfinamento e' un testimone", e il checker deve
+      riportare il testimone PRIMA di ogni assert di esaurimento (un
+      `assert esaurito` che scatta prima trasforma una falsificazione in un
+      rosso generico non diagnosticabile). Parente di (bb)/(cc).
+  (jj) **la vitalita' dell'albero intero non e' l'invariante — guardare il
+      sottoalbero potato dal vincolo** (TRATTO-PULITO §95): "pend2=0 ⇒ albero
+      dei prepend finito" era FALSO (2/8 nodi puliti vivi oltre depth 400), ma
+      era la domanda sbagliata: i rami che ri-sporcano la palla non producono
+      controesempi. L'oggetto giusto e' il sottoalbero potato al vincolo
+      violabile (pend2=0), dove la pota da' struttura gratis (in palla solo
+      all-R ⇒ morte ≤3 per Bianchi che Curvano). Parente di (aa).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -184,7 +198,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -568,5 +582,31 @@ DEBITO §94). Prossimo §94: completare pannello; pavimento sulle fuggenti (moto
 striscia allargata / invariante parita'-flusso / automa prepend in-palla);
 censimento born_near sulle 43 config; retro-nota §91c.3.
 docs/U2_FAR_ADDENDUM.md.
+**AGGIORNAMENTO §95 (TRATTO PULITO: riduzione di v2, dicotomia, oracolo):**
+la via "chiusura per vitalita'" (§94c.2) e' FALSIFICATA in apertura (trappola
+jj: nere400[0]/[2] hanno sottoalbero INTERO vivo oltre depth 400) e sostituita
+da una riduzione: **LEMMA DEL PASSO DI PULIZIA** (deduttivo: pend2 decrementa
+solo con R sulla cella pending chiusa, in palla-2, posa = quella cella) +
+**TEOREMA DEL TRATTO PULITO** (ogni nodo pulito appartiene al sottoalbero-a-
+pend2=0 del suo ultimo nodo di pulizia m*<=n, posa(m*) in palla; radicamento a
+w101: pend2(w101)=6 => vale per OGNI passato che presenta w101) => Ledger
+Sporco v2 <=> nessun tratto pulito esce dalla palla (i 1.376 clean-far
+raggiungibili SOLO via tratto pulito). **DICOTOMIA** (deduttiva): in palla il
+tratto pulito e' forzato all-R => muore <=3 (Bianchi che Curvano); o confinato
+o il primo passo fuori E' il testimone (checker a foglia-testimone, trappola
+ii). Certificati esaustivi: 31/31 stati di pulizia reali (8 §94 + 23 cacce
+multi-politica G3, 17 nuovi) con sottoalbero pulito VUOTO e firma UNICA
+((−1,2), heading sx) bloccata da req((0,2))=1 (whack-a-mole di colonna 0);
+0 falsificatori. **ORACOLO PIGRO** (`u2_far_clean_oracle.py`): 25/40 firme
+(posa,heading) confinate deduttivamente, **15 firme-exit astratte** mai
+realizzate = fronte esatto: v2 teorema <=> le 15 irraggiungibili. Pannello
+3/3 in sessione (bit-identico 10/10, esche 6/6; riparati non-sequitur
+finitezza, assert-order, m*<=n; v2 dichiarata congettura empirica sui nodi
+non raggiunti). Convenzione bit a verbale: bit 1 = R = lettura BIANCA, bit 0
+= L = NERA. Prossimo §96: uccidere/realizzare le 15 firme-exit (vincoli di
+raggiungibilita': pend-storia del genitore, scia §86, geometria del passo di
+pulizia; o cacce per-firma); ereditati: fuggenti nuove vs nere-D>=400,
+retro-nota §91c.3, stress-2 bianche, h1=1.
+docs/U2_CLEAN_STRETCH_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

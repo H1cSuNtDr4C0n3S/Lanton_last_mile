@@ -1,0 +1,551 @@
+{
+ "args": {
+  "workers": 12,
+  "jobs_per_cell": 2,
+  "restarts": 4,
+  "restarts_p1": 24,
+  "budget_p1": 50000,
+  "step_budget": 150000,
+  "seed": 9511,
+  "min_clean": 10,
+  "smoke": false
+ },
+ "gates": {
+  "G0": {
+   "cammini": 310,
+   "decrementi": 8,
+   "viol_lemma": 0,
+   "clean_fuori": 0,
+   "esca_palla1_viol": 2728
+  },
+  "G1": {
+   "nominali": 42,
+   "distinte": 36,
+   "duplicati": 6,
+   "min_pend2_root": 4,
+   "pend2_w101": [
+    [
+     -2,
+     1
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  "G2": {
+   "rows": [
+    {
+     "tag": "caccia:nere400[0]",
+     "j": 0,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": false,
+     "full_D": 400,
+     "full_r": 45,
+     "full_nodi": 1106,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "caccia:nere400[2]",
+     "j": 0,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": false,
+     "full_D": 400,
+     "full_r": 13,
+     "full_nodi": 802,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "caccia:nere400[1]",
+     "j": 0,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": true,
+     "full_D": 19,
+     "full_r": 3,
+     "full_nodi": 40,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "caccia:nere400[5]",
+     "j": 0,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": true,
+     "full_D": 19,
+     "full_r": 3,
+     "full_nodi": 40,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "macchina[0]:any",
+     "j": 0,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": true,
+     "full_D": 19,
+     "full_r": 3,
+     "full_nodi": 40,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "macchina[1]:far",
+     "j": 2,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": true,
+     "full_D": 19,
+     "full_r": 3,
+     "full_nodi": 40,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "macchina[2]:any",
+     "j": 0,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": true,
+     "full_D": 19,
+     "full_r": 3,
+     "full_nodi": 40,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    },
+    {
+     "tag": "macchina[3]:far",
+     "j": 2,
+     "posa": [
+      -1,
+      2
+     ],
+     "full_esaurito": true,
+     "full_D": 19,
+     "full_r": 3,
+     "full_nodi": 40,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "clean_pose_fuori": 0
+    }
+   ],
+   "nodi_puliti": 8,
+   "v2_witness": null
+  },
+  "G3": {
+   "stati_puliti_distinti": 23,
+   "nuovi": 17,
+   "per_policy": {
+    "P1": 3,
+    "P2": 0,
+    "P3": 0,
+    "P4": 20
+   },
+   "fuggenti_con_pulito": 12,
+   "passi_totali": 86268575,
+   "far_witnesses": [],
+   "v2_witness": null,
+   "cert_rows": [
+    {
+     "nome": "census[2]",
+     "policy": "P1",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 4169,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "census[0]",
+     "policy": "P1",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2705,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "census[6]",
+     "policy": "P1",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 3773,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:caccia:nere400[0]:kb10",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": false,
+     "prof_ext": 10,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:caccia:nere400[2]:kb20",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": false,
+     "prof_ext": 20,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:caccia:nere400[1]:kb10",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": false,
+     "prof_ext": 10,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:caccia:nere400[1]:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 88,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:caccia:nere400[5]:kb10",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": false,
+     "prof_ext": 10,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[0]:any:kb10",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": false,
+     "prof_ext": 10,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[2]:any:kb10",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": false,
+     "prof_ext": 10,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[2]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 72,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2212,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2200,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2524,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2464,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2508,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2512,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2732,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2736,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2740,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2792,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2900,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    },
+    {
+     "nome": "P4:macchina[4]:any:kb80",
+     "policy": "P4",
+     "posa": [
+      -1,
+      2
+     ],
+     "heading": 3,
+     "nuovo": true,
+     "prof_ext": 2904,
+     "clean_nodi": 0,
+     "clean_D": 0,
+     "clean_r_max": 2,
+     "pose_fuori": 0
+    }
+   ]
+  }
+ },
+ "verdetto": "TRATTO-PULITO-IN-PALLA (sui nodi di pulizia raggiunti: controesempi \u00a794 + cacce G3 \u2014 v2 resta congettura empirica, trappola hh)",
+ "elapsed_s": 682.1
+}

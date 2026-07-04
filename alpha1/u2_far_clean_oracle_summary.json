@@ -1,0 +1,779 @@
+{
+ "args": {},
+ "rows": [
+  {
+   "posa": [
+    -2,
+    1
+   ],
+   "h": 0,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    -2,
+    1
+   ],
+   "h": 1,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      -3,
+      1
+     ],
+     "da": [
+      -2,
+      1
+     ],
+     "h": 1,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    -2,
+    1
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 0,
+   "exits": []
+  },
+  {
+   "posa": [
+    -2,
+    1
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 1,
+   "exits": []
+  },
+  {
+   "posa": [
+    -2,
+    2
+   ],
+   "h": 0,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      -2,
+      3
+     ],
+     "da": [
+      -2,
+      2
+     ],
+     "h": 0,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    -2,
+    2
+   ],
+   "h": 1,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      -3,
+      2
+     ],
+     "da": [
+      -2,
+      2
+     ],
+     "h": 1,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    -2,
+    2
+   ],
+   "h": 2,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 1,
+   "exits": [
+    {
+     "posa_exit": [
+      -3,
+      1
+     ],
+     "da": [
+      -2,
+      1
+     ],
+     "h": 1,
+     "prof": 1,
+     "trail": [
+      [
+       [
+        -2,
+        1
+       ],
+       "R",
+       "fresca"
+      ]
+     ],
+     "know": [
+      [
+       [
+        -2,
+        1
+       ],
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "posa": [
+    -2,
+    2
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    -1,
+    1
+   ],
+   "h": 0,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    -1,
+    1
+   ],
+   "h": 1,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    -1,
+    1
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 0,
+   "exits": []
+  },
+  {
+   "posa": [
+    -1,
+    1
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 1,
+   "exits": []
+  },
+  {
+   "posa": [
+    -1,
+    2
+   ],
+   "h": 0,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      -1,
+      3
+     ],
+     "da": [
+      -1,
+      2
+     ],
+     "h": 0,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    -1,
+    2
+   ],
+   "h": 1,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 1,
+   "exits": [
+    {
+     "posa_exit": [
+      -2,
+      3
+     ],
+     "da": [
+      -2,
+      2
+     ],
+     "h": 0,
+     "prof": 1,
+     "trail": [
+      [
+       [
+        -2,
+        2
+       ],
+       "R",
+       "fresca"
+      ]
+     ],
+     "know": [
+      [
+       [
+        -2,
+        2
+       ],
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "posa": [
+    -1,
+    2
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    -1,
+    2
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    0,
+    1
+   ],
+   "h": 0,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    0,
+    1
+   ],
+   "h": 1,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    0,
+    1
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 0,
+   "exits": []
+  },
+  {
+   "posa": [
+    0,
+    1
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 1,
+   "exits": []
+  },
+  {
+   "posa": [
+    0,
+    2
+   ],
+   "h": 0,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      0,
+      3
+     ],
+     "da": [
+      0,
+      2
+     ],
+     "h": 0,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    0,
+    2
+   ],
+   "h": 1,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 1,
+   "exits": [
+    {
+     "posa_exit": [
+      -1,
+      3
+     ],
+     "da": [
+      -1,
+      2
+     ],
+     "h": 0,
+     "prof": 1,
+     "trail": [
+      [
+       [
+        -1,
+        2
+       ],
+       "R",
+       "fresca"
+      ]
+     ],
+     "know": [
+      [
+       [
+        -1,
+        2
+       ],
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "posa": [
+    0,
+    2
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    0,
+    2
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    1,
+    1
+   ],
+   "h": 0,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    1,
+    1
+   ],
+   "h": 1,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    1,
+    1
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 0,
+   "exits": []
+  },
+  {
+   "posa": [
+    1,
+    1
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 1,
+   "exits": []
+  },
+  {
+   "posa": [
+    1,
+    2
+   ],
+   "h": 0,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      1,
+      3
+     ],
+     "da": [
+      1,
+      2
+     ],
+     "h": 0,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    1,
+    2
+   ],
+   "h": 1,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 1,
+   "exits": [
+    {
+     "posa_exit": [
+      0,
+      3
+     ],
+     "da": [
+      0,
+      2
+     ],
+     "h": 0,
+     "prof": 1,
+     "trail": [
+      [
+       [
+        0,
+        2
+       ],
+       "R",
+       "fresca"
+      ]
+     ],
+     "know": [
+      [
+       [
+        0,
+        2
+       ],
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "posa": [
+    1,
+    2
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    1,
+    2
+   ],
+   "h": 3,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    2,
+    1
+   ],
+   "h": 0,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 1,
+   "exits": [
+    {
+     "posa_exit": [
+      3,
+      2
+     ],
+     "da": [
+      2,
+      2
+     ],
+     "h": 3,
+     "prof": 1,
+     "trail": [
+      [
+       [
+        2,
+        2
+       ],
+       "R",
+       "fresca"
+      ]
+     ],
+     "know": [
+      [
+       [
+        2,
+        2
+       ],
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "posa": [
+    2,
+    1
+   ],
+   "h": 1,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    2,
+    1
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 0,
+   "exits": []
+  },
+  {
+   "posa": [
+    2,
+    1
+   ],
+   "h": 3,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      3,
+      1
+     ],
+     "da": [
+      2,
+      1
+     ],
+     "h": 3,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    2,
+    2
+   ],
+   "h": 0,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      2,
+      3
+     ],
+     "da": [
+      2,
+      2
+     ],
+     "h": 0,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  },
+  {
+   "posa": [
+    2,
+    2
+   ],
+   "h": 1,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 1,
+   "exits": [
+    {
+     "posa_exit": [
+      1,
+      3
+     ],
+     "da": [
+      1,
+      2
+     ],
+     "h": 0,
+     "prof": 1,
+     "trail": [
+      [
+       [
+        1,
+        2
+       ],
+       "R",
+       "fresca"
+      ]
+     ],
+     "know": [
+      [
+       [
+        1,
+        2
+       ],
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "posa": [
+    2,
+    2
+   ],
+   "h": 2,
+   "rami_morti": 1,
+   "foglie_exit": 0,
+   "nodi": 3,
+   "exits": []
+  },
+  {
+   "posa": [
+    2,
+    2
+   ],
+   "h": 3,
+   "rami_morti": 0,
+   "foglie_exit": 1,
+   "nodi": 0,
+   "exits": [
+    {
+     "posa_exit": [
+      3,
+      2
+     ],
+     "da": [
+      2,
+      2
+     ],
+     "h": 3,
+     "prof": 0,
+     "trail": [],
+     "know": []
+    }
+   ]
+  }
+ ],
+ "confinate": 25,
+ "config_totali": 40,
+ "foglie_exit": 15,
+ "rami_morti": 25,
+ "gate_O0": "verde",
+ "verdetto": "INCONCLUSIVO: 15 firme-exit astratte da chiudere con vincoli di raggiungibilita' o realizzare",
+ "elapsed_s": 0.0
+}
