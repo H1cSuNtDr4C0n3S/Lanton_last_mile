@@ -1,11 +1,12 @@
-# ADDENDUM §94 — U2-LONTANO 2: censimento born-near sulla famiglia, pannello §93 completato (2/3), PAVIMENTO DEL LEDGER FALSIFICATO, parity-flux
+# ADDENDUM §94 — U2-LONTANO 2: censimento born-near sulla famiglia, pannello §93 completato (3/3), PAVIMENTO DEL LEDGER FALSIFICATO, parity-flux
 
 **Riepilogo in una frase:** il censimento Nascita Vicina e' stato esteso dall'intera
 famiglia rigenerata (273.493 coprenti-nere distinte, 6,2x la campagna §92, 50 config
 di copertura vs le 43 citate a §92c: **273.459 CERTIFICATE born-near, 34 fuggenti,
 ZERO alberi esauriti con min-pend=0**, r_seed ≤ 63), il pannello §93 e' stato
-completato su 2 lenti su 3 (caccia, macchina-palla2; nascita-vicina uccisa DI NUOVO
-dal limite di sessione, debito x2) con tutti i numeri §93 riprodotti bit-identici da
+COMPLETATO 3/3 (caccia, macchina-palla2; nascita-vicina in terza run post-commit:
+il Lemma REGGE su tutti gli assi, 3/3 esche, corollario-bonus respinto in sintesi —
+94b) con tutti i numeri §93 riprodotti bit-identici da
 macchinari indipendenti MA con un **BUCO convergente da entrambe le lenti: la
 CONGETTURA DEL PAVIMENTO DEL LEDGER (pend₂ ≥ 2, e anche la variante ≥ 1
 incondizionata) e' FALSIFICATA** — estensioni valide delle fuggenti raggiungono
@@ -58,10 +59,36 @@ randomizzate + steering, cap 40k nere/worker, 12,4M passeggiate, 253 s totali):
 
 ## 94b. Pannello §93 (debito §93h.1): 2 lenti su 3, numeri tutti REGGONO, un BUCO
 
-Lente **nascita-vicina**: MORTA per limite di sessione (seconda volta — DEBITO §95).
-Mitigazione parziale: GC1/GC2 del censimento rifanno D_true/min_pend bit-identici
-sui 42 testimoni + cross-validazione `valid()`; la logica delle due gambe resta
-non ri-attaccata da lente dedicata.
+Lente **nascita-vicina**: morta due volte per limite di sessione, poi COMPLETATA
+(terza run, post-commit §94 — pannello **3/3**). Verdetto: **il Lemma REGGE su
+tutti gli assi** (3/3 esche beccate: min_pend-solo-foglie, r_wall-monco,
+esaurito-al-cap):
+- gamba 1 e gamba 2 verificate NODO-PER-NODO sui 12 testimoni finiti con
+  enumeratore indipendente solo-`valid()` (frame anchor riscritto): posa di
+  nascita sempre in footprint∪muro, pending sempre non vuoti e nel dominio,
+  cheb ≤ r_seed, zero eccezioni; contenimento dei pending STRUTTURALE (vivono su
+  chiavi di req);
+- chiusura per suffissi meccanica su tutti i nodi dei 12 alberi (il passato reale
+  e' un ramo dell'albero);
+- certificati (D_true, r_wall, min_pend, r_foot, r_seed) bit-identici 12/12;
+- semantica dei cap: mai falsi certificati (scan node_cap/depth_cap su D4[0];
+  errore sempre conservativo; NB: serve depth_cap ≥ D_true+1, e il check
+  node_cap e' a pop-time — cosmetico);
+- controesempi pend₂ §94: 10/10 su parole FUGGENTI (match per suffisso sui bit)
+  ⇒ il lemma non e' toccato;
+- censimento: 34/34 fuggenti = cap reale (liveness indipendente di fuggente[0]
+  a prof. 120 con rami multipli), 0 esaurite-min-pend-0.
+Precisazioni di enunciato (A6, IMPRECISIONE non fatale): (1) il caso
+esaurito-ma-min-pend-0 manterrebbe comunque la gamba 1 (vietanza ai record con
+palla priva della sola ORIGINE) — oggi il codice non emette certificati li': e'
+rinuncia, non necessita'; (2) dichiarare depth_cap ≥ D_true+1 nella definizione
+di "enumerazione esaustiva". **RESPINTO in sintesi** il corollario-bonus della
+lente ("per le eterne l'albero finito vieta senza palla"): a un record FISSATO il
+passato di un'eterna e' FINITO (T passi) — l'eternita' vincola il futuro, non il
+passato; un'eterna con nascita vicina al record puo' presentare (e' il caso
+"record vicini" gia' escluso dalla gamba 1). Il corollario non aggiunge nulla:
+la forma giusta resta quella spaziale a due gambe (lezione gemella di §91:
+"storia lunga non basta", stavolta al contrario — nemmeno "eterna" basta da sola).
 
 Lente **caccia** (macchinario riscritto da zero, 4 esche beccate — una riformulata
 onestamente dopo essersi scoperta vacua):
@@ -179,8 +206,7 @@ Correzioni ai verbali precedenti: §93d congettura FALSIFICATA (94c); §93e resi
 
 ## 94f. Domande aperte / programma §95
 
-1. **Lente nascita-vicina** (debito x2): logica delle due gambe del Lemma §93c
-   sotto attacco dedicato con macchinario indipendente.
+1. ~~Lente nascita-vicina~~ COMPLETATA (94b: Lemma REGGE, pannello 3/3).
 2. **Chiusura per vitalita' dei puliti** (la via nuova, 94c.2): dimostrare che
    ogni nodo pend₂=0 (posa in palla) ha albero dei prepend sopra di se' FINITO
    (evidenza: 17–71 nodi) ⇒ Nascita Vicina applicata a quei rami ⇒ Muro chiuso
@@ -216,4 +242,7 @@ Correzioni ai verbali precedenti: §93d congettura FALSIFICATA (94c); §93e resi
 - **lente macchina-palla2** (M1/M2/M3-conteggi/M4 REGGE, M3-vicini IMPRECISIONE,
   M3-fantasmi BUCO): fase 1 e BFS post-copertura riprodotte bit-identiche con
   macchina indipendente (encoding diverso); 4 esche beccate.
-- **lente nascita-vicina**: uccisa dal limite di sessione (debito §95, punto 1).
+- **lente nascita-vicina** (completata in terza run, post-commit): Lemma della
+  Nascita Vicina REGGE su tutti gli assi (7 REGGE, 1 IMPRECISIONE di enunciato,
+  3/3 esche beccate; enumeratore indipendente solo-`valid()` bit-identico 12/12;
+  corollario-bonus della lente RESPINTO in sintesi — dettagli in 94b).

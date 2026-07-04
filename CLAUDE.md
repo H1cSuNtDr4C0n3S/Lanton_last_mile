@@ -523,8 +523,13 @@ docs/U2_POCKET_ADDENDUM.md.
 censimento born-near sulla famiglia RIGENERATA (`u2_far_born_near_census.py`, gate
 GC0-GC4): 273.493 coprenti-nere in 50 config `(h1, req|S_CORE)` — **273.459
 CERTIFICATE (r_seed<=63), 34 fuggenti (31/34 in una config mista), 0 min-pend=0**;
-nuove classi D 28/32/52/60/64. Pannello §93: 2/3 lenti (nascita-vicina morta di
-nuovo, debito x2); numeri §93 tutti bit-identici; imprecisioni: 2.020 vicini veri
+nuove classi D 28/32/52/60/64. Pannello §93: **COMPLETATO 3/3** (nascita-vicina in
+terza run: Lemma REGGE su tutti gli assi, 3/3 esche, enumeratore indipendente
+solo-valid() bit-identico 12/12, controesempi pend2 fuori-ipotesi 10/10;
+precisazioni: depth_cap>=D_true+1, ramo min-pend-0 = rinuncia con gamba-1 ancora
+valida; corollario-bonus "eterne senza palla" RESPINTO in sintesi — a record
+fissato il passato di un'eterna e' finito: l'eternita' vincola il futuro, non il
+passato); numeri §93 tutti bit-identici; imprecisioni: 2.020 vicini veri
 (non 3.396), controllo negativo caccia vacuo. **FALSIFICATO il PAVIMENTO DEL
 LEDGER** (due lenti convergenti + verifica di terra): pend2=0 raggiungibile (posa
 (-1,2) IN palla; 7s/660k nodi vs 1,29G ciechi = trappola hh), pend2=1={(0,2)} con
@@ -535,11 +540,11 @@ esclude seme E origine); i puliti sono quasi-morti all'indietro (17-71 nodi) =>
 via "chiusura per vitalita'". PARITY-FLUX: nullspace GF(2) su feature di stato +
 chiusura Houdini (526 tipi-di-passo): phi_colonna0 (762k stati concordi, 42/42)
 RIFIUTATO dalla chiusura e poi falsificato = trappola gg (il checker batte il
-campione); per-pose PP0 rosso, da raffinare. Prossimo §95: lente nascita-vicina;
-chiusura per vitalita' (pend2=0 => albero finito => Nascita Vicina => Muro senza
-pavimento); Ledger Sporco v2 deduttivo (per-pose raffinato / motore C striscia
-allargata / clean-far da uccidere-realizzare); fuggenti nuove vs 34 nere-D>=400;
-retro-nota §91c.3. docs/U2_FAR_PANEL_ADDENDUM.md.
+campione); per-pose PP0 rosso, da raffinare. Prossimo §95: chiusura per vitalita' (pend2=0
+=> albero finito => Nascita Vicina => Muro senza pavimento); Ledger Sporco v2
+deduttivo (per-pose raffinato / motore C striscia allargata / clean-far da
+uccidere-realizzare); fuggenti nuove vs 34 nere-D>=400; retro-nota §91c.3.
+docs/U2_FAR_PANEL_ADDENDUM.md.
 **AGGIORNAMENTO §93 (U2-LONTANO: ledger, NASCITA VICINA, pavimento del ledger):**
 il ledger dei pending e' meccanizzato e validato (`alpha1/u2_far_ledger.py`, gate
 L0-L3 + pannello lente-ledger con macchinario indipendente e 3 mutazioni-esca

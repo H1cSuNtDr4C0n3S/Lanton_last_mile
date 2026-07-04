@@ -20,6 +20,15 @@
 # VIETATA a ogni record y-min stretto con palla-(r_seed) priva di seme.
 # (Vale per ogni orbita, eterna o no; nessun bound uniforme su D richiesto.)
 #
+# NOTE dalla lente nascita-vicina (pannello, §94b — tutto REGGE, 3/3 esche):
+#   - "enumerazione esaustiva" richiede depth_cap >= D_true+1 (un albero con
+#     D_true == depth_cap risulterebbe fuggente: direzione conservativa, mai
+#     falsi certificati; il check node_cap a pop-time e' cosmetico);
+#   - il ramo esaurito-ma-min-pend-0 manterrebbe comunque la GAMBA 1 (vietanza
+#     ai record con palla priva della sola ORIGINE): qui non si emette nessun
+#     certificato in quel caso per RINUNCIA, non per necessita' (0 occorrenze
+#     su 42 testimoni + 273.459 del censimento §94).
+#
 # Questo lemma SCARICA tutte le coprenti-nere ad albero finito; il campo di
 # battaglia di U2-LONTANO resta SOLO la classe fuggente (nere400 & co.).
 #

@@ -7,8 +7,16 @@ coprenti-nere distinte (6,2x §92) in 50 config di copertura `(h1, req|S_CORE)` 
 43; §90c: 2 = GC0 esatto) — **273.459 CERTIFICATE born-near (r_seed<=63), 34 fuggenti,
 ZERO alberi esauriti con min-pend=0**; fuggenti concentrate 31/34 in UNA config (che
 ha anche 21 certificate: la fuga e' per-parola); scala D arricchita (nuove classi
-28/32/52/60/64 — trappola bb ancora). (2) **PANNELLO §93 completato 2/3** (caccia +
-macchina-palla2; nascita-vicina morta DI NUOVO per limite sessione, debito x2): tutti
+28/32/52/60/64 — trappola bb ancora). (2) **PANNELLO §93 COMPLETATO 3/3** (caccia +
+macchina-palla2 + nascita-vicina in terza run post-commit: **il Lemma della Nascita
+Vicina REGGE su tutti gli assi** — gambe 1/2 nodo-per-nodo sui 12 alberi con
+enumeratore indipendente solo-valid(), chiusura per suffissi, certificati
+bit-identici 12/12, cap mai unsound (dichiarare depth_cap>=D_true+1), controesempi
+pend2 fuori-ipotesi 10/10, 34/34 fuggenti = cap reale, 3/3 esche beccate;
+corollario-bonus "eterne senza palla" RESPINTO in sintesi: a record fissato il
+passato di un'eterna e' FINITO, l'eternita' vincola il futuro non il passato —
+la forma giusta resta spaziale a due gambe; ramo esaurito-min-pend-0 = rinuncia,
+gamba 1 varrebbe comunque): tutti
 i numeri §93 riprodotti bit-identici da macchinari indipendenti; IMPRECISIONI: il
 "3.396 vicini" di §93f e' il TOTALE pend2=0 (vicini veri 2.020), controllo negativo
 della caccia vacuo nel codice (fatto chiuso per enumerazione dalla lente). (3) **BUCO
@@ -29,7 +37,7 @@ p(0,1)+p(0,2)+[posa=(0,2)] ≡ 1 — 762k stati concordi, costante 1 su 42/42 fu
 RIFIUTATO dalla chiusura e POI falsificato dai controesempi: il checker batte il
 campione; PF1 "min pend2=2" era survivorship di politica; PP0 del per-pose rosso
 (chiusura troppo aggressiva, da raffinare prima di riusarla). **Prossimo §95:**
-lente nascita-vicina (debito x2); chiusura per vitalita' dei puliti (pend2=0 =>
+chiusura per vitalita' dei puliti (pend2=0 =>
 albero finito => Nascita Vicina => Muro senza pavimento); Ledger Sporco v2
 deduttivo (per-pose raffinato / motore C striscia allargata / uccidere-realizzare i
 1.376 clean-far); fuggenti nuove vs 34 nere-D>=400; retro-nota §91c.3.
