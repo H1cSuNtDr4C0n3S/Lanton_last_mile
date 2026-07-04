@@ -1,0 +1,1407 @@
+{
+ "args": {
+  "step_cap": 100000
+ },
+ "n_coprenti": 48,
+ "radii": [
+  8,
+  12,
+  16,
+  24,
+  32
+ ],
+ "rows": [
+  {
+   "nome": "jackpot[0]",
+   "prof": 233,
+   "pend0": 52,
+   "passi": 56,
+   "causa": "y<1",
+   "L_riv": 27,
+   "pend_fine": 51,
+   "y_max": 6,
+   "cheb_max": 6,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "jackpot[1]",
+   "prof": 217,
+   "pend0": 48,
+   "passi": 48,
+   "causa": "y<1",
+   "L_riv": 23,
+   "pend_fine": 47,
+   "y_max": 6,
+   "cheb_max": 6,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D12[0]",
+   "prof": 281,
+   "pend0": 59,
+   "passi": 12,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 57,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D12[1]",
+   "prof": 277,
+   "pend0": 61,
+   "passi": 12,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 59,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D12[2]",
+   "prof": 273,
+   "pend0": 64,
+   "passi": 12,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 62,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D12[3]",
+   "prof": 277,
+   "pend0": 62,
+   "passi": 12,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 60,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D12[4]",
+   "prof": 273,
+   "pend0": 63,
+   "passi": 12,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 61,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D8[0]",
+   "prof": 249,
+   "pend0": 74,
+   "passi": 8,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 76,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D8[1]",
+   "prof": 257,
+   "pend0": 72,
+   "passi": 8,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 74,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D8[2]",
+   "prof": 253,
+   "pend0": 73,
+   "passi": 8,
+   "causa": "y<1",
+   "L_riv": 5,
+   "pend_fine": 75,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D4[0]",
+   "prof": 65,
+   "pend0": 44,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 42,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "D4[1]",
+   "prof": 101,
+   "pend0": 44,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 42,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "nere400[0]",
+   "prof": 233,
+   "pend0": 46,
+   "passi": 56,
+   "causa": "y<1",
+   "L_riv": 27,
+   "pend_fine": 48,
+   "y_max": 6,
+   "cheb_max": 7,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "nere400[1]",
+   "prof": 265,
+   "pend0": 54,
+   "passi": 64,
+   "causa": "y<1",
+   "L_riv": 31,
+   "pend_fine": 56,
+   "y_max": 6,
+   "cheb_max": 7,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "nere400[2]",
+   "prof": 249,
+   "pend0": 55,
+   "passi": 64,
+   "causa": "y<1",
+   "L_riv": 31,
+   "pend_fine": 57,
+   "y_max": 6,
+   "cheb_max": 7,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "nere400[3]",
+   "prof": 237,
+   "pend0": 45,
+   "passi": 56,
+   "causa": "y<1",
+   "L_riv": 27,
+   "pend_fine": 47,
+   "y_max": 6,
+   "cheb_max": 7,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "nere400[4]",
+   "prof": 245,
+   "pend0": 52,
+   "passi": 56,
+   "causa": "y<1",
+   "L_riv": 27,
+   "pend_fine": 54,
+   "y_max": 6,
+   "cheb_max": 7,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "nere400[5]",
+   "prof": 249,
+   "pend0": 57,
+   "passi": 64,
+   "causa": "y<1",
+   "L_riv": 31,
+   "pend_fine": 59,
+   "y_max": 6,
+   "cheb_max": 7,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof57",
+   "prof": 57,
+   "pend0": 44,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 42,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof61",
+   "prof": 61,
+   "pend0": 42,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 40,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof61",
+   "prof": 61,
+   "pend0": 47,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 45,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof65",
+   "prof": 65,
+   "pend0": 45,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 43,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof105",
+   "prof": 105,
+   "pend0": 40,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 40,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof109",
+   "prof": 109,
+   "pend0": 39,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 39,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof113",
+   "prof": 113,
+   "pend0": 42,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 42,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof121",
+   "prof": 121,
+   "pend0": 42,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 42,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof125",
+   "prof": 125,
+   "pend0": 39,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 39,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof109",
+   "prof": 109,
+   "pend0": 43,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 43,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof113",
+   "prof": 113,
+   "pend0": 42,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 42,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof117",
+   "prof": 117,
+   "pend0": 45,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 45,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof49",
+   "prof": 49,
+   "pend0": 43,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 41,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof53",
+   "prof": 53,
+   "pend0": 42,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 40,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof77",
+   "prof": 77,
+   "pend0": 38,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 38,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof81",
+   "prof": 81,
+   "pend0": 41,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 41,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof85",
+   "prof": 85,
+   "pend0": 40,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 40,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof89",
+   "prof": 89,
+   "pend0": 43,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 43,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof49",
+   "prof": 49,
+   "pend0": 37,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 35,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof65",
+   "prof": 65,
+   "pend0": 46,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 44,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof69",
+   "prof": 69,
+   "pend0": 44,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 42,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof57",
+   "prof": 57,
+   "pend0": 43,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 41,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof61",
+   "prof": 61,
+   "pend0": 41,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 39,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof125",
+   "prof": 125,
+   "pend0": 45,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 45,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof129",
+   "prof": 129,
+   "pend0": 42,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 42,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof57",
+   "prof": 57,
+   "pend0": 42,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 40,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof105",
+   "prof": 105,
+   "pend0": 42,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 42,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof109",
+   "prof": 109,
+   "pend0": 41,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 41,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof113",
+   "prof": 113,
+   "pend0": 44,
+   "passi": 0,
+   "causa": "y<1",
+   "L_riv": 0,
+   "pend_fine": 44,
+   "y_max": 1,
+   "cheb_max": 1,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  },
+  {
+   "nome": "cc90c_prof57",
+   "prof": 57,
+   "pend0": 43,
+   "passi": 4,
+   "causa": "y<1",
+   "L_riv": 1,
+   "pend_fine": 41,
+   "y_max": 2,
+   "cheb_max": 3,
+   "balls": {
+    "8": {
+     "esce": false
+    },
+    "12": {
+     "esce": false
+    },
+    "16": {
+     "esce": false
+    },
+    "24": {
+     "esce": false
+    },
+    "32": {
+     "esce": false
+    }
+   }
+  }
+ ],
+ "sintesi": {
+  "8": {
+   "coprenti_che_escono": 0,
+   "su": 48,
+   "pend_min": null,
+   "pend_max": null,
+   "celle_unione": 0,
+   "celle_intersezione": 0,
+   "intersezione": []
+  },
+  "12": {
+   "coprenti_che_escono": 0,
+   "su": 48,
+   "pend_min": null,
+   "pend_max": null,
+   "celle_unione": 0,
+   "celle_intersezione": 0,
+   "intersezione": []
+  },
+  "16": {
+   "coprenti_che_escono": 0,
+   "su": 48,
+   "pend_min": null,
+   "pend_max": null,
+   "celle_unione": 0,
+   "celle_intersezione": 0,
+   "intersezione": []
+  },
+  "24": {
+   "coprenti_che_escono": 0,
+   "su": 48,
+   "pend_min": null,
+   "pend_max": null,
+   "celle_unione": 0,
+   "celle_intersezione": 0,
+   "intersezione": []
+  },
+  "32": {
+   "coprenti_che_escono": 0,
+   "su": 48,
+   "pend_min": null,
+   "pend_max": null,
+   "celle_unione": 0,
+   "celle_intersezione": 0,
+   "intersezione": []
+  }
+ },
+ "elapsed_s": 0.0
+}

@@ -1,0 +1,1259 @@
+{
+ "args": {
+  "radii": [
+   2,
+   3,
+   4
+  ],
+  "restarts_per_job": 4,
+  "jobs_per_cell": 2,
+  "node_budget": 200000,
+  "workers": 2,
+  "seed": 930,
+  "tag": "_smallR"
+ },
+ "targets": [
+  "jackpot[0]",
+  "jackpot[1]",
+  "nere400[0]",
+  "nere400[1]",
+  "nere400[2]",
+  "nere400[3]",
+  "nere400[4]",
+  "nere400[5]",
+  "D12[0]",
+  "D4[0]"
+ ],
+ "rows": [
+  {
+   "nome": "D12[0]",
+   "R": 2,
+   "min_pend_in": 3,
+   "min_pend_in_out": 4,
+   "steps": 264,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 40,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 12,
+   "best_cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     2
+    ]
+   ]
+  },
+  {
+   "nome": "D4[0]",
+   "R": 2,
+   "min_pend_in": 4,
+   "min_pend_in_out": 5,
+   "steps": 104,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 40,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 4,
+   "best_cells": [
+    [
+     -2,
+     1
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ]
+   ]
+  },
+  {
+   "nome": "jackpot[0]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 809,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 56,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "jackpot[1]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 747,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 48,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[0]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 914,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 60,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[1]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 2,
+   "steps": 30662,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 16608,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[2]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 990,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 72,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[3]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 1169,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 292,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[4]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 903,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 56,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[5]",
+   "R": 2,
+   "min_pend_in": 2,
+   "min_pend_in_out": 3,
+   "steps": 957,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 48,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 72,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     0,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "D12[0]",
+   "R": 3,
+   "min_pend_in": 9,
+   "min_pend_in_out": null,
+   "steps": 264,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 40,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 12,
+   "best_cells": [
+    [
+     -3,
+     1
+    ],
+    [
+     -3,
+     3
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "D4[0]",
+   "R": 3,
+   "min_pend_in": 12,
+   "min_pend_in_out": null,
+   "steps": 104,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 40,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 4,
+   "best_cells": [
+    [
+     -3,
+     1
+    ],
+    [
+     -3,
+     3
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     3
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "jackpot[0]",
+   "R": 3,
+   "min_pend_in": 8,
+   "min_pend_in_out": 8,
+   "steps": 1560,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 56,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 56,
+   "best_cells": [
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "jackpot[1]",
+   "R": 3,
+   "min_pend_in": 8,
+   "min_pend_in_out": 8,
+   "steps": 1304,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 56,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 48,
+   "best_cells": [
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[0]",
+   "R": 3,
+   "min_pend_in": 3,
+   "min_pend_in_out": 4,
+   "steps": 3854023,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 78,
+   "fail_budget": 19,
+   "fail_exhausted": 13,
+   "max_depth": 116832,
+   "best_cells": [
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[1]",
+   "R": 3,
+   "min_pend_in": 4,
+   "min_pend_in_out": 5,
+   "steps": 3295919,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 74,
+   "fail_budget": 16,
+   "fail_exhausted": 16,
+   "max_depth": 113256,
+   "best_cells": [
+    [
+     -2,
+     3
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[2]",
+   "R": 3,
+   "min_pend_in": 4,
+   "min_pend_in_out": 4,
+   "steps": 1729386,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 75,
+   "fail_budget": 7,
+   "fail_exhausted": 25,
+   "max_depth": 88156,
+   "best_cells": [
+    [
+     -3,
+     2
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[3]",
+   "R": 3,
+   "min_pend_in": 3,
+   "min_pend_in_out": 4,
+   "steps": 677496,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 72,
+   "fail_budget": 3,
+   "fail_exhausted": 29,
+   "max_depth": 74604,
+   "best_cells": [
+    [
+     -3,
+     3
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[4]",
+   "R": 3,
+   "min_pend_in": 5,
+   "min_pend_in_out": 6,
+   "steps": 2537696,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 66,
+   "fail_budget": 12,
+   "fail_exhausted": 20,
+   "max_depth": 84564,
+   "best_cells": [
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[5]",
+   "R": 3,
+   "min_pend_in": 2,
+   "min_pend_in_out": 2,
+   "steps": 4400652,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 82,
+   "fail_budget": 21,
+   "fail_exhausted": 11,
+   "max_depth": 105329,
+   "best_cells": [
+    [
+     -1,
+     2
+    ],
+    [
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "D12[0]",
+   "R": 4,
+   "min_pend_in": 16,
+   "min_pend_in_out": null,
+   "steps": 264,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 40,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 12,
+   "best_cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -4,
+     3
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -3,
+     3
+    ],
+    [
+     -3,
+     4
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     4,
+     3
+    ],
+    [
+     4,
+     4
+    ]
+   ]
+  },
+  {
+   "nome": "D4[0]",
+   "R": 4,
+   "min_pend_in": 18,
+   "min_pend_in_out": null,
+   "steps": 104,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 40,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 4,
+   "best_cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -4,
+     4
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -3,
+     3
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -2,
+     4
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     3
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     4
+    ]
+   ]
+  },
+  {
+   "nome": "jackpot[0]",
+   "R": 4,
+   "min_pend_in": 13,
+   "min_pend_in_out": 16,
+   "steps": 1032,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 64,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 56,
+   "best_cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -4,
+     3
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "jackpot[1]",
+   "R": 4,
+   "min_pend_in": 14,
+   "min_pend_in_out": 17,
+   "steps": 968,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 56,
+   "fail_budget": 0,
+   "fail_exhausted": 32,
+   "max_depth": 48,
+   "best_cells": [
+    [
+     -4,
+     1
+    ],
+    [
+     -4,
+     3
+    ],
+    [
+     -3,
+     1
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     3
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     3
+    ],
+    [
+     4,
+     4
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[0]",
+   "R": 4,
+   "min_pend_in": 8,
+   "min_pend_in_out": 8,
+   "steps": 2140774,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 82,
+   "fail_budget": 10,
+   "fail_exhausted": 22,
+   "max_depth": 97036,
+   "best_cells": [
+    [
+     -4,
+     2
+    ],
+    [
+     -3,
+     2
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     4,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[1]",
+   "R": 4,
+   "min_pend_in": 7,
+   "min_pend_in_out": 11,
+   "steps": 2327648,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 82,
+   "fail_budget": 11,
+   "fail_exhausted": 21,
+   "max_depth": 111981,
+   "best_cells": [
+    [
+     -3,
+     3
+    ],
+    [
+     -1,
+     4
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     1
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[2]",
+   "R": 4,
+   "min_pend_in": 7,
+   "min_pend_in_out": 8,
+   "steps": 4179029,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 89,
+   "fail_budget": 20,
+   "fail_exhausted": 12,
+   "max_depth": 102008,
+   "best_cells": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     4,
+     3
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[3]",
+   "R": 4,
+   "min_pend_in": 8,
+   "min_pend_in_out": 9,
+   "steps": 1906881,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 74,
+   "fail_budget": 8,
+   "fail_exhausted": 24,
+   "max_depth": 97560,
+   "best_cells": [
+    [
+     -4,
+     3
+    ],
+    [
+     -2,
+     3
+    ],
+    [
+     -2,
+     4
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[4]",
+   "R": 4,
+   "min_pend_in": 8,
+   "min_pend_in_out": 10,
+   "steps": 4427900,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 94,
+   "fail_budget": 22,
+   "fail_exhausted": 10,
+   "max_depth": 97236,
+   "best_cells": [
+    [
+     -3,
+     2
+    ],
+    [
+     -2,
+     1
+    ],
+    [
+     -2,
+     2
+    ],
+    [
+     -1,
+     1
+    ],
+    [
+     -1,
+     2
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     4,
+     4
+    ]
+   ]
+  },
+  {
+   "nome": "nere400[5]",
+   "R": 4,
+   "min_pend_in": 7,
+   "min_pend_in_out": 11,
+   "steps": 4438486,
+   "deaths_y": 0,
+   "walks": 8,
+   "tree_exhausted": false,
+   "milestones_ok": 72,
+   "fail_budget": 22,
+   "fail_exhausted": 10,
+   "max_depth": 110368,
+   "best_cells": [
+    [
+     -4,
+     4
+    ],
+    [
+     -3,
+     4
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     3,
+     1
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     4,
+     4
+    ]
+   ]
+  }
+ ],
+ "witness": null,
+ "elapsed_s": 86.1
+}

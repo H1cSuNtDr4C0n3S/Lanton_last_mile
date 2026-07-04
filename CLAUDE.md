@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§93**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§94**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -135,6 +135,23 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       uscita scramblano le parita' del bordo (16 celle ⇒ 1,2M stati = ~37% del box;
       WIDE 37 celle ⇒ >30M stati = OOM Python su 16 GB, vedi (g)): una fase-1 cosi'
       non pota quasi nulla.
+  (dd) **il residuo-al-minimo non e' IN GENERALE un insieme di celle bloccate**
+      (U2-FAR §93): se una caccia si ferma sempre sulle stesse celle residue, NON
+      dedurre blocco per-cella — l'ostruzione puo' essere CONGIUNTA (nucleo
+      {(-1,1),(0,1)} chiudibile perfino in coppia, debito che sguscia in riga 2;
+      ma sui jackpot (0,1) E' bloccata per enumerazione: i due casi coesistono).
+      Antidoto: sonda mirata per-cella/per-coppia col goal esplicito
+      (u2_far_core_block.py) PRIMA di enunciare blocchi.
+  (ee) **"albero finito ⇒ seme vicino" richiede il min-pending su TUTTI i nodi**
+      (U2-FAR §93): la nascita puo' essere in QUALSIASI nodo dell'enumerazione (il
+      passato FINISCE, non muore) e il conteggio pend0-D>0 NON basta (jackpot:
+      52-56<0 ma min vero 46-50). Parente di (w): quantificare su ogni troncamento.
+  (ff) **la macchina-palla con OUT astratto non decide il ledger** (U2-FAR §93):
+      l'astrazione che a §92 non potava la sopravvivenza non pota nemmeno la
+      pulizia dei pending — stessa radice di (cc), nuovo sintomo (1.376 stati
+      puliti fantasma vs reale mai sotto 2). Non riprovare strisce piccole esatte
+      + OUT libero: servono i req fuori striscia (motore C, (g)) o un invariante
+      che sopravviva allo scramble.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -153,7 +170,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -488,5 +505,28 @@ bianchi che curvano (verificato: all-R muore entro il 5°); h1=1 mai realizzata
 (0/43.726); "burden1=0 ⇒ D≤12": attacchi economici falliti (T1 blocca le sorelle-flip;
 151 bianche max 12 ma classi nuove 4/8) — stress-2 bianche dedicata.
 docs/U2_POCKET_ADDENDUM.md.
+**AGGIORNAMENTO §93 (U2-LONTANO: ledger, NASCITA VICINA, pavimento del ledger):**
+il ledger dei pending e' meccanizzato e validato (`alpha1/u2_far_ledger.py`, gate
+L0-L3 + pannello lente-ledger con macchinario indipendente e 3 mutazioni-esca
+beccate; L2 riproduce bit-identico il controesempio §92e: 2918 passi, pending
+60->286; scoperta: L su pending IRREALIZZABILE => ogni L e' apertura netta;
+"pending finali = seme nero visitato" promosso a TEOREMA). **LEMMA DELLA NASCITA
+VICINA** (`u2_far_born_near.py`, per-parola, due gambe origine/seme, min-pending su
+TUTTI i nodi — trappola ee): 42/42 testimoni ad albero finito CERTIFICATI vietati
+ai record lontani (r_seed<=16, senza bound su D), cross-validati con valid().
+**PAVIMENTO DEL LEDGER pend2>=2**: TEOREMA per enumerazione sui 12 finiti
+(`u2_far_pend2_floor.py`, min 2/3/3/4, jackpot residuo {(-1,1),(0,1)} = scia §86);
+congettura misurata sulle 6 fuggenti (caccia DFS-milestone `u2_far_closure_hunt.py`:
+nessuna chiusura, 37k nodi mirati R=2 + 1,29G campagna; corsa forzata fresco=>R
+muore <=64 su tutte le 48 coprenti reali `u2_far_run.py`; ostruzione CONGIUNTA
+whack-a-mole riga1<->riga2, trappola dd, sonda `u2_far_core_block.py`). Macchina
+astratta palla-2 NON decide (`u2_far_ball2_machine.py`: 1.376 puliti fantasma,
+trappola ff). Corno 3 del Muro SPEZZATO: (3a) alberi finiti chiusi via Nascita
+Vicina; (3b) fuggenti = pavimento del ledger (aperto; se vero, Muro chiuso al
+raggio 2+intorno). Pannello §93 PARZIALE: 2/5 lenti (3 uccise da limite sessione,
+DEBITO §94). Prossimo §94: completare pannello; pavimento sulle fuggenti (motore C
+striscia allargata / invariante parita'-flusso / automa prepend in-palla);
+censimento born_near sulle 43 config; retro-nota §91c.3.
+docs/U2_FAR_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

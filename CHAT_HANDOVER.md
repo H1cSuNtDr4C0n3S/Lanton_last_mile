@@ -1,3 +1,42 @@
+# ============ §93 — U2-LONTANO: ledger dei pending, NASCITA VICINA, pavimento del ledger ============
+
+**Cosa e' successo a §93 (in una riga):** il ledger dei pending §92e e' MECCANIZZATO e
+validato (gate L0-L3; pending(c) <=> req(c)==0; riproduzione bit-identica del
+controesempio del pannello: 2918 passi, pending 60->286; pannello §93 lente-ledger:
+tutto REGGE con macchinario indipendente + 3 mutazioni-esca beccate; scoperta: L su
+pending e' IRREALIZZABILE => ogni L e' apertura netta; per il passato COMPLETO,
+pending finali = seme nero visitato e' TEOREMA). Tre risultati: (1) **LEMMA DELLA
+NASCITA VICINA** (per-parola, due gambe): albero dei prepend FINITO => origine entro
+r_seed dal record; + min-pending>0 su TUTTI i nodi (nascita = qualsiasi nodo,
+trappola ee: il conteggio non basta, jackpot pend0=52 D=56 min-vero 50) => anche una
+cella NERA di seme entro r_seed => **42/42 testimoni ad albero finito CERTIFICATI
+vietati ai record lontani (r_seed<=16), senza alcun bound su D** — sostituto sano
+del ramo finito di U2-NERO; cross-validati con valid() di terra. (2) **PAVIMENTO DEL
+LEDGER pend2>=2**: TEOREMA per enumerazione sui 12 testimoni finiti (min 2/3/3/4,
+residui espliciti; jackpot: {(-1,1),(0,1)} = la scia §86) e CONGETTURA misurata
+sulle 6 fuggenti nere400: nessuna chiusura della palla-2 trovata (37k nodi mirati
+R=2 + 16,5M R=3 + 12M sonde nucleo; 1,29G totali; greedy non esaustiva, trappola bb
+dichiarata); corsa forzata fresco=>R muore <=64 passi su TUTTE le 48 coprenti reali
+(=> ogni passato vero devia con L-su-fresco entro 64); l'ostruzione e' CONGIUNTA
+(trappola dd): il nucleo {(-1,1),(0,1)} si chiude anche in coppia ma il debito
+riappare in riga 2 (whack-a-mole; sui jackpot invece (0,1) bloccata per
+enumerazione). Se la congettura e' vera: TEOREMA DEL LEDGER SPORCO => >=2 celle di
+seme in palla-2 => il Muro (corno 3) si richiude al raggio 2 + intorno. (3) la
+**macchina astratta palla-2 NON decide** (BFS post-copertura dalle 47.312
+coperture-nere, 3,44M stati, gate B0-B3 verdi: 1.376 stati puliti-lontani + 3.396
+vicini = fantasmi, trappola ff/cc: l'OUT-scramble dimentica i req fuori striscia).
+Lemma bianchi-che-curvano ora DEDUTTIVO (all-R muore <=5, dicotomia word[0]).
+Corno 3 SPEZZATO: (3a) alberi finiti => Nascita Vicina (intorno del Muro cresce a
+r_seed<=16+bbox); (3b) fuggenti => pavimento del ledger (aperto). **Prossimo §94:**
+completare il pannello (3 lenti uccise dal limite sessione); pavimento pend2 sulle
+fuggenti (motore C striscia allargata / invariante parita'-flusso / automa prepend
+in-palla); censimento born_near sulle 43 config; retro-nota §91c.3.
+Dettagli: docs/U2_FAR_ADDENDUM.md. File: alpha1/u2_far_ledger.py, u2_far_run.py,
+u2_far_born_near.py, u2_far_pend2_floor.py, u2_far_closure_hunt.py,
+u2_far_core_block.py, u2_far_ball2_machine.py (+json/log).
+
+# ================================================================================================
+
 # ============ §92 — U2-NERO FALSIFICATA (D = ∞ certificato), bilancio dei neri freschi ============
 
 **Cosa e' successo a §92 (in una riga):** il certificato esatto-in-striscia progettato a
