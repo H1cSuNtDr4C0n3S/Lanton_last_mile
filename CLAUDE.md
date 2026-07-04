@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§94**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§95**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -151,7 +151,21 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       pulizia dei pending — stessa radice di (cc), nuovo sintomo (1.376 stati
       puliti fantasma vs reale mai sotto 2). Non riprovare strisce piccole esatte
       + OUT libero: servono i req fuori striscia (motore C, (g)) o un invariante
-      che sopravviva allo scramble.
+      che sopravviva allo scramble. [NB §94: "reale mai sotto 2" poi FALSIFICATO —
+      il reale raggiunge pend2=0, ma (evidenza attuale) solo con posa in palla;
+      i 1.376 clean-far restano fantasmi non realizzati.]
+  (gg) **l'invariante campionato non e' un fatto — la chiusura induttiva e' il
+      gate** (PARITY-FLUX §94): un funzionale GF(2) costante su 762k stati
+      campionati e su 42/42 parole (phi_colonna0) puo' essere FALSO negli angoli
+      che la politica di camminata non raggiunge. Se la chiusura alla Houdini non
+      lo promuove, trattarlo come artefatto; il killer-step della chiusura indica
+      l'angolo da campionare. Parente di (i) e (bb).
+  (hh) **il floor di una caccia e' survivorship anche a 10^9 nodi se la famiglia
+      di politiche e' una sola** (PANNELLO §94): la campagna §93 (1,29G nodi)
+      dava pend2 floor 2; una DFS greedy MIRATA diversa trova pend2=0 in 7 s /
+      660k nodi. Per un negativo servono politiche indipendenti multiple, e ogni
+      floor "misurato" va etichettato con la politica che lo ha prodotto.
+      Istanza quantificata di (bb).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -170,7 +184,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -505,6 +519,27 @@ bianchi che curvano (verificato: all-R muore entro il 5°); h1=1 mai realizzata
 (0/43.726); "burden1=0 ⇒ D≤12": attacchi economici falliti (T1 blocca le sorelle-flip;
 151 bianche max 12 ma classi nuove 4/8) — stress-2 bianche dedicata.
 docs/U2_POCKET_ADDENDUM.md.
+**AGGIORNAMENTO §94 (censimento famiglia, pannello, PAVIMENTO FALSIFICATO, parity-flux):**
+censimento born-near sulla famiglia RIGENERATA (`u2_far_born_near_census.py`, gate
+GC0-GC4): 273.493 coprenti-nere in 50 config `(h1, req|S_CORE)` — **273.459
+CERTIFICATE (r_seed<=63), 34 fuggenti (31/34 in una config mista), 0 min-pend=0**;
+nuove classi D 28/32/52/60/64. Pannello §93: 2/3 lenti (nascita-vicina morta di
+nuovo, debito x2); numeri §93 tutti bit-identici; imprecisioni: 2.020 vicini veri
+(non 3.396), controllo negativo caccia vacuo. **FALSIFICATO il PAVIMENTO DEL
+LEDGER** (due lenti convergenti + verifica di terra): pend2=0 raggiungibile (posa
+(-1,2) IN palla; 7s/660k nodi vs 1,29G ciechi = trappola hh), pend2=1={(0,2)} con
+posa (0,3) FUORI; cadono residuo-nucleo §93e e "mai sotto 2" §93f; 10 controesempi
+in `u2_far_pend2_counterexamples.json`. SOPRAVVIVE: **posa fuori palla => pend2>=1
+mai violato** (~160M+1,29G nodi) = LEDGER SPORCO v2 (basta al Muro: l'ipotesi
+esclude seme E origine); i puliti sono quasi-morti all'indietro (17-71 nodi) =>
+via "chiusura per vitalita'". PARITY-FLUX: nullspace GF(2) su feature di stato +
+chiusura Houdini (526 tipi-di-passo): phi_colonna0 (762k stati concordi, 42/42)
+RIFIUTATO dalla chiusura e poi falsificato = trappola gg (il checker batte il
+campione); per-pose PP0 rosso, da raffinare. Prossimo §95: lente nascita-vicina;
+chiusura per vitalita' (pend2=0 => albero finito => Nascita Vicina => Muro senza
+pavimento); Ledger Sporco v2 deduttivo (per-pose raffinato / motore C striscia
+allargata / clean-far da uccidere-realizzare); fuggenti nuove vs 34 nere-D>=400;
+retro-nota §91c.3. docs/U2_FAR_PANEL_ADDENDUM.md.
 **AGGIORNAMENTO §93 (U2-LONTANO: ledger, NASCITA VICINA, pavimento del ledger):**
 il ledger dei pending e' meccanizzato e validato (`alpha1/u2_far_ledger.py`, gate
 L0-L3 + pannello lente-ledger con macchinario indipendente e 3 mutazioni-esca

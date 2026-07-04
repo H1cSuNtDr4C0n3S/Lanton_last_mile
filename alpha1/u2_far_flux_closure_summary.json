@@ -1,0 +1,292 @@
+{
+ "invarianti_ingresso": 37,
+ "tipi_di_passo": 526,
+ "round_houdini": 2,
+ "sopravvissuti": [
+  {
+   "supporto": [
+    "v(-4, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-3, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-2, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-1, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(0, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(1, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(2, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(3, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(4, 1)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-5, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-4, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-3, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-2, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-1, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(0, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(1, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(2, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(3, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(4, 2)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-5, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-4, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-3, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-2, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(-1, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(0, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(1, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(2, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(3, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "v(4, 3)"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "pose(-6, 1)",
+    "pose(-5, 1)",
+    "pose(-4, 1)",
+    "pose(-3, 1)",
+    "pose(-2, 1)",
+    "pose(-1, 1)",
+    "pose(0, 1)",
+    "pose(1, 1)",
+    "pose(2, 1)",
+    "pose(3, 1)",
+    "pose(4, 1)",
+    "pose(-6, 2)",
+    "pose(-5, 2)",
+    "pose(-4, 2)",
+    "pose(-3, 2)",
+    "pose(-2, 2)",
+    "pose(-1, 2)",
+    "pose(0, 2)",
+    "pose(1, 2)",
+    "pose(2, 2)",
+    "pose(3, 2)",
+    "pose(4, 2)",
+    "pose(-6, 3)",
+    "pose(-5, 3)",
+    "pose(-4, 3)",
+    "pose(-3, 3)",
+    "pose(-2, 3)",
+    "pose(-1, 3)",
+    "pose(0, 3)",
+    "pose(1, 3)",
+    "pose(2, 3)",
+    "pose(3, 3)",
+    "pose(4, 3)",
+    "OUT"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "h0",
+    "h2",
+    "(x+y)%2"
+   ],
+   "costante": 1
+  },
+  {
+   "supporto": [
+    "h1",
+    "h3",
+    "(x+y)%2"
+   ],
+   "costante": 0
+  },
+  {
+   "supporto": [
+    "x%2",
+    "y%2",
+    "(x+y)%2"
+   ],
+   "costante": 0
+  },
+  {
+   "supporto": [
+    "1"
+   ],
+   "costante": 1
+  }
+ ],
+ "uccisi": [
+  {
+   "supporto": [
+    "p(1, 1)"
+   ],
+   "costante": 0,
+   "passo_killer": "IN cn=(1, 1) h=1 req=1 bit=0"
+  },
+  {
+   "supporto": [
+    "p(0, 1)",
+    "p(0, 2)",
+    "pose(0, 2)"
+   ],
+   "costante": 1,
+   "passo_killer": "IN cn=(0, 3) h=0 req=0 bit=1"
+  },
+  {
+   "supporto": [
+    "p(-4, 1)",
+    "p(-3, 1)",
+    "p(-2, 1)",
+    "p(-1, 1)",
+    "p(0, 2)",
+    "v(-5, 1)",
+    "pose(-4, 1)",
+    "pose(-2, 1)",
+    "pose(0, 1)",
+    "pose(0, 2)"
+   ],
+   "costante": 0,
+   "passo_killer": "IN cn=(-5, 1) h=1 req=0 bit=1"
+  }
+ ],
+ "phi_colonna0_sopravvive": false,
+ "fc0_universale": true,
+ "fc1_esca": true,
+ "fc2_costante1_su_fuggenti": [
+  42,
+  42
+ ],
+ "elapsed_s": 0.1
+}

@@ -1,3 +1,44 @@
+# ============ §94 — U2-LONTANO 2: censimento famiglia, pannello, PAVIMENTO FALSIFICATO ============
+
+**Cosa e' successo a §94 (in una riga):** tre risultati + una falsificazione maggiore.
+(1) **CENSIMENTO BORN-NEAR sulla famiglia intera** (`alpha1/u2_far_born_near_census.py`,
+campagna §92 rigenerata, 8 worker, gate GC0-GC4 tutti verdi e falsificabili): 273.493
+coprenti-nere distinte (6,2x §92) in 50 config di copertura `(h1, req|S_CORE)` (§92c:
+43; §90c: 2 = GC0 esatto) — **273.459 CERTIFICATE born-near (r_seed<=63), 34 fuggenti,
+ZERO alberi esauriti con min-pend=0**; fuggenti concentrate 31/34 in UNA config (che
+ha anche 21 certificate: la fuga e' per-parola); scala D arricchita (nuove classi
+28/32/52/60/64 — trappola bb ancora). (2) **PANNELLO §93 completato 2/3** (caccia +
+macchina-palla2; nascita-vicina morta DI NUOVO per limite sessione, debito x2): tutti
+i numeri §93 riprodotti bit-identici da macchinari indipendenti; IMPRECISIONI: il
+"3.396 vicini" di §93f e' il TOTALE pend2=0 (vicini veri 2.020), controllo negativo
+della caccia vacuo nel codice (fatto chiuso per enumerazione dalla lente). (3) **BUCO
+convergente dalle due lenti: la CONGETTURA DEL PAVIMENTO (pend2>=2, e anche >=1
+incondizionata) e' FALSA** — estensioni valide delle fuggenti raggiungono pend2=0
+(posa nascita (-1,2), IN palla; la lente macchina in 7s/660k nodi dove 1,29G non
+vedevano nulla = trappola hh) e pend2=1={(0,2)} con posa (0,3) FUORI; 10 controesempi
+ri-verificati di terra e salvati (`alpha1/u2_far_pend2_counterexamples.json`); cadono
+anche il residuo-nucleo §93e e il "reale mai sotto 2" §93f. SOPRAVVIVE la forma
+condizionata: **mai visto pend2=0 con posa fuori palla** (~160M nodi indipendenti +
+1,29G) = LEDGER SPORCO v2 (posa fuori => pend2>=1, che BASTA al Muro: l'ipotesi
+esclude seme E origine); e i nodi puliti sono QUASI-MORTI all'indietro (sottoalberi
+17-71 nodi) => via nuova "chiusura per vitalita'" (§95). (4) **PARITY-FLUX**
+(`u2_far_parity_flux.py` + `u2_far_flux_closure.py` + `u2_far_flux_perpose.py`):
+caccia a invarianti GF(2) su feature di stato + promozione deduttiva alla Houdini
+(526 tipi-di-passo esaustivi); lezione capitale (trappola gg): phi_colonna0 =
+p(0,1)+p(0,2)+[posa=(0,2)] ≡ 1 — 762k stati concordi, costante 1 su 42/42 fuggenti —
+RIFIUTATO dalla chiusura e POI falsificato dai controesempi: il checker batte il
+campione; PF1 "min pend2=2" era survivorship di politica; PP0 del per-pose rosso
+(chiusura troppo aggressiva, da raffinare prima di riusarla). **Prossimo §95:**
+lente nascita-vicina (debito x2); chiusura per vitalita' dei puliti (pend2=0 =>
+albero finito => Nascita Vicina => Muro senza pavimento); Ledger Sporco v2
+deduttivo (per-pose raffinato / motore C striscia allargata / uccidere-realizzare i
+1.376 clean-far); fuggenti nuove vs 34 nere-D>=400; retro-nota §91c.3.
+Dettagli: docs/U2_FAR_PANEL_ADDENDUM.md. File: alpha1/u2_far_born_near_census.py,
+u2_far_parity_flux.py, u2_far_flux_closure.py, u2_far_flux_perpose.py,
+u2_far_pend2_counterexamples.json (+json/log).
+
+# ================================================================================================
+
 # ============ §93 — U2-LONTANO: ledger dei pending, NASCITA VICINA, pavimento del ledger ============
 
 **Cosa e' successo a §93 (in una riga):** il ledger dei pending §92e e' MECCANIZZATO e

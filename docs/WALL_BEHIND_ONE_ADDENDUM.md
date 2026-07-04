@@ -106,6 +106,20 @@ coperture nere (bbox [0,2]x[0,1]) prima di allargare.
 4. Poi: dalla vietanza di una parola alla vietanza di una famiglia INEVITABILE ai
    record (le parole a scia minima di §89b, dove il conteggio delle colpevoli tocca 1).
 
+**RETRO-NOTA (§94, chiude il debito §93h.4):** l'incollaggio del corno 3 al punto 3
+("U2-NERO ⇒ D ≤ 4 ⇒ Cheb ≤ ~5") e' MORTO a §92 (D=∞ certificato, trappola aa/bb).
+Dopo §93-§94 il corno 3 e' SPEZZATO e riformulato cosi':
+(3a) coprente-nera ad albero dei prepend FINITO ⇒ LEMMA DELLA NASCITA VICINA (§93c):
+     origine E una cella nera di seme entro r_seed dal record — censimento §94:
+     273.459/273.493 parole della famiglia certificate, r_seed ≤ 63, zero alberi
+     esauriti con min-pend = 0 ⇒ l'intorno del Muro cresce da "~5" a r_seed+bbox;
+(3b) coprente-nera FUGGENTE (34 note) ⇒ APERTO. Il pavimento pend₂ ≥ 2 di §93d e'
+     stato FALSIFICATO a §94 (pend₂=0 raggiungibile con posa in palla); il bersaglio
+     vivo e' il LEDGER SPORCO v2 (posa di nascita fuori palla-2 ⇒ pend₂ ≥ 1, mai
+     violato su ~160M+1,29G nodi) oppure la chiusura per vitalita' (i nodi puliti
+     hanno sottoalberi all'indietro 17-71 nodi ⇒ Nascita Vicina su quei rami).
+     Dettagli: docs/U2_FAR_ADDENDUM.md §93, docs/U2_FAR_PANEL_ADDENDUM.md §94.
+
 ## 91d. Inventario file (alpha1/)
 
 - `u1_replay_theorem.py` (+`_summary.json`, `.log`) — teorema U1: ingredienti G1-G4 e
