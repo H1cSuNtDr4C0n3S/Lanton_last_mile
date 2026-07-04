@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§92**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§93**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -110,6 +110,31 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       essere a binario unico per un tratto finito (prof. 2..17 dietro w101) e riaprirsi
       esponenzialmente (×1.65). Dichiarare sempre fino a che profondita' l'unicita' e'
       esaustiva; non dedurre forzatura globale del passato.
+  (aa) **la vitalita' all'indietro D e' una risorsa di seme travestita** (U2-POCKET §92):
+      ogni parola con accesso al territorio vergine ha D=∞ (Lemma del Raggio Monotono,
+      1 nero FRESCO = 1 cella di SEME ogni 2 passi; la rotaia σ di §88 paga 5/8 ⇒ anche
+      D(w101)=∞ non certifica presentabilita' ai record lontani). Il tasso NON e'
+      universale: la discesa in autostrada e' una rotaia infinita a costo totale O(1)
+      (13 neri) ⇒ l'invariante e' il BILANCIO senza tasso (#prime-visite-della-vita-nere
+      ≤ |seme_nero|). MAI credere a "D ≤ costante" senza aver attaccato con la fuga
+      verso il vergine E con la discesa in autostrada. Ledger corretto: pending(c) ⟺
+      prima-lettura-corrente-in-parola nera; OGNI L apre/riapre (anche su rivisitata),
+      R su pending chiude — vietare solo L-su-fresco non uccide (2.918 passi, +226
+      pending). Parente di (n)/(w) e del pavimento-del-morso §57.
+  (bb) **i campioni best-first di estensioni sottostimano le code** (U2-POCKET §92):
+      il censimento §90c vedeva 2 config di copertura e D≤4; il vero sup era ∞ (43
+      config, jackpot al 20° tipo; caduta anche la "tasca 15 celle su 2 righe" §91b).
+      Le cacce guidate dalla distanza trovano le porte piu' vicine, non le piu' ricche:
+      per falsificare servono passeggiate casuali profonde + steering sulle
+      configurazioni. E' la (h) sul piano delle estensioni. Corollario di metodo
+      (G4-v1 vacuo, pannello §92): UN GATE DEVE POTER FALLIRE — asserire soglie
+      minime di copertura del test, non solo il verde.
+  (cc) **istanza striscia-stretta di (c)+(z)** (U2-POCKET §92): dell'astrazione OUT si
+      trasferisce solo la morte; le config-FUGA vanno attaccate con la realizzazione
+      concreta (qui erano REALI). Meccanismo quantificato: i round-trip rientro-flip-
+      uscita scramblano le parita' del bordo (16 celle ⇒ 1,2M stati = ~37% del box;
+      WIDE 37 celle ⇒ >30M stati = OOM Python su 16 GB, vedi (g)): una fase-1 cosi'
+      non pota quasi nulla.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -128,7 +153,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -439,5 +464,29 @@ fuori da un intorno finito del seme ("storia lunga" NON basta; le convergenti po
 presentare = ingresso forzato). Prossimo §92: certificato U2-NERO alla-HALO
 (esatta-in-striscia, uscita=sopravvivenza), poi famiglia inevitabile (scia minima §89b).
 docs/WALL_BEHIND_ONE_ADDENDUM.md.
+**AGGIORNAMENTO §92 (U2-NERO FALSIFICATA, D=∞ certificato, bilancio dei neri freschi):**
+il certificato §91b e' stato costruito e validato (`alpha1/u2_pocket_certificate.py`,
+6 gate: formula del passo, lemma del suffisso, replay bit-identico 60 muri §90c,
+membership 60/60; G4 riparato dal pannello con camminate lunghe e SOGLIE asseribili:
+264.854 stati, 4.427 rientri, 644 coperture; lemma di sovra-approssimazione promosso a
+deduttivo) ma ha FALSIFICATO il bersaglio: "coprente-nera ⇒ D≤4" era survivorship
+best-first (trappola bb; cade anche la "tasca 15 celle" §91b) — scala reale
+D = 0/4/8/12/48/56 (43.726 nere, 43 config vs 2 del censimento), 34 coprenti-nere
+fuggono nel vergine (riga 13–33) e una e' TEOREMA D=∞ (`u2_infinite_rail.py`, Lemma del
+Raggio Monotono): cade la forma word-level, uniforme E per-parola. Il corno 3 del Muro
+NON si chiude via vitalita' (riapre SOLO il corno 3: U1 intatto, ri-attaccato 12/12):
+D e' l'invariante sbagliato (trappola aa) — il raggio paga 1 nero fresco = 1 cella di
+seme ogni 2 passi, la σ di §88 5/8 (anche D(w101)=∞ non certifica presentabilita' ai
+record lontani), ma la discesa in autostrada costa O(1) totale ⇒ l'invariante e' il
+BILANCIO senza tasso; ledger corretto = pending per-cella (ogni L apre/riapre, R su
+pending chiude). Restano certificati: T1 h1=2⇒D=0 (geometria), T2 zero cicli in-tasca,
+T3 muro con celle tutte in S_CORE ⇒ D≤33, T4 corridoio h1=0 ⇒ req(2,1)=B. Fase-1 WIDE
+>30M stati = OOM Python (trappola cc/g). Prossimo §93: U2-LONTANO (corsa inversa
+forzata + contabilita' dei pending nella palla senza seme, usando la parte
+w101-specifica — il Muro si richiude nella forma spaziale senza bound su D); lemma dei
+bianchi che curvano (verificato: all-R muore entro il 5°); h1=1 mai realizzata
+(0/43.726); "burden1=0 ⇒ D≤12": attacchi economici falliti (T1 blocca le sorelle-flip;
+151 bianche max 12 ma classi nuove 4/8) — stress-2 bianche dedicata.
+docs/U2_POCKET_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

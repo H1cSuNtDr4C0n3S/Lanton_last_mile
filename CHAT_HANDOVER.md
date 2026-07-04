@@ -1,3 +1,41 @@
+# ============ §92 — U2-NERO FALSIFICATA (D = ∞ certificato), bilancio dei neri freschi ============
+
+**Cosa e' successo a §92 (in una riga):** il certificato esatto-in-striscia progettato a
+§91b e' stato costruito e VALIDATO (6 gate meccanici, replay bit-identico dei 60 muri
+§90c, membership 60/60; G4 riparato dal pannello: 264.854 stati, 4.427 rientri OUT->IN,
+644 coperture, con soglie asseribili) ma ha FALSIFICATO il bersaglio: "coprente-nera ⇒
+D ≤ 4" era survivorship del best-first (trappola bb) — scala reale D = 0/4/8/12/48/56
+su 43.726 nere (43 config di copertura vs le 2 del censimento §90c; cade anche la
+"tasca 15 celle su 2 righe" §91b), 34 coprenti-nere FUGGONO in territorio vergine
+(riga max 13–33) e una e' promossa a **TEOREMA: D = ∞** (Lemma del Raggio Monotono,
+`u2_infinite_rail.py`) — cade la forma word-level "ogni coprente muore entro D
+limitato", uniforme E per-parola. ⇒ il corno 3 del Muro dietro l'Uno NON si chiude via
+vitalita' (riapre SOLO il corno 3: U1/ramo bianco intatto, ri-attaccato dal pannello
+12/12): **D era l'invariante sbagliato** (trappola aa, parente di pavimento-del-morso
+§57 / deficit §79: la risorsa infinita stavolta e' il vergine). Il raggio LR paga 1
+NERO FRESCO = 1 cella di SEME ogni 2 passi, la rotaia σ di §88 ne paga 5/8 (⇒ anche
+D(w101)=∞ non certifica presentabilita' ai record lontani), MA il tasso non e'
+universale: la DISCESA IN AUTOSTRADA e' una rotaia infinita record-compat a costo
+totale O(1) (13 neri, il glider eterno) ⇒ l'invariante esatto e' il BILANCIO senza
+tasso (#prime-visite-della-vita-nere ≤ |seme_nero|) e la vietanza deve usare la parte
+w101-specifica. Ledger corretto (pannello): pending(c) ⟺ prima-lettura-corrente nera;
+ogni L apre/riapre, R su pending chiude — vietare solo L-su-fresco NON uccide (corsa
+deterministica di 2.918 passi con +226 pending). Fatti certificati che restano: T1
+h1=2 ⇒ D=0 (geometria); T2 zero cicli in-tasca (47.312 config); T3 muro con celle
+tutte in S_CORE ⇒ D ≤ 33 (lemma di sovra-approssimazione deduttivo); T4 corridoio
+h1=0 ⇒ req(2,1)=B forzato. **Prossimo (§93): U2-LONTANO** — corsa inversa forzata con
+contabilita' dei pending nella palla senza seme (il Muro si richiude nella forma
+spaziale, senza alcun bound su D); lemma dei bianchi che curvano (all-R muore entro il
+5° passo, verificato 4000 parole); h1=1 mai realizzata (0/43.726, ostruzione di
+corridoio candidata); "burden1=0 ⇒ D≤12": attacchi economici falliti (sorelle-flip
+h1=2 ⇒ D=0 per T1; 151 bianche fresche max 12 ma con classi NUOVE 4/8) — serve
+stress-2 bianche.
+Dettagli: docs/U2_POCKET_ADDENDUM.md. File: alpha1/u2_pocket_certificate.py,
+u2_infinite_rail.py, u2_cover_witnesses.json (+json/log). NOTA MEMORIA (trappola g/cc):
+fase-1 su striscia WIDE >30M stati = OOM in Python su 16 GB — mai rieseguirla in Python.
+
+# ================================================================================================
+
 # ============ §91 — U1 DIMOSTRATO (Rigioco Bianco), lacuna ridotta a U2-NERO ============
 
 **Cosa e' successo a §91 (in una riga):** U1 e' un TEOREMA — Teorema del Rigioco Bianco:

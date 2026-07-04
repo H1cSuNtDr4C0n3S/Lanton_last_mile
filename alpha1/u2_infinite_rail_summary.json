@@ -1,0 +1,29 @@
+{
+ "witness": {
+  "word_ext": "RRRLRLRLLLLRLLRRRRLLRRRRLLRLRLRLRRRRLRLRRRRLRLLRLRRRRLLLLRLRLLLLRRRRLRRRRLRLLRLLRLLLLRRRRLRLLLLRRRRLRRLLRLRRLLLLRRLLLLRRLRRLRRLRRRRLRRRRLLLLRLRRLLLLRRLRRRRLLLLRLLLLRLLLLRRRRLRRLLLLRRLRLLRLLRRRRLLRLLRLRLRLRRRRLRRRRLLLLRLRRLRRRRLLLLRLL",
+  "prof": 233
+ },
+ "escape": {
+  "prof": 66,
+  "word": "RLRLRLRLRLRLRLRLRLRLRLRRLLRRLLRRLRLRLLLLRRRRLRLRLLRLLRLRRRRLLLLRLR"
+ },
+ "adjuster": "",
+ "ray": {
+  "pattern": "LR",
+  "m0": 1,
+  "m_verificate": 41,
+  "tail_pose": [
+   [
+    -18,
+    12
+   ],
+   0
+  ]
+ },
+ "teorema": "D = INFINITO per questa coprente-nera: valid(r_m + A + f + coprente + w101) per ogni m (lemma del raggio monotono; check finito fino a m0+40)",
+ "bilancio": {
+  "neri_freschi_totali": 52,
+  "nota": "ogni coppia del raggio consuma 1 nero fresco = 1 cella di seme: il testimone e' VACUO ai record lontani dal seme (bianco fresco => R forzato)"
+ },
+ "elapsed_s": 0.0
+}

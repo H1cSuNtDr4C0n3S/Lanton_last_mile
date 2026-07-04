@@ -1,0 +1,225 @@
+{
+ "args": {
+  "seed": 92,
+  "skip_slow_gates": false
+ },
+ "gates": {
+  "g0_parole": 1500,
+  "g1_suffissi": 42697,
+  "g2_muri": 60,
+  "g3_membership": 60,
+  "g4_ammessi": 264854,
+  "g4_rientri": 4427,
+  "g4_coperture": 644,
+  "g5_testimoni": 12
+ },
+ "fase1": {
+  "stati": 1198136,
+  "cov_nere": 47312,
+  "cov_bianche": 47312,
+  "h1_nere": [
+   0,
+   1,
+   2
+  ]
+ },
+ "fase2_nera": {
+  "morenti": 28910,
+  "D_distr": {
+   "0": 11136,
+   "1": 10368,
+   "4": 2976,
+   "5": 1864,
+   "8": 616,
+   "9": 1556,
+   "12": 154,
+   "13": 80,
+   "16": 36,
+   "17": 20,
+   "20": 10,
+   "21": 86,
+   "24": 2,
+   "33": 6
+  },
+  "D_max_confinato": 33,
+  "fuggenti": 18402,
+  "celle_fuga": {
+   "(0, 3)": 2368,
+   "(2, 3)": 4736,
+   "(3, 2)": 3957,
+   "(-1, 3)": 1824,
+   "(1, 3)": 5208,
+   "(-3, 3)": 120,
+   "(-5, 2)": 27,
+   "(-4, 3)": 10,
+   "(-2, 3)": 152
+  },
+  "cicli": 0
+ },
+ "fase2_bianca": {
+  "morenti": 30924,
+  "D_max_confinato": 25,
+  "fuggenti": 16388
+ },
+ "testimoni": [
+  {
+   "grp": "jackpot",
+   "prof": 233,
+   "h1": 0,
+   "D": 56,
+   "riga_max": 6,
+   "confinato_core": false,
+   "verdetto_astratto": [
+    "F",
+    [
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "grp": "jackpot",
+   "prof": 217,
+   "h1": 0,
+   "D": 48,
+   "riga_max": 6,
+   "confinato_core": false,
+   "verdetto_astratto": [
+    "F",
+    [
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "grp": "D12",
+   "prof": 281,
+   "h1": 0,
+   "D": 12,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    12
+   ]
+  },
+  {
+   "grp": "D12",
+   "prof": 277,
+   "h1": 0,
+   "D": 12,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    12
+   ]
+  },
+  {
+   "grp": "D12",
+   "prof": 273,
+   "h1": 0,
+   "D": 12,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    12
+   ]
+  },
+  {
+   "grp": "D12",
+   "prof": 277,
+   "h1": 0,
+   "D": 12,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    12
+   ]
+  },
+  {
+   "grp": "D12",
+   "prof": 273,
+   "h1": 0,
+   "D": 12,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    12
+   ]
+  },
+  {
+   "grp": "D8",
+   "prof": 249,
+   "h1": 0,
+   "D": 8,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    8
+   ]
+  },
+  {
+   "grp": "D8",
+   "prof": 257,
+   "h1": 0,
+   "D": 8,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    8
+   ]
+  },
+  {
+   "grp": "D8",
+   "prof": 253,
+   "h1": 0,
+   "D": 8,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    8
+   ]
+  },
+  {
+   "grp": "D4",
+   "prof": 65,
+   "h1": 0,
+   "D": 4,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    4
+   ]
+  },
+  {
+   "grp": "D4",
+   "prof": 101,
+   "h1": 0,
+   "D": 4,
+   "riga_max": 2,
+   "confinato_core": true,
+   "verdetto_astratto": [
+    "D",
+    4
+   ]
+  }
+ ],
+ "scala_D_reale": {
+  "0": 23406,
+  "4": 11340,
+  "8": 2358,
+  "12": 117,
+  "48": 1,
+  "56": 1
+ },
+ "elapsed_s": 7.7
+}
