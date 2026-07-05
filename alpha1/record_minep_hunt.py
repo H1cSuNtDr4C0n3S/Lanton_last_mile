@@ -36,6 +36,7 @@ OUT = os.path.join(HERE, "record_minep_hunt_summary.json")
 K = 101
 BASE = 0x9E3779B97F4A7C15          # catena semi: s0 = xs(xs(BASE)), s_{i+1} = xs(xs(s_i ^ GOLD))
 GOLD = 0xBF58476D1CE4E5B9
+BASE2 = None                        # catena-2 §100 (preregistrata a §99d): xs(BASE ^ 0xD1B54A32D192ED03)
 
 _ev_cache = {}
 
@@ -48,8 +49,8 @@ def ev(w):
     return r
 
 
-def fresh_states(n):
-    s = xs(xs(BASE))
+def fresh_states(n, base=None):
+    s = xs(xs(BASE if base is None else base))
     out = []
     for _ in range(n):
         out.append(s)
@@ -201,13 +202,26 @@ def main():
     ap.add_argument("--n-seeds", type=int, default=600)
     ap.add_argument("--workers", type=int, default=8)
     ap.add_argument("--skip-gate", action="store_true")
+    ap.add_argument("--chain2", action="store_true",
+                    help="§100: catena semi DISGIUNTA preregistrata a §99d "
+                         "(BASE2 = xs(BASE ^ 0xD1B54A32D192ED03)); output separato; "
+                         "verdetto preregistrato coda doppia (min_ep>8 E min_age>1040)")
     args = ap.parse_args()
     t0 = time.time()
 
     if not args.skip_gate:
         gate_canonici()
 
-    states = fresh_states(args.n_seeds)
+    if args.chain2:
+        base2 = xs(BASE ^ 0xD1B54A32D192ED03)
+        states = fresh_states(args.n_seeds, base=base2)
+        # disgiunzione dichiarata e VERIFICATA contro la catena-1 di §99 (5000 semi)
+        overlap = set(states) & set(fresh_states(5000))
+        assert not overlap, f"catene NON disgiunte: {len(overlap)} collisioni"
+        print(f"catena-2 (BASE2={base2}): {args.n_seeds} semi, disgiunzione "
+              f"verificata contro i 5000 di §99", flush=True)
+    else:
+        states = fresh_states(args.n_seeds)
     if args.workers > 1:
         with mp.Pool(args.workers) as pool:
             results = pool.map(_worker, states, chunksize=4)
@@ -261,6 +275,37 @@ def main():
         "TESTIMONI_minep_gt5": testimoni,
         "elapsed_s": round(time.time() - t0, 1)}
 
+    if args.chain2:
+        # ---- VERDETTO PREREGISTRATO §99d (fissato PRIMA di questa run) ----
+        n_fals = sum(1 for v in mins if v[0] > 8 and v[1] > 10 * P)
+        n_pow = sum(1 for v in mins if v[0] > 5)
+        if n_fals > 0:
+            verdetto = "CODA DOPPIA REALIZZATA (falsificata la candidata-struttura)"
+        elif n_pow >= 20:
+            verdetto = ("VUOTA CON POTENZA (candidata-struttura: ep>8 => age<=10P; "
+                        "resta empirica, trappola i)")
+        else:
+            verdetto = f"SOTTOPOTENZIATO (testimoni ep>5 = {n_pow} < 20)"
+        out["PREREGISTRATO"] = {
+            "falsificatore": "record profondo G>=1 con min_ep>8 E min_age>1040",
+            "n_falsificatori": n_fals, "n_testimoni_ep_gt5": n_pow,
+            "soglia_potenza": 20, "verdetto": verdetto}
+        # parole ripetute (gamba 3): confronto interno + vs catena-1 §99
+        words2 = [t["word"] for t in testimoni]
+        rep_int = len(words2) - len(set(words2))
+        words1 = []
+        if os.path.exists(OUT):
+            try:
+                words1 = [t["word"] for t in
+                          json.load(open(OUT))["TESTIMONI_minep_gt5"]]
+            except Exception:
+                pass
+        cross = sorted(set(words2) & set(words1))
+        out["parole_ripetute"] = {
+            "n_testimoni": len(words2), "distinte": len(set(words2)),
+            "ripetizioni_interne": rep_int,
+            "in_comune_con_catena1": len(cross), "parole_comuni": cross}
+
     print(f"semi {args.n_seeds}: ok {len(ok)}, no-onset {len(no_onset)}, "
           f"vuoti {len(empty)}; onset med {out['onset']['med']} "
           f"[{out['onset']['min']}..{out['onset']['max']}]", flush=True)
@@ -279,12 +324,20 @@ def main():
           f"& age>5P {out['coda_doppia']['n_ep_gt5_age_gt5P']}; "
           f"& age>10P {out['coda_doppia']['n_ep_gt5_age_gt10P']}", flush=True)
     print(f"TESTIMONI min_ep>5: {len(testimoni)}", flush=True)
-    for tst in testimoni[:10]:
+    for tst in testimoni[:30]:
         print(f"  !!! rngstate {tst['rngstate']} t={tst['t']} min_ep={tst['min_ep']} "
-              f"G={tst['G']} burden={tst['burden']}", flush=True)
-    with open(OUT, "w") as f:
+              f"min_age={tst['min_age']} G={tst['G']} burden={tst['burden']}", flush=True)
+    if args.chain2:
+        print(f"VERDETTO PREREGISTRATO: {out['PREREGISTRATO']['verdetto']} "
+              f"(falsificatori {out['PREREGISTRATO']['n_falsificatori']}, "
+              f"testimoni ep>5 {out['PREREGISTRATO']['n_testimoni_ep_gt5']})", flush=True)
+        print(f"parole ripetute: {out['parole_ripetute']['n_testimoni']} testimoni, "
+              f"{out['parole_ripetute']['distinte']} distinte, comuni con catena-1 "
+              f"{out['parole_ripetute']['in_comune_con_catena1']}", flush=True)
+    path_out = OUT.replace(".json", "2.json") if args.chain2 else OUT
+    with open(path_out, "w") as f:
         json.dump(out, f, indent=1)
-    print(f"scritto {OUT} in {out['elapsed_s']} s", flush=True)
+    print(f"scritto {path_out} in {out['elapsed_s']} s", flush=True)
 
 
 if __name__ == "__main__":

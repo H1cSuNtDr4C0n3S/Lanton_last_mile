@@ -1,3 +1,47 @@
+# ============ §100 — CODA DOPPIA REALIZZATA, GUARIGIONE V†, FASCIA WORD-MEDIATED ============
+
+**Cosa e' successo a §100 (in una riga):** terza morte preregistrata in tre sessioni.
+(1) **Caccia §99d ESEGUITA** (25.000 semi catena-2, BASE2=5213087935039776180,
+disgiunzione verificata; verdetto emesso DAL TOOL; gate canonici 24/24 + hist
+per-record + zero-G0): **CODA DOPPIA REALIZZATA** — 4 falsificatori (min_ep>8 E
+min_age>10P) = 2 episodi indipendenti, verificati 4/4 bit-identici dalla lente;
+min_ep max 12 (5->8->12 con n, quantile senza saturazione); ep>5 & age>10P = 28/45
+record = 20/34 EPISODI (il "0/6" §99 = 0/3 episodi, p~7%: compatibile al margine —
+contare EPISODI, non record, i consecutivi condividono le colpevoli). Muore ogni
+"costante giusta"; e i falsificatori realizzano **ep = y_rel CON UGUAGLIANZA**
+(q=0, lag=0): il soffitto deduttivo della Scala e' TIGHT — non c'e' spazio sotto,
+argomento definitivo contro nuove cacce. Sopravvivono: Scala T1-T4 (zero
+violazioni su 254k), §98c A/B/C, scia quasi-universale come trend stabile
+(82,0%->82,7% fra catene). Tensione a verbale: violazioni-orizzonte 0/1223 G0
+catena-2 vs 1/230 catena-1 (p~0,5%); misti catena-2 mai riscanditi (debito).
+(2) **AUTOPSIA V† dei 2 violatori §99c** (`v_dagger_autopsy.py`, 2/2 bit-identici
+dalla lente): guarigione ESISTENZIALE alla V† — divergenza germe/reale a d=542/750
+(>= orizzonte corto 159, < 2600) su cella NERA reale a y_rel 21/25 (germe assumeva
+bianco); la † profonda ha ep 19 <= y_rel 21: **la Scala e' horizon-free perche'
+deduttiva**; caveat: prima-divergenza != residuo V† completo (min_ep† indeterminato),
+† del violatore 2 shallow (guarisce il meccanismo, non la contabilita' profonda).
+(3) **FASCIA WORD-MEDIATED, promozione negata**: 45 testimoni -> 14 parole (>20
+sigma vs coupon-collector; 14 -> 10 classi mod shift; 3 pesanti = 3 delle 4
+cross-catena, burden quantizzati 23/34/36/... e onset_germe 55 == violatori
+d'orizzonte: aria di INGRESSI MANCATI) MA baseline stratificata: concentrazione
+GIA' a min_ep=4 (297->119 distinte, top molteplicita' 60) — gradiente di entropia
+di parola lungo min_ep (90,5%->42%->31%), regime della fascia alta, non famiglia
+della soglia. Trappola nuova (qq): le soglie dell'orologio-record sono quantili
+con data di scadenza; min_ep e' osservabile della coppia (orbita, orizzonte) —
+stesso record G=0 a V(onset+P) e ep=19 a V†; nuove soglie SOLO preregistrate;
+enunciati ammessi: deduttivi / condizionali-dichiarati / esistenziali. Pannello
+2/2 (lente 1 VERDE; lente 2 GIALLO, 1 ROSSO episodi-vs-record riparato, baseline
+stratificata eseguita su richiesta). **Prossimo §101:** censimento del REGIME
+(fascia min_ep>=4): identificare la parola top-60 e le 3 cross-catena, classi mod
+shift, legame con porta/A1 §78 (record ad alto min_ep = tentativi di porta
+falliti?); quotare censimento V† (~50k eval a orizzonte 2600); riscandire i misti.
+Ereditati: rientri §98g.2, scia teorema §98g.3, separatori §97, fuggenti vs
+nere-D>=400, retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/DOUBLE_TAIL_ADDENDUM.md. File: alpha1/record_minep_hunt.py
+(--chain2), record_minep_hunt_summary2.json, v_dagger_autopsy.py (+json/log).
+
+# ================================================================================================
+
 # ============ §99 — CACCIA PREREGISTRATA: min_ep<=5 FALSIFICATO, ORIZZONTE REALIZZATO ============
 
 **Cosa e' successo a §99 (in una riga):** la caccia preregistrata a §98g.1 ha

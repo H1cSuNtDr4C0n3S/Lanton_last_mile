@@ -1,0 +1,59 @@
+{
+ "violators": [
+  {
+   "rngstate": 7589057972138690721,
+   "t": 13356,
+   "t_on": 15728,
+   "burden": 36,
+   "onset_germe": 55,
+   "orizzonte_corto": 159,
+   "residuo_corto_bianco": "36/36",
+   "d_divergenza": 542,
+   "cella_rel": [
+    -11,
+    21
+   ],
+   "cella_abs": [
+    -23,
+    -11
+   ],
+   "y_rel": 21,
+   "cheb": 21,
+   "germe_legge": "bianco",
+   "reale_legge": "nero",
+   "colore_reale_a_t": "nero",
+   "origine": "dipinta",
+   "eta": 6698,
+   "ep": 19,
+   "lag_apertura_riga": 4420
+  },
+  {
+   "rngstate": 17133539851518799906,
+   "t": 12164,
+   "t_on": 26921,
+   "burden": 36,
+   "onset_germe": 55,
+   "orizzonte_corto": 159,
+   "residuo_corto_bianco": "36/36",
+   "d_divergenza": 750,
+   "cella_rel": [
+    -15,
+    25
+   ],
+   "cella_abs": [
+    -31,
+    5
+   ],
+   "y_rel": 25,
+   "cheb": 25,
+   "germe_legge": "bianco",
+   "reale_legge": "nero",
+   "colore_reale_a_t": "nero",
+   "origine": "dipinta",
+   "eta": 1842,
+   "ep": 4
+  }
+ ],
+ "T_dagger": 2600,
+ "elapsed_s": 0.1
+}

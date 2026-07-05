@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§100**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§101**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -225,6 +225,17 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       realizzazione del caveat V† di §98c. Ogni ramo degenere va CONTATO e
       riportato con semantica dichiarata; se un tripwire storico non e' replicato,
       la sua assenza va dichiarata a verbale. Parente di (bb) e (ii).
+  (qq) **le soglie dell'orologio-record sono quantili con data di scadenza — e
+      min_ep e' un osservabile della coppia (orbita, orizzonte)** (DOUBLE-TAIL
+      §100): tre costanti-candidate morte in tre sessioni (min_ep<=5; coda doppia
+      vuota; max 12 gia' in scadenza), massimi che salgono con n senza saturare,
+      stesso record G=0 a V(onset+P) e ep=19 a V†, e il soffitto deduttivo
+      ep<=y_rel realizzato CON UGUAGLIANZA (q=0) dai falsificatori: non c'e'
+      spazio sotto. Nuove soglie SOLO dentro preregistrazioni complete
+      (falsificatore + potenza + catena disgiunta + aspettativa di morte);
+      enunciati ammessi: deduttivi, condizionali-dichiarati, esistenziali.
+      Tassi confrontati per EPISODI, non per record (i consecutivi condividono
+      le colpevoli). Parente di (i), (h), (bb), (nn).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -243,7 +254,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -738,5 +749,22 @@ G>=1 e' sano SOLO alla V†; 1620/1620 di §89a era (anche) fortuna del campione
 (min_ep>8 E min_age>1040, catena disgiunta, >=25k semi, potenza asserita). Prossimo
 §100: caccia coda doppia; geometria V†\V sui 2 violatori; parole ripetute nella coda.
 Dettaglio: docs/MINEP_HUNT_ADDENDUM.md.
+**AGGIORNAMENTO §100 (coda doppia REALIZZATA, guarigione V†, fascia word-mediated):**
+terza morte preregistrata: 25k semi catena-2 (disgiunzione verificata, verdetto
+emesso dal tool) ⇒ 4 falsificatori min_ep>8 & min_age>10P (= 2 episodi, 4/4
+bit-identici dalla lente), min_ep max 12 (5→8→12 = quantili); "0/6" §99 = 0/3
+episodi vs 20/34, p~7% (contare EPISODI). I falsificatori realizzano ep=y_rel CON
+UGUAGLIANZA (q=0): il soffitto della Scala e' TIGHT — niente costanti sotto.
+Autopsia V† 2/2: divergenza a d=542/750 su cella NERA reale a y_rel 21/25 oltre
+l'orizzonte corto; la † profonda rispetta ep<=y_rel (19<=21): Scala horizon-free;
+min_ep† indeterminato (prima-divergenza != residuo † completo). Fascia
+word-mediated: 45 testimoni → 14 parole (>20σ vs coupon-collector, 3 pesanti
+cross-catena, burden quantizzati, onset_germe 55 == violatori: aria di ingressi
+mancati) MA baseline stratificata nega la promozione (concentrazione gia' a
+min_ep=4: top-60; gradiente 90,5%→42%→31%): REGIME della fascia alta, non
+famiglia. Trappola qq. Pannello 2/2 (1 ROSSO episodi-vs-record riparato).
+Prossimo §101: censire il regime min_ep>=4 (parola top-60, cross-catena, legame
+porta/A1 §78), quotare censimento V†, riscandire i misti.
+Dettaglio: docs/DOUBLE_TAIL_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

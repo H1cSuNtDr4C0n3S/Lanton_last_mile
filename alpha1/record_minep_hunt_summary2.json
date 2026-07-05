@@ -1,0 +1,2629 @@
+{
+ "n_seeds": 25000,
+ "no_onset": 0,
+ "empty_seed": 3,
+ "orbite_ok": 24997,
+ "eval_none": 0,
+ "onset": {
+  "med": 3964,
+  "min": 137,
+  "max": 102207
+ },
+ "records_censiti": 254319,
+ "deep_records": 36151,
+ "deep_con_colpevoli": 34928,
+ "deep_G0": 1223,
+ "VIOLAZIONI_ORIZZONTE": [],
+ "g0_entro_orizzonte": 1223,
+ "min_ep": {
+  "hist": {
+   "1": 14938,
+   "2": 11394,
+   "3": 6810,
+   "4": 1514,
+   "5": 227,
+   "6": 28,
+   "7": 10,
+   "8": 3,
+   "9": 1,
+   "10": 1,
+   "11": 1,
+   "12": 1
+  },
+  "max": 12,
+  "med": 2.0
+ },
+ "min_age": {
+  "med": 109.0,
+  "max": 24311,
+  "frac_le_2K": 0.8271014658726523
+ },
+ "min_lag": {
+  "med": 0.0,
+  "frac_le_P": 0.8932375171781951
+ },
+ "coda_doppia": {
+  "n_ep_gt5": 45,
+  "n_ep_gt5_age_gt2K": 44,
+  "n_ep_gt5_age_gt5P": 35,
+  "n_ep_gt5_age_gt10P": 28
+ },
+ "TESTIMONI_minep_gt5": [
+  {
+   "rngstate": 7997830615314335065,
+   "t": 4098,
+   "t_on": 4820,
+   "pose": [
+    -5,
+    -19
+   ],
+   "min_ep": 11,
+   "min_age": 3063,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 31,
+   "word": "RLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    1506,
+    6,
+    10,
+    370,
+    10,
+    82,
+    350,
+    10,
+    230
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -10,
+      -7
+     ],
+     "ep": 11,
+     "age": 3063,
+     "lag": 817
+    },
+    {
+     "cella": [
+      -9,
+      -7
+     ],
+     "ep": 11,
+     "age": 3292,
+     "lag": 588
+    },
+    {
+     "cella": [
+      -8,
+      -8
+     ],
+     "ep": 11,
+     "age": 3298,
+     "lag": 0
+    }
+   ]
+  },
+  {
+   "rngstate": 7997830615314335065,
+   "t": 4108,
+   "t_on": 4820,
+   "pose": [
+    -6,
+    -20
+   ],
+   "min_ep": 12,
+   "min_age": 3073,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 36,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    6,
+    10,
+    370,
+    10,
+    82,
+    350,
+    10,
+    230,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -10,
+      -7
+     ],
+     "ep": 12,
+     "age": 3073,
+     "lag": 817
+    },
+    {
+     "cella": [
+      -9,
+      -7
+     ],
+     "ep": 12,
+     "age": 3302,
+     "lag": 588
+    },
+    {
+     "cella": [
+      -8,
+      -8
+     ],
+     "ep": 12,
+     "age": 3308,
+     "lag": 0
+    }
+   ]
+  },
+  {
+   "rngstate": 13195585631937968508,
+   "t": 6092,
+   "t_on": 15627,
+   "pose": [
+    -4,
+    -22
+   ],
+   "min_ep": 6,
+   "min_age": 2713,
+   "min_lag": 0,
+   "G": 7,
+   "burden": 41,
+   "word": "RRRRLRRRRLLLLRLRRRRLRLRRLRLRRRRLRLLRRRRLLRRRRLLRLRRRRLLLLRLRRRRLLLLRLRLLRLRLLRRRRLLRLLRRRRLLRRRRLLRLR",
+   "dt_burst": [
+    14,
+    10,
+    1162,
+    650,
+    10,
+    1934,
+    14,
+    114,
+    14
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -6,
+      -9
+     ],
+     "ep": 6,
+     "age": 2713,
+     "lag": 3277
+    },
+    {
+     "cella": [
+      -5,
+      -9
+     ],
+     "ep": 6,
+     "age": 2714,
+     "lag": 3276
+    },
+    {
+     "cella": [
+      -4,
+      -10
+     ],
+     "ep": 6,
+     "age": 2716,
+     "lag": 3264
+    },
+    {
+     "cella": [
+      -9,
+      -15
+     ],
+     "ep": 7,
+     "age": 3898,
+     "lag": 0
+    },
+    {
+     "cella": [
+      -8,
+      -15
+     ],
+     "ep": 7,
+     "age": 3897,
+     "lag": 1
+    },
+    {
+     "cella": [
+      -7,
+      -11
+     ],
+     "ep": 10,
+     "age": 3930,
+     "lag": 1896
+    },
+    {
+     "cella": [
+      -5,
+      -11
+     ],
+     "ep": 10,
+     "age": 5814,
+     "lag": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 17780564427697026199,
+   "t": 6990,
+   "t_on": 7594,
+   "pose": [
+    -3,
+    -29
+   ],
+   "min_ep": 6,
+   "min_age": 119,
+   "min_lag": 89,
+   "G": 10,
+   "burden": 44,
+   "word": "RLLRRRRLLRRLLRRLLRRLLRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRLLRLLRRRRLLRRRRLLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    590,
+    10,
+    2818,
+    38,
+    10,
+    50,
+    6,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -8,
+      -23
+     ],
+     "ep": 6,
+     "age": 2843,
+     "lag": 89
+    },
+    {
+     "cella": [
+      -7,
+      -20
+     ],
+     "ep": 6,
+     "age": 169,
+     "lag": 3373
+    },
+    {
+     "cella": [
+      -7,
+      -18
+     ],
+     "ep": 6,
+     "age": 237,
+     "lag": 3621
+    },
+    {
+     "cella": [
+      -6,
+      -21
+     ],
+     "ep": 6,
+     "age": 647,
+     "lag": 2885
+    },
+    {
+     "cella": [
+      -6,
+      -20
+     ],
+     "ep": 6,
+     "age": 254,
+     "lag": 3288
+    },
+    {
+     "cella": [
+      -6,
+      -19
+     ],
+     "ep": 6,
+     "age": 167,
+     "lag": 3381
+    },
+    {
+     "cella": [
+      -6,
+      -18
+     ],
+     "ep": 6,
+     "age": 158,
+     "lag": 3700
+    },
+    {
+     "cella": [
+      -6,
+      -17
+     ],
+     "ep": 6,
+     "age": 159,
+     "lag": 3713
+    },
+    {
+     "cella": [
+      -4,
+      -21
+     ],
+     "ep": 6,
+     "age": 119,
+     "lag": 3413
+    },
+    {
+     "cella": [
+      -3,
+      -19
+     ],
+     "ep": 6,
+     "age": 152,
+     "lag": 3396
+    }
+   ]
+  },
+  {
+   "rngstate": 18402929353606185973,
+   "t": 7720,
+   "t_on": 13661,
+   "pose": [
+    2,
+    -24
+   ],
+   "min_ep": 9,
+   "min_age": 5040,
+   "min_lag": 788,
+   "G": 7,
+   "burden": 31,
+   "word": "RLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    2466,
+    486,
+    10,
+    142,
+    10,
+    414,
+    1658,
+    146,
+    498
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -5,
+      -15
+     ],
+     "ep": 9,
+     "age": 5042,
+     "lag": 788
+    },
+    {
+     "cella": [
+      -4,
+      -15
+     ],
+     "ep": 9,
+     "age": 5041,
+     "lag": 789
+    },
+    {
+     "cella": [
+      -4,
+      -14
+     ],
+     "ep": 9,
+     "age": 5040,
+     "lag": 800
+    },
+    {
+     "cella": [
+      -4,
+      -13
+     ],
+     "ep": 9,
+     "age": 5045,
+     "lag": 953
+    },
+    {
+     "cella": [
+      -3,
+      -14
+     ],
+     "ep": 9,
+     "age": 5051,
+     "lag": 789
+    },
+    {
+     "cella": [
+      -2,
+      -13
+     ],
+     "ep": 9,
+     "age": 5057,
+     "lag": 941
+    },
+    {
+     "cella": [
+      -2,
+      -12
+     ],
+     "ep": 9,
+     "age": 5056,
+     "lag": 2184
+    }
+   ]
+  },
+  {
+   "rngstate": 18402929353606185973,
+   "t": 7730,
+   "t_on": 13661,
+   "pose": [
+    1,
+    -25
+   ],
+   "min_ep": 10,
+   "min_age": 5050,
+   "min_lag": 788,
+   "G": 7,
+   "burden": 36,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    486,
+    10,
+    142,
+    10,
+    414,
+    1658,
+    146,
+    498,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -5,
+      -15
+     ],
+     "ep": 10,
+     "age": 5052,
+     "lag": 788
+    },
+    {
+     "cella": [
+      -4,
+      -15
+     ],
+     "ep": 10,
+     "age": 5051,
+     "lag": 789
+    },
+    {
+     "cella": [
+      -4,
+      -14
+     ],
+     "ep": 10,
+     "age": 5050,
+     "lag": 800
+    },
+    {
+     "cella": [
+      -4,
+      -13
+     ],
+     "ep": 10,
+     "age": 5055,
+     "lag": 953
+    },
+    {
+     "cella": [
+      -3,
+      -14
+     ],
+     "ep": 10,
+     "age": 5061,
+     "lag": 789
+    },
+    {
+     "cella": [
+      -2,
+      -13
+     ],
+     "ep": 10,
+     "age": 5067,
+     "lag": 941
+    },
+    {
+     "cella": [
+      -2,
+      -12
+     ],
+     "ep": 10,
+     "age": 5066,
+     "lag": 2184
+    }
+   ]
+  },
+  {
+   "rngstate": 5609352737932077627,
+   "t": 17038,
+   "t_on": 23148,
+   "pose": [
+    19,
+    -33
+   ],
+   "min_ep": 7,
+   "min_age": 7105,
+   "min_lag": 2341,
+   "G": 3,
+   "burden": 23,
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    102,
+    1270,
+    1082,
+    14,
+    10,
+    962,
+    166,
+    5882,
+    62
+   ],
+   "guilty": [
+    {
+     "cella": [
+      17,
+      -24
+     ],
+     "ep": 7,
+     "age": 7105,
+     "lag": 2445
+    },
+    {
+     "cella": [
+      18,
+      -25
+     ],
+     "ep": 7,
+     "age": 7107,
+     "lag": 2341
+    },
+    {
+     "cella": [
+      18,
+      -24
+     ],
+     "ep": 7,
+     "age": 7106,
+     "lag": 2444
+    }
+   ]
+  },
+  {
+   "rngstate": 5609352737932077627,
+   "t": 17048,
+   "t_on": 23148,
+   "pose": [
+    18,
+    -34
+   ],
+   "min_ep": 8,
+   "min_age": 7115,
+   "min_lag": 2341,
+   "G": 3,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    1270,
+    1082,
+    14,
+    10,
+    962,
+    166,
+    5882,
+    62,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      17,
+      -24
+     ],
+     "ep": 8,
+     "age": 7115,
+     "lag": 2445
+    },
+    {
+     "cella": [
+      18,
+      -25
+     ],
+     "ep": 8,
+     "age": 7117,
+     "lag": 2341
+    },
+    {
+     "cella": [
+      18,
+      -24
+     ],
+     "ep": 8,
+     "age": 7116,
+     "lag": 2444
+    }
+   ]
+  },
+  {
+   "rngstate": 14948563323102260211,
+   "t": 1640,
+   "t_on": 1768,
+   "pose": [
+    2,
+    -14
+   ],
+   "min_ep": 6,
+   "min_age": 1295,
+   "min_lag": 0,
+   "G": 2,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    2,
+    2,
+    14,
+    90,
+    1110,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      4,
+      -8
+     ],
+     "ep": 6,
+     "age": 1296,
+     "lag": 0
+    },
+    {
+     "cella": [
+      5,
+      -8
+     ],
+     "ep": 6,
+     "age": 1295,
+     "lag": 1
+    }
+   ]
+  },
+  {
+   "rngstate": 6141566366337071655,
+   "t": 8550,
+   "t_on": 14087,
+   "pose": [
+    7,
+    -27
+   ],
+   "min_ep": 7,
+   "min_age": 3925,
+   "min_lag": 2125,
+   "G": 3,
+   "burden": 23,
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    278,
+    14,
+    2122,
+    14,
+    10,
+    282,
+    10,
+    3538,
+    62
+   ],
+   "guilty": [
+    {
+     "cella": [
+      5,
+      -18
+     ],
+     "ep": 7,
+     "age": 3925,
+     "lag": 2405
+    },
+    {
+     "cella": [
+      6,
+      -19
+     ],
+     "ep": 7,
+     "age": 3927,
+     "lag": 2125
+    },
+    {
+     "cella": [
+      6,
+      -18
+     ],
+     "ep": 7,
+     "age": 3926,
+     "lag": 2404
+    }
+   ]
+  },
+  {
+   "rngstate": 6141566366337071655,
+   "t": 8560,
+   "t_on": 14087,
+   "pose": [
+    6,
+    -28
+   ],
+   "min_ep": 8,
+   "min_age": 3935,
+   "min_lag": 2125,
+   "G": 3,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    14,
+    2122,
+    14,
+    10,
+    282,
+    10,
+    3538,
+    62,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      5,
+      -18
+     ],
+     "ep": 8,
+     "age": 3935,
+     "lag": 2405
+    },
+    {
+     "cella": [
+      6,
+      -19
+     ],
+     "ep": 8,
+     "age": 3937,
+     "lag": 2125
+    },
+    {
+     "cella": [
+      6,
+      -18
+     ],
+     "ep": 8,
+     "age": 3936,
+     "lag": 2404
+    }
+   ]
+  },
+  {
+   "rngstate": 4415126869076616731,
+   "t": 14628,
+   "t_on": 21200,
+   "pose": [
+    -6,
+    -30
+   ],
+   "min_ep": 6,
+   "min_age": 3591,
+   "min_lag": 48,
+   "G": 2,
+   "burden": 23,
+   "word": "RRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    230,
+    10,
+    1494,
+    3222,
+    222,
+    130,
+    6,
+    10,
+    70
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -5,
+      -24
+     ],
+     "ep": 6,
+     "age": 3591,
+     "lag": 69
+    },
+    {
+     "cella": [
+      -4,
+      -24
+     ],
+     "ep": 6,
+     "age": 3612,
+     "lag": 48
+    }
+   ]
+  },
+  {
+   "rngstate": 4415126869076616731,
+   "t": 14638,
+   "t_on": 21200,
+   "pose": [
+    -7,
+    -31
+   ],
+   "min_ep": 7,
+   "min_age": 3601,
+   "min_lag": 48,
+   "G": 2,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    1494,
+    3222,
+    222,
+    130,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -5,
+      -24
+     ],
+     "ep": 7,
+     "age": 3601,
+     "lag": 69
+    },
+    {
+     "cella": [
+      -4,
+      -24
+     ],
+     "ep": 7,
+     "age": 3622,
+     "lag": 48
+    }
+   ]
+  },
+  {
+   "rngstate": 11687207434583277481,
+   "t": 3716,
+   "t_on": 10032,
+   "pose": [
+    12,
+    -16
+   ],
+   "min_ep": 6,
+   "min_age": 1344,
+   "min_lag": 0,
+   "G": 2,
+   "burden": 44,
+   "word": "LLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLLLLRRRRLRRLLLLRRLRRRRLLLLRLLRRRRLLRLRRRRLR",
+   "dt_burst": [
+    258,
+    1154,
+    10,
+    458,
+    10,
+    486,
+    618,
+    10,
+    82
+   ],
+   "guilty": [
+    {
+     "cella": [
+      6,
+      -6
+     ],
+     "ep": 6,
+     "age": 1344,
+     "lag": 1828
+    },
+    {
+     "cella": [
+      8,
+      -8
+     ],
+     "ep": 8,
+     "age": 2828,
+     "lag": 0
+    }
+   ]
+  },
+  {
+   "rngstate": 11687207434583277481,
+   "t": 3726,
+   "t_on": 10032,
+   "pose": [
+    11,
+    -17
+   ],
+   "min_ep": 7,
+   "min_age": 1354,
+   "min_lag": 0,
+   "G": 2,
+   "burden": 53,
+   "word": "RRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLLLLRRRRLRRLLLLRRLRRRRLLLLRLLRRRRLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    1154,
+    10,
+    458,
+    10,
+    486,
+    618,
+    10,
+    82,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      6,
+      -6
+     ],
+     "ep": 7,
+     "age": 1354,
+     "lag": 1828
+    },
+    {
+     "cella": [
+      8,
+      -8
+     ],
+     "ep": 9,
+     "age": 2838,
+     "lag": 0
+    }
+   ]
+  },
+  {
+   "rngstate": 1028224116093876655,
+   "t": 2976,
+   "t_on": 3104,
+   "pose": [
+    16,
+    -22
+   ],
+   "min_ep": 6,
+   "min_age": 1422,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    462,
+    782,
+    134,
+    74,
+    1018,
+    10,
+    70,
+    10,
+    242
+   ],
+   "guilty": [
+    {
+     "cella": [
+      18,
+      -16
+     ],
+     "ep": 6,
+     "age": 1424,
+     "lag": 0
+    },
+    {
+     "cella": [
+      19,
+      -16
+     ],
+     "ep": 6,
+     "age": 1423,
+     "lag": 1
+    },
+    {
+     "cella": [
+      19,
+      -15
+     ],
+     "ep": 6,
+     "age": 1422,
+     "lag": 136
+    }
+   ]
+  },
+  {
+   "rngstate": 2717938315948965992,
+   "t": 11162,
+   "t_on": 11290,
+   "pose": [
+    -9,
+    -37
+   ],
+   "min_ep": 6,
+   "min_age": 577,
+   "min_lag": 0,
+   "G": 4,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    130,
+    50,
+    2662,
+    42,
+    354,
+    102,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -7,
+      -31
+     ],
+     "ep": 6,
+     "age": 588,
+     "lag": 0
+    },
+    {
+     "cella": [
+      -7,
+      -30
+     ],
+     "ep": 6,
+     "age": 577,
+     "lag": 2673
+    },
+    {
+     "cella": [
+      -6,
+      -31
+     ],
+     "ep": 6,
+     "age": 587,
+     "lag": 1
+    },
+    {
+     "cella": [
+      -6,
+      -30
+     ],
+     "ep": 6,
+     "age": 586,
+     "lag": 2664
+    }
+   ]
+  },
+  {
+   "rngstate": 4230352246010712805,
+   "t": 8020,
+   "t_on": 8148,
+   "pose": [
+    6,
+    -20
+   ],
+   "min_ep": 6,
+   "min_age": 386,
+   "min_lag": 24,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    3158,
+    3814,
+    78,
+    122,
+    10,
+    122,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      8,
+      -14
+     ],
+     "ep": 6,
+     "age": 388,
+     "lag": 24
+    },
+    {
+     "cella": [
+      9,
+      -14
+     ],
+     "ep": 6,
+     "age": 387,
+     "lag": 25
+    },
+    {
+     "cella": [
+      9,
+      -13
+     ],
+     "ep": 6,
+     "age": 386,
+     "lag": 3840
+    }
+   ]
+  },
+  {
+   "rngstate": 12451036010521224559,
+   "t": 13960,
+   "t_on": 14088,
+   "pose": [
+    4,
+    -32
+   ],
+   "min_ep": 6,
+   "min_age": 706,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRLLLLRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    86,
+    10,
+    374,
+    234,
+    6,
+    10,
+    74,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      6,
+      -26
+     ],
+     "ep": 6,
+     "age": 708,
+     "lag": 0
+    },
+    {
+     "cella": [
+      7,
+      -26
+     ],
+     "ep": 6,
+     "age": 707,
+     "lag": 1
+    },
+    {
+     "cella": [
+      7,
+      -25
+     ],
+     "ep": 6,
+     "age": 706,
+     "lag": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 14469362357496759527,
+   "t": 500,
+   "t_on": 630,
+   "pose": [
+    4,
+    -14
+   ],
+   "min_ep": 6,
+   "min_age": 408,
+   "min_lag": 1,
+   "G": 2,
+   "burden": 23,
+   "word": "RRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    62,
+    2,
+    14,
+    34,
+    10,
+    282,
+    6,
+    10,
+    70
+   ],
+   "guilty": [
+    {
+     "cella": [
+      5,
+      -8
+     ],
+     "ep": 6,
+     "age": 411,
+     "lag": 1
+    },
+    {
+     "cella": [
+      6,
+      -8
+     ],
+     "ep": 6,
+     "age": 408,
+     "lag": 4
+    }
+   ]
+  },
+  {
+   "rngstate": 14469362357496759527,
+   "t": 510,
+   "t_on": 630,
+   "pose": [
+    3,
+    -15
+   ],
+   "min_ep": 7,
+   "min_age": 418,
+   "min_lag": 1,
+   "G": 2,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    2,
+    14,
+    34,
+    10,
+    282,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      5,
+      -8
+     ],
+     "ep": 7,
+     "age": 421,
+     "lag": 1
+    },
+    {
+     "cella": [
+      6,
+      -8
+     ],
+     "ep": 7,
+     "age": 418,
+     "lag": 4
+    }
+   ]
+  },
+  {
+   "rngstate": 1300803304232671958,
+   "t": 6200,
+   "t_on": 6328,
+   "pose": [
+    4,
+    -30
+   ],
+   "min_ep": 6,
+   "min_age": 953,
+   "min_lag": 0,
+   "G": 4,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    38,
+    10,
+    278,
+    42,
+    826,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      6,
+      -24
+     ],
+     "ep": 6,
+     "age": 964,
+     "lag": 0
+    },
+    {
+     "cella": [
+      6,
+      -23
+     ],
+     "ep": 6,
+     "age": 953,
+     "lag": 289
+    },
+    {
+     "cella": [
+      7,
+      -24
+     ],
+     "ep": 6,
+     "age": 963,
+     "lag": 1
+    },
+    {
+     "cella": [
+      7,
+      -23
+     ],
+     "ep": 6,
+     "age": 962,
+     "lag": 280
+    }
+   ]
+  },
+  {
+   "rngstate": 14753856201844161048,
+   "t": 5856,
+   "t_on": 6088,
+   "pose": [
+    -4,
+    -18
+   ],
+   "min_ep": 6,
+   "min_age": 2869,
+   "min_lag": 64,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    2,
+    14,
+    2022,
+    2690,
+    54,
+    118,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -2,
+      -11
+     ],
+     "ep": 6,
+     "age": 2869,
+     "lag": 2105
+    },
+    {
+     "cella": [
+      -1,
+      -11
+     ],
+     "ep": 6,
+     "age": 2882,
+     "lag": 2092
+    },
+    {
+     "cella": [
+      0,
+      -12
+     ],
+     "ep": 6,
+     "age": 2888,
+     "lag": 64
+    }
+   ]
+  },
+  {
+   "rngstate": 15880313711043288767,
+   "t": 2690,
+   "t_on": 3496,
+   "pose": [
+    -5,
+    -25
+   ],
+   "min_ep": 6,
+   "min_age": 577,
+   "min_lag": 825,
+   "G": 3,
+   "burden": 23,
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    66,
+    38,
+    10,
+    802,
+    10,
+    338,
+    134,
+    10,
+    62
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -7,
+      -16
+     ],
+     "ep": 6,
+     "age": 577,
+     "lag": 893
+    },
+    {
+     "cella": [
+      -6,
+      -17
+     ],
+     "ep": 6,
+     "age": 579,
+     "lag": 825
+    },
+    {
+     "cella": [
+      -6,
+      -16
+     ],
+     "ep": 6,
+     "age": 578,
+     "lag": 892
+    }
+   ]
+  },
+  {
+   "rngstate": 15880313711043288767,
+   "t": 2700,
+   "t_on": 3496,
+   "pose": [
+    -6,
+    -26
+   ],
+   "min_ep": 7,
+   "min_age": 587,
+   "min_lag": 825,
+   "G": 3,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    38,
+    10,
+    802,
+    10,
+    338,
+    134,
+    10,
+    62,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -7,
+      -16
+     ],
+     "ep": 7,
+     "age": 587,
+     "lag": 893
+    },
+    {
+     "cella": [
+      -6,
+      -17
+     ],
+     "ep": 7,
+     "age": 589,
+     "lag": 825
+    },
+    {
+     "cella": [
+      -6,
+      -16
+     ],
+     "ep": 7,
+     "age": 588,
+     "lag": 892
+    }
+   ]
+  },
+  {
+   "rngstate": 584348222425372803,
+   "t": 18176,
+   "t_on": 18528,
+   "pose": [
+    8,
+    -28
+   ],
+   "min_ep": 7,
+   "min_age": 10871,
+   "min_lag": 2185,
+   "G": 3,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    242,
+    1970,
+    10,
+    10110,
+    10,
+    62,
+    90,
+    554
+   ],
+   "guilty": [
+    {
+     "cella": [
+      7,
+      -18
+     ],
+     "ep": 7,
+     "age": 10871,
+     "lag": 2193
+    },
+    {
+     "cella": [
+      8,
+      -19
+     ],
+     "ep": 7,
+     "age": 10873,
+     "lag": 2185
+    },
+    {
+     "cella": [
+      8,
+      -18
+     ],
+     "ep": 7,
+     "age": 10872,
+     "lag": 2192
+    }
+   ]
+  },
+  {
+   "rngstate": 7601514831991573228,
+   "t": 1636,
+   "t_on": 1764,
+   "pose": [
+    2,
+    -16
+   ],
+   "min_ep": 6,
+   "min_age": 438,
+   "min_lag": 24,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    642,
+    10,
+    298,
+    62,
+    306,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      4,
+      -10
+     ],
+     "ep": 6,
+     "age": 440,
+     "lag": 24
+    },
+    {
+     "cella": [
+      5,
+      -10
+     ],
+     "ep": 6,
+     "age": 439,
+     "lag": 25
+    },
+    {
+     "cella": [
+      5,
+      -9
+     ],
+     "ep": 6,
+     "age": 438,
+     "lag": 324
+    }
+   ]
+  },
+  {
+   "rngstate": 13549980153776693060,
+   "t": 3998,
+   "t_on": 4924,
+   "pose": [
+    1,
+    -27
+   ],
+   "min_ep": 6,
+   "min_age": 1613,
+   "min_lag": 1793,
+   "G": 2,
+   "burden": 23,
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    10,
+    1158,
+    298,
+    378,
+    10,
+    1490,
+    6,
+    10,
+    62
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -1,
+      -18
+     ],
+     "ep": 6,
+     "age": 1613,
+     "lag": 1809
+    },
+    {
+     "cella": [
+      0,
+      -19
+     ],
+     "ep": 6,
+     "age": 1619,
+     "lag": 1793
+    }
+   ]
+  },
+  {
+   "rngstate": 13549980153776693060,
+   "t": 4008,
+   "t_on": 4924,
+   "pose": [
+    0,
+    -28
+   ],
+   "min_ep": 7,
+   "min_age": 1623,
+   "min_lag": 1793,
+   "G": 2,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    1158,
+    298,
+    378,
+    10,
+    1490,
+    6,
+    10,
+    62,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -1,
+      -18
+     ],
+     "ep": 7,
+     "age": 1623,
+     "lag": 1809
+    },
+    {
+     "cella": [
+      0,
+      -19
+     ],
+     "ep": 7,
+     "age": 1629,
+     "lag": 1793
+    }
+   ]
+  },
+  {
+   "rngstate": 17318444881708936239,
+   "t": 10812,
+   "t_on": 10974,
+   "pose": [
+    0,
+    -18
+   ],
+   "min_ep": 6,
+   "min_age": 1348,
+   "min_lag": 3713,
+   "G": 2,
+   "burden": 23,
+   "word": "RRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRRLLRLRRRRLRLRRRRLRRLLRRRRLLRRLLLLRRLLRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    6,
+    10,
+    26,
+    4494,
+    50,
+    166,
+    10,
+    258,
+    86
+   ],
+   "guilty": [
+    {
+     "cella": [
+      1,
+      -12
+     ],
+     "ep": 6,
+     "age": 1351,
+     "lag": 3713
+    },
+    {
+     "cella": [
+      2,
+      -12
+     ],
+     "ep": 6,
+     "age": 1348,
+     "lag": 3716
+    }
+   ]
+  },
+  {
+   "rngstate": 2487381703189173336,
+   "t": 6644,
+   "t_on": 9615,
+   "pose": [
+    -12,
+    -22
+   ],
+   "min_ep": 6,
+   "min_age": 1975,
+   "min_lag": 92,
+   "G": 2,
+   "burden": 33,
+   "word": "RRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLLLLRRLRRRRLLLLRLRLRRLLLLRRLLLLRRLRRLRLRRLRLRLLRLR",
+   "dt_burst": [
+    178,
+    1198,
+    42,
+    1738,
+    162,
+    10,
+    118,
+    10,
+    58
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -7,
+      -16
+     ],
+     "ep": 6,
+     "age": 1975,
+     "lag": 121
+    },
+    {
+     "cella": [
+      -6,
+      -16
+     ],
+     "ep": 6,
+     "age": 2004,
+     "lag": 92
+    }
+   ]
+  },
+  {
+   "rngstate": 14023884048853063708,
+   "t": 16708,
+   "t_on": 16836,
+   "pose": [
+    8,
+    -48
+   ],
+   "min_ep": 6,
+   "min_age": 1085,
+   "min_lag": 0,
+   "G": 4,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    38,
+    10,
+    286,
+    42,
+    958,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      10,
+      -42
+     ],
+     "ep": 6,
+     "age": 1096,
+     "lag": 0
+    },
+    {
+     "cella": [
+      10,
+      -41
+     ],
+     "ep": 6,
+     "age": 1085,
+     "lag": 297
+    },
+    {
+     "cella": [
+      11,
+      -42
+     ],
+     "ep": 6,
+     "age": 1095,
+     "lag": 1
+    },
+    {
+     "cella": [
+      11,
+      -41
+     ],
+     "ep": 6,
+     "age": 1094,
+     "lag": 288
+    }
+   ]
+  },
+  {
+   "rngstate": 12940876192781323415,
+   "t": 2250,
+   "t_on": 2378,
+   "pose": [
+    1,
+    -25
+   ],
+   "min_ep": 6,
+   "min_age": 338,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    38,
+    10,
+    318,
+    34,
+    210,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      3,
+      -19
+     ],
+     "ep": 6,
+     "age": 340,
+     "lag": 0
+    },
+    {
+     "cella": [
+      4,
+      -19
+     ],
+     "ep": 6,
+     "age": 339,
+     "lag": 1
+    },
+    {
+     "cella": [
+      4,
+      -18
+     ],
+     "ep": 6,
+     "age": 338,
+     "lag": 320
+    }
+   ]
+  },
+  {
+   "rngstate": 1682812253674534597,
+   "t": 7176,
+   "t_on": 7304,
+   "pose": [
+    8,
+    -26
+   ],
+   "min_ep": 6,
+   "min_age": 426,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    3574,
+    210,
+    34,
+    298,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      10,
+      -20
+     ],
+     "ep": 6,
+     "age": 428,
+     "lag": 0
+    },
+    {
+     "cella": [
+      11,
+      -20
+     ],
+     "ep": 6,
+     "age": 427,
+     "lag": 1
+    },
+    {
+     "cella": [
+      11,
+      -19
+     ],
+     "ep": 6,
+     "age": 426,
+     "lag": 212
+    }
+   ]
+  },
+  {
+   "rngstate": 12157549074438186387,
+   "t": 20996,
+   "t_on": 28211,
+   "pose": [
+    -6,
+    -46
+   ],
+   "min_ep": 6,
+   "min_age": 9202,
+   "min_lag": 128,
+   "G": 2,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    290,
+    42,
+    362,
+    182,
+    10,
+    9062,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -3,
+      -39
+     ],
+     "ep": 6,
+     "age": 9202,
+     "lag": 504
+    },
+    {
+     "cella": [
+      -2,
+      -40
+     ],
+     "ep": 6,
+     "age": 9216,
+     "lag": 128
+    }
+   ]
+  },
+  {
+   "rngstate": 7518889034151988261,
+   "t": 5008,
+   "t_on": 5781,
+   "pose": [
+    -2,
+    -18
+   ],
+   "min_ep": 7,
+   "min_age": 4805,
+   "min_lag": 145,
+   "G": 3,
+   "burden": 23,
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    6,
+    10,
+    146,
+    14,
+    10,
+    3950,
+    126,
+    74,
+    622
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -4,
+      -9
+     ],
+     "ep": 7,
+     "age": 4805,
+     "lag": 153
+    },
+    {
+     "cella": [
+      -3,
+      -10
+     ],
+     "ep": 7,
+     "age": 4807,
+     "lag": 145
+    },
+    {
+     "cella": [
+      -3,
+      -9
+     ],
+     "ep": 7,
+     "age": 4806,
+     "lag": 152
+    }
+   ]
+  },
+  {
+   "rngstate": 7518889034151988261,
+   "t": 5018,
+   "t_on": 5781,
+   "pose": [
+    -3,
+    -19
+   ],
+   "min_ep": 8,
+   "min_age": 4815,
+   "min_lag": 145,
+   "G": 3,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    146,
+    14,
+    10,
+    3950,
+    126,
+    74,
+    622,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -4,
+      -9
+     ],
+     "ep": 8,
+     "age": 4815,
+     "lag": 153
+    },
+    {
+     "cella": [
+      -3,
+      -10
+     ],
+     "ep": 8,
+     "age": 4817,
+     "lag": 145
+    },
+    {
+     "cella": [
+      -3,
+      -9
+     ],
+     "ep": 8,
+     "age": 4816,
+     "lag": 152
+    }
+   ]
+  },
+  {
+   "rngstate": 1054318532589372703,
+   "t": 1676,
+   "t_on": 1804,
+   "pose": [
+    6,
+    -14
+   ],
+   "min_ep": 6,
+   "min_age": 373,
+   "min_lag": 612,
+   "G": 4,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    6,
+    10,
+    98,
+    694,
+    118,
+    134,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      8,
+      -8
+     ],
+     "ep": 6,
+     "age": 424,
+     "lag": 612
+    },
+    {
+     "cella": [
+      8,
+      -7
+     ],
+     "ep": 6,
+     "age": 373,
+     "lag": 761
+    },
+    {
+     "cella": [
+      9,
+      -8
+     ],
+     "ep": 6,
+     "age": 423,
+     "lag": 613
+    },
+    {
+     "cella": [
+      9,
+      -7
+     ],
+     "ep": 6,
+     "age": 422,
+     "lag": 712
+    }
+   ]
+  },
+  {
+   "rngstate": 861534757670556684,
+   "t": 5248,
+   "t_on": 6210,
+   "pose": [
+    2,
+    -22
+   ],
+   "min_ep": 6,
+   "min_age": 980,
+   "min_lag": 3496,
+   "G": 1,
+   "burden": 23,
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "dt_burst": [
+    690,
+    6,
+    10,
+    3710,
+    10,
+    526,
+    142,
+    10,
+    62
+   ],
+   "guilty": [
+    {
+     "cella": [
+      2,
+      -14
+     ],
+     "ep": 6,
+     "age": 980,
+     "lag": 3496
+    }
+   ]
+  },
+  {
+   "rngstate": 861534757670556684,
+   "t": 5258,
+   "t_on": 6210,
+   "pose": [
+    1,
+    -23
+   ],
+   "min_ep": 7,
+   "min_age": 990,
+   "min_lag": 3496,
+   "G": 1,
+   "burden": 34,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    6,
+    10,
+    3710,
+    10,
+    526,
+    142,
+    10,
+    62,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      2,
+      -14
+     ],
+     "ep": 7,
+     "age": 990,
+     "lag": 3496
+    }
+   ]
+  },
+  {
+   "rngstate": 3358003502045527478,
+   "t": 14900,
+   "t_on": 15028,
+   "pose": [
+    0,
+    -22
+   ],
+   "min_ep": 6,
+   "min_age": 438,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    294,
+    50,
+    9514,
+    34,
+    310,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      2,
+      -16
+     ],
+     "ep": 6,
+     "age": 440,
+     "lag": 0
+    },
+    {
+     "cella": [
+      3,
+      -16
+     ],
+     "ep": 6,
+     "age": 439,
+     "lag": 1
+    },
+    {
+     "cella": [
+      3,
+      -15
+     ],
+     "ep": 6,
+     "age": 438,
+     "lag": 9516
+    }
+   ]
+  },
+  {
+   "rngstate": 17566352601073571184,
+   "t": 14448,
+   "t_on": 14576,
+   "pose": [
+    0,
+    -28
+   ],
+   "min_ep": 6,
+   "min_age": 4694,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLRLLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    1394,
+    2578,
+    610,
+    82,
+    4022,
+    502,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      2,
+      -22
+     ],
+     "ep": 6,
+     "age": 4696,
+     "lag": 0
+    },
+    {
+     "cella": [
+      3,
+      -22
+     ],
+     "ep": 6,
+     "age": 4695,
+     "lag": 1
+    },
+    {
+     "cella": [
+      3,
+      -21
+     ],
+     "ep": 6,
+     "age": 4694,
+     "lag": 612
+    }
+   ]
+  },
+  {
+   "rngstate": 8863139735651327330,
+   "t": 2984,
+   "t_on": 3112,
+   "pose": [
+    6,
+    -26
+   ],
+   "min_ep": 6,
+   "min_age": 1945,
+   "min_lag": 0,
+   "G": 4,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    38,
+    10,
+    278,
+    42,
+    1818,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      8,
+      -20
+     ],
+     "ep": 6,
+     "age": 1956,
+     "lag": 0
+    },
+    {
+     "cella": [
+      8,
+      -19
+     ],
+     "ep": 6,
+     "age": 1945,
+     "lag": 289
+    },
+    {
+     "cella": [
+      9,
+      -20
+     ],
+     "ep": 6,
+     "age": 1955,
+     "lag": 1
+    },
+    {
+     "cella": [
+      9,
+      -19
+     ],
+     "ep": 6,
+     "age": 1954,
+     "lag": 280
+    }
+   ]
+  },
+  {
+   "rngstate": 4049358778224514966,
+   "t": 986,
+   "t_on": 1114,
+   "pose": [
+    5,
+    -17
+   ],
+   "min_ep": 6,
+   "min_age": 413,
+   "min_lag": 0,
+   "G": 4,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    10,
+    206,
+    134,
+    42,
+    286,
+    6,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      7,
+      -11
+     ],
+     "ep": 6,
+     "age": 424,
+     "lag": 0
+    },
+    {
+     "cella": [
+      7,
+      -10
+     ],
+     "ep": 6,
+     "age": 413,
+     "lag": 145
+    },
+    {
+     "cella": [
+      8,
+      -11
+     ],
+     "ep": 6,
+     "age": 423,
+     "lag": 1
+    },
+    {
+     "cella": [
+      8,
+      -10
+     ],
+     "ep": 6,
+     "age": 422,
+     "lag": 136
+    }
+   ]
+  },
+  {
+   "rngstate": 1160873089008662556,
+   "t": 7822,
+   "t_on": 7950,
+   "pose": [
+    -7,
+    -17
+   ],
+   "min_ep": 6,
+   "min_age": 6546,
+   "min_lag": 0,
+   "G": 3,
+   "burden": 34,
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "dt_burst": [
+    414,
+    10,
+    246,
+    34,
+    6374,
+    50,
+    10,
+    70,
+    10
+   ],
+   "guilty": [
+    {
+     "cella": [
+      -5,
+      -11
+     ],
+     "ep": 6,
+     "age": 6548,
+     "lag": 0
+    },
+    {
+     "cella": [
+      -4,
+      -11
+     ],
+     "ep": 6,
+     "age": 6547,
+     "lag": 1
+    },
+    {
+     "cella": [
+      -4,
+      -10
+     ],
+     "ep": 6,
+     "age": 6546,
+     "lag": 248
+    }
+   ]
+  }
+ ],
+ "elapsed_s": 219.7,
+ "PREREGISTRATO": {
+  "falsificatore": "record profondo G>=1 con min_ep>8 E min_age>1040",
+  "n_falsificatori": 4,
+  "n_testimoni_ep_gt5": 45,
+  "soglia_potenza": 20,
+  "verdetto": "CODA DOPPIA REALIZZATA (falsificata la candidata-struttura)"
+ },
+ "parole_ripetute": {
+  "n_testimoni": 45,
+  "distinte": 14,
+  "ripetizioni_interne": 31,
+  "in_comune_con_catena1": 4,
+  "parole_comuni": [
+   "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "RRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLR"
+  ]
+ }
+}
