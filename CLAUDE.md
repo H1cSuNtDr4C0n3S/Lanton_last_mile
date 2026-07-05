@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§99**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§100**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -218,6 +218,13 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       per-cella — la massa e' dominata dagli eventi grossi (G~87) e nascondeva un
       minimo quasi-universale (91,5% dei record con colpevole di scia, min_ep<=5
       su 1174/1174). Parente di (hh) e (h).
+  (pp) **il caso degenere escluso in silenzio dal denominatore e' il segnale**
+      (MINEP-HUNT §99): un "if vuoto: continue" senza contatore ha nascosto 230
+      record G=0, fra cui le 2 violazioni REALI dell'orizzonte V(onset+P) (residuo
+      tutto bianco, onset a 2.372/14.757 passi >> onset_germe+P) = prima
+      realizzazione del caveat V† di §98c. Ogni ramo degenere va CONTATO e
+      riportato con semantica dichiarata; se un tripwire storico non e' replicato,
+      la sua assenza va dichiarata a verbale. Parente di (bb) e (ii).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -236,7 +243,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -715,5 +722,21 @@ lente C 2 ROSSI riparati in sessione). Prossimo §99: min_ep<=5 struttura o camp
 (orbite non selezionate per onset, sterilizzare trappola h); geometria dei RIENTRI
 (segmenti co-moving al minimo, R−L=ΔB §96, rotore §77); scia quasi-universale =
 teorema alla §86 esteso a K? Dettaglio: docs/OCCURRENCE_SUPPLY_ADDENDUM.md.
+**AGGIORNAMENTO §99 (caccia preregistrata: min_ep<=5 FALSIFICATO, orizzonte
+realizzato):** 5000 semi freschi non selezionati (gate canonici 24/24 bit-identici +
+hist per-record + zero G=0): min_ep max = 8 (6 testimoni/6980 = 0,086%, verificati
+6/6 da lente indipendente) ⇒ il "5" era un quantile (trappola h beccata dalla caccia
+§98g.1; cade solo l'upgrade a finestra costante, ep<=y_rel e Rifornimento Recente
+A/B/C intatti). Firma-W0 dei testimoni UCCISA dalla baseline (frag>=34 nel 23-29%
+dei record ordinari); fatti superstiti: gradiente frag-vs-min_ep, parola identica in
+3 testimoni di 3 orbite (coda word-mediated?), coppia lontana dall'onset. FATTO
+NUOVO (trappola pp: 230 G=0 scartati in silenzio dal mio tool, riparato): 2
+violazioni REALI del tripwire-orizzonte su 29.084 record freschi (residuo V(onset+P)
+bianco, onset a 2.372/14.757 passi) = caveat V† di §98c realizzato; il meccanismo
+G>=1 e' sano SOLO alla V†; 1620/1620 di §89a era (anche) fortuna del campione
+(~7e-5). Coda doppia (ep>5 ⇒ age<=10P, 6/6) POST-HOC, preregistrata per §100
+(min_ep>8 E min_age>1040, catena disgiunta, >=25k semi, potenza asserita). Prossimo
+§100: caccia coda doppia; geometria V†\V sui 2 violatori; parole ripetute nella coda.
+Dettaglio: docs/MINEP_HUNT_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

@@ -1,3 +1,40 @@
+# ============ §99 — CACCIA PREREGISTRATA: min_ep<=5 FALSIFICATO, ORIZZONTE REALIZZATO ============
+
+**Cosa e' successo a §99 (in una riga):** la caccia preregistrata a §98g.1 ha
+funzionato al primo colpo — 5000 semi freschi NON selezionati (catena xorshift
+dichiarata, onset med 3.964 vs 250-313k; gate canonici 24/24 bit-identici a §98 su
+6 campi + istogramma per-record + zero G=0): **min_ep max = 8** (6 testimoni/6.980
+profondi-con-colpevoli = 0,086%, compatibile con 0/1174 §98 p~36% ⇒ il "5" era un
+QUANTILE, trappola h beccata; nessun teorema §98 ne dipendeva — cade solo l'upgrade
+a finestra costante, resta ep<=y_rel deduttivo + Rifornimento Recente A/B/C).
+Testimoni verificati 6/6 bit-identici da lente indipendente; coda = discese rapide
+(definitorio: min_ep>5 & age<=901 forza >=6 record in <=901 passi); la lettura
+"firma-W0" (34/101 condiviso) UCCISA dalla baseline in sessione (frag>=34 nel
+23-29% dei record ordinari, gradiente 16%->48% gia' sotto soglia, mediana 34 fra
+gli onset-prossimali — metodo §84); fatti sani superstiti: gradiente frag-vs-min_ep,
+parola IDENTICA in 3 testimoni di 3 orbite (coda word-mediated? predizione per
+§100), una coppia lontana dall'onset (~31k). **FATTO NUOVO (dal buco della mia
+pipeline, trappola nuova pp: 230 record G=0 scartati in silenzio — il caso degenere
+ERA il segnale):** il tripwire §89a rifatto dalla lente su 29.084 record freschi da'
+**2 VIOLAZIONI REALI dell'orizzonte** — residuo V(onset+P) tutto bianco con onset a
+2.372 e 14.757 passi (>> onset_germe+P=159, burden 36 entrambi) = PRIMA
+REALIZZAZIONE del caveat V(onset+P)!=V† di §98c: il meccanismo G>=1 per le eterne
+e' sano SOLO alla V†, l'1620/1620 di §89a era (anche) fortuna del campione (tasso
+buchi ~7e-5); 228/230 G=0 fisiologici (ingresso in corso). Riparazioni in sessione:
+G=0 censiti con flag oltre-orizzonte, gate rafforzato (hist per-record: le somme
+non bastavano), T3 aggiunto. Coda doppia (ep>5 ⇒ age<=10P, 6/6) dichiarata POST-HOC
+e PREREGISTRATA per §100: falsificatore = profondo G>=1 con min_ep>8 E
+min_age>1040; catena disgiunta BASE'=xs(BASE^0xD1B54A32D192ED03); >=25k semi;
+potenza asserita (~30 testimoni ep>5 attesi, altrimenti dichiarare sottopotenza).
+**Prossimo §100:** caccia coda doppia preregistrata; geometria V†\V sui 2 violatori
+(caso di studio concreto; quanto costa il censimento §98 alla V†?); parole ripetute
+nella coda (se famiglia finita, il bordo alto di ep torna enumerabile). Ereditati:
+rientri §98g.2, scia quasi-universale §98g.3, separatori §97, fuggenti vs
+nere-D>=400, retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/MINEP_HUNT_ADDENDUM.md. File: alpha1/record_minep_hunt.py (+json/log).
+
+# ================================================================================================
+
 # ============ §98 — ANELLO DI OCCORRENZA: la SCALA, il RIFORNIMENTO RECENTE, min_ep<=5 ============
 
 **Cosa e' successo a §98 (in una riga):** l'anello di occorrenza (scala §91c punto 4,
