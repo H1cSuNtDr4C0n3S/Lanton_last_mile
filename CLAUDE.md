@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§97**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§98**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -189,6 +189,22 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       M-chiuso e non deve esserlo (coniugarlo con l'oracolo specchio).
       Antidoto permanente: alpha1/mirror_tripwire.py (gate M0-M4) su ogni
       nuovo certificato. Parente di (d) e dei bug di frame §86.6/§89c.
+  (ll) **il washout e' l'esca obbligatoria delle macchine a zona esatta /
+      OUT libero** (COLLO-MACHINE §97): se gli esiti raggiungibili non
+      cambiano corrompendo lo stato iniziale, l'astrazione ha buttato il
+      vincolo portante e l'esito non dice nulla (ne' in positivo ne' in
+      negativo). Testare il washout PRIMA di leggere il verdetto, con TUTTI
+      i flip singoli + coppie e corse ESAUSTIVE (un flip solo e' un
+      testimone di insensibilita', non di totalita'). Radice comune (ff)/(cc).
+  (mm) **i confronti differenziali tra esplorazioni CAPPATE non sono
+      definiti — e l'init sound "per caso fattuale" va assertato**
+      (COLLO-MACHINE §97): due BFS al cap hanno frontiere diverse; K1/K2/
+      coniugazioni tra prefissi troncati danno verdetti spuri — propagare i
+      flag esaurita, etichettare NON-DEFINITO sotto cap, il ramo TEOREMA
+      esige l'esaustivita' di tutte le corse. E ogni ipotesi di modello vera
+      solo per i parametri correnti (init loc=OUT con posa w101 a cheb 4)
+      va ASSERTATA, non presunta: a R=4 sarebbe stata unsound silenziosa.
+      Parente di (hh).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -207,7 +223,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -642,5 +658,28 @@ chiusura (catena <=3 R + aperture L) per uccidere le 8 firme; DAG delle
 chiusure whack-a-mole. Ereditati: fuggenti nuove vs nere-D>=400, retro-nota
 §91c.3, stress-2 bianche, h1=1.
 docs/U2_SIGNATURE_ADDENDUM.md.
+**AGGIORNAMENTO §97 (MACCHINA DEL COLLO: falsificazione della via a zona
+piccola):** le due gambe §96g.1 fuse in una macchina finita esatta-in-zona /
+OUT-libero (`u2_far_collo_machine.py`, stati int-packed, direzione di
+soundness: intersezione vuota con le 8 firme = teorema). FALSIFICATA ai
+raggi piccoli: radius 2 (esaustiva, 36.860 stati) 24 firme con
+insensibilita' TOTALE ai flip dello stato iniziale (osservazione su tutti i
+flip+coppie = washout, trappola ll); radius 3 (anello 11/11 tracciato, 60M
+stati al cap, firme = lower bound) **tutte le 8 firme residue raggiungibili**
+— INCONCLUDENTE cap-robusto: nessun teorema da zone raggio<=3 con ambiente
+libero (rientro libero = direzioni d'approccio libere). Quale componente
+scartata porti la rigidita' reale (req fuori zona / continuita'
+uscita-rientro / mortalita' esterna) e' APERTO, esperimenti separatori
+nominati. Pannello §97: semantica sound + verifica di terra forte (replay
+proiettato del testimone reale, 1.270 passi, pend2 identico passo-passo);
+riparati: GATE B1 (init loc=OUT era sound solo per cheb(posa_w101)=4>R — a
+R=4 unsound silenziosa), K1/K2 NON-DEFINITI sotto cap (trappola mm),
+washout retrocesso a osservazione. Z/4 non morde nell'OUT-libero (previsto).
+Prossimo §98: esperimenti separatori (guscio req cheb R+1..R+k / rientro
+vincolato al lato d'uscita); motore C striscia allargata con B1; vincoli-scia
+sul rientro (§86 all'indietro); le cacce restano il falsificatore permanente.
+Ereditati: fuggenti nuove vs nere-D>=400, retro-nota §91c.3, stress-2
+bianche, h1=1.
+docs/U2_COLLO_MACHINE_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

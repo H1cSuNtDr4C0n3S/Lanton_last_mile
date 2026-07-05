@@ -1,3 +1,48 @@
+# ============ §97 — U2-LONTANO 5: la MACCHINA DEL COLLO (via a zona piccola FALSIFICATA) ============
+
+**Cosa e' successo a §97 (in una riga):** le due gambe del programma §96g.1
+(enumerazione degli approcci di chiusura + DAG whack-a-mole) sono UNA macchina
+sola — finita, esatta-in-zona / OUT-libero (`u2_far_collo_machine.py`, stato =
+req di zona + posa/heading, int-packed dopo un primo tentativo a 9,6 GB;
+direzione di soundness giusta: l'astrazione allarga le traiettorie reali,
+un'intersezione vuota con le 8 firme residue sarebbe TEOREMA) — e la via e'
+FALSIFICATA ai raggi piccoli. Radius 2 (esaustiva, 36.860 stati): 24 firme,
+tutte le 8 residue incluse, e **insensibilita' totale ai flip dello stato
+iniziale** (osservazione su tutti i flip singoli + coppie: il washout —
+l'astrazione ha buttato il vincolo portante, trappola nuova ll). Radius 3
+(anello cheb=3 tracciato esatto, 11/11 celle visitate da w101; 60M stati al
+CAP, firme = lower bound): **tutte le 8 firme residue ancora raggiungibili**
+— verdetto INCONCLUDENTE ma cap-robusto (raggiungibilita' monotona) ⇒ con
+rientro libero le direzioni d'approccio sono libere per costruzione e firme
+che differiscono (anche) solo per heading non si uccidono da nessuna zona
+piccola. Quale componente scartata dall'OUT porti la rigidita' reale del
+collo (603/603 pulizie sulla stessa porta) — (a) req fuori zona, (b)
+continuita' geometrica uscita→rientro, (c) mortalita' esterna — e' APERTO,
+con esperimenti separatori nominati (guscio di req a cheb R+1..R+k con
+rientro teletrasportato; rientro vincolato al lato d'uscita con req libere).
+Pannello §97 (2 lenti + sintetizzatore): semantica sound (rientri adiacenti
+esaustivi, congelamento req esatto, firme rilevate su ogni arco) + verifica
+di terra FORTE (replay proiettato del testimone reale §96 sulla macchina:
+1.270 passi, 10 rientri, 26 letture forzate coincidenti, pend₂ identico
+passo-passo — il controllo positivo giusto e' questo, non la membership
+della firma: K0 e' cieco alle rotazioni globali, esca N2); riparato UN buco
+vero (GATE B1: init loc=OUT sound solo perche' posa w101 = (4,1) ha cheb
+4 > R — a R=4 sarebbe stata unsound SILENZIOSA) + K1/K2 etichettati
+NON-DEFINITI sotto cap (trappola nuova mm: differenziali tra BFS troncate)
++ washout retrocesso da fatto a osservazione. Z/4 chirale non morde
+nell'OUT-libero (onesta' preventiva confermata). Esca N1 istruttiva: senza
+riaperture la macchina collassa a 9 stati e 0 firme — il whack-a-mole E' il
+motore di tutta la raggiungibilita'. **Prossimo §98:** esperimenti
+separatori (a)/(b); motore C striscia allargata (con B1: init in-zona);
+vincoli-scia sul rientro (Teorema della Scia §86 all'indietro, dove Z/4
+puo' mordere); le cacce per-firma restano il falsificatore permanente.
+Ereditati: fuggenti nuove vs nere-D≥400, retro-nota §91c.3, stress-2
+bianche, h1=1.
+Dettagli: docs/U2_COLLO_MACHINE_ADDENDUM.md. File: alpha1/u2_far_collo_machine.py
+(+json).
+
+# ================================================================================================
+
 # ============ §96 — U2-LONTANO 4: firme-exit, COLLO DELLA PULIZIA, tripwire CP ============
 
 **Cosa e' successo a §96 (in una riga):** due vincoli deduttivi nuovi + il collo
