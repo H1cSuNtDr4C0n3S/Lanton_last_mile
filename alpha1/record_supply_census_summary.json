@@ -1,0 +1,372 @@
+{
+ "n_records": 1639,
+ "n_deep_records": 1174,
+ "tripwire_G": 1620,
+ "tripwires": {
+  "T1_autofornitura": 188234,
+  "T2_paint_dopo_apertura": 188234,
+  "T3_prima_visita_riga_eq_record": 1854,
+  "T4_ep_le_yrel": 188234
+ },
+ "colpevoli": {
+  "tot": 225012,
+  "profonde": 188234,
+  "shallow_seme": 3722,
+  "shallow_dipinte": 33056
+ },
+ "kmax_residuo": {
+  "med": 19,
+  "max": 75
+ },
+ "G_deep_records": {
+  "n": 1174,
+  "min": 1,
+  "med": 87.0
+ },
+ "ep": {
+  "med": 3.0,
+  "max": 31,
+  "hist": {
+   "1": 43113,
+   "2": 39835,
+   "3": 28240,
+   "4": 20941,
+   "5": 14614,
+   "6": 10703,
+   "7": 8844,
+   "8": 6006,
+   "9": 4045,
+   "10": 2765,
+   "11": 2170,
+   "12": 1687,
+   "13": 1132,
+   "14": 1105,
+   "15": 704,
+   "16": 608,
+   "17": 405,
+   "18": 341,
+   "19": 324,
+   "20": 131,
+   "21": 159,
+   "22": 120,
+   "23": 92,
+   "24": 7,
+   "25": 18,
+   "26": 70,
+   "27": 14,
+   "28": 14,
+   "29": 16,
+   "30": 10,
+   "31": 1
+  }
+ },
+ "y_rel": {
+  "med": 13.0,
+  "max": 61,
+  "hist_low": {
+   "1": 2132,
+   "2": 3981,
+   "3": 4923,
+   "4": 6126,
+   "5": 7193,
+   "6": 8151,
+   "7": 8895,
+   "8": 9783,
+   "9": 10406,
+   "10": 10507,
+   "11": 10568,
+   "12": 10429,
+   "13": 9874,
+   "14": 9334,
+   "15": 8754
+  }
+ },
+ "lag_pittura_da_apertura_riga": {
+  "med": 26645.0,
+  "max": 262345,
+  "frac_le_P": 0.05159004218154,
+  "frac_le_2P": 0.0653813869970356,
+  "frac_le_10P": 0.12490304620844268
+ },
+ "esp_frac_apertura": {
+  "med": 0.1875,
+  "frac_eq_1": 0.039763140643303135
+ },
+ "eta_passi_profonde": {
+  "med": 2002.0,
+  "max": 235817,
+  "frac_ge_10P": 0.6024894546150005,
+  "frac_le_2K": 0.10597979111106388,
+  "frac_le_5P": 0.27467938842079537
+ },
+ "ep_cum": {
+  "1": 0.22903938714578662,
+  "2": 0.440664279566922,
+  "3": 0.5906903109958881,
+  "5": 0.7795775470956363,
+  "8": 0.9153287928854511,
+  "13": 0.9780114113284529,
+  "21": 0.9980768617784247,
+  "31": 1.0
+ },
+ "quota_rientro": {
+  "med": 9.0,
+  "max": 55,
+  "min": 0,
+  "cum": {
+   "1": 0.09295345155497944,
+   "3": 0.1939128956511576,
+   "5": 0.31169183038133386,
+   "8": 0.4934390173932446,
+   "13": 0.7347397388357045,
+   "21": 0.92612917963811,
+   "34": 0.9947777765972141,
+   "55": 1.0
+  }
+ },
+ "per_record_deep": {
+  "n": 1174,
+  "min_age": {
+   "med": 107.0,
+   "max": 24464,
+   "frac_le_2K": 0.9148211243611585,
+   "frac_le_5P": 0.9480408858603067,
+   "frac_le_10P": 0.959114139693356
+  },
+  "min_ep": {
+   "med": 2.0,
+   "max": 5,
+   "hist": {
+    "1": 566,
+    "2": 397,
+    "3": 182,
+    "4": 26,
+    "5": 3
+   }
+  },
+  "min_lag": {
+   "med": 0.0,
+   "frac_le_P": 0.8816013628620102,
+   "frac_le_10P": 0.9352640545144804
+  }
+ },
+ "per_orbit": [
+  {
+   "orbit": 0,
+   "records": 90,
+   "deep_records": 68,
+   "colpevoli_profonde": 9912,
+   "ep_sum": 35320,
+   "ep_max": 30,
+   "G_sum": 11385
+  },
+  {
+   "orbit": 1,
+   "records": 64,
+   "deep_records": 49,
+   "colpevoli_profonde": 9572,
+   "ep_sum": 42365,
+   "ep_max": 27,
+   "G_sum": 11030
+  },
+  {
+   "orbit": 2,
+   "records": 81,
+   "deep_records": 64,
+   "colpevoli_profonde": 8312,
+   "ep_sum": 31279,
+   "ep_max": 27,
+   "G_sum": 9217
+  },
+  {
+   "orbit": 3,
+   "records": 79,
+   "deep_records": 66,
+   "colpevoli_profonde": 7809,
+   "ep_sum": 34393,
+   "ep_max": 31,
+   "G_sum": 8385
+  },
+  {
+   "orbit": 4,
+   "records": 58,
+   "deep_records": 38,
+   "colpevoli_profonde": 4986,
+   "ep_sum": 19211,
+   "ep_max": 20,
+   "G_sum": 6218
+  },
+  {
+   "orbit": 5,
+   "records": 99,
+   "deep_records": 85,
+   "colpevoli_profonde": 10572,
+   "ep_sum": 50910,
+   "ep_max": 27,
+   "G_sum": 11576
+  },
+  {
+   "orbit": 6,
+   "records": 55,
+   "deep_records": 32,
+   "colpevoli_profonde": 7907,
+   "ep_sum": 25561,
+   "ep_max": 18,
+   "G_sum": 8939
+  },
+  {
+   "orbit": 7,
+   "records": 69,
+   "deep_records": 46,
+   "colpevoli_profonde": 8089,
+   "ep_sum": 38511,
+   "ep_max": 30,
+   "G_sum": 9237
+  },
+  {
+   "orbit": 8,
+   "records": 72,
+   "deep_records": 56,
+   "colpevoli_profonde": 9161,
+   "ep_sum": 39847,
+   "ep_max": 27,
+   "G_sum": 9708
+  },
+  {
+   "orbit": 9,
+   "records": 55,
+   "deep_records": 34,
+   "colpevoli_profonde": 5833,
+   "ep_sum": 21227,
+   "ep_max": 20,
+   "G_sum": 8181
+  },
+  {
+   "orbit": 10,
+   "records": 74,
+   "deep_records": 51,
+   "colpevoli_profonde": 9045,
+   "ep_sum": 28230,
+   "ep_max": 16,
+   "G_sum": 11257
+  },
+  {
+   "orbit": 11,
+   "records": 79,
+   "deep_records": 58,
+   "colpevoli_profonde": 8008,
+   "ep_sum": 27930,
+   "ep_max": 18,
+   "G_sum": 9378
+  },
+  {
+   "orbit": 12,
+   "records": 98,
+   "deep_records": 78,
+   "colpevoli_profonde": 11006,
+   "ep_sum": 41157,
+   "ep_max": 22,
+   "G_sum": 13034
+  },
+  {
+   "orbit": 13,
+   "records": 52,
+   "deep_records": 30,
+   "colpevoli_profonde": 6128,
+   "ep_sum": 24971,
+   "ep_max": 30,
+   "G_sum": 8029
+  },
+  {
+   "orbit": 14,
+   "records": 79,
+   "deep_records": 58,
+   "colpevoli_profonde": 8750,
+   "ep_sum": 37053,
+   "ep_max": 22,
+   "G_sum": 9906
+  },
+  {
+   "orbit": 15,
+   "records": 59,
+   "deep_records": 37,
+   "colpevoli_profonde": 6576,
+   "ep_sum": 21076,
+   "ep_max": 21,
+   "G_sum": 7782
+  },
+  {
+   "orbit": 16,
+   "records": 38,
+   "deep_records": 20,
+   "colpevoli_profonde": 3354,
+   "ep_sum": 11282,
+   "ep_max": 16,
+   "G_sum": 5221
+  },
+  {
+   "orbit": 17,
+   "records": 57,
+   "deep_records": 37,
+   "colpevoli_profonde": 5011,
+   "ep_sum": 16676,
+   "ep_max": 15,
+   "G_sum": 6418
+  },
+  {
+   "orbit": 18,
+   "records": 56,
+   "deep_records": 39,
+   "colpevoli_profonde": 6383,
+   "ep_sum": 18149,
+   "ep_max": 15,
+   "G_sum": 8386
+  },
+  {
+   "orbit": 19,
+   "records": 61,
+   "deep_records": 42,
+   "colpevoli_profonde": 7084,
+   "ep_sum": 22743,
+   "ep_max": 19,
+   "G_sum": 8368
+  },
+  {
+   "orbit": 20,
+   "records": 53,
+   "deep_records": 34,
+   "colpevoli_profonde": 5853,
+   "ep_sum": 18982,
+   "ep_max": 16,
+   "G_sum": 8482
+  },
+  {
+   "orbit": 21,
+   "records": 53,
+   "deep_records": 34,
+   "colpevoli_profonde": 5430,
+   "ep_sum": 21356,
+   "ep_max": 26,
+   "G_sum": 6465
+  },
+  {
+   "orbit": 22,
+   "records": 89,
+   "deep_records": 71,
+   "colpevoli_profonde": 12979,
+   "ep_sum": 57009,
+   "ep_max": 28,
+   "G_sum": 14397
+  },
+  {
+   "orbit": 23,
+   "records": 69,
+   "deep_records": 47,
+   "colpevoli_profonde": 10474,
+   "ep_sum": 45813,
+   "ep_max": 25,
+   "G_sum": 14013
+  }
+ ],
+ "elapsed_s": 15.1
+}

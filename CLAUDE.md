@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§98**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§99**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -205,6 +205,19 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       solo per i parametri correnti (init loc=OUT con posa w101 a cheb 4)
       va ASSERTATA, non presunta: a R=4 sarebbe stata unsound silenziosa.
       Parente di (hh).
+  (nn) **l'eta' e' relativa all'orologio** (OCCURRENCE-SUPPLY §98): "detrito antico /
+      quasi statico / pre-semina" cambiano segno cambiando unita' (passi vs
+      epoche-evento). §89b leggeva staticita' (eta' med 2002 passi, 60%>=10P) dove la
+      scala dei record vede rifornimento a mediana 3 epoche, max 31; nessuna colpevole
+      profonda precede l'apertura della propria riga. Prima di dichiarare una risorsa
+      "antica" (e attaccarla alla Blocco Antico), misurarla nell'orologio degli EVENTI
+      che la consumano. Parente di (h) e della lezione §72 (frame co-moving).
+  (oo) **le frazioni per-cella non decidono enunciati per-evento** (OCCURRENCE-SUPPLY
+      §98, beccata dal pannello prima del verbale): un meccanismo che deve valere
+      "almeno una volta per evento" va misurato sui MINIMI per-evento, non sulla massa
+      per-cella — la massa e' dominata dagli eventi grossi (G~87) e nascondeva un
+      minimo quasi-universale (91,5% dei record con colpevole di scia, min_ep<=5
+      su 1174/1174). Parente di (hh) e (h).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -223,7 +236,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -681,5 +694,26 @@ sul rientro (§86 all'indietro); le cacce restano il falsificatore permanente.
 Ereditati: fuggenti nuove vs nere-D>=400, retro-nota §91c.3, stress-2
 bianche, h1=1.
 docs/U2_COLLO_MACHINE_ADDENDUM.md.
+**AGGIORNAMENTO §98 (ANELLO DI OCCORRENZA deciso in epoche-record):** il punto 4 della
+scala §91c (famiglia di parole inevitabile ai record) e' stato deciso cambiando unita'.
+LEMMA DELLA SCALA (deduttivo, T1-T4 zero violazioni su 188.234 colpevoli profonde,
+gate §89a/§89b riprodotti): la riga -m apre al record m-1 ⇒ ai record profondi ogni
+colpevole e' auto-dipinta dopo l'apertura della propria riga, entro y_rel<=k_max epoche
+(identita' q = y_rel−ep); la pre-semina antica NON esiste come risorsa (il "detrito
+antico" §89b = artefatto dell'orologio: eta' med 2002 passi ma 3 epoche, trappola nn).
+Per-record (riparazione lente C, trappola oo): **min_ep<=5 su 1174/1174 record
+profondi**; scia quasi-universale (91,5% con colpevole word-proximal, min_age med
+107=K+6; 88,2% con colpevole di discesa, min_lag med 0) MA coda 8,5% senza colpevole
+entro 2K (fino a 24.464 passi) ⇒ nessuna famiglia-parola a profondita' fissa e'
+inevitabile; G=1 non-dimostrato-inevitabile (med 87); enumerazione §89c POTATA senza
+esecuzione. TEOREMA DEL RIFORNIMENTO RECENTE (condizionale; ipotesi A germe-onset
+semi-decidibile, B V† su residuo+k_max+classificazione, C k* esistenziale non
+calcolato): eterna ⇒ evento pittura-e-preserva in ogni finestra di k* epoche, quota
+<=k*. Punto 4 ⇒ (4'): il rifornimento perpetuo e' incompatibile con la non-entrata?
+Pannello 3/3 (lente A 18/18 bit-identici con paint via traiettoria; lente B esche 4/4;
+lente C 2 ROSSI riparati in sessione). Prossimo §99: min_ep<=5 struttura o campione
+(orbite non selezionate per onset, sterilizzare trappola h); geometria dei RIENTRI
+(segmenti co-moving al minimo, R−L=ΔB §96, rotore §77); scia quasi-universale =
+teorema alla §86 esteso a K? Dettaglio: docs/OCCURRENCE_SUPPLY_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

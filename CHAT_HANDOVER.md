@@ -1,3 +1,42 @@
+# ============ §98 — ANELLO DI OCCORRENZA: la SCALA, il RIFORNIMENTO RECENTE, min_ep<=5 ============
+
+**Cosa e' successo a §98 (in una riga):** l'anello di occorrenza (scala §91c punto 4,
+fermo da §89) e' stato deciso cambiando UNITA' DI MISURA — epoche-record, non passi.
+(1) **LEMMA DELLA SCALA** (deduttivo, terra-verificato: T1-T4 zero violazioni su
+188.234 colpevoli profonde, 24 orbite / 1639 record §89a, gate incrociati §89a/§89b
+tutti riprodotti): la riga -m apre esattamente al record m-1 ⇒ ai record profondi ogni
+colpevole e' AUTO-DIPINTA dopo l'apertura della propria riga, entro y_rel <= k_max
+epoche; identita' q = y_rel − ep (quota di rientro). La pre-semina antica ai record
+profondi NON esiste come risorsa; il "detrito antico" di §89b era un artefatto
+dell'orologio (eta' med 2002 passi MA 3 epoche; trappola nuova nn). (2) Censimento
+per-record (riparazione imposta dal pannello, lente C ROSSO riparato in sessione,
+trappola nuova oo: per-cella non decide enunciati per-evento): **min_ep <= 5 su
+1174/1174 record profondi** (hist 566/397/182/26/3); scia quasi-universale: 91,5% dei
+record ha colpevole word-proximal (min_age med 107 = K+6, il pattern delle autopsie
+G=1), 88,2% una colpevole di discesa (min_lag med 0: la scala si rifornisce da sola);
+MA coda dell'8,5% senza colpevole entro 2K (fino a 24.464 passi) ⇒ nessuna
+famiglia-parola a profondita' fissa e' inevitabile; G=1 resta non-dimostrato-inevitabile
+(med 87). Enumerazione §89c POTATA senza esecuzione (nessun ramo deciderebbe nulla).
+(3) **TEOREMA DEL RIFORNIMENTO RECENTE** (condizionale, ipotesi esplicite: A germe-onset
+per-parola semi-decidibile/aperta, B certificato V† su TRE oggetti — residuo, k_max,
+classificazione profonda —, C k* = sup k_max† esistenziale NON calcolato, mai citare il
+75 campionario): eterna ⇒ in ogni finestra scorrevole di k* epoche, un evento
+pittura-e-preserva a quota <= k*. Il punto 4 della scala diventa (4'): dimostrare che il
+rifornimento perpetuo e' incompatibile con la non-entrata. Pannello 3/3: lente A
+ricontro indipendente 18/18 bit-identici (orbite 0/13/22, paint via traiettoria+turns),
+lente B esche 4/4 beccate con controllo positivo, lente C 2 ROSSI riparati PRIMA del
+verbale. **Prossimo §99:** min_ep<=5 struttura o campione? (cercare controesempi su
+orbite NON selezionate per onset alto, sterilizzare trappola h); geometria dei RIENTRI
+(segmenti co-moving al minimo corrente, identita' R−L=ΔB §96, rotore §77, coda lunga
+§79); la scia quasi-universale (91,5%) e' teorema alla §86 esteso a K? — se si', la
+coda 8,5% e' l'unico habitat delle eterne (fronte enumerabile nuovo). Ereditati:
+esperimenti separatori §97, fuggenti nuove vs nere-D>=400, retro-nota §91c.3, stress-2
+bianche, h1=1.
+Dettagli: docs/OCCURRENCE_SUPPLY_ADDENDUM.md. File: alpha1/record_supply_census.py
+(+json/log).
+
+# ================================================================================================
+
 # ============ §97 — U2-LONTANO 5: la MACCHINA DEL COLLO (via a zona piccola FALSIFICATA) ============
 
 **Cosa e' successo a §97 (in una riga):** le due gambe del programma §96g.1
