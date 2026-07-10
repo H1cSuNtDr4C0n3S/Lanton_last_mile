@@ -1,3 +1,38 @@
+# ============ §107b — SCUDO ANTICO: autopsia all'indietro della classe pericolosa ============
+
+**Cosa e' successo a §107b (in una riga):** strada scelta con confronto a due
+round contro un secondo cervello Fable (E = attacco per-parola all'indietro,
+riparato: riduzione non chiusura, indeciso != bianco, fase-0 falsificabile).
+F0 (`danger_geometry_census.py`, gate G0-G2 verdi incl. cross-macchinario coi
+lock §101e): theta_min DEGENERE (=2 quasi ovunque: il Cuneo non forza mai
+l'intero read-set word-side; criterio v1 spurio = trappola pp), classe ≡
+taglia ≡ direzionale ≡ transiente corto (coh_traj 0.535→0.92 lungo n; lock
+0.93/1.00) — saldatura H1↔H3 = ri-descrizione; shift-10 cross-lock confermata
+word-side. F2 (`danger_backward_autopsy.py`, macchina dei prepend con
+classificazione AL CAP — v1 a foglie-potate era misura politica-pesata,
+trappola nuova rr; GA lente naive bit-identica, GB passato reale 2/2 con la
+cella consumata §105b ritrovata a prof. 1, lente esterna indipendente
+bit-identica su LOCKA D=16 + claim σ=1 confermato): a D=28 i lock hanno
+**12/14 e 5/9 celle di R_T IRRAGGIUNGIBILI da qualunque passato <= 28** ⇒ i
+bit dell'OR-kernel sono ANTICHI (> 129 passi; in epoche possono essere
+recenti, nn); WHITE_ALL=0 (nessun certificato-lock finito); **σ_D(w) =
+quota-shield dei passati validi** e' word-decidibile e BIMODALE sulla classe
+(q25 0.0002 / med 0.10 / q75 0.90; σ=1 esatto realizzato = parole
+deduttivamente sicure a prof. dichiarata); i 2 lock (σ_22 0.080/0.0012) NON
+sono estremi (24/66 a σ<=0.01) ⇒ **(ii) non ha discriminante word-side: il
+fallimento dello scudo e' proprieta' della PRE-STORIA antica** (conferma
+fortuna §106-T3 + cuneo §105b). Riduzione realizzata: ai record pericolosi
+σ≈0 il verdetto = OR di <=κ bit tutti decisi dal passato > D+K — l'oggetto
+dell'attacco (ii) e' il DEPOSITO ANTICO nel cono del drift. **Prossimo
+(§107c/§108):** profondita' minima di raggiungibilita' per cella; σ_D sul
+vocabolario intero (quota parole sicure); scudo antico vs Lemma del Cono §87;
+F1 gamba-Cuneo stratificata (ereditata). Ereditati: §106c, §105b.4, §101g,
+§102f, §103d, §104f.
+Dettagli: docs/DANGER_BACKWARD_ADDENDUM.md. File: alpha1/danger_geometry_census.py,
+danger_backward_autopsy.py (+json), locka_d16_check.json.
+
+# ================================================================================================
+
 # ============ §107 (apertura) — CLASSE PERICOLOSA quantificata, piega su γ ============
 
 **Cosa e' successo a §107a (in una riga):** |R_T(w)| sui 1639 record canonici:
@@ -1831,7 +1866,7 @@ bite-stall e' LIMITATO ~303 su tutte le orbite (non cresce 1e4->1e5) ⇒ quantit
 stallo crescente di #30 (~1e4, probabile buchi nero-fuori-finestra); il bite rate su (7,-7) e' 0.20
 sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata; tornare a δ_r/§78.
 
-## C. Roadmap (aggiornata a §107a; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
+## C. Roadmap (aggiornata a §107b; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
 
 **Stato della scala (§107c):** Link 1 (record-anchored, sufficiente) ⟸
 (i) occorrenza della classe pericolosa i.o. [|R_T|<=κ; misurato 0,2-4%/record,
@@ -1841,17 +1876,17 @@ lentezza deduttivo §106]. La piega su γ (§107b) chiude i falsificatori
 costruibili a buon mercato: negazione o γ-falsa (<=40) o α1-completa.
 
 Priorita':
-1. **(ii) cuneo-vs-scudo (§107d.2) — fronte principale.** Formalizzare "lo scudo
-   d'escursione copre il cuneo del drift" come proprieta' di stato co-moving finito.
-   Oggetto nominato: l'OR-kernel del lato-record (§107c-bis, gemello del kernel-porta
-   A1 §78): il residuo dinamico di Link 1 ai record = OR di <=κ bit co-moving a un
-   istante ricorrente. Vie deduttive gia' chiuse (NON riaprire): ledger/bilancio
-   (trappola n), scalinata a filo-di-rasoio (falsificata §105b), solitudine
-   (trappola v), zona-piccola/OUT-libero (§97). Serve argomento NUOVO.
-2. **(i) ricorrenza del vocabolario (§107d.1).** Le parole a |R_T| piccolo vs firma
-   d'approccio §104 (porta-0, vocabolario canonico, buco-3); presentazione ai record
-   legata ai rientri della Scala (§98g.2: geometria dei rientri, R−L=ΔB §96,
-   rotore §77, coda lunga §79).
+1. **(ii) il DEPOSITO ANTICO nel cuneo (§107b.8) — fronte principale.** Dopo §107b
+   l'oggetto e' preciso: ai record pericolosi σ≈0 il verdetto = OR di <=κ bit
+   co-moving decisi dal passato > D+K passi (bit antichi). Attacco: profondita'
+   minima di raggiungibilita' per cella; "scudo antico copre il cuneo" col Lemma
+   del Cono §87 (livello pre-storia, non parola). Vie gia' chiuse (NON riaprire):
+   ledger/bilancio (n), filo-di-rasoio (§105b), solitudine (v), zona-piccola (§97),
+   discriminante word-side di (ii) (§107b: i lock non sono estremi in σ).
+2. **(i) ricorrenza ristretta alla sottoclasse σ≈0.** σ_D sul vocabolario intero
+   (quota parole deduttivamente sicure σ=1); le parole a |R_T| piccolo vs firma
+   d'approccio §104; presentazione ai record legata ai rientri della Scala
+   (§98g.2: geometria dei rientri, R−L=ΔB §96, rotore §77, coda lunga §79).
 3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
    infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
    micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).

@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107b**; §108 se fronte nuovo).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107c**; §108 se fronte nuovo).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -236,6 +236,15 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       enunciati ammessi: deduttivi, condizionali-dichiarati, esistenziali.
       Tassi confrontati per EPISODI, non per record (i consecutivi condividono
       le colpevoli). Parente di (i), (h), (bb), (nn).
+  (rr) **le foglie di un albero potato non sono una misura** (SCUDO-ANTICO §107b):
+      potando il sottoalbero alla prima decisione, il conteggio delle foglie pesa
+      le classi per la POLITICA di potatura, non per la massa dei passati (una
+      foglia a prof. 1 = ~meta' dell'albero al cap; il "binario unico" apparente
+      era due binari paralleli). O si estende tutto al cap e si classifica al cap,
+      o si pesa ogni foglia per le sue estensioni valide. Istanza enumerativa di
+      (hh)/(oo). Corollario (istanza di pp): un criterio di gate calcolato su una
+      distribuzione DEGENERE (moda >96%) spara spurio; controllare la
+      degenerazione prima del verdetto.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -254,7 +263,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -812,6 +821,21 @@ controesempio-γ (escluso <=40) o α1 stessa. Scala finale: Link 1 ⟸ (i)
 occorrenza classe pericolosa i.o. ∧ (ii) fallimento scudo (vie deduttive note
 tutte chiuse; serve argomento nuovo cuneo-vs-scudo; (ii) realizzato 2/82k).
 docs/DANGER_CLASS_ADDENDUM.md.
+**AGGIORNAMENTO §107b (SCUDO ANTICO):** attacco per-parola all'indietro (strada
+scelta con confronto a 2 round vs secondo Fable). F0 `danger_geometry_census.py`:
+theta_min DEGENERE (=2 quasi ovunque: il Cuneo non forza mai l'intero read-set
+word-side), classe ≡ taglia ≡ direzionale ≡ transiente corto (coh 0.535→0.92;
+lock 0.93/1.00): saldatura H1↔H3 = ri-descrizione; shift-10 cross-lock word-side.
+F2 `danger_backward_autopsy.py` (classificazione AL CAP, trappola rr; GA naive
+bit-identica, GB passato reale 2/2, lente esterna indipendente verde): a D=28
+i lock hanno 12/14 e 5/9 celle di R_T irraggiungibili da ogni passato <=28 ⇒
+bit dell'OR-kernel ANTICHI (>129 passi); WHITE_ALL=0; σ_D(w) = quota-shield dei
+passati validi, BIMODALE sulla classe (q25 0.0002/med 0.10/q75 0.90; σ=1 esatto
+= parole deduttivamente sicure a prof. dichiarata); lock σ_22 0.080/0.0012 NON
+estremi (24/66 a σ<=0.01) ⇒ (ii) senza discriminante word-side: fallimento
+scudo = proprieta' della pre-storia antica (deposito antico nel cono del
+drift). Prossimo: raggiungibilita' minima per cella; σ_D sul vocabolario
+intero; scudo antico vs Cono §87. docs/DANGER_BACKWARD_ADDENDUM.md.
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del

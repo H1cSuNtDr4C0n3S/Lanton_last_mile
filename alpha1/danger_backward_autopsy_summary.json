@@ -1,0 +1,1131 @@
+{
+ "depth": 28,
+ "episodi": [
+  {
+   "label": "LOCKA",
+   "rngstate": 16989344815867729101,
+   "t": 4588,
+   "n_rt": 14,
+   "onset_germe": 55,
+   "GB_trace_ultimo": {
+    "d": 28,
+    "decise_bianche": 1,
+    "open": 13
+   },
+   "GA_lens_depth": 12,
+   "depth": 28,
+   "nodi": 18161,
+   "troncato": false,
+   "nodi_per_depth": {
+    "0": 1,
+    "1": 2,
+    "2": 2,
+    "3": 2,
+    "4": 2,
+    "5": 2,
+    "6": 2,
+    "7": 2,
+    "8": 2,
+    "9": 2,
+    "10": 2,
+    "11": 2,
+    "12": 3,
+    "13": 5,
+    "14": 8,
+    "15": 12,
+    "16": 18,
+    "17": 32,
+    "18": 55,
+    "19": 89,
+    "20": 143,
+    "21": 231,
+    "22": 377,
+    "23": 614,
+    "24": 998,
+    "25": 1624,
+    "26": 2614,
+    "27": 4292,
+    "28": 7023
+   },
+   "cap": {
+    "shield": 550,
+    "white_all": 0,
+    "open": 6473
+   },
+   "touch_cap_hist": {
+    "1": 7015,
+    "2": 8
+   },
+   "cell_bits": {
+    "(-6, 2)": [
+     0,
+     0,
+     7023
+    ],
+    "(-6, 3)": [
+     0,
+     0,
+     7023
+    ],
+    "(-5, 1)": [
+     0,
+     0,
+     7023
+    ],
+    "(-5, 2)": [
+     0,
+     0,
+     7023
+    ],
+    "(-5, 3)": [
+     0,
+     0,
+     7023
+    ],
+    "(-4, 1)": [
+     0,
+     0,
+     7023
+    ],
+    "(-4, 2)": [
+     0,
+     0,
+     7023
+    ],
+    "(-4, 3)": [
+     0,
+     0,
+     7023
+    ],
+    "(-3, 1)": [
+     0,
+     0,
+     7023
+    ],
+    "(-3, 2)": [
+     0,
+     0,
+     7023
+    ],
+    "(-3, 6)": [
+     6,
+     2,
+     7015
+    ],
+    "(-2, 1)": [
+     0,
+     0,
+     7023
+    ],
+    "(-1, 5)": [
+     544,
+     6479,
+     0
+    ],
+    "(0, 2)": [
+     0,
+     0,
+     7023
+    ]
+   }
+  },
+  {
+   "label": "LOCKB",
+   "rngstate": 6149067202803567465,
+   "t": 18142,
+   "n_rt": 9,
+   "onset_germe": 65,
+   "GB_trace_ultimo": {
+    "d": 28,
+    "decise_bianche": 0,
+    "open": 9
+   },
+   "GA_lens_depth": 12,
+   "depth": 28,
+   "nodi": 2138444,
+   "troncato": false,
+   "nodi_per_depth": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 4,
+    "4": 7,
+    "5": 11,
+    "6": 17,
+    "7": 30,
+    "8": 51,
+    "9": 82,
+    "10": 131,
+    "11": 212,
+    "12": 347,
+    "13": 567,
+    "14": 895,
+    "15": 1446,
+    "16": 2374,
+    "17": 3916,
+    "18": 6210,
+    "19": 10086,
+    "20": 16594,
+    "21": 27413,
+    "22": 43589,
+    "23": 71024,
+    "24": 116987,
+    "25": 193344,
+    "26": 308574,
+    "27": 503948,
+    "28": 830581
+   },
+   "cap": {
+    "shield": 1188,
+    "white_all": 0,
+    "open": 829393
+   },
+   "touch_cap_hist": {
+    "0": 829166,
+    "1": 1387,
+    "2": 14,
+    "4": 8,
+    "3": 6
+   },
+   "cell_bits": {
+    "(-7, 1)": [
+     0,
+     0,
+     830581
+    ],
+    "(-7, 2)": [
+     14,
+     14,
+     830553
+    ],
+    "(-6, 1)": [
+     4,
+     4,
+     830573
+    ],
+    "(-6, 2)": [
+     8,
+     6,
+     830567
+    ],
+    "(-5, 1)": [
+     0,
+     0,
+     830581
+    ],
+    "(-5, 2)": [
+     0,
+     0,
+     830581
+    ],
+    "(-4, 1)": [
+     0,
+     0,
+     830581
+    ],
+    "(-4, 5)": [
+     1188,
+     227,
+     829166
+    ],
+    "(-1, 1)": [
+     0,
+     0,
+     830581
+    ]
+   }
+  }
+ ],
+ "baseline": [
+  {
+   "word": "LRLRRRRLRRRRLLLLRLRRLLLLRRLRLLLLRRRRLRRRRLRLRLRLRLLLLRRRRLRRLRLLRRLLRLLRLLRRRRLLRLRRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 199,
+   "n_rt": 59,
+   "depth": 22,
+   "nodi": 65078,
+   "troncato": false,
+   "GA_depth8": true,
+   "cap": {
+    "shield": 24985,
+    "white_all": 0,
+    "open": 146
+   },
+   "touch_cap_hist": {
+    "2": 13,
+    "5": 8076,
+    "10": 148,
+    "11": 114,
+    "8": 420,
+    "12": 84,
+    "13": 73,
+    "9": 161,
+    "6": 1874,
+    "7": 1393,
+    "4": 5983,
+    "15": 15,
+    "16": 12,
+    "14": 47,
+    "3": 6718
+   },
+   "nodi_per_depth": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 5,
+    "5": 8,
+    "6": 12,
+    "7": 18,
+    "8": 30,
+    "9": 48,
+    "10": 74,
+    "11": 118,
+    "12": 194,
+    "13": 314,
+    "14": 500,
+    "15": 814,
+    "16": 1343,
+    "17": 2183,
+    "18": 3508,
+    "19": 5753,
+    "20": 9510,
+    "21": 15508,
+    "22": 25131
+   }
+  },
+  {
+   "word": "RLLRRRRLLRLLLLRRRRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLR",
+   "onset_germe": 210,
+   "n_rt": 53,
+   "depth": 22,
+   "nodi": 154091,
+   "troncato": false,
+   "GA_depth8": true,
+   "cap": {
+    "shield": 60708,
+    "white_all": 0,
+    "open": 1
+   },
+   "touch_cap_hist": {
+    "10": 6798,
+    "9": 4694,
+    "8": 9148,
+    "11": 4305,
+    "12": 4111,
+    "13": 2128,
+    "14": 1967,
+    "15": 1149,
+    "16": 916,
+    "17": 606,
+    "18": 327,
+    "19": 139,
+    "7": 5210,
+    "21": 8,
+    "20": 32,
+    "6": 16254,
+    "5": 2917
+   },
+   "nodi_per_depth": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 4,
+    "4": 7,
+    "5": 12,
+    "6": 20,
+    "7": 33,
+    "8": 54,
+    "9": 90,
+    "10": 149,
+    "11": 246,
+    "12": 403,
+    "13": 666,
+    "14": 1110,
+    "15": 1830,
+    "16": 3002,
+    "17": 4948,
+    "18": 8218,
+    "19": 13565,
+    "20": 22291,
+    "21": 36730,
+    "22": 60709
+   }
+  },
+  {
+   "word": "RRRRLLLLRLRLRLRLLLLRRRRLRRRRLRLRLLLLRRRRLRRLLRRLLRRRRLLRRLLRRLRRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 217,
+   "n_rt": 54,
+   "depth": 22,
+   "nodi": 85489,
+   "troncato": false,
+   "GA_depth8": true,
+   "cap": {
+    "shield": 5079,
+    "white_all": 0,
+    "open": 26239
+   },
+   "touch_cap_hist": {
+    "2": 1270,
+    "1": 919,
+    "4": 929,
+    "6": 667,
+    "5": 547,
+    "0": 25213,
+    "3": 583,
+    "7": 388,
+    "9": 205,
+    "8": 359,
+    "10": 144,
+    "11": 62,
+    "12": 24,
+    "13": 8
+   },
+   "nodi_per_depth": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 2,
+    "4": 4,
+    "5": 7,
+    "6": 12,
+    "7": 20,
+    "8": 35,
+    "9": 60,
+    "10": 101,
+    "11": 169,
+    "12": 286,
+    "13": 479,
+    "14": 731,
+    "15": 1186,
+    "16": 1947,
+    "17": 3208,
+    "18": 4832,
+    "19": 7762,
+    "20": 12622,
+    "21": 20705,
+    "22": 31318
+   }
+  },
+  {
+   "word": "RLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLLLRRRRLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 221,
+   "n_rt": 56,
+   "depth": 22,
+   "nodi": 68788,
+   "troncato": false,
+   "GA_depth8": true,
+   "cap": {
+    "shield": 9805,
+    "white_all": 0,
+    "open": 16912
+   },
+   "touch_cap_hist": {
+    "0": 16023,
+    "2": 1100,
+    "3": 454,
+    "4": 1292,
+    "1": 662,
+    "5": 533,
+    "6": 1169,
+    "9": 867,
+    "10": 932,
+    "8": 1130,
+    "7": 704,
+    "12": 589,
+    "11": 636,
+    "13": 211,
+    "14": 270,
+    "15": 51,
+    "16": 94
+   },
+   "nodi_per_depth": {
+    "0": 1,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 5,
+    "5": 8,
+    "6": 12,
+    "7": 18,
+    "8": 29,
+    "9": 46,
+    "10": 72,
+    "11": 115,
+    "12": 191,
+    "13": 311,
+    "14": 503,
+    "15": 824,
+    "16": 1374,
+    "17": 2265,
+    "18": 3664,
+    "19": 6028,
+    "20": 10031,
+    "21": 16568,
+    "22": 26717
+   }
+  }
+ ],
+ "scan_danger": [
+  {
+   "word": "RRRRLLLLRLRRRRLRLLRRLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRRRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "n_rt": 4,
+   "onset_germe": 35,
+   "depth": 22,
+   "cap": 41,
+   "sigma": 0.90244,
+   "celle_irraggiungibili": 2,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLRLRRLRLLRRRRLLRRRRLLRLRLRRRRLLLLRLLLLRLLRRRRLLRRRRLLRLRRRRLRLRRRRLRRRRLLLLRLLLLRLLRLRLLRLRLRLR",
+   "n_rt": 12,
+   "onset_germe": 204,
+   "depth": 22,
+   "cap": 67102,
+   "sigma": 0.00018,
+   "celle_irraggiungibili": 8,
+   "troncato": false
+  },
+  {
+   "word": "RRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRRLLLLRRLRRLRRLLRRRRLLRRLLLLRRLLRLRRLLRRLLRRRRLLRRLLRRLRRRRLLLLRLR",
+   "n_rt": 13,
+   "onset_germe": 272,
+   "depth": 22,
+   "cap": 7740,
+   "sigma": 0.99987,
+   "celle_irraggiungibili": 0,
+   "troncato": false
+  },
+  {
+   "word": "LLLRLLLLRLLRRRRLLRRRRLLRLRRRRLRRRRLLLLRLLRRLLLLRRLLRLRRRRLRRRRLLLLRLRLLRLRRRRLLLLRLRRRRLRRLLRRLLRLRLR",
+   "n_rt": 13,
+   "onset_germe": 204,
+   "depth": 22,
+   "cap": 307,
+   "sigma": 0.18241,
+   "celle_irraggiungibili": 12,
+   "troncato": false
+  },
+  {
+   "word": "LLLLRRRRLRRLRLRLRRRRLLLLRLRRRRLRLLLLRRRRLRLRLLRRLLRLRLRRLLRLLRLLLLRLRLLLLRRRRLRRRRLRRLLRRLRLRLLLLRLRL",
+   "n_rt": 18,
+   "onset_germe": 232,
+   "depth": 22,
+   "cap": 43133,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 18,
+   "troncato": false
+  },
+  {
+   "word": "LLLLRLRRRRLRLLRRLLRRRRLLRRLLRRRRLLRRLLRLRLLRRRRLLRRRRLLRLRRLLLLRRLRLRRRRLLLLRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 19,
+   "onset_germe": 293,
+   "depth": 22,
+   "cap": 392,
+   "sigma": 0.98214,
+   "celle_irraggiungibili": 5,
+   "troncato": false
+  },
+  {
+   "word": "LLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLLLRRRRLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 19,
+   "onset_germe": 82,
+   "depth": 22,
+   "cap": 14745,
+   "sigma": 0.03594,
+   "celle_irraggiungibili": 1,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLLRLRLLRRLLLLRRLLRRRRLLRRLRLLLLRLRRLRRRRLLLLRLLLLRLLLLRRRRLRLRRRRLRRLRRRRLLLLRLLRRLRLLLLRLRLRLLR",
+   "n_rt": 20,
+   "onset_germe": 196,
+   "depth": 22,
+   "cap": 20513,
+   "sigma": 0.00049,
+   "celle_irraggiungibili": 14,
+   "troncato": false
+  },
+  {
+   "word": "LLLLRRLRRRRLRLLRRRRLLRLRLLLLRLLLLRRRRLRRLLRLLLLRRRRLRRLRLRLRLLRLLLLRLRLRLRRLLRRLRRRRLRLLRLRRRRLLLLRLR",
+   "n_rt": 21,
+   "onset_germe": 170,
+   "depth": 22,
+   "cap": 112,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 21,
+   "troncato": false
+  },
+  {
+   "word": "RRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRLLRRRRLLRRLRLRRLRRRRLLLLRLRRRRLR",
+   "n_rt": 22,
+   "onset_germe": 202,
+   "depth": 22,
+   "cap": 5159,
+   "sigma": 0.06552,
+   "celle_irraggiungibili": 12,
+   "troncato": false
+  },
+  {
+   "word": "RRLRRLRLRLRRRRLLLLRLRRRRLRLLLLRRRRLRLRLLRRLLRLRLRRLLRLLRLLLLRLRLLLLRRRRLRRRRLRRLLRRLRLRLLLLRLRLRRRRLR",
+   "n_rt": 24,
+   "onset_germe": 226,
+   "depth": 22,
+   "cap": 62338,
+   "sigma": 0.00024,
+   "celle_irraggiungibili": 23,
+   "troncato": false
+  },
+  {
+   "word": "RLLRRLRLLRLLLLRLLRLRLRLRRRRLRRRRLLLLRLLRRLLLLRRLLRLLLLRRRRLRLLLLRRRRLRRLRRRRLRLLRRLRLLRRRRLLRRRRLLRLR",
+   "n_rt": 26,
+   "onset_germe": 190,
+   "depth": 22,
+   "cap": 112002,
+   "sigma": 9e-05,
+   "celle_irraggiungibili": 23,
+   "troncato": false
+  },
+  {
+   "word": "LLLLRRRRLRRRRLRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLLRLRRLLRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 26,
+   "onset_germe": 199,
+   "depth": 22,
+   "cap": 17945,
+   "sigma": 0.99994,
+   "celle_irraggiungibili": 2,
+   "troncato": false
+  },
+  {
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRLLRRRRLLRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 27,
+   "onset_germe": 168,
+   "depth": 22,
+   "cap": 732,
+   "sigma": 0.92896,
+   "celle_irraggiungibili": 23,
+   "troncato": false
+  },
+  {
+   "word": "RRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRLRRLLLLRRLLLLRRLRLLLLRRRRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 30,
+   "onset_germe": 245,
+   "depth": 22,
+   "cap": 6557,
+   "sigma": 0.11484,
+   "celle_irraggiungibili": 16,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLLRRLLLLRRLLRLLRLRRLRRLRLLLLRLRLLRRRRLLRRRRLLRLLLLRLLLLRRRRLRRRRLRLRRRRLLLLRLR",
+   "n_rt": 30,
+   "onset_germe": 311,
+   "depth": 22,
+   "cap": 12143,
+   "sigma": 0.88479,
+   "celle_irraggiungibili": 27,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLLLLRLRRRRLRRRRLLLLRLRLLLLRRRRLRRRRLRRRRLLLLRLRLLLLRRRRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLR",
+   "n_rt": 30,
+   "onset_germe": 149,
+   "depth": 22,
+   "cap": 1617,
+   "sigma": 0.92579,
+   "celle_irraggiungibili": 0,
+   "troncato": false
+  },
+  {
+   "word": "RRRRLLLLRLRRRRLRLLLLRRRRLRLRLLRRLLRLRLRRLLRLLRLLLLRLRLLLLRRRRLRRRRLRRLLRRLRLRLLLLRLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 31,
+   "onset_germe": 216,
+   "depth": 22,
+   "cap": 36920,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 31,
+   "troncato": false
+  },
+  {
+   "word": "LRRLRLRLLLLRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRRRRLRRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 32,
+   "onset_germe": 247,
+   "depth": 22,
+   "cap": 63350,
+   "sigma": 0.52758,
+   "celle_irraggiungibili": 6,
+   "troncato": false
+  },
+  {
+   "word": "LRRLLRRLLRRLLRRLRRRRLLLLRLRRRRLRLRRRRLRRLRRLLRLLRLRRRRLRLLLLRRRRLRRRRLRRRRLLLLRLRLLLLRLLRLRRRRLLLLRLR",
+   "n_rt": 32,
+   "onset_germe": 347,
+   "depth": 22,
+   "cap": 49150,
+   "sigma": 0.0001,
+   "celle_irraggiungibili": 31,
+   "troncato": false
+  },
+  {
+   "word": "RRRLLLLRLLLLRLRRRRLRRRRLLLLRLLRRLLRLRLRRLRRLRLLRRRRLLRLRLRLRRLLLLRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLR",
+   "n_rt": 33,
+   "onset_germe": 264,
+   "depth": 22,
+   "cap": 2808,
+   "sigma": 1.0,
+   "celle_irraggiungibili": 9,
+   "troncato": false
+  },
+  {
+   "word": "RRRLLLLRLRRRRLRLLLLRRRRLRLLLLRLRLRRRRLRLLRRRRLLRRRRLLRLLRLRRRRLLLLRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRLR",
+   "n_rt": 33,
+   "onset_germe": 301,
+   "depth": 22,
+   "cap": 4,
+   "sigma": 1.0,
+   "celle_irraggiungibili": 27,
+   "troncato": false
+  },
+  {
+   "word": "RRLRLLRRLRRLLLLRRLLLLRRLRRLLRLRLRRRRLLLLRLRRRRLRRLRLLLLRLLLLRRRRLRLLRRLLRRLLRRLRRRRLRLLLLRRRRLRLLLLRL",
+   "n_rt": 33,
+   "onset_germe": 345,
+   "depth": 22,
+   "cap": 62758,
+   "sigma": 0.03101,
+   "celle_irraggiungibili": 24,
+   "troncato": false
+  },
+  {
+   "word": "RRRLRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLLRLRRLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 33,
+   "onset_germe": 189,
+   "depth": 22,
+   "cap": 14855,
+   "sigma": 0.58337,
+   "celle_irraggiungibili": 1,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLLLLRLLRRLLRLRLRRLRLLLLRLRLLRRLLLLRRLLRLRLRLRRLLLLRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLR",
+   "n_rt": 34,
+   "onset_germe": 331,
+   "depth": 22,
+   "cap": 1710,
+   "sigma": 1.0,
+   "celle_irraggiungibili": 27,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLRLRRLRRLRLRRLLLLRRLLLLRRLRLLLLRRRRLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRLR",
+   "n_rt": 34,
+   "onset_germe": 331,
+   "depth": 22,
+   "cap": 1964,
+   "sigma": 0.85998,
+   "celle_irraggiungibili": 5,
+   "troncato": false
+  },
+  {
+   "word": "LLLLRLRRRRLRRRRLLLLRLLRRLLRLRLRRLRLLLLRLRLLRRLLLLRRLLRLRLRLRRLLLLRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLR",
+   "n_rt": 34,
+   "onset_germe": 264,
+   "depth": 22,
+   "cap": 2193,
+   "sigma": 1.0,
+   "celle_irraggiungibili": 9,
+   "troncato": false
+  },
+  {
+   "word": "RRRLRRRRLLLLRLLLLRLLLLRRRRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRLLRLLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 35,
+   "onset_germe": 160,
+   "depth": 22,
+   "cap": 23336,
+   "sigma": 0.97862,
+   "celle_irraggiungibili": 3,
+   "troncato": false
+  },
+  {
+   "word": "RLLLLRRLRRLLRRLLLLRRLLRRLRRRRLLLLRLLRRLLRRLLLLRRLLRRLLRLRRLLRRLRRRRLRRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLR",
+   "n_rt": 36,
+   "onset_germe": 331,
+   "depth": 22,
+   "cap": 932,
+   "sigma": 0.01609,
+   "celle_irraggiungibili": 34,
+   "troncato": false
+  },
+  {
+   "word": "RLLLLRRLRLRLRLRRLRLRRLRRRRLLLLRLLRRRRLLRLLRRRRLLRRRRLLRLRLLRRLRRLRRRRLLLLRLRRLLRRRRLLRRLRLRRRRLLLLRLR",
+   "n_rt": 37,
+   "onset_germe": 263,
+   "depth": 22,
+   "cap": 1,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 37,
+   "troncato": false
+  },
+  {
+   "word": "RLLRLRLRRRRLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRLLRRRRLLRRLLLLRRLLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 37,
+   "onset_germe": 204,
+   "depth": 22,
+   "cap": 43768,
+   "sigma": 0.18934,
+   "celle_irraggiungibili": 4,
+   "troncato": false
+  },
+  {
+   "word": "RRLRLRRRRLLLLRLRRRRLLLLRLLRRRRLLRLLRLRLRRRRLLLLRLRRLLLLRRLLLLRRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRL",
+   "n_rt": 37,
+   "onset_germe": 332,
+   "depth": 22,
+   "cap": 80340,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 37,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRLRRRRLLLLRLLRLLLLRRRRLRLLLLRRRRLRRLRRLLRRRRLLRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 38,
+   "onset_germe": 248,
+   "depth": 22,
+   "cap": 5469,
+   "sigma": 0.13202,
+   "celle_irraggiungibili": 12,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLRRRRLLLLRLLRRLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRRRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "n_rt": 38,
+   "onset_germe": 505,
+   "depth": 22,
+   "cap": 302,
+   "sigma": 0.99669,
+   "celle_irraggiungibili": 29,
+   "troncato": false
+  },
+  {
+   "word": "LRLLRRRRLLRRRRLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLLLRRRRLRLRRLLRRLLRRRRLLRRLLRRLRRRRLLLLRLR",
+   "n_rt": 39,
+   "onset_germe": 235,
+   "depth": 22,
+   "cap": 88956,
+   "sigma": 0.04495,
+   "celle_irraggiungibili": 12,
+   "troncato": false
+  },
+  {
+   "word": "LLLRLLRRRRLLRRRRLLRLLLLRLRRLLLLRRLRLRRLLLLRRLRRLRRRRLLLLRLRLLRRLRRLRLRRRRLRRRRLLLLRLLRRLRRRRLLLLRLRLR",
+   "n_rt": 39,
+   "onset_germe": 339,
+   "depth": 22,
+   "cap": 24314,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 39,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLRRRRLLLLRLLRRRRLLRLLLLRRRRLRLRRLLRLRRLRRRRLRLRLRLRRLRRRRLLLLRLRRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRL",
+   "n_rt": 39,
+   "onset_germe": 332,
+   "depth": 22,
+   "cap": 97938,
+   "sigma": 0.01692,
+   "celle_irraggiungibili": 25,
+   "troncato": false
+  },
+  {
+   "word": "LLRLRRRRLRRRRLLLLRLLRRLLRLRLRRLRRLRLLRRRRLLRLRLRLRRLLLLRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLR",
+   "n_rt": 40,
+   "onset_germe": 254,
+   "depth": 22,
+   "cap": 1708,
+   "sigma": 0.99941,
+   "celle_irraggiungibili": 10,
+   "troncato": false
+  },
+  {
+   "word": "RLRRLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRLLLLRRRRLRRRRLRRRRLLLLRLRLLLLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 43,
+   "onset_germe": 309,
+   "depth": 22,
+   "cap": 88660,
+   "sigma": 0.29249,
+   "celle_irraggiungibili": 6,
+   "troncato": false
+  },
+  {
+   "word": "RRRRLRLRRRRLLLLRLLLLRLRLRRLRLLRRRRLLRRRRLLRLLLLRLRRLRLRRLLLLRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 43,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 32875,
+   "sigma": 0.28161,
+   "celle_irraggiungibili": 2,
+   "troncato": false
+  },
+  {
+   "word": "RLLRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRRLLRLRRRRLRLLRRLLRRRRLLRRLLRLRRLLRRRRLLRRLR",
+   "n_rt": 43,
+   "onset_germe": 533,
+   "depth": 22,
+   "cap": 56004,
+   "sigma": 0.24295,
+   "celle_irraggiungibili": 12,
+   "troncato": false
+  },
+  {
+   "word": "RRRRLLLLRLLRRLLRRRRLLRRLLRLRRRRLRRRRLLLLRLRLLRLRRRRLLLLRLLLLRLRLRRLRRLLRRRRLLRRLRRLRRRRLRRRRLLLLRLRLR",
+   "n_rt": 43,
+   "onset_germe": 343,
+   "depth": 22,
+   "cap": 41651,
+   "sigma": 0.00113,
+   "celle_irraggiungibili": 36,
+   "troncato": false
+  },
+  {
+   "word": "RLRRLRRLLRLLRLRRLLLLRRLRLLLLRLRLRLLRRLLRRRRLLRRLLRRRRLLRRLLRLLLLRLRRLRRRRLLLLRLRRLLLLRRLRRLRRRRLLLLRL",
+   "n_rt": 43,
+   "onset_germe": 571,
+   "depth": 22,
+   "cap": 96105,
+   "sigma": 0.0176,
+   "celle_irraggiungibili": 24,
+   "troncato": false
+  },
+  {
+   "word": "RRRLLLLRLRRRRLLLLRLLRRRRLLRLLRLRLRRRRLLLLRLRRLLLLRRLLLLRRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 43,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 26694,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 43,
+   "troncato": false
+  },
+  {
+   "word": "LLLRLRRRRLRLLRRLLRRRRLLRRLLRRRRLLRRLLRLRRRRLLLLRLRRLLRRLLRRLLRRLLRRLRRRRLLLLRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 43,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 2202,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 43,
+   "troncato": false
+  },
+  {
+   "word": "RRRLRRRRLLLLRLRLLLLRRRRLRLRRRRLRRRRLLLLRLRRRRLRLRLRRLLLLRRLRLLLLRRRRLRLRLRRRRLLLLRLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 44,
+   "onset_germe": 316,
+   "depth": 22,
+   "cap": 9127,
+   "sigma": 0.23206,
+   "celle_irraggiungibili": 11,
+   "troncato": false
+  },
+  {
+   "word": "RLRLRRLRRRRLRLRLRRLRLLRLRLRRRRLLLLRLRRLRLRRRRLRLRLLRLRRLRRLRRLRLLRLRLRRRRLRRRRLLLLRLRLLLLRRRRLRRLLRLR",
+   "n_rt": 44,
+   "onset_germe": 409,
+   "depth": 22,
+   "cap": 126335,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 44,
+   "troncato": false
+  },
+  {
+   "word": "RLLRLRLLRLLLLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRLRRRRLRLLRRLLRLRLRRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 45,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 44908,
+   "sigma": 0.00561,
+   "celle_irraggiungibili": 29,
+   "troncato": false
+  },
+  {
+   "word": "RLLRLRLLRLLRLLLLRRRRLRRRRLRLRLRRLRLRRLRRLRRLRLRLLLLRLLLLRRRRLRRLLRLLRRRRLLRRRRLLRLLLLRLLRLRLRLRLLLLRL",
+   "n_rt": 45,
+   "onset_germe": 401,
+   "depth": 22,
+   "cap": 31326,
+   "sigma": 0.03144,
+   "celle_irraggiungibili": 31,
+   "troncato": false
+  },
+  {
+   "word": "LRLRRLLLLRRLRRRRLLLLRLRRRRLRLLRLRLRLRLLRLLRRLRRRRLRRLRRLLRRLLRRRRLLRRLLRRLLLLRRLLRRLLRLRRLLRRRRLLRRLR",
+   "n_rt": 45,
+   "onset_germe": 221,
+   "depth": 22,
+   "cap": 31856,
+   "sigma": 0.99997,
+   "celle_irraggiungibili": 7,
+   "troncato": false
+  },
+  {
+   "word": "RRLLRRRRLLRRLLRRRRLLRRLLRLRRRRLLLLRLLRLLLLRRRRLRRRRLRLLRRLRRLLRLRLRRRRLLLLRLLRRLRRRRLLLLRLRLLRRLLRRLR",
+   "n_rt": 45,
+   "onset_germe": 340,
+   "depth": 22,
+   "cap": 6527,
+   "sigma": 0.00613,
+   "celle_irraggiungibili": 39,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLLLLRLLRRRRLLRLLLLRRRRLRLRRLLRLRRLRRRRLRLRLRLRRLRRRRLLLLRLRRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 45,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 55668,
+   "sigma": 0.10261,
+   "celle_irraggiungibili": 23,
+   "troncato": false
+  },
+  {
+   "word": "RLLRRRRLLRRRRLLRLRRRRLRRRRLLLLRLRRRRLLLLRLLLLRLRRLRRLRRRRLLLLRLRLRLLLLRLLRLRRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 45,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 12776,
+   "sigma": 0.20758,
+   "celle_irraggiungibili": 10,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLLRLLLLRRRRLRRRRLRLLLLRLRLRRLLLLRRLLLLRRLRLRRRRLLLLRLRLRRRRLRRRRLLLLRLRLLLLRLLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 45,
+   "onset_germe": 338,
+   "depth": 22,
+   "cap": 19083,
+   "sigma": 0.00498,
+   "celle_irraggiungibili": 42,
+   "troncato": false
+  },
+  {
+   "word": "LRRRRLRLLRLRRRRLRLLRLRLLRRLRRLLRRLLLLRRLLRRLLLLRRLLRRLRRLRLLLLRRRRLRLLLLRLRRLRRLLRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 45,
+   "onset_germe": 326,
+   "depth": 22,
+   "cap": 2710,
+   "sigma": 0.00148,
+   "celle_irraggiungibili": 43,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLLLLRLLRRRRLLRLLLLRRRRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLRLLRRRRLLRLRRLLRRRRLLRRLR",
+   "n_rt": 46,
+   "onset_germe": 220,
+   "depth": 22,
+   "cap": 100186,
+   "sigma": 0.99999,
+   "celle_irraggiungibili": 7,
+   "troncato": false
+  },
+  {
+   "word": "LLLRLLRRRRLLRRRRLLRLRRLLLLRRLLLLRRLRLLRRLRRRRLRLRRRRLLLLRLLLLRLRRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 47,
+   "onset_germe": 334,
+   "depth": 22,
+   "cap": 25581,
+   "sigma": 0.00668,
+   "celle_irraggiungibili": 39,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLRRRRLLLLRLLLLRLRRRRLRLLLLRRRRLRRRRLRRRRLLLLRLRRLLRRLLLLRRLLRRLRRRRLLLLRLRRRRLLLLRLRLRRRRLLLLRL",
+   "n_rt": 47,
+   "onset_germe": 809,
+   "depth": 22,
+   "cap": 26513,
+   "sigma": 0.99996,
+   "celle_irraggiungibili": 13,
+   "troncato": false
+  },
+  {
+   "word": "RRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRRLLRLRRRRLRLLRRRRLLRLLRRRRLLRRRRLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "n_rt": 48,
+   "onset_germe": 485,
+   "depth": 22,
+   "cap": 37,
+   "sigma": 0.32432,
+   "celle_irraggiungibili": 42,
+   "troncato": false
+  },
+  {
+   "word": "RLRRLRRLRLRLLLLRRRRLRRLLRLRLRLLLLRLRLRRRRLRLRLRRRRLLLLRLRRRRLLLLRLLLLRLLRLLRRRRLLRLRLRRRRLLLLRLRRRRLR",
+   "n_rt": 48,
+   "onset_germe": 434,
+   "depth": 22,
+   "cap": 46465,
+   "sigma": 0.01681,
+   "celle_irraggiungibili": 42,
+   "troncato": false
+  },
+  {
+   "word": "RLLLLRRRRLRLLLLRRRRLRRRRLRLLRLRLLRLLLLRLRRLLLLRRLRLLLLRLRRLLLLRRLLLLRRLRRRRLRRRRLLLLRLLLLRLRRLLLLRRLR",
+   "n_rt": 48,
+   "onset_germe": 479,
+   "depth": 22,
+   "cap": 1,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 48,
+   "troncato": false
+  },
+  {
+   "word": "RLLLLRLLLLRLRLRRLRLLRRRRLLRRRRLLRLLLLRLRRLRLRRLLLLRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 50,
+   "onset_germe": 316,
+   "depth": 22,
+   "cap": 2480,
+   "sigma": 0.19556,
+   "celle_irraggiungibili": 22,
+   "troncato": false
+  },
+  {
+   "word": "RLLRRLLRRRRLLRRLLRRRRLLRRLLRLRRRRLLLLRLRRLLRRLLRRLLRRLLRRLRRRRLLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 50,
+   "onset_germe": 316,
+   "depth": 22,
+   "cap": 31008,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 50,
+   "troncato": false
+  },
+  {
+   "word": "RLRRRRLLLLRLRRRRLRLLRLRLRLRLLRLLRRLRRRRLRRLRRLLRRLLRRRRLLRRLLRRLLLLRRLLRRLLRLRRLLRRRRLLRRLRRRRLLLLRLR",
+   "n_rt": 50,
+   "onset_germe": 211,
+   "depth": 22,
+   "cap": 8529,
+   "sigma": 0.99906,
+   "celle_irraggiungibili": 5,
+   "troncato": false
+  },
+  {
+   "word": "RRRLLLLRLLRRRRLLRLLRLRLRRRRLLLLRLRRLLLLRRLLLLRRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 50,
+   "onset_germe": 316,
+   "depth": 22,
+   "cap": 26007,
+   "sigma": 0.0,
+   "celle_irraggiungibili": 50,
+   "troncato": false
+  },
+  {
+   "word": "LRLRRLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "n_rt": 50,
+   "onset_germe": 316,
+   "depth": 22,
+   "cap": 93805,
+   "sigma": 4e-05,
+   "celle_irraggiungibili": 48,
+   "troncato": false
+  }
+ ],
+ "elapsed_s": 27.4
+}
