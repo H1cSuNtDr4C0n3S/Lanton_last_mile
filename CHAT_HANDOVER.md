@@ -1,3 +1,24 @@
+# ============ §103 — FRESH-PHASE: spettro delle porte a n=2500, approccio strutturato (picco-5/buco-3), micro-porte ============
+
+**Cosa e' successo a §103 (in una riga):** censimento preregistrato delle fasi
+d'onset su 2500 semi freschi catena-3 (gate 24/24 bit-identici a §102, verdetto dal
+tool): **porta-0 = 95,4%** (47,3% esatta + 48,1% ext 1-7), **porta-24/25 = 4,1%**,
+**12 fuori-cluster (0,48%)** su fasi {16, 30-31, 91-92} = micro-porte (falsificatore
+realizzato: lo zero-fuori-cluster §102 era artefatto di n=24 — trappola qq anche
+sulle FASI); e l'istogramma delle estensioni UCCIDE il modello a moneta di §102:
+**picco a ext=5 (487 vs ~78 attesi) e BUCO a ext=3 (1 vs ~156)** — l'approccio alla
+porta-0 e' STRUTTURATO (in ~1/5 degli ingressi le ultime 5 svolte pre-onset sono
+gia' W0-fase-99; coincidenza di esattamente 3 quasi vietata): la porta dominante e'
+un oggetto con firma d'approccio canonica, non un punto. **Prossimo §104:** anatomia
+del picco-5/buco-3 vs checklist E(k) §61 / 22 porte §66; germi delle micro-porte
+(solo preregistrato); evento "porta-0-completante" word-free ai record con firma
+d'approccio = osservabile d'occorrenza di Link 1. Ereditati: §101g, §102f, rientri
+§98g.2, scia-teorema §98g.3, separatori §97, fuggenti vs nere-D>=400, retro-nota
+§91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/FRESH_PHASE_ADDENDUM.md. File: alpha1/fresh_onset_phase_census.py.
+
+# ================================================================================================
+
 # ============ §102 — FASCIA = PORTA-0: la fase d'ingresso e' l'invariante; le porte reali sono DUE ============
 
 **Cosa e' successo a §102 (in una riga):** la fascia word-mediated (14 parole §100 +

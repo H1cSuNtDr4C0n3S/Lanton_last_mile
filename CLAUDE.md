@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§103**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§104**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -254,7 +254,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -797,5 +797,13 @@ porta-0, decisa dal kernel A1 §78. Strumento: alpha1/fascia_door_probe.py (gate
 24/24, fase univoca, esca beccata). Prossimo §103: fasi su ~10k semi freschi;
 mappatura ↔ 22 porte §66 / fase-0 §74; evento "porta-0-completante" word-free e
 tasso per-epoca ai record. docs/FASCIA_DOOR_ADDENDUM.md.
+**AGGIORNAMENTO §103 (FRESH-PHASE):** 2500 semi freschi (preregistrato, verdetto dal
+tool, gate 24/24): porta-0 95,4% (47,3% esatta + 48,1% ext), porta-24/25 4,1%,
+12 fuori-cluster su fasi {16,30-31,91-92} = micro-porte (qq vale anche per le FASI);
+istogramma ext uccide il modello a moneta §102: **picco a ext=5 (487 vs ~78) e buco
+a ext=3 (1 vs ~156)** — l'approccio alla porta-0 e' strutturato (firma canonica di
+~5 passi in fase 99, "3" quasi vietato). Prossimo §104: anatomia picco-5/buco-3 vs
+E(k) §61 / 22 porte §66; micro-porte preregistrate; evento porta-0-completante ai
+record = osservabile d'occorrenza di Link 1. docs/FRESH_PHASE_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

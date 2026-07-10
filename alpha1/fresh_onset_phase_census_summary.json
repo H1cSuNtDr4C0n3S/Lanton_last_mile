@@ -1,0 +1,104 @@
+{
+ "preregistrazione": {
+  "falsificatore": "onset fresco con fase fuori {0}U{97..103}U{24,25}",
+  "potenza": ">=1000 onset",
+  "aspettativa": "APERTA (dichiarata)"
+ },
+ "n_seeds": 2500,
+ "onset_censiti": 2499,
+ "skip": 1,
+ "no_onset": 0,
+ "porta_0_esatta": 1182,
+ "ext_97_103": 1203,
+ "porta_24_25": 102,
+ "fuori_cluster": [
+  {
+   "rngstate": 6665880226421066192,
+   "onset": 6515,
+   "fase": 31
+  },
+  {
+   "rngstate": 5164048082301594332,
+   "onset": 15051,
+   "fase": 91
+  },
+  {
+   "rngstate": 7556736162860550551,
+   "onset": 9582,
+   "fase": 16
+  },
+  {
+   "rngstate": 3307920209510817926,
+   "onset": 3965,
+   "fase": 31
+  },
+  {
+   "rngstate": 9676286472748145317,
+   "onset": 816,
+   "fase": 16
+  },
+  {
+   "rngstate": 17310785090814949094,
+   "onset": 1268,
+   "fase": 30
+  },
+  {
+   "rngstate": 15974036490731822499,
+   "onset": 3244,
+   "fase": 92
+  },
+  {
+   "rngstate": 13777976759428324246,
+   "onset": 4187,
+   "fase": 31
+  },
+  {
+   "rngstate": 8815261210067729083,
+   "onset": 10695,
+   "fase": 16
+  },
+  {
+   "rngstate": 13037961095194762798,
+   "onset": 3224,
+   "fase": 91
+  },
+  {
+   "rngstate": 12403942220549124829,
+   "onset": 13681,
+   "fase": 31
+  },
+  {
+   "rngstate": 2617519478896607374,
+   "onset": 1328,
+   "fase": 31
+  }
+ ],
+ "hist_fasi": {
+  "0": 1182,
+  "16": 3,
+  "24": 55,
+  "25": 47,
+  "30": 1,
+  "31": 5,
+  "91": 2,
+  "92": 1,
+  "97": 40,
+  "98": 32,
+  "99": 487,
+  "100": 175,
+  "101": 1,
+  "102": 188,
+  "103": 280
+ },
+ "ext_hist_1_7": {
+  "7": 40,
+  "6": 32,
+  "5": 487,
+  "4": 175,
+  "3": 1,
+  "2": 188,
+  "1": 280
+ },
+ "VERDETTO_PREREGISTRATO": "F REALIZZATO: 12 onset fuori-cluster (fasi [16, 30, 31, 91, 92]) \u2014 i cluster \u00a7102 erano quantili",
+ "elapsed_s": 6.0
+}
