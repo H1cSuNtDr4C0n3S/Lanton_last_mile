@@ -1,3 +1,45 @@
+# ============ §101 — RECORD-DIVERGENCE: DICOTOMIA DEL RECORD, primi LOCK ai record, fascia = porta ============
+
+**Cosa e' successo a §101 (in una riga):** la profondita' di divergenza d(t) del
+rigioco del germe (mai censita) trasforma ogni record y-min in un tentativo di porta
+misurabile. (1) **DICOTOMIA DEL RECORD** (deduttiva, Lemmi 0-5': co-evoluzione fino
+alla prima divergenza, d >= min_cheb, consumo della colpevole, lock del ride,
+Replay-Lock alla daga): a ogni record profondo vale una fra (T) rigetto nel
+transiente, (R) **lock W0-like di ride = d − onset_germe passi**, (E) ingresso;
+Link 1 ⟸ "(R)/(E) infinite volte ai record" (riduzione UNIDIREZIONALE dichiarata).
+(2) Censimento canonico (`record_divergence_census.py`, 18 s, gate §89a/§89b/§98
+tutti riprodotti, tripwire T-DIV due-derivazioni 1639/1639): **T su 1639/1639**
+(d med 17 = 0,6% del transiente; colpevole piu' vicina cheb med 3 max 8; min_ep†
+med 2 max 5 su 813 profondi-alla-daga — chiuso il flag §100; G† med 142 zeri 0;
+onset_germe med 2800; drift-giu' 891/1639). (3) Caccia preregistrata catena-3
+(8000 semi, 82.243 record, verdetto DAL TOOL, gate canonici bit-identici):
+**F1 morto** (min_cheb<=8 era quantile: 112 falsificatori, max 19 — quarta soglia
+morta, trappola qq), **F2 REALIZZATO: primi 2 EPISODI di lock W0-like ai record**
+(ride 269 e 384 passi = 2,6/3,7 periodi; 3 record, il 2° dentro il ride del 1°),
+**P3 falsificata** (F1 = per lo piu' rigetti shallow su record misti), **V†: 0
+violazioni su 82.243** (578 G†=0 tutti ingressi-in-corso: il Replay-Lock alla
+V-daga e' perfetto a scala 82k). (4) **SALDATURA fascia = porta:** le parole dei 2
+episodi-lock sono LA STESSA parola 101-bit (semi diversi; il record interno = suo
+shift-10) e stanno nei **14 testimoni della fascia §100**: "record ad alto min_ep
+= tentativi di porta falliti" ha il testimone positivo su catena disgiunta.
+Struttura nuova per drift: il ride muore solo risalendo nel visitato (divergenze
+lock a y_rel 16-19) ⇒ ai record con germe drift-giu' l'eterna ha la colpevole
+FORZATA nel transiente. Pannello in sessione: lente A indipendente (footprint
+dalla griglia reale) 40/40 + 11/11 su F1/F2; lente B esche 3/3 beccate +
+terra-check Lemma 0 (E4-v1 incapace di scattare: riconosciuta, istanza di (cc),
+sostituita); lente logica: Lemma 5' indebolito alla forma corretta, episodi
+contati, P3 a verbale. **Prossimo §102:** occorrenza della fascia (enumerare le
+parole veloci realizzabili record-compatibili; tasso per orbita/epoca; legame
+A1 §78); costo del transiente sporco per parole drift-giu' (attacco alla-Muro
+per-parola); crescita del massimo di min_cheb solo preregistrata. Ereditati:
+rientri §98g.2, scia-teorema §98g.3, separatori §97, fuggenti vs nere-D>=400,
+retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/RECORD_DIVERGENCE_ADDENDUM.md. File: alpha1/record_divergence_census.py,
+record_divergence_hunt.py, record_divergence_lens.py, record_divergence_esche.py,
+record_lock_autopsy.py (+ json/csv/log).
+
+# ================================================================================================
+
 # ============ §100 — CODA DOPPIA REALIZZATA, GUARIGIONE V†, FASCIA WORD-MEDIATED ============
 
 **Cosa e' successo a §100 (in una riga):** terza morte preregistrata in tre sessioni.

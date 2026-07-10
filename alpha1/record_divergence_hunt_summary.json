@@ -1,0 +1,6217 @@
+{
+ "preregistrazione": {
+  "catena": 3,
+  "base3": 10075261518452958373,
+  "n_seeds": 8000,
+  "F1": "record G_dagger>=1 con min_cheb_dagger > 8 (aspettativa: morte)",
+  "F2": "record classe R con ride >= P (aspettativa: raro ma >0)",
+  "P3": "ogni F1 ha classe R oppure min_ep_dagger >= 4",
+  "potenza": ">= 5000 record con G_dagger >= 1"
+ },
+ "n_seeds": 8000,
+ "no_onset": 0,
+ "empty_seed": 1,
+ "orbite_ok": 7999,
+ "records": 82243,
+ "classi": {
+  "T": 81637,
+  "R": 28,
+  "E": 578
+ },
+ "records_con_G": 81665,
+ "g0_fisiologici": 578,
+ "VDAGGER_VIOLAZIONI": [],
+ "d": {
+  "med": 15,
+  "max": 2711
+ },
+ "min_cheb": {
+  "med": 3,
+  "max": 19,
+  "hist": {
+   "1": 2889,
+   "2": 36254,
+   "3": 21662,
+   "4": 10109,
+   "5": 7233,
+   "6": 2534,
+   "7": 741,
+   "8": 131,
+   "9": 57,
+   "10": 32,
+   "11": 15,
+   "12": 1,
+   "14": 1,
+   "15": 1,
+   "16": 2,
+   "17": 1,
+   "18": 1,
+   "19": 1
+  }
+ },
+ "min_ep_dagger": {
+  "med": 2,
+  "max": 7,
+  "hist": {
+   "1": 3223,
+   "2": 2518,
+   "3": 1520,
+   "4": 340,
+   "5": 53,
+   "6": 13,
+   "7": 2
+  }
+ },
+ "ride": {
+  "n": 28,
+  "max": 384
+ },
+ "F1": [
+  {
+   "rngstate": 11248845374431206289,
+   "t": 910,
+   "t_on": 1365,
+   "pose": [
+    3,
+    -7
+   ],
+   "onset_germe": 186,
+   "burden": 26,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 133,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLLRLRRRRLRRRRLLLLRLRRRRLRLRLLRLRRRRLRRLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRLRRLLRRRRLLRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      6
+     ],
+     "fr": 133,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      7
+     ],
+     "fr": 134,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      8
+     ],
+     "fr": 145,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 15760909344159068364,
+   "t": 322,
+   "t_on": 942,
+   "pose": [
+    5,
+    -11
+   ],
+   "onset_germe": 168,
+   "burden": 33,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 54,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLLLLRLLRRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 54,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 5868108753546934875,
+   "t": 238,
+   "t_on": 610,
+   "pose": [
+    7,
+    -9
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 46,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 46,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 12188141038527321072,
+   "t": 210,
+   "t_on": 490,
+   "pose": [
+    5,
+    -9
+   ],
+   "onset_germe": 260,
+   "burden": 70,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 55,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLLLLRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      9
+     ],
+     "fr": 55,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 7869394645889838083,
+   "t": 864,
+   "t_on": 1708,
+   "pose": [
+    -8,
+    -8
+   ],
+   "onset_germe": 183,
+   "burden": 48,
+   "G_dagger": 2,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 50,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 272,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 2017585820240294871,
+   "t": 834,
+   "t_on": 934,
+   "pose": [
+    13,
+    -11
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 3,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 9983030282782213107,
+   "t": 1642,
+   "t_on": 7288,
+   "pose": [
+    -7,
+    -13
+   ],
+   "onset_germe": 679,
+   "burden": 96,
+   "G_dagger": 6,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 75,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLLRLRLRRLLLLRRLRLLRLLRLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRLLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 75,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 416,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 417,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 406,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 401,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      13
+     ],
+     "fr": 402,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 10734879399573176564,
+   "t": 288,
+   "t_on": 368,
+   "pose": [
+    4,
+    -8
+   ],
+   "onset_germe": 88,
+   "burden": 30,
+   "G_dagger": 2,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 38,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLRLLRRRRLLRLRRRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 38,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 39,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 10489906841736381662,
+   "t": 240,
+   "t_on": 3706,
+   "pose": [
+    10,
+    -14
+   ],
+   "onset_germe": 444,
+   "burden": 128,
+   "G_dagger": 30,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 160,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLRRRRLLRLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRLRRRRLRRLLRRRRLLRRLLLLRRLLRLRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -4,
+      9
+     ],
+     "fr": 391,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -4,
+      10
+     ],
+     "fr": 380,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -6,
+      10
+     ],
+     "fr": 396,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 202,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 370,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      12
+     ],
+     "fr": 308,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 437178110857864666,
+   "t": 11840,
+   "t_on": 17850,
+   "pose": [
+    -26,
+    -26
+   ],
+   "onset_germe": 434,
+   "burden": 120,
+   "G_dagger": 225,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 234,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLLRRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      4,
+      9
+     ],
+     "fr": 259,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      5,
+      9
+     ],
+     "fr": 270,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      2,
+      10
+     ],
+     "fr": 244,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 245,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 253,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      4,
+      10
+     ],
+     "fr": 260,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 437178110857864666,
+   "t": 11938,
+   "t_on": 17850,
+   "pose": [
+    -23,
+    -27
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 225,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 136,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      10
+     ],
+     "fr": 172,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 146,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 147,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 155,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      1,
+      11
+     ],
+     "fr": 162,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 9234501963637618881,
+   "t": 2880,
+   "t_on": 17887,
+   "pose": [
+    -16,
+    -20
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 86,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 161,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 411,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      12
+     ],
+     "fr": 396,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      2,
+      13
+     ],
+     "fr": 391,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      2,
+      14
+     ],
+     "fr": 392,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 3685758512887682778,
+   "t": 2904,
+   "t_on": 15410,
+   "pose": [
+    -10,
+    -18
+   ],
+   "onset_germe": 522,
+   "burden": 126,
+   "G_dagger": 119,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 322,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRRLLRLRRRRLRLLRRRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 346,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      9
+     ],
+     "fr": 347,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 358,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 333,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 341,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -4,
+      10
+     ],
+     "fr": 516,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 723674348915527838,
+   "t": 2954,
+   "t_on": 17475,
+   "pose": [
+    -17,
+    -15
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 61,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 161,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 411,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      5,
+      12
+     ],
+     "fr": 529,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      2,
+      13
+     ],
+     "fr": 391,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      4,
+      13
+     ],
+     "fr": 515,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 2540372775647900547,
+   "t": 2684,
+   "t_on": 4730,
+   "pose": [
+    10,
+    -14
+   ],
+   "onset_germe": 444,
+   "burden": 3,
+   "G_dagger": 1,
+   "min_cheb": 11,
+   "min_ep_dagger": 1,
+   "d": 110,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLRRRRLLLLRLRRRRLRLLRRRRLLRRRRLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -11,
+      1
+     ],
+     "fr": 110,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 2540372775647900547,
+   "t": 2700,
+   "t_on": 4730,
+   "pose": [
+    8,
+    -16
+   ],
+   "onset_germe": 520,
+   "burden": 52,
+   "G_dagger": 10,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 94,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRLLRRRRLLRRRRLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 94,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      9
+     ],
+     "fr": 242,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      5
+     ],
+     "fr": 258,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      4
+     ],
+     "fr": 180,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      9
+     ],
+     "fr": 235,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      10
+     ],
+     "fr": 236,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 11749883469494547049,
+   "t": 1188,
+   "t_on": 11653,
+   "pose": [
+    10,
+    -14
+   ],
+   "onset_germe": 832,
+   "burden": 182,
+   "G_dagger": 78,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 87,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLLRRLRRRRLRRRRLLLLRLRLRRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRRLLLLRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 87,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 134,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 133,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 139,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 327,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -5,
+      11
+     ],
+     "fr": 346,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 10228895985815315479,
+   "t": 3222,
+   "t_on": 8375,
+   "pose": [
+    -21,
+    -15
+   ],
+   "onset_germe": 263,
+   "burden": 87,
+   "G_dagger": 8,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 53,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLRRRRLRRLLRRRRLLRRLRLLLLRLLRRRRLLRRRRLLRLRRLRRLLRRLLLLRRLLRRLLLLRRLLRRLRLLLLRRRRLRRRRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 53,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 61,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      5,
+      10
+     ],
+     "fr": 77,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      6,
+      10
+     ],
+     "fr": 88,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 62,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 63,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 6041602254637456018,
+   "t": 208,
+   "t_on": 390,
+   "pose": [
+    6,
+    -8
+   ],
+   "onset_germe": 174,
+   "burden": 31,
+   "G_dagger": 1,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 77,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 77,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 6041602254637456018,
+   "t": 218,
+   "t_on": 390,
+   "pose": [
+    5,
+    -9
+   ],
+   "onset_germe": 156,
+   "burden": 40,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 63,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      2,
+      9
+     ],
+     "fr": 63,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 17956540652483144094,
+   "t": 174,
+   "t_on": 378,
+   "pose": [
+    3,
+    -5
+   ],
+   "onset_germe": 260,
+   "burden": 60,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 154,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 154,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 168,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 169,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 17956540652483144094,
+   "t": 270,
+   "t_on": 378,
+   "pose": [
+    5,
+    -7
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 46,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 46,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 8350219564572931052,
+   "t": 3694,
+   "t_on": 8336,
+   "pose": [
+    7,
+    -21
+   ],
+   "onset_germe": 392,
+   "burden": 3,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": 1,
+   "d": 90,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLRRRRLLLLRLRRRRLRRRRLLLLRLRRLLLLRRLRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      1
+     ],
+     "fr": 90,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 11387920701833661399,
+   "t": 3048,
+   "t_on": 4778,
+   "pose": [
+    -10,
+    -12
+   ],
+   "onset_germe": 171,
+   "burden": 50,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLLRRLLLLRRLLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 50,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 260,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 242,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 10731501019909519723,
+   "t": 3898,
+   "t_on": 11850,
+   "pose": [
+    3,
+    -15
+   ],
+   "onset_germe": 436,
+   "burden": 17,
+   "G_dagger": 8,
+   "min_cheb": 9,
+   "min_ep_dagger": 1,
+   "d": 90,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLRRRRLLLLRLRRRRLLLLRLLRLLRLRRRRLRRRRLLLLRLRLRRLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      1
+     ],
+     "fr": 90,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      5
+     ],
+     "fr": 202,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      1
+     ],
+     "fr": 91,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      4
+     ],
+     "fr": 192,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      5
+     ],
+     "fr": 203,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      1
+     ],
+     "fr": 178,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 8242276691653054606,
+   "t": 2324,
+   "t_on": 5465,
+   "pose": [
+    -4,
+    -24
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 88,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 156,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      11
+     ],
+     "fr": 162,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 406,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 411,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      0,
+      12
+     ],
+     "fr": 156,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      1,
+      12
+     ],
+     "fr": 381,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 14389907121277011201,
+   "t": 240,
+   "t_on": 344,
+   "pose": [
+    8,
+    -10
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 46,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 46,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 11748705785846213610,
+   "t": 1328,
+   "t_on": 8760,
+   "pose": [
+    6,
+    -12
+   ],
+   "onset_germe": 592,
+   "burden": 15,
+   "G_dagger": 6,
+   "min_cheb": 15,
+   "min_ep_dagger": null,
+   "d": 150,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -15,
+      1
+     ],
+     "fr": 150,
+     "cheb": 15
+    },
+    {
+     "cella": [
+      -15,
+      3
+     ],
+     "fr": 266,
+     "cheb": 15
+    },
+    {
+     "cella": [
+      -16,
+      2
+     ],
+     "fr": 236,
+     "cheb": 16
+    },
+    {
+     "cella": [
+      -16,
+      3
+     ],
+     "fr": 251,
+     "cheb": 16
+    },
+    {
+     "cella": [
+      -17,
+      3
+     ],
+     "fr": 246,
+     "cheb": 17
+    },
+    {
+     "cella": [
+      -17,
+      4
+     ],
+     "fr": 253,
+     "cheb": 17
+    }
+   ]
+  },
+  {
+   "rngstate": 11748705785846213610,
+   "t": 1334,
+   "t_on": 8760,
+   "pose": [
+    5,
+    -13
+   ],
+   "onset_germe": 586,
+   "burden": 29,
+   "G_dagger": 6,
+   "min_cheb": 14,
+   "min_ep_dagger": null,
+   "d": 144,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRRLLRRLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -14,
+      2
+     ],
+     "fr": 144,
+     "cheb": 14
+    },
+    {
+     "cella": [
+      -14,
+      4
+     ],
+     "fr": 260,
+     "cheb": 14
+    },
+    {
+     "cella": [
+      -15,
+      3
+     ],
+     "fr": 230,
+     "cheb": 15
+    },
+    {
+     "cella": [
+      -15,
+      4
+     ],
+     "fr": 245,
+     "cheb": 15
+    },
+    {
+     "cella": [
+      -16,
+      4
+     ],
+     "fr": 240,
+     "cheb": 16
+    },
+    {
+     "cella": [
+      -16,
+      5
+     ],
+     "fr": 247,
+     "cheb": 16
+    }
+   ]
+  },
+  {
+   "rngstate": 17949818155131746403,
+   "t": 298,
+   "t_on": 408,
+   "pose": [
+    7,
+    -9
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 3,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 60,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 74,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 17949818155131746403,
+   "t": 308,
+   "t_on": 408,
+   "pose": [
+    6,
+    -10
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 3,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 7384427959496819204,
+   "t": 398,
+   "t_on": 33772,
+   "pose": [
+    -9,
+    -9
+   ],
+   "onset_germe": 454,
+   "burden": 122,
+   "G_dagger": 33,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 278,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLLRLLRRLRRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      3,
+      9
+     ],
+     "fr": 278,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      5,
+      9
+     ],
+     "fr": 290,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      6,
+      9
+     ],
+     "fr": 543,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      6,
+      10
+     ],
+     "fr": 524,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      5,
+      11
+     ],
+     "fr": 514,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      5,
+      12
+     ],
+     "fr": 509,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 16565739502340086298,
+   "t": 21278,
+   "t_on": 25807,
+   "pose": [
+    -23,
+    -27
+   ],
+   "onset_germe": 476,
+   "burden": 25,
+   "G_dagger": 14,
+   "min_cheb": 9,
+   "min_ep_dagger": 1,
+   "d": 90,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRLRRLRRLLRRLRLRLRRRRLLLLRLLRRRRLLRLRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      1
+     ],
+     "fr": 90,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      8
+     ],
+     "fr": 221,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 246,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      2
+     ],
+     "fr": 176,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      3
+     ],
+     "fr": 191,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      8
+     ],
+     "fr": 212,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 15072806692602269252,
+   "t": 540,
+   "t_on": 650,
+   "pose": [
+    8,
+    -10
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 4,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 60,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -4,
+      10
+     ],
+     "fr": 76,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 74,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 15072806692602269252,
+   "t": 550,
+   "t_on": 650,
+   "pose": [
+    7,
+    -11
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 4,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 66,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 16945646509978679867,
+   "t": 714,
+   "t_on": 1495,
+   "pose": [
+    -5,
+    -15
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 24,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 155,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 160,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      10
+     ],
+     "fr": 172,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 155,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 406,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      4,
+      11
+     ],
+     "fr": 407,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      0,
+      12
+     ],
+     "fr": 156,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 5380180007585439808,
+   "t": 226,
+   "t_on": 342,
+   "pose": [
+    3,
+    -9
+   ],
+   "onset_germe": 280,
+   "burden": 71,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 54,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRLRRRRLRRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLLLLRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 54,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 10765751786334855593,
+   "t": 6696,
+   "t_on": 16577,
+   "pose": [
+    10,
+    -26
+   ],
+   "onset_germe": 55,
+   "burden": 36,
+   "G_dagger": 88,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 101,
+   "classe": "R",
+   "ride": 46,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -7,
+      9
+     ],
+     "fr": 186,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -6,
+      9
+     ],
+     "fr": 191,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -5,
+      10
+     ],
+     "fr": 101,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -8,
+      10
+     ],
+     "fr": 276,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -7,
+      11
+     ],
+     "fr": 206,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -10,
+      11
+     ],
+     "fr": 291,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 13268311759863684701,
+   "t": 10004,
+   "t_on": 10104,
+   "pose": [
+    28,
+    -26
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 2,
+   "min_cheb": 11,
+   "min_ep_dagger": 1,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 7811625553167202685,
+   "t": 218,
+   "t_on": 7405,
+   "pose": [
+    -1,
+    -9
+   ],
+   "onset_germe": 288,
+   "burden": 88,
+   "G_dagger": 19,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 63,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRRRRLLRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRRRRLRRLRLRLRRRRLRRRRLLLLRLRRRRLRLLRLRLLRLLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 69,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 80,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 63,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 162,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 163,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 167,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 12987667643926358047,
+   "t": 2258,
+   "t_on": 2966,
+   "pose": [
+    15,
+    -15
+   ],
+   "onset_germe": 208,
+   "burden": 44,
+   "G_dagger": 2,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 67,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLRRRRLLLLRLRRRRLRRLRRRRLRLLRLLRRRRLLRLRRRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 67,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 81,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 10420971098467386237,
+   "t": 310,
+   "t_on": 420,
+   "pose": [
+    7,
+    -7
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 3,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 60,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 74,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 10420971098467386237,
+   "t": 320,
+   "t_on": 420,
+   "pose": [
+    6,
+    -8
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 3,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 14269664134677984074,
+   "t": 194,
+   "t_on": 10556,
+   "pose": [
+    -11,
+    -15
+   ],
+   "onset_germe": 171,
+   "burden": 50,
+   "G_dagger": 1,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 242,
+   "classe": "R",
+   "ride": 71,
+   "word": "RRLLLLRLRRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 242,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 10909151681334732768,
+   "t": 6164,
+   "t_on": 9248,
+   "pose": [
+    -10,
+    -26
+   ],
+   "onset_germe": 192,
+   "burden": 34,
+   "G_dagger": 2,
+   "min_cheb": 9,
+   "min_ep_dagger": 6,
+   "d": 59,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      9
+     ],
+     "fr": 59,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 15354634084640998809,
+   "t": 1234,
+   "t_on": 1344,
+   "pose": [
+    7,
+    -9
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 8,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 60,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 74,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 81,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      0,
+      12
+     ],
+     "fr": 96,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      1,
+      12
+     ],
+     "fr": 113,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 15354634084640998809,
+   "t": 1244,
+   "t_on": 1344,
+   "pose": [
+    6,
+    -10
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 8,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 71,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      1,
+      13
+     ],
+     "fr": 86,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      2,
+      13
+     ],
+     "fr": 103,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 4335348633034995426,
+   "t": 942,
+   "t_on": 9619,
+   "pose": [
+    5,
+    -9
+   ],
+   "onset_germe": 436,
+   "burden": 17,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 90,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLLRRLRRRRLLLLRLLRLLRLRRLRRLRRLRLLRLLLLRRRRLRRLRRRRLRRLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      1
+     ],
+     "fr": 90,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      2
+     ],
+     "fr": 176,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      3
+     ],
+     "fr": 186,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -11,
+      4
+     ],
+     "fr": 193,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 1294633646458214470,
+   "t": 126,
+   "t_on": 4199,
+   "pose": [
+    -7,
+    -9
+   ],
+   "onset_germe": 1962,
+   "burden": 363,
+   "G_dagger": 40,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 138,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLLRRRRLRLRLLRLLLLRLRRLLRRLRLRLRLLLLRLLRRRRLLRRRRLLRLRRLLRRLLRRRRLLRRLLRRLLLLRRLLRRLLRLRRLRLLRLRRLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 321,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      9,
+      10
+     ],
+     "fr": 1185,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      4,
+      11
+     ],
+     "fr": 315,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 319,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      7,
+      11
+     ],
+     "fr": 642,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      6,
+      11
+     ],
+     "fr": 651,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 16989344815867729101,
+   "t": 4588,
+   "t_on": 6027,
+   "pose": [
+    -4,
+    -26
+   ],
+   "onset_germe": 55,
+   "burden": 36,
+   "G_dagger": 10,
+   "min_cheb": 16,
+   "min_ep_dagger": null,
+   "d": 324,
+   "classe": "R",
+   "ride": 269,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -8,
+      16
+     ],
+     "fr": 324,
+     "cheb": 16
+    },
+    {
+     "cella": [
+      -7,
+      16
+     ],
+     "fr": 333,
+     "cheb": 16
+    },
+    {
+     "cella": [
+      -9,
+      17
+     ],
+     "fr": 442,
+     "cheb": 17
+    },
+    {
+     "cella": [
+      -10,
+      18
+     ],
+     "fr": 428,
+     "cheb": 18
+    },
+    {
+     "cella": [
+      -9,
+      18
+     ],
+     "fr": 437,
+     "cheb": 18
+    },
+    {
+     "cella": [
+      -8,
+      18
+     ],
+     "fr": 456,
+     "cheb": 18
+    }
+   ]
+  },
+  {
+   "rngstate": 15301080703454524755,
+   "t": 3616,
+   "t_on": 6114,
+   "pose": [
+    -16,
+    -16
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 86,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 136,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 147,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 330,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 406,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      4,
+      11
+     ],
+     "fr": 407,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      12
+     ],
+     "fr": 136,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 7217452005924780544,
+   "t": 6060,
+   "t_on": 9342,
+   "pose": [
+    12,
+    -18
+   ],
+   "onset_germe": 484,
+   "burden": 39,
+   "G_dagger": 6,
+   "min_cheb": 9,
+   "min_ep_dagger": 2,
+   "d": 94,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLLLLRLLLLRLLRRLLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 94,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      6
+     ],
+     "fr": 217,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      7
+     ],
+     "fr": 218,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      5
+     ],
+     "fr": 222,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      4
+     ],
+     "fr": 192,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      6
+     ],
+     "fr": 209,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 8034335130893938179,
+   "t": 1324,
+   "t_on": 1808,
+   "pose": [
+    4,
+    -10
+   ],
+   "onset_germe": 88,
+   "burden": 30,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 39,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLRRRRLLLLRLRRRRLRLLRRLLRLLRLLRRRRLLRLRRRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 39,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 16086674431332322508,
+   "t": 1476,
+   "t_on": 2557,
+   "pose": [
+    -14,
+    -14
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 45,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 155,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 170,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 160,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      10
+     ],
+     "fr": 172,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 155,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 406,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 13669135803015780970,
+   "t": 6858,
+   "t_on": 8303,
+   "pose": [
+    13,
+    -19
+   ],
+   "onset_germe": 488,
+   "burden": 15,
+   "G_dagger": 5,
+   "min_cheb": 11,
+   "min_ep_dagger": 1,
+   "d": 110,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLRRRRLLLLRLLRRRRLLRLLLLRRRRLRLLLLRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -11,
+      1
+     ],
+     "fr": 110,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      2
+     ],
+     "fr": 192,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -12,
+      5
+     ],
+     "fr": 219,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      2
+     ],
+     "fr": 193,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -13,
+      4
+     ],
+     "fr": 209,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 13669135803015780970,
+   "t": 6864,
+   "t_on": 8303,
+   "pose": [
+    12,
+    -20
+   ],
+   "onset_germe": 482,
+   "burden": 25,
+   "G_dagger": 5,
+   "min_cheb": 10,
+   "min_ep_dagger": 2,
+   "d": 104,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLRRRRLLLLRLLRRRRLLRLLLLRRRRLRLLLLRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -10,
+      2
+     ],
+     "fr": 104,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      3
+     ],
+     "fr": 186,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -11,
+      6
+     ],
+     "fr": 213,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      3
+     ],
+     "fr": 187,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -12,
+      5
+     ],
+     "fr": 203,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 13669135803015780970,
+   "t": 6874,
+   "t_on": 8303,
+   "pose": [
+    11,
+    -21
+   ],
+   "onset_germe": 472,
+   "burden": 37,
+   "G_dagger": 5,
+   "min_cheb": 9,
+   "min_ep_dagger": 3,
+   "d": 94,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRLLRRRRLLRLLLLRRRRLRLLLLRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 94,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      4
+     ],
+     "fr": 176,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      7
+     ],
+     "fr": 203,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      4
+     ],
+     "fr": 177,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -11,
+      6
+     ],
+     "fr": 193,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 16338518472402321605,
+   "t": 624,
+   "t_on": 2022,
+   "pose": [
+    8,
+    -16
+   ],
+   "onset_germe": 170,
+   "burden": 22,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 78,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLLLLRLRRLRRLLLLRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLLLLRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 78,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 79,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 88,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 5197548131241139257,
+   "t": 1014,
+   "t_on": 1124,
+   "pose": [
+    11,
+    -11
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 3,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 60,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 74,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 5197548131241139257,
+   "t": 1024,
+   "t_on": 1124,
+   "pose": [
+    10,
+    -12
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 3,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 12054702717215649463,
+   "t": 776,
+   "t_on": 1432,
+   "pose": [
+    8,
+    -12
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 10,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 46,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 46,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 51,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 64,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      12
+     ],
+     "fr": 69,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 11014788344425548297,
+   "t": 6902,
+   "t_on": 8793,
+   "pose": [
+    -19,
+    -19
+   ],
+   "onset_germe": 289,
+   "burden": 28,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": 3,
+   "d": 126,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLRRRRLLLLRLLRLRRRRLLLLRLRRRRLLLLRLRRRRLRLRLLRRRRLLRLLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 142,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 132,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 126,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 11014788344425548297,
+   "t": 6916,
+   "t_on": 8793,
+   "pose": [
+    -20,
+    -20
+   ],
+   "onset_germe": 275,
+   "burden": 37,
+   "G_dagger": 3,
+   "min_cheb": 10,
+   "min_ep_dagger": 4,
+   "d": 112,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLRRRRLLLLRLLRLRRRRLLLLRLRRRRLLLLRLRRRRLRLRLLRRRRLLRLLRRRRLLRRRRLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 128,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 118,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 112,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 15380633117011670934,
+   "t": 150,
+   "t_on": 17618,
+   "pose": [
+    5,
+    -9
+   ],
+   "onset_germe": 449,
+   "burden": 66,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 494,
+   "classe": "R",
+   "ride": 45,
+   "word": "LLLRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      5
+     ],
+     "fr": 494,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      4
+     ],
+     "fr": 496,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      6
+     ],
+     "fr": 504,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      8
+     ],
+     "fr": 628,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 1752891150350133301,
+   "t": 1018,
+   "t_on": 9548,
+   "pose": [
+    7,
+    -11
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 7,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 45,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 46,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 45,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      12
+     ],
+     "fr": 69,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      0,
+      13
+     ],
+     "fr": 79,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 15088946057905560769,
+   "t": 1760,
+   "t_on": 2288,
+   "pose": [
+    -10,
+    -12
+   ],
+   "onset_germe": 239,
+   "burden": 56,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 78,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLRLLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 78,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 7102997813072457104,
+   "t": 1354,
+   "t_on": 1464,
+   "pose": [
+    13,
+    -15
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 6,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 60,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 81,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      12
+     ],
+     "fr": 89,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      13
+     ],
+     "fr": 90,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 91,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 7102997813072457104,
+   "t": 1364,
+   "t_on": 1464,
+   "pose": [
+    12,
+    -16
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 6,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 71,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      0,
+      13
+     ],
+     "fr": 79,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      0,
+      14
+     ],
+     "fr": 80,
+     "cheb": 14
+    },
+    {
+     "cella": [
+      -1,
+      14
+     ],
+     "fr": 81,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 13438648369193148495,
+   "t": 1644,
+   "t_on": 2238,
+   "pose": [
+    12,
+    -16
+   ],
+   "onset_germe": 166,
+   "burden": 45,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 55,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -4,
+      9
+     ],
+     "fr": 55,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -4,
+      10
+     ],
+     "fr": 76,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -4,
+      11
+     ],
+     "fr": 75,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 13438648369193148495,
+   "t": 1654,
+   "t_on": 2238,
+   "pose": [
+    11,
+    -17
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 4,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 45,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 45,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 66,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 4338700904947072138,
+   "t": 1034,
+   "t_on": 12221,
+   "pose": [
+    9,
+    -9
+   ],
+   "onset_germe": 126,
+   "burden": 28,
+   "G_dagger": 7,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 74,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLLLLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRLLLLRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -4,
+      10
+     ],
+     "fr": 76,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 74,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 79,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 80,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 81,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      12
+     ],
+     "fr": 89,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 7818242308300399416,
+   "t": 11864,
+   "t_on": 17840,
+   "pose": [
+    -22,
+    -26
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 159,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 160,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 160,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      10
+     ],
+     "fr": 172,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      11
+     ],
+     "fr": 162,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 406,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      4,
+      11
+     ],
+     "fr": 407,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 13736715222079899959,
+   "t": 4070,
+   "t_on": 7426,
+   "pose": [
+    -21,
+    -29
+   ],
+   "onset_germe": 221,
+   "burden": 24,
+   "G_dagger": 5,
+   "min_cheb": 10,
+   "min_ep_dagger": 1,
+   "d": 131,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLRRRRLLLLRLRRRRLRLLRRLLRLRRLRRRRLLLLRLRLLRLLRLRLLRRLRRRRLLLLRLRRRRLRLRRRRLLLLRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      10,
+      3
+     ],
+     "fr": 131,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      10,
+      2
+     ],
+     "fr": 148,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      11,
+      3
+     ],
+     "fr": 150,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      11,
+      1
+     ],
+     "fr": 234,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      12,
+      1
+     ],
+     "fr": 235,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 12923981291668286970,
+   "t": 4538,
+   "t_on": 8018,
+   "pose": [
+    15,
+    -13
+   ],
+   "onset_germe": 192,
+   "burden": 34,
+   "G_dagger": 2,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 59,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      9
+     ],
+     "fr": 59,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 9651571749034610886,
+   "t": 150,
+   "t_on": 376,
+   "pose": [
+    -3,
+    -7
+   ],
+   "onset_germe": 226,
+   "burden": 50,
+   "G_dagger": 5,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 153,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLLRLLRLRLRRRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLRLLRLRRLLRLLRLLLLRRRRLRLRLLRRRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 178,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      2,
+      9
+     ],
+     "fr": 179,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 153,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 173,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      10
+     ],
+     "fr": 180,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 4360620907417710289,
+   "t": 1076,
+   "t_on": 8112,
+   "pose": [
+    12,
+    -16
+   ],
+   "onset_germe": 150,
+   "burden": 12,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": 1,
+   "d": 90,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRLRRRRLRRRRLLLLRLRRLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      1
+     ],
+     "fr": 90,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 4067695623444780203,
+   "t": 3292,
+   "t_on": 8440,
+   "pose": [
+    20,
+    -16
+   ],
+   "onset_germe": 264,
+   "burden": 17,
+   "G_dagger": 9,
+   "min_cheb": 9,
+   "min_ep_dagger": 1,
+   "d": 54,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRLRLLLLRRRRLRLLRLLLLRLLRRRRLLRRRRLLRLRRLRRLLRRLLLLRRLLRRLLLLRRLLRRLRLLLLRRRRLRRRRLRLRRRRLLLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      1
+     ],
+     "fr": 54,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 62,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      5
+     ],
+     "fr": 78,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -9,
+      6
+     ],
+     "fr": 89,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      3
+     ],
+     "fr": 63,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -10,
+      2
+     ],
+     "fr": 64,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 10995798961767418006,
+   "t": 120,
+   "t_on": 308,
+   "pose": [
+    0,
+    -8
+   ],
+   "onset_germe": 244,
+   "burden": 49,
+   "G_dagger": 6,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 66,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 66,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 67,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      2,
+      9
+     ],
+     "fr": 135,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 97,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 82,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      1,
+      11
+     ],
+     "fr": 98,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 11512192145645793919,
+   "t": 186,
+   "t_on": 8105,
+   "pose": [
+    11,
+    -11
+   ],
+   "onset_germe": 386,
+   "burden": 82,
+   "G_dagger": 6,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 221,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLRLLLLRLRRLRRLLRRLRLRLLLLRRRRLRRRRLRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRLLRRLRRRRLLLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 221,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      11
+     ],
+     "fr": 286,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 285,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -4,
+      12
+     ],
+     "fr": 296,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -3,
+      13
+     ],
+     "fr": 294,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -2,
+      14
+     ],
+     "fr": 300,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 11512192145645793919,
+   "t": 192,
+   "t_on": 8105,
+   "pose": [
+    10,
+    -12
+   ],
+   "onset_germe": 380,
+   "burden": 90,
+   "G_dagger": 6,
+   "min_cheb": 11,
+   "min_ep_dagger": null,
+   "d": 215,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLRLRRLRRLLRRLRLRLLLLRRRRLRRRRLRLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRLRRLLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      11
+     ],
+     "fr": 215,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -2,
+      12
+     ],
+     "fr": 280,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 279,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -3,
+      13
+     ],
+     "fr": 290,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -2,
+      14
+     ],
+     "fr": 288,
+     "cheb": 14
+    },
+    {
+     "cella": [
+      -1,
+      15
+     ],
+     "fr": 294,
+     "cheb": 15
+    }
+   ]
+  },
+  {
+   "rngstate": 2806855631047835917,
+   "t": 324,
+   "t_on": 2144,
+   "pose": [
+    -12,
+    -12
+   ],
+   "onset_germe": 292,
+   "burden": 101,
+   "G_dagger": 54,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 41,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLRRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRLLLLRRRRLRRLRRLRRLLLLRRLLLLRRLRLRLLRRRRLLRRRRLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      5,
+      9
+     ],
+     "fr": 74,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      6,
+      9
+     ],
+     "fr": 75,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 41,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 49,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      4,
+      10
+     ],
+     "fr": 64,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 360290025406122212,
+   "t": 1166,
+   "t_on": 1478,
+   "pose": [
+    1,
+    -17
+   ],
+   "onset_germe": 192,
+   "burden": 34,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 59,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      9
+     ],
+     "fr": 59,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 8904682472862637685,
+   "t": 378,
+   "t_on": 568,
+   "pose": [
+    5,
+    -7
+   ],
+   "onset_germe": 150,
+   "burden": 28,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 79,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLLRLLLLRLRRRRLRRRRLLLLRLRLRRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRRRLLRRRRLLRLRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 79,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 8904682472862637685,
+   "t": 388,
+   "t_on": 568,
+   "pose": [
+    4,
+    -8
+   ],
+   "onset_germe": 140,
+   "burden": 41,
+   "G_dagger": 1,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 69,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLRRRRLLLLRLRLRRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRRRLLRRRRLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 69,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 7639590523945569942,
+   "t": 3342,
+   "t_on": 5041,
+   "pose": [
+    13,
+    -17
+   ],
+   "onset_germe": 488,
+   "burden": 14,
+   "G_dagger": 5,
+   "min_cheb": 11,
+   "min_ep_dagger": 1,
+   "d": 110,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLRLLRLRRLLLLRRLLLLRRLRLRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -11,
+      1
+     ],
+     "fr": 110,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      2
+     ],
+     "fr": 196,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      3
+     ],
+     "fr": 206,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -13,
+      4
+     ],
+     "fr": 213,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -14,
+      3
+     ],
+     "fr": 207,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 7639590523945569942,
+   "t": 3348,
+   "t_on": 5041,
+   "pose": [
+    12,
+    -18
+   ],
+   "onset_germe": 482,
+   "burden": 24,
+   "G_dagger": 5,
+   "min_cheb": 10,
+   "min_ep_dagger": 2,
+   "d": 104,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRLLLLRRLLLLRRLRLRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -10,
+      2
+     ],
+     "fr": 104,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      3
+     ],
+     "fr": 190,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      4
+     ],
+     "fr": 200,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -12,
+      5
+     ],
+     "fr": 207,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      4
+     ],
+     "fr": 201,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 7639590523945569942,
+   "t": 3358,
+   "t_on": 5041,
+   "pose": [
+    11,
+    -19
+   ],
+   "onset_germe": 472,
+   "burden": 37,
+   "G_dagger": 5,
+   "min_cheb": 9,
+   "min_ep_dagger": 3,
+   "d": 94,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLLLRRLRLRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 94,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      4
+     ],
+     "fr": 180,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      5
+     ],
+     "fr": 190,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -11,
+      6
+     ],
+     "fr": 197,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      5
+     ],
+     "fr": 191,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 2233137080840354550,
+   "t": 776,
+   "t_on": 1006,
+   "pose": [
+    -12,
+    -14
+   ],
+   "onset_germe": 267,
+   "burden": 35,
+   "G_dagger": 5,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 102,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLLRLRLRLLRLRLLRLRRRRLLLLRLLRRRRLLRLRRRRLRLRLLRRRRLLRLLRRRRLLRRRRLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 102,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      9
+     ],
+     "fr": 107,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 126,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 109,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 117,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 12091158037127148016,
+   "t": 7182,
+   "t_on": 13183,
+   "pose": [
+    3,
+    -17
+   ],
+   "onset_germe": 534,
+   "burden": 27,
+   "G_dagger": 6,
+   "min_cheb": 12,
+   "min_ep_dagger": 2,
+   "d": 124,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRRLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -12,
+      2
+     ],
+     "fr": 124,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -12,
+      4
+     ],
+     "fr": 240,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      3
+     ],
+     "fr": 210,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -13,
+      4
+     ],
+     "fr": 225,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -14,
+      4
+     ],
+     "fr": 220,
+     "cheb": 14
+    },
+    {
+     "cella": [
+      -14,
+      5
+     ],
+     "fr": 227,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 12091158037127148016,
+   "t": 7192,
+   "t_on": 13183,
+   "pose": [
+    2,
+    -18
+   ],
+   "onset_germe": 524,
+   "burden": 41,
+   "G_dagger": 6,
+   "min_cheb": 11,
+   "min_ep_dagger": 3,
+   "d": 114,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLLLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -11,
+      3
+     ],
+     "fr": 114,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -11,
+      5
+     ],
+     "fr": 230,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      4
+     ],
+     "fr": 200,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -12,
+      5
+     ],
+     "fr": 215,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      5
+     ],
+     "fr": 210,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -13,
+      6
+     ],
+     "fr": 217,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 1919978440564544562,
+   "t": 330,
+   "t_on": 879,
+   "pose": [
+    7,
+    -7
+   ],
+   "onset_germe": 449,
+   "burden": 127,
+   "G_dagger": 1,
+   "min_cheb": 16,
+   "min_ep_dagger": null,
+   "d": 196,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRLLRRLRRRRLLLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -2,
+      16
+     ],
+     "fr": 196,
+     "cheb": 16
+    }
+   ]
+  },
+  {
+   "rngstate": 1919978440564544562,
+   "t": 336,
+   "t_on": 879,
+   "pose": [
+    6,
+    -8
+   ],
+   "onset_germe": 463,
+   "burden": 133,
+   "G_dagger": 3,
+   "min_cheb": 17,
+   "min_ep_dagger": null,
+   "d": 178,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLRLLLLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRLLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      17
+     ],
+     "fr": 178,
+     "cheb": 17
+    },
+    {
+     "cella": [
+      0,
+      17
+     ],
+     "fr": 179,
+     "cheb": 17
+    },
+    {
+     "cella": [
+      -1,
+      17
+     ],
+     "fr": 198,
+     "cheb": 17
+    }
+   ]
+  },
+  {
+   "rngstate": 8466730160716991915,
+   "t": 4050,
+   "t_on": 6919,
+   "pose": [
+    15,
+    -29
+   ],
+   "onset_germe": 192,
+   "burden": 34,
+   "G_dagger": 3,
+   "min_cheb": 9,
+   "min_ep_dagger": 7,
+   "d": 59,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      9
+     ],
+     "fr": 59,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 60,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 61,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 14321794340622081595,
+   "t": 274,
+   "t_on": 7922,
+   "pose": [
+    13,
+    -11
+   ],
+   "onset_germe": 634,
+   "burden": 109,
+   "G_dagger": 5,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 456,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRRLLLLRLRRRRLRLRRLLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRLLLLRLRRLRRLRLRRRRLRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -4,
+      10
+     ],
+     "fr": 456,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 461,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      13
+     ],
+     "fr": 470,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 471,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -4,
+      14
+     ],
+     "fr": 540,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 18177080561933890211,
+   "t": 14274,
+   "t_on": 16510,
+   "pose": [
+    1,
+    -33
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 131,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 146,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 160,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 146,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      4,
+      11
+     ],
+     "fr": 407,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -1,
+      12
+     ],
+     "fr": 157,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      5,
+      12
+     ],
+     "fr": 529,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 3017630597661030141,
+   "t": 314,
+   "t_on": 1157,
+   "pose": [
+    5,
+    -9
+   ],
+   "onset_germe": 804,
+   "burden": 77,
+   "G_dagger": 6,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 74,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLRRRRLRLLLLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLLRRRRLLRLRLLLLRLRRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 74,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 269,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      11
+     ],
+     "fr": 270,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 271,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 283,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      1,
+      12
+     ],
+     "fr": 285,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 5800468555982935765,
+   "t": 3076,
+   "t_on": 3677,
+   "pose": [
+    2,
+    -24
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 59,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 127,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -6,
+      11
+     ],
+     "fr": 127,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -7,
+      11
+     ],
+     "fr": 290,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -8,
+      11
+     ],
+     "fr": 291,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -9,
+      11
+     ],
+     "fr": 302,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 11253144084911679621,
+   "t": 2642,
+   "t_on": 10404,
+   "pose": [
+    -15,
+    -19
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 40,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 161,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 411,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      4,
+      12
+     ],
+     "fr": 408,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      5,
+      12
+     ],
+     "fr": 529,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      2,
+      13
+     ],
+     "fr": 391,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 831653432223396627,
+   "t": 364,
+   "t_on": 6662,
+   "pose": [
+    12,
+    -12
+   ],
+   "onset_germe": 437,
+   "burden": 124,
+   "G_dagger": 11,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 70,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLLLLRLRRRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRLRLLLLRLRRRRLRLRRLRRRRLLLLRLLLLRLRRRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 70,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 147,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      0,
+      14
+     ],
+     "fr": 152,
+     "cheb": 14
+    },
+    {
+     "cella": [
+      -1,
+      15
+     ],
+     "fr": 170,
+     "cheb": 15
+    },
+    {
+     "cella": [
+      -2,
+      15
+     ],
+     "fr": 171,
+     "cheb": 15
+    },
+    {
+     "cella": [
+      -2,
+      16
+     ],
+     "fr": 324,
+     "cheb": 16
+    }
+   ]
+  },
+  {
+   "rngstate": 7807582757826188887,
+   "t": 1454,
+   "t_on": 8014,
+   "pose": [
+    -1,
+    -17
+   ],
+   "onset_germe": 476,
+   "burden": 10,
+   "G_dagger": 4,
+   "min_cheb": 11,
+   "min_ep_dagger": 1,
+   "d": 110,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLLLRLRRRRLRRLLRRRRLLRRLLLLRRLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRL",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -11,
+      1
+     ],
+     "fr": 110,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      1
+     ],
+     "fr": 111,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      1
+     ],
+     "fr": 198,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      -14,
+      2
+     ],
+     "fr": 208,
+     "cheb": 14
+    }
+   ]
+  },
+  {
+   "rngstate": 7807582757826188887,
+   "t": 1460,
+   "t_on": 8014,
+   "pose": [
+    -2,
+    -18
+   ],
+   "onset_germe": 470,
+   "burden": 22,
+   "G_dagger": 4,
+   "min_cheb": 10,
+   "min_ep_dagger": 2,
+   "d": 104,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRLLRRRRLLRRLLLLRRLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -10,
+      2
+     ],
+     "fr": 104,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      2
+     ],
+     "fr": 105,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      2
+     ],
+     "fr": 192,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -13,
+      3
+     ],
+     "fr": 202,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 7807582757826188887,
+   "t": 1470,
+   "t_on": 8014,
+   "pose": [
+    -3,
+    -19
+   ],
+   "onset_germe": 460,
+   "burden": 34,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": 3,
+   "d": 94,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRRRRLLRRLLLLRRLLRLRRRRLRRLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -9,
+      3
+     ],
+     "fr": 94,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -10,
+      3
+     ],
+     "fr": 95,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      3
+     ],
+     "fr": 182,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -12,
+      4
+     ],
+     "fr": 192,
+     "cheb": 12
+    }
+   ]
+  },
+  {
+   "rngstate": 6149067202803567465,
+   "t": 18142,
+   "t_on": 19980,
+   "pose": [
+    -19,
+    -23
+   ],
+   "onset_germe": 65,
+   "burden": 31,
+   "G_dagger": 6,
+   "min_cheb": 18,
+   "min_ep_dagger": null,
+   "d": 449,
+   "classe": "R",
+   "ride": 384,
+   "word": "RLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -11,
+      18
+     ],
+     "fr": 449,
+     "cheb": 18
+    },
+    {
+     "cella": [
+      -12,
+      18
+     ],
+     "fr": 556,
+     "cheb": 18
+    },
+    {
+     "cella": [
+      -13,
+      19
+     ],
+     "fr": 542,
+     "cheb": 19
+    },
+    {
+     "cella": [
+      -14,
+      20
+     ],
+     "fr": 660,
+     "cheb": 20
+    },
+    {
+     "cella": [
+      -14,
+      21
+     ],
+     "fr": 655,
+     "cheb": 21
+    },
+    {
+     "cella": [
+      -14,
+      22
+     ],
+     "fr": 656,
+     "cheb": 22
+    }
+   ]
+  },
+  {
+   "rngstate": 6149067202803567465,
+   "t": 18152,
+   "t_on": 19980,
+   "pose": [
+    -20,
+    -24
+   ],
+   "onset_germe": 55,
+   "burden": 36,
+   "G_dagger": 6,
+   "min_cheb": 19,
+   "min_ep_dagger": null,
+   "d": 439,
+   "classe": "R",
+   "ride": 384,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -10,
+      19
+     ],
+     "fr": 439,
+     "cheb": 19
+    },
+    {
+     "cella": [
+      -11,
+      19
+     ],
+     "fr": 546,
+     "cheb": 19
+    },
+    {
+     "cella": [
+      -12,
+      20
+     ],
+     "fr": 532,
+     "cheb": 20
+    },
+    {
+     "cella": [
+      -13,
+      21
+     ],
+     "fr": 650,
+     "cheb": 21
+    },
+    {
+     "cella": [
+      -13,
+      22
+     ],
+     "fr": 645,
+     "cheb": 22
+    },
+    {
+     "cella": [
+      -13,
+      23
+     ],
+     "fr": 646,
+     "cheb": 23
+    }
+   ]
+  },
+  {
+   "rngstate": 13861957185843239832,
+   "t": 1298,
+   "t_on": 15711,
+   "pose": [
+    -11,
+    -13
+   ],
+   "onset_germe": 522,
+   "burden": 126,
+   "G_dagger": 39,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 341,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLLLRRLLLLRRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRRLLRLRRRRLRLLRRRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -1,
+      9
+     ],
+     "fr": 346,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      10
+     ],
+     "fr": 341,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 593,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 597,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 567,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 583,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 9424460024662252099,
+   "t": 3184,
+   "t_on": 3732,
+   "pose": [
+    -16,
+    -16
+   ],
+   "onset_germe": 159,
+   "burden": 50,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLRLRLRRRRLRRRRLLLLRLRRRRLRLRRRRLLLLRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 50,
+     "cheb": 9
+    }
+   ]
+  },
+  {
+   "rngstate": 14028405343225178309,
+   "t": 1302,
+   "t_on": 1458,
+   "pose": [
+    13,
+    -17
+   ],
+   "onset_germe": 156,
+   "burden": 49,
+   "G_dagger": 8,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 46,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRRRLRLLRRLLRLRRRRLRLLRRRRLLRLRRLLRRRRLLRRLRRRRLLLLRLRRRRLRLLLLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 46,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -1,
+      11
+     ],
+     "fr": 50,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -3,
+      12
+     ],
+     "fr": 65,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -1,
+      12
+     ],
+     "fr": 69,
+     "cheb": 12
+    },
+    {
+     "cella": [
+      -2,
+      13
+     ],
+     "fr": 71,
+     "cheb": 13
+    },
+    {
+     "cella": [
+      2,
+      13
+     ],
+     "fr": 103,
+     "cheb": 13
+    }
+   ]
+  },
+  {
+   "rngstate": 14260711766192113984,
+   "t": 17286,
+   "t_on": 18072,
+   "pose": [
+    41,
+    -31
+   ],
+   "onset_germe": 592,
+   "burden": 60,
+   "G_dagger": 18,
+   "min_cheb": 10,
+   "min_ep_dagger": 2,
+   "d": 114,
+   "classe": "T",
+   "ride": 0,
+   "word": "LLRLRRLLRRLLRRLRRLLRRLLRRLLRRLLRRLLRRRRLLRRLLRRLLRRLLRRLLRRLLLLRRLLRRLLRRLLRRLLRRLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -10,
+      10
+     ],
+     "fr": 140,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -7,
+      10
+     ],
+     "fr": 181,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -11,
+      3
+     ],
+     "fr": 114,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -11,
+      10
+     ],
+     "fr": 141,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -10,
+      11
+     ],
+     "fr": 155,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      -9,
+      11
+     ],
+     "fr": 170,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 1125626768921378500,
+   "t": 8434,
+   "t_on": 22526,
+   "pose": [
+    -9,
+    -27
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 121,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 136,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      2,
+      9
+     ],
+     "fr": 171,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 160,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 155,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 411,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 3854371679650455783,
+   "t": 214,
+   "t_on": 335,
+   "pose": [
+    7,
+    -9
+   ],
+   "onset_germe": 133,
+   "burden": 45,
+   "G_dagger": 4,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 38,
+   "classe": "T",
+   "ride": 0,
+   "word": "RRLLLLRLRRRRLRLRRLLRRRRLLRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      -3,
+      9
+     ],
+     "fr": 38,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -4,
+      9
+     ],
+     "fr": 39,
+     "cheb": 9
+    },
+    {
+     "cella": [
+      -2,
+      10
+     ],
+     "fr": 44,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      -3,
+      10
+     ],
+     "fr": 45,
+     "cheb": 10
+    }
+   ]
+  },
+  {
+   "rngstate": 18317706270442929406,
+   "t": 5856,
+   "t_on": 19262,
+   "pose": [
+    -22,
+    -16
+   ],
+   "onset_germe": 336,
+   "burden": 102,
+   "G_dagger": 107,
+   "min_cheb": 10,
+   "min_ep_dagger": null,
+   "d": 155,
+   "classe": "T",
+   "ride": 0,
+   "word": "RLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      0,
+      10
+     ],
+     "fr": 160,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      1,
+      10
+     ],
+     "fr": 161,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      3,
+      10
+     ],
+     "fr": 425,
+     "cheb": 10
+    },
+    {
+     "cella": [
+      0,
+      11
+     ],
+     "fr": 155,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      1,
+      11
+     ],
+     "fr": 162,
+     "cheb": 11
+    },
+    {
+     "cella": [
+      2,
+      11
+     ],
+     "fr": 411,
+     "cheb": 11
+    }
+   ]
+  },
+  {
+   "rngstate": 4707821637626471862,
+   "t": 1276,
+   "t_on": 3932,
+   "pose": [
+    -12,
+    -14
+   ],
+   "onset_germe": 151,
+   "burden": 50,
+   "G_dagger": 1,
+   "min_cheb": 9,
+   "min_ep_dagger": null,
+   "d": 50,
+   "classe": "T",
+   "ride": 0,
+   "word": "LRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLR",
+   "guilty_vicine": [
+    {
+     "cella": [
+      1,
+      9
+     ],
+     "fr": 50,
+     "cheb": 9
+    }
+   ]
+  }
+ ],
+ "F2": [
+  {
+   "rngstate": 16989344815867729101,
+   "t": 4588,
+   "t_on": 6027,
+   "pose": [
+    -4,
+    -26
+   ],
+   "onset_germe": 55,
+   "burden": 36,
+   "G_dagger": 10,
+   "min_cheb": 16,
+   "min_ep_dagger": null,
+   "d": 324,
+   "classe": "R",
+   "ride": 269,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR"
+  },
+  {
+   "rngstate": 6149067202803567465,
+   "t": 18142,
+   "t_on": 19980,
+   "pose": [
+    -19,
+    -23
+   ],
+   "onset_germe": 65,
+   "burden": 31,
+   "G_dagger": 6,
+   "min_cheb": 18,
+   "min_ep_dagger": null,
+   "d": 449,
+   "classe": "R",
+   "ride": 384,
+   "word": "RLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR"
+  },
+  {
+   "rngstate": 6149067202803567465,
+   "t": 18152,
+   "t_on": 19980,
+   "pose": [
+    -20,
+    -24
+   ],
+   "onset_germe": 55,
+   "burden": 36,
+   "G_dagger": 6,
+   "min_cheb": 19,
+   "min_ep_dagger": null,
+   "d": 439,
+   "classe": "R",
+   "ride": 384,
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR"
+  }
+ ],
+ "VERDETTO_PREREGISTRATO": "F1 REALIZZATO: 112 falsificatori min_cheb>8 (max 19) | F2 REALIZZATO: 3 lock ai record (ride max 384) | P3 FALSIFICATA: 103 F1 shallow a min_ep<4",
+ "elapsed_s": 98.5
+}

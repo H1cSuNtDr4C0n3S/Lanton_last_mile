@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§101**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§102**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -254,7 +254,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -766,5 +766,25 @@ famiglia. Trappola qq. Pannello 2/2 (1 ROSSO episodi-vs-record riparato).
 Prossimo §101: censire il regime min_ep>=4 (parola top-60, cross-catena, legame
 porta/A1 §78), quotare censimento V†, riscandire i misti.
 Dettaglio: docs/DOUBLE_TAIL_ADDENDUM.md.
+**AGGIORNAMENTO §101 (RECORD-DIVERGENCE: dicotomia, primi lock ai record, fascia = porta):**
+d(t) = profondita' di prima divergenza del rigioco del germe al record (mai censita).
+DICOTOMIA DEL RECORD (deduttiva, Lemmi 0-5'): (T) rigetto nel transiente / (R) lock
+W0-like di ride = d − onset_germe passi / (E) ingresso; Link 1 ⟸ "(R)/(E) i.o. ai
+record" (unidirezionale). Censimento canonico (gate §89a/b/§98 riprodotti, T-DIV
+due-derivazioni 1639/1639): T su 1639/1639, d med 17 (0,6% del transiente), colpevole
+piu' vicina cheb med 3 max 8, min_ep† med 2 max 5 (flag §100 chiuso), G† med 142
+zeri 0, drift-giu' 891/1639. Caccia preregistrata catena-3 (8000 semi, 82.243
+record): F1 morto (min_cheb max 19: quarta soglia-quantile, qq), **F2 REALIZZATO —
+primi 2 EPISODI di lock ai record (ride 269/384 = 2,6/3,7 periodi)**, P3 falsificata,
+**V† 0 violazioni su 82.243** (Replay-Lock alla daga perfetto; 578 G†=0 fisiologici).
+SALDATURA: le parole dei 2 lock = STESSA parola 101-bit cross-seme (+ shift-10) e
+stanno nei 14 testimoni della fascia §100 ⇒ fascia = classe delle parole-porta
+("alto min_ep = tentativi di porta" realizzato). Struttura drift: il ride muore solo
+risalendo nel visitato (y_rel 16-19) ⇒ ai record drift-giu' l'eterna ha colpevole
+FORZATA nel transiente. Pannello: lente A 40/40 + 11/11, esche 3/3 + terra-check
+Lemma 0, lente logica (Lemma 5' indebolito, episodi contati). Prossimo §102:
+occorrenza della fascia (enumerazione parole veloci realizzabili record-compatibili,
+legame A1 §78); costo del transiente sporco drift-giu' (attacco alla-Muro per-parola);
+min_cheb solo preregistrato. docs/RECORD_DIVERGENCE_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

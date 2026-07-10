@@ -1,0 +1,285 @@
+{
+ "n_records": 1639,
+ "classi": {
+  "T": 1639,
+  "R": 0,
+  "E": 0
+ },
+ "E_troncati": 0,
+ "tripwires": {
+  "T_DIV_svolte_eq_celle": 1639,
+  "T_VDAGGER_G0_implica_ingresso": 0,
+  "T_SCALA_divergenza": 1567
+ },
+ "d": {
+  "med": 17,
+  "max": 268,
+  "min": 2
+ },
+ "ride": {
+  "n": 0,
+  "med": null,
+  "max": null,
+  "frac_ge_P": 0.0,
+  "frac_ge_2P": 0.0,
+  "frac_ge_5P": 0.0,
+  "hist_periodi": {}
+ },
+ "classe_R_frac": 0.0,
+ "G_dagger": {
+  "med": 142,
+  "max": 1700,
+  "zeri": 0
+ },
+ "min_ep_dagger": {
+  "n": 813,
+  "med": 2,
+  "max": 5,
+  "hist": {
+   "1": 394,
+   "2": 282,
+   "3": 117,
+   "4": 18,
+   "5": 2
+  }
+ },
+ "min_cheb_dagger": {
+  "n": 1639,
+  "med": 3,
+  "max": 8,
+  "hist": {
+   "1": 46,
+   "2": 702,
+   "3": 470,
+   "4": 200,
+   "5": 155,
+   "6": 54,
+   "7": 11,
+   "8": 1
+  }
+ },
+ "drift_germe": {
+  "dy_pos_verso_visitato": 748,
+  "dy_neg_verso_vergine": 891,
+  "dy_zero": 0
+ },
+ "per_orbit": [
+  {
+   "orbit": 0,
+   "records": 90,
+   "R": 0,
+   "T": 90,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 16105
+  },
+  {
+   "orbit": 1,
+   "records": 64,
+   "R": 0,
+   "T": 64,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 14227
+  },
+  {
+   "orbit": 2,
+   "records": 81,
+   "R": 0,
+   "T": 81,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11207
+  },
+  {
+   "orbit": 3,
+   "records": 79,
+   "R": 0,
+   "T": 79,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11385
+  },
+  {
+   "orbit": 4,
+   "records": 58,
+   "R": 0,
+   "T": 58,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 7763
+  },
+  {
+   "orbit": 5,
+   "records": 99,
+   "R": 0,
+   "T": 99,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 15945
+  },
+  {
+   "orbit": 6,
+   "records": 55,
+   "R": 0,
+   "T": 55,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11338
+  },
+  {
+   "orbit": 7,
+   "records": 69,
+   "R": 0,
+   "T": 69,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 13514
+  },
+  {
+   "orbit": 8,
+   "records": 72,
+   "R": 0,
+   "T": 72,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 12678
+  },
+  {
+   "orbit": 9,
+   "records": 55,
+   "R": 0,
+   "T": 55,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11154
+  },
+  {
+   "orbit": 10,
+   "records": 74,
+   "R": 0,
+   "T": 74,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 15762
+  },
+  {
+   "orbit": 11,
+   "records": 79,
+   "R": 0,
+   "T": 79,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 12471
+  },
+  {
+   "orbit": 12,
+   "records": 98,
+   "R": 0,
+   "T": 98,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 16073
+  },
+  {
+   "orbit": 13,
+   "records": 52,
+   "R": 0,
+   "T": 52,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 10053
+  },
+  {
+   "orbit": 14,
+   "records": 79,
+   "R": 0,
+   "T": 79,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 12590
+  },
+  {
+   "orbit": 15,
+   "records": 59,
+   "R": 0,
+   "T": 59,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11008
+  },
+  {
+   "orbit": 16,
+   "records": 38,
+   "R": 0,
+   "T": 38,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 6547
+  },
+  {
+   "orbit": 17,
+   "records": 57,
+   "R": 0,
+   "T": 57,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 9246
+  },
+  {
+   "orbit": 18,
+   "records": 56,
+   "R": 0,
+   "T": 56,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11778
+  },
+  {
+   "orbit": 19,
+   "records": 61,
+   "R": 0,
+   "T": 61,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 10332
+  },
+  {
+   "orbit": 20,
+   "records": 53,
+   "R": 0,
+   "T": 53,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 11892
+  },
+  {
+   "orbit": 21,
+   "records": 53,
+   "R": 0,
+   "T": 53,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 7630
+  },
+  {
+   "orbit": 22,
+   "records": 89,
+   "R": 0,
+   "T": 89,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 17901
+  },
+  {
+   "orbit": 23,
+   "records": 69,
+   "R": 0,
+   "T": 69,
+   "E": 0,
+   "ride_max": 0,
+   "G_dag_sum": 18071
+  }
+ ],
+ "elapsed_s": 18.4
+}
