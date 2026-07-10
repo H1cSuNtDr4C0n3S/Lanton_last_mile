@@ -78,6 +78,19 @@ tutti 0" — l'intero residuo dinamico di Link 1 ai record e' lo stato di <= κ
 celle co-moving in un istante ricorrente. (Definitionale-deduttivo: nessun
 contenuto empirico nuovo; da' l'OGGETTO per l'attacco §107d.2.)
 
+## 107c-ter. Misura-ponte: i due obblighi sono correlati? (moderatamente)
+
+dt_burst (tempo delle ultime 6 righe) vs |R_T| sui 1638 record canonici con
+storia sufficiente: classe pericolosa <=50 (n=66) dt med **4798** vs ordinari
+**8146** (rango mediano nella distribuzione ordinaria 0,425 — shift verso il
+veloce, LIEVE); classe <=15 (n=4) dt med **3218** = 2,5x piu' veloce degli
+ordinari. Lettura onesta: la direzione predetta (le parole pericolose cavalcano
+le discese rapide, coerente con fascia/discese-rapide §99) c'e', ma e' decisa
+solo all'estremo della classe e su n minuscolo: la congiunzione (i)∧(ii) e'
+DEBOLMENTE accoppiata nel campione — il nemico non affronta i due obblighi
+sempre insieme, ma la coda estrema (dove vivono i lock) si'. Nessuna soglia
+enunciata.
+
 ## 107d. Prossimo
 
 1. (i) come domanda di ricorrenza del vocabolario: le parole a |R_T| piccolo
