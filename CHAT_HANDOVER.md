@@ -1,3 +1,22 @@
+# ============ §107 (apertura) — CLASSE PERICOLOSA quantificata, piega su γ ============
+
+**Cosa e' successo a §107a (in una riga):** |R_T(w)| sui 1639 record canonici:
+min 4 / med 302 / max 3956; classe pericolosa |R_T|<=15 = 0,2% dei record
+(4/24 orbite; <=50 = 4%, 20/24), contiene entrambi i lock (14 e 9); anche
+|R_T|=4 e' stato coperto dallo scudo. PIEGA SU γ: la falsificazione §106c.3
+(discesa perpetua costruita) o e' periodica ⇒ controesempio-γ (escluso <=40,
+gamma_enum) o e' non-periodica ⇒ α1 stessa: il bersaglio record-anchored non ha
+falsificatori costruibili a buon mercato. Stato finale della scala: Link 1 ⟸
+(i) occorrenza classe pericolosa i.o. [0,2-4%/record misurato, word-decidibile,
+non dimostrato per l'eterno] ∧ (ii) fallimento dello scudo su una di esse
+[2/82k realizzato, meccanismo §105b, vincolo §106; vie deduttive note tutte
+chiuse: serve un argomento nuovo cuneo-vs-scudo]. **Prossimo:** (i) come
+ricorrenza del vocabolario §104 legata ai rientri §98g.2; (ii) "scudo copre il
+cuneo" come stato co-moving finito (parente A1, lato-record).
+Dettagli: docs/DANGER_CLASS_ADDENDUM.md. File: alpha1/danger_class_sizes.json.
+
+# ================================================================================================
+
 # ============ §106 — TEOREMA DEL LIMITE DI VELOCITA': primo dente deduttivo sull'evitamento duale ============
 
 **Cosa e' successo a §106 (in una riga):** LEMMA DEL CUNEO (deduttivo: velocita'
