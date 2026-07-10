@@ -26,3 +26,8 @@ __pycache__/
 Thumbs.db
 .vscode/
 .idea/
+
+# Agent/plugin tooling (non research)
+.agents/
+.kilocode/
+skills-lock.json
