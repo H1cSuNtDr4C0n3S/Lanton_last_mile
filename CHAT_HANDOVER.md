@@ -10,9 +10,13 @@ falsificatori costruibili a buon mercato. Stato finale della scala: Link 1 ⟸
 (i) occorrenza classe pericolosa i.o. [0,2-4%/record misurato, word-decidibile,
 non dimostrato per l'eterno] ∧ (ii) fallimento dello scudo su una di esse
 [2/82k realizzato, meccanismo §105b, vincolo §106; vie deduttive note tutte
-chiuse: serve un argomento nuovo cuneo-vs-scudo]. **Prossimo:** (i) come
-ricorrenza del vocabolario §104 legata ai rientri §98g.2; (ii) "scudo copre il
-cuneo" come stato co-moving finito (parente A1, lato-record).
+chiuse: serve un argomento nuovo cuneo-vs-scudo]. COROLLARIO
+DELL'OR (definitionale): rigetto al record ⟺ OR dei colori del read-set ⇒ il
+lato-record ha il suo kernel co-moving finito (gemello di A1 §78); sulla classe
+pericolosa = OR di <=κ bit: il residuo dinamico di Link 1 ai record E' lo stato
+di <=κ celle co-moving a un istante ricorrente. **Prossimo:** (i) come
+ricorrenza del vocabolario §104 legata ai rientri §98g.2; (ii) l'OR-kernel
+contro lo scudo d'escursione (l'oggetto e' ora nominato).
 Dettagli: docs/DANGER_CLASS_ADDENDUM.md. File: alpha1/danger_class_sizes.json.
 
 # ================================================================================================

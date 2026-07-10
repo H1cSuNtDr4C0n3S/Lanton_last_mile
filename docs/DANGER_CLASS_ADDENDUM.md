@@ -63,6 +63,21 @@ chiuse: (ii) richiede un argomento nuovo sulla geometria del cuneo contro lo
 scudo d'escursione. (i) e' il parente record-anchored delle domande d'occorrenza
 storiche, ora su un predicato finito.
 
+## 107c-bis. COROLLARIO DELL'OR (kernel co-moving del lato-record)
+
+Dalla Dicotomia §101 (Lemmi 0-1): a un record profondo con parola w (ipotesi A),
+    **rigetto (classe T) ⟺ OR dei colori reali delle celle di R_T(w)** —
+le divergenze entro il transiente vivono SOLO sul read-set (footprint word-
+determinato, celle basse bianche gratis), e read-set tutto bianco ⇒ co-evoluzione
+fino all'onset (Teorema del Limite di Velocita' ne e' il caso garantito-vergine).
+Quindi il verdetto del record e' funzione di |R_T(w)| bit co-moving: **il
+lato-record ha il suo kernel finito, gemello del kernel-porta A1 §78 (44 celle,
+P=15) — e sulla classe pericolosa il kernel e' un OR di <= κ bit.** La parte (ii)
+della scala (107c) diventa: "a una presentazione pericolosa, quei <= κ bit sono
+tutti 0" — l'intero residuo dinamico di Link 1 ai record e' lo stato di <= κ
+celle co-moving in un istante ricorrente. (Definitionale-deduttivo: nessun
+contenuto empirico nuovo; da' l'OGGETTO per l'attacco §107d.2.)
+
 ## 107d. Prossimo
 
 1. (i) come domanda di ricorrenza del vocabolario: le parole a |R_T| piccolo
