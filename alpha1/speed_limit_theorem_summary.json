@@ -1,0 +1,32 @@
+{
+ "T1": {
+  "checked": 1622,
+  "violazioni": 0
+ },
+ "T2": {
+  "checked": 6055,
+  "violazioni": 0
+ },
+ "margine_lentezza": {
+  "min": -48,
+  "med": 79.5,
+  "neg (tutte garantite)": 446
+ },
+ "T3_episodi": [
+  {
+   "rngstate": 16989344815867729101,
+   "t": 4588,
+   "readset": 14,
+   "garantite_vergini": 0,
+   "fortunate": 14
+  },
+  {
+   "rngstate": 6149067202803567465,
+   "t": 18142,
+   "readset": 9,
+   "garantite_vergini": 0,
+   "fortunate": 9
+  }
+ ],
+ "elapsed_s": 18.5
+}

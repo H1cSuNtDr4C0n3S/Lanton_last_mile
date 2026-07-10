@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§106**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -254,7 +254,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -796,6 +796,15 @@ detrito d'escursione, spesso). Bersaglio nuovo in scala: evitamento duale — pu
 un'eterna tenere per sempre i read-set delle parole veloci nel cono visitato?
 Prossimo §106: |read-set(w)| word-decidibile sulle 1459 canoniche; cuneo
 formalizzato col Cono §87. docs/LOCK_HOLE_ADDENDUM.md.
+**AGGIORNAMENTO §106 (SPEED-LIMIT):** LEMMA DEL CUNEO + TEOREMA DEL LIMITE DI
+VELOCITA' (deduttivi: L1+Scala+Lemmi §101): read-set tutto garantito-vergine ⇒
+l'orbita cavalca; contrappositiva = vincolo di lentezza word-decidibile sulle
+eterne ai record di classe T. Terra: T2 6055 garantite 0 nere; T1 1622/1622;
+T3: i 2 lock reali = 0 garantite (fortuna, non velocita'): l'ipotesi non e'
+ancora realizzata in natura. Nemico stretto fra lentezza forzata + buchi da
+evitare (~1/40k). Prossimo §107: incompatibilita' dei due obblighi su discesa
+B-T infinita, o falsificazione costruttiva (politica lenta perpetua ⇒ bersaglio
+record-anchored falso, Link 1 fuori-record). docs/SPEED_LIMIT_ADDENDUM.md.
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del

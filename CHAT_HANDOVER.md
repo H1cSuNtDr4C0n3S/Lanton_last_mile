@@ -1,3 +1,27 @@
+# ============ §106 — TEOREMA DEL LIMITE DI VELOCITA': primo dente deduttivo sull'evitamento duale ============
+
+**Cosa e' successo a §106 (in una riga):** LEMMA DEL CUNEO (deduttivo: velocita'
+L1 + Scala/T3 ⇒ cella (x,k) visitata ⇒ |x|+k <= Delta_k eta' della riga; quindi
+|x|+k > Delta_k ⇒ garantita-vergine ⇒ sotto il seme BIANCA) + **TEOREMA DEL
+LIMITE DI VELOCITA'** (read-set del transiente tutto garantito-vergine ⇒
+d >= onset_germe ⇒ l'orbita CAVALCA; contrappositiva: a ogni record di classe T
+almeno una cella del read-set ha |x|+k <= Delta_k = **vincolo di lentezza
+deduttivo, word-decidibile, sulle eterne ai record**). Terra-check: T2 6055
+celle garantite-vergini 0 nere; T1 1622/1622 record classe T conformi, 0
+violazioni; T3 (onesta'): i 2 lock reali avevano 0 celle garantite (tutte
+fortunate) — i buchi osservati sono fortuna dello scudo, non velocita' forzata:
+l'ipotesi del teorema non e' ancora realizzata in natura. Il nemico
+shallow-forever e' ora stretto fra DUE obblighi quantificati: lentezza al
+record + evitare i buchi fortunati (~1/40k in natura). **Prossimo §107:**
+incompatibilita' dei due obblighi lungo una discesa B-T infinita, oppure
+falsificazione: costruire una politica di discesa lenta che tiene sporchi i
+read-set veloci per sempre (se esiste periodica, il bersaglio record-anchored
+e' falso e Link 1 va vinto fuori-record). Ereditati: §105b.4, §101g, §102f,
+§103d, §104f.
+Dettagli: docs/SPEED_LIMIT_ADDENDUM.md. File: alpha1/speed_limit_theorem.py.
+
+# ================================================================================================
+
 # ============ §105b — MECCANISMO DEI BUCHI: read-set piccolo nel cuneo vergine del drift ============
 
 **Cosa e' successo a §105b (in una riga):** autopsia dei 2 episodi-lock vs
