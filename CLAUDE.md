@@ -812,8 +812,9 @@ germe); LEMMA LINGUA D'APPROCCIO (enumerazione esaustiva): 671/4096 approcci-12
 realizzabili davanti a W0-fase-0 (saturo, osservate ⊆, 89 famiglie ⇒ concentrazione
 dinamica); **spettro porte ai 1639 record = spettro ingressi freschi (95,4/4,5/0,2)
 ⇒ la meta' occorrenza di Link 1 collassa su B-T; Link 1 ai record = lim sup
-[d − onset_germe] >= L0, nemico unico il rigetto-shallow perpetuo.** Pannello
-ridotto, debito dichiarato per §105 in testa. Prossimo §105: pannello blocco
+[d − onset_germe] >= L0, nemico unico il rigetto-shallow perpetuo.** Pannello:
+debito SALDATO in sessione (§104h: 30/30+20/20+25/25 costruttive, 671
+ri-enumerato, 2 esche; correzione: saturazione gia' a 1 periodo). Prossimo §105: pannello blocco
 §101-104; attacco per-parola al transiente porta-0 (~55 letture); selezione del
 vocabolario (buco-3). docs/DOOR_APPROACH_ADDENDUM.md.
 Roadmap completa:

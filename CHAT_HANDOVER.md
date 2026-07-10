@@ -14,8 +14,10 @@ micro 0,2% = IDENTICO allo spettro degli ingressi freschi §103** ⇒ **la meta'
 "occorrenza" di Link 1 collassa su B-T** (i tentativi di porta-0 sono lo stato
 generico dei record, i.o. gratis): Link 1 ai record = UNA quantita',
 lim sup [d(t) − onset_germe] >= L0, nemico unico = rigetto-shallow perpetuo
-(§101d). Verbale-sonda: pannello RIDOTTO, debito dichiarato per §105 (in testa,
-lezione §93/§94). **Prossimo §105:** pannello sul blocco §101-104; attacco
+(§101d). Verbale-sonda: pannello RIDOTTO, debito SALDATO in sessione (§104h:
+lente indipendente 30/30+20/20, ri-enumerazione 671 esatta, 25/25
+realizzazioni costruttive, 2 esche beccate; correzione: saturazione
+Lingua gia' a 1 periodo). **Prossimo §105:** pannello sul blocco §101-104; attacco
 per-parola al transiente della porta-0 dominante (~55 letture, oggetto finito):
 che cosa paga un'orbita per tenerlo sporco a ogni record? (Muro/U1 sul
 germe-porta, attenzione (v)); selezione dinamica del vocabolario (buco-3).

@@ -61,7 +61,9 @@ un oggetto della CONTINUAZIONE.
 Enumerazione esaustiva: per ognuna delle 2^12 = 4096 parole a di larghezza 12,
 realizzabilita' (virtual_walk: nessuna rilettura contraddittoria = compatibile con
 QUALCHE configurazione finita, convenzione §2) della parola `a + W0(fase 0) × 2`.
-**Esattamente 671/4096 realizzabili; 671 anche con coda × 3 (saturo a 2 periodi).**
+**Esattamente 671/4096 realizzabili; 671 anche con coda × 3. [Correzione dal
+pannello §105a: saturazione GIA' a coda × 1 — il vincolo e' interamente nel primo
+periodo.]**
 Le osservate (top-10 + canonica fascia) sono tutte dentro (gate). Fra le 671 ci
 sono **89 famiglie di suffisso-8 distinte** ⇒ il dominio dinamico osservato
 (1 famiglia all'85%) e' molto piu' stretto del cono di realizzabilita': la
@@ -109,10 +111,35 @@ transiente).
   un'enumerazione completa, non un quantile; "95,4%" e' una quota di campione,
   non una costante.
 
+## 104h. PANNELLO §105a — debito 104e SALDATO (post-verbale, stessa sessione)
+
+`alpha1/door_approach_lens.py` (+`.log`), TUTTO VERDE:
+
+- **A1 (30/30):** 30 semi freschi ricalcolati con macchinario INTERAMENTE
+  indipendente — simulatore proprio (`run_real`, quello dei 40/40 §101e),
+  rilevatore d'onset RISCRITTO (scan in avanti + estensione all'indietro),
+  riferimento `data/W0.npy` invece di `data/w0.txt` (cross-valida anche la coppia
+  di file canonici §2): onset, fase e approccio-12 bit-identici alla pipeline.
+- **A2a:** ri-enumerazione della Lingua con checker di contraddizione RISCRITTO:
+  **671/4096 esatto**.
+- **A2b (25/25):** testimoni di REALIZZAZIONE — 25 approcci realizzabili campionati,
+  configurazione finita costruita dal cammino virtuale e CORSA sul simulatore
+  indipendente: le 220 svolte riproducono `approccio + W0×2` esattamente. Il lemma
+  e' ora witness-backed (la realizzabilita' e' dimostrata per costruzione sul
+  campione, non solo dichiarata dal checker).
+- **A3 (20/20):** fasi dei germi ai record via footprint dalla griglia reale
+  (lente §101): coda periodica verificata + fase coincidente.
+- **Esche:** E1 riferimento ruotato di 1 ⇒ fase diversa (beccata); E3-v2 coda con
+  1 bit di W0 corrotto ⇒ conteggio 0 ≠ 671 (beccata). E3-v1 (coda a 1 periodo,
+  attesa "piu' lasca") NON e' un'esca: misurato 671 anche a 1 periodo ⇒ promossa a
+  misura e **correzione a 104c: la saturazione e' gia' al primo periodo** —
+  istanza del corollario (cc): un'esca che non puo' fallire va promossa o
+  sostituita, mai contata come esca.
+
 ## 104f. Domande aperte / programma §105
 
-1. **Pannello sul blocco §101–104** (debito 104e): lente indipendente su
-  approcci/fasi/lingua; esche su door_approach_census.
+1. ~~Pannello sul blocco §102–104~~ **SALDATO in sessione (104h)**; il blocco
+  §101 aveva gia' il suo pannello (§101e).
 2. **Il nemico unico:** rigetto-shallow perpetuo. Ora che l'occorrenza e'
   collassata, l'attacco giusto e' per-parola sulla classe dominante: il transiente
   della porta-0 con approccio `RLRRLRRRRLLL` (onset 55: ~55 letture, oggetto
