@@ -1,3 +1,27 @@
+# ============ §105b — MECCANISMO DEI BUCHI: read-set piccolo nel cuneo vergine del drift ============
+
+**Cosa e' successo a §105b (in una riga):** autopsia dei 2 episodi-lock vs
+controlli same-seed (macchinario indipendente §101e): il lock ai record =
+**(H3) read-set del transiente MINUSCOLO** (9/14 celle vs 454/931 dei controlli)
+**∧ (H1) read-set nel CUNEO VERGINE del drift laterale** (drift_x=−6 in entrambi;
+mai-visitate 9/9 e 13/14; controlli: 130/288 nere, scalinata a dmin 0) con
+**(H2) consumo a catena** (1 cella dell'episodio A ripulita 102 passi prima dal
+tentativo del record precedente — Lemma 3 in azione). FALSIFICATO il filo-del-
+rasoio della scalinata: colpevoli di divergenza = pose vecchie solo 10% (44%
+entro cheb 1, n=120): lo scudo e' detrito generale d'escursione, SPESSO — per
+questo i lock sono rari. Forma finale del problema (bersaglio nuovo della scala):
+**puo' un'eterna scegliere per sempre le proprie svolte cosi' che ogni parola
+veloce presentata ai record guardi nel cono visitato?** — evitamento su oggetti
+finiti (read-set delle veloci), duale della vietanza del Muro. **Prossimo §106:**
+|read-set(w)| per le 1459 parole canoniche (predicato word-decidibile, niente
+quantili); "read-set ⊆ cuneo" formalizzato col Lemma del Cono §87 (candidato:
+lock possibile sse il read-set attraversa il fronte del cono passato); l'enunciato
+di evitamento duale in scala. Pannelli: nessun debito (§101e, §104h; §105b usa
+solo strumenti gia' pannellati). Ereditati: §101g, §102f, §103d, §104f.
+Dettagli: docs/LOCK_HOLE_ADDENDUM.md. File: alpha1/lock_hole_autopsy.py.
+
+# ================================================================================================
+
 # ============ §104 — DOOR-APPROACH: vocabolario canonico, Lingua d'Approccio (lemma), spettro dei tentativi ai record ============
 
 **Cosa e' successo a §104 (in una riga):** (1) l'approccio alla porta-0 e' un
