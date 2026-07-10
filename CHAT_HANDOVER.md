@@ -17,10 +17,19 @@ lim sup [d(t) − onset_germe] >= L0, nemico unico = rigetto-shallow perpetuo
 (§101d). Verbale-sonda: pannello RIDOTTO, debito SALDATO in sessione (§104h:
 lente indipendente 30/30+20/20, ri-enumerazione 671 esatta, 25/25
 realizzazioni costruttive, 2 esche beccate; correzione: saturazione
-Lingua gia' a 1 periodo). **Prossimo §105:** pannello sul blocco §101-104; attacco
+Lingua gia' a 1 periodo). **Prossimo §105:** attacco
 per-parola al transiente della porta-0 dominante (~55 letture, oggetto finito):
 che cosa paga un'orbita per tenerlo sporco a ogni record? (Muro/U1 sul
 germe-porta, attenzione (v)); selezione dinamica del vocabolario (buco-3).
+[Pannello §101-104: gia' saldato — §101e in-sessione + §104h.] AVVISO per
+l'attacco (analisi di fine sessione): il nemico e' PIU' FORTE di come appare —
+la scala si rifornisce DA SOLA: ogni lettura di record dipinge nera la propria
+posa (fresca bianca => R => nera) e la scalinata delle pose vecchie ricade
+nelle palle vicine dei record successivi (e' l'origine del min_lag med 0 §98 e
+della colpevole-di-discesa 88,2%): il rigetto-shallow non e' camping costoso,
+e' il DEFAULT della discesa. L'attacco deve quantificare quando la scalinata
+MANCA il read-set del transiente (i 2 episodi-lock §101 = esattamente quei
+buchi), non presumere scarsita'.
 Ereditati: §101g, §102f, §103d, rientri §98g.2, scia §98g.3, separatori §97,
 fuggenti vs nere-D>=400, retro-nota §91c.3, stress-2 bianche, h1=1.
 Dettagli: docs/DOOR_APPROACH_ADDENDUM.md. File: alpha1/door_approach_census.py,
