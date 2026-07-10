@@ -1,3 +1,37 @@
+# ============ §107c — RAGGIO DEL DEPOSITO: reach per-cella, chiusura dell'orizzonte, sigma sul vocabolario ============
+
+**Cosa e' successo a §107c (in una riga):** strada P1a scelta con confronto a
+due round vs secondo Fable (riparazioni: gate sul GAP vs matched, tripla
+anti-ri-descrizione, fallback costi, lente esterna a inizio sessione).
+Motore C 10-11 ns/nodo (51G nodi in 37 s, 14 shard), validazione totale
+(R0/R0b/R1/RG bit-identici + lente esterna 17/17+15/15 + R2 C-vs-Python
+completo + R2-profondo + somma shard == Python a L=24): **l'orizzonte di
+raggiungibilita' CHIUDE** — tutte le celle di R_T raggiungibili entro
+d_hit ≤ 48 (A) / ≤ 36 (B); R3 preregistrato esito misto (LOCKA (−2,1) ancora
+irraggiungibile a 44, cade a 48; LOCKB zero gia' a 36) ⇒ la lettura forte di
+§107b ("bit antichi" = irraggiungibilita') era in parte artefatto del cap
+(trappola nuova **ss**); i fatti stabili: **TRIPLA per cella** e traduzione
+deduttiva **"colore deciso da pittura ≥ d_hit+101 passi"** (raggio esatto del
+deposito: 137-149 A, 117-137 B, salvo 2 recenti note); **GAP gate
+preregistrato REGGE** senza censure (R_T med 32 vs matched 24 su A — matched
+alto: l'ombra e' della regione-cuneo, R_T estrema dentro; 12 vs 4 su B);
+**il passato REALE non legge MAI R_T fino al seme** (13/14 a 4.487, 9/9 a
+18.041 = cuneo vergine §105b riprodotto) ⇒ divario albero-48/dinamica-MAI =
+quantita' esatta che (ii) deve spiegare (istanza c: d_hit non e' un fatto
+dinamico). **P2 vocabolario intero**: 1459/1459 esatte a D=22 (zero troncate,
+regressione 66/66): sigma=1 esatto 71 (4,9%) ⇒ riduzione di (i) per
+dominanza-sicura MORTA; sigma≤0.01 = 59 (4,0%) **concentrate in |R_T| 16-50**
+(23/62=37%), non nella banda minima; grosse quasi-sicure (med 1.0000) ma
+quasi mai esatte. **Prossimo §107d:** P1b (Cono §87 vs cuneo, coi d_hit come
+budget); F3 calibrazione preregistrata (join `sigma_vocab_perword` × colori
+griglia §106, episodi, no soglie); reach sulle 59 sigma≈0 (economico in C);
+F1 ereditata. Ereditati: §106c, §105b.4, §101g, §102f, §103d, §104f.
+Dettagli: docs/DANGER_REACH_ADDENDUM.md. File: alpha1/danger_reach_depth.py,
+danger_reach.c (+exe), danger_reach_c_driver.py, reach_lens_external.py,
+danger_sigma_vocab.py (+agg), danger_reach_real.py (+json).
+
+# ================================================================================================
+
 # ============ §107b — SCUDO ANTICO: autopsia all'indietro della classe pericolosa ============
 
 **Cosa e' successo a §107b (in una riga):** strada scelta con confronto a due
@@ -1866,27 +1900,33 @@ bite-stall e' LIMITATO ~303 su tutte le orbite (non cresce 1e4->1e5) ⇒ quantit
 stallo crescente di #30 (~1e4, probabile buchi nero-fuori-finestra); il bite rate su (7,-7) e' 0.20
 sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata; tornare a δ_r/§78.
 
-## C. Roadmap (aggiornata a §107b; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
+## C. Roadmap (aggiornata a §107c; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
 
-**Stato della scala (§107c):** Link 1 (record-anchored, sufficiente) ⟸
+**Stato della scala (§107d):** Link 1 (record-anchored, sufficiente) ⟸
 (i) occorrenza della classe pericolosa i.o. [|R_T|<=κ; misurato 0,2-4%/record,
-word-decidibile, NON dimostrato per l'eterno] ∧ (ii) fallimento dello scudo su
-una presentazione pericolosa [2/82k realizzato; meccanismo §105b; vincolo di
-lentezza deduttivo §106]. La piega su γ (§107b) chiude i falsificatori
-costruibili a buon mercato: negazione o γ-falsa (<=40) o α1-completa.
+word-decidibile, NON dimostrato per l'eterno; mappa σ≈0 = 59+2 parole, banda
+16-50] ∧ (ii) fallimento dello scudo su una presentazione pericolosa [2/82k
+realizzato; meccanismo §105b; vincolo di lentezza §106; forma esatta §107c:
+VERGINITA' PERPETUA del cuneo — l'albero dei prepend raggiunge ogni cella di
+R_T entro 48 passi, la dinamica reale MAI fino al seme]. La piega su γ (§107a)
+chiude i falsificatori costruibili a buon mercato.
 
 Priorita':
-1. **(ii) il DEPOSITO ANTICO nel cuneo (§107b.8) — fronte principale.** Dopo §107b
-   l'oggetto e' preciso: ai record pericolosi σ≈0 il verdetto = OR di <=κ bit
-   co-moving decisi dal passato > D+K passi (bit antichi). Attacco: profondita'
-   minima di raggiungibilita' per cella; "scudo antico copre il cuneo" col Lemma
-   del Cono §87 (livello pre-storia, non parola). Vie gia' chiuse (NON riaprire):
-   ledger/bilancio (n), filo-di-rasoio (§105b), solitudine (v), zona-piccola (§97),
-   discriminante word-side di (ii) (§107b: i lock non sono estremi in σ).
-2. **(i) ricorrenza ristretta alla sottoclasse σ≈0.** σ_D sul vocabolario intero
-   (quota parole deduttivamente sicure σ=1); le parole a |R_T| piccolo vs firma
-   d'approccio §104; presentazione ai record legata ai rientri della Scala
-   (§98g.2: geometria dei rientri, R−L=ΔB §96, rotore §77, coda lunga §79).
+1. **(ii) la pittura dinamica del cuneo — fronte principale.** Dopo §107c
+   l'oggetto e' il divario albero-48/dinamica-MAI: perche' il rifornimento
+   della Scala (§98/§104, min_lag 0) non arriva mai nel cuneo del drift?
+   Attacco: P1b = "scudo antico copre il cuneo" col Lemma del Cono §87
+   (fronte del cono passato vs R_T, d_hit come budget per-cella); F3
+   calibrazione preregistrata (§107c.5: join sigma_vocab_perword × colori di
+   griglia §106 sul canonico, EPISODI, nessuna soglia). Vie gia' chiuse (NON
+   riaprire): ledger/bilancio (n), filo-di-rasoio (§105b), solitudine (v),
+   zona-piccola (§97), discriminante word-side di (ii) (§107b),
+   irraggiungibilita'-d'albero come deposito (§107c, trappola ss).
+2. **(i) ricorrenza ristretta alla sottoclasse σ≈0** (ora mappata: 59
+   canoniche + 2 lock, concentrata |R_T| 16-50 — P2 §107c). Reach sulle 59
+   (economico, motore C): il gap R_T>matched e' dei lock o della sottoclasse?
+   Parole σ≈0 vs firma d'approccio §104; presentazione ai record legata ai
+   rientri della Scala (§98g.2, R−L=ΔB §96, rotore §77, coda lunga §79).
 3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
    infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
    micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).
@@ -1955,5 +1995,9 @@ Priorita':
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§107b** (continuazione §107; §108 se fronte nuovo), stesso stile.
+- Reach §107c: `C:\Python\Python310\python.exe alpha1\danger_reach_depth.py --depth-a 44 --depth-b 36`
+  (gate R0/R0b/R1/RG); motore C: `gcc -O2 -o alpha1\danger_reach.exe alpha1\danger_reach.c` poi
+  `... alpha1\danger_reach_c_driver.py --lock A --depth 55 [--r2]` (sharding prefissi, somme==Python);
+  P2: `... alpha1\danger_sigma_vocab.py --shard i --nshards 14` + `danger_sigma_vocab_agg.py`.
+- Verbale prossima sessione: **§107d** (continuazione §107; §108 se fronte nuovo), stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

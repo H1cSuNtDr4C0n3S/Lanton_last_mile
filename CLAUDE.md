@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107c**; §108 se fronte nuovo).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107d**; §108 se fronte nuovo).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -245,6 +245,18 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       (hh)/(oo). Corollario (istanza di pp): un criterio di gate calcolato su una
       distribuzione DEGENERE (moda >96%) spara spurio; controllare la
       degenerazione prima del verdetto.
+  (ss) **l'irraggiungibilita' a cap e' un negativo con data di scadenza**
+      (DANGER-REACH §107c): "cella irraggiungibile da ogni passato di
+      profondita' <=D" non e' un fatto strutturale finche' il fenomeno non
+      CHIUDE (tutti i d_hit finiti) o il cap non e' spinto alla chiusura —
+      i 12/14 e 5/9 "bit antichi" di §107b a D=28 sono scesi a 0 a D=55/48.
+      Fatti stabili: la TRIPLA (D_geo, d_hit, gap vs baseline matched) e la
+      traduzione per-cella "deciso a >= d_hit+K passi". E' la (qq) sulle
+      soglie di PROFONDITA', gemella di (h)/(bb) sui cap. Corollario
+      (istanza di c): i d_hit dell'albero NON predicono la dinamica (il
+      passato reale dei lock non tocca a 4k-18k passi cio' che l'albero
+      tocca a 16-48): l'albero serve per i negativi e per i budget, mai
+      per prevedere quando qualcosa succede davvero.
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -263,7 +275,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -836,6 +848,23 @@ estremi (24/66 a σ<=0.01) ⇒ (ii) senza discriminante word-side: fallimento
 scudo = proprieta' della pre-storia antica (deposito antico nel cono del
 drift). Prossimo: raggiungibilita' minima per cella; σ_D sul vocabolario
 intero; scudo antico vs Cono §87. docs/DANGER_BACKWARD_ADDENDUM.md.
+**AGGIORNAMENTO §107c (RAGGIO DEL DEPOSITO):** P1a eseguita (2 round vs secondo
+Fable; lente esterna a inizio sessione, gate sul GAP vs matched, tripla
+anti-ri-descrizione). Motore C 10-11 ns/nodo (51G nodi/37 s), validazione
+totale (R0/R0b/R1/RG + lente 17/17+15/15 + R2 completo + R2-profondo + somme
+shard). **L'orizzonte CHIUDE**: tutte le celle di R_T raggiungibili entro
+d_hit<=48 (A)/<=36 (B) ⇒ "bit antichi=irraggiungibili" di §107b in parte
+artefatto del cap (trappola ss); fatti stabili: TRIPLA per cella + "colore
+deciso da pittura >= d_hit+101 passi" (raggio esatto 137-149 A / 117-137 B);
+GAP gate preregistrato REGGE (32 vs 24 A — ombra in gran parte della
+regione-cuneo; 12 vs 4 B, zero censure); **il passato reale non legge MAI R_T
+fino al seme** (13/14 e 9/9; = cuneo vergine §105b) ⇒ (ii) = verginita'
+perpetua, oggetto = divario albero-48/dinamica-MAI. P2: 1459/1459 esatte a
+D=22 (zero troncate, regressione 66/66): σ=1 esatto 71 (4,9%) ⇒ riduzione di
+(i) per dominanza-sicura MORTA; σ<=0.01 = 59 (4%) concentrate |R_T| 16-50
+(37% della banda). Prossimo §107d: Cono §87 vs cuneo (d_hit come budget), F3
+calibrazione (join sigma_vocab_perword × griglia §106), reach sulle 59 σ≈0.
+docs/DANGER_REACH_ADDENDUM.md.
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del

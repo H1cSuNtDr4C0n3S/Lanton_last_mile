@@ -7,23 +7,9 @@
   "assumeW": 151,
   "assumeB": 151
  },
- "entropy_full": 0.759447957814213,
- "entropy_noassumeB": -1.6017132519074588e-16,
- "entropy_iters": {
-  "full": 139,
-  "noB": 50
- },
+ "entropy_full": 0.7594479578142133,
+ "entropy_noassumeB": 0.0,
  "recurrent_sccs_noB": 8,
- "recurrent_sizes": [
-  6,
-  12,
-  12,
-  12,
-  12,
-  12,
-  12,
-  15
- ],
  "all_rotors": true,
  "cycle_words": [
   "LLRRRR",
@@ -35,11 +21,5 @@
   "LLRRRRLLRRRR": "B-T (drift nullo => limitato)",
   "LLLLRLRRRRLRRRR": "B-T (rot=3 non mult. 4 => limitato)"
  },
- "rotor_max_powers": {
-  "LLRRRR": 2,
-  "LLRRRRLLRRRR": 1,
-  "LLLLRLRRRRLRRRR": 4
- },
- "builder": "C (window_build.c)",
- "seconds": 0.016669511795043945
+ "seconds": 0.07200145721435547
 }

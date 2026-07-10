@@ -1,0 +1,145 @@
+{
+ "tag": "LOCKA_d36",
+ "lock": "A",
+ "depth": 36,
+ "shard_depth": 24,
+ "nprocs": 14,
+ "nodi_totali_C": 911633,
+ "r2": true,
+ "convenzione": "og dal record (asse assoluto og+101); profondita' in passi; d_hit SOVRA",
+ "nodi_per_depth": {
+  "0": 1,
+  "1": 2,
+  "2": 2,
+  "3": 2,
+  "4": 2,
+  "5": 2,
+  "6": 2,
+  "7": 2,
+  "8": 2,
+  "9": 2,
+  "10": 2,
+  "11": 2,
+  "12": 3,
+  "13": 5,
+  "14": 8,
+  "15": 12,
+  "16": 18,
+  "17": 32,
+  "18": 55,
+  "19": 89,
+  "20": 143,
+  "21": 231,
+  "22": 377,
+  "23": 614,
+  "24": 998,
+  "25": 1624,
+  "26": 2614,
+  "27": 4292,
+  "28": 7023,
+  "29": 11489,
+  "30": 18477,
+  "31": 30371,
+  "32": 49863,
+  "33": 81817,
+  "34": 131475,
+  "35": 216168,
+  "36": 355422
+ },
+ "tripla_rt": {
+  "(-6, 2)": {
+   "D_geo": 11,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-6, 3)": {
+   "D_geo": 12,
+   "D_exh": 36,
+   "d_hit_sovra": 36
+  },
+  "(-5, 1)": {
+   "D_geo": 9,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-5, 2)": {
+   "D_geo": 10,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-5, 3)": {
+   "D_geo": 9,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-4, 1)": {
+   "D_geo": 8,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-4, 2)": {
+   "D_geo": 7,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-4, 3)": {
+   "D_geo": 8,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-3, 1)": {
+   "D_geo": 9,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-3, 2)": {
+   "D_geo": 6,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-3, 6)": {
+   "D_geo": 6,
+   "D_exh": 36,
+   "d_hit_sovra": 26
+  },
+  "(-2, 1)": {
+   "D_geo": 8,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  },
+  "(-1, 5)": {
+   "D_geo": 1,
+   "D_exh": 36,
+   "d_hit_sovra": 1
+  },
+  "(0, 2)": {
+   "D_geo": 7,
+   "D_exh": 36,
+   "d_hit_sovra": null
+  }
+ },
+ "irraggiungibili_esaustive": 11,
+ "gap_rt_mediana": "cens",
+ "gap_rt_n": 14,
+ "gap_rt_cens": 11,
+ "gap_matched_mediana": 24,
+ "gap_matched_n": 31,
+ "gap_matched_cens": 4,
+ "first_hit_anchor_rt": {
+  "(-6, 2)": null,
+  "(-6, 3)": 36,
+  "(-5, 1)": null,
+  "(-5, 2)": null,
+  "(-5, 3)": null,
+  "(-4, 1)": null,
+  "(-4, 2)": null,
+  "(-4, 3)": null,
+  "(-3, 1)": null,
+  "(-3, 2)": null,
+  "(-3, 6)": 26,
+  "(-2, 1)": null,
+  "(-1, 5)": 1,
+  "(0, 2)": null
+ },
+ "elapsed_s": 2.0
+}

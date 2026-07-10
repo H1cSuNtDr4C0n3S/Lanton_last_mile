@@ -31,3 +31,7 @@ Thumbs.db
 .agents/
 .kilocode/
 skills-lock.json
+
+alpha1/reach_jobs/
+alpha1/sigma_vocab_shard*.jsonl
+alpha1/sigma_vocab_shard*.log

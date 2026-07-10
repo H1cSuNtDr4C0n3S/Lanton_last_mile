@@ -1,0 +1,113 @@
+{
+ "nota": "d_real = prima lettura all'indietro del passato REALE (n=1 per episodio, descrittivo); d_hit = minimo SOVRA dell'albero; profondita' in passi dal bordo di w",
+ "episodi": [
+  {
+   "label": "LOCKA",
+   "t": 4588,
+   "profondita_reale": 4487,
+   "celle": {
+    "(-6, 2)": {
+     "d_hit_sovra": 39,
+     "d_real": null
+    },
+    "(-6, 3)": {
+     "d_hit_sovra": 36,
+     "d_real": null
+    },
+    "(-5, 1)": {
+     "d_hit_sovra": 41,
+     "d_real": null
+    },
+    "(-5, 2)": {
+     "d_hit_sovra": 38,
+     "d_real": null
+    },
+    "(-5, 3)": {
+     "d_hit_sovra": 37,
+     "d_real": null
+    },
+    "(-4, 1)": {
+     "d_hit_sovra": 40,
+     "d_real": null
+    },
+    "(-4, 2)": {
+     "d_hit_sovra": 39,
+     "d_real": null
+    },
+    "(-4, 3)": {
+     "d_hit_sovra": 40,
+     "d_real": null
+    },
+    "(-3, 1)": {
+     "d_hit_sovra": 41,
+     "d_real": null
+    },
+    "(-3, 2)": {
+     "d_hit_sovra": 42,
+     "d_real": null
+    },
+    "(-3, 6)": {
+     "d_hit_sovra": 26,
+     "d_real": null
+    },
+    "(-2, 1)": {
+     "d_hit_sovra": 48,
+     "d_real": null
+    },
+    "(-1, 5)": {
+     "d_hit_sovra": 1,
+     "d_real": 1
+    },
+    "(0, 2)": {
+     "d_hit_sovra": 43,
+     "d_real": null
+    }
+   },
+   "mai_lette": 13
+  },
+  {
+   "label": "LOCKB",
+   "t": 18142,
+   "profondita_reale": 18041,
+   "celle": {
+    "(-7, 1)": {
+     "d_hit_sovra": 29,
+     "d_real": null
+    },
+    "(-7, 2)": {
+     "d_hit_sovra": 26,
+     "d_real": null
+    },
+    "(-6, 1)": {
+     "d_hit_sovra": 28,
+     "d_real": null
+    },
+    "(-6, 2)": {
+     "d_hit_sovra": 27,
+     "d_real": null
+    },
+    "(-5, 1)": {
+     "d_hit_sovra": 29,
+     "d_real": null
+    },
+    "(-5, 2)": {
+     "d_hit_sovra": 30,
+     "d_real": null
+    },
+    "(-4, 1)": {
+     "d_hit_sovra": 36,
+     "d_real": null
+    },
+    "(-4, 5)": {
+     "d_hit_sovra": 16,
+     "d_real": null
+    },
+    "(-1, 1)": {
+     "d_hit_sovra": 33,
+     "d_real": null
+    }
+   },
+   "mai_lette": 9
+  }
+ ]
+}

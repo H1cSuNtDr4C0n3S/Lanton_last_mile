@@ -1,0 +1,60 @@
+{
+ "n_censimento": 1459,
+ "n_misurate_esatte": 1459,
+ "n_non_definite": 0,
+ "n_errori": 0,
+ "regressione_107b_ok": true,
+ "sigma1_esatto_tot": 71,
+ "sigma_le_001_tot": 59,
+ "bande": [
+  {
+   "banda": "<=15",
+   "n": 4,
+   "sigma1_esatto": 0,
+   "sigma_le_001": 1,
+   "sigma_med": 0.902439,
+   "cap_med": 7740,
+   "irr_gt0": 3
+  },
+  {
+   "banda": "16-50",
+   "n": 62,
+   "sigma1_esatto": 4,
+   "sigma_le_001": 23,
+   "sigma_med": 0.065517,
+   "cap_med": 23336,
+   "irr_gt0": 61
+  },
+  {
+   "banda": "51-100",
+   "n": 158,
+   "sigma1_esatto": 6,
+   "sigma_le_001": 17,
+   "sigma_med": 0.806137,
+   "cap_med": 19588,
+   "irr_gt0": 156
+  },
+  {
+   "banda": "101-300",
+   "n": 513,
+   "sigma1_esatto": 26,
+   "sigma_le_001": 13,
+   "sigma_med": 0.999705,
+   "cap_med": 28858,
+   "irr_gt0": 513
+  },
+  {
+   "banda": "301+",
+   "n": 722,
+   "sigma1_esatto": 35,
+   "sigma_le_001": 5,
+   "sigma_med": 0.999956,
+   "cap_med": 25364,
+   "irr_gt0": 722
+  }
+ ],
+ "depth": 22,
+ "convenzione": "sigma=1 esatto = rigetto garantito a ogni record che presenta la parola, a profondita' D=22 dichiarata; og dal record (asse assoluto og+101)",
+ "non_definite": [],
+ "errori": []
+}
