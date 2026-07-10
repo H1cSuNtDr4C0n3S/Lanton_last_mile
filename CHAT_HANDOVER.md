@@ -1831,73 +1831,40 @@ bite-stall e' LIMITATO ~303 su tutte le orbite (non cresce 1e4->1e5) ⇒ quantit
 stallo crescente di #30 (~1e4, probabile buchi nero-fuori-finestra); il bite rate su (7,-7) e' 0.20
 sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata; tornare a δ_r/§78.
 
-## C. Roadmap (priorita' prossima sessione §78)
-1. **DECLASSATA: α1-come-pavimento-del-morso-fresco.** Misurata, erode (B.3). Non riaprire come
-   liminf-che-decade da rincorrere via simulazione: stesso muro del controfattuale eterno (CLAUDE.md §1-i).
-2. **FATTO §64: modello vettoriale.** Dominante 45-77, 98-99 necessario, due periodi quasi ma
-   non totalmente sufficienti.
-3. **FATTO §64 (prima passata): compressione del vettore.** 37 offset / 66 componenti mantengono
-   la diagonale nel campione lungo, ma non localizzano geometricamente la checklist.
-4. **FATTO §65: non-localita' campionaria della checklist.** T3' e' il verdetto esatto e legge
-   celle lontane lungo il canale; questo falsifica il troncamento corto, ma non e' ancora un
-   teorema dinamico.
-5. **FATTO §70-a: schema T3'/co-raggiungibilita'.** Non sovra-investire sulla sola
-   non-localita' sintattica: il peso vero e' la realizzabilita' delle coppie discriminanti da
-   storie finite/campi raggiungibili.
-6. **FATTO §66: `door-defect profile` sui lock.** La fase reale e' best unica 810/810; le
-   fasi compatibili alternative muoiono entro 5 letture. Utile controllo, ma troppo condizionato
-   per essere l'invariante globale.
-7. **FATTO §67: candidati `Φ_depth`/`Φ_mass` e scanner segmentale.** I candidati naturali
-   endpoint-monotoni sono falsificati: gate `L=1600` viola ~49-52%, grid ~50-57%.
-8. **FATTO §68: no-go locale per `Φ` endpoint-monotoni finiti.** Prima morte, massa pesata,
-   best22 e deficit finiti non forniscono decremento endpoint netto sotto deep-black. Non riaprire
-   la stessa famiglia cambiando solo `λ` o troncamento.
-9. **FATTO §69: formulare e chiudere `Φ_compat^L` endpoint.** Non massa del detrito:
-   distanza-prefix dalla compatibilita' con una delle 22 porte. Endpoint = `best22_depth`, quindi
-   falsificato come monotonia netta.
-10. **FATTO §70-b: test pre/post evento `Φ_compat`.** `h_best` non migliora in **357/600**
-   eventi deep-black e peggiora in **259/600**: la monotonia immediata ingenua e' chiusa.
-11. **FATTO §71: scanner di coppie co-raggiungibili.** Witness empirico dinamico a `R=8`
-   trovato. Interpretazione conservativa: solo non-vacuita' dello schema; `R=16` zero-collisioni
-   e' sparsita' combinatoria, non confine strutturale.
-12. **FATTO §72: profilo `L∞` raw + co-moving.** Sui 786 fallimenti reali, il raggio grezzo
-   cresce fino a `L∞=36`, ma sottraendo il drift W0 fase-dipendente collassa a `L∞<=9`.
-13. **FATTO §73: pass-rate classi co-moving.** Le classi top non sono sabotaggi deterministici:
-   130/131 classi passano almeno una volta e sono miste pass/fail; la top class fa 4224/4710 pass.
-14. **FATTO §74: no-go GF(2) shallow.** Fase 0 all ha rango 138/187 (nullita' 49) con
-   abbastanza righe e senza colonne banali: dipendenze reali, ma liberta' residua enorme e nessuna
-   pressione UNSAT. I batch profondi sono sample-limited oppure quasi-W0/circolari.
-15. **FATTO §75: gate-zero GA/no-entry FAIL.** `A0(r,K,D0)` non determina T3' per `r<=8`,
-   `K=80`, `D0=80`; nessuna SCC va classificata su questa astrazione.
-16. **PRIORITA' §78: definire A1 o propagare unknown** (la PRIORITA' §76 originaria, ancora non
-   affrontata: le sessioni §76-§77 sono state rami laterali di mappatura, vedi B.21/B.22).
-   Non aumentare `r` a caso. Rendere T3'
-   funzione dello stato tramite celle/proof object, oppure mantenere gli stati fuori-patch come
-   `unknown` e certificare solo cio' che non dipende da loro.
-17. **Se si cerca ancora un potenziale, deve cambiare forma.** Ammessi solo: compatibilita'
-   event-wise/amortizzata, memoria/credito tra segmenti, codominio discreto/ben fondato con
-   certificato, oppure potenziale globale del campo di detriti non leggibile da endpoint consecutivi.
-18. **Invariante globale del campo di detriti.** La domanda precisa: puo' un'orbita
-   eterna mantenere tutte le checklist sbagliate per sempre? Ora e' un problema qualitativo di
-   raggiungibilita'/evitamento, non un tasso: riapre strumenti combinatori/topologici se formulati
-   su questo livello.
-19. **Campione baseline piu' ampio (secondario ma utile).** Usarlo come stress-test anti-overfitting
-   della stabilita' delle componenti §64/§67, non come strada concettuale autonoma per decidere α1.
-20. **Consolidamento (alternativa legittima).** Il locale sigillato, γ≤40, finestra r=4, prodotto sound
-   sono teoremi: scrivibili come contributo a sé (riduzione a α1∧β∧γ + macchina) senza chiudere il crux.
-21. **Coda PRODOTTO §56 (se si torna sul fronte certificazione):** rimozione cicli B-T nel prodotto
-   (ostacolo A) e memoria temporale compatta (ostacolo B); poi r=4 ibrida δ^alt parziale.
-22. **r=5 e γ esteso (42–52): SOLO dopo** — direttiva invariata.
-23. **FATTO §76 (ramo laterale): mappatura della bocca.** Mappa inversa verificata (round-trip
-   esatto), germi minimi per le 22 porte (min 13 celle, fasi 0/103, onset 0), frontiere Q1
-   (b1->310 ... b13->0; "veloce=>complesso" falsificato) e Q2 (2 celle -> dist 0). Raffina
-   l'enunciato di Link 1 (germe critico concreto), non lo dimostra: tutto interno al bacino.
-   Domanda aperta ereditata: pavimento f(b) dell'onset per supporto b? Dettaglio: B.21 + §76.
-24. **FATTO §77 (ramo laterale): geometria stalli morso = rotor-router.** Stalli area-filling
-   (bbox~len^0.767), molteplicita' ~1.57, su detrito vecchio; la formica e' un rotor-router walk
-   (cella = rotore 2 stati), NON abeliano (uscita heading-dipendente). Uccide "automa raggio fisso
-   limita stalli". Livello morso (declassato), non α1. Possibile via: `N(t)>=C·t^{2/3}` da range
-   rotor-router. TEST ESEGUITO: non-abeliano netto (escape 303/1109/1/1135). PROVA DI VIABILITA' §77.7: tira CONTRO (esponente di fuga deriva su, attraversa 1.5; bite-stall LIMITATO ~303, quantita' diversa da #30; bite rate 0.20 sano non erode). Decisione: non priorita' immediata, tornare a δ_r/§78. Dettaglio: B.22 + §77.
+## C. Roadmap (aggiornata a §107a; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
+
+**Stato della scala (§107c):** Link 1 (record-anchored, sufficiente) ⟸
+(i) occorrenza della classe pericolosa i.o. [|R_T|<=κ; misurato 0,2-4%/record,
+word-decidibile, NON dimostrato per l'eterno] ∧ (ii) fallimento dello scudo su
+una presentazione pericolosa [2/82k realizzato; meccanismo §105b; vincolo di
+lentezza deduttivo §106]. La piega su γ (§107b) chiude i falsificatori
+costruibili a buon mercato: negazione o γ-falsa (<=40) o α1-completa.
+
+Priorita':
+1. **(ii) cuneo-vs-scudo (§107d.2) — fronte principale.** Formalizzare "lo scudo
+   d'escursione copre il cuneo del drift" come proprieta' di stato co-moving finito.
+   Oggetto nominato: l'OR-kernel del lato-record (§107c-bis, gemello del kernel-porta
+   A1 §78): il residuo dinamico di Link 1 ai record = OR di <=κ bit co-moving a un
+   istante ricorrente. Vie deduttive gia' chiuse (NON riaprire): ledger/bilancio
+   (trappola n), scalinata a filo-di-rasoio (falsificata §105b), solitudine
+   (trappola v), zona-piccola/OUT-libero (§97). Serve argomento NUOVO.
+2. **(i) ricorrenza del vocabolario (§107d.1).** Le parole a |R_T| piccolo vs firma
+   d'approccio §104 (porta-0, vocabolario canonico, buco-3); presentazione ai record
+   legata ai rientri della Scala (§98g.2: geometria dei rientri, R−L=ΔB §96,
+   rotore §77, coda lunga §79).
+3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
+   infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
+   micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).
+4. **Consolidamento (alternativa legittima, invariata).** Locale sigillato, γ<=40,
+   finestra r=4, prodotto sound, U1/Muro, Scala, Cuneo/Limite di Velocita' sono
+   teoremi: scrivibili come contributo a se' (riduzione a α1∧β∧γ + macchina)
+   senza chiudere il crux.
+5. **Code di fronti sospesi (solo se si torna sul fronte):** PRODOTTO §56 ostacoli
+   A/B; r=5 e γ esteso 42-52 SOLO dopo; U2: fuggenti nuove vs nere-D>=400,
+   retro-nota §91c.3, stress-2 bianche, h1=1; separatori §97 (a)/(b).
+6. **Regole di enunciato (permanenti):** niente nuove soglie fuori da
+   preregistrazioni complete (trappola qq); ammessi deduttivi /
+   condizionali-dichiarati / esistenziali; tassi per EPISODI, non per record.
 
 ## D. Domande aperte in coda (oltre la roadmap)
 1. Checklist beta sui lock delle orbite lunghe: ponte locale confermato, mixing locale, geometria
@@ -1953,5 +1920,5 @@ sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata;
   sull'output o `until grep` che ESCE.
 - Trappole cumulative: CLAUDE.md §1 (a–i) + RADIUS §50/§54.4/§55.2 + PRODOTTO §56.6 +
   **ALPHA1 §57.7** (reset-hash per-seme; survivorship temporale; controfattuale eterno; apofenia π·10⁵).
-- Verbale prossima sessione: **§78**, stesso stile.
+- Verbale prossima sessione: **§107b** (continuazione §107; §108 se fronte nuovo), stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.
