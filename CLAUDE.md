@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§104**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§105**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -254,7 +254,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -805,5 +805,16 @@ a ext=3 (1 vs ~156)** — l'approccio alla porta-0 e' strutturato (firma canonic
 ~5 passi in fase 99, "3" quasi vietato). Prossimo §104: anatomia picco-5/buco-3 vs
 E(k) §61 / 22 porte §66; micro-porte preregistrate; evento porta-0-completante ai
 record = osservabile d'occorrenza di Link 1. docs/FRESH_PHASE_ADDENDUM.md.
+**AGGIORNAMENTO §104 (DOOR-APPROACH):** vocabolario d'approccio canonico (ext5 = 1
+parola 88%; fase-0 = famiglia suffisso `LRRRRLLL` 85%; top-10 68%); 11/14 germi
+fascia = parola IDENTICA `RLRRLRRRRLLL` (#2 reale: la porta vive nel transiente del
+germe); LEMMA LINGUA D'APPROCCIO (enumerazione esaustiva): 671/4096 approcci-12
+realizzabili davanti a W0-fase-0 (saturo, osservate ⊆, 89 famiglie ⇒ concentrazione
+dinamica); **spettro porte ai 1639 record = spettro ingressi freschi (95,4/4,5/0,2)
+⇒ la meta' occorrenza di Link 1 collassa su B-T; Link 1 ai record = lim sup
+[d − onset_germe] >= L0, nemico unico il rigetto-shallow perpetuo.** Pannello
+ridotto, debito dichiarato per §105 in testa. Prossimo §105: pannello blocco
+§101-104; attacco per-parola al transiente porta-0 (~55 letture); selezione del
+vocabolario (buco-3). docs/DOOR_APPROACH_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

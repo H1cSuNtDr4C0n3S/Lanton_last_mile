@@ -1,3 +1,31 @@
+# ============ §104 — DOOR-APPROACH: vocabolario canonico, Lingua d'Approccio (lemma), spettro dei tentativi ai record ============
+
+**Cosa e' successo a §104 (in una riga):** (1) l'approccio alla porta-0 e' un
+vocabolario canonico piccolo (picco ext=5 §103 = UNA parola `RLLRRLRLRRRR` 88%;
+fase-0 esatta = famiglia suffisso-8 `LRRRRLLL` 85%; top-10 = 68%); (2) unificazione
+germi/reale: 11/14 germi della fascia approcciano con la parola IDENTICA
+`RLRRLRRRRLLL` (#2 reale) — la porta vive nel transiente del germe, invisibile ai
+suffissi §102; (3) **LEMMA DELLA LINGUA D'APPROCCIO** (deduttivo, enumerazione
+esaustiva 2^12): esattamente **671/4096** approcci-12 realizzabili davanti a
+W0-fase-0 (saturo a 2 periodi; osservate ⊆ realizzabili; 89 famiglie di suffisso
+realizzabili ⇒ la concentrazione 85% e' dinamica, non word-lock); (4) **spettro
+delle porte tentate ai 1639 record canonici: porta-0 95,4% + porta-24/25 4,5% +
+micro 0,2% = IDENTICO allo spettro degli ingressi freschi §103** ⇒ **la meta'
+"occorrenza" di Link 1 collassa su B-T** (i tentativi di porta-0 sono lo stato
+generico dei record, i.o. gratis): Link 1 ai record = UNA quantita',
+lim sup [d(t) − onset_germe] >= L0, nemico unico = rigetto-shallow perpetuo
+(§101d). Verbale-sonda: pannello RIDOTTO, debito dichiarato per §105 (in testa,
+lezione §93/§94). **Prossimo §105:** pannello sul blocco §101-104; attacco
+per-parola al transiente della porta-0 dominante (~55 letture, oggetto finito):
+che cosa paga un'orbita per tenerlo sporco a ogni record? (Muro/U1 sul
+germe-porta, attenzione (v)); selezione dinamica del vocabolario (buco-3).
+Ereditati: §101g, §102f, §103d, rientri §98g.2, scia §98g.3, separatori §97,
+fuggenti vs nere-D>=400, retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/DOOR_APPROACH_ADDENDUM.md. File: alpha1/door_approach_census.py,
+record_germ_phases.json.
+
+# ================================================================================================
+
 # ============ §103 — FRESH-PHASE: spettro delle porte a n=2500, approccio strutturato (picco-5/buco-3), micro-porte ============
 
 **Cosa e' successo a §103 (in una riga):** censimento preregistrato delle fasi
