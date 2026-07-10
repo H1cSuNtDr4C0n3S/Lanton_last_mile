@@ -1,0 +1,350 @@
+{
+ "fascia": [
+  {
+   "word": "LLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLLLLRRRRLRRLLLLRRLRRRRLLLLRLLRRRRLLRLRRRRLR",
+   "onset_germe": 261,
+   "burden": 44,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 6751
+  },
+  {
+   "word": "LLLLRLRRRRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLR",
+   "onset_germe": 202,
+   "burden": 23,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 838
+  },
+  {
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 136,
+   "burden": 34,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "LLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLRRRRLRLLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 136,
+   "burden": 34,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "LLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 55,
+   "burden": 36,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "LRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRRLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 192,
+   "burden": 34,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "LRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRLLLLRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 136,
+   "burden": 34,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "RLLRRRRLLRRLLRRLLRRLLRRLRRRRLLLLRLRRRRLRRRRLLLLRLLRLRLLRLLRRRRLLRRRRLLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 123,
+   "burden": 44,
+   "fase_W0": 102,
+   "drift": [
+    -2,
+    2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "RLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLLRRLRLRRRRLRRLRRRRLLLLRLRRRRLR",
+   "onset_germe": 65,
+   "burden": 31,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 838
+  },
+  {
+   "word": "RRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLLLLRRRRLRRLLLLRRLRRRRLLLLRLLRRRRLLRLRRRRLRRRRLLLLRLR",
+   "onset_germe": 251,
+   "burden": 53,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 2760
+  },
+  {
+   "word": "RRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRLRRRRLRLLRRRRLLRRRRLLRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "onset_germe": 146,
+   "burden": 23,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 11177
+  },
+  {
+   "word": "RRRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRRLLRRLLRLRRRRLRLRRRRLRRLLRRRRLLRRLLLLRRLLRLLLLRLRLRRRRLLLLRLRRRRLR",
+   "onset_germe": 146,
+   "burden": 23,
+   "fase_W0": 0,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 11177
+  },
+  {
+   "word": "RRRRLRRRRLLLLRLRLRRRRLLLLRLRRRRLRRRRLLLLRLRRRRLRLRRLLLLRRLRRRRLLLLRLRLRRLLLLRRLLLLRRLRRLRLRRLRLRLLRLR",
+   "onset_germe": 195,
+   "burden": 33,
+   "fase_W0": 0,
+   "drift": [
+    2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 624
+  },
+  {
+   "word": "RRRRLRRRRLLLLRLRRRRLRLRRLRLRRRRLRLLRRRRLLRRRRLLRLRRRRLLLLRLRRRRLLLLRLRLLRLRLLRRRRLLRLLRRRRLLRRRRLLRLR",
+   "onset_germe": 179,
+   "burden": 41,
+   "fase_W0": 99,
+   "drift": [
+    -2,
+    -2
+   ],
+   "Kmin_realizzabile": 20,
+   "onset_a_Kmin": 11369
+  }
+ ],
+ "onset_reali": [
+  {
+   "orbit": 0,
+   "onset": 313358,
+   "fase_W0": 100
+  },
+  {
+   "orbit": 1,
+   "onset": 307906,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 2,
+   "onset": 302092,
+   "fase_W0": 98
+  },
+  {
+   "orbit": 3,
+   "onset": 291397,
+   "fase_W0": 25
+  },
+  {
+   "orbit": 4,
+   "onset": 286748,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 5,
+   "onset": 285796,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 6,
+   "onset": 276143,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 7,
+   "onset": 272174,
+   "fase_W0": 103
+  },
+  {
+   "orbit": 8,
+   "onset": 271114,
+   "fase_W0": 102
+  },
+  {
+   "orbit": 9,
+   "onset": 270625,
+   "fase_W0": 99
+  },
+  {
+   "orbit": 10,
+   "onset": 270401,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 11,
+   "onset": 268891,
+   "fase_W0": 25
+  },
+  {
+   "orbit": 12,
+   "onset": 267843,
+   "fase_W0": 100
+  },
+  {
+   "orbit": 13,
+   "onset": 267828,
+   "fase_W0": 24
+  },
+  {
+   "orbit": 14,
+   "onset": 266260,
+   "fase_W0": 103
+  },
+  {
+   "orbit": 15,
+   "onset": 265407,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 16,
+   "onset": 265277,
+   "fase_W0": 102
+  },
+  {
+   "orbit": 17,
+   "onset": 260282,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 18,
+   "onset": 257885,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 19,
+   "onset": 255436,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 20,
+   "onset": 255171,
+   "fase_W0": 0
+  },
+  {
+   "orbit": 21,
+   "onset": 255129,
+   "fase_W0": 103
+  },
+  {
+   "orbit": 22,
+   "onset": 252072,
+   "fase_W0": 97
+  },
+  {
+   "orbit": 23,
+   "onset": 251853,
+   "fase_W0": 24
+  }
+ ],
+ "fasi_fascia": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  99,
+  102
+ ],
+ "fasi_reali": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  24,
+  24,
+  25,
+  25,
+  97,
+  98,
+  99,
+  100,
+  100,
+  102,
+  102,
+  103,
+  103,
+  103
+ ],
+ "cluster_fascia": {
+  "esatta_0": 12,
+  "ext_1_7 (97..103)": 2,
+  "porta_24_25": 0,
+  "altre": 0
+ },
+ "cluster_reali": {
+  "esatta_0": 10,
+  "ext_1_7 (97..103)": 10,
+  "porta_24_25": 4,
+  "altre": 0
+ },
+ "esche": "bit corrotto => None; fase 13 OK; 104 rotazioni distinte",
+ "elapsed_s": 2.7
+}

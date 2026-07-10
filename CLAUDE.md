@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§102**).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§103**).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -254,7 +254,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -786,5 +786,16 @@ Lemma 0, lente logica (Lemma 5' indebolito, episodi contati). Prossimo §102:
 occorrenza della fascia (enumerazione parole veloci realizzabili record-compatibili,
 legame A1 §78); costo del transiente sporco drift-giu' (attacco alla-Muro per-parola);
 min_cheb solo preregistrato. docs/RECORD_DIVERGENCE_ADDENDUM.md.
+**AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
+la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
+proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del
+germe: **12/14 a fase 0 esatta**, 2 a 99/102 (ext accidentale), 0 altrove. Onset
+REALI delle 24 orbite: **porta-0 20/24** (10 esatte + 10 ext 1-7, coda 4-7
+leggermente pesante dichiarata) + **porta-24/25 4/24**, zero fuori-cluster su 104
+fasi. Molteplicita' reale delle porte ~2: l'occorrenza di Link 1 si concentra sulla
+porta-0, decisa dal kernel A1 §78. Strumento: alpha1/fascia_door_probe.py (gate
+24/24, fase univoca, esca beccata). Prossimo §103: fasi su ~10k semi freschi;
+mappatura ↔ 22 porte §66 / fase-0 §74; evento "porta-0-completante" word-free e
+tasso per-epoca ai record. docs/FASCIA_DOOR_ADDENDUM.md.
 Roadmap completa:
 CHAT_HANDOVER §C.

@@ -1,3 +1,25 @@
+# ============ §102 — FASCIA = PORTA-0: la fase d'ingresso e' l'invariante; le porte reali sono DUE ============
+
+**Cosa e' successo a §102 (in una riga):** la fascia word-mediated (14 parole §100 +
+lock §101) NON ha suffisso-nucleo (comune globale 3 bit; il troncamento cambia
+l'onset: proprieta' dell'intera finestra 101) — l'invariante e' la **FASE W0
+d'ingresso: 12/14 a fase 0 esatta**, 2 a 99/102 (estensione accidentale 2/5), 0/14
+altrove; gli **onset reali delle 24 orbite: porta-0 20/24** (10 esatte + 10 a
+97-103 = ext 1-7, coda leggermente pesante dichiarata) **+ porta-24/25 4/24, zero
+fuori dai cluster** su 104 fasi. La molteplicita' reale delle porte e' ~2 (non 22
+ne' 104): la domanda d'occorrenza di Link 1 si concentra su UNA porta dominante,
+decisa esattamente dal kernel A1 §78. Strumento: alpha1/fascia_door_probe.py
+(gate onset==header 24/24, coda periodica 24/24, fase univoca — 104 rotazioni
+distinte, esca bit-corrotto beccata). **Prossimo §103:** fasi d'onset su ~10k semi
+freschi (bimodalita' senza selezione onset-alto?); mappatura porta-0/24-25 ↔ 22
+porte §66 e fase-0 §74; evento "finestra porta-0-completante" come predicato
+word-free e tasso per-epoca ai record (l'osservabile d'occorrenza di Link 1).
+Ereditati: §101g, rientri §98g.2, scia-teorema §98g.3, separatori §97, fuggenti vs
+nere-D>=400, retro-nota §91c.3, stress-2 bianche, h1=1.
+Dettagli: docs/FASCIA_DOOR_ADDENDUM.md.
+
+# ================================================================================================
+
 # ============ §101 — RECORD-DIVERGENCE: DICOTOMIA DEL RECORD, primi LOCK ai record, fascia = porta ============
 
 **Cosa e' successo a §101 (in una riga):** la profondita' di divergenza d(t) del
