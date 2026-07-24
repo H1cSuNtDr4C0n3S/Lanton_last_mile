@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v2 = ERRATA-RC2 applicata; v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v3 = U3 scelto + protocollo d_0b/monitor; v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -52,6 +52,22 @@ e conteneva quattro difetti, corretti qui:
    "unknown-dominato" potevano coesistere). Partizione corretta in
    sezione 4: GATE NON RAGGIUNTO / PONTE FALSO / VALIDO-E-UTILE /
    VALIDO-MA-INUTILE.
+
+## DECISIONE OPERATIVA post-ERRATA-RC2 (verdetto del titolare 2026-07-25/2 — vincolante)
+
+ERRATA-RC2 accolta; M1-v2 coincide col predicato operativo
+deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
+- **universo SCELTO = U3** (sezione 2b): tentare PRIMA il lemma di
+  trasferimento dei quantificatori (0b.U3-a/b);
+- **kill-gate principale di 0b.2:** un certificato finito per singolo
+  punto NON implica una profondità uniforme d_0b (la visita precedente
+  può essere arbitrariamente antica; "assenza di riletture" può non
+  essere decidibile da alcun suffisso di lunghezza fissa). d_0b NON va
+  MAI scelto da un massimo censito (trappola qq). Prima si prova se
+  d_0b esiste (Via A, falsificatore a coppie); se muore, si preregistra
+  il MONITOR FINITO al suo posto (Via B);
+- **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
+  (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
 ## 1. Lemma 0b.0 — corrispondenza temporale backward–forward (da certificare)
 
@@ -123,36 +139,77 @@ se certificato, vincola SOLO i punti L. Se ai punti utili delle due
 firme-bersaglio il traffico è R-dominato, il vantaggio condizionale
 svanisce: va misurato, non presunto.
 
-## 2b. Scelta dell'universo (obbligatoria, ERRATA-RC2.3)
+## 2b. Universo: U3 SCELTO (decisione operativa 2026-07-25/2)
 
-Due universi ammessi; ogni enunciato di Fase 0b DEVE dichiarare quale usa:
-- **U0 (attuale):** passato reale completo che presenta w101 a un record
-  y-min stretto — il seme è escluso SOLO dalla palla-2 (ipotesi del
-  Muro). Nell'anello 3 una L può essere prima lettura di una cella nera
-  di seme: lì la componente RILETTA non è deducibile da T20 e i punti
-  restano `unknown`.
-- **U3 (ipotesi strategica del titolare, DA LAVORARE):** record
-  sufficientemente lontani con
+- **U0 (di riferimento):** passato reale completo che presenta w101 a un
+  record y-min stretto — il seme è escluso SOLO dalla palla-2 (ipotesi
+  del Muro). Nell'anello 3 una L può essere prima lettura di una cella
+  nera di seme: lì la componente RILETTA non è deducibile da T20 e i
+  punti restano `unknown`.
+- **U3 (SCELTO):** record con
   **B_∞(z_t, 3) ∩ (supp(seme) ∪ {origine}) = ∅** — elimina l'ambiguità
-  "L fresca da seme" nell'anello 3. Plausibilità dichiarata (NON
-  dimostrata): sufficiente al Muro, perché servono record tardivi
-  lontani. OBBLIGO: il passaggio ai quantificatori di X6
-  (v2 ⟺ T24–T25 ⟺ T26) va RIDIMOSTRATO sotto U3 — non può essere
-  inserito silenziosamente in R_f; finché non è ridimostrato, ogni
-  risultato sotto U3 porta l'etichetta "condizionale a U3".
+  "L fresca da seme" nell'anello 3. Base di plausibilità (dichiarata,
+  non ancora un lemma): T17 registra che B–T dà infiniti record fuori da
+  OGNI intorno finito ⇒ con l'intorno di raggio 3, U3 dovrebbe essere
+  COFINALMENTE disponibile lungo ogni orbita eterna non-highway.
+  Obblighi formali PRIMA di usare U3 (lemma di trasferimento, da
+  tentare per primi):
+  - **0b.U3-a:** restrizione PUNTUALE di T24–T26 all'universo U3
+    (i quantificatori di X6, v2 ⟺ T24–T25 ⟺ T26, ridimostrati sotto U3
+    — nessun inserimento silenzioso in R_f);
+  - **0b.U3-b:** la restrizione è SUFFICIENTE al Muro (i record U3 sono
+    cofinali: la vietanza sui soli record U3 basta alla contraddizione
+    con B–T).
+  Finché 0b.U3-a/b non sono chiusi, ogni risultato sotto U3 porta
+  l'etichetta "condizionale a U3".
 
-## 3. Lemma 0b.2 — località e completezza del dominio (da certificare)
+## 3. Lemma 0b.2 — località e completezza del dominio (due vie, decisione 2026-07-25/2)
 
-Da dimostrare: il verdetto di marcatura (marcato / non-marcato /
-`unknown`) è funzione di un INTORNO FINITO DICHIARATO dello stato
-backward — raggio r_0b e profondità di storia d_0b ESPLICITI — cosicché
-il dominio D_RC2 delle configurazioni locali ammesse ai punti candidati
-è FINITO e la sua enumerazione è COMPLETA (non un campione: due
-implementazioni concordi su un campione NON bastano, ERRATA-1.6). Ogni
-parametro sound "per caso fattuale" va verificato con controllo
+Da ottenere: il verdetto di marcatura (marcato / non-marcato / `unknown`)
+funzione di informazione backward FINITA e DICHIARATA, così che il
+dominio D_RC2 sia finito e la sua enumerazione COMPLETA (non un campione,
+ERRATA-1.6). Kill-gate dichiarato: la visita precedente può essere
+arbitrariamente antica ⇒ un d_0b uniforme può NON esistere.
+
+**Via A — esiste un d_0b uniforme? (da provare SUBITO, falsificatore a
+coppie).** Per la cella bersaglio c e profondità d candidata:
+FALSIFICATORE = due passati validi con UGUALE suffisso di lunghezza d ma
+stato del monitor di c (KNOWN/FORGOTTEN/UNSEEN, definizione in Via B)
+DIVERSO al confine del suffisso — una sola coppia falsifica quel d.
+Regole: d_0b non si sceglie MAI da un massimo censito (trappola qq); la
+caccia alle coppie va fatta su una griglia di d dichiarata prima della
+run, con enumerazione/ricerca meccanica sull'albero dei prepend (mai
+coppie costruite a mano); aspettativa di morte dichiarata: REALISTICA —
+il quadro §90b (visita di (1,1) a prof. 57 dietro w101, sweep esaustivo
+zero a 46) suggerisce che coppie del genere esistano, ma la coppia va
+REALIZZATA meccanicamente, non dedotta a mano.
+
+**Via B — monitor finito per cella bersaglio (se la Via A muore;
+preregistrato QUI).** Per ogni cella bersaglio c, automa a 3 stati:
+**UNSEEN → KNOWN → FORGOTTEN**, con transizioni:
+- visita di c ⇒ KNOWN;
+- raggiungimento della distanza Chebyshev 2 da c (uscita dalla memoria
+  di finestra) ⇒ FORGOTTEN;
+- rilettura di c in FORGOTTEN ⇒ **evento DEEP**;
+- rilettura di c in KNOWN ⇒ evento in-window (non marca).
+Il monitor riassume un intervallo arbitrariamente lungo SENZA pretendere
+un d_0b uniforme; nel camminatore backward diventa un'obbligazione
+finita o una transizione non-deterministica CONTROLLATA (unknown-safe:
+lo stato non noto non produce mai marcatura). Obblighi di certificazione
+della Via B: (i) equivalenza monitor ↔ `known` del simulatore forward
+DIMOSTRATA PER INDUZIONE (non solo testata); (ii) replay completo: UNA
+sola discrepanza sul predicato deep UCCIDE il monitor; (iii) esca
+obbligatoria sul checker; (iv) controlli espliciti + optimize==0.
+
+**Test minimo falsificabile prima di 0b.3 (i 4 punti del verdetto):**
+1. caccia alla coppia falsificante di d_0b (Via A);
+2. induzione monitor ↔ `known` del simulatore (Via B, se attivata);
+3. replay completo con kill su una discrepanza del predicato deep;
+4. lemma di restrizione U3 per T24–T26 (0b.U3-a) + sufficienza (0b.U3-b).
+Ogni parametro sound "per caso fattuale" va verificato con controllo
 esplicito a ogni valore di raggio (trappola mm).
 
-## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0–0b.2)
+## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e 0b.2 via A-decisa o B-certificata)
 
 Enumerare D_RC2 per intero; per ogni elemento: replay forward e verifica
 dell'antecedente con checker a CONTROLLI ESPLICITI; esca obbligatoria

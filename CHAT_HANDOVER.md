@@ -2099,7 +2099,19 @@ Priorita' (aggiornate a §108b):
    falsificatore F-0b.1 v2 = un parent-step L marcato che nel replay e'
    prima lettura o ancora known; controlli espliciti,
    sys.flags.optimize==0 registrato; macchina soltanto dopo, 0b.3 NON
-   ancora costruibile);
+   ancora costruibile). **Decisione operativa 2026-07-25/2 (v3 del
+   documento): universo U3 SCELTO** — prima mossa = lemma di
+   trasferimento 0b.U3-a (T24-T26 ristretti a U3, quantificatori X6
+   ridimostrati) + 0b.U3-b (sufficienza al Muro; base: T17, B-T da'
+   infiniti record fuori da ogni intorno finito => U3 cofinale); 0b.2 a
+   due vie: Via A = test IMMEDIATO dell'esistenza di d_0b (falsificatore
+   a coppie: due passati validi, stesso suffisso lunghezza d, stato
+   monitor diverso — mai d_0b da massimo censito, trappola qq;
+   aspettativa di morte realistica, cfr. visita prof. 57 §90b); Via B
+   (se A muore) = MONITOR FINITO per cella UNSEEN->KNOWN->FORGOTTEN
+   (visita=>KNOWN; cheb 2=>FORGOTTEN; rilettura in FORGOTTEN=>deep, in
+   KNOWN=>in-window) con equivalenza monitor<->known dimostrata per
+   induzione + replay completo (una discrepanza uccide) + esca;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
