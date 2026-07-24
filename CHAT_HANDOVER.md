@@ -1,3 +1,34 @@
+# ============ §107d — SHIELD-MAP: calibrazione sigma/griglia, mappa del deposito, gap non-generalizzato ============
+
+**Cosa e' successo a §107d (in una riga):** i tre strumenti programmati a §107c
+eseguiti con gate bidirezionali deduttivi tutti verdi (GF3 OR-kernel=1 su
+1639/1639 — T ⟺ OR=1 da §101; GF2 lock a OR=0 esatto 0/14 e 0/9; replay
+bit-per-bit; GW0 219.112 nere == F3). (1) **F3 FALSIFICA l'aspettativa
+preregistrata**: ricchezza-scudo reale PIATTA in sigma_D (med 0.30-0.33 su
+tutte le bande) ⇒ la misura uniforme sull'albero non ha presa dinamica
+(trappola nuova **tt**): "lock non estremi" §107b perde la base di misura, la
+conclusione "(ii) = pre-storia antica" esce RAFFORZATA (scudo antico
+word-indipendente, ~1/3); lock piu' rari dell'indipendenza naive ⇒ deposito
+spazialmente correlato (scudo spesso §105b, nota descrittiva). (2) **Mappa del
+deposito** (wx = x·sign(drift), 1639 pooled): campana asimmetrica centrata
+sulla posa (picco 0.42; zeri strutturali da wx=47 lato drift / −58 opposto =
+fronte del Cono MISURATO); **i lock (wx 0..7) stanno nel NUCLEO PIU' DENSO,
+non nel settore vergine** ⇒ (ii) = BUCO locale raro nel nucleo denso; il
+fronte del Cono non e' il meccanismo di (ii) (P1b ridimensionata). (3)
+**Reach-59** (D=45-48 per-parola, zero non-definite): gap R_T-vs-matched
+mediane 4 vs 4, pareggi 31/59 (banda 16-50: RT>M 6/23) ⇒ **l'ombra d'albero
+era dei due lock-episodi, non della sottoclasse** sigma≈0. Bonus: alberi
+all'indietro quasi-estinti (692-8k nodi a D=48) per alcune sigma≈0 =
+candidato certificato di rigetto non esplorato. **Prossimo §107e:** statistica
+dei BUCHI del nucleo (cluster bianchi word-free attorno alla posa; tasso di
+riparazione del rifornimento vs tasso di presentazione della classe);
+gap-vs-coh_traj; quasi-estinzione come certificato. Ereditati: §106c,
+§105b.4, §101g, §102f, §103d, §104f, F1.
+Dettagli: docs/SHIELD_MAP_ADDENDUM.md. File: alpha1/danger_shield_calibration.py,
+danger_wedge_map.py, danger_reach_vocab.py (+json/jsonl/log).
+
+# ================================================================================================
+
 # ============ §107c — RAGGIO DEL DEPOSITO: reach per-cella, chiusura dell'orizzonte, sigma sul vocabolario ============
 
 **Cosa e' successo a §107c (in una riga):** strada P1a scelta con confronto a
@@ -1900,33 +1931,34 @@ bite-stall e' LIMITATO ~303 su tutte le orbite (non cresce 1e4->1e5) ⇒ quantit
 stallo crescente di #30 (~1e4, probabile buchi nero-fuori-finestra); il bite rate su (7,-7) e' 0.20
 sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata; tornare a δ_r/§78.
 
-## C. Roadmap (aggiornata a §107c; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
+## C. Roadmap (aggiornata a §107d; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
 
-**Stato della scala (§107d):** Link 1 (record-anchored, sufficiente) ⟸
+**Stato della scala (§107e):** Link 1 (record-anchored, sufficiente) ⟸
 (i) occorrenza della classe pericolosa i.o. [|R_T|<=κ; misurato 0,2-4%/record,
-word-decidibile, NON dimostrato per l'eterno; mappa σ≈0 = 59+2 parole, banda
-16-50] ∧ (ii) fallimento dello scudo su una presentazione pericolosa [2/82k
-realizzato; meccanismo §105b; vincolo di lentezza §106; forma esatta §107c:
-VERGINITA' PERPETUA del cuneo — l'albero dei prepend raggiunge ogni cella di
-R_T entro 48 passi, la dinamica reale MAI fino al seme]. La piega su γ (§107a)
-chiude i falsificatori costruibili a buon mercato.
+word-decidibile, NON dimostrato per l'eterno] ∧ (ii) fallimento dello scudo su
+una presentazione pericolosa [2/82k realizzato; forma esatta dopo §107c/§107d:
+BUCO LOCALE RARO nel nucleo denso del deposito antico (~1/3, word-indipendente,
+campana centrata sulla posa) — non escursione nei settori vergini; nessuna
+presa word-side (sigma piatta in griglia, gap d'albero non generalizzato);
+lock piu' rari dell'indipendenza naive ⇒ deposito correlato]. La piega su γ
+(§107a) chiude i falsificatori costruibili a buon mercato.
 
 Priorita':
-1. **(ii) la pittura dinamica del cuneo — fronte principale.** Dopo §107c
-   l'oggetto e' il divario albero-48/dinamica-MAI: perche' il rifornimento
-   della Scala (§98/§104, min_lag 0) non arriva mai nel cuneo del drift?
-   Attacco: P1b = "scudo antico copre il cuneo" col Lemma del Cono §87
-   (fronte del cono passato vs R_T, d_hit come budget per-cella); F3
-   calibrazione preregistrata (§107c.5: join sigma_vocab_perword × colori di
-   griglia §106 sul canonico, EPISODI, nessuna soglia). Vie gia' chiuse (NON
-   riaprire): ledger/bilancio (n), filo-di-rasoio (§105b), solitudine (v),
-   zona-piccola (§97), discriminante word-side di (ii) (§107b),
-   irraggiungibilita'-d'albero come deposito (§107c, trappola ss).
-2. **(i) ricorrenza ristretta alla sottoclasse σ≈0** (ora mappata: 59
-   canoniche + 2 lock, concentrata |R_T| 16-50 — P2 §107c). Reach sulle 59
-   (economico, motore C): il gap R_T>matched e' dei lock o della sottoclasse?
-   Parole σ≈0 vs firma d'approccio §104; presentazione ai record legata ai
-   rientri della Scala (§98g.2, R−L=ΔB §96, rotore §77, coda lunga §79).
+1. **(ii) statistica dei BUCHI del nucleo — fronte principale (§107d.4).**
+   Osservabile word-free di griglia: cluster bianchi locali attorno alla posa
+   ai record; tasso di riparazione del rifornimento (§98/§104: la discesa
+   dipinge il proprio nucleo) vs tasso di presentazione della classe
+   piccola-direzionale. Evitamento duale §105b in forma quantitativa: puo'
+   un'eterna tenere i buchi lontani dai read-set piccoli per sempre? Vie gia'
+   chiuse (NON riaprire): ledger/bilancio (n), filo-di-rasoio (§105b),
+   solitudine (v), zona-piccola (§97), discriminante word-side di (ii)
+   (§107b+§107d), irraggiungibilita'-d'albero (ss), fronte-del-Cono come
+   meccanismo di (ii) (§107d.2: i lock sono nel nucleo, non al fronte),
+   sigma-simili non calibrati (tt).
+2. **(i) e strumenti di supporto:** gap-vs-coh_traj sulle 59+2 (direzionalita'
+   = ultima impronta word-side candidata); quasi-estinzione all'indietro come
+   certificato di rigetto (alberi a 692-8k nodi, §107d.3); presentazione ai
+   record legata ai rientri della Scala (§98g.2, R−L=ΔB §96, rotore §77).
 3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
    infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
    micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).
@@ -1999,5 +2031,7 @@ Priorita':
   (gate R0/R0b/R1/RG); motore C: `gcc -O2 -o alpha1\danger_reach.exe alpha1\danger_reach.c` poi
   `... alpha1\danger_reach_c_driver.py --lock A --depth 55 [--r2]` (sharding prefissi, somme==Python);
   P2: `... alpha1\danger_sigma_vocab.py --shard i --nshards 14` + `danger_sigma_vocab_agg.py`.
-- Verbale prossima sessione: **§107d** (continuazione §107; §108 se fronte nuovo), stesso stile.
+- Sonde §107d: `C:\Python\Python310\python.exe alpha1\danger_shield_calibration.py` (F3, gate GF0-GF3);
+  `... alpha1\danger_wedge_map.py` (mappa deposito); `... alpha1\danger_reach_vocab.py` (reach sigma<=0.01).
+- Verbale prossima sessione: **§107e** (continuazione §107; §108 se fronte nuovo), stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

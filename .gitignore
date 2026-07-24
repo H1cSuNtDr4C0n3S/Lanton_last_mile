@@ -35,3 +35,6 @@ skills-lock.json
 alpha1/reach_jobs/
 alpha1/sigma_vocab_shard*.jsonl
 alpha1/sigma_vocab_shard*.log
+alpha1/reach_vocab_sigma0.log
+alpha1/danger_shield_calibration.log
+alpha1/danger_wedge_map.log

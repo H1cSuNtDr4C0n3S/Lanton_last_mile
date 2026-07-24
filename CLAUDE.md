@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107d**; §108 se fronte nuovo).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§107e**; §108 se fronte nuovo).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -257,6 +257,15 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
       passato reale dei lock non tocca a 4k-18k passi cio' che l'albero
       tocca a 16-48): l'albero serve per i negativi e per i budget, mai
       per prevedere quando qualcosa succede davvero.
+  (tt) **la quota sull'albero non e' una probabilita' dinamica** (SHIELD-MAP
+      §107d): un funzionale contato sui passati ENUMERATI (sigma_D, quote di
+      rami/foglie) non ha significato dinamico finche' non e' CALIBRATO
+      contro la griglia reale — sigma_D (bimodale 0→1 sull'albero) e'
+      ORTOGONALE alla ricchezza-scudo reale (piatta ~1/3 su tutte le bande).
+      Gli enunciati d'albero restano deduzioni valide ("ogni passato
+      valido..."); MAI leggerli come tipicita'/probabilita' di eventi reali
+      senza gate di calibrazione. Sorella di (c), gemella dell'istanza
+      d_hit-SOVRA-vs-passato-reale (ss/§107c).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -275,7 +284,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c), SHIELD-MAP (§107d)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -865,6 +874,21 @@ D=22 (zero troncate, regressione 66/66): σ=1 esatto 71 (4,9%) ⇒ riduzione di
 (37% della banda). Prossimo §107d: Cono §87 vs cuneo (d_hit come budget), F3
 calibrazione (join sigma_vocab_perword × griglia §106), reach sulle 59 σ≈0.
 docs/DANGER_REACH_ADDENDUM.md.
+**AGGIORNAMENTO §107d (SHIELD-MAP):** tre strumenti, gate bidirezionali
+deduttivi verdi (GF3 OR=1 su 1639/1639 = T⟺OR da §101; GF2 lock OR=0 esatto;
+replay bit-per-bit; GW0 219.112 == F3). (1) F3: aspettativa preregistrata
+FALSIFICATA — ricchezza-scudo reale PIATTA in sigma_D (0.30-0.33 ovunque) ⇒
+misura d'albero senza presa dinamica (trappola tt); scudo antico
+word-indipendente ~1/3; lock piu' rari dell'indipendenza naive ⇒ deposito
+correlato. (2) Mappa (wx=x·sign(drift)): campana asimmetrica sulla posa
+(picco 0.42, zeri strutturali wx>=47 / <=−58 = fronte del Cono misurato);
+**lock nel NUCLEO denso (wx 0..7), non nel settore vergine** ⇒ (ii) = buco
+locale raro nel nucleo; fronte-del-Cono NON e' il meccanismo di (ii). (3)
+Reach-59 (D=45-48, zero non-def): gap R_T-vs-matched 4 vs 4, pareggi 31/59 ⇒
+l'ombra d'albero era dei lock-episodi, non della sottoclasse. Bonus: alberi
+all'indietro quasi-estinti (692-8k nodi a D=48). Prossimo §107e: statistica
+dei buchi del nucleo (word-free); gap-vs-coh_traj; quasi-estinzione come
+certificato. docs/SHIELD_MAP_ADDENDUM.md.
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del
