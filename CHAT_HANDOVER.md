@@ -2069,7 +2069,19 @@ Priorita' (aggiornate a §108b):
    falsificatore di v2 PRIMA della deduzione, PE|PC etichettata
    condizionata, solo PF disgiunta, soglie PER-FIRMA; Fase 2 separatore
    (b) §97c = proxy diagnostico senza trasferimento deduttivo; gate-zero
-   a 6 punti per aprire §109). ESCLUSI dal mandato:
+   a 6 punti per aprire §109). **FASE 0 ESEGUITA** (via libera del
+   titolare 2026-07-25; alpha1/prereg_fase0_geometry.py: doppia
+   implementazione — A = DX/DY del macchinario, B = tabella D ricalibrata
+   dai SOLI 3 anchor a verbale §96c/§96a-C4/§96-O0, calibrazione unica —
+   gate G0/G-ANCH/G-AB/G-SUM verdi, esche E1/E2 2/2 beccate, 8/8
+   exit-diretta confermate; geometria locale delle 8 firme in
+   alpha1/prereg_fase0_geometry_summary.json — unica sorgente, nessun
+   valore a mano). PROSSIMI GATE prima della Fase 1 (ordine del titolare):
+   (i) Fase 0b = enunciato formale RC2 con dominio finito/ipotesi/verso;
+   (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
+   per-firma (criterio di dedupe, numero minimo di pulizie, politica
+   valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
+   ammesso e' SOLO unknown — mai zero-hit probante). ESCLUSI dal mandato:
    estensione γ per forza bruta, riapertura statistiche scudo, attacco
    all'ipotesi (A) di onset universale (troppo vicina alla congettura).
 2. **Diagnostica descrittiva disponibile (non certificati):** F3
