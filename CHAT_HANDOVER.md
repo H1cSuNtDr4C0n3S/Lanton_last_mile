@@ -1,26 +1,31 @@
 # ============ §107e — KERNEL ESTESO: R_{T,104} certificato, H-NR uccisa, verso il consolidamento ============
 
-**Cosa e' successo a §107e (in una riga):** mossa unica §107d.6 eseguita —
-KERNEL ESTESO R_{T,L} meccanizzato a L=104 e gate fondante CERTIFICATO
-(`compatibile ⟺ ride >= 104` per-record su 1639 canonici + 2 lock, T-DIV
-esteso d_a==d_b su ogni scudo, zero unknown, regressioni bit-esatte d-CSV
-§101 1639/1639 e d_full lock 324/449; copertura dichiarata: banda
-0<=ride<104 vuota nel campione, direzione ⟸ con 2 soli positivi + deduzione
-Lemma 0); forense last-paint con bianco≠vergine ESATTO (gate 3): kernel
-lock 66/67 VERGINI + 1 visitata-pari = la cella consumata §105b (terza
-conferma cross-macchinario); first-bad canonici n_vis med 1, 50 da-seme,
-eta_paint med 451 passi / gap_ep med 2 max 8 (due orologi, quantili non
-costanti); **H-NR (last-paint cutset per non-riusabilita') UCCISA al primo
-contatto** (gate 5, morte attesa dichiarata): 103.980 eventi-scudo, 55.359
-riusati da >=2 record (53%), 37.116 NON consecutivi — lo scudo e' bene
-riusabile e non-localmente riusabile, nessun ordine-dal-non-riuso ha
-appiglio (parente trappola n). **Decisione (regola preconcordata §107d.6.5):
-prossima sessione = CONSOLIDAMENTO (roadmap §C.4)**, nessuna nuova campagna
-empirica salvo invariante d'ordine nuovo esplicitamente preregistrato. La
-quantita' di Link 1 record-side resta #{t: classe-κ ∧ ride(t)>=L_0} = ∞,
-ora con predicato ride>=L esatto word+griglia.
-Dettagli: docs/KERNEL_EXTENDED_ADDENDUM.md. File: alpha1/kernel_extended.py
-(+json/log).
+**Cosa e' successo a §107e (in una riga, v2 con ERRATA 107e.0 — v1 in
+0ea30a2):** mossa unica §107d.6 eseguita — KERNEL ESTESO R_{T,L}
+meccanizzato a L=104; la bicondizionale `compatibile ⟺ ride >= 104` e'
+**teorema deduttivo sotto le ipotesi del record stretto (Lemmi 0-1 §101),
+con implementazione VERIFICATA su 1.641 record** (T-DIV esteso d_a==d_b su
+ogni scudo, mismatch assente a kernel bianco, zero unknown, regressioni
+bit-esatte d-CSV §101 1639/1639 e d_full lock 324/449; gate 1(c) non
+indipendente — censura⇒ride=L per costruzione; banda 0<=ride<104 vuota nel
+campione; supporto word-decidibile, VERDETTO word+griglia); forense
+last-paint con bianco≠vergine ESATTO: kernel lock 66/67 VERGINI (esatto sui
+67 elementi, non generalizzabile) + 1 visitata-pari = cella consumata §105b
+(terzo percorso di controllo parzialmente indipendente); first-bad n_vis
+med 1, 50 da-seme, eta_paint med 451 passi / gap_ep med 2 max 8 (due
+orologi, quantili); **H-NR = iniettivita' pura degli eventi di pittura
+UCCISA al primo contatto** (morte attesa dichiarata): 103.980 eventi unici
+non-seme, 55.359 con molteplicita'>=2, 37.116 condivisi da record non
+adiacenti — muore ogni prova dal non-riuso STRETTO; riuso
+controllato/nesting restano logicamente aperti senza candidato definito
+(specifica di ricerca: rango sul grafo t↦last_W2B(first_bad(t)), monotonia
+dedotta, molteplicita' controllata PRIMA di ogni calcolo). **Decisione
+(regola preconcordata): §108 = CONSOLIDAMENTO** con separazione rigida
+teoremi-universali / certificazioni-finite / osservazioni-campionarie /
+crux-aperti-e-strade-falsificate; crux invariato: #{t: classe-κ ∧
+ride(t)>=L_0} = ∞ NON dimostrata.
+Dettagli: docs/KERNEL_EXTENDED_ADDENDUM.md (v2). File:
+alpha1/kernel_extended.py (+json/log).
 
 # ================================================================================================
 
@@ -1975,17 +1980,22 @@ ride >= L. Fatti fermi: (i) classe κ misurata 0,2-4%/record (word-decidibile,
 non dimostrata i.o. per l'eterno); 2 episodi-lock realizzati in 82k (ride
 269/384); vincolo di lentezza §106; piega su γ §107a.
 
-Priorita' (aggiornate a §107e):
-1. **CONSOLIDAMENTO (regola preconcordata §107d.6.5, eseguito il test
-   minimo §107e).** Il gate fondante del kernel esteso e' CERTIFICATO
-   (l'oggetto di Link 1 record-side e' sano e word-decidibile) ma l'ipotesi
-   meccanicistica H-NR e' morta al primo contatto (riuso 53%, non-locale):
-   scrittura organica dei teoremi locali come riduzione a α1∧β∧γ + macchina
-   — locale sigillato, γ<=40, finestra r<=4, prodotto sound, U1/Muro,
-   Scala, Cuneo/Limite di Velocita', Dicotomia del Record §101, kernel
-   esteso §107e — senza chiudere il crux. Riapertura del fronte empirico
-   SOLO con un invariante d'ordine nuovo, esplicito e preregistrato (non
-   basato sul non-riuso degli attraversamenti: falsificato §107e.3).
+Priorita' (aggiornate a §107e-v2):
+1. **CONSOLIDAMENTO §108 (regola preconcordata §107d.6.5, eseguito il test
+   minimo §107e).** Il kernel esteso e' promosso come oggetto logico
+   corretto (teorema deduttivo sotto ipotesi + implementazione verificata;
+   supporto word-decidibile, verdetto word+griglia); H-NR stretta respinta.
+   Scrittura organica con SEPARAZIONE RIGIDA in quattro strati:
+   (1) teoremi universali con TUTTE le ipotesi; (2) certificazioni finite
+   dell'implementazione; (3) osservazioni campionarie (con scadenze);
+   (4) crux aperti e strade falsificate. Contenuto: locale sigillato,
+   γ<=40, finestra r<=4, prodotto sound, U1/Muro, Scala, Cuneo/Limite di
+   Velocita', Dicotomia del Record §101, kernel esteso §107e — riduzione a
+   α1∧β∧γ + macchina, senza chiudere il crux (#{t: classe-κ ∧
+   ride(t)>=L_0} = ∞ non dimostrata). Riapertura del fronte empirico SOLO
+   con invariante d'ordine nuovo, esplicito e preregistrato (ammettere il
+   riuso; rango sul grafo causale, monotonia dedotta — specifica di
+   ricerca §107e.0, oggi non promossa).
 2. **Diagnostica descrittiva disponibile (non certificati):** F3
    (sigma-vs-griglia, Spearman 0,0755), mappa condizionata P(nero|c∈R_T),
    reach sigma-low (gap non uniforme), forense last-paint §107e. Vie chiuse

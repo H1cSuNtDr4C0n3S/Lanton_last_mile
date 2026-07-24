@@ -904,20 +904,28 @@ esogene fino a og+L; compatibile ⟺ ride>=L). Prossimo §107e (mossa unica):
 R_{T,104} + forense last-paint + ipotesi last-paint cutset (ordine ben
 fondato), test minimo 2 lock + controlli T, gate 1-6; se fallisce ⇒
 consolidamento. docs/SHIELD_MAP_ADDENDUM.md.
-**AGGIORNAMENTO §107e (KERNEL-EXTENDED):** mossa unica eseguita. Gate
-fondante CERTIFICATO: R_{T,104} interamente compatibile ⟺ ride>=104,
-per-record su 1639 canonici + 2 lock (T-DIV esteso d_a==d_b, zero unknown;
-regressioni bit-esatte d-CSV §101 e d_full lock 324/449; banda 0<=ride<104
-vuota nel campione, dichiarato). Forense bianco≠vergine ESATTA: kernel lock
-66/67 vergini + 1 visitata-pari = cella consumata §105b (terza conferma);
-first-bad n_vis med 1, 50 da-seme, gap_ep med 2 max 8 (quantili). **H-NR
-UCCISA al primo contatto** (morte attesa dichiarata): 103.980 eventi-scudo,
-55.359 riusati (53%), 37.116 non-consecutivi — scudo = bene riusabile
-non-localmente, niente ordine-dal-non-riuso (parente trappola n). Regola
-preconcordata ⇒ **§108 = CONSOLIDAMENTO** (riduzione organica a α1∧β∧γ +
-macchina; riapertura empirica solo con invariante d'ordine nuovo
-preregistrato). Link 1 record-side = #{t: classe-κ ∧ ride(t)>=L_0} = ∞ con
-predicato esatto word+griglia. docs/KERNEL_EXTENDED_ADDENDUM.md.
+**AGGIORNAMENTO §107e (KERNEL-EXTENDED, v2 con ERRATA 107e.0):** mossa
+unica eseguita. Bicondizionale R_{T,104} compatibile ⟺ ride>=104 =
+**teorema deduttivo sotto le ipotesi del record stretto (Lemmi 0-1 §101);
+implementazione VERIFICATA su 1.641 record** (T-DIV esteso d_a==d_b,
+mismatch assente a kernel bianco, zero unknown; regressioni bit-esatte
+d-CSV §101 e d_full lock 324/449; gate 1(c) non indipendente; banda
+0<=ride<104 vuota nel campione; supporto word-decidibile, VERDETTO
+word+griglia). Forense bianco≠vergine esatta: kernel lock 66/67 vergini
+(esatto sui 67, non generalizzabile) + 1 visitata-pari = cella consumata
+§105b (terzo percorso di controllo parzialmente indipendente); first-bad
+n_vis med 1, 50 da-seme, gap_ep med 2 max 8 (quantili). **H-NR =
+iniettivita' pura degli eventi di pittura UCCISA** (morte attesa
+dichiarata): 103.980 eventi unici non-seme, 55.359 a molteplicita'>=2,
+37.116 condivisi da record non adiacenti — muore ogni prova dal non-riuso
+stretto (parente trappola n); riuso controllato/nesting logicamente aperti
+senza candidato definito (specifica di ricerca: rango su
+t↦last_W2B(first_bad(t)), monotonia dedotta, PRIMA di ogni calcolo).
+Regola preconcordata ⇒ **§108 = CONSOLIDAMENTO** con separazione rigida:
+teoremi universali con ipotesi / certificazioni finite / osservazioni
+campionarie / crux aperti e strade falsificate. Crux invariato:
+#{t: classe-κ ∧ ride(t)>=L_0} = ∞ NON dimostrata.
+docs/KERNEL_EXTENDED_ADDENDUM.md (v2).
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del
