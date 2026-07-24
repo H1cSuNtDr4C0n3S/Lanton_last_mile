@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **§108 = consolidamento**, regola §107d.6.5 eseguita a §107e).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **pannello §108** sulle 17 DA CHIARIRE di docs/CONSOLIDATION_108.md; poi §108b o §109).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -294,7 +294,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c), SHIELD-MAP (§107d), KERNEL-EXTENDED (§107e)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c), SHIELD-MAP (§107d), KERNEL-EXTENDED (§107e), CONSOLIDATION (§108: testa + volumi A/B)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -926,6 +926,16 @@ teoremi universali con ipotesi / certificazioni finite / osservazioni
 campionarie / crux aperti e strade falsificate. Crux invariato:
 #{t: classe-κ ∧ ride(t)>=L_0} = ∞ NON dimostrata.
 docs/KERNEL_EXTENDED_ADDENDUM.md (v2).
+**AGGIORNAMENTO §108-v1 (CONSOLIDAMENTO):** inventario completo a quattro
+strati compilato da due lettori indipendenti (versioni post-ERRATA
+obbligatorie, zero claim nuovi, ogni voce con § e file): volume A §40-§97
+(28 [T] / 21 [C] / 13 [O] / 12 [X]) + volume B §57-§75+§78-§86+§98-§107e
+(15 / 20 / 34 / 25) + documento-testa con architettura a 6 pilastri (locale
+sigillato δ_r r<=4; γ periodo minimo <=41; β = δ_r + A1; Muro/U2 con corno
+3b ⟺ 8 firme; lato-record meccanizzato col kernel esteso; crux unico
+#{t: classe-κ ∧ ride>=L₀} = ∞ NON dimostrato) e **17 DA CHIARIRE** per il
+pannello del titolare. Regola di riapertura: solo invariante preregistrato
+coi 6 gate §107d.6. docs/CONSOLIDATION_108.md (+_A, _B).
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del

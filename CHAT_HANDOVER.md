@@ -1,3 +1,27 @@
+# ============ §108 — CONSOLIDAMENTO v1: inventario a quattro strati, testa + due volumi ============
+
+**Cosa e' successo a §108-v1 (in una riga):** eseguito il consolidamento
+deciso a §107e.4 (dopo ERRATA §107e.0 accolta in apertura di sessione, commit
+7142b0d) — due lettori Fable indipendenti hanno compilato l'INVENTARIO
+COMPLETO della catena degli addenda con separazione rigida [T]/[C]/[O]/[X]
+(versioni post-ERRATA obbligatorie, nessun claim nuovo, ogni voce con § e
+file): volume A (§40-§97: fondamenta, δ_r, γ, prodotto, Scia/Cono, Parola
+Viva, U1/Muro, U2 fino alla riduzione v2 ⟺ 8 firme) = 28 [T] + 21 [C] +
+13 [O] + 12 [X]; volume B (§57-§75, §78-§86, §98-§107e: certificati β,
+Scala, Dicotomia, porte, classe pericolosa, kernel esteso) = 15 [T] +
+20 [C] + 34 [O] + 25 [X]; documento-testa con architettura della riduzione
+(6 pilastri, crux unico = #{t: classe-κ ∧ ride>=L₀} = ∞ NON dimostrata,
+forma vigente B4.19) e **17 questioni DA CHIARIRE** rimesse al pannello
+(decisioni editoriali: dicitura γ, definizione canonica di record stretto,
+statuto impronta A1, convenzione og, ecc.). Regola di riapertura a verbale:
+solo invariante preregistrato coi 6 gate §107d.6. **Prossimo: pannello §108
+del titolare sulle 17 DA CHIARIRE + revisione dei volumi; poi eventuale
+§108b (stesura finale) o §109.**
+Dettagli: docs/CONSOLIDATION_108.md (testa), CONSOLIDATION_108_A.md,
+CONSOLIDATION_108_B.md.
+
+# ================================================================================================
+
 # ============ §107e — KERNEL ESTESO: R_{T,104} certificato, H-NR uccisa, verso il consolidamento ============
 
 **Cosa e' successo a §107e (in una riga, v2 con ERRATA 107e.0 — v1 in
@@ -2079,5 +2103,6 @@ Priorita' (aggiornate a §107e-v2):
 - Sonde §107d: `C:\Python\Python310\python.exe alpha1\danger_shield_calibration.py` (F3, gate GF0-GF3);
   `... alpha1\danger_wedge_map.py` (mappa deposito); `... alpha1\danger_reach_vocab.py` (reach sigma<=0.01).
 - Sonda §107e: `C:\Python\Python310\python.exe alpha1\kernel_extended.py` (gate 1-6, ~40 s).
-- Verbale prossima sessione: **§108 (consolidamento)**, stesso stile.
+- Verbale prossima sessione: **pannello §108** (17 DA CHIARIRE in docs/CONSOLIDATION_108.md §2);
+  poi §108b (stesura finale) o §109 se fronte nuovo.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.
