@@ -6,14 +6,17 @@
 # determina). NESSUN valore geometrico scritto a mano nei documenti: questo
 # tool e' l'unica sorgente; i valori vivono nel JSON di output.
 #
-# Doppia implementazione (obbligo di Fase 0):
+# Doppia implementazione (obbligo di Fase 0) — CLASSIFICAZIONE CORRETTA
+# dall'ERRATA del titolare (post-a36e67c, verdetto 2026-07-25):
 #   A: formule del macchinario esistente (DX/DY di onset_cone_lock, come
 #      u2_far_clean_oracle_v2.py): h_par=(h*+1)&3, c_par=c*+D[h_par],
 #      primo passo cn=c*-D[h*] (§97a: cella letta = posa - D[h]).
-#   B: INDIPENDENTE — tabella D ricalibrata dai SOLI anchor pubblicati a
-#      verbale (mai da DX/DY): heading 0=su,1=destra,2=giu,3=sinistra
-#      (CLAUDE.md §2) con segni degli assi liberi (4 combinazioni), pinnati
-#      da tre anchor:
+#   B: calibrazione INDIPENDENTE della SOLA tabella D (dai soli anchor
+#      pubblicati a verbale, mai da DX/DY) ma CINEMATICA CONDIVISA con A
+#      (le formule h_par=(h*+1)&3, c_par=c*+D[h_par], cn=c*-D[h*] sono le
+#      stesse): B NON e' un'implementazione indipendente in senso pieno.
+#      Heading 0=su,1=destra,2=giu,3=sinistra (CLAUDE.md §2) con segni
+#      degli assi liberi (4 combinazioni), pinnati da tre anchor:
 #        A1 (§96c):  c_par((-1,2), h=3) = (-1,1), h_par=0;
 #        A2 (§96a C4): c_par((2,1), h=3) = (2,0);
 #        A3 (§96 GATE O0): primo passo di ((-1,2), h=3) legge cn=(0,2).
@@ -23,8 +26,12 @@
 #   G0     : firme_exit del summary §96 == lista a verbale §96a (8 firme);
 #   G-ANCH : A e B riproducono i tre anchor;
 #   G-AB   : A == B su tutte le 8 firme (c_par, h_par, cn);
-#   G-SUM  : cross-check col summary §96 (c_par per riga; exit-diretta:
-#            esattamente 1 exit a prof 1, cella == cn; y(exit)>=1, cheb>2);
+#   G-SUM  : cross-check col summary §96 — REGRESSIONE DI COERENZA A
+#            GENEALOGIA COMUNE (il summary e' prodotto con gli stessi
+#            DX/DY e le stesse formule), NON verifica indipendente
+#            (ERRATA classificatoria del titolare). Contenuto: c_par per
+#            riga; exit-diretta: 1 exit a prof 1, cella == cn;
+#            y(exit)>=1, cheb>2;
 #   E1 esca: B con D[1]/D[3] scambiate => G-AB DEVE fallire (beccata);
 #   E2 esca: heading corrotto su una firma del summary => G-SUM DEVE fallire.
 #
@@ -37,6 +44,13 @@ from u2_far_ledger import cheb
 HERE = os.path.dirname(os.path.abspath(__file__))
 V2_SUM = os.path.join(HERE, "u2_far_clean_oracle_v2_summary.json")
 OUT_JSON = os.path.join(HERE, "prereg_fase0_geometry_summary.json")
+
+# ERRATA del titolare: i gate usano assert => fail-open sotto `python -O`.
+# Guardia esplicita (il risultato a36e67c e' stato riprodotto dal titolare
+# senza ottimizzazione); da Fase 0b in poi: controlli espliciti, non assert.
+if sys.flags.optimize:
+    raise SystemExit("ERRORE: eseguire SENZA -O (gli assert dei gate "
+                     "sarebbero fail-open)")
 
 BALL_R = 2
 
@@ -187,6 +201,15 @@ def main():
 
     out = {"prereg": "docs/PREREG_RIENTRO_SCIA.md v2 (ERRATA-1)",
            "fase": "0 (geometria locale; ridotta da ERRATA-1.2)",
+           "classificazione_errata_titolare": {
+               "B": "calibrazione indipendente della sola tabella D; "
+                    "cinematica condivisa con A (h_par, c_par, cn)",
+               "G-SUM": "regressione di coerenza a genealogia comune "
+                        "(summary prodotto con gli stessi DX/DY), non "
+                        "verifica indipendente",
+               "assert": "fail-open sotto python -O; guardia esplicita "
+                         "aggiunta; da Fase 0b: controlli espliciti"},
+           "sys_flags_optimize": sys.flags.optimize,
            "gates": {"G0": "verde", "G-ANCH": "verde", "G-AB": "verde",
                      "G-SUM": "verde", "E1-esca": "beccata",
                      "E2-esca": "beccata"},

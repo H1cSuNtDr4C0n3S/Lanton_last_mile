@@ -1,6 +1,12 @@
 {
  "prereg": "docs/PREREG_RIENTRO_SCIA.md v2 (ERRATA-1)",
  "fase": "0 (geometria locale; ridotta da ERRATA-1.2)",
+ "classificazione_errata_titolare": {
+  "B": "calibrazione indipendente della sola tabella D; cinematica condivisa con A (h_par, c_par, cn)",
+  "G-SUM": "regressione di coerenza a genealogia comune (summary prodotto con gli stessi DX/DY), non verifica indipendente",
+  "assert": "fail-open sotto python -O; guardia esplicita aggiunta; da Fase 0b: controlli espliciti"
+ },
+ "sys_flags_optimize": 0,
  "gates": {
   "G0": "verde",
   "G-ANCH": "verde",

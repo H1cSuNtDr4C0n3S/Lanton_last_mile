@@ -157,6 +157,16 @@ di usare RC2: enunciato con ipotesi e verso espliciti, dominio finito
 COMPLETO enumerato (due implementazioni concordi su un campione NON
 bastano), esca obbligatoria sul checker. Finché la Fase 0b non è verde,
 RC2 non entra in nessuna macchina né deduzione.
+Requisiti operativi imposti dal verdetto post-Fase 0 (2026-07-25):
+enunciato formale e audit dell'antecedente in
+**docs/PREREG_RC2_PONTE.md** (test minimo falsificabile in 4 passi:
+corrispondenza temporale backward–forward; ogni punto marcato RC2 =
+lettura nera deep₁ nel replay forward; località che rende completo il
+dominio finito; enumerazione con replay forward — UN solo stato ammesso
+che nel replay non sia lettura nera deep₁ falsifica il ponte). Ogni
+checker di Fase 0b usa CONTROLLI ESPLICITI (niente assert nudi:
+fail-open sotto `python -O`) e registra `sys.flags.optimize == 0` nel
+summary. Macchina soltanto dopo.
 
 **Fase 1 — CACCIA AL FALSIFICATORE DI v2 (prima di ogni deduzione;
 bersaglio corretto da ERRATA-1.1: si caccia il falsificatore di v2, NON

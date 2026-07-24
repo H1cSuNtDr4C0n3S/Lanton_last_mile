@@ -2070,14 +2070,26 @@ Priorita' (aggiornate a §108b):
    condizionata, solo PF disgiunta, soglie PER-FIRMA; Fase 2 separatore
    (b) §97c = proxy diagnostico senza trasferimento deduttivo; gate-zero
    a 6 punti per aprire §109). **FASE 0 ESEGUITA** (via libera del
-   titolare 2026-07-25; alpha1/prereg_fase0_geometry.py: doppia
-   implementazione — A = DX/DY del macchinario, B = tabella D ricalibrata
-   dai SOLI 3 anchor a verbale §96c/§96a-C4/§96-O0, calibrazione unica —
-   gate G0/G-ANCH/G-AB/G-SUM verdi, esche E1/E2 2/2 beccate, 8/8
-   exit-diretta confermate; geometria locale delle 8 firme in
-   alpha1/prereg_fase0_geometry_summary.json — unica sorgente, nessun
-   valore a mano). PROSSIMI GATE prima della Fase 1 (ordine del titolare):
-   (i) Fase 0b = enunciato formale RC2 con dominio finito/ipotesi/verso;
+   titolare 2026-07-25; alpha1/prereg_fase0_geometry.py: A = DX/DY del
+   macchinario, B = tabella D ricalibrata dai SOLI 3 anchor a verbale
+   §96c/§96a-C4/§96-O0, calibrazione unica — gate G0/G-ANCH/G-AB/G-SUM
+   verdi, esche E1/E2 2/2 beccate, 8/8 exit-diretta confermate; geometria
+   locale delle 8 firme in alpha1/prereg_fase0_geometry_summary.json —
+   unica sorgente, nessun valore a mano). **Fase 0 chiusa VERDE SUI
+   VALORI dal titolare (ricalcolo in sola lettura), con ERRATA
+   CLASSIFICATORIA applicata:** B = calibrazione indipendente della sola
+   tabella D, CINEMATICA CONDIVISA con A (h_par/c_par/cn stesse formule);
+   G-SUM = regressione di coerenza a GENEALOGIA COMUNE (summary §96
+   prodotto con gli stessi DX/DY), non verifica indipendente; gli assert
+   sono fail-open sotto `python -O` (guardia esplicita aggiunta; il
+   verdetto e' stato riprodotto senza ottimizzazione). Le due firme a
+   genitore esterno sono bersagli SOLO CONDIZIONATAMENTE: il vantaggio
+   esiste se il bordo-genitore corrisponde a un evento con antecedente
+   Scia vero (lettura nera deep_1) — "essere un rientro" non basta.
+   PROSSIMI GATE prima della Fase 1 (ordine del titolare):
+   (i) Fase 0b = enunciato matematico RC2 con AUDIT DELL'ANTECEDENTE
+   (docs/PREREG_RC2_PONTE.md: 4 passi falsificabili; controlli espliciti,
+   sys.flags.optimize==0 registrato; macchina soltanto dopo);
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
