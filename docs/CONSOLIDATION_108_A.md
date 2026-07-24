@@ -1,4 +1,4 @@
-# §108 — INVENTARIO METÀ A: fondamenta + linea del Muro/U2 (§40–§97)
+# §108 — INVENTARIO METÀ A: fondamenta + linea del Muro/U2 (§40–§97) (v2 = §108b)
 
 Perimetro: Teorema della Finestra e δ_r (MORSO §40–40.1, RADIUS §45–55), γ
 (GAMMA §29–35), automa-prodotto (PRODOTTO §56), Scia (§86), Cono/Spoiler
@@ -7,12 +7,22 @@ dicotomia/ARMA/Muro (§90), U1 (§91), U2 (§92–§97). NON copre §98+.
 Etichette per strato come da `docs/CONSOLIDATION_108.md`: [T]/[C]/[O]/[X].
 Dove un risultato è stato poi corretto/ritirato, qui compare SOLO la versione
 corretta, con nota della correzione. Nessun claim nuovo.
+**§108b:** le 9 questioni DA CHIARIRE sono state DECISE dal pannello §108
+(verdetto 2026-07-24) e le decisioni sono applicate in questo volume
+(sezione DECISIONI in coda; v1 in 34ada36; nessuna nuova simulazione).
 
 Convenzioni presupposte (CLAUDE.md §2): bianco→R, nero→L, flip dopo lettura,
 poi mossa; W0 periodo 104, drift (±2,±2); onset griglia vuota 9977.
-"Record y-min stretto" = arrivo heading-su su cella mai visitata, con
-semipiano {y_rel<0} e riga {y_rel=0} mai visitati (⇒ bianchi gratis; il
-footprint delle ultime K svolte giace in {y_rel≥1}) — §87.6, §91a.
+"Record y-min stretto" (definizione CANONICA, decisione §108b-A5):
+all'istante subito prima della lettura, **y_t < min_{s<t} y_s**; ne segue
+che il semipiano y ≤ y_t non è stato visitato dalla traiettoria precedente;
+la BIANCHEZZA segue soltanto aggiungendo y_t < y_min(seme); heading-su e
+footprint delle ultime K svolte in {y_rel ≥ 1} sono CONSEGUENZE nella
+convenzione temporale scelta (§87.6, §91a), non parti della definizione.
+Orizzonti dei tripwire (decisione §108b-A3): nessun V† numericamente
+universale — V†_H(w) = prime letture fino all'orizzonte ESATTO del
+verdetto; U1: H = 2600; record-side: H = t† = max(2600, og_rec+2080)
+(og_rec: convenzione §108b-B4, testa §Convenzioni).
 "Frame anchor" = posa finale in origine, heading-su. Convenzione bit dei
 certificati U2 (fissata a verbale §95b): bit 1 = R = lettura BIANCA,
 bit 0 = L = lettura NERA.
@@ -44,7 +54,8 @@ realizzabili, calcolate).
 
 **T2. Tariffa esatta δ_r (quantificazione del Teorema della Finestra).**
 Ipotesi: ogni comportamento eterno che non sia una cavalcata finita di un
-rotore esplicito (≤2 periodi a r=4). Tesi: frequenza asintotica di letture
+rotore esplicito (costanti per-raggio, decisione §108b-A8: ≤ 4 periodi a
+r ≤ 3, ≤ 2 a r = 4). Tesi: frequenza asintotica di letture
 nere fuori-finestra ≥ δ_r, con δ₁ = 3/5, δ₂ = 1/7, δ₃ = 1/64, δ₄ = 2/313.
 Dove: MORSO §40.1, RADIUS §48; `code/min_assumeB.c`,
 `results/radius{1..4}_summary.json`, testimoni `build/r*_delta_cycle.txt`.
@@ -173,19 +184,21 @@ già riscritta; la quinta rileggerebbe il colore originario). Dove: §87.3.
 Metodo: deduttivo elementare, certificato anche dal filtro di realizzabilità
 (all-L/all-R scartate a ogni K ≥ 5).
 
-**T12. Teorema della checklist ai record (K ≤ 18).** Ipotesi: orbita eterna
-non-highway; pose-record y-min stretto; w = ultime K svolte (necessariamente
-record-compatibili: footprint ⊆ {y_rel ≥ 1}). Tesi: deve esserci un nero di
-età ≥ K in una checklist di burden1(w) celle specifiche; nel censimento
-esaustivo chiuso il minimo record-compatibile è 18/16/14/10 a K=12/14/16/18;
-nessuna parola-arma (burden1=0) esiste a K ≤ 18.
+**T12. Teorema della checklist ai record (K ≤ 18; forma decisa §108b-A1).**
+Ipotesi: orbita eterna non-highway; pose-record y-min stretto; w = ultime K
+svolte (necessariamente record-compatibili: footprint ⊆ {y_rel ≥ 1}).
+Tesi: deve esserci un nero di età ≥ K in una checklist di burden1(w) celle
+specifiche, con **burden1(w) ≥ m_K**, dove m_K = 18/16/14/10 a
+K = 12/14/16/18 sono i minimi ESATTI del censimento esaustivo chiuso NON
+filtrato per vitalità; nessuna parola-arma (burden1=0) esiste a K ≤ 18.
 Dove: §87.6, `alpha1/spoiler_quadrant_profile.py`.
 Metodo: condizionato al censimento (esaustivo per quei K) + T8/T9.
-Caveat (trappola w, imposta da §87e-2/§88): un teorema-parola ai record è
-VACUO se la parola non ha passati record-compatibili di profondità
-arbitraria; il minimo che conta è sul sottoinsieme VIVO (a K ≤ 18 tutti i
-minimi sono ≥ 10, ma i minimi vivi per questi K non sono stati ricalcolati —
-v. DA CHIARIRE #1).
+Caveat (trappola w; decisione §108b-A1): il bound burden1(w) ≥ m_K passa
+AUTOMATICAMENTE al sottoinsieme vivo; NON è invece dimostrato che il minimo
+vivo sia raggiunto né che valga esattamente 10 (i minimi vivi per K ≤ 18
+non sono stati ricalcolati; il pannello ha deciso: nessun ricalcolo). Resta
+la lezione §87e-2/§88: un teorema-parola ai record è VACUO se la parola non
+ha passati record-compatibili di profondità arbitraria.
 
 ### 1.C Parola Viva e Blocco Antico (§88–§89)
 
@@ -215,6 +228,10 @@ lontani è essa stessa parte della congettura del Muro. Il teorema
 CONDIZIONALE (SE w101 al record ALLORA (1,1) nera) è intatto. Il teorema
 inoltre NON dice che w101 occorra ai record delle eterne (occorrenza:
 0/1639 nei record reali, §89a) né che 1 sia il pavimento vivo.
+Decisione §108b-A9: il valore citabile di D è ESCLUSIVAMENTE il certificato
+D(w101) = ∞ (il 624 del binario DFS è un early-exit storico, trappola x);
+e D = ∞ NON dimostra la presentazione della parola lungo una SINGOLA
+orbita eterna.
 
 **T14. Teorema del Blocco Antico (famiglia certificata).** Ipotesi: le
 ultime 405+8m svolte di un'orbita sono σ^m·τ·w101 (qualsiasi m ≥ 0).
@@ -250,32 +267,38 @@ nessuna orbita eterna non-highway può trovarsi in questo ramo — SENZA alcun
 bound di vitalità.
 Dove: §91a, `docs/WALL_BEHIND_ONE_ADDENDUM.md`, `alpha1/u1_replay_theorem.py`.
 Metodo: deduttivo su Replay-Lock (T7) + due certificati finiti: residuo(w101)
-= {(1,1)} (T13) e G1b: V† ∩ {y≥1} ⊆ F ∪ {(1,1)}, dove V† = 576 prime letture
-fino all'orizzonte di RILEVAZIONE T = 2600 (la prima stesura con V a
-orizzonte onset+P era un non-sequitur d'orizzonte, riparata dal pannello —
-lezione: l'orizzonte giusto è quello della rilevazione).
+= {(1,1)} (T13) e G1b: V†_2600 ∩ {y≥1} ⊆ F ∪ {(1,1)}, dove V†_2600(w101) =
+576 prime letture fino all'orizzonte ESATTO del verdetto U1, H = 2600
+(convenzione V†_H, decisione §108b-A3; la prima stesura con V a orizzonte
+onset+P era un non-sequitur d'orizzonte, riparata dal pannello — lezione:
+l'orizzonte giusto è quello della rilevazione).
 Robustezza: attacco con 1859 coprenti-bianche fresche (G4 §91) + 12
 avversarie fresche (§92h): zero controesempi. U1 dichiarato INTATTO dopo la
 falsificazione di U2-NERO (§92d: riapre SOLO il corno 3).
 
-**T17. Muro dietro l'Uno — stato corretto (POST §92–§94; la versione §90d/
-§91c.3 con "D ≤ 4 ⇒ Cheb ≤ ~5" è MORTA).** Bersaglio: per un'orbita ETERNA
-non-highway, a ogni record y-min STRETTO con posa fuori da un intorno finito
-dell'origine/seme, presentare w101 come suffisso è impossibile (B–T dà
-infiniti record fuori da ogni intorno finito). Stato per corni:
+**T17. Muro dietro l'Uno — risultati parziali: corni 1, 2, 3a (SPEZZATO
+dalla decisione §108b-A2: i corni 1/2/3a sono [T] parziali, il corno 3b è
+[X] e vive per intero in X6; la versione §90d/§91c.3 con "D ≤ 4 ⇒ Cheb ≤
+~5" è MORTA).** Bersaglio: per un'orbita ETERNA non-highway, a ogni record
+y-min STRETTO con posa fuori da un intorno finito dell'origine/seme,
+presentare w101 come suffisso è impossibile (B–T dà infiniti record fuori
+da ogni intorno finito). NON esiste ancora un raggio unico del Muro
+(decisione A2): la forma rigorosa è PER-PAROLA — se B_∞(z_t, r_seed(w))
+non interseca né l'origine né il supporto del seme, la parola finita
+certificata w non è presentabile al record z_t (via T21); il 63 è solo il
+MASSIMO di r_seed sulle 273.459 parole finite censite, NON un bound
+globale. Stato per corni:
 - corno 1 (il passato non visita mai (1,1)): il nero su (1,1) viene dal seme
   iniziale ⇒ solo record vicini al seme — CHIUSO ai record tardivi
   (deduttivo, §90d.1);
 - corno 2 (coprire-bianco): CHIUSO da U1 (T16);
-- corno 3 (coprire-nero): SPEZZATO (retro-nota §91c.3, agg. §94):
-  (3a) coprente-nera ad albero dei prepend FINITO ⇒ Lemma della Nascita
-  Vicina (T21) ⇒ origine E cella nera di seme entro r_seed dal record —
-  censimento §94a: 273.459/273.493 parole della famiglia CERTIFICATE,
-  r_seed ≤ 63, zero alberi esauriti con min-pend = 0 ⇒ l'intorno del Muro
-  cresce da "~5" a r_seed+bbox;
-  (3b) coprente-nera FUGGENTE (34 note) ⇒ APERTO [X]: bersaglio = Ledger
-  Sporco v2, ridotto a §95–§96 a "nessuna delle 8 firme-exit realizzabile
-  come nodo di pulizia" (T24–T26).
+- corno 3a (coprente-nera ad albero dei prepend FINITO): Lemma della
+  Nascita Vicina (T21) ⇒ origine E cella nera di seme entro r_seed dal
+  record — censimento §94a: 273.459/273.493 parole della famiglia
+  CERTIFICATE, r_seed ≤ 63, zero alberi esauriti con min-pend = 0;
+- corno 3b (coprente-nera FUGGENTE, 34 note): APERTO [X] — per intero in
+  X6 (bersaglio = Ledger Sporco v2, ridotto a §95–§96 a "nessuna delle 8
+  firme-exit realizzabile come nodo di pulizia", T24–T26).
 NB (pannello §91 + §94b): le orbite CONVERGENTI possono presentare w101
 (ingresso forzato, non violazione); "storia lunga" da sola NON basta e
 nemmeno "eterna" da sola (a record fissato il passato di un'eterna è finito:
@@ -300,11 +323,19 @@ le code: §90c vedeva 2 config e D ≤ 4; scala reale D = 0/4/8/12/28/32/48/
 **T19. Fatti certificati della macchina in-striscia (condizionali).**
 T1: h1=2 ⇒ D=0 (geometria pura, nessuna ipotesi di campo). T2: zero cicli
 in-tasca (nessuna delle 47.312 coperture astratte sopravvive DENTRO la
-striscia: sopravvivere = uscirne). T3 (condizionale): ogni muro reale le cui
-celle restano tutte in S_CORE ha D ≤ 33 (poggia sul lemma di
-sovra-approssimazione promosso a deduttivo §92a; "confinamento" = celle in
-S_CORE, non riga ≤ 2). T4: nel corridoio h1=0, req(2,1)=B forzato alla
-copertura. Dove: §92b, `alpha1/u2_pocket_certificate.py`.
+striscia: sopravvivere = uscirne). T3 (statuto deciso §108b-A6, DUE
+strati): **[T] teorema computer-assistito CONDIZIONALE — ogni muro reale
+interamente confinato in S_CORE ha D ≤ 33**, dove (i) S_CORE = la striscia
+CORE della macchina §92a (le 15 celle della tasca §91b + (1,1));
+(ii) il lemma di sovra-approssimazione è SOUND e deduttivo (§92a: ogni
+transizione reale soddisfa in_succ/out_succ, la regola della cella-giovane
+è necessaria, req|S congelato fuori striscia); (iii) l'enumerazione
+esaustiva delle 28.910 coperture astratte morenti in-striscia ha massimo
+D astratto = 33 (i testimoni confinati D=4/8/12 hanno verdetto astratto
+esattamente 4/8/12). "Confinamento" = celle del muro in S_CORE, NON
+"riga ≤ 2". Lo strato [C] (certificato della macchina) è C14.
+T4: nel corridoio h1=0, req(2,1)=B forzato alla copertura.
+Dove: §92b, `alpha1/u2_pocket_certificate.py`.
 
 **T20. Bilancio senza tasso (teorema del ledger).** Ipotesi: parola-passato
 COMPLETA (dalla nascita) di un'orbita reale. Tesi: pending finali = celle
@@ -460,6 +491,9 @@ append-only certificati per-fantasma. NON prova: che 0.0455 sia un lower
 bound di δ₄^alt — è una barriera RELATIVA alla sequenza di taglio (un ciclo
 consistente più economico potrebbe passare per un arco tagliato, §55.2);
 la certificazione esaustiva è il contenuto del Lemma A ([X]).
+Collocazione [C] CONFERMATA dal pannello (decisione §108b-A4): 0.0455 è
+l'esito certificato della SPECIFICA sequenza append-only di 252 tagli;
+l'inferenza a lower bound per δ₄^alt resta [X] (X1).
 
 **C6.** `alpha1/halo_occupancy_profile.py` (§86): gate §85a esatti 24/24;
 tripwire ⟺ halo 0 violazioni; tripwire T2 (scia) 0/2.323.679 deep_1;
@@ -506,8 +540,8 @@ al muro §88 Test B (il filtro-onset non pota mai — coerente con §87b zero
 buchi). NON prova: inevitabilità di alcuna famiglia di parole ai record.
 
 **C13.** `alpha1/u1_replay_theorem.py` (§91a): G1 (residuo/inclusione su V,
-|V|=81, onset 160), G1b (V†, 576 prime letture a T=2600: zero celle extra —
-il check portante della versione riparata), G2 (colori su F bit-identici
+|V|=81, onset 160), G1b (V†_2600, 576 prime letture all'orizzonte H=2600: zero celle extra —
+il check portante della versione riparata; convenzione V†_H, §108b-A3), G2 (colori su F bit-identici
 60/60), G3 (30/30 coprenti-bianche: onset e intera V identici), G4 (attacco:
 1859 armi fresche, 0 controesempi) + 12/12 avversarie fresche (§92h).
 
@@ -625,8 +659,11 @@ Campione: 24 orbite. Lettura: il caos entra dalla porta più stretta.
 **O6.** Burden1 e caccia all'arma (§87d–e, §88.1): minimo record-compatibile
 censito 18/16/14/10 a K=12..18 (esaustivo); col filtro di vitalità
 (viable-k 8) il minimo VIVO scende 19→…→1 (K=101..120, residuo {(1,1)});
-weapon (burden1=0 viva): MAI vista — beam 4000/kmax 120, binario 624,
-corridoio 1,5M nodi (486.676 rami vivi al cap 60, NON esaustivo).
+weapon (burden1=0 viva): MAI vista — beam 4000/kmax 120, binario dei
+prepend seguito fino a prof. 624 (early-exit storico del testimone DFS,
+decisione §108b-A9: il valore di D citabile è SOLO il certificato
+D(w101)=∞, T13), corridoio 1,5M nodi (486.676 rami vivi al cap 60,
+NON esaustivo).
 Scadenza/caveat: i minimi senza filtro di vitalità a K>18 (plateau 5
 "Residuo dei Cinque", discese a 2) erano TUTTI artefatti di beam o minimi
 VACUI (estinzione entro prof. 3–7) — versione corretta a §88 (trappole w, x).
@@ -637,7 +674,8 @@ zero match con w101; zero burden1=0; 3 record a UNA sola colpevole.
 Tripwire del meccanismo Cono: 1620/1620 record lontani dall'onset con ≥ 1
 cella-residuo nera. CORREZIONE (§99, MINEP-HUNT, trappola pp): su campioni
 freschi esistono 2 violazioni REALI del tripwire-orizzonte a V(onset+P)
-(caveat V† realizzato) — il meccanismo è sano SOLO all'orizzonte V†;
+(caveat V† realizzato) — il meccanismo è sano SOLO all'orizzonte V†_H
+(record-side: H = t† = max(2600, og_rec+2080), decisione §108b-A3);
 il 1620/1620 era (anche) fortuna del campione (~7·10⁻⁵). Caveat: orbite
 selezionate per onset alto (trappola h) — lettura within-orbit.
 
@@ -726,7 +764,8 @@ bianche fuggenti (16.388) e confinate fino a D=25: per la trappola (bb) la
 coda 48/56/∞ è plausibile. Serve la campagna stress-2 bianche (ereditata
 §92g.5, mai fatta).
 
-**X6. Il Muro dietro l'Uno — corno 3b (IL crux della linea U2).** Catena
+**X6. Il Muro dietro l'Uno — corno 3b (IL crux della linea U2; qui per
+intero per decisione §108b-A2, spezzato da T17).** Catena
 attuale: Ledger Sporco v2 (O10) ⟺ nessun tratto pulito esce dalla palla
 (T24–T25) ⟺ nessuna delle 8 firme-exit è realizzabile come nodo di pulizia
 (T26). Vie tentate e FALSIFICATE, in ordine:
@@ -753,7 +792,9 @@ Il falsificatore permanente: realizzare UNA delle 8 firme ⇒ v2 falsa.
 
 **X7. Collo della Pulizia come teorema.** "Ogni nodo di pulizia ha firma
 ((−1,2),3)" (O11): se dimostrato ⇒ v2 TEOREMA (la firma è confinata da C1)
-⇒ Muro chiuso al raggio 2 + intorno. La via enumerativa diretta (§96g.1) è
+⇒ corno 3b chiuso ⇒ Muro chiuso nella forma per-parola di T17 (decisione
+§108b-A2: palla-2 per le fuggenti + r_seed per-parola sulla famiglia
+certificata — nessun raggio unico). La via enumerativa diretta (§96g.1) è
 stata falsificata nella forma a zona piccola (§97 = X6); il negativo
 empirico resta PC-only.
 
@@ -787,54 +828,54 @@ risultato (§90a, trappola z).
 
 ---
 
-## DA CHIARIRE (ambiguità rilevate, NON interpretate)
+## DECISIONI DEL PANNELLO §108 (§108b — le 9 questioni del volume A, DECISE e applicate)
 
-1. **§87.6 minimi burden1 vs vitalità:** il "Teorema della checklist ai
-   record" (T12) cita i minimi del censimento esaustivo K ≤ 18 (10 a K=18),
-   ma la trappola (w) esige il minimo sul sottoinsieme VIVO; gli addenda non
-   ricalcolano i minimi vivi per K ≤ 18. L'enunciato resta vero (checklist di
-   burden1(w) celle per la parola PRESENTATA), ma il valore "min 10" come
-   costante di teorema andrebbe o riderivato con vitalità o citato come
-   minimo del censimento senza filtro.
-2. **Raggio dell'intorno del Muro (T17):** §91c.3 diceva "Cheb ~≤ 13 + bbox
-   seme"; dopo §94a il corno 3a dà r_seed ≤ 63 (+ bbox), e il corno 3b (se
-   chiuso) darebbe raggio 2 + intorno. Quale intorno citare come enunciato
-   unico nel consolidamento va deciso (dipende da come si fondono 3a e 3b).
-3. **Tripwire d'orizzonte (O7):** dopo §99 la formulazione canonica del
-   meccanismo G ≥ 1 è "sana SOLO alla V†". Il consolidamento deve fissare la
-   versione V† come canonica e coordinare la formulazione con la metà B
-   (§98–§101 la usano).
-4. **Etichetta della barriera 0.0455 (§55.2):** è un fatto certificato sui
-   252 tagli ([C]) ma NON un bound ([T]) né una semplice osservazione
-   dinamica ([O]) — qui è in C5 con caveat; confermare la collocazione.
-5. **Definizione canonica di "record y-min stretto":** §87.6 (arrivo
-   heading-su su cella mai visitata + semipiano davanti e riga 0 mai
-   visitati) e §89a (assert heading=su, record sotto il bbox del seme,
-   "semipiano davanti bianco garantito") sono operativamente coerenti ma il
-   consolidamento deve fissare UNA definizione con tutte le clausole.
-6. **§92b T3 (D ≤ 33):** classificato qui come [T]-condizionale perché
-   poggia sul lemma di sovra-approssimazione promosso a deduttivo (§92a/
-   pannello); se il pannello §108 preferisce, può retrocedere a [C]
-   (dipendenza da una macchina validata).
-7. **"γ ≤ 40" vs "periodo minimo ≤ 41":** il mandato §108 cita "gamma ≤ 40";
-   l'enunciato esatto (T3) esclude periodo minimo ≤ 41 (dispari analitici +
-   pari ≤ 40 enumerati). Uniformare la dicitura nel documento finale
-   (suggerita: "nessuna coda eterna di periodo ≤ 41; enumerazione chiusa sui
-   pari ≤ 40").
-8. **Potenze massime realizzabili dei rotori (T1/T2):** MORSO §40.1 dà
-   "cavalcate ≤ 4 periodi" per r ≤ 3 e RADIUS §47 "≤ 2" per r=4; l'enunciato
-   quantificato di RADIUS §48 usa "≤ 2 a r=4". Nel consolidamento va
-   dichiarata la costante per-raggio, non un unico "≤ 4".
-9. **D(w101) ≥ 624 vs D(w101) = ∞:** §88.3 (binario, early-exit) e §88.4
-   (certificato). Il valore citabile è SOLO il certificato (=∞); il 624 è
-   un fatto del testimone DFS (trappola x). Qui è così, ma va mantenuto nel
-   documento finale.
+1. **burden1 vs vitalità (→ T12, O6):** conservati 18/16/14/10 come minimi
+   esatti del censimento chiuso NON filtrato; nel teorema soltanto
+   burden1(w) ≥ m_K; il bound passa automaticamente al sottoinsieme vivo;
+   NON è dimostrato che il minimo vivo sia raggiunto e valga esattamente
+   10. Nessun ricalcolo.
+2. **Raggio del Muro (→ T17, X6):** non esiste ancora un raggio unico del
+   Muro; T17 spezzato — corni 1, 2, 3a come risultati parziali [T], corno
+   3b come [X] (= X6). Forma rigorosa per-parola: se B_∞(z_t, r_seed(w))
+   non interseca origine né supporto del seme, la parola finita certificata
+   non è presentabile. Il 63 è solo il massimo sulle 273.459 parole finite
+   censite, non un bound globale.
+3. **Tripwire d'orizzonte (→ T16, C13, O7):** nessun V† numericamente
+   universale; V†_H(w) = prime letture fino all'orizzonte esatto del
+   verdetto. Per U1: H = 2600. Per Dicotomia/tripwire record-side:
+   H = t† = max(2600, og_rec+2080).
+4. **0,0455 (→ C5, X1):** confermato [C], ma solo come esito certificato
+   della specifica sequenza append-only di 252 tagli; non è un lower bound
+   per δ₄^alt — tale inferenza resta [X].
+5. **Record y-min stretto (→ convenzioni in testa e qui sopra):**
+   definizione canonica, all'istante subito prima della lettura:
+   y_t < min_{s<t} y_s ⇒ semipiano y ≤ y_t mai visitato dalla traiettoria
+   precedente; bianchezza solo aggiungendo y_t < y_min(seme); heading e
+   footprint sono conseguenze nella convenzione temporale scelta, non
+   parti della definizione.
+6. **T3-D≤33 (→ T19, C14):** scisso in due strati — [T] teorema
+   computer-assistito condizionale "ogni muro reale interamente confinato
+   in S_CORE ha D ≤ 33" (con definizione di S_CORE, lemma di
+   sovra-approssimazione sound, enumerazione esaustiva con massimo 33);
+   [C] certificato della macchina (C14).
+7. **γ (→ T3):** dicitura unica "Nessuna orbita da configurazione iniziale
+   finita ha linguaggio di svolte definitivamente periodico di periodo
+   minimo ≤ 41" (dispari analitici; pari ≤ 40 per enumerazione chiusa);
+   "γ ≤ 40" eliminato.
+8. **Cavalcate (→ T1, T2):** costanti per-raggio dichiarate — massimo
+   quattro periodi per r ≤ 3, massimo due per r = 4.
+9. **D(w101) (→ T13, O6, C11):** citabile ESCLUSIVAMENTE D(w101) = ∞; il
+   624 è un early-exit storico del testimone DFS; e D = ∞ non dimostra la
+   presentazione della parola lungo una singola orbita eterna.
 
 ---
 
-## Conteggio voci
+## Conteggio voci (§108b)
 
-[T] 28 · [C] 21 · [O] 13 · [X] 12 · DA CHIARIRE 9
+[T] 28 · [C] 21 · [O] 13 · [X] 12 — riconteggio §108b: INVARIATO (gli
+split A2/A6 riallocano contenuto già contato: il corno 3b era già X6, il
+certificato di T19-T3 era già C14). Le 9 DA CHIARIRE: DECISE (sopra).
 
 ## Fonti (file letti integralmente)
 

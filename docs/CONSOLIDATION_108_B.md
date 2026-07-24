@@ -1,10 +1,21 @@
-# CONSOLIDAMENTO §108 — INVENTARIO, METÀ B
+# CONSOLIDAMENTO §108 — INVENTARIO, METÀ B (v2 = §108b)
 ## Certificati alpha1/beta + linea record-side (§57–§75, §78–§86, §98–§107e)
 
 Perimetro: catena alpha1 §57–§75, kernel della porta §78, ledger/motivi §79–§86,
 linea record-side §98–§107e. **Esclusi** (metà A): §36–§56 e §87–§97.
 Per §107b/c/d/e si usa SEMPRE la versione post-ERRATA (§107d.0, §107e.0; "lock-capable"
 RITIRATO a §107d.0.5). Nessun claim nuovo: ogni voce cita il § e il file sorgente.
+**§108b:** le 8 questioni DA CHIARIRE sono state DECISE dal pannello §108 (verdetto
+2026-07-24) e le decisioni sono applicate in questo volume (sezione DECISE in coda;
+v1 in 34ada36; nessuna nuova simulazione).
+Convenzioni canoniche (fissate in testa, `docs/CONSOLIDATION_108.md`): record y-min
+stretto = y_t < min_{s<t} y_s (A5); V†_H per-verdetto, record-side t† = max(2600,
+og_rec+2080) (A3); **og_rec** = onset del germe misurato DAL RECORD (≡ l'onset_germe
+di questo volume), **og_win** = K + og_rec (asse della parola concatenata), tempo
+assoluto = t_record + og_rec, sempre **ride = d − og_rec** — la dicitura "asse
+assoluto og+101" è ELIMINATA (B4); le tre nozioni di "fase" (checklist §61–66 /
+GF(2) §74 / porta §102–104) restano DISTINTE, nessuna identificazione senza mappa
+esplicita (B2).
 Convenzione etichette: **[TEOREMA]** = deduttivo con ipotesi complete; **[CONDIZIONALE]** =
 teorema sotto ipotesi dichiarate aperte; **[ENUMERAZIONE]** = esatto per enumerazione
 esaustiva finita; **[NO-GO-EMPIRICO]** = falsificazione sul campione raggiunto, non teorema
@@ -77,8 +88,9 @@ deduttiva (§100b.iv).
 ### B1.6 [CONDIZIONALE] Teorema del Rifornimento Recente (§98c, docs/OCCURRENCE_SUPPLY_ADDENDUM.md)
 **Enunciato.** Sia O eterna non-highway, t un record y-min stretto con posa sotto il seme e
 residuo interamente profondo, w = ultime K=101 svolte. Ipotesi per-parola: **(A)** il germe
-di w ha onset finito; **(B)** certificato d'orizzonte alla V† (prime letture fino
-all'orizzonte di RILEVAZIONE, investendo residuo, k_max(w) e la classificazione "record
+di w ha onset finito; **(B)** certificato d'orizzonte alla V†_H (prime letture fino
+all'orizzonte ESATTO del verdetto, record-side H = t† = max(2600, og_rec+2080) —
+decisione §108b-A3 — investendo residuo, k_max(w) e la classificazione "record
 profondo"). Allora almeno una cella del residuo è nera a t, dipinta da O nelle ultime
 y_rel ≤ k_max(w) epoche-record. **Corollario** (con **(C)** k* = sup di k_max† sulle
 K-parole valide, costante ESISTENZIALE non calcolata): ogni eterna non-highway esegue in
@@ -94,8 +106,9 @@ misurata (§100a.2).
 **Setup.** Record y-min stretto a t con posa sotto il seme (ry < y_seed_min), t ≥ K=101,
 w = svolte[t−K..t); heading al record = 0 (frame = pura traslazione); germe di w =
 footprint word-determinato (Finestra-K §87) + bianco altrove; ipotesi **(A)** onset_germe(w)
-finito; orizzonte t† = max(2600, onset_germe+2080); d(t) = primo indice di svolta divergente
-tra corsa reale e germe.
+finito (onset_germe ≡ og_rec: misurato dal record, convenzione §108b-B4); orizzonte
+t† = max(2600, og_rec+2080) (= V†_H record-side, §108b-A3); d(t) = primo indice di svolta
+divergente tra corsa reale e germe.
 **Lemmi (deduttivi).** L0 celle a y_rel ≤ 0 bianche gratis; L1 co-evoluzione fino a d, prima
 differenza su una prima-lettura del residuo-daga R†(w), colore reale NERO; L2
 d ≥ Cheb(cella di divergenza); L3 la corsa reale CONSUMA la colpevole a t+d; L4 se
@@ -106,7 +119,9 @@ finestra t† e lock ≥ 2080.
 **Dicotomia.** A ogni record vale esattamente una: (T) d < onset_germe (rigetto nel
 transiente); (R) onset_germe ≤ d < t† (lock W0-like di ride passi); (E) d ≥ t†.
 **Riduzione (unidirezionale, dichiarata):** Link 1 ⟸ "(R)/(E) infinite volte ai record";
-(T)-definitivo NON nega Link 1 (lock fuori-record possibili).
+(T)-definitivo NON nega Link 1 (lock fuori-record possibili). [Cross-ref §108b-B7:
+questa è la riduzione storica dichiarata di §101a; la forma sufficiente VIGENTE per il
+consolidamento è quella di B4.19/B4.20: #{t: classe-κ(t) ∧ ride(t) ≥ L₀} = ∞.]
 **Struttura per drift (corollario).** Un ride muore solo risalendo nel visitato (y_rel ≥ 1);
 per germi drift-giù con transiente pulito la classe (E) = ingresso ⇒ vietata alle eterne
 (sotto (A)+(B) di §98c) ⇒ ai record drift-giù l'eterna ha colpevole FORZATA nel transiente.
@@ -261,13 +276,19 @@ freschi indipendenti onset 105k–180k), P mai > 15, ~97–98% a P=0, nessun tre
 vuoto sul campione, NON dimostrabile-vuoto = Link 1; §78.10). NB §78.12: A1 (porta,
 one-shot ai lock) e δ_r (morsi, continuo) sono DUE certificati β complementari, non un
 automa-finestra a raggio 9 (infattibile e oggetto sbagliato).
+**Statuto DECISO (§108b-B1):** la stabilizzazione dell'impronta è [C], NON [T] — i
+quattro tagli verificano una stabilizzazione FINITA; la promozione a teorema
+richiederebbe un lemma formale di periodicità-con-drift valido per ogni offset e per
+tutte le 22 fasi (mai formalizzato). E non implica comunque un budget temporale P
+uniforme.
 
 ### B2.8 `alpha1/consumption_ledger_probe.py` (§79, docs/CONSUMPTION_LEDGER_ADDENDUM.md)
 Simulatore SET-BASED INDIPENDENTE (non alpha1_engine.c), validato su: vuota → 9977 esatto;
 W0 periodo 104/58R/drift; 0 violazioni di alternanza su 106.000 passi su (7,−7).
 **Statuto dichiarato: SCOUT, non risultato certificato** — "deep" = proxy d'età (>104/>1040),
-NON la delta_r outside-window 9×9; conteggi da riprodurre con alpha1_engine.c prima della
-promozione (§79 nota di stato; debito ancora aperto, cfr. DA CHIARIRE).
+NON la delta_r outside-window 9×9; conteggi mai riprodotti con alpha1_engine.c.
+**Decisione §108b-B5:** §79 citabile SOLO come [O]/SCOUT; nessuna promozione e
+NESSUNA riproduzione ora (il debito DC.5 resta archiviato come tale).
 
 ### B2.9 Catena motivi §80–§84 (docs/DEEP_MOTIF_SATURATION_ADDENDUM.md → ROTOR_LANGUAGE_ADDENDUM.md)
 `deep_motif_saturation.py` (run Ryzen reale, dinamica e definizione deep riusate identiche
@@ -283,8 +304,10 @@ non-censimento.
 
 ### B2.10 Certificatore automa (LRRRR)^3 (§85b, docs/LRRRR_HALO_ADDENDUM.md)
 `lrrrr_avoidance_certificate.py` r=1,2,3 (conteggi stati 15/403/45.971 coerenti coi
-selftest): sopravvissuti stabili 4 a r=2,3 — **INCONCLUSIVO come teorema-finestra**, e i
-sopravvissuti sono REALI (testimone B4.9). `lrrrr_depth_profile.py` con tripwire catena
+selftest): sopravvissuti stabili 4 a r=2,3 — **INCONCLUSIVO come teorema-finestra**;
+decisione §108b-B8: si afferma soltanto il Teorema Halo (B1.3) e l'esistenza di ALMENO
+una classe di sopravvissuti realizzata dal testimone (B4.9); NESSUNA realizzabilità
+attribuita separatamente a tutti e quattro (censimento mai fatto, DC.8). `lrrrr_depth_profile.py` con tripwire catena
 deep_4⊆…⊆deep_1 = 0 violazioni. **Lezione certificata:** archi di assunzione solo-assW =
 campanello di realizzabilità (trappola t).
 
@@ -337,7 +360,9 @@ d'occorrenza; quote = campione.
 30/30+20/20 §104h); coerenza interna episodi/controlli (read-set bianco ⟺ classe R).
 §106: terra-check T1/T2/T3 con replay canonico; refuso d'etichetta dichiarato nel JSON
 ("neg (tutte garantite)" conta i record con ALMENO una cella garantita — i check T1/T2 sono
-indipendenti da esso, §106d).
+indipendenti da esso, §106d). **Decisione §108b-B6:** il campo storico resta LEGACY con
+etichetta errata; la semantica canonica è "almeno una cella garantita"; non usare il nome
+storico come evidenza semantica e non alterare retroattivamente il dato.
 
 ### B2.17 F0/F2 dello Scudo Antico (§107b, docs/DANGER_BACKWARD_ADDENDUM.md)
 `danger_geometry_census.py`: G0 R_T ∩ footprint = ∅ con footprint INDIPENDENTE; G1
@@ -347,8 +372,10 @@ foglie potate era misura politica-pesata, trappola rr): GA lente naive bit-ident
 passato reale 2/2 nella macchina (cella consumata @102 ritrovata); lente ESTERNA
 indipendente (forza bruta 2^d riscritta da zero): LOCKA D=16 17/17 livelli bit-identici,
 claim σ=1 confermato con enumerazione esaustiva indipendente (2.808/2.808 shield).
-Convenzione dichiarata dalla lente: onset_germe misurato DAL RECORD (asse assoluto og+101)
-— da propagare (§107b.6). **Non prova:** i conteggi a D=28 sono a profondità dichiarata
+Convenzione dichiarata dalla lente: onset_germe misurato DAL RECORD = **og_rec**
+(decisione §108b-B4: la dicitura storica "asse assoluto og+101" è ELIMINATA; si usano
+og_rec, og_win = K + og_rec, tempo assoluto t_record + og_rec; sempre ride = d − og_rec —
+convenzione propagata dalla testa a ogni strumento futuro, chiude §107b.6). **Non prova:** i conteggi a D=28 sono a profondità dichiarata
 (la lettura "bit antichi = irraggiungibili" è poi caduta col cap, trappola ss).
 
 ### B2.18 Motore reach C + P2 (§107c, docs/DANGER_REACH_ADDENDUM.md)
@@ -477,7 +504,8 @@ UNSAT; deficit profondi sample-limited o circolari.
 (~0,443/passo), pool +11.968; recycle-fed 61,7% (deep+ 69,3%); inflow B-T ~4:1 sul consumo
 deep; età rivisita-nera med 8 / p90 108 / max 4068 (coda age>1040 = 0,6%, coincide con lo
 stallo rotore §77). **Caveat:** una sola orbita, proxy d'età, non cross-validato con
-alpha1_engine (§79.4).
+alpha1_engine (§79.4). [Decisione §108b-B5: statuto definitivo [O]/SCOUT — nessuna
+promozione, nessuna riproduzione ora.]
 
 ### B3.16 Saturazione dei motivi: NO (§80.1) [NO-GO-EMPIRICO]
 24 orbite: r=3 ~99,4% eventi unici (73.959/74.416 su orbita 0); scoperta ultimo20%/primo20%
@@ -563,8 +591,10 @@ fase-0 = famiglia suffisso-8 `LRRRRLLL` 85%; 11/14 germi fascia = parola IDENTIC
 `RLRRLRRRRLLL` (#2 reale). Spettro dei germi ai 1639 record canonici: porta-0 95,4%,
 porta-24/25 4,5%, micro 0,2% — **identico allo spettro degli ingressi freschi** ⇒ la metà
 "occorrenza" collassa su B-T (i tentativi di porta-0 sono lo stato generico dei record);
-riduzione §104d: Link 1 ai record = lim sup [d − onset_germe] ≥ L0 [forma dei quantificatori
-poi CORRETTA da §107d.0.10 — vedi B4.20].
+riduzione §104d: Link 1 ai record = lim sup [d − onset_germe] ≥ L0 [FORMULAZIONE STORICA:
+i quantificatori sono stati corretti da §107d.0.10; per decisione §108b-B7 nel
+consolidamento si cita SOLO la forma B4.19/B4.20 — §104d resta esclusivamente storia
+dell'errata].
 
 ### B3.29 Meccanismo dei lock ai record (§105b.1)
 Episodi vs controlli same-seed: read-set 14 e 9 celle (vs 454 e 931), tutto bianco, celle
@@ -614,6 +644,12 @@ max 8 [QUANTILE]; n_visite med 1. H-NR: 103.980 eventi di pittura unici non-seme
 con molteplicità ≥2 (53% degli EVENTI, non degli usi), 37.116 condivisi da record NON
 adiacenti nella sequenza canonica (non una distanza geometrica/asintotica) — il riuso è
 la norma.
+
+### B3.35 Violazioni-orizzonte profonde fra catene (§99c/§100a) [O — ensemble differenti; voce aggiunta per decisione §108b-B3]
+1/230 in catena-1 vs 0/1.223 in catena-2 (p ~ 0,5%): osservazioni su ENSEMBLE
+DIFFERENTI — né una contraddizione né una stima di frequenza. I record MISTI di
+catena-2 non sono mai stati riscanditi: debito ARCHIVIATO (v. B4.24); la campagna
+NON viene riaperta ora (§108b-B3).
 
 ---
 
@@ -723,8 +759,8 @@ L_0} = ∞ (o versione con ingresso permanente) — da cui il kernel esteso §10
 
 ### Crux aperti
 
-**B4.20** **Link 1** (il crux): "orbita eterna non-highway ⇒ lock W0-like profondi
-infinite volte". Stato dopo la metà B: (a) la metà "occorrenza" ai record è collassata su
+**B4.20** **Link 1** (il crux operativo centrale della linea record-side, §108b):
+"orbita eterna non-highway ⇒ lock W0-like profondi infinite volte". Stato dopo la metà B: (a) la metà "occorrenza" ai record è collassata su
 B-T (§104d: spettro dei tentativi = spettro degli ingressi; ipotesi A per-parola); (b) la
 quantità record-side vigente è #{t: classe-κ ∧ ride ≥ L_0} = ∞ (B4.19), con supporto
 word-decidibile e verdetto word+griglia (§107e); (c) scala §107a: (i) occorrenza della
@@ -755,7 +791,9 @@ non una riduzione. Derivare ×1,9 e massa-nucleo 0% dei p15-rides: aperto (§86.
 infinita (§106c.3); formalizzazione "scudo antico vs Cono §87" (§107c.7.1); F3
 calibrazione dinamica preregistrata (§107c.5, join sigma_vocab × griglia — eseguita in
 §107d come diagnostica, meccanismo NON identificato); F1 gamba-Cuneo stratificata
-(ereditata §107b.8.4, dichiarata non eseguita).
+(ereditata §107b.8.4, dichiarata non eseguita); debito ARCHIVIATO per decisione
+§108b-B3: riscansione dei record MISTI di catena-2 (§100g.2) — registrato, non
+riaperto.
 
 **B4.25** Decisione vigente (§107e.4, regola preconcordata §107d.6.5): gate fondante
 certificato + ipotesi meccanicistica morta ⇒ **CONSOLIDAMENTO** (questa sessione §108),
@@ -763,41 +801,64 @@ nessuna nuova campagna empirica salvo un invariante d'ordine di natura diversa.
 
 ---
 
-## DA CHIARIRE (enunciati ambigui — non interpretati)
+## DA CHIARIRE → DECISE dal pannello §108 (§108b)
 
 **DC.1** §78.3: statuto della stabilizzazione dell'impronta co-moving. L'addendum la
 chiama "certificata (da W0, check finito)" ma la verifica è ai tagli 1040/5200/10400/20000
 + argomento di periodicità-con-drift (§78.2) non formalizzato come lemma per ogni offset.
-Classificarla come teorema o certificazione finita richiede decisione del titolare.
+**DECISO (§108b-B1):** [C], non [T] — i quattro tagli verificano una stabilizzazione
+finita; la promozione richiederebbe un lemma formale di periodicità-con-drift valido
+per ogni offset e per tutte le 22 fasi; non implica comunque un budget temporale P
+uniforme. Applicato in B2.7.
 
 **DC.2** §102f.2/§103d: la mappatura porta-0/porta-24-25 ↔ le 22 porte di §66 (GATE_PHASES
 / E(k)) e la fase-0 di §74 NON è mai stata eseguita ("convenzioni di fase diverse",
-dichiarato). Nel consolidamento le tre nozioni di "fase" (§61-§66, §74, §102-§104) NON
-vanno identificate senza questa mappatura.
+dichiarato). **DECISO (§108b-B2):** tre simboli distinti per fase-checklist §61–66,
+fase-GF(2) §74 e indice porta/record §102–104; NESSUNA identificazione senza una mappa
+esplicita. Applicato nelle convenzioni di testa e nell'header di questo volume.
 
-**DC.3** §100a (tensione a verbale, mai risolta): violazioni-orizzonte profonde 0/1.223 in
+**DC.3** §100a (tensione a verbale): violazioni-orizzonte profonde 0/1.223 in
 catena-2 vs 1/230 in catena-1 (p ~ 0,5%) — fortuna o clusterizzazione word-mediated; i
 record MISTI di catena-2 non sono mai stati riscanditi (debito dichiarato §100g.2).
+**DECISO (§108b-B3):** [O]+[X] — osservazioni su ensemble differenti, non una
+contraddizione né una stima di frequenza (nuova voce B3.35); il mancato rescan dei
+misti = debito ARCHIVIATO (B4.24); la campagna non si riapre ora.
 
-**DC.4** §107b.6 (caveat della lente, da propagare): la convenzione temporale di
-onset_germe è AMBIGUA se non dichiarata — onset_germe è misurato DAL RECORD (asse assoluto
-og+101). Propagata a §107c/§107e; ogni nuovo strumento del consolidamento deve dichiararla.
+**DC.4** §107b.6 (caveat della lente): la convenzione temporale di onset_germe è
+AMBIGUA se non dichiarata. **DECISO (§108b-B4):** eliminato "asse assoluto og+101";
+convenzione canonica: og_rec (misurato dal record), og_win = K + og_rec (asse della
+parola concatenata), tempo assoluto dell'orbita = t_record + og_rec; sempre
+ride = d − og_rec. Applicato in B2.17, B1.7 e nelle convenzioni di testa; ogni
+strumento futuro la dichiara.
 
 **DC.5** §79.6.3 (debito aperto): i conteggi del ledger scout non risultano mai riprodotti
 con alpha1_engine.c e con la delta_r outside-window vera sull'ensemble delle 24 orbite
-(il §82 ne riusa la classificazione vc, ma sul proprio simulatore). Nel consolidamento il
-§79 va citato con lo statuto "scout" dell'addendum.
+(il §82 ne riusa la classificazione vc, ma sul proprio simulatore). **DECISO
+(§108b-B5):** §79 solo [O]/SCOUT; nessuna promozione e nessuna riproduzione ora.
+Applicato in B2.8 e B3.15.
 
 **DC.6** §106d: refuso d'etichetta nel JSON di speed_limit_theorem ("neg (tutte garantite)"
-conta record con ALMENO una cella garantita) — dichiarato, non corretto nel file dati; da
-segnalare se il JSON viene riusato.
+conta record con ALMENO una cella garantita) — dichiarato, non corretto nel file dati.
+**DECISO (§108b-B6):** il campo storico resta legacy con etichetta errata; semantica
+canonica = "almeno una cella garantita"; non usare il nome storico come evidenza
+semantica e non alterare retroattivamente il dato. Applicato in B2.16.
 
 **DC.7** §104d vs §107d.0.10: la riduzione "Link 1 ai record = lim sup [d − onset_germe] ≥
 L0" (§104) è stata corretta nei quantificatori dall'ERRATA §107d.0.10 (forma vigente in
-B4.19). Nel consolidamento citare SOLO la forma corretta; la frase §104d resta a verbale
-come formulazione storica.
+B4.19). **DECISO (§108b-B7):** nel consolidamento compare soltanto
+#{t: classe-κ(t) ∧ ride(t) ≥ L₀} = ∞; §104d rimane esclusivamente storia dell'errata.
+Applicato in B3.28 e nella testa (pilastro 6).
 
 **DC.8** §85.2/§85.3: i "4 sopravvissuti stabili" dell'automa a r=2,3 sono realizzati dal
 testimone (nero isolato), ma non è a verbale un censimento che dichiari se TUTTI e 4 i
-sopravvissuti sono realizzabili o solo la classe del testimone. Ai fini del consolidamento
-basta il ⟺ del Teorema Halo; non attribuire realizzabilità a tutti i sopravvissuti.
+sopravvissuti sono realizzabili o solo la classe del testimone. **DECISO (§108b-B8):**
+affermare soltanto il Teorema Halo e l'esistenza di almeno una classe realizzata dal
+testimone; nessuna realizzabilità attribuita separatamente a tutti e quattro.
+Applicato in B2.10.
+
+---
+
+## Conteggio voci (§108b)
+
+[T] 15 · [C] 20 · [O] **35** (riconteggio §108b: +1 = B3.35, decisione B3) · [X] 25.
+Le 8 DA CHIARIRE: DECISE (sopra).

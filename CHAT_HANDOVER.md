@@ -1,3 +1,46 @@
+# ============ §108b — PANNELLO §108: 17/17 DECISE, stesura finale, consolidamento CHIUSO ============
+
+**Cosa e' successo a §108b (in una riga):** il pannello del titolare ha
+deciso TUTTE e 17 le DA CHIARIRE di §108-v1 (verdetto 2026-07-24) e le
+decisioni sono state applicate ai tre documenti (v2, zero nuove
+simulazioni, zero claim nuovi; v1 in 34ada36): (1) "crux unico" RITIRATO ⇒
+**crux operativo centrale della linea record-side** = #{t: classe-κ(t) ∧
+ride(t)>=L₀} = ∞ — restano formalmente aperti ANCHE il corno 3b del Muro,
+l'ipotesi (A) di onset finito per ogni parola presentabile e il tratto
+γ 42-102; "unico" solo dopo riduzione esplicita degli altri obblighi a
+quell'enunciato; (2) split di strato: T17 ⇒ corni 1/2/3a [T] parziali +
+corno 3b [X] (= X6; NESSUN raggio unico del Muro: forma per-parola —
+B_∞(z_t, r_seed(w)) disgiunta da origine e seme ⇒ parola non presentabile;
+63 = max sulle 273.459 censite, non bound globale); T3-D<=33 ⇒ [T]
+computer-assistito condizionale (S_CORE = 15 celle tasca §91b + (1,1),
+lemma di sovra-approssimazione sound, enumerazione esaustiva max 33) + [C]
+certificato (C14); (3) convenzioni canoniche uniformate: record y-min
+stretto = y_t < min_{s<t} y_s all'istante prima della lettura
+(heading/footprint = conseguenze, non definizione), V†_H per-verdetto
+(U1 H=2600; Dicotomia/record-side t† = max(2600, og_rec+2080)),
+og_rec/og_win = K+og_rec con "asse assoluto og+101" ELIMINATO e sempre
+ride = d − og_rec, γ dicitura unica "nessuna orbita da configurazione
+iniziale finita ha linguaggio di svolte definitivamente periodico di
+periodo minimo <=41" (mai "γ<=40"), cavalcate per-raggio <=4 (r<=3) /
+<=2 (r=4), tre nozioni di "fase" DISTINTE senza mappa; (4) statuti:
+burden1 nel teorema solo >= m_K (18/16/14/10 = minimi del censimento NON
+filtrato; minimo vivo non dimostrato raggiunto ne' =10), D(w101) citabile
+solo =∞ (624 = early-exit storico; ∞ non dimostra presentazione su singola
+eterna), 0,0455 [C] confermato non-bound ([X] l'inferenza), impronta A1 =
+[C] senza P uniforme (B1), §79 solo [O]/SCOUT, JSON §106d legacy
+(semantica canonica "almeno una cella garantita"), Link 1 SOLO in forma
+B4.19 (§104d = storia dell'errata), superstiti r=2,3 = solo Teorema Halo +
+almeno una classe realizzata, 0/1.223-vs-1/230 = [O] su ensemble diversi
+(B3.35) + debito archiviato (misti catena-2 mai riscanditi). Riconteggio:
+A 28/21/13/12 INVARIATO (gli split riallocano contenuto gia' contato);
+B 15/20/**35**/25 (+B3.35). **§108 CHIUSO come consolidamento definitivo.
+§109 si apre soltanto davanti a un nuovo lemma o a un invariante d'ordine
+esplicito e preregistrabile (gate §107d.6).**
+Dettagli: docs/CONSOLIDATION_108.md (testa v2, con le 17 decisioni),
+CONSOLIDATION_108_A.md (v2), CONSOLIDATION_108_B.md (v2).
+
+# ================================================================================================
+
 # ============ §108 — CONSOLIDAMENTO v1: inventario a quattro strati, testa + due volumi ============
 
 **Cosa e' successo a §108-v1 (in una riga):** eseguito il consolidamento
@@ -2004,22 +2047,16 @@ ride >= L. Fatti fermi: (i) classe κ misurata 0,2-4%/record (word-decidibile,
 non dimostrata i.o. per l'eterno); 2 episodi-lock realizzati in 82k (ride
 269/384); vincolo di lentezza §106; piega su γ §107a.
 
-Priorita' (aggiornate a §107e-v2):
-1. **CONSOLIDAMENTO §108 (regola preconcordata §107d.6.5, eseguito il test
-   minimo §107e).** Il kernel esteso e' promosso come oggetto logico
-   corretto (teorema deduttivo sotto ipotesi + implementazione verificata;
-   supporto word-decidibile, verdetto word+griglia); H-NR stretta respinta.
-   Scrittura organica con SEPARAZIONE RIGIDA in quattro strati:
-   (1) teoremi universali con TUTTE le ipotesi; (2) certificazioni finite
-   dell'implementazione; (3) osservazioni campionarie (con scadenze);
-   (4) crux aperti e strade falsificate. Contenuto: locale sigillato,
-   γ<=40, finestra r<=4, prodotto sound, U1/Muro, Scala, Cuneo/Limite di
-   Velocita', Dicotomia del Record §101, kernel esteso §107e — riduzione a
-   α1∧β∧γ + macchina, senza chiudere il crux (#{t: classe-κ ∧
-   ride(t)>=L_0} = ∞ non dimostrata). Riapertura del fronte empirico SOLO
-   con invariante d'ordine nuovo, esplicito e preregistrato (ammettere il
-   riuso; rango sul grafo causale, monotonia dedotta — specifica di
-   ricerca §107e.0, oggi non promossa).
+Priorita' (aggiornate a §108b):
+1. **CONSOLIDAMENTO §108: ESEGUITO (v1, 34ada36) e CHIUSO con §108b** —
+   pannello del titolare: 17/17 decisioni applicate, v2 dei tre documenti
+   (testa + volumi A/B), riconteggio A invariato / B +1 [O]. Crux
+   operativo centrale (non "unico"): #{t: classe-κ ∧ ride(t)>=L_0} = ∞;
+   aperti anche corno 3b, ipotesi (A), γ 42-102. Nessuna nuova campagna
+   empirica salvo invariante d'ordine nuovo, esplicito e preregistrato
+   (6 gate §107d.6; ammettere il riuso; rango sul grafo causale, monotonia
+   dedotta — specifica di ricerca §107e.0, oggi non promossa). **§109 solo
+   davanti a un nuovo lemma o a un invariante preregistrabile.**
 2. **Diagnostica descrittiva disponibile (non certificati):** F3
    (sigma-vs-griglia, Spearman 0,0755), mappa condizionata P(nero|c∈R_T),
    reach sigma-low (gap non uniforme), forense last-paint §107e. Vie chiuse
@@ -2031,10 +2068,10 @@ Priorita' (aggiornate a §107e-v2):
 3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
    infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
    micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).
-4. **Consolidamento (alternativa legittima, invariata).** Locale sigillato, γ<=40,
-   finestra r=4, prodotto sound, U1/Muro, Scala, Cuneo/Limite di Velocita' sono
-   teoremi: scrivibili come contributo a se' (riduzione a α1∧β∧γ + macchina)
-   senza chiudere il crux.
+4. **Consolidamento: FATTO (v. punto 1).** Locale sigillato, γ (periodo minimo
+   <=41 escluso), finestra r=4, prodotto sound, U1/Muro, Scala, Cuneo/Limite di
+   Velocita' sono teoremi, scritti come contributo a se' (riduzione a α1∧β∧γ +
+   macchina) senza chiudere il crux — docs/CONSOLIDATION_108*.md v2.
 5. **Code di fronti sospesi (solo se si torna sul fronte):** PRODOTTO §56 ostacoli
    A/B; r=5 e γ esteso 42-52 SOLO dopo; U2: fuggenti nuove vs nere-D>=400,
    retro-nota §91c.3, stress-2 bianche, h1=1; separatori §97 (a)/(b).
@@ -2103,6 +2140,7 @@ Priorita' (aggiornate a §107e-v2):
 - Sonde §107d: `C:\Python\Python310\python.exe alpha1\danger_shield_calibration.py` (F3, gate GF0-GF3);
   `... alpha1\danger_wedge_map.py` (mappa deposito); `... alpha1\danger_reach_vocab.py` (reach sigma<=0.01).
 - Sonda §107e: `C:\Python\Python310\python.exe alpha1\kernel_extended.py` (gate 1-6, ~40 s).
-- Verbale prossima sessione: **pannello §108** (17 DA CHIARIRE in docs/CONSOLIDATION_108.md §2);
-  poi §108b (stesura finale) o §109 se fronte nuovo.
+- Verbale prossima sessione: **§109** — si apre SOLO davanti a un nuovo lemma o a un
+  invariante d'ordine esplicito e preregistrabile (6 gate §107d.6). §108 chiuso con §108b
+  (pannello eseguito, decisioni in docs/CONSOLIDATION_108.md §2).
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.

@@ -14,7 +14,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   attaccata, non difesa. Un risultato senza tentativo di falsificazione non è un risultato.
 - Ogni numero importante va validato con almeno un check indipendente (identità interne,
   casi noti, conteggi incrociati). I valori certificati sono nei summary JSON e negli addenda.
-- Verbali: si continua la numerazione dei paragrafi degli addenda (prossimo: **pannello §108** sulle 17 DA CHIARIRE di docs/CONSOLIDATION_108.md; poi §108b o §109).
+- Verbali: si continua la numerazione dei paragrafi degli addenda (§108 CHIUSO con §108b — pannello eseguito, 17/17 decisioni applicate; prossimo: **§109**, che si apre SOLO davanti a un nuovo lemma o a un invariante d'ordine esplicito e preregistrabile, gate §107d.6).
   Ogni sessione produce un ADDENDUM nello stesso stile (riepilogo in una frase, risultati,
   trappole nuove, domande aperte, inventario file).
 - Trappole note: lista cumulativa negli addenda (`docs/`). Le più letali:
@@ -294,7 +294,7 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   CHECKLIST-MIXING (§62), CHECKLIST-VECTOR (§63), CHECKLIST-VECTOR-MODEL (§64),
   CHECKLIST-NONLOCAL (§65), DOOR-DEFECT-PROFILE (§66), POTENTIAL-SEGMENT-SCANNER (§67),
   ENDPOINT-MONOTONE-NOGO (§68), COMPATIBILITY-POTENTIAL (§69),
-  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c), SHIELD-MAP (§107d), KERNEL-EXTENDED (§107e), CONSOLIDATION (§108: testa + volumi A/B)**.
+  **COMPAT-EVENT/CO-RAGGIUNGIBILITA' (§70-§74), GA-GATE-ZERO (§75), ENTRY-SEED-FRONTIER (§76), ROTOR-STALL (§77), GATE-ONE-COMOVING (§78), CONSUMPTION-LEDGER (§79), DEEP-MOTIF-SATURATION (§80), CONE-LOCK (§87), WEAPON-VITALITY (§88), U2-POCKET (§92), U2-FAR (§93), U2-FAR-PANEL (§94), U2-CLEAN-STRETCH (§95), U2-SIGNATURE (§96), U2-COLLO-MACHINE (§97), OCCURRENCE-SUPPLY (§98), MINEP-HUNT (§99), DOUBLE-TAIL (§100), RECORD-DIVERGENCE (§101), FASCIA-DOOR (§102), FRESH-PHASE (§103), DOOR-APPROACH (§104), LOCK-HOLE (§105b), SPEED-LIMIT (§106), DANGER-CLASS (§107a), SCUDO-ANTICO (§107b), DANGER-REACH (§107c), SHIELD-MAP (§107d), KERNEL-EXTENDED (§107e), CONSOLIDATION (§108/§108b: testa + volumi A/B, v2 con decisioni del pannello)**.
   La numerazione § è globale e continua.
 - `alpha1/` — **sonde α1/β via distribuzione dei valori (§57), non-localita' r=4 (§58),
   hazard debito->lock (§59), modello 2D deep/bite (§60), lock->checklist T3' (§61),
@@ -936,6 +936,33 @@ sigillato δ_r r<=4; γ periodo minimo <=41; β = δ_r + A1; Muro/U2 con corno
 #{t: classe-κ ∧ ride>=L₀} = ∞ NON dimostrato) e **17 DA CHIARIRE** per il
 pannello del titolare. Regola di riapertura: solo invariante preregistrato
 coi 6 gate §107d.6. docs/CONSOLIDATION_108.md (+_A, _B).
+**AGGIORNAMENTO §108b (PANNELLO §108 + STESURA FINALE):** le 17 DA CHIARIRE
+DECISE dal titolare (verdetto 2026-07-24) e applicate ai tre documenti (v2;
+zero nuove simulazioni, zero claim nuovi; v1 in 34ada36). Decisioni chiave:
+"crux unico" RITIRATO ⇒ **crux operativo centrale della linea record-side**
+= #{t: classe-κ ∧ ride>=L₀} = ∞ (restano formalmente aperti ANCHE corno 3b
+del Muro, ipotesi (A) di onset finito per ogni parola presentabile, tratto
+γ 42-102; "unico" solo dopo riduzione esplicita degli altri obblighi);
+T17 spezzato (corni 1/2/3a [T] parziali, 3b [X]=X6; NESSUN raggio unico del
+Muro — forma per-parola B_inf(z_t, r_seed(w)) disgiunta da origine+seme,
+63 = max sulle 273.459 censite); T3-D<=33 in due strati ([T] condizionale
+con S_CORE + lemma sound + enumerazione max 33; [C] = C14); convenzioni
+canoniche: record stretto y_t < min_{s<t} y_s (heading/footprint =
+conseguenze), V†_H per-verdetto (U1 H=2600; record-side t† = max(2600,
+og_rec+2080)), og_rec/og_win ("asse assoluto og+101" ELIMINATO, sempre
+ride = d − og_rec), γ dicitura unica "periodo minimo <=41" ("γ<=40"
+eliminato), cavalcate per-raggio <=4 (r<=3) / <=2 (r=4), tre nozioni di
+fase DISTINTE senza mappa; statuti: burden1 nel teorema solo >= m_K
+(18/16/14/10 = censimento non filtrato, minimo vivo non dimostrato
+raggiunto), D(w101) citabile solo =∞ (624 = early-exit storico; ∞ non
+dimostra presentazione su singola eterna), 0,0455 [C] confermato non-bound,
+impronta A1 = [C] senza P uniforme, §79 solo [O]/SCOUT, JSON §106d legacy,
+Link 1 solo forma B4.19 (§104d = storia dell'errata), superstiti r=2,3 =
+solo Teorema Halo + una classe realizzata, 0/1.223-vs-1/230 = [O] su
+ensemble diversi + debito archiviato (misti mai riscanditi). Riconteggio:
+A 28/21/13/12 INVARIATO; B 15/20/**35**/25 (+B3.35). **§108 CHIUSO come
+consolidamento definitivo; §109 solo con nuovo lemma o invariante d'ordine
+esplicito e preregistrabile.** docs/CONSOLIDATION_108.md (+_A, _B) v2.
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del
