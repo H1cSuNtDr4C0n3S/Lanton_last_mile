@@ -964,10 +964,14 @@ A 28/21/13/12 INVARIATO; B 15/20/**35**/25 (+B3.35). **§108 CHIUSO come
 consolidamento definitivo; §109 solo con nuovo lemma o invariante d'ordine
 esplicito e preregistrabile.** docs/CONSOLIDATION_108.md (+_A, _B) v2.
 Mandato post-§108b del titolare (2026-07-24): lavoro preliminare pre-§109
-sul corno 3b (8 firme-exit) = **docs/PREREG_RIENTRO_SCIA.md** (Lemma del
-Rientro-Scia: continuita' uscita-rientro + Scia §86 + Z/4; caccia al
-controesempio PRIMA della deduzione; gate-zero a 6 punti per aprire §109;
-esclusi γ forza-bruta, statistiche scudo, ipotesi onset universale).
+sul corno 3b (8 firme-exit) = **docs/PREREG_RIENTRO_SCIA.md v2** (ERRATA-1
+del pannello: L∃ = ∃f: ¬R_f distinto da v2 = ∀f — testimone falsifica v2,
+non L∃; F1-v2/F1-L separati; Fase 0 sola geometria locale; Fase 0b
+lemma-ponte RC2 prima di ogni macchina; Fase 1 caccia al falsificatore di
+v2, PE|PC condizionata / solo PF disgiunta, soglie per-firma; Fase 2 =
+proxy diagnostico senza trasferimento deduttivo; §109 solo con vera
+deduzione ¬R_f + gate verdi; esclusi γ forza-bruta, statistiche scudo,
+ipotesi onset universale).
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del

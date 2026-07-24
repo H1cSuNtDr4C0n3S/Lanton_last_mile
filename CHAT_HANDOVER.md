@@ -2060,12 +2060,16 @@ Priorita' (aggiornate a §108b):
 1-bis. **Lavoro preliminare pre-§109 (mandato del titolare, 2026-07-24,
    post-push b2da5ee):** fronte scelto = corno 3b del Muro (8 firme-exit,
    A-T26/A-X6) — l'interfaccia finita piu' nitida. Preregistrazione:
-   **docs/PREREG_RIENTRO_SCIA.md** (Lemma del Rientro-Scia: continuita'
-   uscita-rientro + Teorema della Scia §86 + vincolo Z/4; stato dichiarato
-   con semantica unknown; Fase 0 geometria per-firma meccanica; Fase 1
-   caccia al controesempio PRIMA della deduzione, politiche nuove con
-   potere positivo asseribile, un testimone uccide; Fase 2 separatore (b)
-   di §97c; gate-zero a 6 punti per aprire §109). ESCLUSI dal mandato:
+   **docs/PREREG_RIENTRO_SCIA.md** (v2, ERRATA-1 del pannello pre-§109:
+   lemma ESISTENZIALE L∃ = ∃f: ¬R_f distinto da v2 = ∀f: ¬R_f — un
+   testimone falsifica v2, NON L∃; falsificatori F1-v2/F1-L separati.
+   Lemma del Rientro-Scia: RC1 continuita' uscita-rientro + RC2
+   lemma-ponte scia (Fase 0b, da certificare) + RC3 Z/4; stato con
+   semantica unknown; Fase 0 SOLA geometria locale; Fase 1 caccia al
+   falsificatore di v2 PRIMA della deduzione, PE|PC etichettata
+   condizionata, solo PF disgiunta, soglie PER-FIRMA; Fase 2 separatore
+   (b) §97c = proxy diagnostico senza trasferimento deduttivo; gate-zero
+   a 6 punti per aprire §109). ESCLUSI dal mandato:
    estensione γ per forza bruta, riapertura statistiche scudo, attacco
    all'ipotesi (A) di onset universale (troppo vicina alla congettura).
 2. **Diagnostica descrittiva disponibile (non certificati):** F3
@@ -2152,9 +2156,10 @@ Priorita' (aggiornate a §108b):
   `... alpha1\danger_wedge_map.py` (mappa deposito); `... alpha1\danger_reach_vocab.py` (reach sigma<=0.01).
 - Sonda §107e: `C:\Python\Python310\python.exe alpha1\kernel_extended.py` (gate 1-6, ~40 s).
 - Verbale prossima sessione: lavoro preliminare pre-§109 secondo
-  **docs/PREREG_RIENTRO_SCIA.md** (corno 3b, Lemma del Rientro-Scia: Fase 0
-  geometria, Fase 1 caccia al controesempio, Fase 2 separatore (b) §97c).
-  **§109** si apre SOLO se il gate-zero della preregistrazione passa (nuovo
-  lemma con deduzione vera; 6 gate §107d.6 per gli invarianti d'ordine).
-  §108 chiuso con §108b (decisioni in docs/CONSOLIDATION_108.md §2).
+  **docs/PREREG_RIENTRO_SCIA.md v2** (corno 3b, Lemma del Rientro-Scia:
+  Fase 0 geometria locale, Fase 0b lemma-ponte RC2, Fase 1 caccia al
+  falsificatore di v2, Fase 2 separatore diagnostico). **§109** si apre
+  SOLO se il gate-zero passa: serve una vera deduzione ¬R_f per almeno
+  una firma (6 gate §107d.6 per gli invarianti d'ordine). §108 chiuso con
+  §108b (decisioni in docs/CONSOLIDATION_108.md §2).
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.
