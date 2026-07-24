@@ -260,12 +260,22 @@ Collaborazione con Michael Spina. **Lingua di lavoro: italiano.**
   (tt) **la quota sull'albero non e' una probabilita' dinamica** (SHIELD-MAP
       §107d): un funzionale contato sui passati ENUMERATI (sigma_D, quote di
       rami/foglie) non ha significato dinamico finche' non e' CALIBRATO
-      contro la griglia reale — sigma_D (bimodale 0→1 sull'albero) e'
-      ORTOGONALE alla ricchezza-scudo reale (piatta ~1/3 su tutte le bande).
-      Gli enunciati d'albero restano deduzioni valide ("ogni passato
-      valido..."); MAI leggerli come tipicita'/probabilita' di eventi reali
-      senza gate di calibrazione. Sorella di (c), gemella dell'istanza
-      d_hit-SOVRA-vs-passato-reale (ss/§107c).
+      contro la griglia reale — sigma_D (bimodale 0→1 sull'albero) ha
+      associazione DEBOLE con la ricchezza-scudo reale (Spearman 0,0755;
+      bande piatte ~0,32). In piu': sigma≈0 = ASSENZA di certificato nero
+      (massa open/indecisa: 32/59 open=cap, 13 cap=1, 0/59 white_all), NON
+      certificato bianco — nominare le classi per cio' che l'astrazione
+      certifica davvero ("sigma-low", mai "lock-capable"). Gli enunciati
+      d'albero restano deduzioni valide ("ogni passato valido..."); MAI
+      leggerli come tipicita'/probabilita' di eventi reali senza gate di
+      calibrazione. Sorella di (c), gemella di (ss).
+  (uu) **il profilo marginale non localizza gli estremi congiunti**
+      (SHIELD-MAP §107d, Simpson): un evento puo' stare al picco della
+      marginale e in una valle della congiunta — "lock nel nucleo denso"
+      (marginale-wx 0,42) era in realta' densita' 2D 0,19/0,12 sulle righe
+      giovani cy=1,2. Dichiarare estremita'/tipicita' SOLO alle coordinate
+      complete dell'evento; ogni collasso di coordinate va giustificato
+      PRIMA del verdetto. Parente di (oo) e (h).
 
 ## 2. Convenzioni della dinamica (INVARIATE da HANDOVER §2)
 - Bianco → svolta R (orario), nero → L; la cella si inverte dopo la lettura; poi mossa di 1.
@@ -874,21 +884,26 @@ D=22 (zero troncate, regressione 66/66): σ=1 esatto 71 (4,9%) ⇒ riduzione di
 (37% della banda). Prossimo §107d: Cono §87 vs cuneo (d_hit come budget), F3
 calibrazione (join sigma_vocab_perword × griglia §106), reach sulle 59 σ≈0.
 docs/DANGER_REACH_ADDENDUM.md.
-**AGGIORNAMENTO §107d (SHIELD-MAP):** tre strumenti, gate bidirezionali
-deduttivi verdi (GF3 OR=1 su 1639/1639 = T⟺OR da §101; GF2 lock OR=0 esatto;
-replay bit-per-bit; GW0 219.112 == F3). (1) F3: aspettativa preregistrata
-FALSIFICATA — ricchezza-scudo reale PIATTA in sigma_D (0.30-0.33 ovunque) ⇒
-misura d'albero senza presa dinamica (trappola tt); scudo antico
-word-indipendente ~1/3; lock piu' rari dell'indipendenza naive ⇒ deposito
-correlato. (2) Mappa (wx=x·sign(drift)): campana asimmetrica sulla posa
-(picco 0.42, zeri strutturali wx>=47 / <=−58 = fronte del Cono misurato);
-**lock nel NUCLEO denso (wx 0..7), non nel settore vergine** ⇒ (ii) = buco
-locale raro nel nucleo; fronte-del-Cono NON e' il meccanismo di (ii). (3)
-Reach-59 (D=45-48, zero non-def): gap R_T-vs-matched 4 vs 4, pareggi 31/59 ⇒
-l'ombra d'albero era dei lock-episodi, non della sottoclasse. Bonus: alberi
-all'indietro quasi-estinti (692-8k nodi a D=48). Prossimo §107e: statistica
-dei buchi del nucleo (word-free); gap-vs-coh_traj; quasi-estinzione come
-certificato. docs/SHIELD_MAP_ADDENDUM.md.
+**AGGIORNAMENTO §107d (SHIELD-MAP, v2 corretta dal pannello del titolare —
+v1 in 718c9c1):** sessione di risultati NEGATIVI utili, macchinario griglia
+validato (GF3 OR=1 1639/1639 = T⟺OR §101; GF2 lock OR=0 esatto; replay
+bit-per-bit; GW0 entro tolleranza): (1) sigma_D non predice la ricchezza
+nera reale (mediane 0,30-0,33 ovunque; Spearman 0,0755; condizionato
+[−0,15,0,09]) = trappola (tt); sigma=1 resta deduttivo. (2) Classe sigma≤0.01
+rinominata SIGMA-LOW ("lock-capable" ritirato): 32/59 open=cap, 13 cap=1,
+0/59 white_all = assenza di certificato nero, non passati-bianchi. (3) Gap
+d'albero dei lock non uniforme nella classe (48 confronti finiti: 16>/25=/7<).
+(4) Mappa = P(nero|c∈R_T) condizionata; "lock nel nucleo denso" era artefatto
+di Simpson (trappola uu): densita' 2D reale ai lock 0,19/0,12 (righe giovani);
+§105b NON ribaltato, Cono non escluso; "antico/word-indipendente/deposito
+correlato/zeri strutturali/quasi-estinti" RITIRATI (ERRATA 107d.0). (5)
+**RIDUZIONE A LINK 1 CORRETTA (era lacunosa):** forma sufficiente = #{t:
+classe-κ ∧ ride(t)=d(t)−og>=L_0} = ∞; l'OR-kernel attuale (transiente fino a
+og) da' solo d>=og (ride anche 0) ⇒ serve KERNEL ESTESO R_{T,L} (letture
+esogene fino a og+L; compatibile ⟺ ride>=L). Prossimo §107e (mossa unica):
+R_{T,104} + forense last-paint + ipotesi last-paint cutset (ordine ben
+fondato), test minimo 2 lock + controlli T, gate 1-6; se fallisce ⇒
+consolidamento. docs/SHIELD_MAP_ADDENDUM.md.
 **AGGIORNAMENTO §102 (FASCIA-DOOR: fascia = porta-0, le porte reali sono due):**
 la fascia NON ha suffisso-nucleo (comune globale 3 bit; troncare cambia l'onset:
 proprieta' dell'intera finestra 101) — l'invariante e' la fase W0 d'ingresso del

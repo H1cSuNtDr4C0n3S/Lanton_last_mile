@@ -137,7 +137,8 @@ distribuzione BIMODALE — min 0 / q25 0.0002 / med 0.103 / q75 0.902 / max 1.0;
 1..126k passati validi — alberi all'indietro da quasi-estinti a pieni).
 
 **Verdetto:** (ii) non ha discriminante word-side dentro la classe: decine di
-parole pericolose sono "lock-capable" quanto i lock (σ≈0, celle tutte
+parole pericolose sono "lock-capable" quanto i lock [TERMINE RITIRATO a
+§107d.0.5: σ≈0 = assenza di certificato nero, non vicinanza al lock] (σ≈0, celle tutte
 antiche) e vengono presentate ai record, ma lo scudo antico le copre quasi
 sempre (64/66 nel canonico §107a, 2 lock su 82k nella caccia §101). Il
 fallimento dello scudo e' interamente una proprieta' della PRE-STORIA

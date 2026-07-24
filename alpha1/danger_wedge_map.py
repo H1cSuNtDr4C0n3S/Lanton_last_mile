@@ -1,18 +1,22 @@
 # danger_wedge_map.py — §107d P1b (meta' empirica): la mappa del deposito
 # antico in frame ancora, normalizzata al lato del drift.
 #
-# OGGETTO: F3 ha mostrato ricchezza-scudo ~1/3 PIATTA in sigma (lo scudo e'
-# antico e word-indipendente). Qui si mappa DOVE sta: densita' di nero
-# per cella ancora (cx, cy) pooled sui 1639 record canonici, con x
-# NORMALIZZATA al lato del drift del germe (wx = cx * sign(drift_x); il
-# cuneo del drift §105b e' sempre a wx < 0 dopo la normalizzazione... il
-# segno si legge dal dato, non si assume). Il fronte del cono passato §87
-# diventa un oggetto misurato: la zona a densita' ~0 e' il cuneo vergine,
-# i lock sono read-set interamente dentro quella zona.
+# OGGETTO [semantica corretta a §107d-v2]: F3 ha mostrato ricchezza ~1/3
+# poco predetta da sigma. Qui si mappa P(nero | c in R_T(w)) per cella
+# ancora (wx, cy) pooled sui 1639 record canonici, con wx = cx *
+# sign(drift_x del germe) — con drift_x<0 e cx<=0 (i lock) si ha wx>=0:
+# il LATO DEL DRIFT e' wx>0. ATTENZIONE (ERRATA §107d.0): (a) la mappa
+# registra COLORI, non storie di visita (bianca != vergine); (b) e'
+# CONDIZIONATA dalla geometria dei read-set (pesa le parole grosse), non
+# e' la densita' del campo attorno alla posa; (c) il profilo marginale su
+# wx NON localizza gli estremi congiunti (trappola uu: i lock stanno a
+# wx centrali MA su righe giovani cy=1,2 a densita' 2D bassa 0,19/0,12).
+# Uso legittimo: baseline condizionata descrittiva.
 #
 # GATES:
-#   GW0: somma nb sulla mappa == somma nb di F3 (stesso replay, stessa
-#        selezione — bit-identico).
+#   GW0: somma nb sulla mappa vs ricostruzione da F3 (ricchezza
+#        ARROTONDATA): COERENTE ENTRO TOLLERANZA 0,1%, non bit-identico
+#        (per identita' esatta servirebbe nb_sum intero in F3).
 #   GW1: replay bit-per-bit (come GF1).
 #   GW2: celle garantite-vergini del Lemma del Cuneo §106 (theta > Delta_k,
 #        via eta' della riga: Delta_k = t - t_apertura(riga k)) — qui NON

@@ -1,31 +1,34 @@
 # ============ §107d — SHIELD-MAP: calibrazione sigma/griglia, mappa del deposito, gap non-generalizzato ============
 
-**Cosa e' successo a §107d (in una riga):** i tre strumenti programmati a §107c
-eseguiti con gate bidirezionali deduttivi tutti verdi (GF3 OR-kernel=1 su
-1639/1639 — T ⟺ OR=1 da §101; GF2 lock a OR=0 esatto 0/14 e 0/9; replay
-bit-per-bit; GW0 219.112 nere == F3). (1) **F3 FALSIFICA l'aspettativa
-preregistrata**: ricchezza-scudo reale PIATTA in sigma_D (med 0.30-0.33 su
-tutte le bande) ⇒ la misura uniforme sull'albero non ha presa dinamica
-(trappola nuova **tt**): "lock non estremi" §107b perde la base di misura, la
-conclusione "(ii) = pre-storia antica" esce RAFFORZATA (scudo antico
-word-indipendente, ~1/3); lock piu' rari dell'indipendenza naive ⇒ deposito
-spazialmente correlato (scudo spesso §105b, nota descrittiva). (2) **Mappa del
-deposito** (wx = x·sign(drift), 1639 pooled): campana asimmetrica centrata
-sulla posa (picco 0.42; zeri strutturali da wx=47 lato drift / −58 opposto =
-fronte del Cono MISURATO); **i lock (wx 0..7) stanno nel NUCLEO PIU' DENSO,
-non nel settore vergine** ⇒ (ii) = BUCO locale raro nel nucleo denso; il
-fronte del Cono non e' il meccanismo di (ii) (P1b ridimensionata). (3)
-**Reach-59** (D=45-48 per-parola, zero non-definite): gap R_T-vs-matched
-mediane 4 vs 4, pareggi 31/59 (banda 16-50: RT>M 6/23) ⇒ **l'ombra d'albero
-era dei due lock-episodi, non della sottoclasse** sigma≈0. Bonus: alberi
-all'indietro quasi-estinti (692-8k nodi a D=48) per alcune sigma≈0 =
-candidato certificato di rigetto non esplorato. **Prossimo §107e:** statistica
-dei BUCHI del nucleo (cluster bianchi word-free attorno alla posa; tasso di
-riparazione del rifornimento vs tasso di presentazione della classe);
-gap-vs-coh_traj; quasi-estinzione come certificato. Ereditati: §106c,
-§105b.4, §101g, §102f, §103d, §104f, F1.
-Dettagli: docs/SHIELD_MAP_ADDENDUM.md. File: alpha1/danger_shield_calibration.py,
-danger_wedge_map.py, danger_reach_vocab.py (+json/jsonl/log).
+**Cosa e' successo a §107d (in una riga, v2 CORRETTA dal pannello del
+titolare — v1 in 718c9c1):** sessione di buoni risultati NEGATIVI, macchinario
+di lettura-griglia validato (GF3 OR=1 su 1639/1639 = T⟺OR da §101; GF2 lock
+OR=0 esatto; replay bit-per-bit; GW0 coerente entro tolleranza): (1) sigma_D
+NON e' un predittore marginale utile della ricchezza nera reale (mediane
+nb/|R_T| 0,30-0,33 su tutte le bande; Spearman 0,0755/1459; condizionato
+[−0,15, 0,09]) — trappola (tt); il verso KILL sigma=1 resta deduttivo; (2) il
+gap d'albero dei lock NON e' uniforme nella classe **sigma-low** (=assenza di
+certificato nero: 32/59 open=cap, 13 cap=1, 0/59 white_all — "lock-capable"
+ELIMINATO): 48 confronti finiti → 16>/25=/7<; (3) mappa = P(nero|c∈R_T)
+condizionata, campana con picco marginale 0,42 MA alle coordinate 2D dei lock
+(righe giovani cy=1,2) densita' 0,19/0,12 — **"lock nel nucleo denso" era un
+artefatto di Simpson (trappola uu)**; §105b NON ribaltato, fronte del Cono
+NON escluso; "antico/word-indipendente/deposito correlato/zeri strutturali/
+quasi-estinti-certificato" RITIRATI (ERRATA 107d.0). **CORREZIONE LOGICA
+PRIORITARIA (roadmap): la riduzione a Link 1 era lacunosa** — un fallimento
+di scudo = un episodio, e OR=0 sull'attuale R_T (transiente fino a og) da'
+solo d>=og, ride anche ZERO; forma sufficiente corretta: #{t: classe-κ ∧
+ride(t)=d(t)−og(w_t)>=L_0} = ∞; serve il KERNEL ESTESO R_{T,L} (letture
+esogene fino a og+L; gate: compatibile ⟺ ride>=L). **Prossimo (§107e,
+mossa unica):** R_{T,104} + forense last-paint per-mismatch + ipotesi
+last-paint cutset (ordine ben fondato, non densita'), test minimo sui 2 lock
++ controlli T appaiati, gate 1-6 dichiarati (equivalenza esatta, gate-zero,
+bianco≠vergine, cut pre-verdetto, un controesempio uccide, unknown mai
+no-entry); se fallisce ⇒ consolidamento. Ereditati: §106c, §105b.4, §101g,
+§102f, §103d, §104f, F1.
+Dettagli: docs/SHIELD_MAP_ADDENDUM.md (v2 con ERRATA 107d.0). File:
+alpha1/danger_shield_calibration.py, danger_wedge_map.py,
+danger_reach_vocab.py (+json/jsonl/log).
 
 # ================================================================================================
 
@@ -1931,34 +1934,40 @@ bite-stall e' LIMITATO ~303 su tutte le orbite (non cresce 1e4->1e5) ⇒ quantit
 stallo crescente di #30 (~1e4, probabile buchi nero-fuori-finestra); il bite rate su (7,-7) e' 0.20
 sano, NON erode come avevo importato da #30. Decisione: NON priorita' immediata; tornare a δ_r/§78.
 
-## C. Roadmap (aggiornata a §107d; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
+## C. Roadmap (aggiornata a §107d-v2, RIDUZIONE CORRETTA; la storia §57-§107 vive nei blocchi in testa a questo file e in CLAUDE.md §3/§6)
 
-**Stato della scala (§107e):** Link 1 (record-anchored, sufficiente) ⟸
-(i) occorrenza della classe pericolosa i.o. [|R_T|<=κ; misurato 0,2-4%/record,
-word-decidibile, NON dimostrato per l'eterno] ∧ (ii) fallimento dello scudo su
-una presentazione pericolosa [2/82k realizzato; forma esatta dopo §107c/§107d:
-BUCO LOCALE RARO nel nucleo denso del deposito antico (~1/3, word-indipendente,
-campana centrata sulla posa) — non escursione nei settori vergini; nessuna
-presa word-side (sigma piatta in griglia, gap d'albero non generalizzato);
-lock piu' rari dell'indipendenza naive ⇒ deposito correlato]. La piega su γ
-(§107a) chiude i falsificatori costruibili a buon mercato.
+**Stato della scala (corretto dal pannello §107d):** la forma precedente
+["classe i.o. ∧ fallimento scudo su UNA presentazione ⇒ Link 1"] era
+LACUNOSA nei quantificatori (un fallimento = un episodio) e nell'orizzonte
+(OR=0 sull'attuale kernel R_T copre solo il transiente fino a onset_germe ⇒
+d>=og, ride anche ZERO). **Forma sufficiente corretta (record-anchored):**
+Link 1 ⟸ #{t : presentazione di classe κ a t ∧ ride(t) = d(t) −
+onset_germe(w_t) >= L_0} = ∞ (oppure la versione con ingresso permanente).
+Il gate fondante e' il KERNEL ESTESO: R_{T,L}(w) = tutte le letture esogene
+necessarie fino a onset_germe(w)+L, con R_{T,L} interamente compatibile ⟺
+ride >= L. Fatti fermi: (i) classe κ misurata 0,2-4%/record (word-decidibile,
+non dimostrata i.o. per l'eterno); 2 episodi-lock realizzati in 82k (ride
+269/384); vincolo di lentezza §106; piega su γ §107a.
 
 Priorita':
-1. **(ii) statistica dei BUCHI del nucleo — fronte principale (§107d.4).**
-   Osservabile word-free di griglia: cluster bianchi locali attorno alla posa
-   ai record; tasso di riparazione del rifornimento (§98/§104: la discesa
-   dipinge il proprio nucleo) vs tasso di presentazione della classe
-   piccola-direzionale. Evitamento duale §105b in forma quantitativa: puo'
-   un'eterna tenere i buchi lontani dai read-set piccoli per sempre? Vie gia'
-   chiuse (NON riaprire): ledger/bilancio (n), filo-di-rasoio (§105b),
-   solitudine (v), zona-piccola (§97), discriminante word-side di (ii)
-   (§107b+§107d), irraggiungibilita'-d'albero (ss), fronte-del-Cono come
-   meccanismo di (ii) (§107d.2: i lock sono nel nucleo, non al fronte),
-   sigma-simili non calibrati (tt).
-2. **(i) e strumenti di supporto:** gap-vs-coh_traj sulle 59+2 (direzionalita'
-   = ultima impronta word-side candidata); quasi-estinzione all'indietro come
-   certificato di rigetto (alberi a 692-8k nodi, §107d.3); presentazione ai
-   record legata ai rientri della Scala (§98g.2, R−L=ΔB §96, rotore §77).
+1. **MOSSA UNICA (§107e): kernel esteso R_{T,104} + last-paint cutset +
+   gate-zero (§107d.6).** (a) Costruire R_{T,L} a L=104 e certificare
+   l'equivalenza esatta kernel-compatibile ⟺ ride>=104 sui 2 lock +
+   controlli T appaiati; (b) forense per-mismatch: mai-visitata / ultima
+   visita / ultimo bianco→nero / colore letto-lasciato / epoca-record
+   dell'ultima pittura (bianco ≠ vergine, distinzione esatta); (c) ipotesi
+   last-paint cutset: ogni nero che scuda il kernel esteso attraversa un cut
+   spazio-temporale; cercare un ORDINE ben fondato / non-riusabilita' degli
+   attraversamenti, non un'altra densita'. Gate dichiarati PRIMA dei
+   verdetti; un controesempio uccide; unknown mai no-entry (lezione §75).
+   Se il gate (a) fallisce ⇒ consolidamento (§C.4), niente altra campagna.
+2. **Diagnostica descrittiva disponibile (non certificati):** F3
+   (sigma-vs-griglia, Spearman 0,0755), mappa condizionata P(nero|c∈R_T),
+   reach sigma-low (gap non uniforme). Vie chiuse (NON riaprire):
+   ledger/bilancio (n), filo-di-rasoio (§105b), solitudine (v), zona-piccola
+   (§97), discriminante word-side di (ii) via sigma (§107b+§107d, tt),
+   irraggiungibilita'-d'albero come deposito (ss), statistiche marginali dei
+   "buchi" senza oggetto logico riparato (§107d.0.10).
 3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
    infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
    micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).

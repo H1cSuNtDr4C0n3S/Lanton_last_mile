@@ -20,8 +20,10 @@ albero-raggiunge-48 / dinamica-mai e' ora la quantita' esatta che l'attacco a
 (ii) deve spiegare. P2 (sigma_D sul vocabolario intero, 1459/1459 esatte a
 D=22, zero troncate, regressione 66/66 su §107b): sigma=1 esatto = 71 parole
 (4,9%) ⇒ la riduzione di (i) per dominanza-sicura MUORE; la sottopopolazione
-lock-capable (sigma ≤ 0.01) = 59 parole (4,0%) concentrata nella banda
-|R_T| 16-50 (23/62 = 37%), non nella minima.
+sigma-low (sigma ≤ 0.01) = 59 parole (4,0%) concentrata nella banda
+|R_T| 16-50 (23/62 = 37%), non nella minima. [NOTA §107d.0.5: "lock-capable"
+RITIRATO — sigma≈0 = assenza di certificato nero entro D=22 (massa open),
+non certificato bianco ne' vicinanza al lock.]
 
 Strumenti: `alpha1/danger_reach_depth.py` (Python + gate),
 `alpha1/danger_reach.c` (+exe, 10-11 ns/nodo/core),
@@ -127,7 +129,8 @@ sigma≤0.01 **59 (4,0%)**, sigma med 0.9999.
 1. **La riduzione di (i) per dominanza-sicura MUORE:** le parole
    deduttivamente sicure (sigma=1 esatto a D=22) sono il 4,9%, non la
    maggioranza. (i) non si restringe gratis.
-2. **La sottopopolazione lock-capable si concentra in |R_T| 16-50** (37,1%
+2. **La sottopopolazione sigma-low ("lock-capable" ritirato, §107d.0.5) si
+   concentra in |R_T| 16-50** (37,1%
    della banda a sigma≤0.01), NON nella banda minima: sigma≈0 e taglia
    minima sono assi DIVERSI dentro la classe pericolosa allargata.
 3. Le parole grosse (n>100) hanno sigma med ≈ 1.0000 ma sigma=1 esatto raro
@@ -175,7 +178,7 @@ piccola; la mappa sigma≈0 (59+2 parole) e' il bersaglio della ricorrenza.
 2. **F3 calibrazione** (preregistrata a 107c.5): join sigma_vocab_perword ×
    colori di griglia §106 sul canonico; episodi, nessuna soglia.
 3. **Reach sulle 59 parole sigma≤0.01** (ora economico: motore C, ~30 min):
-   le triple e i gap della sottopopolazione lock-capable — il gap R_T>matched
+   le triple e i gap della sottopopolazione sigma-low — il gap R_T>matched
    e' proprieta' dei lock o di tutta la sottoclasse?
 4. F1 gamba-Cuneo stratificata (ereditata, dichiarata).
 5. Ereditati: §106c, §105b.4, §101g, §102f, §103d, §104f.
