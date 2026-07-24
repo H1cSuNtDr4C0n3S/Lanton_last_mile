@@ -2130,7 +2130,28 @@ Priorita' (aggiornate a §108b):
    attraversamento anello 2 => FORGOTTEN solo da KNOWN); Via A
    retrocessa a OPZIONALE-DIAGNOSTICA (non necessaria se B certificata);
    ordine operativo: 0b.U3-a/b -> induzione tavola completa monitor ->
-   [Via A opzionale] -> mappa 0b.0 -> solo allora 0b.3;
+   [Via A opzionale] -> mappa 0b.0 -> solo allora 0b.3. **Clausole v6
+   (verdetto 2026-07-25/5):** guardia ANTI-LEAKAGE su O_d (niente M_c,
+   known(c), proof object, info pre-t-d, campi equivalenti al verdetto;
+   ogni componente calcolabile dai soli passi t-d..t-1); precondizione
+   0b.3 = Via A PROVATA con d0 esplicito OR Via B CERTIFICATA; forma
+   ufficiale del lemma monitor: S_t(c) da last/known (deep1 <=> S =
+   FORGOTTEN), replay = verifica di implementazione. **BOZZE DEDUTTIVE
+   in docs/RC2_LEMMI_0B.md (in attesa di pannello):** L-U3b cofinalita'
+   con rider WLOG-C4 esplicito (fatto B-T esterno + C4-equivarianza,
+   fonte §87.6, NIENTE ∎); L-U3a.1 restrizione dei per-passato con
+   ipotesi effettive dichiarate (+oracolo pigro §95d nelle premesse);
+   L-U3a.2 direzione utile (forall f not-R_f^{U3} => v2^{U3} => Muro con
+   intorno N3 nel frame WLOG); **L-U3a.3 FATTO NUOVO: la bicondizionale
+   X6 NON relativizza in silenzio a U3** — il testimone exit-step ha
+   origine a cheb ESATTAMENTE 3 (deduttivo: posa(m*) in palla-2 + passo
+   unitario + uscita fuori palla-2), dunque dentro B_inf(z_t,3) e NON
+   U3-valido: per il Muro basta la direzione utile, F1-v2 resta su U0;
+   L-MON invariante del monitor dimostrato per induzione contro
+   last/known di halo_occupancy_profile.py (sotto-invariante: ogni cella
+   known dista <=1, l'anello-2 e' completo; caveat if-isb dichiarato).
+   Pannello pre-push: lente verbali VERDE, lente logica 1 ROSSO (L-U3b
+   quantificatori/WLOG) + 2 GIALLI — tutti riparati in sessione;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

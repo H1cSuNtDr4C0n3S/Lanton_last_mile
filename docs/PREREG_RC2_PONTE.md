@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v5 = evento fisso/proiezioni annidate + tavola monitor totale; v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v6 = guardia anti-leakage + precondizione 0b.3 corretta + invariante del monitor; v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -108,6 +108,31 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
 3. **Via A retrocessa a OPZIONALE E DIAGNOSTICA:** non è necessaria se
    la Via B viene certificata. Ordine operativo aggiornato nella
    DECISIONE OPERATIVA.
+
+## CLAUSOLE DI CHIUSURA (verdetto del titolare 2026-07-25/5 — vincolanti, applicate nel corpo)
+
+1. **Guardia ANTI-LEAKAGE per O_d (Via A).** O_d(e) NON deve contenere:
+   M_c(e); `known(c)` o lo stato del monitor di c; il proof object
+   visita–dimenticanza; informazioni calcolate usando passi anteriori a
+   t−d; qualunque campo equivalente al verdetto da predire. Altrimenti
+   la Via A diventerebbe vera PER COSTRUZIONE. La clausola (iii) della
+   chiave di equivalenza va letta come "tutta l'informazione AMMESSA E
+   NON-LEAKING"; ogni componente di O_d deve avere una procedura di
+   calcolo che usa SOLTANTO i passi t−d, …, t−1.
+2. **Precondizione di 0b.3 corretta:** "Via A decisa" era troppo debole
+   (poteva essere morta o unknown). Condizione corretta:
+   **Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA** — solo un
+   esito POSITIVO fornisce la rappresentazione finita necessaria a
+   D_RC2.
+3. **Forma ufficiale del lemma del monitor (Via B).** Per ogni cella
+   fissata c, invariante da dimostrare per induzione sugli
+   aggiornamenti last/known del simulatore forward:
+   S_t(c) = UNSEEN se c ∉ last_t; KNOWN se c ∈ known_t; FORGOTTEN se
+   c ∈ last_t \ known_t (con known_t ⊆ last_t i tre casi sono disgiunti
+   ed esaustivi). Corollario immediato:
+   **lettura di c è deep₁ ⟺ S_t(c) = FORGOTTEN.**
+   Il replay resta una VERIFICA DELL'IMPLEMENTAZIONE, non parte della
+   prova.
 
 ## 1. Lemma 0b.0 — corrispondenza temporale backward–forward (da certificare)
 
@@ -242,9 +267,13 @@ d maggiori.
 **Chiave di equivalenza delle coppie (congelata):** ogni coppia deve
 (i) appartenere INTERAMENTE a U3 (entrambi i passati); (ii) riferirsi
 alla stessa firma, stessa cella bersaglio c e stessa convenzione anchor;
-(iii) coincidere su TUTTA l'informazione dichiarata disponibile allo
-stato backward — non soltanto sui bit del suffisso, qualora lo stato
-dichiarato includa altre componenti (req note, pend₂, monitor di altre
+(iii) coincidere su TUTTA l'informazione AMMESSA E NON-LEAKING dichiarata
+in O_d (clausola anti-leakage 2026-07-25/5: O_d NON contiene M_c(e),
+known(c)/monitor di c, il proof object visita–dimenticanza, informazioni
+calcolate da passi anteriori a t−d, né campi equivalenti al verdetto da
+predire; ogni componente ha una procedura di calcolo che usa SOLO i
+passi t−d, …, t−1) — non soltanto i bit del suffisso, qualora O_d
+includa altre componenti ammesse (req note, pend₂, monitor di ALTRE
 celle).
 Regole operative: d_0b non si sceglie MAI da un massimo censito
 (trappola qq); la caccia alle coppie va fatta su una griglia di d
@@ -298,7 +327,7 @@ obbligatoria sul checker; (iv) controlli espliciti + optimize==0.
 Ogni parametro sound "per caso fattuale" va verificato con controllo
 esplicito a ogni valore di raggio (trappola mm).
 
-## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e 0b.2 via A-decisa o B-certificata)
+## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA])
 
 Enumerare D_RC2 per intero; per ogni elemento: replay forward e verifica
 dell'antecedente con checker a CONTROLLI ESPLICITI; esca obbligatoria
