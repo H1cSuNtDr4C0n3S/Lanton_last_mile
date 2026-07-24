@@ -2108,10 +2108,19 @@ Priorita' (aggiornate a §108b):
    a coppie: due passati validi, stesso suffisso lunghezza d, stato
    monitor diverso — mai d_0b da massimo censito, trappola qq;
    aspettativa di morte realistica, cfr. visita prof. 57 §90b); Via B
-   (se A muore) = MONITOR FINITO per cella UNSEEN->KNOWN->FORGOTTEN
-   (visita=>KNOWN; cheb 2=>FORGOTTEN; rilettura in FORGOTTEN=>deep, in
-   KNOWN=>in-window) con equivalenza monitor<->known dimostrata per
-   induzione + replay completo (una discrepanza uccide) + esca;
+   = MONITOR FINITO per cella UNSEEN->KNOWN->FORGOTTEN con equivalenza
+   monitor<->known dimostrata per induzione + replay completo (una
+   discrepanza uccide) + esca. **Precisazioni v4 (verdetto
+   2026-07-25/3):** quantificatori Via A congelati — coppia a d uccide
+   solo quel d (e d'<=d), griglia senza coppie = SOLO unknown
+   sull'enunciato globale, Via A verde esige prova uniforme, morte
+   definitiva esige pumping ∀d ∃(P_d,Q_d); chiave di equivalenza delle
+   coppie (interamente U3, stessa firma/cella/anchor, coincidenza su
+   TUTTA l'informazione dichiarata); tavola del monitor congelata con
+   guardie (cheb 2 => FORGOTTEN SOLO da KNOWN; verdetto sullo stato
+   PRIMA della lettura, poi reset a KNOWN); ordine: 0b.U3-a/b PRIMA di
+   ogni tool di Via A (0b.U3-b atteso corollario breve di T17); via piu'
+   promettente = B;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

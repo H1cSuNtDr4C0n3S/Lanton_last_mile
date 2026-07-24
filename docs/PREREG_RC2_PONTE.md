@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v3 = U3 scelto + protocollo d_0b/monitor; v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v4 = quantificatori Via A + tavola monitor congelati; v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -63,11 +63,30 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   punto NON implica una profondità uniforme d_0b (la visita precedente
   può essere arbitrariamente antica; "assenza di riletture" può non
   essere decidibile da alcun suffisso di lunghezza fissa). d_0b NON va
-  MAI scelto da un massimo censito (trappola qq). Prima si prova se
-  d_0b esiste (Via A, falsificatore a coppie); se muore, si preregistra
-  il MONITOR FINITO al suo posto (Via B);
+  MAI scelto da un massimo censito (trappola qq);
+- **ordine dei lavori (precisazione 2026-07-25/3):** chiudere 0b.U3-a/b
+  PRIMA di qualsiasi tool della Via A (0b.U3-b dovrebbe essere un
+  corollario breve di T17 — B–T dà infiniti record fuori da ogni intorno
+  finito; 0b.U3-a dovrebbe seguire restringendo le equivalenze puntuali
+  di T24–T26 al sottoinsieme U3); poi Via A (test dei singoli d) e/o
+  Via B — la via più promettente è la **B** (un d_0b uniforme è
+  improbabile);
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
+
+## PRECISAZIONI FORMALI (verdetto del titolare 2026-07-25/3 — vincolanti, applicate nel corpo)
+
+1. **Quantificatori della Via A.** Una coppia trovata a un dato d
+   falsifica SOLTANTO quel d (∃P,Q: suffix_d(P)=suffix_d(Q) ∧
+   M(P)≠M(Q)); una griglia finita di valori NON può decidere l'enunciato
+   globale ∃d₀ ∀P,Q: suffix_{d₀}(P)=suffix_{d₀}(Q) ⇒ M(P)=M(Q).
+   Semantica dei verdetti e chiave di equivalenza delle coppie congelate
+   in Via A (sezione 3).
+2. **Tavola del monitor congelata** con guardie e ordine temporale:
+   "distanza Chebyshev 2 ⇒ FORGOTTEN" vale SOLO partendo da KNOWN (da
+   UNSEEN il raggiungimento della distanza 2 non può creare una visita
+   precedente); il verdetto si emette sullo stato PRECEDENTE alla
+   lettura, poi la visita resetta a KNOWN (sezione 3, Via B).
 
 ## 1. Lemma 0b.0 — corrispondenza temporale backward–forward (da certificare)
 
@@ -171,27 +190,59 @@ dominio D_RC2 sia finito e la sua enumerazione COMPLETA (non un campione,
 ERRATA-1.6). Kill-gate dichiarato: la visita precedente può essere
 arbitrariamente antica ⇒ un d_0b uniforme può NON esistere.
 
-**Via A — esiste un d_0b uniforme? (da provare SUBITO, falsificatore a
-coppie).** Per la cella bersaglio c e profondità d candidata:
-FALSIFICATORE = due passati validi con UGUALE suffisso di lunghezza d ma
-stato del monitor di c (KNOWN/FORGOTTEN/UNSEEN, definizione in Via B)
-DIVERSO al confine del suffisso — una sola coppia falsifica quel d.
-Regole: d_0b non si sceglie MAI da un massimo censito (trappola qq); la
-caccia alle coppie va fatta su una griglia di d dichiarata prima della
-run, con enumerazione/ricerca meccanica sull'albero dei prepend (mai
-coppie costruite a mano); aspettativa di morte dichiarata: REALISTICA —
-il quadro §90b (visita di (1,1) a prof. 57 dietro w101, sweep esaustivo
-zero a 46) suggerisce che coppie del genere esistano, ma la coppia va
-REALIZZATA meccanicamente, non dedotta a mano.
+**Via A — esiste un d_0b uniforme? (quantificatori CONGELATI,
+precisazione 2026-07-25/3).** Enunciato globale in gioco:
+∃d₀ ∀P,Q (passati validi in U3): suffix_{d₀}(P) = suffix_{d₀}(Q) ⇒
+M_c(P) = M_c(Q), dove M_c = stato del monitor della cella bersaglio c
+(definizione in Via B) al confine del suffisso.
+FALSIFICATORE PER SINGOLO d: una coppia P,Q con suffix_d(P) =
+suffix_d(Q) e M_c(P) ≠ M_c(Q) — uccide QUEL d (e a fortiori ogni
+d' ≤ d: suffissi uguali a lunghezza d lo sono a ogni lunghezza minore);
+NON dice nulla sui d maggiori.
+**Semantica dei verdetti (congelata):**
+- coppia trovata a d ⇒ quel d (e ogni d' ≤ d) UCCISO;
+- nessuna coppia su tutta la griglia ⇒ verdetto SOLO `unknown`
+  sull'enunciato globale — MAI "d_0b esiste": una griglia finita non
+  decide ∃d₀;
+- Via A VERDE (d_0b esiste) ⇒ esige una PROVA UNIFORME (deduzione valida
+  per ogni coppia), non l'assenza di coppie nella griglia;
+- Via A DEFINITIVAMENTE MORTA ⇒ esige una famiglia parametrica /
+  pumping argument: ∀d ∃(P_d, Q_d) coppia falsificante.
+**Chiave di equivalenza delle coppie (congelata):** ogni coppia deve
+(i) appartenere INTERAMENTE a U3 (entrambi i passati); (ii) riferirsi
+alla stessa firma, stessa cella bersaglio c e stessa convenzione anchor;
+(iii) coincidere su TUTTA l'informazione dichiarata disponibile allo
+stato backward — non soltanto sui bit del suffisso, qualora lo stato
+dichiarato includa altre componenti (req note, pend₂, monitor di altre
+celle).
+Regole operative: d_0b non si sceglie MAI da un massimo censito
+(trappola qq); la caccia alle coppie va fatta su una griglia di d
+dichiarata prima della run, con enumerazione/ricerca meccanica
+sull'albero dei prepend (mai coppie costruite a mano); aspettativa
+dichiarata: REALISTICA la morte dei singoli d — il quadro §90b (visita
+di (1,1) a prof. 57 dietro w101, sweep esaustivo zero a 46) suggerisce
+che coppie del genere esistano, ma ogni coppia va REALIZZATA
+meccanicamente, non dedotta a mano.
 
-**Via B — monitor finito per cella bersaglio (se la Via A muore;
-preregistrato QUI).** Per ogni cella bersaglio c, automa a 3 stati:
-**UNSEEN → KNOWN → FORGOTTEN**, con transizioni:
-- visita di c ⇒ KNOWN;
-- raggiungimento della distanza Chebyshev 2 da c (uscita dalla memoria
-  di finestra) ⇒ FORGOTTEN;
-- rilettura di c in FORGOTTEN ⇒ **evento DEEP**;
-- rilettura di c in KNOWN ⇒ evento in-window (non marca).
+**Via B — monitor finito per cella bersaglio (la via più promettente;
+preregistrato QUI; TAVOLA CONGELATA, precisazione 2026-07-25/3).** Per
+ogni cella bersaglio c, automa a 3 stati {UNSEEN, KNOWN, FORGOTTEN}.
+ORDINE TEMPORALE (congelato): a ogni lettura di c il VERDETTO si emette
+sullo stato PRECEDENTE alla lettura; POI la visita resetta lo stato a
+KNOWN. Tavola esatta (guardie incluse):
+
+| stato prima | evento                                   | verdetto  | stato dopo |
+|-------------|------------------------------------------|-----------|------------|
+| UNSEEN      | visita di c                              | fresh     | KNOWN      |
+| UNSEEN      | nessuna visita                           | —         | UNSEEN     |
+| KNOWN       | visita di c                              | in-window | KNOWN      |
+| KNOWN       | nessuna visita, poi distanza Chebyshev 2 | —         | FORGOTTEN  |
+| FORGOTTEN   | visita di c                              | **deep**  | KNOWN      |
+| FORGOTTEN   | nessuna visita                           | —         | FORGOTTEN  |
+
+Guardia essenziale: "distanza Chebyshev 2 ⇒ FORGOTTEN" vale SOLO
+partendo da KNOWN — da UNSEEN il raggiungimento della distanza 2 NON
+crea una visita precedente (UNSEEN resta UNSEEN).
 Il monitor riassume un intervallo arbitrariamente lungo SENZA pretendere
 un d_0b uniforme; nel camminatore backward diventa un'obbligazione
 finita o una transizione non-deterministica CONTROLLATA (unknown-safe:
