@@ -2088,8 +2088,18 @@ Priorita' (aggiornate a §108b):
    Scia vero (lettura nera deep_1) — "essere un rientro" non basta.
    PROSSIMI GATE prima della Fase 1 (ordine del titolare):
    (i) Fase 0b = enunciato matematico RC2 con AUDIT DELL'ANTECEDENTE
-   (docs/PREREG_RC2_PONTE.md: 4 passi falsificabili; controlli espliciti,
-   sys.flags.optimize==0 registrato; macchina soltanto dopo);
+   (docs/PREREG_RC2_PONTE.md **v2, ERRATA-RC2 del titolare**: M1-v2 su
+   known/forgotten — le ultime 3 svolte NON certificano deep, solo filtro
+   di esclusione LLL; distinzione "visitata-prima" vs "visitata dal passo
+   stesso" col proof object; scelta d'universo esplicita U0/U3 — nell'
+   anello 3 il seme NON e' escluso in U0, l'ipotesi U3
+   B_inf(z_t,3) ∩ (seme ∪ origine) = ∅ e' strategica ma esige la
+   ridimostrazione dei quantificatori di X6; verdetti PARTIZIONATI:
+   GATE-NON-RAGGIUNTO / PONTE-FALSO / VALIDO-E-UTILE / VALIDO-MA-INUTILE;
+   falsificatore F-0b.1 v2 = un parent-step L marcato che nel replay e'
+   prima lettura o ancora known; controlli espliciti,
+   sys.flags.optimize==0 registrato; macchina soltanto dopo, 0b.3 NON
+   ancora costruibile);
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
