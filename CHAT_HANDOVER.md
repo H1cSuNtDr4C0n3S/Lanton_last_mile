@@ -1,3 +1,29 @@
+# ============ §107e — KERNEL ESTESO: R_{T,104} certificato, H-NR uccisa, verso il consolidamento ============
+
+**Cosa e' successo a §107e (in una riga):** mossa unica §107d.6 eseguita —
+KERNEL ESTESO R_{T,L} meccanizzato a L=104 e gate fondante CERTIFICATO
+(`compatibile ⟺ ride >= 104` per-record su 1639 canonici + 2 lock, T-DIV
+esteso d_a==d_b su ogni scudo, zero unknown, regressioni bit-esatte d-CSV
+§101 1639/1639 e d_full lock 324/449; copertura dichiarata: banda
+0<=ride<104 vuota nel campione, direzione ⟸ con 2 soli positivi + deduzione
+Lemma 0); forense last-paint con bianco≠vergine ESATTO (gate 3): kernel
+lock 66/67 VERGINI + 1 visitata-pari = la cella consumata §105b (terza
+conferma cross-macchinario); first-bad canonici n_vis med 1, 50 da-seme,
+eta_paint med 451 passi / gap_ep med 2 max 8 (due orologi, quantili non
+costanti); **H-NR (last-paint cutset per non-riusabilita') UCCISA al primo
+contatto** (gate 5, morte attesa dichiarata): 103.980 eventi-scudo, 55.359
+riusati da >=2 record (53%), 37.116 NON consecutivi — lo scudo e' bene
+riusabile e non-localmente riusabile, nessun ordine-dal-non-riuso ha
+appiglio (parente trappola n). **Decisione (regola preconcordata §107d.6.5):
+prossima sessione = CONSOLIDAMENTO (roadmap §C.4)**, nessuna nuova campagna
+empirica salvo invariante d'ordine nuovo esplicitamente preregistrato. La
+quantita' di Link 1 record-side resta #{t: classe-κ ∧ ride(t)>=L_0} = ∞,
+ora con predicato ride>=L esatto word+griglia.
+Dettagli: docs/KERNEL_EXTENDED_ADDENDUM.md. File: alpha1/kernel_extended.py
+(+json/log).
+
+# ================================================================================================
+
 # ============ §107d — SHIELD-MAP: calibrazione sigma/griglia, mappa del deposito, gap non-generalizzato ============
 
 **Cosa e' successo a §107d (in una riga, v2 CORRETTA dal pannello del
@@ -1949,25 +1975,25 @@ ride >= L. Fatti fermi: (i) classe κ misurata 0,2-4%/record (word-decidibile,
 non dimostrata i.o. per l'eterno); 2 episodi-lock realizzati in 82k (ride
 269/384); vincolo di lentezza §106; piega su γ §107a.
 
-Priorita':
-1. **MOSSA UNICA (§107e): kernel esteso R_{T,104} + last-paint cutset +
-   gate-zero (§107d.6).** (a) Costruire R_{T,L} a L=104 e certificare
-   l'equivalenza esatta kernel-compatibile ⟺ ride>=104 sui 2 lock +
-   controlli T appaiati; (b) forense per-mismatch: mai-visitata / ultima
-   visita / ultimo bianco→nero / colore letto-lasciato / epoca-record
-   dell'ultima pittura (bianco ≠ vergine, distinzione esatta); (c) ipotesi
-   last-paint cutset: ogni nero che scuda il kernel esteso attraversa un cut
-   spazio-temporale; cercare un ORDINE ben fondato / non-riusabilita' degli
-   attraversamenti, non un'altra densita'. Gate dichiarati PRIMA dei
-   verdetti; un controesempio uccide; unknown mai no-entry (lezione §75).
-   Se il gate (a) fallisce ⇒ consolidamento (§C.4), niente altra campagna.
+Priorita' (aggiornate a §107e):
+1. **CONSOLIDAMENTO (regola preconcordata §107d.6.5, eseguito il test
+   minimo §107e).** Il gate fondante del kernel esteso e' CERTIFICATO
+   (l'oggetto di Link 1 record-side e' sano e word-decidibile) ma l'ipotesi
+   meccanicistica H-NR e' morta al primo contatto (riuso 53%, non-locale):
+   scrittura organica dei teoremi locali come riduzione a α1∧β∧γ + macchina
+   — locale sigillato, γ<=40, finestra r<=4, prodotto sound, U1/Muro,
+   Scala, Cuneo/Limite di Velocita', Dicotomia del Record §101, kernel
+   esteso §107e — senza chiudere il crux. Riapertura del fronte empirico
+   SOLO con un invariante d'ordine nuovo, esplicito e preregistrato (non
+   basato sul non-riuso degli attraversamenti: falsificato §107e.3).
 2. **Diagnostica descrittiva disponibile (non certificati):** F3
    (sigma-vs-griglia, Spearman 0,0755), mappa condizionata P(nero|c∈R_T),
-   reach sigma-low (gap non uniforme). Vie chiuse (NON riaprire):
-   ledger/bilancio (n), filo-di-rasoio (§105b), solitudine (v), zona-piccola
-   (§97), discriminante word-side di (ii) via sigma (§107b+§107d, tt),
-   irraggiungibilita'-d'albero come deposito (ss), statistiche marginali dei
-   "buchi" senza oggetto logico riparato (§107d.0.10).
+   reach sigma-low (gap non uniforme), forense last-paint §107e. Vie chiuse
+   (NON riaprire): ledger/bilancio (n), filo-di-rasoio (§105b), solitudine
+   (v), zona-piccola (§97), discriminante word-side di (ii) via sigma
+   (§107b+§107d, tt), irraggiungibilita'-d'albero come deposito (ss),
+   statistiche marginali senza oggetto logico (§107d.0.10), non-riusabilita'
+   dello scudo (§107e.3).
 3. **Ereditati attivi:** §106c (incompatibilita' dei due obblighi su discesa B-T
    infinita), §105b.4, §101g (censimento V† ~50k eval), §102f, §103d (germi
    micro-porte, solo preregistrato), §104f (selezione dinamica del vocabolario).
@@ -2042,5 +2068,6 @@ Priorita':
   P2: `... alpha1\danger_sigma_vocab.py --shard i --nshards 14` + `danger_sigma_vocab_agg.py`.
 - Sonde §107d: `C:\Python\Python310\python.exe alpha1\danger_shield_calibration.py` (F3, gate GF0-GF3);
   `... alpha1\danger_wedge_map.py` (mappa deposito); `... alpha1\danger_reach_vocab.py` (reach sigma<=0.01).
-- Verbale prossima sessione: **§107e** (continuazione §107; §108 se fronte nuovo), stesso stile.
+- Sonda §107e: `C:\Python\Python310\python.exe alpha1\kernel_extended.py` (gate 1-6, ~40 s).
+- Verbale prossima sessione: **§108 (consolidamento)**, stesso stile.
 - Tempi tipici: build r4 20 s; A(2;4,5) prodotto 12,7 s; alpha1 search 31.7k semi/s; reseed 313k <1 s.
