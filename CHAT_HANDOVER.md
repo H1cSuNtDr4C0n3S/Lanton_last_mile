@@ -2120,7 +2120,17 @@ Priorita' (aggiornate a §108b):
    guardie (cheb 2 => FORGOTTEN SOLO da KNOWN; verdetto sullo stato
    PRIMA della lettura, poi reset a KNOWN); ordine: 0b.U3-a/b PRIMA di
    ogni tool di Via A (0b.U3-b atteso corollario breve di T17); via piu'
-   promettente = B;
+   promettente = B. **Precisazioni v5 (verdetto 2026-07-25/4):** Via A
+   ridefinita per EVENTO fisso e = (P,t,c) con M_c(t-) a istante fisso e
+   proiezioni dichiarate O_d annidate (O_d' = rho(O_d)) — l'a-fortiori
+   d'<=d vale SOLO sotto annidamento verificato (il confine mobile del
+   suffisso lo rendeva falso); tavola del monitor resa TOTALE (riga
+   mancante: KNOWN + nessuna visita + distanza != 2 => KNOWN) con ordine
+   esatto a 4 passi (verdetto pre-lettura; visita=>KNOWN; mossa;
+   attraversamento anello 2 => FORGOTTEN solo da KNOWN); Via A
+   retrocessa a OPZIONALE-DIAGNOSTICA (non necessaria se B certificata);
+   ordine operativo: 0b.U3-a/b -> induzione tavola completa monitor ->
+   [Via A opzionale] -> mappa 0b.0 -> solo allora 0b.3;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

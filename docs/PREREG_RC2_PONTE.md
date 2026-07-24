@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v4 = quantificatori Via A + tavola monitor congelati; v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v5 = evento fisso/proiezioni annidate + tavola monitor totale; v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -64,13 +64,14 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   può essere arbitrariamente antica; "assenza di riletture" può non
   essere decidibile da alcun suffisso di lunghezza fissa). d_0b NON va
   MAI scelto da un massimo censito (trappola qq);
-- **ordine dei lavori (precisazione 2026-07-25/3):** chiudere 0b.U3-a/b
-  PRIMA di qualsiasi tool della Via A (0b.U3-b dovrebbe essere un
-  corollario breve di T17 — B–T dà infiniti record fuori da ogni intorno
-  finito; 0b.U3-a dovrebbe seguire restringendo le equivalenze puntuali
-  di T24–T26 al sottoinsieme U3); poi Via A (test dei singoli d) e/o
-  Via B — la via più promettente è la **B** (un d_0b uniforme è
-  improbabile);
+- **ordine dei lavori (aggiornato 2026-07-25/4):** (1) chiudere
+  0b.U3-a/b (0b.U3-b atteso corollario breve di T17 — B–T dà infiniti
+  record fuori da ogni intorno finito; 0b.U3-a per restrizione puntuale
+  delle equivalenze T24–T26 al sottoinsieme U3); (2) dimostrare PER
+  INDUZIONE la tavola COMPLETA del monitor (Via B — la direzione
+  strategica); (3) Via A OPZIONALE e diagnostica: non necessaria se la
+  Via B è certificata; (4) completare la mappa 0b.0; (5) soltanto
+  allora valutare 0b.3;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -87,6 +88,26 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
    UNSEEN il raggiungimento della distanza 2 non può creare una visita
    precedente); il verdetto si emette sullo stato PRECEDENTE alla
    lettura, poi la visita resetta a KNOWN (sezione 3, Via B).
+
+## PRECISAZIONI FORMALI 2 (verdetto del titolare 2026-07-25/4 — vincolanti, applicate nel corpo)
+
+1. **La monotonia in d non seguiva dalla definizione v4.** M_c valutato
+   "al confine del suffisso" ha un confine MOBILE: cambiando d cambia
+   l'istante osservato, e nel tratto comune successivo una rilettura di
+   c può resettare il monitor a KNOWN — l'"a fortiori d' ≤ d" era FALSO
+   senza definizione aggiuntiva. Correzione adottata (la seconda delle
+   due ammesse): si fissa l'EVENTO bersaglio e = (P, t, c) e si valuta
+   M_c(e) = M_c(t⁻) a istante FISSO; O_d(e) = proiezione dichiarata dei
+   passi t−d, …, t−1; l'uccisione dei d' ≤ d vale SOLO sotto annidamento
+   verificato O_{d'} = ρ_{d→d'}(O_d) (sezione 3, Via A).
+2. **La tavola del monitor non era totale:** mancava la riga
+   KNOWN + nessuna visita + distanza ≠ 2 ⇒ KNOWN (essenziale: dopo una
+   visita il primo passo porta normalmente a distanza 1 e la cella deve
+   restare KNOWN). Tavola resa esaustiva + ordine esatto a 4 passi
+   (sezione 3, Via B).
+3. **Via A retrocessa a OPZIONALE E DIAGNOSTICA:** non è necessaria se
+   la Via B viene certificata. Ordine operativo aggiornato nella
+   DECISIONE OPERATIVA.
 
 ## 1. Lemma 0b.0 — corrispondenza temporale backward–forward (da certificare)
 
@@ -190,17 +211,27 @@ dominio D_RC2 sia finito e la sua enumerazione COMPLETA (non un campione,
 ERRATA-1.6). Kill-gate dichiarato: la visita precedente può essere
 arbitrariamente antica ⇒ un d_0b uniforme può NON esistere.
 
-**Via A — esiste un d_0b uniforme? (quantificatori CONGELATI,
-precisazione 2026-07-25/3).** Enunciato globale in gioco:
-∃d₀ ∀P,Q (passati validi in U3): suffix_{d₀}(P) = suffix_{d₀}(Q) ⇒
-M_c(P) = M_c(Q), dove M_c = stato del monitor della cella bersaglio c
-(definizione in Via B) al confine del suffisso.
-FALSIFICATORE PER SINGOLO d: una coppia P,Q con suffix_d(P) =
-suffix_d(Q) e M_c(P) ≠ M_c(Q) — uccide QUEL d (e a fortiori ogni
-d' ≤ d: suffissi uguali a lunghezza d lo sono a ogni lunghezza minore);
-NON dice nulla sui d maggiori.
+**Via A — esiste un d_0b uniforme? (OPZIONALE E DIAGNOSTICA — non
+necessaria se la Via B è certificata; definizione per EVENTO,
+precisazione 2026-07-25/4).** Enunciato globale in gioco:
+∃d₀ ∀e,e' (eventi in U3): O_{d₀}(e) = O_{d₀}(e') ⇒ M_c(e) = M_c(e').
+Definizioni (la versione v4 "al confine del suffisso" aveva un confine
+MOBILE e l'a-fortiori era falso): si fissa l'EVENTO bersaglio
+e = (P, t, c) — passato valido P, istante t della lettura candidata,
+cella bersaglio c; **M_c(e) = stato del monitor di c a t⁻** (istante
+FISSO, indipendente da d); **O_d(e) = proiezione DICHIARATA dei passi
+t−d, …, t−1**. Le proiezioni devono essere ANNIDATE:
+O_{d'}(e) = ρ_{d→d'}(O_d(e)) per ogni d' ≤ d (restrizione agli ultimi
+d' passi); se una componente dello stato dichiarato non è ricostruibile
+per restrizione, l'annidamento NON vale e la coppia uccide SOLO il d
+testato.
+FALSIFICATORE PER SINGOLO d: coppia di eventi e, e' con O_d(e) =
+O_d(e') e M_c(e) ≠ M_c(e'). Sotto annidamento verificato: O_d uguali ⇒
+O_{d'} uguali ∀ d' ≤ d ⇒ la coppia uccide anche ogni d' ≤ d; nulla sui
+d maggiori.
 **Semantica dei verdetti (congelata):**
-- coppia trovata a d ⇒ quel d (e ogni d' ≤ d) UCCISO;
+- coppia trovata a d ⇒ quel d UCCISO (e ogni d' ≤ d SOLO sotto
+  annidamento verificato delle proiezioni);
 - nessuna coppia su tutta la griglia ⇒ verdetto SOLO `unknown`
   sull'enunciato globale — MAI "d_0b esiste": una griglia finita non
   decide ∃d₀;
@@ -224,25 +255,32 @@ di (1,1) a prof. 57 dietro w101, sweep esaustivo zero a 46) suggerisce
 che coppie del genere esistano, ma ogni coppia va REALIZZATA
 meccanicamente, non dedotta a mano.
 
-**Via B — monitor finito per cella bersaglio (la via più promettente;
-preregistrato QUI; TAVOLA CONGELATA, precisazione 2026-07-25/3).** Per
+**Via B — monitor finito per cella bersaglio (la DIREZIONE STRATEGICA;
+preregistrato QUI; tavola TOTALE, precisazione 2026-07-25/4).** Per
 ogni cella bersaglio c, automa a 3 stati {UNSEEN, KNOWN, FORGOTTEN}.
-ORDINE TEMPORALE (congelato): a ogni lettura di c il VERDETTO si emette
-sullo stato PRECEDENTE alla lettura; POI la visita resetta lo stato a
-KNOWN. Tavola esatta (guardie incluse):
+**ORDINE ESATTO per passo (congelato):**
+1. emettere il verdetto fresh/in-window/deep sullo stato PRE-lettura;
+2. visita ⇒ KNOWN;
+3. effettuare la mossa;
+4. eventuale attraversamento dell'anello Chebyshev 2 ⇒ FORGOTTEN
+   (guardia: SOLO partendo da KNOWN).
+Tavola esaustiva (ogni caso coperto):
 
-| stato prima | evento                                   | verdetto  | stato dopo |
-|-------------|------------------------------------------|-----------|------------|
-| UNSEEN      | visita di c                              | fresh     | KNOWN      |
-| UNSEEN      | nessuna visita                           | —         | UNSEEN     |
-| KNOWN       | visita di c                              | in-window | KNOWN      |
-| KNOWN       | nessuna visita, poi distanza Chebyshev 2 | —         | FORGOTTEN  |
-| FORGOTTEN   | visita di c                              | **deep**  | KNOWN      |
-| FORGOTTEN   | nessuna visita                           | —         | FORGOTTEN  |
+| stato prima | evento                                                | verdetto  | stato dopo |
+|-------------|-------------------------------------------------------|-----------|------------|
+| UNSEEN      | visita di c                                           | fresh     | KNOWN      |
+| UNSEEN      | nessuna visita (qualunque distanza)                   | —         | UNSEEN     |
+| KNOWN       | visita di c                                           | in-window | KNOWN      |
+| KNOWN       | nessuna visita; posizione dopo la mossa a Chebyshev 2 | —         | FORGOTTEN  |
+| KNOWN       | nessuna visita; distanza dopo la mossa ≠ 2            | —         | KNOWN      |
+| FORGOTTEN   | visita di c                                           | **deep**  | KNOWN      |
+| FORGOTTEN   | nessuna visita                                        | —         | FORGOTTEN  |
 
-Guardia essenziale: "distanza Chebyshev 2 ⇒ FORGOTTEN" vale SOLO
-partendo da KNOWN — da UNSEEN il raggiungimento della distanza 2 NON
-crea una visita precedente (UNSEEN resta UNSEEN).
+Guardie essenziali: "Chebyshev 2 ⇒ FORGOTTEN" vale SOLO partendo da
+KNOWN — da UNSEEN il raggiungimento della distanza 2 NON crea una
+visita precedente (UNSEEN resta UNSEEN); e dopo una visita il primo
+passo porta normalmente a distanza 1: la cella RESTA KNOWN finché
+l'anello 2 non viene attraversato.
 Il monitor riassume un intervallo arbitrariamente lungo SENZA pretendere
 un d_0b uniforme; nel camminatore backward diventa un'obbligazione
 finita o una transizione non-deterministica CONTROLLATA (unknown-safe:
