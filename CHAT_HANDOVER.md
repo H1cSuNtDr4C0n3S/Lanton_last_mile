@@ -2192,8 +2192,24 @@ Priorita' (aggiornate a §108b):
    su K = unione B_inf(c,2) (fuori K: U->U, F->F, KNOWN->F
    attraversando l'anello; portali solo se il gate di utilita' fallisce
    sempre); test minimo a 8 punti (esca U/F sul monitor astratto
-   COLOR-FREE, non solo su passati U3). Ordine: L-REV (collasso OUT) ->
-   Via B -> 0b.3. Fase 1 e §109 chiusi;
+   COLOR-FREE, non solo su passati U3).
+   **Verdetto /8 (applicato: LEMMI v4 + PREREG v9):** L-0b0 CHIUSO;
+   **L-RESET registrato [T]** — ROSSO strutturale di UTILITA' (non di
+   soundness): delta(s, visita) = K per ogni s => Pre_visita({K}) =
+   {U,K,F}; U3+L lascia {K,F} != {F} => il gate deep sul powerset dello
+   stato corrente non puo' MAI scattare alla visita. Bersaglio
+   operativo sostituito: **L-OBL** = obbligazione retrospettiva per
+   evento distinto (prereg v9 sez. 3d: automa SEEK0/SEEK2/RESOLVED-
+   {U,K,F} scandendo il passato dall'evento; prima-visita-indietro =
+   ultima-visita-avanti da dimostrare; SEEK0+visita=>K, SEEK2+visita=>F,
+   nascita=>U; OUT certifica SEEK2, non inverte il reset; UN evento per
+   volta; U3+L solo DOPO la classificazione; gate: F su tutti i rami =>
+   marca, un K => no, irrisolto => unknown; falsificatore: un ramo
+   KNOWN reale su un parent-step uccide quella marcatura, niente
+   raffinamento automatico dei portali; primo bersaglio = un
+   parent-step delle due firme esterne). L-REV/Q_c resta strato di
+   soundness generale. Ordine: L-OBL -> Via B -> 0b.3. Fase 1 e §109
+   chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

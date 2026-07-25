@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v3 = L-0b0 cinematica/lettere PROMOSSO + errata bordo-seme del mini-lemma; v2 in 0f4348a, v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v4 = L-0b0 CHIUSO + L-RESET no-go deduttivo; v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -8,13 +8,19 @@
 - **L-U3a.3: statuto precisato** — non dimostra che la bicondizionale
   X6 sia falsa in U3; dimostra che la PROVA precedente della direzione
   R_f ⇒ ¬v2 non si relativizza (costruisce un altro passato, non-U3).
-- **L-0b0 cinematica/lettere: PROMOSSO [T] dal verdetto /7** (inversione
+- **L-0b0 cinematica/lettere: PROMOSSO [T] dal verdetto /7 e CHIUSO
+  nello statuto dichiarato dal verdetto /8** (inversione
   esatta di posa e heading; uguaglianza della cella letta;
   corrispondenza delle lettere; j(k) senza seconda induzione;
   C4-sym-equivarianza; non-morte geometrica distinta dai colori). La
   metà-colori: alternanza sulle riletture [T] via req + CONDIZIONE AL
   BORDO DEL SEME (errata /7, sotto) per la corrispondenza completa sui
   passati reali.
+- **NUOVO (verdetto /8): L-RESET** — no-go deduttivo [T]: la visita
+  resetta {U,K,F} a K ⇒ Pre_visita({K}) = {U,K,F}; il powerset dello
+  stato corrente NON può certificare deep al momento della visita
+  (sezione 4c). Il bersaglio operativo passa a L-OBL (obbligazione
+  retrospettiva per evento, PREREG_RC2_PONTE v9 sez. 3d).
 - **Convenzione DEFINITIVA di indicizzazione (verdetto /7, punto 2):
   0-based** ovunque da qui in avanti (come il codice e L-MON); L-0b0 è
   enunciato in 1-based con raccordo esplicito t = s − 1 — ogni uso
@@ -296,15 +302,47 @@ verifiche [C] dell'IMPLEMENTAZIONE, come il replay di terra di 0b.0
 (10 controesempi §94 + ≥100 estensioni). Indici: convenzione DEFINITIVA
 0-based (statuto in testa); L-0b0 resta 1-based col raccordo t = s − 1.
 
+## 4c. L-RESET — il reset della visita è un no-go esatto per il Pre dello stato corrente ([T], registrato dal verdetto /8)
+
+**Tavola forward per l'alfabeto locale a_c = (v_c, r_c)** (collasso
+della tavola totale di L-MON sui tre eventi raggiungibili):
+
+| stato prima | visita (1,0) | no visita, anello 2 (0,1) | altro (0,0) |
+|-------------|--------------|---------------------------|-------------|
+| U           | K            | U                         | U           |
+| K           | K            | F                         | K           |
+| F           | K            | F                         | F           |
+
+**Enunciato.** ∀ s ∈ {U, K, F}: δ_c(s, visita) = K. Quindi
+**Pre_{(1,0)}({K}) = {U, K, F}**: attraversando all'indietro la lettura
+candidata, l'inverso del monitor non può sapere se immediatamente prima
+la cella fosse UNSEEN, KNOWN o FORGOTTEN — la visita CANCELLA il
+passato dello stato.
+
+**Dimostrazione.** Immediata dalla colonna "visita" della tavola (righe
+1/3/6 della tavola totale di L-MON: UNSEEN+visita→KNOWN,
+KNOWN+visita→KNOWN, FORGOTTEN+visita→KNOWN). ∎
+
+**Corollario (il ROSSO di utilità del /8).** U3 + lettera L eliminano
+U, ma lasciano Q_c = {K, F} ≠ {F}: il gate deep su Q_c allo stato
+temporale mobile NON può mai scattare al momento della visita. NON è
+una falsificazione di RC2: è la falsificazione della speranza che il
+semplice Pre dello stato corrente certifichi retroattivamente il
+pre-stato della visita. Il bersaglio operativo corretto è
+l'OBBLIGAZIONE RETROSPETTIVA per evento distinto (L-OBL,
+PREREG_RC2_PONTE v9 sez. 3d): non conservare lo stato monitor
+corrente, ma scandire il passato dall'evento bersaglio (SEEK0/SEEK2)
+fino alla visita precedente o alla nascita.
+
 ## 5. Cosa resta aperto (nessuna promozione)
 
-- **L-REV** (il lemma decisivo mancante, verdetto /6): il sollevamento
-  esatto e unknown-safe del monitor nella macchina all'indietro —
-  monitor inverso a SOTTOINSIEMI Q_c ⊆ {U,K,F} non vuoti, insieme
-  finito C_RC2 delle celle sorvegliate, chiusura sotto
-  traslazione/rotazione/uscita/rientro, collasso esterno sound con
-  portali di rientro finiti. Preregistrato in PREREG_RC2_PONTE v7;
-  il replay NON può sostituire questa deduzione universale.
+- **L-OBL** (il bersaglio operativo post-/8): automa retrospettivo
+  SEEK0/SEEK2/RESOLVED-{U,K,F} per evento bersaglio distinto, con OUT
+  usato per certificare SEEK2; preregistrato in PREREG_RC2_PONTE v9
+  sez. 3d; primo bersaglio = un parent-step delle due firme a genitore
+  esterno. Q_c/Γ (L-REV, sez. 3c) resta la sovra-approssimazione
+  GENERALE di soundness — il suo gate deep allo stato mobile è ucciso
+  da L-RESET, non la sua soundness.
 - La certificazione della VIA B come implementazione (checker con
   controlli espliciti, esca, optimize==0, replay) — L-MON + L-REV sono
   la base deduttiva, non il sostituto.

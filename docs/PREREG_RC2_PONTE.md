@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v8 = L-REV integrato dal verdetto /7: concretizzazione Γ, alfabeto locale, Pre, marginale, anchor-fixed, collasso OUT; v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v9 = L-RESET no-go + L-OBL obbligazione retrospettiva come bersaglio operativo; v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -64,17 +64,20 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   può essere arbitrariamente antica; "assenza di riletture" può non
   essere decidibile da alcun suffisso di lunghezza fissa). d_0b NON va
   MAI scelto da un massimo censito (trappola qq);
-- **ordine dei lavori (aggiornato 2026-07-25/7):** (1) 0b.U3-a
+- **ordine dei lavori (aggiornato 2026-07-25/8):** (1) 0b.U3-a
   (direzione utile relativizzata) / 0b.U3-b: L-U3a.1/2 PROMOSSE e
   L-U3b CHIUSA sotto il fatto B–T; (2) L-MON PROMOSSO; **L-0b0
-  cinematica/lettere PROMOSSO [T]** (/7), metà-colori con errata
-  bordo-seme (RC2_LEMMI_0B v3); (3) **L-REV** (sezione 3c, integrata
-  /7: concretizzazione Γ/τ, alfabeto locale, Pre, prodotto marginale,
-  C_RC2 anchor-fixed) — PRIMA MOSSA: il collasso OUT unico su
-  K = ∪ B_∞(c,2); portali solo se il gate di utilità fallisce sempre;
-  (4) Via A OPZIONALE e diagnostica; (5) costruzione/certificazione
-  della Via B SOLO dopo L-REV; (6) 0b.3 solo dopo. Fase 1 e §109
-  restano chiusi;
+  CHIUSO** (/7, /8); **L-RESET registrato [T]** (/8: la visita resetta
+  tutto a K — no-go per il gate deep dello stato mobile); (3) bersaglio
+  operativo = **L-OBL** (sez. 3d: automa retrospettivo
+  SEEK0/SEEK2/RESOLVED per evento distinto; OUT certifica SEEK2; un
+  evento per volta; primo bersaglio = un parent-step delle due firme
+  esterne; se sopravvive un ramo KNOWN reale, quella marcatura è
+  falsificata e NON si raffinano i portali automaticamente), con
+  L-REV/Q_c (sez. 3c) mantenuto come sovra-approssimazione generale di
+  soundness; (4) Via A OPZIONALE e diagnostica; (5) costruzione/
+  certificazione della Via B SOLO dopo L-OBL; (6) 0b.3 solo dopo.
+  Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -339,7 +342,7 @@ obbligatoria sul checker; (iv) controlli espliciti + optimize==0.
 Ogni parametro sound "per caso fattuale" va verificato con controllo
 esplicito a ogni valore di raggio (trappola mm).
 
-## 3c. L-REV — monitor inverso a sottoinsiemi (PREREGISTRATO, verdetto 2026-07-25/6: il lemma decisivo mancante)
+## 3c. L-REV — monitor inverso a sottoinsiemi (PREREGISTRATO /6, integrato /7; dopo il verdetto /8 resta la SOVRA-APPROSSIMAZIONE GENERALE di soundness — il bersaglio OPERATIVO è L-OBL, sez. 3d: il gate deep su Q_c allo stato mobile è UCCISO da L-RESET, Pre_visita({K}) = {U,K,F}, e U3+L lascia {K,F} ≠ {F})
 
 L-MON dimostra il monitor deterministico IN AVANTI; la macchina lavora
 ALL'INDIETRO, dove la transizione non è in generale invertibile. Il
@@ -419,7 +422,61 @@ con collasso esterno"):
 - Requisiti operativi: controlli espliciti (niente assert nudi),
   sys.flags.optimize == 0 registrato, tripwire CP, esca sul checker.
 
-## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B presuppone L-REV dimostrato, sez. 3c])
+## 3d. L-OBL — obbligazione retrospettiva per evento distinto (PREREGISTRATO, verdetto 2026-07-25/8: il bersaglio operativo che sostituisce il gate deep di L-REV)
+
+**Motivazione (L-RESET, RC2_LEMMI_0B v4, [T]):** la visita resetta
+{U,K,F} a K ⇒ Pre_visita({K}) = {U,K,F}; U3 + lettera L eliminano U ma
+lasciano Q_c = {K,F} ≠ {F} ⇒ il gate deep sul powerset dello stato
+corrente NON può mai scattare al momento della visita. Non è una
+falsificazione di RC2: è la falsificazione della speranza che il Pre
+dello stato corrente certifichi retroattivamente il pre-stato.
+
+**Oggetto.** Per un SINGOLO evento bersaglio distinto e (lettura
+candidata della cella c al tempo τ(e)): partendo immediatamente PRIMA
+della lettura bersaglio e scandendo il passato verso tempi più antichi,
+automa di obbligazione:
+- **SEEK0**: nessun attraversamento dell'anello 2 di c ancora
+  incontrato;
+- **SEEK2**: almeno un attraversamento dell'anello 2 incontrato;
+- incontro della VISITA PRECEDENTE di c: da SEEK0 ⇒ **RESOLVED-K**; da
+  SEEK2 ⇒ **RESOLVED-F**;
+- nascita raggiunta senza visita precedente ⇒ **RESOLVED-U**.
+Classificazione bersaglio (da dimostrare, punto 6 del test): nessuna
+visita precedente ⇒ U; visita precedente senza uscita dall'anello 2 ⇒
+K; visita precedente con uscita prima del target ⇒ F.
+**Ruolo di OUT (corretto dal /8):** certificare SEEK2 — uscire da K
+forza SEEK0 → SEEK2 (una traiettoria unitaria deve attraversare
+l'anello 2) — NON invertire il reset della visita.
+**Disciplina di stato finito:** UN SOLO evento distinto per volta, per
+firma/punto rilevante (obbligazioni simultanee per ogni L = numero non
+limitato di obblighi pendenti: VIETATO).
+**Ordine di applicazione dei filtri:** U3 e lettera L si applicano SOLO
+DOPO la classificazione (servono a escludere U, non a decidere K/F).
+**Gate operativo (congelato):**
+- ogni ramo compatibile risolve F ⇒ marcatura;
+- almeno un ramo compatibile risolve K ⇒ NON marcato;
+- ramo non risolto o astrazione incapace di decidere ⇒ `unknown`.
+**Falsificatore:** se su un parent-step reale sopravvive un ramo KNOWN
+compatibile, QUELLA marcatura RC2 è falsificata — e NON si raffinano
+automaticamente i portali.
+**Primo bersaglio:** UN singolo parent-step delle due firme a genitore
+esterno ((−2,2) h=1 e (2,2) h=0, Fase 0).
+
+**Test minimo falsificabile di L-OBL (sostituisce i punti 3–6 del test
+/7 come prerequisiti operativi; 1–2 e 7–8 del /7 restano validi):**
+1. L-RESET registrato [FATTO: RC2_LEMMI_0B v4, sez. 4c];
+2. evento bersaglio e distinto, uno per volta;
+3. definire **Γ(n, e)** (non soltanto Γ(n));
+4. costruire l'automa SEEK0/SEEK2/RESOLVED-{U,K,F};
+5. dimostrare: la PRIMA visita incontrata andando indietro è
+   precisamente l'ULTIMA visita precedente andando avanti;
+6. dimostrare le tre classificazioni (SEEK0 + visita precedente ⇒ K;
+   SEEK2 + visita precedente ⇒ F; nascita senza visita ⇒ U);
+7. applicare U3 e lettera L soltanto DOPO la classificazione;
+8. gate operativo come sopra (F su tutti i rami ⇒ marca; un K ⇒ no;
+   irrisolto ⇒ unknown).
+
+## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone L-OBL dimostrato, sez. 3d, con L-REV/Q_c come strato di soundness, sez. 3c])
 
 Enumerare D_RC2 per intero; per ogni elemento: replay forward e verifica
 dell'antecedente con checker a CONTROLLI ESPLICITI; esca obbligatoria
