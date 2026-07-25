@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v9 = L-RESET no-go + L-OBL obbligazione retrospettiva come bersaglio operativo; v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v10 = semantica A/Â + INFEASIBLE + Gate P0 di polarità + regione 𝒦; v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -77,7 +77,11 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   L-REV/Q_c (sez. 3c) mantenuto come sovra-approssimazione generale di
   soundness; (4) Via A OPZIONALE e diagnostica; (5) costruzione/
   certificazione della Via B SOLO dopo L-OBL; (6) 0b.3 solo dopo.
-  Fase 1 e §109 restano chiusi;
+  Aggiornamento /9: NON partire dalla costruzione completa di Γ(n,e) —
+  prima il GATE P0 di polarità (sez. 3d) sulle due firme esterne;
+  L-OBL prosegue solo se il ramo L è non vacuo ED esiste una via
+  dichiarata per il ramo R; altrimenti L-OBL = riduzione parziale
+  registrata, senza macchina completa. Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -394,9 +398,10 @@ con collasso esterno"):
   insieme FINITO di celle ASSOLUTE nel frame anchor; NESSUNA chiusura
   per traslazione richiesta. (Lo schema relativo quozientato resta
   un'alternativa futura, NON adottata.)
-- **COLLASSO OUT UNICO (prima mossa, ipotesi /7):** congelato
-  **K = ∪_{c∈C_RC2} B_∞(c, 2)**: ogni escursione interamente fuori da
-  K ha effetto monitor U↦U e F↦F; uno stato KNOWN che esce da K deve
+- **COLLASSO OUT UNICO (prima mossa, ipotesi /7; regione rinominata
+  𝒦 dal /9 per evitare la collisione con K = KNOWN):** congelata
+  **𝒦 = ∪_{c∈C_RC2} B_∞(c, 2)**: ogni escursione interamente fuori da
+  𝒦 ha effetto monitor U↦U e F↦F; uno stato KNOWN che esce da 𝒦 deve
   attraversare l'anello 2 della propria cella ⇒ KNOWN↦F. Si parte
   dunque con UN SOLO macro-stato OUT che ammette
   sovra-approssimativamente ogni rientro di frontiera: certamente
@@ -444,37 +449,75 @@ automa di obbligazione:
 Classificazione bersaglio (da dimostrare, punto 6 del test): nessuna
 visita precedente ⇒ U; visita precedente senza uscita dall'anello 2 ⇒
 K; visita precedente con uscita prima del target ⇒ F.
-**Ruolo di OUT (corretto dal /8):** certificare SEEK2 — uscire da K
-forza SEEK0 → SEEK2 (una traiettoria unitaria deve attraversare
-l'anello 2) — NON invertire il reset della visita.
+**Ruolo di OUT (corretto dal /8; regione 𝒦 dal /9):** certificare
+SEEK2 — un'escursione che esce dalla regione 𝒦 (= B_∞(c,2) della cella
+bersaglio) attraversa l'anello 2 e forza SEEK0 → SEEK2 — NON invertire
+il reset della visita.
 **Disciplina di stato finito:** UN SOLO evento distinto per volta, per
 firma/punto rilevante (obbligazioni simultanee per ogni L = numero non
 limitato di obblighi pendenti: VIETATO).
 **Ordine di applicazione dei filtri:** U3 e lettera L si applicano SOLO
 DOPO la classificazione (servono a escludere U, non a decidere K/F).
-**Gate operativo (congelato):**
-- ogni ramo compatibile risolve F ⇒ marcatura;
-- almeno un ramo compatibile risolve K ⇒ NON marcato;
-- ramo non risolto o astrazione incapace di decidere ⇒ `unknown`.
-**Falsificatore:** se su un parent-step reale sopravvive un ramo KNOWN
-compatibile, QUELLA marcatura RC2 è falsificata — e NON si raffinano
-automaticamente i portali.
+**Semantica A/Â e gate operativo (corretti dal verdetto /9 — ramo
+reale vs ramo astratto):** A(n,e) = {class_P(e) : P ∈ Γ(n,e)} (classi
+REALIZZATE dai passati reali compatibili); Â(n,e) ⊇ A(n,e) = la
+sovra-approssimazione CALCOLATA. Quattro esiti, mutuamente esclusivi:
+- **Â = {F} (e Â ≠ ∅) ⇒ marcatura sound**;
+- **testimone REALE P con classe K ⇒ marcatura falsificata**
+  (falsificatore);
+- **K ∈ Â senza testimone reale ⇒ `unknown`** — un K puramente
+  astratto significa SOLO "non certificabile", NON è un falsificatore;
+- **Â = ∅ ⇒ INFEASIBLE** (stato impossibile): NON conta come
+  "marcatura utile" vacua e NON soddisfa il gate di utilità.
 **Primo bersaglio:** UN singolo parent-step delle due firme a genitore
-esterno ((−2,2) h=1 e (2,2) h=0, Fase 0).
+esterno ((−2,2) h=1 e (2,2) h=0, Fase 0) — previa uscita dal Gate P0
+(sotto).
 
-**Test minimo falsificabile di L-OBL (sostituisce i punti 3–6 del test
-/7 come prerequisiti operativi; 1–2 e 7–8 del /7 restano validi):**
+**GATE P0 — polarità del parent-step (verdetto /9: OBBLIGATORIO prima
+di Γ(n,e); il rischio non è la soundness ma dimostrare un fatto solo
+sulla sottoclasse L lasciando intatta la R).** RC2 vale soltanto sulle
+letture L, ma la firma f = (c\*, h\*) NON contiene la lettera del
+parent-step: **R_f^{U3} = R_{f,L}^{U3} ∪ R_{f,R}^{U3}**, e L-OBL può
+attaccare SOLO R_{f,L}^{U3}. Anche una certificazione perfetta di
+¬R_{f,L}^{U3} NON implica ¬R_f^{U3} senza una seconda deduzione
+¬R_{f,R}^{U3}. Nota: per una cella parent ESTERNA, U3 rende naturale
+il ramo R-fresco (cella fuori dal seme ⇒ prima lettura bianca) — non
+è una prova di realizzabilità di R, ma R non può essere ignorato.
+Riduzione per polarità: f ↦ (f_L, f_R); esiti strategici:
+- R deduttivamente impossibile ⇒ L-OBL è un attacco COMPLETO a f;
+- R sopravvive ⇒ L-OBL è riduzione PARZIALE e serve un invariante
+  separato per f_R;
+- L impossibile ⇒ RC2 inutile su quella firma.
+Punti del Gate P0 (tutti prima di Γ(n,e)):
+1. definire ESATTAMENTE l'evento parent nel frame anchor;
+2. dimostrare che la sua lettera non è già determinata dalla firma,
+   oppure derivarla;
+3. enumerare deduttivamente i due casi L/R sotto i SOLI vincoli già
+   certificati (C1/C3/C4-exit, U3, geometria della firma);
+4. emettere per ogni firma: `L-ONLY` / `R-ONLY` / `L+R` / `INFEASIBLE`;
+5. se `L+R`: dichiarare ANTICIPATAMENTE che L-OBL non può provare
+   ¬R_f da solo;
+6. VIETATO contare come falsificatore un K solo astratto;
+7. VIETATO che Â = ∅ soddisfi vacuamente il gate di utilità.
+
+**Test minimo falsificabile di L-OBL (aggiornato /9: P0 inserito prima
+di Γ(n,e); i punti 1–2 e 7–8 del /7 restano validi):**
 1. L-RESET registrato [FATTO: RC2_LEMMI_0B v4, sez. 4c];
 2. evento bersaglio e distinto, uno per volta;
-3. definire **Γ(n, e)** (non soltanto Γ(n));
-4. costruire l'automa SEEK0/SEEK2/RESOLVED-{U,K,F};
-5. dimostrare: la PRIMA visita incontrata andando indietro è
+3. **GATE P0 di polarità eseguito** (i 7 punti sopra) sulle due firme
+   esterne; procedere con L-OBL SOLO se il parent-step L è non vacuo
+   ED esiste una via dichiarata per eliminare anche il ramo R —
+   altrimenti registrare L-OBL come RIDUZIONE PARZIALE e non investire
+   nella macchina completa;
+4. definire **Γ(n, e)** (non soltanto Γ(n));
+5. costruire l'automa SEEK0/SEEK2/RESOLVED-{U,K,F};
+6. dimostrare: la PRIMA visita incontrata andando indietro è
    precisamente l'ULTIMA visita precedente andando avanti;
-6. dimostrare le tre classificazioni (SEEK0 + visita precedente ⇒ K;
+7. dimostrare le tre classificazioni (SEEK0 + visita precedente ⇒ K;
    SEEK2 + visita precedente ⇒ F; nascita senza visita ⇒ U);
-7. applicare U3 e lettera L soltanto DOPO la classificazione;
-8. gate operativo come sopra (F su tutti i rami ⇒ marca; un K ⇒ no;
-   irrisolto ⇒ unknown).
+8. applicare U3 e lettera L soltanto DOPO la classificazione; gate
+   operativo con semantica A/Â (marca solo Â={F}≠∅; K astratto = solo
+   `unknown`; K reale = falsificatore; Â=∅ = INFEASIBLE).
 
 ## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone L-OBL dimostrato, sez. 3d, con L-REV/Q_c come strato di soundness, sez. 3c])
 

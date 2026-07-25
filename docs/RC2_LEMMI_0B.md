@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v4 = L-0b0 CHIUSO + L-RESET no-go deduttivo; v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v5 = bozza Gate P0 di polarità sulle firme esterne; v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -333,6 +333,54 @@ l'OBBLIGAZIONE RETROSPETTIVA per evento distinto (L-OBL,
 PREREG_RC2_PONTE v9 sez. 3d): non conservare lo stato monitor
 corrente, ma scandire il passato dall'evento bersaglio (SEEK0/SEEK2)
 fino alla visita precedente o alla nascita.
+
+## 4d. L-P0 — polarità del parent-step (BOZZA eseguita sulle due firme esterne, in attesa di pannello; Gate P0 del verdetto /9)
+
+**Setup (punto 1 del Gate P0).** L'evento parent della firma
+f = (c\*, h\*) nel frame anchor: il passo del genitore di m\* legge
+c_par = c\* + D[(h\*+1)&3] con h_par = (h\*+1)&3 (geometria del passo di
+pulizia, §95h; per le due firme esterne c_par è nell'anello Chebyshev 3:
+(−2,3) per ((−2,2), h=1) e (3,2) per ((2,2), h=0) — output Fase 0,
+`alpha1/prereg_fase0_geometry_summary.json`). La lettera del parent-step
+è la lettura di c_par.
+
+**Punto 2 — la lettera NON è determinata dalla firma (per le firme
+esterne).** I vincoli certificati disponibili al nodo m\* sono: C1 (le
+nove di palla-2: req=1), C3 (c_par visitata a m\*), C4-exit (y ≥ 1),
+U3 (seme e origine fuori da B_∞(z_t,3)). Nessuno di essi fissa
+req(c_par) per c_par FUORI dalla palla-2: C1 parla solo delle nove; C3
+dà la visita, non la lettera; C4-exit è soddisfatto (y = 3 ≥ 1 e y = 2
+≥ 1). Quindi la firma da sola non determina la polarità. [Per contrasto,
+per le 6 firme INTERNE c_par è in palla-2 e C3/§96a danno req(c_par)=1
+a m\*: la derivazione della lettera dal req va fatta MECCANICAMENTE col
+macchinario §96, non a mano — dichiarato fuori da questa bozza.]
+
+**Punti 3–4 — enumerazione deduttiva dei due casi (firme esterne).**
+- Ramo R (lettura bianca): compatibile — sotto U3, c_par è fuori dal
+  supporto del seme ⇒ una prima-lettura-di-vita è BIANCA (mini-lemma
+  bordo-seme, sez. 4 di questo documento) ⇒ il ramo R-fresco è
+  naturale; anche una rilettura con parità giusta dà R. Nessun vincolo
+  certificato lo esclude.
+- Ramo L (lettura nera): non escluso — esige una visita PRECEDENTE di
+  c_par con parità di alternanza giusta (sotto U3 la prima lettura è
+  bianca, quindi L ⇒ rilettura); nessun vincolo certificato esclude
+  tale storia.
+**ESITO P0 (bozza): `L+R` per ENTRAMBE le firme esterne.**
+
+**Punto 5 — dichiarazione anticipata (obbligatoria dal /9).** Con esito
+`L+R`, **L-OBL da solo NON può provare ¬R_f^{U3} su nessuna delle due
+firme esterne**: attacca solo R_{f,L}^{U3}; per ¬R_f^{U3} serve una
+seconda deduzione ¬R_{f,R}^{U3} (invariante separato per f_R — APERTO,
+nessun candidato dichiarato). Conseguenza operativa (decisione /9,
+punto 4): finché non esiste una via dichiarata per il ramo R, L-OBL è
+registrato come **RIDUZIONE PARZIALE** e la macchina completa di
+Γ(n,e) NON viene costruita.
+
+**Statuto.** Bozza deduttiva in attesa di pannello: l'esito `L+R` è
+un'enumerazione di compatibilità sotto i SOLI vincoli certificati
+elencati — non afferma la REALIZZABILITÀ di alcun ramo (trappole z/ff:
+compatibilità ≠ realizzazione); la parte "firme interne ⇒ lettera
+forzata da req" è dichiarata DA DERIVARE meccanicamente.
 
 ## 5. Cosa resta aperto (nessuna promozione)
 

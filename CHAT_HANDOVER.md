@@ -2208,8 +2208,22 @@ Priorita' (aggiornate a §108b):
    KNOWN reale su un parent-step uccide quella marcatura, niente
    raffinamento automatico dei portali; primo bersaglio = un
    parent-step delle due firme esterne). L-REV/Q_c resta strato di
-   soundness generale. Ordine: L-OBL -> Via B -> 0b.3. Fase 1 e §109
-   chiusi;
+   soundness generale.
+   **Verdetto /9 (applicato: PREREG v10 + LEMMI v5):** semantica
+   A(n,e)/Â(n,e) col quarto esito INFEASIBLE (marca solo Â={F}!=∅;
+   K ASTRATTO = solo unknown, mai falsificatore; K REALE = testimone
+   falsificante; Â=∅ non soddisfa mai il gate di utilita'); regione del
+   collasso OUT rinominata 𝒦 (collisione con K=KNOWN); **GATE P0 di
+   polarita' OBBLIGATORIO prima di Gamma(n,e)**: R_f^{U3} =
+   R_{f,L} ∪ R_{f,R}, L-OBL attacca solo il ramo L, not-R_{f,L} NON
+   implica not-R_f; **bozza P0 eseguita (LEMMI v5 sez. 4d): esito L+R
+   per ENTRAMBE le firme esterne** (nessun vincolo certificato fissa
+   req(c_par) fuori palla; sotto U3 il ramo R-fresco e' naturale, il
+   ramo L esige una rilettura) => dichiarato: L-OBL da solo non chiude
+   nessuna firma esterna; finche' non c'e' una via per il ramo R,
+   L-OBL = RIDUZIONE PARZIALE registrata, macchina completa NON
+   costruita; per le 6 firme interne la lettera va derivata
+   meccanicamente dal req (da fare). Via B, 0b.3, Fase 1, §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
