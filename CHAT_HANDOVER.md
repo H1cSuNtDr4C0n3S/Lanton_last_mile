@@ -2300,7 +2300,36 @@ Priorita' (aggiornate a §108b):
    /12: eseguire la SOLA matrice 8x5x3; nessuna ACTIONABLE =>
    VALIDA-MA-INUTILE e consolidamento; >=1 ACTIONABLE => allora e
    soltanto allora L-OBL/Gamma per quella firma. Via B, 0b.3,
-   Fase 1, §109 chiusi;
+   Fase 1, §109 chiusi.
+   **Verdetto /13 (applicato: LEMMI v9 + PREREG v14) + RUN DELLA
+   MATRICE: L-SCIA-J PROMOSSO [T]** (provenienza D corretta:
+   convenzione cinematica canonica DX=(0,1,0,-1)/DY=(-1,0,1,0) di
+   onset_cone_lock.py = fondamento; ricostruzione dagli anchor =
+   verifica [C]); matrice DICHIARATA condizionata a deep (LLL
+   eliminato prima da L-SCIA-J(c); la matrice grezza e' esaustiva
+   SOLO nel dominio deep); mappa **first_color = 1 - req** congelata
+   (req=1 => BIANCO; contratto esplicito del checker, gia'
+   comportamento di u2_pocket_certificate) + predicato COMPLETO di
+   COND-KILL (tipo 1 = lettura del tratto incompatibile col colore
+   corrente della scia; tipo 2 = colore finale a m* contro 1-req su
+   cella certificata; mai dalla sola collisione; INFEASIBLE solo da
+   contraddizione certificata non-Scia; ordine congelato) + kill-list
+   a 8 punti del tool. **TOOL COSTRUITO ED ESEGUITO**
+   (alpha1/prereg_scia_matrix.py, summary JSON): gates G0-G5+G-LLL
+   verdi (doppia derivazione scia 120/120, round-trip 120/120,
+   regressione L-P0), esche 3/3 beccate (E1 120/120, E2 80/80, E3
+   78 diff reali + sintetico (1,1)), kill-list rispettata. **ESITO:
+   120 casi = 40 INFEASIBLE / 42 COND-KILL / 38 LOCAL-SURVIVE;
+   TUTTE e 8 le firme SURVIVES => NESSUNA ACTIONABLE => via
+   classificata VALIDA-MA-INUTILE (decisione /13 punto 5): L-OBL/
+   Gamma NON si costruisce, si consolida.** Meccanismi di terra
+   coerenti col verbale: k=5 muore sempre (4o R su c*, req=1 =
+   "il 4o passo all'indietro non puo' essere R" §96a); run-R su
+   c_par/le nove => INFEASIBLE (Catena di Chiusura <=3); COND-KILL
+   = scia NERA trasportata su una delle nove. Il buco e' invariato:
+   fuori dalle nove (e su (1,1)) nessun colore e' certificato — ai
+   k piccoli la scia cade nell'anello y=3 e sopravvive con modello
+   esplicito. Via B, 0b.3, Fase 1, §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

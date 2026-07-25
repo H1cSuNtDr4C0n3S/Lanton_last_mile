@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v8 = verdetto /12: L-URHO/L-U7a.2/L-FL7 PROMOSSI + L-SCIA-J bozza + errata bersaglio sez. 9; v7 in 52b09f6, v6 in f335cbf, v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v9 = verdetto /13: L-SCIA-J PROMOSSO [T] con provenienza D corretta; v8 in 03f165f, v7 in 52b09f6, v6 in f335cbf, v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -57,6 +57,13 @@ uccidere un singolo (f,k,j) NON elimina la firma: il gate per
 costruire L-OBL è ∃f ∀(k,j) compatibili: COND-KILL (firma
 ACTIONABLE). Errata sez. 9: bersaglio vigente = la prima L di
 Forced-L₇ (il parent-step è superato dal no-go P0 del /10).
+Verdetto /13 (2026-07-25): **L-SCIA-J PROMOSSO [T]** con una
+riparazione di provenienza: la tabella D è la CONVENZIONE CINEMATICA
+CANONICA del progetto (fondamento deduttivo); la ricostruzione dagli
+anchor è una VERIFICA [C], non il fondamento. Le altre due
+riparazioni /13 (matrice dichiarata CONDIZIONATA a deep con LLL
+eliminato prima dal lemma; mappa first_color = 1 − req e predicato
+COND-KILL completo congelati) sono recepite in PREREG_RC2_PONTE v14.
 
 ## 1. Definizioni (simboli distinti, decisione operativa punto 1)
 
@@ -518,18 +525,23 @@ realizzazione ha l'evento KNOWN), NON una potatura del ramo —
 l'eliminazione esige la congiunzione con una futura prova
 L-OBL ⇒ deep.
 
-## 8b. L-SCIA-J — il prefisso minimo determina la Scia (bozza formale, punto 5 del test /12; in attesa di pannello)
+## 8b. L-SCIA-J — il prefisso minimo determina la Scia (PROMOSSO [T] dal verdetto /13, con provenienza della tabella D corretta)
 
 **Frame dell'evento (definizione).** Sia e l'evento L al passo forward
 t: lettura NERA della cella p_t con heading di lettura h_t
 (pre-svolta, = heading d'arrivo). Il frame dell'evento è l'unica
 rotazione-C4 + traslazione che porta p_t in (0,0) e h_t a 0. Tabella
-D del camminatore (§92a), calibrata UNICAMENTE dagli anchor a verbale
-(impl. B di `alpha1/prereg_fase0_geometry.py`, unicità assertata):
-**D = {0:(0,−1), 1:(1,0), 2:(0,1), 3:(−1,0)}**. Lo stato all'evento
+D = CONVENZIONE CINEMATICA CANONICA del progetto (fondamento
+deduttivo del lemma; è la DX/DY condivisa da tutto il macchinario
+certificato, `alpha1/onset_cone_lock.py`: DX = (0,1,0,−1),
+DY = (−1,0,1,0)): **D = {0:(0,−1), 1:(1,0), 2:(0,1), 3:(−1,0)}**.
+La ricostruzione della stessa tabella dagli anchor a verbale (impl. B
+di `alpha1/prereg_fase0_geometry.py`, unicità assertata) è una
+VERIFICA [C] dell'implementazione, NON il fondamento (correzione
+/13.1). Lo stato all'evento
 nel frame anchor è (p_t, h_t), dato da L-0b0 (lo stato backward dopo
 il prepend dell'evento) ⇒ la trasformazione evento↔anchor è esplicita
-nei due versi (passo 1 del trasporto, PREREG v13 sez. 3e).
+nei due versi (passo 1 del trasporto, PREREG v14 sez. 3e).
 
 **Definizione (indice j).** j = min{ i ∈ {1,2,3} : ℓ_{t−i} = R }
 (definito ⟺ (ℓ_{t−1}, ℓ_{t−2}, ℓ_{t−3}) ≠ LLL). Prefisso minimo del
@@ -574,7 +586,7 @@ p_{t−j+1}, …, p_{t−1}: per (a) tutte distinte da c_j (verifica
 finita — j=2: (−1,1) ∉ {(0,1)}; j=3: (−1,0) ∉ {(−1,1), (0,1)});
 anche la lettura dell'evento è p_t = (0,0) ≠ c_j, quindi c_j resta
 NERA sia a t⁻ sia dopo il passo L (rilevante per l'equivalenza delle
-due convenzioni di trasporto, PREREG v13 sez. 3e punto 0). Identità
+due convenzioni di trasporto, PREREG v14 sez. 3e punto 0). Identità
 del caso (definizione di j), posizione (a) e colore usano SOLO
 ℓ_{t−j}, …, ℓ_{t−1}. ∎(b)
 (c): cheb da (0,0) di p_{t−3} = (−1,0), p_{t−2} = (−1,1),
@@ -583,14 +595,16 @@ posizione non raggiunge mai distanza 2 dalla cella (0,0) ⇒ per la
 tavola di L-MON lo stato resta KNOWN fino a t ⇒ verdetto in-window
 alla lettura t. ∎(c)
 
-**Cosa NON afferma (statuto /12).** Il prefisso minimo determina la
-Scia; NON certifica la realizzabilità globale del caso (f,k,j): i bit
-anteriori e i vincoli di validità possono restringere quali (k,j)
+**Cosa NON afferma (statuto /12–/13).** Il prefisso minimo determina
+la Scia; NON certifica la realizzabilità globale del caso (f,k,j): i
+bit anteriori e i vincoli di validità possono restringere quali (k,j)
 siano realizzabili — il risultato resta LOCALE e, nell'uso del test
 8×5×3, CONDIZIONALE a deep (per l'esclusione di LLL in (c) e per la
-semantica COND-KILL, PREREG v13 sez. 3e). Uso di (c) nella matrice:
-LLL è COND-KILL uniforme per ogni (f,k), non un caso mancante — la
-decomposizione {j=1,2,3, LLL} dei rami è esaustiva.
+semantica COND-KILL, PREREG v14 sez. 3e). Uso di (c) nella matrice
+(formulazione scelta dal /13.2): LLL è eliminato PRIMA della matrice
+da (c) sotto deep — la decomposizione {j=1,2,3, LLL} dei rami è
+esaustiva; la matrice 8×5×3 (senza colonna LLL) è quindi esaustiva
+SOLTANTO nel dominio `deep`, mai in assoluto.
 
 ## 9. Cosa resta aperto (nessuna promozione)
 
@@ -604,7 +618,6 @@ decomposizione {j=1,2,3, LLL} dei rami è esaustiva.
   della matrice 8×5×3. Q_c/Γ (L-REV, sez. 3c) resta la
   sovra-approssimazione GENERALE di soundness — il suo gate deep allo
   stato mobile è ucciso da L-RESET, non la sua soundness.
-- **L-SCIA-J** (sez. 8b): bozza formale in attesa di pannello.
 - La certificazione della VIA B come implementazione (checker con
   controlli espliciti, esca, optimize==0, replay) — L-MON + L-REV sono
   la base deduttiva, non il sostituto.

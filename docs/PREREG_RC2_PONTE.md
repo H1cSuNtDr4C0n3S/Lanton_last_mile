@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v13 = verdetto /12: tassonomia COND-KILL + matrice 8×15 + gate per-firma ACTIONABLE + fase temporale del trasporto + prefisso minimo L-SCIA-J; v12 in 52b09f6, v11 in f335cbf, v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v14 = verdetto /13: matrice dichiarata condizionata a deep + mappa first_color = 1−req + predicato COND-KILL completo + kill-list del tool; v13 in 03f165f, v12 in 52b09f6, v11 in f335cbf, v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -96,7 +96,13 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   realizzazione ha l'evento KNOWN; l'eliminazione del ramo esige la
   futura congiunzione L-OBL ⇒ deep) e il gate diventa PER-FIRMA
   (**ACTIONABLE**, sez. 3e): uccidere un singolo (f,k,j) NON elimina
-  la firma. Fase 1 e §109 restano chiusi;
+  la firma. Aggiornamento /13: L-SCIA-J PROMOSSO [T] (provenienza D
+  corretta: convenzione cinematica canonica = fondamento; anchor =
+  verifica [C]); matrice DICHIARATA condizionata a deep (LLL
+  eliminato prima, deduttivamente, da L-SCIA-J(c)); mappa
+  first_color = 1 − req e predicato COND-KILL completo CONGELATI
+  (sez. 3e); SOLO dopo queste tre riparazioni si costruisce il tool
+  dei punti 6–8. Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -589,10 +595,14 @@ Questo test PRECEDE completamente Γ e L-OBL. Il prefisso minimo che
 realizza il caso j (in ORDINE DI PREPEND, continuando il tratto
 R^{k−1}L: j=1 `R`, j=2 `LR`, j=3 `LLR`; in ordine forward
 antico→recente: R·L^{j−1}) determina cella e colore della Scia
-indipendentemente dai bit anteriori — **L-SCIA-J** (LEMMI v8
-sez. 8b, bozza in attesa di pannello; frame dell'evento: p_t in
-(0,0), h_t = 0). Il prefisso minimo NON certifica la realizzabilità
+indipendentemente dai bit anteriori — **L-SCIA-J** (LEMMI v9
+sez. 8b, PROMOSSO [T] dal /13; frame dell'evento: p_t in (0,0),
+h_t = 0). Il prefisso minimo NON certifica la realizzabilità
 globale del caso: il risultato resta locale/condizionale.
+**MATRICE CONDIZIONATA A DEEP (formulazione scelta dal /13.2):** la
+matrice 8×5×3 contiene SOLO j = 1, 2, 3; LLL è eliminato PRIMA,
+deduttivamente, da L-SCIA-J(c) sotto deep — la matrice grezza NON è
+esaustiva in assoluto: è esaustiva SOLTANTO nel dominio `deep`.
 
 **TRASPORTO DEL COLORE (obbligatorio, /11.3 — la sola collisione
 geometrica di coordinate NON è una contraddizione):**
@@ -613,6 +623,20 @@ geometrica di coordinate NON è una contraddizione):**
 4. confrontare il colore risultante col vincolo REALMENTE disponibile
    a m\* (C1/C3/clean/req).
 
+**MAPPA req→COLORE (congelata, /13.3 — parte esplicita del contratto
+del checker):** colore della prima lettura forward nel suffisso di c
+= **1 − req(c)**; quindi req = 1 forza BIANCO (0), non nero. È già il
+comportamento del macchinario (`alpha1/u2_pocket_certificate.py`:
+`exact_state` pone req = 1 − prima_lettura; `exact_step` esige che la
+lettura più profonda di c legga esattamente req(c)); da qui in avanti
+è contratto esplicito del checker: il colore di una cella con req
+certificato, all'istante τ(m\*)⁻, è 1 − req(c). Vincoli req REALMENTE
+certificati a m\* (i SOLI ammessi nel confronto): le NOVE di C1
+(POSE ∖ {(1,1)}, con POSE = {(x,y): x ∈ [−2,2], y ∈ {1,2}}) ⇒
+req = 1; c\* stessa (appena chiusa dal passo di pulizia R) ⇒ req = 1;
+c_par SE in palla (C3 + pend₂ = 0) ⇒ req = 1. NESSUN altro req è
+certificato: (1,1) e le celle esterne restano libere/ignote.
+
 **TASSONOMIA DEGLI ESITI (congelata dal /12 — sostituisce il
 "predicato di kill" del /11; "potato" NON si usa più).** La geometria
 assume CONDIZIONALMENTE che la prima L sia deep: una contraddizione
@@ -628,9 +652,26 @@ mutuamente esclusivi:
   (assegnazione che soddisfa i vincoli disponibili, come i modelli
   del Gate P0 — "non escluso" da solo è epistemico e NON basta);
 - `UNKNOWN`: informazione insufficiente.
-Il quarto caso di Scia (LLL) è COND-KILL uniforme per ogni (f,k) via
-§86.1/L-SCIA-J(c) (LLL ⇒ evento KNOWN ⇒ ¬deep): la decomposizione in
-{j=1,2,3, LLL} è esaustiva e la matrice copre tutti i rami.
+Il quarto caso di Scia (LLL) è eliminato PRIMA della matrice,
+deduttivamente, da L-SCIA-J(c) [T] sotto deep (LLL ⇒ evento KNOWN ⇒
+¬deep): la decomposizione in {j=1,2,3, LLL} è esaustiva, la matrice
+contiene solo j = 1, 2, 3 ed è esaustiva SOLO nel dominio `deep`
+(mai chiamarla esaustiva in assoluto — /13.2).
+**PREDICATO COMPLETO DI COND-KILL (congelato, /13):** il caso è
+COND-KILL SOLO se, nel trasporto esatto (cella-scia NERA a t⁻,
+sequenza canonica L·R^{k−1}): (tipo 1) durante il tratto una lettera
+richiede il colore opposto al colore corrente della cella-scia;
+oppure (tipo 2) a m\* il colore trasportato contraddice 1 − req(c) su
+una cella col req REALMENTE certificato (lista nella MAPPA sopra).
+La mera coincidenza di coordinate NON basta MAI. `INFEASIBLE` SOLO da
+una contraddizione universale certificata che NON coinvolge la catena
+di colore della cella-scia (MAI dall'assenza di un'estensione
+trovata). ORDINE DI DECISIONE (congelato): (1) vincoli non-Scia
+(alternanza interna della finestra, y ≥ 1, endpoint req su celle
+diverse dalla cella-scia) ⇒ contraddizione = `INFEASIBLE`;
+(2) trasporto della cella-scia ⇒ contraddizione = `COND-KILL`;
+(3) assegnazione esplicita completa dei liberi = `LOCAL-SURVIVE`
+(il modello va emesso); (4) altrimenti `UNKNOWN`.
 **CLASSIFICAZIONE PER FIRMA (output = matrice 8 righe × 15 colonne
 (k,j)):**
 - `ACTIONABLE`: ≥ 1 caso non-INFEASIBLE e TUTTI i casi non-INFEASIBLE
@@ -670,6 +711,23 @@ punto 4): tratto R^{k−1}L + prefisso minimo di j in ordine di
 prepend, trasformazione al frame anchor, trasporto canonico,
 confronto a m\*.
 
+**Kill-list del tool (test minimo /13 — il tool DEVE fallire se
+compare anche uno solo di questi casi):**
+1. L-SCIA-J produce coordinate diverse da quelle dedotte (doppia
+   derivazione obbligatoria: formula del lemma vs camminata diretta
+   del prefisso);
+2. il ramo LLL viene ammesso sotto l'ipotesi `deep`;
+3. viene emesso COND-KILL senza una lettura incompatibile o un colore
+   finale forzato (ogni COND-KILL porta l'evidenza tipo 1/tipo 2);
+4. req = 1 viene confrontato come nero anziché bianco (regressione
+   L-P0: le 6 firme interne devono dare parent-step = R);
+5. LOCAL-SURVIVE assegnato senza un modello locale esplicito;
+6. INFEASIBLE derivato dall'assenza di un'estensione trovata anziché
+   da una contraddizione universale certificata;
+7. la classificazione ACTIONABLE ignora qualche (k,j) compatibile
+   (la funzione itera TUTTE le 15 colonne; unit-test dedicato);
+8. una delle tre esche preregistrate non viene rilevata.
+
 **Falsificatori (tassonomia corretta dal /11.4):**
 - falsificatori di FORCED-L₇ (o delle sue ipotesi):
   (FL7-a) un passato U₇-valido senza L nei primi cinque prepend;
@@ -679,16 +737,51 @@ confronto a m\*.
   SUCCESSIVA marcatura L-OBL/deep, NON di Forced-L₇;
 - K soltanto astratto = `unknown` (mai falsificatore).
 
-**Decisione /12 (congelata; sostituisce la /10–/11):**
-1. L-URHO, L-U7a.2 e L-FL7 saldati (LEMMI v8);
-2. tassonomia ed esiti dello strumento corretti come sopra
-   (COND-KILL, matrice, classificazione per firma);
-3. eseguire la SOLA matrice 8×5×3;
-4. se NESSUNA firma è ACTIONABLE ⇒ via classificata
-   `VALIDA-MA-INUTILE` e si CONSOLIDA;
-5. se ALMENO una firma è ACTIONABLE ⇒ allora — e soltanto allora —
-   costruire L-OBL/Γ per quella firma.
+**Decisione /13 (congelata; conferma la /12 con le tre riparazioni
+bloccanti):**
+1. L-SCIA-J promosso [T], provenienza della tabella D corretta
+   (convenzione cinematica canonica = fondamento; ricostruzione
+   dagli anchor = verifica [C]);
+2. matrice 8×15 dichiarata CONDIZIONATA a deep, con LLL eliminato
+   prima dal lemma;
+3. first_color = 1 − req e predicato completo di COND-KILL congelati;
+4. SOLO allora costruire il tool dei punti 6–8;
+5. se NESSUNA firma è ACTIONABLE ⇒ via classificata
+   `VALIDA-MA-INUTILE` e consolidamento immediato;
+6. se ALMENO una firma è ACTIONABLE ⇒ aprire L-OBL esclusivamente
+   per quella firma.
 Via B, 0b.3, Fase 1 e §109 restano chiusi.
+
+**ESITO DELLA MATRICE (run congelata 2026-07-25,
+`alpha1/prereg_scia_matrix.py`, summary
+`alpha1/prereg_scia_matrix_summary.json`; verdetto EMESSO DAL TOOL,
+optimize == 0):**
+- gates G0–G5 + G-LLL VERDI (G1 = geometria vs Fase 0/§96a; G2 =
+  doppia derivazione della scia, formula del lemma vs camminata del
+  prefisso, 120/120; G3 = round-trip forward L·R^{k−1} su (c\*, h\*),
+  120/120; G4 = regressione L-P0 della direzione req; G5 = unità
+  L-SCIA-J + LLL); esche 3/3 BECCATE (E1 omissione-L: 120/120
+  round-trip falliti; E2 scambio j=2/3: 80/80; E3 collisione: 78
+  differenze reali + caso sintetico (1,1)); kill-list /13 rispettata
+  (ogni COND-KILL con evidenza tipo 1/tipo 2; ogni INFEASIBLE con
+  contraddizione certificata non-Scia; UNKNOWN mai emesso — nel
+  dominio dichiarato ogni caso decide);
+- **120 casi: 40 `INFEASIBLE` / 42 `COND-KILL` / 38 `LOCAL-SURVIVE`**;
+- controllo di terra sui meccanismi (coerenti col verbale §96a):
+  k = 5 muore SEMPRE per il 4° R su c\* (req = 1: "il 4° passo
+  all'indietro non può essere R"); i run-R che rientrano su c_par o
+  sulle nove ⇒ INFEASIBLE (Catena di Chiusura ≤ 3); i COND-KILL sono
+  scia trasportata NERA su una delle nove (endpoint 1 − req);
+- **TUTTE e 8 le firme = `SURVIVES`**: ogni firma ha ≥ 1
+  LOCAL-SURVIVE con modello esplicito — ai k piccoli la cella-scia
+  cade FUORI dalla regione certificata (tipicamente anello y = 3),
+  dove nessun req è certificato;
+- **NESSUNA firma ACTIONABLE ⇒ la via è classificata
+  `VALIDA-MA-INUTILE`** (decisione /13 punto 5): L-OBL/Γ NON si
+  costruisce; si consolida. La geometria della Scia di Forced-L₇,
+  con i soli vincoli certificati a m\* (C1/C3/clean/req), non può
+  eliminare alcuna firma intera: il buco è lo stesso di sempre —
+  fuori dalle nove (e su (1,1)) nessun colore è forzato.
 
 ## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone Forced-L₇ + L-OBL sull'evento di sez. 3e, con L-REV/Q_c come strato di soundness, sez. 3c])
 

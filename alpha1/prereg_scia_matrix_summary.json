@@ -1,0 +1,4815 @@
+{
+ "prereg": "docs/PREREG_RC2_PONTE.md v14 sez. 3e (verdetto /13)",
+ "contratto": {
+  "condizionata_a_deep": true,
+  "LLL": "eliminato prima della matrice da L-SCIA-J(c) [T]",
+  "fase_temporale": "canonica: stato a t-, sequenza forward L*R^{k-1} fino a m*-",
+  "first_color": "1 - req (req=1 => bianco=0)",
+  "req_certificati": {
+   "NOVE_C1": 1,
+   "c_star": 1,
+   "c_par_se_in_palla": 1
+  },
+  "ordine_decisione": [
+   "non-Scia => INFEASIBLE",
+   "Scia => COND-KILL",
+   "modello => LOCAL-SURVIVE",
+   "UNKNOWN"
+  ]
+ },
+ "convenzioni": {
+  "DX": [
+   0,
+   1,
+   0,
+   -1
+  ],
+  "DY": [
+   -1,
+   0,
+   1,
+   0
+  ],
+  "fonte": "alpha1/onset_cone_lock.py (canonica)",
+  "POSE": [
+   [
+    -2,
+    1
+   ],
+   [
+    -2,
+    2
+   ],
+   [
+    -1,
+    1
+   ],
+   [
+    -1,
+    2
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ]
+  ],
+  "NOVE": [
+   [
+    -2,
+    1
+   ],
+   [
+    -2,
+    2
+   ],
+   [
+    -1,
+    1
+   ],
+   [
+    -1,
+    2
+   ],
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    2
+   ],
+   [
+    1,
+    2
+   ],
+   [
+    2,
+    1
+   ],
+   [
+    2,
+    2
+   ]
+  ],
+  "frame_scia": {
+   "1": [
+    0,
+    1
+   ],
+   "2": [
+    -1,
+    1
+   ],
+   "3": [
+    -1,
+    0
+   ]
+  }
+ },
+ "gates": {
+  "G0_optimize": true,
+  "G1_geometria_vs_fase0": "verde",
+  "G2_scia_doppia_derivazione": "verde",
+  "G3_round_trip": "verde",
+  "G4_req_direzione_LP0": "verde",
+  "G5_unita_LSCIAJ": "verde",
+  "G_LLL_escluso": "verde"
+ },
+ "esche": {
+  "E1_omissione_L": {
+   "beccata": true,
+   "fail": 120
+  },
+  "E2_scambio_j23": {
+   "beccata": true,
+   "fail": 80
+  },
+  "E3_collisione": {
+   "beccata": true,
+   "diff_reali": 78,
+   "sintetico_11": true
+  }
+ },
+ "matrice": [
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -3,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    -3,
+    0
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      -3,
+      0
+     ],
+     "step": 0,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -3,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    0
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      -2,
+      0
+     ],
+     "step": 0,
+     "scia": false
+    },
+    {
+     "tipo": "y<1",
+     "cella": [
+      -3,
+      0
+     ],
+     "step": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -3,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      -2,
+      0
+     ],
+     "step": 1,
+     "scia": false
+    },
+    {
+     "tipo": "y<1",
+     "cella": [
+      -3,
+      0
+     ],
+     "step": 2,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 1
+   },
+   "scia": [
+    -4,
+    2
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-4, 2)": 0,
+     "(-3, 1)": 0,
+     "(-3, 2)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -3,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 1
+   },
+   "scia": [
+    -4,
+    1
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-4, 1)": 0,
+     "(-4, 2)": 1,
+     "(-3, 1)": 0,
+     "(-3, 2)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -4,
+      2
+     ],
+     [
+      -3,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 1
+   },
+   "scia": [
+    -3,
+    1
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -3,
+      1
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    -2,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 1)": 0,
+     "(-3, 2)": 0,
+     "(-2, 2)": 1,
+     "(-2, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      -2,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    -3,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 1)": 0,
+     "(-3, 2)": 0,
+     "(-3, 3)": 0,
+     "(-2, 2)": 1,
+     "(-2, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -2,
+      2
+     ],
+     [
+      -2,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    -3,
+    2
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -3,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     1
+    ],
+    "h": 3
+   },
+   "scia": [
+    -1,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     1
+    ],
+    "h": 3
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     1
+    ],
+    "h": 3
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -2,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -3,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    -3,
+    0
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      -3,
+      0
+     ],
+     "step": 0,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -3,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    0
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      -2,
+      0
+     ],
+     "step": 0,
+     "scia": false
+    },
+    {
+     "tipo": "y<1",
+     "cella": [
+      -3,
+      0
+     ],
+     "step": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 1] h1",
+   "c_star": [
+    -2,
+    1
+   ],
+   "h_star": 1,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -3,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      -2,
+      0
+     ],
+     "step": 1,
+     "scia": false
+    },
+    {
+     "tipo": "y<1",
+     "cella": [
+      -3,
+      0
+     ],
+     "step": 2,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -3,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 3)": 0,
+     "(-2, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -2,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -3,
+    2
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 2)": 0,
+     "(-3, 3)": 1,
+     "(-2, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -3,
+      3
+     ],
+     [
+      -2,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -1,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-2, 3)": 0,
+     "(-1, 3)": 1,
+     "(-1, 4)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      -1,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -2,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-2, 3)": 0,
+     "(-2, 4)": 0,
+     "(-1, 3)": 1,
+     "(-1, 4)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -1,
+      3
+     ],
+     [
+      -1,
+      4
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -2,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -2,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -1,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    0,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -1,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    0,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-2, 3)": 0,
+     "(-1, 2)": 1,
+     "(-1, 3)": 0,
+     "(0, 2)": 1,
+     "(0, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      -1,
+      2
+     ],
+     [
+      0,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -1,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    -1,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -1,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -1,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -1,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -3,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -3,
+    2
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h0",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -3,
+    1
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 1)": 0,
+     "(-3, 2)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -3,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -3,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -4,
+    3
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-4, 3)": 0,
+     "(-3, 2)": 0,
+     "(-3, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -3,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -3,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -4,
+    2
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-4, 2)": 0,
+     "(-4, 3)": 1,
+     "(-3, 2)": 0,
+     "(-3, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -4,
+      3
+     ],
+     [
+      -3,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -3,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -3,
+    2
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -3,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -2,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 2)": 0,
+     "(-3, 3)": 0,
+     "(-2, 3)": 1,
+     "(-2, 4)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      -2,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -3,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 2)": 0,
+     "(-3, 3)": 0,
+     "(-3, 4)": 0,
+     "(-2, 3)": 1,
+     "(-2, 4)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -2,
+      3
+     ],
+     [
+      -2,
+      4
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -3,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -3,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    -1,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-3, 2)": 0,
+     "(-3, 3)": 0,
+     "(-2, 2)": 1,
+     "(-2, 3)": 0,
+     "(-1, 2)": 1,
+     "(-1, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      -2,
+      2
+     ],
+     [
+      -1,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -2,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    -2,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -2,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -3,
+    1
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-2, 2] h1",
+   "c_star": [
+    -2,
+    2
+   ],
+   "h_star": 1,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -3,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -2,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -2,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-2, 3)": 0,
+     "(-1, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      -1,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    0,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-1, 3)": 0,
+     "(0, 3)": 1,
+     "(0, 4)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      0,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -1,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-1, 3)": 0,
+     "(-1, 4)": 0,
+     "(0, 3)": 1,
+     "(0, 4)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      0,
+      3
+     ],
+     [
+      0,
+      4
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    -1,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      -1,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     0,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     0,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    1,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-1, 3)": 0,
+     "(0, 2)": 1,
+     "(0, 3)": 0,
+     "(1, 2)": 1,
+     "(1, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     0,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    0,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      0,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -1,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    -1,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -1,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    0,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -1,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    0,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      0,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -2,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[-1, 2] h0",
+   "c_star": [
+    -1,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     -1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -1,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(-1, 3)": 0,
+     "(0, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      0,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      -1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    0,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    1,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(0, 3)": 0,
+     "(1, 3)": 1,
+     "(1, 4)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      1,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    0,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(0, 3)": 0,
+     "(0, 4)": 0,
+     "(1, 3)": 1,
+     "(1, 4)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      1,
+      3
+     ],
+     [
+      1,
+      4
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    0,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      0,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     1,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     1,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    2,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(0, 3)": 0,
+     "(1, 2)": 1,
+     "(1, 3)": 0,
+     "(2, 2)": 1,
+     "(2, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      1,
+      2
+     ],
+     [
+      2,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     1,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    1,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      1,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     0,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    0,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     0,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    1,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     0,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      1,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -1,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    -1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[0, 2] h0",
+   "c_star": [
+    0,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     0,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    0,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    0,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(0, 3)": 0,
+     "(1, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      1,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    0,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      0,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(1, 3)": 0,
+     "(2, 3)": 1,
+     "(2, 4)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      2,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    1,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(1, 3)": 0,
+     "(1, 4)": 0,
+     "(2, 3)": 1,
+     "(2, 4)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      2,
+      3
+     ],
+     [
+      2,
+      4
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    1,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      1,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    3,
+    2
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(1, 3)": 0,
+     "(2, 2)": 1,
+     "(2, 3)": 0,
+     "(3, 2)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      2,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    3,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(1, 3)": 0,
+     "(2, 2)": 1,
+     "(2, 3)": 0,
+     "(3, 2)": 1,
+     "(3, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      2,
+      2
+     ],
+     [
+      3,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    2,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      2,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     1,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    1,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     1,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     1,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      2,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    0,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    0,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[1, 2] h0",
+   "c_star": [
+    1,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     1,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(1, 3)": 0,
+     "(2, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      2,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      1,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     3,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    3,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(2, 3)": 0,
+     "(3, 3)": 1,
+     "(3, 4)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     3,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    4
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(2, 3)": 0,
+     "(2, 4)": 0,
+     "(3, 3)": 1,
+     "(3, 4)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      3
+     ],
+     [
+      3,
+      4
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     3,
+     3
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      2,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    4,
+    2
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(2, 3)": 0,
+     "(3, 2)": 1,
+     "(3, 3)": 0,
+     "(4, 2)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    4,
+    3
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(2, 3)": 0,
+     "(3, 2)": 1,
+     "(3, 3)": 0,
+     "(4, 2)": 1,
+     "(4, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      2
+     ],
+     [
+      4,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 3
+   },
+   "scia": [
+    3,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      3,
+      3
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    3,
+    1
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(2, 1)": 1,
+     "(2, 2)": 1,
+     "(2, 3)": 0,
+     "(3, 1)": 0,
+     "(3, 2)": 0,
+     "(3, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      2,
+      1
+     ],
+     [
+      2,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 2
+   },
+   "scia": [
+    3,
+    2
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      3,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h0",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 0,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     3
+    ],
+    "h": 1
+   },
+   "scia": [
+    2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      2,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 1,
+   "j": 1,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    3,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(3, 2)": 1,
+     "(3, 3)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      2
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 1,
+   "j": 2,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    3
+   ],
+   "scia_cheb": 3,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(2, 3)": 0,
+     "(3, 2)": 1,
+     "(3, 3)": 1
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      2
+     ],
+     [
+      3,
+      3
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 1,
+   "j": 3,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 2,
+   "j": 1,
+   "evento": {
+    "cella": [
+     3,
+     1
+    ],
+    "h": 3
+   },
+   "scia": [
+    4,
+    1
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(3, 1)": 1,
+     "(3, 2)": 0,
+     "(4, 1)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      1
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 2,
+   "j": 2,
+   "evento": {
+    "cella": [
+     3,
+     1
+    ],
+    "h": 3
+   },
+   "scia": [
+    4,
+    2
+   ],
+   "scia_cheb": 4,
+   "modello": {
+    "colori_iniziali_t_minus_j": {
+     "(3, 1)": 1,
+     "(3, 2)": 0,
+     "(4, 1)": 1,
+     "(4, 2)": 0
+    },
+    "riletture_richieste_U7": [
+     [
+      3,
+      1
+     ],
+     [
+      4,
+      1
+     ]
+    ]
+   },
+   "stato": "LOCAL-SURVIVE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 2,
+   "j": 3,
+   "evento": {
+    "cella": [
+     3,
+     1
+    ],
+    "h": 3
+   },
+   "scia": [
+    3,
+    2
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      3,
+      2
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 3,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    2,
+    0
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      2,
+      0
+     ],
+     "step": 0,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 3,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    3,
+    0
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      3,
+      0
+     ],
+     "step": 0,
+     "scia": false
+    },
+    {
+     "tipo": "y<1",
+     "cella": [
+      2,
+      0
+     ],
+     "step": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 3,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     1
+    ],
+    "h": 2
+   },
+   "scia": [
+    3,
+    1
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "y<1",
+     "cella": [
+      3,
+      0
+     ],
+     "step": 1,
+     "scia": false
+    },
+    {
+     "tipo": "y<1",
+     "cella": [
+      2,
+      0
+     ],
+     "step": 2,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 4,
+   "j": 1,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 4,
+   "j": 2,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 1
+   },
+   "scia": [
+    1,
+    1
+   ],
+   "scia_cheb": 1,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 4,
+   "j": 3,
+   "evento": {
+    "cella": [
+     2,
+     2
+    ],
+    "h": 1
+   },
+   "scia": [
+    2,
+    1
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "lettura",
+     "cella": [
+      2,
+      1
+     ],
+     "step": 4,
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": true
+    }
+   ],
+   "stato": "COND-KILL"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 5,
+   "j": 1,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    3,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 5,
+   "j": 2,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    3
+   ],
+   "scia_cheb": 3,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    },
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      2
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  },
+  {
+   "firma": "[2, 2] h3",
+   "c_star": [
+    2,
+    2
+   ],
+   "h_star": 3,
+   "k": 5,
+   "j": 3,
+   "evento": {
+    "cella": [
+     3,
+     2
+    ],
+    "h": 0
+   },
+   "scia": [
+    2,
+    2
+   ],
+   "scia_cheb": 2,
+   "evidenza": [
+    {
+     "tipo": "endpoint",
+     "cella": [
+      2,
+      1
+     ],
+     "richiesto": 0,
+     "trovato": 1,
+     "scia": false
+    }
+   ],
+   "stato": "INFEASIBLE"
+  }
+ ],
+ "classi_per_firma": {
+  "[-2, 1] h1": "SURVIVES",
+  "[-2, 2] h0": "SURVIVES",
+  "[-2, 2] h1": "SURVIVES",
+  "[-1, 2] h0": "SURVIVES",
+  "[0, 2] h0": "SURVIVES",
+  "[1, 2] h0": "SURVIVES",
+  "[2, 2] h0": "SURVIVES",
+  "[2, 2] h3": "SURVIVES"
+ },
+ "stati_conteggio": {
+  "INFEASIBLE": 40,
+  "LOCAL-SURVIVE": 38,
+  "COND-KILL": 42
+ },
+ "firme_actionable": [],
+ "verdetto": "NESSUNA FIRMA ACTIONABLE => VALIDA-MA-INUTILE e consolidamento (decisione /13 punto 5)",
+ "unknown_nota": "UNKNOWN previsto dal contratto ma non realizzato: nel dominio dichiarato (req certificati + alternanza di finestra + y>=1) ogni caso decide",
+ "rossi": [],
+ "sys_flags_optimize": 0,
+ "elapsed_s": 0.005
+}
