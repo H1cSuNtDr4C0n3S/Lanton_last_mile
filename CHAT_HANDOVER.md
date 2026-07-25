@@ -2242,8 +2242,28 @@ Priorita' (aggiornate a §108b):
    L-OBL decide K vs F su quell'evento; enumerazione finita 8x5; gate
    di utilita' RAFFORZATO (la Scia deve eliminare almeno un ramo di F8,
    non solo certificare deep); falsificatori FL7-a..d; se la geometria
-   8x5 non pota nulla => VALIDA-MA-INUTILE e consolidamento. Via B,
-   0b.3, Fase 1, §109 chiusi;
+   non pota nulla => VALIDA-MA-INUTILE e consolidamento.
+   **Verdetto /11 (applicato: LEMMI v7 + PREREG v12):** P0 e no-go
+   parent-step CHIUSI; la geometria corretta e' **8x5x3** (terzo indice
+   j della Scia: R piu' recente fra t-1/t-2/t-3, celle (0,1)/(-1,1)/
+   (-1,0) nel frame dell'evento; LLL incompatibile con deep; max 120
+   casi) **+ TRASPORTO ESATTO DEL COLORE** fino a m* (frame anchor,
+   tratto R^{k-1}, conteggio flip, confronto col vincolo reale — la
+   collisione geometrica da sola non e' contraddizione); oggetto =
+   (f, k, j, cella-scia trasportata); predicato di kill congelato
+   (contraddizione => potato / compatibile => sopravvive /
+   insufficiente => unknown). NUOVI LEMMI in bozza (LEMMI v7):
+   **L-URHO** (cofinalita' U_rho per ogni raggio fisso, prova di L-U3b
+   parametrizzata, sotto B-T), **L-U7a.2** (direzione utile sotto U7
+   RIDIMOSTRATA come nuova contrappositiva per-passato — NON segue per
+   restrizione: la premessa forall-f not-R_f^{U7} e' piu' debole),
+   **L-FL7** (Forced-L7 stesura formale: (a) cinematica L-0b0,
+   (b) non-terminazione da U7, (c) T23 => prima L a k<=5, (d) fuori
+   seme => rilettura; NON afferma FORGOTTEN ne' contraddizione-Scia).
+   FL7-d riclassificato: KNOWN reale = falsificatore della marcatura
+   L-OBL/deep, non di Forced-L7; K astratto = unknown. Eseguire SOLO
+   la geometria finita 8x5x3; L-OBL/Gamma solo se almeno un ramo e'
+   potato deduttivamente. Via B, 0b.3, Fase 1, §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

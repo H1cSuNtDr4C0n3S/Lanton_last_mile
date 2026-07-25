@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v6 = P0 SALDATO: 6 R-ONLY + 2 L+R, lemma di soffitto del parent-step; v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v7 = L-URHO + L-U7a.2 ridimostrata + L-FL7 stesura formale; v6 in f335cbf, v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -33,6 +33,12 @@ i teoremi consolidati (A-Tn = docs/CONSOLIDATION_108_A.md).
 Collisione terminologica risolta (verdetto /6): **C4-sym** = simmetria
 rotazionale della regola (L-U3b); **C4-exit** = il vincolo sul genitore
 derivato da valid() (il "C4" storico di §96a).
+Aggiunte del verdetto /11 (sezioni 6–8): **L-URHO** (cofinalità per
+ogni raggio fisso ρ, stessa prova di L-U3b con N_ρ finito, sotto il
+fatto B–T); **L-U7a.2** (direzione utile sotto U₇ — RIDIMOSTRATA come
+nuova contrappositiva per-passato: NON segue per restrizione logica da
+L-U3a.2, perché la premessa ∀f ¬R_f^{U7} è PIÙ DEBOLE di ∀f ¬R_f^{U3});
+**L-FL7** (Forced-L₇, stesura formale — promuovibile dopo saldatura).
 
 ## 1. Definizioni (simboli distinti, decisione operativa punto 1)
 
@@ -412,7 +418,85 @@ elencati — non afferma la REALIZZABILITÀ di alcun ramo (trappole z/ff:
 compatibilità ≠ realizzazione); la parte "firme interne ⇒ lettera
 forzata da req" è dichiarata DA DERIVARE meccanicamente.
 
-## 5. Cosa resta aperto (nessuna promozione)
+## 6. L-URHO — cofinalità dei record U_ρ per ogni raggio fisso (stessa prova di L-U3b, parametrizzata; sotto il fatto B–T)
+
+**Definizioni.** Per ρ ≥ 0 fisso: N_ρ = intorno-ρ (Chebyshev) di
+supp(seme) ∪ {origine} (FINITO: il seme è finito); record U_ρ = record
+y-min stretto z_t con B_∞(z_t, ρ) ∩ (supp(seme) ∪ {origine}) = ∅;
+dualità come in L-U3b(i): record U_ρ ⟺ record fuori da N_ρ.
+
+**Enunciato.** Per ogni orbita eterna non-highway esiste una rotazione
+C4-sym del frame, dipendente dall'orbita, nella quale i record U_ρ
+sono infiniti; in quel frame WLOG, una vietanza di w101 su TUTTI i
+record U_ρ realizza il bersaglio del Muro con intorno finito N_ρ.
+
+**Dimostrazione.** Identica a L-U3b con 3 sostituito da ρ: (i) dualità;
+(ii) fatto esterno B–T + C4-sym-equivarianza ⇒ infiniti record y-min
+stretti nel frame WLOG; (iii) y_t strettamente decrescente ⇒ solo
+finiti record dentro il compatto N_ρ; (iv) bersaglio del Muro con
+intorno N_ρ. ∎ (SOTTO IL FATTO B–T, come L-U3b.)
+
+## 7. L-U7a.2 — direzione utile sotto U₇ (RIDIMOSTRATA per-passato; correzione /11: NON è una restrizione logica di L-U3a.2)
+
+**Perché la restrizione non basta (correzione /11.1).** Da
+(∀f ¬R_f^{U3}) ⇒ v2^{U3} NON segue (∀f ¬R_f^{U7}) ⇒ v2^{U7}: la
+premessa su U₇ è PIÙ DEBOLE (U₇-passati ⊆ U3-passati ⇒ ¬R_f^{U7} è
+implicata da ¬R_f^{U3}, non viceversa). La conclusione è comunque vera
+e va ridimostrata con la stessa contrappositiva per-passato.
+
+**Enunciato.** (∀f ∈ F₈: ¬R_f^{U7}) ⟹ v2^{U7}; congiunto con U₇ (seme
+fuori palla-7 ⊇ palla-2) e col corollario di T20 per restrizione a
+palla-2: nessun passato U₇-valido esiste ⟹ w101 vietata a ogni record
+U₇ ⟹ (L-URHO, ρ = 7, frame WLOG) Muro per w101 con intorno N₇.
+
+**Dimostrazione (contrappositiva per-passato, nuova istanza).** Sia P
+un passato U₇-valido che viola v2^{U7}: nascita pulita (pend₂ = 0;
+posa fuori palla-2 automatica: origine fuori palla-7). Ogni
+U₇-passato soddisfa le ipotesi dei per-passato di L-U3a.1
+(B_∞(z,2) ⊆ B_∞(z,7)): T24 radicato a w101 ⇒ la nascita sta nel
+sottoalbero pulito dell'ultimo nodo di pulizia m\* di P, posa(m\*) in
+palla-2; il tratto pulito raggiunge una posa fuori palla (la nascita);
+T25 + enumerazione dell'oracolo pigro + C1/C3/C4-exit (tutti
+per-passato, validi su P) ⇒ la firma di m\* è una delle 8 residue,
+realizzata da P ⇒ ∃f: R_f^{U7}. ∎
+(Come per L-U3a.2: m\* ≠ nascita perché posa(m\*) ∈ palla-2 e origine
+fuori palla-7 ⇒ il genitore di m\* esiste in P.)
+
+## 8. L-FL7 — Forced-L₇ (stesura formale; promuovibile dopo saldatura del pannello)
+
+**Ipotesi.** P passato U₇-valido che presenta w101 a un record U₇;
+m\* nodo di pulizia di P con posa in palla-2 (Chebyshev ≤ 2).
+
+**Tesi.** Esiste k ∈ [1, 5] tale che il k-esimo prepend da m\* ha
+lettera L; e per il MINIMO tale k (la prima L), la cella letta c_L ha
+Chebyshev ≤ 2 + k ≤ 7 ed è una RILETTURA (esiste una visita precedente
+di c_L in P).
+
+**Dimostrazione.**
+(a) Cinematica (L-0b0): ogni prepend sposta la posa di 1 e la cella
+letta al prepend k È la posa dopo k prepend ⇒ da cheb(posa(m\*)) ≤ 2
+segue cheb(cella letta al prepend k) ≤ 2 + k ≤ 7 per k ≤ 5.
+(b) Non-terminazione: la nascita di P ha posa = origine, fuori da
+B_∞(z_t, 7) (U₇); le celle lette dei primi 5 prepend hanno cheb ≤ 7 ⇒
+nessuna può essere la nascita ⇒ il cammino backward di P sopravvive
+oltre i primi 5 prepend.
+(c) T23 (Bianchi che Curvano): un cammino all'indietro all-R muore
+entro il 5° passo; il cammino backward di P da m\* è valido e
+sopravvive (b) ⇒ i prepend 1..5 non possono essere tutti R ⇒ esiste
+una L a profondità k ≤ 5.
+(d) Prima L = rilettura: sia k\* il minimo; c_L ha cheb ≤ 7 ⇒ dentro
+B_∞(z_t, 7) ⇒ FUORI dal supporto del seme (U₇). La lettera L è una
+lettura NERA; per il mini-lemma bordo-seme (sez. 4, v3) fuori dal seme
+la prima lettura di vita è BIANCA ⇒ la L non può essere una prima
+lettura di vita ⇒ esiste una visita precedente di c_L in P. ∎
+
+**Cosa NON afferma (dal /11):** non che la L sia FORGOTTEN (deciderlo
+è il compito di L-OBL sull'evento), né che la sua Scia contraddica una
+firma (test geometrico 8×5×3 col trasporto del colore, PREREG v12
+sez. 3e). Un ramo KNOWN reale NON falsifica questo lemma: falsifica la
+successiva marcatura L-OBL/deep.
+
+## 9. Cosa resta aperto (nessuna promozione)
 
 - **L-OBL** (il bersaglio operativo post-/8): automa retrospettivo
   SEEK0/SEEK2/RESOLVED-{U,K,F} per evento bersaglio distinto, con OUT

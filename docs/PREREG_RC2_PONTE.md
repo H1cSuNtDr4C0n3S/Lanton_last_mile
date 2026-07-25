@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v11 = P0 saldato + NO-GO del parent-step + Forced-L₇/U₇ preregistrati; v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v12 = geometria 8×5×3 col trasporto del colore + FL7-d riclassificato; v11 in f335cbf, v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -82,10 +82,14 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   Aggiornamento /10: P0 SALDATO (6 R-ONLY, 2 L+R, nessuna L-ONLY) ⇒
   NO-GO del parent-step (macchina L-OBL sul parent-step non si
   costruisce; niente caccia generica a f_R); via nuova = **Forced-L₇**
-  (sez. 3e: U₇ = U_ρ con ρ = 2+5, primo L forzato entro 5 prepend =
-  rilettura; L-OBL applicato a QUELL'evento; gate di utilità
-  rafforzato: la Scia deve eliminare almeno un ramo di F₈); se la
-  geometria 8×5 non pota nulla ⇒ VALIDA-MA-INUTILE e consolidamento.
+  (sez. 3e). Aggiornamento /11: L-URHO e L-U7a.2 in bozza (la
+  direzione utile U₇ RIDIMOSTRATA, non ristretta), L-FL7 in stesura
+  formale; la geometria è **8×5×3 col trasporto esatto del colore**
+  (l'indice j della Scia; la collisione di coordinate da sola non è
+  contraddizione); FL7-d riclassificato (KNOWN reale falsifica la
+  marcatura L-OBL, non Forced-L₇); eseguire SOLO la geometria finita:
+  L-OBL/Γ solo se almeno un ramo è potato deduttivamente; tutti
+  sopravvissuti o unknown ⇒ VALIDA-MA-INUTILE e consolidamento.
   Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
@@ -562,28 +566,61 @@ Si ottiene così, per OGNI firma, un evento L distinto e BOUNDED senza
 dover eliminare il ramo parent R. Resta soltanto da decidere KNOWN
 contro FORGOTTEN mediante L-OBL su questo evento.
 
-**Test minimo falsificabile (prima di costruire Γ):**
-1. generalizzare U3 a U_ρ per ogni raggio fisso;
-2. ripetere la cofinalità B–T per U₇ (L-U3b con N₇ finito);
-3. ripetere la direzione utile L-U3a.2 per U₇ (U₇ ⊆ U3: restrizione);
-4. dimostrare Forced-L₇;
-5. definire e = la prima L fra i primi cinque prepend;
-6. enumerare FINITAMENTE gli 8×5 casi firma/profondità;
-7. applicare L-OBL a questo evento (semantica A/Â invariata);
-8. **gate di utilità RAFFORZATO (preregistrato):** la Scia ottenuta
-   deve ELIMINARE almeno un ramo di F₈ — non soltanto certificare
-   `deep`.
+**GEOMETRIA CORRETTA (verdetto /11): non 8×5 ma 8×5×3, col trasporto
+esatto del colore.** La Scia dell'evento L al tempo t dipende dalla R
+più recente fra t−1, t−2, t−3 — svolte PIÙ ANTICHE dell'evento, non
+necessariamente nel tratto bounded fra la prima L e m\*.
+Condizionatamente a `deep`, i casi sono j ∈ {1, 2, 3}, con celle di
+scia rispettivamente (0,1), (−1,1), (−1,0) NEL FRAME DELL'EVENTO L
+(il caso delle tre L consecutive è incompatibile con `deep`, §86.1).
+Enumerazione corretta: **(f, k, j) ∈ F₈ × {1,…,5} × {1,2,3}, al
+massimo 120 casi**. L'oggetto promettente è
+**(f, k, j, cella-scia TRASPORTATA)**; la domanda falsificabile:
+assumendo che la prima L sia deep, almeno uno dei tre casi di Scia
+produce una cella il cui colore, trasportato esattamente fino a m\*,
+viola i vincoli della firma? Questo test PRECEDE completamente Γ e
+L-OBL.
 
-**Falsificatori immediati:**
-- (FL7-a) un passato U₇-valido senza L nei primi cinque prepend;
-- (FL7-b) prima L fuori dalla palla-7;
-- (FL7-c) prima L fresca nonostante U₇;
-- (FL7-d) ramo KNOWN reale per l'evento distinto.
+**TRASPORTO DEL COLORE (obbligatorio, /11.3 — la sola collisione
+geometrica di coordinate NON è una contraddizione):**
+1. trasformare la cella di scia dal frame heading dell'evento al frame
+   anchor;
+2. seguire il tratto backward R^{k−1} fra l'evento e m\*;
+3. contare le eventuali letture/flip della cella lungo il tratto;
+4. confrontare il colore risultante col vincolo REALMENTE disponibile
+   a m\* (C1/C3/clean/req).
+**Predicato di kill (congelato):** contraddizione deduttiva ⇒ ramo
+potato; compatibile ⇒ sopravvive; informazione insufficiente ⇒
+`unknown`.
 
-**Decisione /10 (congelata):** solo se la geometria finita 8×5 mostra
-una POTATURA REALE tramite Scia si costruisce L-OBL/Γ; se nessun ramo
-viene potato, la via è classificata `VALIDA-MA-INUTILE` e si
-CONSOLIDA.
+**Test minimo falsificabile (aggiornato /11):**
+1. formalizzare U_ρ e la cofinalità [FATTO in bozza: L-URHO,
+   RC2_LEMMI_0B v7 sez. 6];
+2. RIDIMOSTRARE per-passato la direzione utile sotto U₇ — nuova
+   contrappositiva, NON "restrizione" (la premessa U₇ è più debole)
+   [FATTO in bozza: L-U7a.2, sez. 7];
+3. promuovere Forced-L₇ [stesura formale FATTA: L-FL7, sez. 8 — in
+   attesa di saldatura];
+4. per ogni (f, k): costruire il tratto backward R^{k−1}L;
+5. per ogni j = 1, 2, 3: aggiungere il MINIMO prefisso più antico che
+   realizza quel caso di Scia;
+6. trasformare la cella-scia nel frame anchor;
+7. propagarne ESATTAMENTE colore e visite fino a m\*;
+8. applicare il predicato di kill congelato.
+
+**Falsificatori (tassonomia corretta dal /11.4):**
+- falsificatori di FORCED-L₇ (o delle sue ipotesi):
+  (FL7-a) un passato U₇-valido senza L nei primi cinque prepend;
+  (FL7-b) prima L fuori dalla palla-7;
+  (FL7-c) prima L fresca nonostante U₇;
+- **ramo KNOWN reale** per l'evento distinto = falsificatore della
+  SUCCESSIVA marcatura L-OBL/deep, NON di Forced-L₇;
+- K soltanto astratto = `unknown` (mai falsificatore).
+
+**Decisione /10–/11 (congelata):** eseguire SOLTANTO questa geometria
+finita; costruire L-OBL/Γ solo se almeno un ramo viene potato
+DEDUTTIVAMENTE; se tutti i casi sopravvivono o restano `unknown`, la
+via è classificata `VALIDA-MA-INUTILE` e si CONSOLIDA.
 
 ## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone Forced-L₇ + L-OBL sull'evento di sez. 3e, con L-REV/Q_c come strato di soundness, sez. 3c])
 
