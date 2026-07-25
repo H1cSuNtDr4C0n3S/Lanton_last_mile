@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v7 = L-REV preregistrato + 0b.U3-a rinominata direzione-utile; v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v8 = L-REV integrato dal verdetto /7: concretizzazione Γ, alfabeto locale, Pre, marginale, anchor-fixed, collasso OUT; v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -64,15 +64,17 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   può essere arbitrariamente antica; "assenza di riletture" può non
   essere decidibile da alcun suffisso di lunghezza fissa). d_0b NON va
   MAI scelto da un massimo censito (trappola qq);
-- **ordine dei lavori (aggiornato 2026-07-25/6):** (1) 0b.U3-a
-  (direzione utile relativizzata) / 0b.U3-b: bozze L-U3a.1/2 PROMOSSE e
-  L-U3b CHIUSA sotto il fatto B–T (docs/RC2_LEMMI_0B.md v2); (2) L-MON
-  PROMOSSO (invariante forward); mappa 0b.0: bozza L-0b0 dimostrata, in
-  attesa di pannello; (3) **L-REV** (sezione 3c: powerset inverso,
-  C_RC2 finito, collasso esterno sound) — il lemma decisivo mancante,
-  da preregistrare [FATTO] e DIMOSTRARE prima di ogni macchina; (4) Via
-  A OPZIONALE e diagnostica; (5) costruzione/certificazione della Via B
-  SOLO dopo L-REV; (6) 0b.3 solo dopo. Fase 1 e §109 restano chiusi;
+- **ordine dei lavori (aggiornato 2026-07-25/7):** (1) 0b.U3-a
+  (direzione utile relativizzata) / 0b.U3-b: L-U3a.1/2 PROMOSSE e
+  L-U3b CHIUSA sotto il fatto B–T; (2) L-MON PROMOSSO; **L-0b0
+  cinematica/lettere PROMOSSO [T]** (/7), metà-colori con errata
+  bordo-seme (RC2_LEMMI_0B v3); (3) **L-REV** (sezione 3c, integrata
+  /7: concretizzazione Γ/τ, alfabeto locale, Pre, prodotto marginale,
+  C_RC2 anchor-fixed) — PRIMA MOSSA: il collasso OUT unico su
+  K = ∪ B_∞(c,2); portali solo se il gate di utilità fallisce sempre;
+  (4) Via A OPZIONALE e diagnostica; (5) costruzione/certificazione
+  della Via B SOLO dopo L-REV; (6) 0b.3 solo dopo. Fase 1 e §109
+  restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -354,30 +356,66 @@ con collasso esterno"):
 - **Marcatura deep:** ammessa SOLO quando Q_c ⊆ {F} (equivalentemente
   Q_c = {F}, essendo Q_c ≠ ∅). Una marcatura deep con U o K ancora
   compatibili UCCIDE RC2.
-- **Soundness (da dimostrare per induzione):** ogni storia reale resta
-  CONTENUTA nello stato-insieme backward a ogni profondità. UN SOLO
-  predecessore reale escluso uccide la soundness.
-- **Finitezza geometrica (da dimostrare, non presunta):** tre stati per
-  cella NON bastano da soli — va congelato l'insieme FINITO C_RC2 delle
-  celle sorvegliate (con la convenzione di frame) e va dimostrata la
-  chiusura della rappresentazione sotto traslazione, rotazione, uscita
-  e rientro; le escursioni lontane si collassano SOLO con una
-  sovra-approssimazione esplicitamente sound (portali di rientro
-  finiti). Fuori dall'unione degli intorni finiti delle celle
-  sorvegliate: KNOWN non può sopravvivere; UNSEEN e FORGOTTEN restano
-  distinti.
-- **Test minimo falsificabile di L-REV (prima di qualunque campagna):**
-  1. congelare C_RC2 e la convenzione di frame;
-  2. derivare a mano la relazione inversa completa delle righe del
-     monitor;
-  3. enumerare esaustivamente ogni combinazione stato/evento;
-  4. provare per induzione che ogni storia reale resta contenuta nello
-     stato-insieme backward;
-  5. **esca obbligatoria:** fondere UNSEEN e FORGOTTEN deve produrre
-     almeno un falso `deep` (se non lo produce, il checker è vacuo);
-  6. **gate di utilità:** almeno un parent-step o punto d'escursione
-     rilevante deve raggiungere Q_c = {F}; altrimenti verdetto
-     VALIDO-MA-INUTILE.
+- **CONCRETIZZAZIONE (il predicato matematico della soundness,
+  verdetto /7.2 — senza di questo l'induzione di contenimento non ha
+  tesi formale):** Γ(n) = insieme dei passati U3 reali COMPATIBILI col
+  nodo backward n. Invariante da dimostrare:
+  **Q_c(n) ⊇ { S^P_{τ(n)}(c) : P ∈ Γ(n) }** per ogni c ∈ C_RC2, dove
+  τ(n) = istante forward associato a n dalla mappa L-0b0 (convenzione
+  0-based definitiva; raccordo t = s − 1). Da esplicitare PRIMA della
+  prova: caso base Q_c(n₀); definizione di τ(n); trasferimento
+  padre–figlio; vincoli ledger/U3 applicati nel trasferimento;
+  dimostrazione che NESSUN elemento concreto viene perso.
+- **ALFABETO LOCALE degli eventi (congelato, /7.3):** per ogni cella c,
+  a_c = (v_c, r_c): v_c = 1 se il passo legge c; r_c = 1 se dopo la
+  mossa la distanza da c è esattamente 2. Casi cinematicamente
+  raggiungibili: **(1,0), (0,1), (0,0)** — (1,1) impossibile (la cella
+  appena letta dista 1 dopo la mossa unitaria). Con la tavola forward
+  δ_c di L-MON, la relazione backward è ESATTAMENTE
+  **Pre_{a_c}(Q) = { s ∈ {U,K,F} : δ_c(s, a_c) ∈ Q }**. L'evento NON
+  contiene deep, known né informazione equivalente al verdetto
+  (anti-leakage, coerente col /5).
+- **Natura MARGINALE del prodotto (/7.5, dichiarata):**
+  ∏_{c∈C_RC2} Q_c(n) è una sovra-approssimazione MARGINALE: dimentica
+  le correlazioni fra celle e NON è l'insieme esatto delle
+  configurazioni congiunte. Sound per risultati negativi e per la
+  marcatura deep su singola cella, PURCHÉ nessun margine concreto venga
+  escluso (parte dell'invariante di concretizzazione).
+- **Soundness (da dimostrare per induzione sull'invariante di
+  concretizzazione):** ogni storia reale resta CONTENUTA nello
+  stato-insieme backward a ogni profondità. UN SOLO predecessore reale
+  escluso uccide la soundness.
+- **Finitezza: frame ANCHOR FISSO (/7.4 — disambiguazione della
+  clausola v7, che chiedeva una "chiusura sotto traslazione"
+  matematicamente impossibile per un insieme finito):** C_RC2 =
+  insieme FINITO di celle ASSOLUTE nel frame anchor; NESSUNA chiusura
+  per traslazione richiesta. (Lo schema relativo quozientato resta
+  un'alternativa futura, NON adottata.)
+- **COLLASSO OUT UNICO (prima mossa, ipotesi /7):** congelato
+  **K = ∪_{c∈C_RC2} B_∞(c, 2)**: ogni escursione interamente fuori da
+  K ha effetto monitor U↦U e F↦F; uno stato KNOWN che esce da K deve
+  attraversare l'anello 2 della propria cella ⇒ KNOWN↦F. Si parte
+  dunque con UN SOLO macro-stato OUT che ammette
+  sovra-approssimativamente ogni rientro di frontiera: certamente
+  sound. Il gate di utilità decide se è troppo grossolano: SOLO se
+  produce sempre Q_c ≠ {F} si raffinano i portali.
+- **Test minimo falsificabile di L-REV (aggiornato /7, OTTO punti,
+  prima del tool principale):**
+  1. errata del mini-lemma dei colori col bordo-seme
+     [FATTA: RC2_LEMMI_0B v3];
+  2. indici DEFINITIVI: 0-based (come codice e L-MON; L-0b0 raccordato
+     con t = s − 1) [FISSATO];
+  3. definire Γ(n), Q_c(n), caso base e istante τ(n);
+  4. enumerare i 3×3 casi stato/evento raggiungibili e verificare
+     esattamente Pre;
+  5. provare l'inclusione concreta per un SINGOLO passo;
+  6. estenderla per induzione a ogni profondità;
+  7. **esca U/F sul monitor astratto COLOR-FREE** (non solo sui passati
+     U3, dove una L fresca può già essere esclusa): fondere UNSEEN e
+     FORGOTTEN deve produrre almeno un falso `deep`, altrimenti il
+     checker è vacuo;
+  8. gate di utilità: Q_c = {F} su almeno un parent-step o punto
+     d'escursione RC2 rilevante; altrimenti VALIDO-MA-INUTILE.
 - Requisiti operativi: controlli espliciti (niente assert nudi),
   sys.flags.optimize == 0 registrato, tripwire CP, esca sul checker.
 

@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v2 = promozioni del pannello + correzioni notazionali + L-0b0; v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v3 = L-0b0 cinematica/lettere PROMOSSO + errata bordo-seme del mini-lemma; v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -8,8 +8,17 @@
 - **L-U3a.3: statuto precisato** — non dimostra che la bicondizionale
   X6 sia falsa in U3; dimostra che la PROVA precedente della direzione
   R_f ⇒ ¬v2 non si relativizza (costruisce un altro passato, non-U3).
-- **NUOVO: L-0b0** (mappa temporale backward–forward, punto 4 della
-  decisione operativa /6) — bozza dimostrata, in attesa di pannello.
+- **L-0b0 cinematica/lettere: PROMOSSO [T] dal verdetto /7** (inversione
+  esatta di posa e heading; uguaglianza della cella letta;
+  corrispondenza delle lettere; j(k) senza seconda induzione;
+  C4-sym-equivarianza; non-morte geometrica distinta dai colori). La
+  metà-colori: alternanza sulle riletture [T] via req + CONDIZIONE AL
+  BORDO DEL SEME (errata /7, sotto) per la corrispondenza completa sui
+  passati reali.
+- **Convenzione DEFINITIVA di indicizzazione (verdetto /7, punto 2):
+  0-based** ovunque da qui in avanti (come il codice e L-MON); L-0b0 è
+  enunciato in 1-based con raccordo esplicito t = s − 1 — ogni uso
+  futuro (L-REV, 0b.1, tool) traduce UNA volta qui.
 Il replay resta una verifica dell'implementazione, non parte delle
 prove. NON è dimostrato: RC2; la finitezza/soundness della macchina
 backward (L-REV, preregistrato in PREREG_RC2_PONTE v7); alcuna
@@ -263,24 +272,29 @@ forward ri-ancorata, non un processamento all'indietro) è esattamente
 questa istanza del lemma; k = m − 101 dà l'enunciato con
 j(k) = N − k + 1.
 
-**Mini-lemma dei colori (deduttivo; scioglie la metà-colori di (iv) —
-aggiunto su indicazione della lente).** Per ogni cella: la prima
-lettura di vita vede il colore iniziale (seme; bianco fuori supporto);
-ogni rilettura vede il FLIP della lettura precedente (la cella si
-inverte dopo la lettura e non cambia altrimenti, CLAUDE.md §2) ⇒ i
-colori letti forward di una cella sono l'alternanza a partire dal
-colore iniziale. Il ledger req implementa esattamente questa
-alternanza: req(c) = flip(colore letto), aggiornato a ogni visita
-(§92a) ⇒ una parola backward è req-coerente ⟺ i colori letti forward
-rispettano alternanza + colori di prima-vita. ∎
-**Statuto per strato di 0b.0 (dichiarato):** (i)/(ii)/(iii) e la
-metà-lettere di (iv): [T] con L-0b0; metà-colori di (iv): [T] col
-mini-lemma sopra; i gate G0 §92a (1500×2, campionario) e §93a restano
+**Mini-lemma dei colori (v3 = ERRATA del verdetto /7: separa
+ALTERNANZA e BORDO-SEME — la v2 li sovrapponeva).**
+(a) ALTERNANZA (deduttiva, certificata da req): per ogni cella, ogni
+RILETTURA vede il FLIP della lettura precedente (la cella si inverte
+dopo la lettura e non cambia altrimenti, CLAUDE.md §2); il ledger req
+implementa esattamente questo (req(c) = flip(colore letto), aggiornato
+a ogni visita, §92a) ⇒ **req-coerenza ⟺ alternanza corretta SULLE
+RILETTURE**. ∎
+(b) BORDO-SEME (condizione AGGIUNTIVA, NON certificata da req): nel
+codice una cella FREE accetta entrambe le letture — la parola
+ricostruisce un SEME INDOTTO, non verifica un seme fissato. Per un
+passato completo sul seme S va aggiunta la condizione al bordo:
+firstread(c) = NERO se c ∈ S, BIANCO se c ∉ S. Sotto U3, per le celle
+sorvegliate (entro B_∞(z_t, 3), dove il seme è assente): prima lettura
+BIANCA.
+**Statuto per strato di 0b.0 (aggiornato /7):** (i)/(ii)/(iii) e la
+metà-lettere di (iv): **[T] PROMOSSI** (verdetto /7); metà-colori di
+(iv): [T] per l'alternanza sulle riletture + condizione al bordo del
+seme DICHIARATA (la corrispondenza completa sui passati reali la
+richiede); i gate G0 §92a (1500×2, campionario) e §93a restano
 verifiche [C] dell'IMPLEMENTAZIONE, come il replay di terra di 0b.0
-(10 controesempi §94 + ≥100 estensioni). Nota di raccordo indici:
-L-MON è 0-indicizzato (come il codice), L-0b0 è 1-indicizzato
-(t = s − 1); una convenzione unica va fissata PRIMA di scrivere
-L-REV/0b.1 (punto classico dell'off-by-one).
+(10 controesempi §94 + ≥100 estensioni). Indici: convenzione DEFINITIVA
+0-based (statuto in testa); L-0b0 resta 1-based col raccordo t = s − 1.
 
 ## 5. Cosa resta aperto (nessuna promozione)
 

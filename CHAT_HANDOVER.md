@@ -2175,8 +2175,25 @@ Priorita' (aggiornate a §108b):
    gate di utilita' Q_c={F} su un punto rilevante). Lenti pre-push
    round 2: 0 ROSSI, 4 GIALLI riparati (statuto per-strato di 0b.0 con
    mini-lemma dei colori deduttivo; non-morte della macchina con
-   guardie da record stretto; residui stale L-U3b/L-U3a.3). Ordine:
-   L-REV -> Via B -> 0b.3. Fase 1 e §109 chiusi;
+   guardie da record stretto; residui stale L-U3b/L-U3a.3).
+   **Verdetto /7 (applicato: LEMMI v3 + PREREG v8):** L-0b0
+   cinematica/lettere PROMOSSO [T]; mini-lemma colori ERRATO e separato
+   (req certifica SOLO l'alternanza sulle riletture; bordo-seme =
+   condizione aggiuntiva firstread(c) = nero sse c in S — sotto U3
+   celle sorvegliate: prima lettura bianca; FREE = seme indotto, non
+   verificato); indici DEFINITIVI 0-based (L-0b0 raccordato t = s-1);
+   L-REV integrato: concretizzazione Gamma(n)/tau(n) con invariante
+   Q_c(n) contiene {S^P_tau(c): P in Gamma(n)} e caso base/
+   trasferimento/nessuna-perdita da esplicitare, alfabeto locale
+   a_c = (v_c, r_c) con soli casi (1,0)/(0,1)/(0,0) e Pre_a(Q) =
+   preimmagine esatta di delta_c, prodotto dei Q_c dichiarato
+   sovra-approssimazione MARGINALE, C_RC2 = celle ASSOLUTE anchor-fixed
+   (niente chiusura per traslazione), PRIMA MOSSA = collasso OUT unico
+   su K = unione B_inf(c,2) (fuori K: U->U, F->F, KNOWN->F
+   attraversando l'anello; portali solo se il gate di utilita' fallisce
+   sempre); test minimo a 8 punti (esca U/F sul monitor astratto
+   COLOR-FREE, non solo su passati U3). Ordine: L-REV (collasso OUT) ->
+   Via B -> 0b.3. Fase 1 e §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
