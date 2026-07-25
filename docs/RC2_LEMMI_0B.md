@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v7 = L-URHO + L-U7a.2 ridimostrata + L-FL7 stesura formale; v6 in f335cbf, v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v8 = verdetto /12: L-URHO/L-U7a.2/L-FL7 PROMOSSI + L-SCIA-J bozza + errata bersaglio sez. 9; v7 in 52b09f6, v6 in f335cbf, v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -39,6 +39,24 @@ fatto B–T); **L-U7a.2** (direzione utile sotto U₇ — RIDIMOSTRATA come
 nuova contrappositiva per-passato: NON segue per restrizione logica da
 L-U3a.2, perché la premessa ∀f ¬R_f^{U7} è PIÙ DEBOLE di ∀f ¬R_f^{U3});
 **L-FL7** (Forced-L₇, stesura formale — promuovibile dopo saldatura).
+Verdetto /12 (2026-07-25): **L-URHO, L-U7a.2 e L-FL7 PROMOSSI** con
+gli statuti dichiarati (L-URHO: sotto il fatto B–T, come L-U3b;
+L-U7a.2: [T] per-passato, con la coda "Muro con intorno N₇"
+condizionale a B–T via L-URHO; L-FL7: [T] nello statuto dichiarato,
+clausola "cosa NON afferma" invariata). NUOVO: **L-SCIA-J** (sez. 8b,
+bozza formale in attesa di pannello) — il prefisso minimo per j
+determina cella e colore della Scia indipendentemente dai bit
+anteriori; fase temporale dichiarata (cella NERA a t⁻). CORREZIONE
+ESSENZIALE dei quantificatori (recepita in PREREG_RC2_PONTE v13):
+una contraddizione della Scia è CONDIZIONATA a deep — dimostra
+deep(e) ⇒ ⊥ (ogni realizzazione ha l'evento KNOWN), NON
+l'impossibilità della realizzazione: lo stato si chiama COND-KILL,
+non "potato", e l'eliminazione del ramo esige la futura congiunzione
+con L-OBL ⇒ deep; inoltre R_f^{U7} = ∪_{k,j} R_{f,k,j}^{U7} —
+uccidere un singolo (f,k,j) NON elimina la firma: il gate per
+costruire L-OBL è ∃f ∀(k,j) compatibili: COND-KILL (firma
+ACTIONABLE). Errata sez. 9: bersaglio vigente = la prima L di
+Forced-L₇ (il parent-step è superato dal no-go P0 del /10).
 
 ## 1. Definizioni (simboli distinti, decisione operativa punto 1)
 
@@ -418,7 +436,7 @@ elencati — non afferma la REALIZZABILITÀ di alcun ramo (trappole z/ff:
 compatibilità ≠ realizzazione); la parte "firme interne ⇒ lettera
 forzata da req" è dichiarata DA DERIVARE meccanicamente.
 
-## 6. L-URHO — cofinalità dei record U_ρ per ogni raggio fisso (stessa prova di L-U3b, parametrizzata; sotto il fatto B–T)
+## 6. L-URHO — cofinalità dei record U_ρ per ogni raggio fisso (PROMOSSO dal verdetto /12; stessa prova di L-U3b, parametrizzata; sotto il fatto B–T)
 
 **Definizioni.** Per ρ ≥ 0 fisso: N_ρ = intorno-ρ (Chebyshev) di
 supp(seme) ∪ {origine} (FINITO: il seme è finito); record U_ρ = record
@@ -436,7 +454,7 @@ stretti nel frame WLOG; (iii) y_t strettamente decrescente ⇒ solo
 finiti record dentro il compatto N_ρ; (iv) bersaglio del Muro con
 intorno N_ρ. ∎ (SOTTO IL FATTO B–T, come L-U3b.)
 
-## 7. L-U7a.2 — direzione utile sotto U₇ (RIDIMOSTRATA per-passato; correzione /11: NON è una restrizione logica di L-U3a.2)
+## 7. L-U7a.2 — direzione utile sotto U₇ (PROMOSSO [T] dal verdetto /12 — per-passato; la coda "Muro con intorno N₇" resta condizionale al fatto B–T via L-URHO; correzione /11: NON è una restrizione logica di L-U3a.2)
 
 **Perché la restrizione non basta (correzione /11.1).** Da
 (∀f ¬R_f^{U3}) ⇒ v2^{U3} NON segue (∀f ¬R_f^{U7}) ⇒ v2^{U7}: la
@@ -462,7 +480,7 @@ realizzata da P ⇒ ∃f: R_f^{U7}. ∎
 (Come per L-U3a.2: m\* ≠ nascita perché posa(m\*) ∈ palla-2 e origine
 fuori palla-7 ⇒ il genitore di m\* esiste in P.)
 
-## 8. L-FL7 — Forced-L₇ (stesura formale; promuovibile dopo saldatura del pannello)
+## 8. L-FL7 — Forced-L₇ (PROMOSSO [T] dal verdetto /12, nello statuto dichiarato)
 
 **Ipotesi.** P passato U₇-valido che presenta w101 a un record U₇;
 m\* nodo di pulizia di P con posa in palla-2 (Chebyshev ≤ 2).
@@ -492,19 +510,101 @@ lettura di vita ⇒ esiste una visita precedente di c_L in P. ∎
 
 **Cosa NON afferma (dal /11):** non che la L sia FORGOTTEN (deciderlo
 è il compito di L-OBL sull'evento), né che la sua Scia contraddica una
-firma (test geometrico 8×5×3 col trasporto del colore, PREREG v12
+firma (test geometrico 8×5×3 col trasporto del colore, PREREG v13
 sez. 3e). Un ramo KNOWN reale NON falsifica questo lemma: falsifica la
-successiva marcatura L-OBL/deep.
+successiva marcatura L-OBL/deep. Precisazione /12: quando quel test
+trova una contraddizione, produce COND-KILL (deep ⇒ ⊥: ogni
+realizzazione ha l'evento KNOWN), NON una potatura del ramo —
+l'eliminazione esige la congiunzione con una futura prova
+L-OBL ⇒ deep.
+
+## 8b. L-SCIA-J — il prefisso minimo determina la Scia (bozza formale, punto 5 del test /12; in attesa di pannello)
+
+**Frame dell'evento (definizione).** Sia e l'evento L al passo forward
+t: lettura NERA della cella p_t con heading di lettura h_t
+(pre-svolta, = heading d'arrivo). Il frame dell'evento è l'unica
+rotazione-C4 + traslazione che porta p_t in (0,0) e h_t a 0. Tabella
+D del camminatore (§92a), calibrata UNICAMENTE dagli anchor a verbale
+(impl. B di `alpha1/prereg_fase0_geometry.py`, unicità assertata):
+**D = {0:(0,−1), 1:(1,0), 2:(0,1), 3:(−1,0)}**. Lo stato all'evento
+nel frame anchor è (p_t, h_t), dato da L-0b0 (lo stato backward dopo
+il prepend dell'evento) ⇒ la trasformazione evento↔anchor è esplicita
+nei due versi (passo 1 del trasporto, PREREG v13 sez. 3e).
+
+**Definizione (indice j).** j = min{ i ∈ {1,2,3} : ℓ_{t−i} = R }
+(definito ⟺ (ℓ_{t−1}, ℓ_{t−2}, ℓ_{t−3}) ≠ LLL). Prefisso minimo del
+caso j = le svolte ℓ_{t−j}, …, ℓ_{t−1} (una R seguita da j−1 L): in
+ORDINE DI PREPEND (continuazione del tratto R^{k−1}L della PREREG)
+j=1: `R`; j=2: `LR`; j=3: `LLR`; in ordine forward antico→recente:
+R·L^{j−1}.
+
+**Enunciato.**
+(a) (posizioni) p_{t−1} = (0,1) senza usare alcuna svolta; se
+ℓ_{t−1} = L: p_{t−2} = (−1,1); se inoltre ℓ_{t−2} = L:
+p_{t−3} = (−1,0) — la posizione p_{t−i} è funzione delle sole svolte
+ℓ_{t−1}, …, ℓ_{t−i+1}.
+(b) (Scia) la cella di scia c_j = p_{t−j} (= (0,1)/(−1,1)/(−1,0) per
+j = 1/2/3, la terna del verdetto /11) è NERA immediatamente PRIMA
+della lettura bersaglio (a t⁻); identità del caso, posizione e colore
+sono determinati dal SOLO prefisso minimo — i bit più antichi di t−j
+sono irrilevanti.
+(c) (LLL, coerente con §86.1) se ℓ_{t−1} = ℓ_{t−2} = ℓ_{t−3} = L
+allora p_{t−4} = (0,0): la cella dell'evento è stata visitata a t−4 e
+ai passi t−3, t−2, t−1 l'automa ne dista Chebyshev 1 ⇒ l'anello-2 non
+è mai attraversato dopo quella visita ⇒ (tavola di L-MON) la cella è
+KNOWN a t ⇒ la lettura dell'evento è in-window, NON deep₁.
+
+**Dimostrazione.** Relazioni forward (convenzioni di L-0b0):
+p_s = p_{s−1} + D[h_s]; h_s = h_{s−1} + 1 se ℓ_{s−1} = R,
+h_{s−1} − 1 se ℓ_{s−1} = L (mod 4). All'indietro dall'evento, con
+(p_t, h_t) = ((0,0), 0) nel frame:
+- p_{t−1} = p_t − D[h_t] = −D[0] = (0,1) (nessuna svolta usata);
+- se ℓ_{t−1} = L: h_{t−1} = h_t + 1 = 1 ⇒ p_{t−2} = (0,1) − D[1] =
+  (−1,1);
+- se inoltre ℓ_{t−2} = L: h_{t−2} = 2 ⇒ p_{t−3} = (−1,1) − D[2] =
+  (−1,0);
+- se inoltre ℓ_{t−3} = L: h_{t−3} = 3 ⇒ p_{t−4} = (−1,0) − D[3] =
+  (0,0).
+È la mappa dei prepend di L-0b0 applicata 3–4 volte: prova (a) e la
+prima parte di (c). ∎(a)
+(b): al passo t−j la lettera è R = lettura BIANCA (convenzione bit
+§95b: 1 = R = bianca) ⇒ il flip lascia c_j NERA. Le letture
+strettamente fra t−j e t sono ai passi t−j+1, …, t−1, sulle celle
+p_{t−j+1}, …, p_{t−1}: per (a) tutte distinte da c_j (verifica
+finita — j=2: (−1,1) ∉ {(0,1)}; j=3: (−1,0) ∉ {(−1,1), (0,1)});
+anche la lettura dell'evento è p_t = (0,0) ≠ c_j, quindi c_j resta
+NERA sia a t⁻ sia dopo il passo L (rilevante per l'equivalenza delle
+due convenzioni di trasporto, PREREG v13 sez. 3e punto 0). Identità
+del caso (definizione di j), posizione (a) e colore usano SOLO
+ℓ_{t−j}, …, ℓ_{t−1}. ∎(b)
+(c): cheb da (0,0) di p_{t−3} = (−1,0), p_{t−2} = (−1,1),
+p_{t−1} = (0,1) è 1 in tutti e tre i passi ⇒ dopo la visita di t−4 la
+posizione non raggiunge mai distanza 2 dalla cella (0,0) ⇒ per la
+tavola di L-MON lo stato resta KNOWN fino a t ⇒ verdetto in-window
+alla lettura t. ∎(c)
+
+**Cosa NON afferma (statuto /12).** Il prefisso minimo determina la
+Scia; NON certifica la realizzabilità globale del caso (f,k,j): i bit
+anteriori e i vincoli di validità possono restringere quali (k,j)
+siano realizzabili — il risultato resta LOCALE e, nell'uso del test
+8×5×3, CONDIZIONALE a deep (per l'esclusione di LLL in (c) e per la
+semantica COND-KILL, PREREG v13 sez. 3e). Uso di (c) nella matrice:
+LLL è COND-KILL uniforme per ogni (f,k), non un caso mancante — la
+decomposizione {j=1,2,3, LLL} dei rami è esaustiva.
 
 ## 9. Cosa resta aperto (nessuna promozione)
 
 - **L-OBL** (il bersaglio operativo post-/8): automa retrospettivo
   SEEK0/SEEK2/RESOLVED-{U,K,F} per evento bersaglio distinto, con OUT
   usato per certificare SEEK2; preregistrato in PREREG_RC2_PONTE v9
-  sez. 3d; primo bersaglio = un parent-step delle due firme a genitore
-  esterno. Q_c/Γ (L-REV, sez. 3c) resta la sovra-approssimazione
-  GENERALE di soundness — il suo gate deep allo stato mobile è ucciso
-  da L-RESET, non la sua soundness.
+  sez. 3d. **Bersaglio VIGENTE (errata /12):** la prima L di
+  Forced-L₇ (L-FL7, sez. 8; PREREG v13 sez. 3e) — il "primo bersaglio
+  = parent-step" delle versioni precedenti è SUPERATO dal no-go P0
+  del /10; la macchina si costruisce SOLO per una firma ACTIONABLE
+  della matrice 8×5×3. Q_c/Γ (L-REV, sez. 3c) resta la
+  sovra-approssimazione GENERALE di soundness — il suo gate deep allo
+  stato mobile è ucciso da L-RESET, non la sua soundness.
+- **L-SCIA-J** (sez. 8b): bozza formale in attesa di pannello.
 - La certificazione della VIA B come implementazione (checker con
   controlli espliciti, esca, optimize==0, replay) — L-MON + L-REV sono
   la base deduttiva, non il sostituto.

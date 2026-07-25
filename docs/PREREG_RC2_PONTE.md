@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v12 = geometria 8×5×3 col trasporto del colore + FL7-d riclassificato; v11 in f335cbf, v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v13 = verdetto /12: tassonomia COND-KILL + matrice 8×15 + gate per-firma ACTIONABLE + fase temporale del trasporto + prefisso minimo L-SCIA-J; v12 in 52b09f6, v11 in f335cbf, v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -90,7 +90,13 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   marcatura L-OBL, non Forced-L₇); eseguire SOLO la geometria finita:
   L-OBL/Γ solo se almeno un ramo è potato deduttivamente; tutti
   sopravvissuti o unknown ⇒ VALIDA-MA-INUTILE e consolidamento.
-  Fase 1 e §109 restano chiusi;
+  Aggiornamento /12: L-URHO, L-U7a.2 e L-FL7 PROMOSSI (LEMMI v8);
+  "ramo potato" SOSTITUITO dalla tassonomia **COND-KILL** (la
+  contraddizione è condizionata a deep: dimostra deep(e) ⇒ ⊥, ogni
+  realizzazione ha l'evento KNOWN; l'eliminazione del ramo esige la
+  futura congiunzione L-OBL ⇒ deep) e il gate diventa PER-FIRMA
+  (**ACTIONABLE**, sez. 3e): uccidere un singolo (f,k,j) NON elimina
+  la firma. Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -575,38 +581,94 @@ scia rispettivamente (0,1), (−1,1), (−1,0) NEL FRAME DELL'EVENTO L
 (il caso delle tre L consecutive è incompatibile con `deep`, §86.1).
 Enumerazione corretta: **(f, k, j) ∈ F₈ × {1,…,5} × {1,2,3}, al
 massimo 120 casi**. L'oggetto promettente è
-**(f, k, j, cella-scia TRASPORTATA)**; la domanda falsificabile:
-assumendo che la prima L sia deep, almeno uno dei tre casi di Scia
-produce una cella il cui colore, trasportato esattamente fino a m\*,
-viola i vincoli della firma? Questo test PRECEDE completamente Γ e
-L-OBL.
+**(f, k, j, cella-scia TRASPORTATA)**; la domanda falsificabile
+(riformulata dal /12 col gate per-firma): assumendo che la prima L
+sia deep, esiste una FIRMA i cui casi (k,j) non-INFEASIBLE producono
+TUTTI una contraddizione deduttiva del colore trasportato a m\*?
+Questo test PRECEDE completamente Γ e L-OBL. Il prefisso minimo che
+realizza il caso j (in ORDINE DI PREPEND, continuando il tratto
+R^{k−1}L: j=1 `R`, j=2 `LR`, j=3 `LLR`; in ordine forward
+antico→recente: R·L^{j−1}) determina cella e colore della Scia
+indipendentemente dai bit anteriori — **L-SCIA-J** (LEMMI v8
+sez. 8b, bozza in attesa di pannello; frame dell'evento: p_t in
+(0,0), h_t = 0). Il prefisso minimo NON certifica la realizzabilità
+globale del caso: il risultato resta locale/condizionale.
 
 **TRASPORTO DEL COLORE (obbligatorio, /11.3 — la sola collisione
 geometrica di coordinate NON è una contraddizione):**
-1. trasformare la cella di scia dal frame heading dell'evento al frame
-   anchor;
-2. seguire il tratto backward R^{k−1} fra l'evento e m\*;
-3. contare le eventuali letture/flip della cella lungo il tratto;
+0. **FASE TEMPORALE (dichiarata, /12):** la cella di scia è NERA
+   immediatamente PRIMA della lettura bersaglio t (L-SCIA-J(b)).
+   Convenzione CANONICA: partire dallo stato a t⁻ e processare
+   l'INTERA sequenza forward L·R^{k−1} fino a m\* (equivalente
+   dichiarato: applicare separatamente il passo L e partire dallo
+   stato post-evento, processando poi R^{k−1}). Scrivere soltanto
+   "trasporto lungo R^{k−1}" è VIETATO: lascia un off-by-one
+   possibile anche con cella-scia distinta dal centro;
+1. trasformare la cella di scia dal frame dell'evento (p_t in (0,0),
+   h_t = 0; L-SCIA-J) al frame anchor;
+2. processare la sequenza forward canonica del punto 0 fra t⁻ e m\*;
+3. contare le eventuali letture/flip della cella lungo il tratto
+   (una lettura R della cella mentre è nera = contraddizione
+   deduttiva; ogni lettura ne impone il colore e la flippa);
 4. confrontare il colore risultante col vincolo REALMENTE disponibile
    a m\* (C1/C3/clean/req).
-**Predicato di kill (congelato):** contraddizione deduttiva ⇒ ramo
-potato; compatibile ⇒ sopravvive; informazione insufficiente ⇒
-`unknown`.
 
-**Test minimo falsificabile (aggiornato /11):**
-1. formalizzare U_ρ e la cofinalità [FATTO in bozza: L-URHO,
-   RC2_LEMMI_0B v7 sez. 6];
-2. RIDIMOSTRARE per-passato la direzione utile sotto U₇ — nuova
-   contrappositiva, NON "restrizione" (la premessa U₇ è più debole)
-   [FATTO in bozza: L-U7a.2, sez. 7];
-3. promuovere Forced-L₇ [stesura formale FATTA: L-FL7, sez. 8 — in
-   attesa di saldatura];
-4. per ogni (f, k): costruire il tratto backward R^{k−1}L;
-5. per ogni j = 1, 2, 3: aggiungere il MINIMO prefisso più antico che
-   realizza quel caso di Scia;
-6. trasformare la cella-scia nel frame anchor;
-7. propagarne ESATTAMENTE colore e visite fino a m\*;
-8. applicare il predicato di kill congelato.
+**TASSONOMIA DEGLI ESITI (congelata dal /12 — sostituisce il
+"predicato di kill" del /11; "potato" NON si usa più).** La geometria
+assume CONDIZIONALMENTE che la prima L sia deep: una contraddizione
+dimostra deep(e) ⇒ ⊥, cioè ogni eventuale realizzazione del caso ha
+l'evento KNOWN — NON dimostra che la realizzazione sia impossibile.
+Per la contraddizione completa serve successivamente L-OBL ⇒ deep(e):
+SOLO la congiunzione elimina il ramo. Stati per caso (f,k,j),
+mutuamente esclusivi:
+- `INFEASIBLE`: combinazione localmente impossibile sotto i soli
+  vincoli certificati;
+- `COND-KILL`: deep ⇒ contraddizione deduttiva;
+- `LOCAL-SURVIVE`: esiste un MODELLO LOCALE ESPLICITO compatibile
+  (assegnazione che soddisfa i vincoli disponibili, come i modelli
+  del Gate P0 — "non escluso" da solo è epistemico e NON basta);
+- `UNKNOWN`: informazione insufficiente.
+Il quarto caso di Scia (LLL) è COND-KILL uniforme per ogni (f,k) via
+§86.1/L-SCIA-J(c) (LLL ⇒ evento KNOWN ⇒ ¬deep): la decomposizione in
+{j=1,2,3, LLL} è esaustiva e la matrice copre tutti i rami.
+**CLASSIFICAZIONE PER FIRMA (output = matrice 8 righe × 15 colonne
+(k,j)):**
+- `ACTIONABLE`: ≥ 1 caso non-INFEASIBLE e TUTTI i casi non-INFEASIBLE
+  sono `COND-KILL`;
+- `SURVIVES`: ≥ 1 `LOCAL-SURVIVE`;
+- `UNKNOWN`: nessun `LOCAL-SURVIVE` ma ≥ 1 `UNKNOWN`;
+- `INFEASIBLE`: tutti `INFEASIBLE`.
+**GATE FORTE (sostituisce "almeno un ramo potato", troppo debole
+rispetto all'obiettivo esistenziale su una firma intera):**
+R_f^{U7} = ∪_{k=1..5} ∪_{j=1..3} R_{f,k,j}^{U7} — uccidere un singolo
+(f,k,j) è soltanto una riduzione parziale. L-OBL/Γ si costruisce
+SOLTANTO se esiste almeno una firma ACTIONABLE:
+**∃f ∈ F₈ ∀(k,j) compatibili con f: deep(e_{f,k}) ⇒ ⊥.** Solo allora
+una futura prova L-OBL UNIFORME sulla prima L implica ¬R_f^{U7}.
+
+**Test minimo falsificabile (sostituito dal /12; tutto PRIMA della
+run):**
+1. promuovere formalmente L-URHO, L-U7a.2 e L-FL7 [FATTO: LEMMI v8,
+   sez. 6–8];
+2. sostituire `potato` con `COND-KILL` in documenti e tool [FATTO nei
+   documenti; vincolante per il tool];
+3. congelare la matrice 8×15 e la classificazione per firma [FATTO
+   sopra];
+4. fissare la fase temporale pre/post-evento [FATTO sopra, punto 0
+   del trasporto: canonica = t⁻ + intera sequenza L·R^{k−1}];
+5. dimostrare che il prefisso minimo per j determina la Scia
+   indipendentemente dai bit anteriori [FATTO in bozza: L-SCIA-J,
+   LEMMI v8 sez. 8b — pannello richiesto prima della run];
+6. richiedere un MODELLO LOCALE ESPLICITO per ogni `LOCAL-SURVIVE`;
+7. esche obbligatorie del checker: (i) omissione del passo L nel
+   trasporto; (ii) scambio delle celle j=2 e j=3; (iii) kill basato
+   sulla sola collisione geometrica — ogni esca DEVE essere beccata;
+8. gate finale: almeno una firma interamente ACTIONABLE (mai "almeno
+   un ramo").
+Procedura per caso (invariata dal /11, con la fase temporale del
+punto 4): tratto R^{k−1}L + prefisso minimo di j in ordine di
+prepend, trasformazione al frame anchor, trasporto canonico,
+confronto a m\*.
 
 **Falsificatori (tassonomia corretta dal /11.4):**
 - falsificatori di FORCED-L₇ (o delle sue ipotesi):
@@ -617,10 +679,16 @@ potato; compatibile ⇒ sopravvive; informazione insufficiente ⇒
   SUCCESSIVA marcatura L-OBL/deep, NON di Forced-L₇;
 - K soltanto astratto = `unknown` (mai falsificatore).
 
-**Decisione /10–/11 (congelata):** eseguire SOLTANTO questa geometria
-finita; costruire L-OBL/Γ solo se almeno un ramo viene potato
-DEDUTTIVAMENTE; se tutti i casi sopravvivono o restano `unknown`, la
-via è classificata `VALIDA-MA-INUTILE` e si CONSOLIDA.
+**Decisione /12 (congelata; sostituisce la /10–/11):**
+1. L-URHO, L-U7a.2 e L-FL7 saldati (LEMMI v8);
+2. tassonomia ed esiti dello strumento corretti come sopra
+   (COND-KILL, matrice, classificazione per firma);
+3. eseguire la SOLA matrice 8×5×3;
+4. se NESSUNA firma è ACTIONABLE ⇒ via classificata
+   `VALIDA-MA-INUTILE` e si CONSOLIDA;
+5. se ALMENO una firma è ACTIONABLE ⇒ allora — e soltanto allora —
+   costruire L-OBL/Γ per quella firma.
+Via B, 0b.3, Fase 1 e §109 restano chiusi.
 
 ## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone Forced-L₇ + L-OBL sull'evento di sez. 3e, con L-REV/Q_c come strato di soundness, sez. 3c])
 

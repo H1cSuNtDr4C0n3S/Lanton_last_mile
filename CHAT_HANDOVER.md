@@ -2263,7 +2263,44 @@ Priorita' (aggiornate a §108b):
    FL7-d riclassificato: KNOWN reale = falsificatore della marcatura
    L-OBL/deep, non di Forced-L7; K astratto = unknown. Eseguire SOLO
    la geometria finita 8x5x3; L-OBL/Gamma solo se almeno un ramo e'
-   potato deduttivamente. Via B, 0b.3, Fase 1, §109 chiusi;
+   potato deduttivamente. Via B, 0b.3, Fase 1, §109 chiusi.
+   **Verdetto /12 (applicato: LEMMI v8 + PREREG v13): L-URHO,
+   L-U7a.2 e L-FL7 PROMOSSI** con gli statuti dichiarati (L-URHO
+   sotto B-T; L-U7a.2 [T] per-passato, coda-Muro condizionale a B-T
+   via L-URHO; L-FL7 [T], clausola "cosa NON afferma" invariata).
+   CORREZIONE ESSENZIALE dei quantificatori: (1) la contraddizione
+   della Scia e' CONDIZIONATA a deep — dimostra deep(e) => assurdo,
+   cioe' ogni realizzazione ha l'evento KNOWN, NON l'impossibilita'
+   della realizzazione; l'eliminazione del ramo esige la futura
+   congiunzione L-OBL => deep; lo stato si chiama **COND-KILL**, mai
+   "potato"; (2) R_f^{U7} = unione su (k,j) di R_{f,k,j}^{U7}:
+   uccidere un singolo (f,k,j) e' solo riduzione parziale — **gate
+   forte PER-FIRMA**: matrice 8x15 con stati INFEASIBLE / COND-KILL /
+   LOCAL-SURVIVE (modello locale esplicito obbligatorio) / UNKNOWN;
+   firma ACTIONABLE = >=1 non-INFEASIBLE e tutti i non-INFEASIBLE
+   COND-KILL; L-OBL/Gamma SOLO se esiste una firma ACTIONABLE
+   (exists f forall (k,j) compatibili: deep => assurdo; solo allora
+   una futura prova L-OBL uniforme sulla prima L implica
+   not-R_f^{U7}); LLL = COND-KILL uniforme via §86.1. FASE TEMPORALE
+   dichiarata: cella-scia NERA a t- (subito prima della lettura
+   bersaglio); trasporto canonico = INTERA sequenza forward
+   L·R^{k-1} da t- fino a m* (solo "R^{k-1}" = off-by-one vietato).
+   NUOVO **L-SCIA-J** (bozza formale, LEMMI v8 sez. 8b, in attesa di
+   pannello): il prefisso minimo per j (ordine di prepend R / LR /
+   LLR = forward R·L^{j-1}) determina cella e colore della Scia
+   indipendentemente dai bit anteriori — derivazione completa con la
+   mappa L-0b0 e la D calibrata dagli anchor (p_{t-1}=(0,1),
+   L=>(-1,1), LL=>(-1,0), LLL=>ritorno a (0,0) a t-4 con distanza
+   mai 2 => KNOWN => non-deep, coerente §86.1); il prefisso minimo
+   NON certifica realizzabilita' globale. Esche congelate del
+   checker: omissione del passo L nel trasporto; scambio celle
+   j=2/3; kill dalla sola collisione geometrica. Errata LEMMI
+   sez. 9: bersaglio vigente = prima L di Forced-L7 (il "primo
+   bersaglio = parent-step" era superato dal no-go P0). Decisione
+   /12: eseguire la SOLA matrice 8x5x3; nessuna ACTIONABLE =>
+   VALIDA-MA-INUTILE e consolidamento; >=1 ACTIONABLE => allora e
+   soltanto allora L-OBL/Gamma per quella firma. Via B, 0b.3,
+   Fase 1, §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
