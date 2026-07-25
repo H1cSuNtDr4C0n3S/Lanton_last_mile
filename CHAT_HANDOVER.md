@@ -2223,7 +2223,27 @@ Priorita' (aggiornate a §108b):
    nessuna firma esterna; finche' non c'e' una via per il ramo R,
    L-OBL = RIDUZIONE PARZIALE registrata, macchina completa NON
    costruita; per le 6 firme interne la lettera va derivata
-   meccanicamente dal req (da fare). Via B, 0b.3, Fase 1, §109 chiusi;
+   meccanicamente dal req (da fare).
+   **Verdetto /10 (applicato: LEMMI v6 + PREREG v11): P0 SALDATO —
+   6 firme interne R-ONLY** (deduzione a 6 passi promossa: c_par in
+   palla + C3 => req non FREE + m* pulito => req != 0 => req = 1 =>
+   prima lettura suffisso bianca => parent R; derivazione meccanica =
+   regressione, non fondamento), **2 esterne L+R** con modelli astratti
+   ESPLICITI (R: req=1 + prima lettura bianca; L: req=0 + visita di
+   vita precedente da U3), **nessuna L-ONLY = lemma di soffitto della
+   strategia parent-step** => NO-GO registrato: macchina L-OBL sul
+   parent-step non si costruisce, niente caccia generica a f_R. VIA
+   NUOVA preregistrata: **FORCED-L7** (prereg v11 sez. 3e) — U_rho
+   generalizzato, U7 con 7 = 2+5 (posa m* + finestra T23, non da
+   massimo censito); lemma candidato: in un passato U7-valido il primo
+   L e' forzato entro 5 prepend (T23 + origine fuori palla-7), cade in
+   palla-7 e per U7 e' necessariamente una RILETTURA => evento L
+   distinto e bounded per OGNI firma senza uccidere il ramo parent-R;
+   L-OBL decide K vs F su quell'evento; enumerazione finita 8x5; gate
+   di utilita' RAFFORZATO (la Scia deve eliminare almeno un ramo di F8,
+   non solo certificare deep); falsificatori FL7-a..d; se la geometria
+   8x5 non pota nulla => VALIDA-MA-INUTILE e consolidamento. Via B,
+   0b.3, Fase 1, §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto

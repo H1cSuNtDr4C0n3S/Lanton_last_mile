@@ -1,4 +1,4 @@
-# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v5 = bozza Gate P0 di polarità sulle firme esterne; v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v6 = P0 SALDATO: 6 R-ONLY + 2 L+R, lemma di soffitto del parent-step; v5 in d713a6f, v4 in 3b735d6, v3 in 91a78b6, v2 in 0f4348a, v1 in 2eb096e)
 
 **Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
 - **PROMOSSI** (con le correzioni notazionali del pannello, applicate
@@ -334,7 +334,34 @@ PREREG_RC2_PONTE v9 sez. 3d): non conservare lo stato monitor
 corrente, ma scandire il passato dall'evento bersaglio (SEEK0/SEEK2)
 fino alla visita precedente o alla nascita.
 
-## 4d. L-P0 — polarità del parent-step (BOZZA eseguita sulle due firme esterne, in attesa di pannello; Gate P0 del verdetto /9)
+## 4d. L-P0 — polarità del parent-step (SALDATO dal verdetto /10: 6 firme interne R-ONLY, 2 esterne L+R, NESSUNA L-ONLY — lemma di soffitto della strategia parent-step)
+
+**Profilo deduttivo finale:** 6 firme interne = `R-ONLY`; 2 firme
+esterne = `L+R` nell'astrazione certificata; **nessuna firma è
+`L-ONLY`** ⇒ L-OBL sul parent-step non può eliminare integralmente
+ALCUNA firma di F₈. È il **no-go della via parent-step** (registrato in
+PREREG v11): la macchina L-OBL sul parent-step NON si costruisce.
+
+**Firme interne — deduzione promossa (catena a 6 passi del /10):**
+(1) c_par è nella palla-2; (2) C3 ⇒ c_par visitata a m\* ⇒ req(c_par)
+non è FREE; (3) m\* è pulito (pend₂ = 0) ⇒ req(c_par) ≠ 0;
+(4) quindi req(c_par) = 1; (5) la prima lettura forward nel suffisso
+è 1 − req = 0, cioè BIANCA (codifica colore del macchinario: read 0 =
+bianco); (6) il parent-step è R. ∎ — la derivazione meccanica resta
+come REGRESSIONE d'implementazione, non come fondamento.
+
+**Firme esterne — L+R con modelli astratti ESPLICITI (correzione /10:
+"non escluso" da solo è epistemico; il certificato di compatibilità
+astratta è l'assegnazione che soddisfa C1/C3/C4-exit/U3):**
+- modello R: req(c_par) = 1, prima lettura nel suffisso bianca —
+  soddisfa tutti i vincoli certificati;
+- modello L: req(c_par) = 0, con visita di vita PRECEDENTE richiesta
+  da U3 (fuori dal seme una prima lettura di vita è bianca) — soddisfa
+  tutti i vincoli certificati.
+Entrambi i modelli esistono ⇒ `L+R` deduttivo nell'astrazione.
+
+--- [testo della bozza v5, conservato sotto per la storia] ---
+(BOZZA v5 eseguita sulle due firme esterne; Gate P0 del verdetto /9)
 
 **Setup (punto 1 del Gate P0).** L'evento parent della firma
 f = (c\*, h\*) nel frame anchor: il passo del genitore di m\* legge
@@ -370,11 +397,14 @@ macchinario §96, non a mano — dichiarato fuori da questa bozza.]
 **Punto 5 — dichiarazione anticipata (obbligatoria dal /9).** Con esito
 `L+R`, **L-OBL da solo NON può provare ¬R_f^{U3} su nessuna delle due
 firme esterne**: attacca solo R_{f,L}^{U3}; per ¬R_f^{U3} serve una
-seconda deduzione ¬R_{f,R}^{U3} (invariante separato per f_R — APERTO,
-nessun candidato dichiarato). Conseguenza operativa (decisione /9,
-punto 4): finché non esiste una via dichiarata per il ramo R, L-OBL è
-registrato come **RIDUZIONE PARZIALE** e la macchina completa di
-Γ(n,e) NON viene costruita.
+seconda deduzione ¬R_{f,R}^{U3}. Decisione /10: la caccia GENERICA a un
+invariante per f_R è poco promettente (sotto U3 la lettura R-fresca su
+cella esterna è il comportamento naturale di una cella bianca fuori dal
+seme; Ledger e Scia non la contrastano direttamente) e NON si apre. La
+via nuova preregistrata è **Forced-L₇** (PREREG v11 sez. 3e): evitare
+il parent-step e prendere come evento distinto il PRIMO L andando
+verso il passato, che sotto U₇ è un L forzato, bounded (profondità
+≤ 5) e necessariamente una RILETTURA.
 
 **Statuto.** Bozza deduttiva in attesa di pannello: l'esito `L+R` è
 un'enumerazione di compatibilità sotto i SOLI vincoli certificati

@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v10 = semantica A/Â + INFEASIBLE + Gate P0 di polarità + regione 𝒦; v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v11 = P0 saldato + NO-GO del parent-step + Forced-L₇/U₇ preregistrati; v10 in d713a6f, v9 in 3b735d6, v8 in 91a78b6, v7 in 0f4348a, v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -78,10 +78,15 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   soundness; (4) Via A OPZIONALE e diagnostica; (5) costruzione/
   certificazione della Via B SOLO dopo L-OBL; (6) 0b.3 solo dopo.
   Aggiornamento /9: NON partire dalla costruzione completa di Γ(n,e) —
-  prima il GATE P0 di polarità (sez. 3d) sulle due firme esterne;
-  L-OBL prosegue solo se il ramo L è non vacuo ED esiste una via
-  dichiarata per il ramo R; altrimenti L-OBL = riduzione parziale
-  registrata, senza macchina completa. Fase 1 e §109 restano chiusi;
+  prima il GATE P0 di polarità (sez. 3d) sulle due firme esterne.
+  Aggiornamento /10: P0 SALDATO (6 R-ONLY, 2 L+R, nessuna L-ONLY) ⇒
+  NO-GO del parent-step (macchina L-OBL sul parent-step non si
+  costruisce; niente caccia generica a f_R); via nuova = **Forced-L₇**
+  (sez. 3e: U₇ = U_ρ con ρ = 2+5, primo L forzato entro 5 prepend =
+  rilettura; L-OBL applicato a QUELL'evento; gate di utilità
+  rafforzato: la Scia deve eliminare almeno un ramo di F₈); se la
+  geometria 8×5 non pota nulla ⇒ VALIDA-MA-INUTILE e consolidamento.
+  Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -473,6 +478,18 @@ sovra-approssimazione CALCOLATA. Quattro esiti, mutuamente esclusivi:
 esterno ((−2,2) h=1 e (2,2) h=0, Fase 0) — previa uscita dal Gate P0
 (sotto).
 
+**ESITO DEL GATE P0 (SALDATO dal verdetto /10) e NO-GO DEL
+PARENT-STEP:** profilo deduttivo finale = 6 firme interne `R-ONLY`
+(catena a 6 passi, RC2_LEMMI_0B v6 sez. 4d), 2 firme esterne `L+R`
+nell'astrazione (modelli espliciti); **nessuna firma è `L-ONLY`** ⇒
+L-OBL sul parent-step non può eliminare integralmente alcuna firma di
+F₈ (lemma di soffitto della strategia parent-step). Decisioni /10
+registrate: (a) la macchina L-OBL sul parent-step NON si costruisce;
+(b) NIENTE caccia generica all'invariante f_R (sotto U3 la R-fresca
+esterna è il comportamento naturale di una cella bianca fuori dal
+seme); (c) la via nuova è Forced-L₇ (sez. 3e). Il testo del gate resta
+sotto per la storia e per eventi diversi dal parent-step.
+
 **GATE P0 — polarità del parent-step (verdetto /9: OBBLIGATORIO prima
 di Γ(n,e); il rischio non è la soundness ma dimostrare un fatto solo
 sulla sottoclasse L lasciando intatta la R).** RC2 vale soltanto sulle
@@ -519,7 +536,56 @@ di Γ(n,e); i punti 1–2 e 7–8 del /7 restano validi):**
    operativo con semantica A/Â (marca solo Â={F}≠∅; K astratto = solo
    `unknown`; K reale = falsificatore; Â=∅ = INFEASIBLE).
 
-## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone L-OBL dimostrato, sez. 3d, con L-REV/Q_c come strato di soundness, sez. 3c])
+## 3e. FORCED-L₇ — il primo L forzato sotto U₇ (PREREGISTRATO, verdetto 2026-07-25/10: la via che evita il parent-step)
+
+**Universo U_ρ (generalizzazione di U3, da definire per ogni raggio
+fisso ρ):** record y-min stretto z_t con
+B_∞(z_t, ρ) ∩ (supp(seme) ∪ {origine}) = ∅. Qui serve
+**U₇** (ρ = 7). Il raggio NON viene da un massimo censito (trappola
+qq): **7 = 2 + 5**, dove 2 = raggio della posa di m\* (palla-2) e 5 =
+finestra del Lemma dei Bianchi che Curvano (A-T23: il cammino
+all'indietro sopravvivente fa ≥ 1 L in ogni finestra di 5 passi).
+
+**Lemma candidato FORCED-L₇ (da dimostrare, punto 4 del test).** Sia
+m\* un nodo di pulizia con posa nella palla-2 di un passato U₇-valido.
+Allora:
+- dopo k ≤ 5 prepend da m\*, la posa (= cella letta al prepend k) ha
+  Chebyshev ≤ 2 + k ≤ 7;
+- poiché l'origine del passato è fuori dalla palla-7, il passato NON
+  può terminare nei primi cinque prepend;
+- T23 impone almeno una L in ogni finestra backward sopravvivente di
+  cinque passi ⇒ esiste una PRIMA L a profondità k ≤ 5;
+- la sua cella è nella palla-7, dove U₇ esclude il seme;
+- una lettura L è nera; fuori dal seme non può essere una prima
+  lettura di vita ⇒ **quella L è necessariamente una RILETTURA**.
+Si ottiene così, per OGNI firma, un evento L distinto e BOUNDED senza
+dover eliminare il ramo parent R. Resta soltanto da decidere KNOWN
+contro FORGOTTEN mediante L-OBL su questo evento.
+
+**Test minimo falsificabile (prima di costruire Γ):**
+1. generalizzare U3 a U_ρ per ogni raggio fisso;
+2. ripetere la cofinalità B–T per U₇ (L-U3b con N₇ finito);
+3. ripetere la direzione utile L-U3a.2 per U₇ (U₇ ⊆ U3: restrizione);
+4. dimostrare Forced-L₇;
+5. definire e = la prima L fra i primi cinque prepend;
+6. enumerare FINITAMENTE gli 8×5 casi firma/profondità;
+7. applicare L-OBL a questo evento (semantica A/Â invariata);
+8. **gate di utilità RAFFORZATO (preregistrato):** la Scia ottenuta
+   deve ELIMINARE almeno un ramo di F₈ — non soltanto certificare
+   `deep`.
+
+**Falsificatori immediati:**
+- (FL7-a) un passato U₇-valido senza L nei primi cinque prepend;
+- (FL7-b) prima L fuori dalla palla-7;
+- (FL7-c) prima L fresca nonostante U₇;
+- (FL7-d) ramo KNOWN reale per l'evento distinto.
+
+**Decisione /10 (congelata):** solo se la geometria finita 8×5 mostra
+una POTATURA REALE tramite Scia si costruisce L-OBL/Γ; se nessun ramo
+viene potato, la via è classificata `VALIDA-MA-INUTILE` e si
+CONSOLIDA.
+
+## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B ora presuppone Forced-L₇ + L-OBL sull'evento di sez. 3e, con L-REV/Q_c come strato di soundness, sez. 3c])
 
 Enumerare D_RC2 per intero; per ogni elemento: replay forward e verifica
 dell'antecedente con checker a CONTROLLI ESPLICITI; esca obbligatoria
