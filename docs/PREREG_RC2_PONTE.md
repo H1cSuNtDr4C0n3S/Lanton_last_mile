@@ -1,4 +1,4 @@
-# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v6 = guardia anti-leakage + precondizione 0b.3 corretta + invariante del monitor; v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
+# PREREG RC2 — IL PONTE SCIA forward→backward (Fase 0b, pre-§109) (v7 = L-REV preregistrato + 0b.U3-a rinominata direzione-utile; v6 in 2eb096e, v5 in 26bcc2e, v4 in 8476472, v3 in bb52c5c, v2 in 134f117, v1 in b85b7db)
 
 **Statuto (vincolante):** preregistrazione dell'ENUNCIATO e dell'AUDIT
 dell'antecedente per il lemma-ponte RC2 (mandato del titolare post-Fase 0,
@@ -64,14 +64,15 @@ deep₁(t) ⟺ visited(t) ∧ c_t ∉ known_t. Decisioni:
   può essere arbitrariamente antica; "assenza di riletture" può non
   essere decidibile da alcun suffisso di lunghezza fissa). d_0b NON va
   MAI scelto da un massimo censito (trappola qq);
-- **ordine dei lavori (aggiornato 2026-07-25/4):** (1) chiudere
-  0b.U3-a/b (0b.U3-b atteso corollario breve di T17 — B–T dà infiniti
-  record fuori da ogni intorno finito; 0b.U3-a per restrizione puntuale
-  delle equivalenze T24–T26 al sottoinsieme U3); (2) dimostrare PER
-  INDUZIONE la tavola COMPLETA del monitor (Via B — la direzione
-  strategica); (3) Via A OPZIONALE e diagnostica: non necessaria se la
-  Via B è certificata; (4) completare la mappa 0b.0; (5) soltanto
-  allora valutare 0b.3;
+- **ordine dei lavori (aggiornato 2026-07-25/6):** (1) 0b.U3-a
+  (direzione utile relativizzata) / 0b.U3-b: bozze L-U3a.1/2 PROMOSSE e
+  L-U3b CHIUSA sotto il fatto B–T (docs/RC2_LEMMI_0B.md v2); (2) L-MON
+  PROMOSSO (invariante forward); mappa 0b.0: bozza L-0b0 dimostrata, in
+  attesa di pannello; (3) **L-REV** (sezione 3c: powerset inverso,
+  C_RC2 finito, collasso esterno sound) — il lemma decisivo mancante,
+  da preregistrare [FATTO] e DIMOSTRARE prima di ogni macchina; (4) Via
+  A OPZIONALE e diagnostica; (5) costruzione/certificazione della Via B
+  SOLO dopo L-REV; (6) 0b.3 solo dopo. Fase 1 e §109 restano chiusi;
 - **nessuna enumerazione 0b.3** finché monitor/località (0b.2) e mappa
   (0b.0) non sono TEOREMI e 0b.U3 non è chiuso. Fase 1 resta chiusa.
 
@@ -148,7 +149,10 @@ numero di prepend). Allora per ogni k ∈ [1, N]:
   anchor, la cella letta dal passo forward j(k);
 - (iii) posa e heading del camminatore al depth k determinano posizione e
   heading forward a j(k) tramite una mappa esplicita DA SCRIVERE nel
-  lemma (inclusa la convenzione di verso backward vs forward);
+  lemma (inclusa la convenzione di verso backward vs forward)
+  [aggiornamento post-/6: la mappa è SCRITTA e dimostrata in bozza —
+  L-0b0, docs/RC2_LEMMI_0B.md v2, in attesa di pannello; restano da
+  fissare solo r_0b/d_0b, superati dalla Via B/L-REV];
 - (iv) la lettera del prepend è la svolta del passo forward j(k), e il
   colore letto forward coincide col colore richiesto dal req backward.
 Metodo: deduzione dalle definizioni del camminatore (§92a, §95b) + gate
@@ -219,14 +223,20 @@ svanisce: va misurato, non presunto.
   COFINALMENTE disponibile lungo ogni orbita eterna non-highway.
   Obblighi formali PRIMA di usare U3 (lemma di trasferimento, da
   tentare per primi):
-  - **0b.U3-a:** restrizione PUNTUALE di T24–T26 all'universo U3
-    (i quantificatori di X6, v2 ⟺ T24–T25 ⟺ T26, ridimostrati sotto U3
-    — nessun inserimento silenzioso in R_f);
+  - **0b.U3-a (RINOMINATA dal verdetto 2026-07-25/6: "direzione utile
+    relativizzata", NON bicondizionale):** restrizione a U3 della SOLA
+    direzione utile al Muro — (∀f: ¬R_f^{U3}) ⟹ v2^{U3} — perché la
+    bicondizionale X6 NON relativizza in silenzio (L-U3a.3 di
+    docs/RC2_LEMMI_0B.md: il testimone exit-step nasce a Chebyshev 3,
+    dentro B_∞(z_t,3), quindi non-U3); nessun inserimento silenzioso in
+    R_f. Bozze: L-U3a.1/2 (PROMOSSE dal pannello /6).
   - **0b.U3-b:** la restrizione è SUFFICIENTE al Muro (i record U3 sono
     cofinali: la vietanza sui soli record U3 basta alla contraddizione
-    con B–T).
-  Finché 0b.U3-a/b non sono chiusi, ogni risultato sotto U3 porta
-  l'etichetta "condizionale a U3".
+    con B–T). Bozza: L-U3b, CHIUSA "sotto il fatto B–T" con rider
+    WLOG-C4-sym esplicito (pannello /6).
+  Etichetta post-/6: i risultati sotto U3 sono "condizionali al fatto
+  B–T" (via L-U3b, chiuso come condizionale dichiarato); resta in
+  attesa di pannello solo la bozza L-0b0.
 
 ## 3. Lemma 0b.2 — località e completezza del dominio (due vie, decisione 2026-07-25/2)
 
@@ -327,7 +337,51 @@ obbligatoria sul checker; (iv) controlli espliciti + optimize==0.
 Ogni parametro sound "per caso fattuale" va verificato con controllo
 esplicito a ogni valore di raggio (trappola mm).
 
-## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA])
+## 3c. L-REV — monitor inverso a sottoinsiemi (PREREGISTRATO, verdetto 2026-07-25/6: il lemma decisivo mancante)
+
+L-MON dimostra il monitor deterministico IN AVANTI; la macchina lavora
+ALL'INDIETRO, dove la transizione non è in generale invertibile. Il
+replay non può sostituire la deduzione universale. Oggetto
+preregistrato (ipotesi del titolare: "monitor inverso a sottoinsiemi
+con collasso esterno"):
+- **Stato backward INSIEMISTICO:** per ogni cella sorvegliata
+  c ∈ C_RC2, Q_c ⊆ {U, K, F}, **Q_c ≠ ∅** — una stessa osservazione
+  inversa può provenire da più stati; conservare un solo stato
+  produrrebbe falsi `deep`. Ogni prepend applica la RELAZIONE INVERSA
+  COMPLETA della tavola forward (derivata A MANO dalle righe della
+  tavola totale v5, poi enumerata ESAUSTIVAMENTE su ogni combinazione
+  stato/evento — mai campionata).
+- **Marcatura deep:** ammessa SOLO quando Q_c ⊆ {F} (equivalentemente
+  Q_c = {F}, essendo Q_c ≠ ∅). Una marcatura deep con U o K ancora
+  compatibili UCCIDE RC2.
+- **Soundness (da dimostrare per induzione):** ogni storia reale resta
+  CONTENUTA nello stato-insieme backward a ogni profondità. UN SOLO
+  predecessore reale escluso uccide la soundness.
+- **Finitezza geometrica (da dimostrare, non presunta):** tre stati per
+  cella NON bastano da soli — va congelato l'insieme FINITO C_RC2 delle
+  celle sorvegliate (con la convenzione di frame) e va dimostrata la
+  chiusura della rappresentazione sotto traslazione, rotazione, uscita
+  e rientro; le escursioni lontane si collassano SOLO con una
+  sovra-approssimazione esplicitamente sound (portali di rientro
+  finiti). Fuori dall'unione degli intorni finiti delle celle
+  sorvegliate: KNOWN non può sopravvivere; UNSEEN e FORGOTTEN restano
+  distinti.
+- **Test minimo falsificabile di L-REV (prima di qualunque campagna):**
+  1. congelare C_RC2 e la convenzione di frame;
+  2. derivare a mano la relazione inversa completa delle righe del
+     monitor;
+  3. enumerare esaustivamente ogni combinazione stato/evento;
+  4. provare per induzione che ogni storia reale resta contenuta nello
+     stato-insieme backward;
+  5. **esca obbligatoria:** fondere UNSEEN e FORGOTTEN deve produrre
+     almeno un falso `deep` (se non lo produce, il checker è vacuo);
+  6. **gate di utilità:** almeno un parent-step o punto d'escursione
+     rilevante deve raggiungere Q_c = {F}; altrimenti verdetto
+     VALIDO-MA-INUTILE.
+- Requisiti operativi: controlli espliciti (niente assert nudi),
+  sys.flags.optimize == 0 registrato, tripwire CP, esca sul checker.
+
+## 4. Gate 0b.3 — enumerazione + replay forward (solo dopo 0b.0, 0b.U3-a/b e [Via A PROVATA con d₀ esplicito ∨ Via B CERTIFICATA — e la Via B presuppone L-REV dimostrato, sez. 3c])
 
 Enumerare D_RC2 per intero; per ogni elemento: replay forward e verifica
 dell'antecedente con checker a CONTROLLI ESPLICITI; esca obbligatoria

@@ -1,15 +1,23 @@
-# RC2 — LEMMI 0b.U3 E INVARIANTE DEL MONITOR (bozze deduttive pre-§109, IN ATTESA DI PANNELLO)
+# RC2 — LEMMI 0b.U3, INVARIANTE DEL MONITOR E MAPPA TEMPORALE (v2 = promozioni del pannello + correzioni notazionali + L-0b0; v1 in 2eb096e)
 
-**Statuto (vincolante):** bozze deduttive richieste dall'ordine dei
-lavori (decisione operativa 2026-07-25/2, aggiornata /4, punti 1–3) e
-dalla clausola 3 del verdetto 2026-07-25/5 (forma ufficiale del lemma
-del monitor). NESSUN
-certificato macchina è incluso: il replay resta una verifica
-dell'implementazione, non parte della prova. Queste NON sono deduzioni
-¬R_f: §109 resta chiuso; Fase 1 resta chiusa. Ogni enunciato cita i
-teoremi consolidati (A-Tn = docs/CONSOLIDATION_108_A.md; convenzioni
-della testa docs/CONSOLIDATION_108.md). Nulla è "chiuso" finché il
-pannello del titolare non lo salda.
+**Statuto (aggiornato dal verdetto del titolare 2026-07-25/6):**
+- **PROMOSSI** (con le correzioni notazionali del pannello, applicate
+  nel corpo): L-U3a.1, L-U3a.2, L-MON.
+- **L-U3b: CHIUSO "sotto il fatto B–T"** — condizionale dichiarato al
+  fatto esterno B–T, NON prova autonoma di B–T.
+- **L-U3a.3: statuto precisato** — non dimostra che la bicondizionale
+  X6 sia falsa in U3; dimostra che la PROVA precedente della direzione
+  R_f ⇒ ¬v2 non si relativizza (costruisce un altro passato, non-U3).
+- **NUOVO: L-0b0** (mappa temporale backward–forward, punto 4 della
+  decisione operativa /6) — bozza dimostrata, in attesa di pannello.
+Il replay resta una verifica dell'implementazione, non parte delle
+prove. NON è dimostrato: RC2; la finitezza/soundness della macchina
+backward (L-REV, preregistrato in PREREG_RC2_PONTE v7); alcuna
+¬R_f^{U3}. §109 resta chiuso; Fase 1 resta chiusa. Ogni enunciato cita
+i teoremi consolidati (A-Tn = docs/CONSOLIDATION_108_A.md).
+Collisione terminologica risolta (verdetto /6): **C4-sym** = simmetria
+rotazionale della regola (L-U3b); **C4-exit** = il vincolo sul genitore
+derivato da valid() (il "C4" storico di §96a).
 
 ## 1. Definizioni (simboli distinti, decisione operativa punto 1)
 
@@ -27,7 +35,7 @@ pannello del titolare non lo salda.
 - **N₃:** intorno-3 (Chebyshev) di supp(seme) ∪ {origine}; il seme è
   finito (configurazione iniziale finita) ⇒ N₃ è finito.
 
-## 2. L-U3b — cofinalità dei record U3 (con rider WLOG-C4; corretto dal ROSSO della lente logica)
+## 2. L-U3b — cofinalità dei record U3 (CHIUSO sotto il fatto B–T; rider WLOG-C4-sym)
 
 **Enunciato (con rider esplicito).** Per ogni orbita eterna non-highway
 esiste una rotazione C4 del frame, DIPENDENTE DALL'ORBITA, nella quale i
@@ -35,8 +43,8 @@ record y-min stretti U3 sono infiniti; in quel frame WLOG, una vietanza
 di w101 valida a TUTTI i record U3 realizza il bersaglio del Muro
 (A-T17) con intorno finito = N₃.
 
-**Dimostrazione (condizionale al fatto esterno B–T; in attesa di
-saldatura del pannello).** (i) z ∉ N₃ ⟺ dist_∞(z, supp(seme) ∪
+**Dimostrazione (condizionale al fatto esterno B–T; chiusura /6 come
+condizionale dichiarato).** (i) z ∉ N₃ ⟺ dist_∞(z, supp(seme) ∪
 {origine}) > 3 ⟺ B_∞(z,3) ∩ (supp(seme) ∪ {origine}) = ∅: quindi
 "record U3" = "record y-min stretto fuori da N₃".
 (ii) Fatto ESTERNO B–T (teorema di letteratura, citato come tale — la
@@ -44,12 +52,12 @@ fonte a verbale del rider è CONE_LOCK §87.6, NON la parentetica di
 A-T17, che non ha statuto proprio nei quattro strati): ogni orbita
 eterna è illimitata ⇒ la bounding box cresce ⇒ almeno UNA delle quattro
 pareti avanza infinite volte ⇒ infiniti record stretti in ALMENO UNA
-direzione; la regola è C4-EQUIVARIANTE (una rotazione di 90° del piano
-con rotazione degli heading coniuga la dinamica senza scambiare R/L) ⇒
-esiste una rotazione del frame, dipendente dall'orbita, in cui la
-direzione avanzante è y-min: in quel frame i record y-min stretti sono
-infiniti (è esattamente il "WLOG per C4-simmetria" di §87.6, qui reso
-ESPLICITO come parte dell'enunciato).
+direzione; la regola è C4-sym-EQUIVARIANTE (una rotazione di 90° del
+piano con rotazione degli heading coniuga la dinamica senza scambiare
+R/L) ⇒ esiste una rotazione del frame, dipendente dall'orbita, in cui
+la direzione avanzante è y-min: in quel frame i record y-min stretti
+sono infiniti (è esattamente il "WLOG per C4-simmetria" di §87.6, qui
+reso ESPLICITO come parte dell'enunciato).
 (iii) Lungo la successione dei record y-min stretti la quota y_t è
 strettamente decrescente ⇒ tutti tranne al più un numero finito cadono
 fuori dal compatto N₃ ⇒ infiniti record U3 nel frame WLOG.
@@ -58,19 +66,20 @@ impossibile a ogni record y-min stretto con posa fuori da un intorno
 finito dell'origine/seme" (nella stessa convenzione WLOG in cui è
 formulata l'intera linea dei record, §87.6): una vietanza su tutti i
 record U3 lo realizza letteralmente con l'intorno N₃.
-[niente ∎: il passo (ii) usa B–T esterno + C4-equivarianza — il
-pannello salda o respinge il lemma di cofinalità in questa forma.]
+∎ (SOTTO IL FATTO B–T: il lemma è chiuso dal pannello /6 come
+condizionale dichiarato al teorema esterno B–T + C4-sym-equivarianza;
+non è, e non pretende di essere, una prova autonoma di B–T.)
 
 ## 3. L-U3a — restrizione puntuale della catena X6 a U3 (direzione utile)
 
 ### 3.1 L-U3a.1 — i per-passato restringono gratis
 
 **Enunciato.** T24 (Passo di Pulizia + Tratto Pulito), T25 (Dicotomia
-del Tratto Pulito), i vincoli C1/C3/C4 dell'oracolo v2 (§96a),
+del Tratto Pulito), i vincoli C1/C3/C4-exit dell'oracolo v2 (§96a),
 l'ENUMERAZIONE esaustiva delle 40 firme dell'oracolo pigro (§95d: 25
 confinate deduttivamente / 15 firme-exit; parte enumerativa di T26:
-7/15 uccise da C1/C3/C4 ⇒ 8 residue) e il Lemma dell'exit-step (§96b)
-valgono per ogni passato U3-valido.
+7/15 uccise da C1/C3/C4-exit ⇒ 8 residue) e il Lemma dell'exit-step
+(§96b) valgono per ogni passato U3-valido.
 
 **Dimostrazione (con le ipotesi EFFETTIVE di ciascun enunciato,
 correzione della lente).** T24/T25/C1/C3 e l'oracolo pigro NON hanno
@@ -78,21 +87,25 @@ alcuna ipotesi spaziale sulla palla: vivono al livello parola/ledger
 del camminatore (T24: "per OGNI passato completo che presenta w101 a un
 record, senza case-split", §95b; l'oracolo è una sovra-approssimazione
 UNIVERSALE — la conoscenza lazy è sottoinsieme di ogni conoscenza
-reale). C4 usa solo valid() (ogni cella letta ha y ≥ 1). Tutti sono
-quantificati universalmente su classi che CONTENGONO i passati
+reale). C4-exit usa solo valid() (ogni cella letta ha y ≥ 1). Tutti
+sono quantificati universalmente su classi che CONTENGONO i passati
 U3-validi ⇒ la restrizione di un ∀ a un sottoinsieme è valida.
-L'ipotesi spaziale del Muro entra SOLTANTO in v2/T20/T22, dove U3 la
-implica per monotonia delle palle (B_∞(z_t,2) ⊆ B_∞(z_t,3): U3 esclude
-seme e origine anche dalla palla-2). ∎
+L'ipotesi spaziale entra SOLTANTO al livello di v2/T20/T22 — e lì il
+suo ruolo preciso è quello dichiarato in L-U3a.2. ∎
 
 ### 3.2 L-U3a.2 — la direzione utile al Muro
 
-**Enunciato.** (∀f ∈ F₈: ¬R_f^{U3}) ⟹ v2^{U3}. Congiunto con U3 (seme
-fuori palla-3) e col COROLLARIO di T20 per restrizione a palla-2
-(pend₂(nascita) ≥ 1 ⟺ ≥ 1 cella nera di SEME in palla-2 visitata — il
-pending è per-cella; uso già canonico in T22): (∀f: ¬R_f^{U3}) ⟹ nessun
-passato U3-valido esiste ⟹ w101 vietata a ogni record U3 ⟹ (con L-U3b,
-nel frame WLOG) **Muro per w101 con intorno N₃**.
+**Enunciato (con l'attribuzione precisa dell'ipotesi spaziale,
+verdetto /6: U3 NON serve a definire v2 — serve, col ledger T20/T22, a
+trasformare pend₂ ≥ 1 in contraddizione).**
+(∀f ∈ F₈: ¬R_f^{U3}) ⟹ v2^{U3}. Poi, separatamente: per il COROLLARIO
+di T20 per restrizione a palla-2 (pend₂(nascita) ≥ 1 ⟺ ≥ 1 cella nera
+di SEME in palla-2 visitata — il pending è per-cella; uso già canonico
+in T22), v2^{U3} esige una cella di seme in palla-2 a ogni nascita; U3
+NEGA il seme in palla-3 ⊇ palla-2 ⇒ la congiunzione è una
+contraddizione ⇒ **nessun passato U3-valido esiste** ⟹ w101 vietata a
+ogni record U3 ⟹ (con L-U3b, nel frame WLOG) **Muro per w101 con
+intorno N₃**.
 
 **Dimostrazione (contrappositiva della prima implicazione).** Sia P un
 passato U3-valido che viola v2^{U3}: nascita con pend₂ = 0 (pulita; la
@@ -102,15 +115,15 @@ dell'ULTIMO nodo di pulizia m* di P, con posa(m*) in palla-2. Il tratto
 pulito da m* raggiunge una posa fuori palla (la nascita stessa, fuori
 palla-3): per T25 (dicotomia) il primo passo fuori esiste; per
 l'enumerazione dell'oracolo pigro (L-U3a.1) la firma (cella, heading)
-di m* è una delle 15 firme-exit, e per C1/C3/C4 (validi su P, L-U3a.1)
-è una delle 8 RESIDUE. Nota di completezza: m* ≠ nascita, perché
-posa(m*) ∈ palla-2 mentre l'origine è fuori palla-3 — dunque il
-genitore di m* è un nodo di P e C3/C4 si applicano. m* è un nodo di P,
+di m* è una delle 15 firme-exit, e per C1/C3/C4-exit (validi su P,
+L-U3a.1) è una delle 8 RESIDUE. Nota di completezza: m* ≠ nascita,
+perché posa(m*) ∈ palla-2 mentre l'origine è fuori palla-3 — dunque il
+genitore di m* è un nodo di P e C3/C4-exit si applicano. m* è un nodo di P,
 che è U3-valido ⇒ R_f^{U3} per quella f. ∎
 (Caso nascita sporca: pend₂ ≥ 1 = v2^{U3} soddisfatta su P; caso
 "nascita in palla": non esiste sotto U3.)
 
-### 3.3 OSSERVAZIONE L-U3a.3 — la bicondizionale X6 NON relativizza in silenzio (fatto emerso in stesura, da pannellare)
+### 3.3 OSSERVAZIONE L-U3a.3 — la bicondizionale X6 NON relativizza in silenzio (statuto preciso, verdetto /6: NON è dimostrato che la bicondizionale sia FALSA in U3; è dimostrato che la prova precedente della direzione R_f ⇒ ¬v2 non si relativizza, perché costruisce un ALTRO passato, non-U3)
 
 La direzione opposta di T26 ("firma realizzata ⟹ v2 falsa", via Lemma
 dell'exit-step) NON passa a U3 con la stessa costruzione: il testimone
@@ -128,9 +141,9 @@ NON è un passato U3-valido. Quindi:
 - resta vero e invariato: un testimone di QUALUNQUE firma falsifica v2
   nell'universo U0 (F1-v2 della prereg RIENTRO-SCIA);
 - per il Muro serve SOLO la direzione L-U3a.2, che regge.
-Conseguenza editoriale: 0b.U3-a va inteso come "restrizione della
-direzione utile", NON come bicondizionale relativizzata; il pannello
-decide la dicitura definitiva.
+Dicitura DECISA dal verdetto /6: 0b.U3-a = "direzione utile
+relativizzata", non bicondizionale (applicata in PREREG_RC2_PONTE v7,
+sezione 2b).
 
 ## 4. L-MON — invariante del monitor (Via B, forma del verdetto 2026-07-25/5)
 
@@ -147,6 +160,10 @@ known.discard di OGNI cella dell'anello Chebyshev-2 attorno alla NUOVA
 posizione (219–222, incondizionato). last = celle visitate almeno una
 volta; known ⊆ last.
 
+**Convenzione temporale (dichiarata una volta per tutte, verdetto /6):
+last_t, known_t e S_t denotano lo stato IMMEDIATAMENTE PRIMA della
+lettura del passo t.** Nessun altro uso di t⁻ nel seguito.
+
 **Invariante (per ogni cella fissata c, da S_t del verdetto):**
 S_t(c) = UNSEEN se c ∉ last_t; KNOWN se c ∈ known_t; FORGOTTEN se
 c ∈ last_t \ known_t. Con known_t ⊆ last_t i tre casi sono disgiunti ed
@@ -155,8 +172,8 @@ esaustivi.
 **Teorema (equivalenza monitor ↔ known/last).** La tavola totale del
 monitor (PREREG_RC2_PONTE v5/v6, ordine a 4 passi) calcola esattamente
 S_t(c) per ogni c e ogni t; corollario:
-**lettura di c è deep₁ ⟺ S_{t⁻}(c) = FORGOTTEN** (e fresh ⟺ UNSEEN,
-in-window ⟺ KNOWN).
+**la lettura del passo t su c è deep₁ ⟺ S_t(c) = FORGOTTEN** (e
+fresh ⟺ UNSEEN, in-window ⟺ KNOWN).
 
 **Dimostrazione (induzione sui passi).**
 - known ⊆ last: l'inserimento in known (2) è simultaneo a last[c] := t;
@@ -175,7 +192,8 @@ in-window ⟺ KNOWN).
 - Base dell'induzione principale: t = 0, last = known = ∅ ⇒
   S_0 ≡ UNSEEN = stato iniziale del monitor. ∎
 - Passo, caso c = cella letta: il verdetto usa lo stato PRE-aggiornamento
-  (1) = S_{t⁻}(c) — righe 1/3/6 della tavola (fresh/in-window/deep dai
+  (1) = S_t(c) (convenzione temporale sopra) — righe 1/3/6 della tavola
+  (fresh/in-window/deep dai
   tre casi di S); poi (2) mette c in last ∩ known ⇒ S = KNOWN =
   "visita ⇒ KNOWN"; dopo la mossa (3) c dista 1 dalla nuova posizione
   ⇒ non è sull'anello ⇒ (4) non la tocca ⇒ resta KNOWN (righe 1/3/6
@@ -188,7 +206,7 @@ in-window ⟺ KNOWN).
   sull'anello: nessun aggiornamento ⇒ stato invariato (righe 2, 5, 7).
   ∎
 - Corollario: deep1 (riga 158) = visited ∧ c ∉ known = c ∈ last \ known
-  = [S_{t⁻}(c) = FORGOTTEN]; fresh = c ∉ last = UNSEEN; in-window =
+  = [S_t(c) = FORGOTTEN]; fresh = c ∉ last = UNSEEN; in-window =
   c ∈ known = KNOWN. ∎
 
 **Ipotesi usate (dichiarate):** mossa unitaria per passo (dinamica
@@ -196,13 +214,86 @@ canonica CLAUDE.md §2); l'ordine (1)(2)(3)(4) del macchinario C6. Il
 replay (Gate 0b.3 / certificazione Via B) verifica l'IMPLEMENTAZIONE
 del monitor contro questo lemma, non il lemma.
 
+## 4b. L-0b0 — mappa temporale backward–forward (bozza dimostrata, in attesa di pannello; punto 4 della decisione /6)
+
+**Convenzioni.** Dinamica forward (CLAUDE.md §2): al passo s l'automa in
+posizione p_s con heading h_s legge la cella p_s con lettera ℓ_s
+(R = lettura bianca, L = nera); svolta h_{s+1} = h_s + 1 se R (orario) /
+h_s − 1 se L (mod 4); flip; mossa p_{s+1} = p_s + D[h_{s+1}].
+Camminatore all'indietro (§92a): stato (posa, h); prepend della lettera
+b: cella letta cn = posa − D[h]; heading nuovo = h − 1 se R / h + 1 se
+L; posa nuova = cn. Passato completo di lunghezza T = N + 101 che
+presenta w101 al record; stato forward finale (p_{T+1}, h_{T+1}) =
+anchor (origine, heading-su). L'INPUT del camminatore è la sequenza
+rovesciata ℓ_T, …, ℓ_1 (dichiarazione esplicita, correzione della
+lente). Tutte le coordinate nel frame anchor; le relazioni forward
+valgono invariate nel frame ruotato per C4-sym-equivarianza (L-U3b):
+la rotazione ruota coerentemente coordinate e heading
+(rot_k(D[h]) = D[h+k]).
+Il camminatore qui è la MAPPA CINEMATICA PURA (posa, h); per il replay
+di un passato reale la macchina con guardie non muore mai: la gamba
+y ≥ 1 segue dal record STRETTO (definizione canonica A5: ogni cella
+letta prima del record ha y ≥ 1 nel frame anchor, e il record stesso
+non è mai stato letto prima), la gamba req è la coerenza dei colori
+(mini-lemma sotto).
+
+**Enunciato (chiude la mappa (iii) di 0b.0).** Per ogni k ∈ [0, N]:
+dopo k prepend il camminatore è nello stato
+**(posa_k, h_k) = (p_{N−k+1}, h_{N−k+1})** — posizione e heading del
+passo forward N−k+1 (per k = 0: lo stato d'ingresso di w101); e per
+k ≥ 1 la cella letta dal k-esimo prepend è **p_{j(k)}** con lettera
+**ℓ_{j(k)}**, j(k) = N − k + 1: posizione, heading, cella letta e
+lettera del prepend k coincidono con quelli del passo forward j(k).
+
+**Dimostrazione (UNICA induzione su m ∈ [0, T] prepend dall'anchor;
+ristrutturata su indicazione della lente — la base non usa il passo).**
+Base m = 0: lo stato è l'anchor (p_{T+1}, h_{T+1}) PER DEFINIZIONE del
+frame (nessun contenuto).
+Passo: sia lo stato dopo m prepend (p_{s+1}, h_{s+1}) con
+s = T − m. Il prepend m+1 processa la lettera ℓ_s. Cella letta:
+cn = p_{s+1} − D[h_{s+1}] = p_s (dalla mossa forward
+p_{s+1} = p_s + D[h_{s+1}]). Heading nuovo: se ℓ_s = R,
+h_{s+1} − 1 = h_s (dalla svolta forward h_{s+1} = h_s + 1); se
+ℓ_s = L, h_{s+1} + 1 = h_s. Posa nuova = cn = p_s. Quindi lo stato
+dopo m+1 prepend è (p_s, h_s) e la cella letta è p_s con lettera
+ℓ_s. ∎
+Specializzazioni: m = 101 dà (p_{N+1}, h_{N+1}) = lo stato d'ingresso
+di w101 — l'identità con l'exact_state del CODICE (che è la traccia
+forward ri-ancorata, non un processamento all'indietro) è esattamente
+questa istanza del lemma; k = m − 101 dà l'enunciato con
+j(k) = N − k + 1.
+
+**Mini-lemma dei colori (deduttivo; scioglie la metà-colori di (iv) —
+aggiunto su indicazione della lente).** Per ogni cella: la prima
+lettura di vita vede il colore iniziale (seme; bianco fuori supporto);
+ogni rilettura vede il FLIP della lettura precedente (la cella si
+inverte dopo la lettura e non cambia altrimenti, CLAUDE.md §2) ⇒ i
+colori letti forward di una cella sono l'alternanza a partire dal
+colore iniziale. Il ledger req implementa esattamente questa
+alternanza: req(c) = flip(colore letto), aggiornato a ogni visita
+(§92a) ⇒ una parola backward è req-coerente ⟺ i colori letti forward
+rispettano alternanza + colori di prima-vita. ∎
+**Statuto per strato di 0b.0 (dichiarato):** (i)/(ii)/(iii) e la
+metà-lettere di (iv): [T] con L-0b0; metà-colori di (iv): [T] col
+mini-lemma sopra; i gate G0 §92a (1500×2, campionario) e §93a restano
+verifiche [C] dell'IMPLEMENTAZIONE, come il replay di terra di 0b.0
+(10 controesempi §94 + ≥100 estensioni). Nota di raccordo indici:
+L-MON è 0-indicizzato (come il codice), L-0b0 è 1-indicizzato
+(t = s − 1); una convenzione unica va fissata PRIMA di scrivere
+L-REV/0b.1 (punto classico dell'off-by-one).
+
 ## 5. Cosa resta aperto (nessuna promozione)
 
+- **L-REV** (il lemma decisivo mancante, verdetto /6): il sollevamento
+  esatto e unknown-safe del monitor nella macchina all'indietro —
+  monitor inverso a SOTTOINSIEMI Q_c ⊆ {U,K,F} non vuoti, insieme
+  finito C_RC2 delle celle sorvegliate, chiusura sotto
+  traslazione/rotazione/uscita/rientro, collasso esterno sound con
+  portali di rientro finiti. Preregistrato in PREREG_RC2_PONTE v7;
+  il replay NON può sostituire questa deduzione universale.
 - La certificazione della VIA B come implementazione (checker con
-  controlli espliciti, esca, optimize==0, replay) — il lemma L-MON è la
-  sua base deduttiva, non il suo sostituto.
-- La mappa (iii) di 0b.0 (corrispondenza posa/heading backward–forward)
-  e i suoi gate di terra.
-- La dicitura definitiva di 0b.U3-a alla luce di L-U3a.3 (pannello).
+  controlli espliciti, esca, optimize==0, replay) — L-MON + L-REV sono
+  la base deduttiva, non il sostituto.
+- I gate di terra di 0b.0 (replay bit-identico: implementazione).
 - Le 8 milestone quantitative per-firma (gate della Fase 1, invariato).
 - §109: chiuso — nulla qui è una deduzione ¬R_f.

@@ -2151,7 +2151,32 @@ Priorita' (aggiornate a §108b):
    last/known di halo_occupancy_profile.py (sotto-invariante: ogni cella
    known dista <=1, l'anello-2 e' completo; caveat if-isb dichiarato).
    Pannello pre-push: lente verbali VERDE, lente logica 1 ROSSO (L-U3b
-   quantificatori/WLOG) + 2 GIALLI — tutti riparati in sessione;
+   quantificatori/WLOG) + 2 GIALLI — tutti riparati in sessione.
+   **Verdetto /6 del titolare (applicato, v2 dei lemmi + v7 prereg):**
+   L-U3a.1/2 e L-MON PROMOSSI (correzioni notazionali: S_t = stato
+   PRIMA della lettura, dichiarato una volta; C4-sym vs C4-exit;
+   attribuzione precisa dell'ipotesi spaziale — U3 non definisce v2,
+   trasforma pend2>=1 in contraddizione col ledger T20/T22); L-U3b
+   CHIUSO "sotto il fatto B-T" (non prova autonoma di B-T); L-U3a.3
+   statuto preciso (non "bicondizionale falsa in U3": la VECCHIA prova
+   non si relativizza); 0b.U3-a RINOMINATA "direzione utile
+   relativizzata"; **L-0b0 dimostrato in bozza** (mappa temporale
+   backward-forward per induzione definizionale: stato dopo k prepend =
+   (p_{N-k+1}, h_{N-k+1}), cella letta = passo forward j(k)=N-k+1;
+   colori delegati a G0 §92a/§93a; replay = implementazione); **L-REV
+   preregistrato** (prereg v7 sez. 3c: il lemma decisivo mancante —
+   monitor inverso a sottoinsiemi Q_c ⊆ {U,K,F} non vuoti, deep solo se
+   Q_c={F}, relazione inversa COMPLETA della tavola forward derivata a
+   mano + enumerazione ESAUSTIVA stato/evento, soundness per induzione
+   con kill su un predecessore reale escluso, C_RC2 finito congelato +
+   chiusura per traslazione/rotazione/uscita/rientro, collasso esterno
+   sound con portali finiti — fuori dagli intorni KNOWN non sopravvive
+   e U/F restano distinti, esca U+F-fusi => falso deep obbligatorio,
+   gate di utilita' Q_c={F} su un punto rilevante). Lenti pre-push
+   round 2: 0 ROSSI, 4 GIALLI riparati (statuto per-strato di 0b.0 con
+   mini-lemma dei colori deduttivo; non-morte della macchina con
+   guardie da record stretto; residui stale L-U3b/L-U3a.3). Ordine:
+   L-REV -> Via B -> 0b.3. Fase 1 e §109 chiusi;
    (ii) mini-addendum preregistrato con le 8 MILESTONE QUANTITATIVE
    per-firma (criterio di dedupe, numero minimo di pulizie, politica
    valida PF vs PE|PC, e se la soglia non e' raggiunta il verdetto
